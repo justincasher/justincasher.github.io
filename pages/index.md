@@ -4,5 +4,9 @@
 
 layout: Post
 permalink: /
-title: Jekyll Garden
+title: Justin Asher
 ---
+
+# About
+
+I am a graduate student at Indiana University interested in arithmetic geometry. 
