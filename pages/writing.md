@@ -7,6 +7,6 @@ title: Writing
 <br/>
 The feed page shows my writing. 
 
-#####Theorem 1. $\text{Let $M$ be an $R$-module}$
+**Theorem 1.** Let $M$ be an $R$-module.
 
-Proof see 
+*Proof.* This is an example proof. $\blacksquare$
