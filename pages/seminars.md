@@ -1,5 +1,5 @@
 ---
-layout: Stylesheet
+layout: default
 permalink: /seminars
 title: Seminars
 ---
