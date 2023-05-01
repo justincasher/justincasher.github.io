@@ -1,7 +1,6 @@
 ---
 layout: Stylesheet
 permalink: /seminars
-feedformat: card
 title: Seminars
 ---
 
