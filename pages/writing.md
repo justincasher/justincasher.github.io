@@ -3,7 +3,6 @@ layout: Post
 permalink: /writing
 feedformat: card
 title: Writing
-usemath: true
 ---
 <br/>
 The feed page shows my writing. 
