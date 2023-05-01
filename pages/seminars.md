@@ -1,8 +1,10 @@
 ---
-layout: Post
+layout: Stylesheet
 permalink: /seminars
 feedformat: card
 title: Seminars
 ---
 
-The feed page shows seminars.
+This fall I am organizing a seminar on p-adic Hodge theory. Here is the tentative schedule:
+
+Here are some links to past seminars:
