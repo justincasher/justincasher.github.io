@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: Post
 permalink: /seminars
+feedformat: card
 title: Seminars
 ---
 
