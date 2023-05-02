@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: Writing
 indent: true
 permalink: /Gauss-Legendre
 feedformat: card

@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: Writing
 indent: true
 permalink: /Euler-Characteristic-is-an-Index
 feedformat: card
