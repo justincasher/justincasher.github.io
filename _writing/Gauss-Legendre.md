@@ -1,6 +1,6 @@
 ---
 layout: Post
-permalink: /writing/Gauss-Legendre
+permalink: /Gauss-Legendre
 feedformat: card
 title: Gauss-Legendre
 ---
