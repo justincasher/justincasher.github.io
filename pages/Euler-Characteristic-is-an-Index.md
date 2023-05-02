@@ -6,9 +6,6 @@ feedformat: card
 title: The Euler Characteristic is the Index of an Elliptic Operator
 ---
 
-\newcommand{\sur}[1]{\ensuremath{^{\textrm{#1}}}}
-\newcommand{\sub}[1]{\ensuremath{_{\textrm{#1}}}}
-
 <br>
 ## Table of Contents
 1. [Atiyah-Singer Index Theorem](##Atiyah-Singer-Index-Theorem)
@@ -28,12 +25,12 @@ which can locally be written as a sum of partial derivatives
 $$
     D \phi(x) = \sum_{|\alpha| \leq M} f^{\alpha}(x) (\partial_{\alpha} \phi)(x),
     \quad \text{where} \quad 
-    \partial\sub{\alpha} = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
+    \partial\_{\alpha} = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
 
 is called a *differential operator*. Here, $$ \alpha = (\alpha_1, \dots, \alpha_n) $$ as a vector in $$ \mathbb{Z}^n $$ with $|\alpha| = \sum \alpha_i$, $$ U \subseteq M $$ is an arbitrary open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
 
-&emsp; For a particular type of differential operator, called *elliptic* The Atiyah-Singer Index Theorem relates the index 
+&emsp; For a particular type of differential operator, called *elliptic*, the Atiyah-Singer Index Theorem relates the index 
 
 $$
     \text{Ind}(D) = \dim \ker D - \dim \text{coker} D
