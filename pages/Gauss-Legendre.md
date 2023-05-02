@@ -10,7 +10,7 @@ title: The Gauss-Legendre Algorithm
 1. [History](##History)
 2. [Elliptic Integrals](##Elliptic-Integrals)
 
-## History
+## 1. History
 	
 &emsp; The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
 
@@ -46,7 +46,7 @@ $$
 only need around $$ 65 $$ iterations to converge. They are also now used for large approximations due to computational complexity and storage restrictions. 
 		
 
-## Elliptic integrals
+## 2. Elliptic integrals
 	
 Let $$ (a \cos \theta, b \sin \theta) $$ be an ellipse parameterized by $$ \theta \in [0, 2 \pi] $$. Then it's arc-length is given by 
 
