@@ -1,11 +1,11 @@
 ---
 layout: Post
-permalink: /Gauss-Legendre
+permalink: /Gauss
 feedformat: card
 title: Gauss-Legendre
 ---
 
-# Gauss-Legendre Algorithm for $\pi$
+# Gauss-Legendre Algorithm for $$ \pi $$
 
 ## History
 	
