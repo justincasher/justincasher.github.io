@@ -6,9 +6,13 @@ feedformat: card
 title: The Gauss-Legendre Algorithm
 ---
 
+## Table of Contents
+1. [History](##History)
+2. [Elliptic Integrals](##Elliptic-Integrals)
+
 ## History
 	
-The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
+&emsp; The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
 
 $$
 	\arctan(x) 
@@ -22,7 +26,7 @@ $$\
 	= 1-\frac{1}{3}+\frac{1}{5}+\frac{1}{7}-\cdots.
 $$ 
 
-&emsp; Furthermore, in the 1700s, Euler calculated the values of the Riemann zeta function. Famously, for $n=2$, we get that 
+&emsp; Furthermore, in the 1700s, Euler calculated the values of the Riemann zeta function. Famously, for $$ n=2 $$, we get that 
 
 $$
 	\zeta(2) 
