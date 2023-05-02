@@ -8,9 +8,9 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 
 <br>
 ## Table of Contents
-1. [Atiyah-Singer Index Theorem](##Atiyah-Singer-Index-Theorem)
-2. [The de Rham Complex](##The-de-Rham-Complex)
-3. [Main Proof](##Main-Proof)
+1. [Atiyah-Singer Index Theorem](##1.-Atiyah-Singer-Index-Theorem)
+2. [The de Rham Complex](##2.-The-de-Rham-Complex)
+3. [Main Proof](##3.-Main-Proof)
 
 ## 1. Atiyah-Singer Index Theorem
 
@@ -55,7 +55,7 @@ $$
     \chi(M) = \int_M e(TM)
 $$
 
-In particular, we will show that we can express the Euler characteristic as the index of a certain Dirac operator.
+In particular, we will show that that the Euler characteristic is the index of a Dirac operator.
 
 
 ## 2. The de Rham Complex
@@ -76,7 +76,7 @@ to be the *$$ k $$th de Rham cohomology group of $$ M $$*.
 
 &emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitely define the later, but the idea is that there is a natural isomorphism $$ \bigwedge^k T^{\ast}M \to \bigwedge^{n-k} T^{\ast}M $$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which is used to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
 
-&emsp; The Hodge star operator yields a natural inner product structure on $\Omega^{\ast}$. For $\omega, \eta \in \Omega^k$, we set 
+&emsp; The Hodge star operator yields a natural inner product structure on $$ \Omega^{\ast} $$. For $$ \omega, \eta \in \Omega^k$ $, we set 
 
 $$
     \left< \omega, \eta \right> = \int_M \omega \wedge \star \eta,
@@ -105,9 +105,9 @@ and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow
 
 **Hodge Isomorphism.** *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
 
-&emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \Delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \nabla $$.
+&emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \Delta $$.
 
-**Lemma.** *The kernel of $$ D $$ contained in $$ \Omega^k $$ equals $$ \mathcal{H}^k(M) $$. 
+**Lemma.** *The kernel of $$ D $$ contained in $$ \Omega^k $$ equals $$ \mathcal{H}^k(M) $$.*
 
 *Proof.* Indeed, we see that $$ (d + \delta) \omega = 0 $$ if and only if 
 
@@ -117,7 +117,7 @@ $$
     = 0,
 $$
 
-giving us our result. $$ \blackbox $$
+giving us our result. $$ \blacksquare $$
 
 &emsp; Using decomposition of $$ \Omega^{\ast} $$ into even and odd components, we can restrict $$ D $$ to get adjoint operators 
 
@@ -131,14 +131,14 @@ $$
 In general, we can calculate the dimension of the kernel of an elliptic operator using its adjoint
 
 $$
-    \dim \coker F = \dim \ker F^{\ast}.
+    \dim \text{coker} F = \dim \ker F^{\ast}.
 $$
 
 Combining this with the Hodge isomorphism we get 
 
 $$
 \begin{aligned}
-    \text{Ind}(D^{\text{ev}} \\
+    \text{Ind}(D^{\text{ev}})
     & = \dim \ker D^{\text{ev}} - \dim \ker D^{\text{\od}} \\
     & = \sum_{k \text{ even}} \dim \mathcal{H}^k(M) - sum_{k \text{ odd}} \dim \mathcal{H}^k(M) \\
     & = \sum_{k=0}^{n} (-1)^k \dim H_{\text{dR}}^k(M) \\
@@ -146,4 +146,4 @@ $$
 \end{aligned}
 $$
 
-**Theorem.** We have the equality $$ \chi(M) = \text{Ind}(D^{\text{ev}} $$.
+**Theorem.** We have the equality $$ \chi(M) = \text{Ind}(D^{\text{ev}}) $$.
