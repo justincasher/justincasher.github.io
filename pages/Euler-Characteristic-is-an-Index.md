@@ -8,11 +8,12 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 <br>
 ## Table of Contents
 1. [Atiyah-Singer Index Theorem](##Atiyah-Singer-Index-Theorem)
-2. [Main Proof](##Main-Proof)
+2. [The de Rham Complex](##The-de-Rham-Complex)
+3. [Main Proof](##Main-Proof)
 
 ## 1. Atiyah-Singer Index Theorem
 
-Write $$ M $$ for a closed oriented smooth manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
+&emsp; Write $$ M $$ for a closed oriented smooth manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
 
 $$ 
     D \colon \Gamma(E_0) \to \Gamma(E_1)
@@ -26,9 +27,9 @@ $$
     \partial_{\alpha} = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
 
-is called a *differential operator*. Here, $$ \alpha = (\alpha_1, \dots, \alpha_n) $$ as a vector in $$ \ZZ^n $$ with $|\alpha| = \sum \alpha_i$, $$ U \subseteq M $$ is an arbitrary open subset where $E_0, E_1$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \Hom(\CC^{r_1}, \CC^{r_2})) $$
+is called a *differential operator*. Here, $$ \alpha = (\alpha_1, \dots, \alpha_n) $$ as a vector in $$ \mathbb{Z}^n $$ with $|\alpha| = \sum \alpha_i$, $$ U \subseteq M $$ is an arbitrary open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \Hom(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
 
-For a particular type of differential operator, called *elliptic* The Atiyah-Singer Index Theorem relates the index 
+&emsp; For a particular type of differential operator, called *elliptic* The Atiyah-Singer Index Theorem relates the index 
 
 $$
     \text{Ind}(D) = \dim \ker D - \dim \coker D
@@ -41,8 +42,24 @@ $$
     = \int_M \text{Ch}(D) \wedge \text{td}(M). 
 $$
 
-This generalizes many earlier results 
+&emsp; The following Theorems are corollaries of the Atiyah-Singer Index Theorem:
+
+- Chern-Gauss-Bonnet theorem
+- Hirzebruch–Riemann–Roch theorem
+- Hirzebruch signature theorem
+
+We focus on the first, which states that the Euler characteristic of $$ M $$ equals the Euler class of the tangent bundle $$ e(TM) $$ integrated over $$ M $$:
+
+$$
+    \chi(M) = \int_M e(TM)
+$$
+
+In particular, we will show that we can express the Euler characteristic as the index of a certain Dirac operator.
 
 
-## 2. Main Proof
+## 2. The de Rham Complex
+
+
+
+## 3. Main Proof
 
