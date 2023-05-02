@@ -3,6 +3,7 @@ layout: Post
 permalink: /Gauss-Legendre
 feedformat: card
 title: Gauss-Legendre Algorithm for $$ \pi $$
+indent: true
 ---
 
 ## History
