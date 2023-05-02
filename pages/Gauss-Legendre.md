@@ -2,53 +2,58 @@
 layout: Post
 permalink: /Gauss-Legendre
 feedformat: card
-title: Gauss-Legendre
+title: Gauss-Legendre Algorithm for $$ \pi $$
 ---
-
-# Gauss-Legendre Algorithm for $$ \pi $$
 
 ## History
 	
-The methods used for approximating $\pi$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $C$ and radius $r$ of a circle by inscribing it in a polygons of $n$ sides. It is not hard to see that as $n$ approaches infinity, we get $\pi$ using the circumference formula $C = 2 \pi r$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $\pi$. For instance, the identity
+The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
+
 $$
 	\arctan(x) 
 	= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n+1}}{2n+1}
 $$
+
 evaluated at $x = 1$ gives us 
+
 $$\
 	\frac{\pi}{4} 
 	= 1-\frac{1}{3}+\frac{1}{5}+\frac{1}{7}-\cdots.
 $$ 
 
 Furthermore, in the 1700s, Euler calculated the values of the Riemann zeta function. Famously, for $n=2$, we get that 
+
 $$
 	\zeta(2) 
 	= \sum_{n=1}^{\infty} \frac{1}{n^2}
 	= \frac{\pi^2}{6}.
 $$
+
 The underlying problem is this family of methods are slow, often taking hundreds of iterations to even yield a couple of digits.
 		
-In contrast, the Gauss-Legendre algorithm has quadratic convergence. Let us say we want to calculate 512 decimal places of $\pi$. Then the Gauss-Legendre algorithm only needs 9 iterations, while almost all of the older methods (normally) need at least 800 iterations, if not significantly more. As an aside, Ramanujan's equations for $\pi$
+In contrast, the Gauss-Legendre algorithm has quadratic convergence. Let us say we want to calculate 512 decimal places of $$ \pi $$. Then the Gauss-Legendre algorithm only needs 9 iterations, while almost all of the older methods (normally) need at least 800 iterations, if not significantly more. As an aside, Ramanujan's equations for $$ \pi $$
+
 $$
 	\frac{1}{\pi} 
 	= \frac{2 \sqrt{2}}{9801} \sum_{n=0}^{\infty} \frac{(4n)! (1103+26390n)}{(n!)^4 396^{4n}}.
 $$
-only need around $65$ iterations to converge \cite{Ramanujan1914}. They are also now used for large approximations due to computational complexity and storage restrictions. 
+
+only need around $$ 65 $$ iterations to converge. They are also now used for large approximations due to computational complexity and storage restrictions. 
 		
+
+## Elliptic integrals
 	
-	%
-	%% Elliptic integrals
-	\section{Elliptic integrals}
-	
-		Let $(a \cos \theta, b \sin \theta)$ be an ellipse parameterized by $\theta \in [0, 2 \pi]$. Then it's arc-length is given by 
-		\begin{gather}
-			\int_{0}^{2 \pi} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta. \label{eq:Length}
-		\end{gather}
-		This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in \eqref{eq:Length} all of the data concerning our specific ellipse's arc-length is contained within the interval $0 \leq \theta \leq \pi/2$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $\pi/2$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see \cite{Leffler1923}.
+Let $(a \cos \theta, b \sin \theta)$ be an ellipse parameterized by $\theta \in [0, 2 \pi]$. Then it's arc-length is given by 
+
+$$
+	\int_{0}^{2 \pi} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta. \label{eq:Length}
+$$
+
+This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in \eqref{eq:Length} all of the data concerning our specific ellipse's arc-length is contained within the interval $$ 0 \leq \theta \leq \pi/2 $$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $$ \pi/2 $$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see \cite{Leffler1923}.
 		
-		\begin{definition}
-			Let
-			\begin{align*}
+**Definition** Let
+
+
 				F(k) & = \int_0^{\pi/2} \frac{1}{\sqrt{1 - k^2 \sin^2 \theta}} d \theta, \\
 				E(k) & = \int_0^{\pi/2} \sqrt{1 - k^2 \sin^2 \theta} d \theta, \\
 				F_S(a, b) & = \int_0^{\pi/2} \frac{1}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta, \\
