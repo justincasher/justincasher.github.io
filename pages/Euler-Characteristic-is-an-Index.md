@@ -17,13 +17,13 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 &emsp; Write $$ M $$ for a closed oriented Riemannian manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
 
 $$ 
-    D \colon \Gamma(E_1) \to \Gamma(E_2)
+    F \colon \Gamma(E_1) \to \Gamma(E_2)
 $$
 
 which can locally be written as a sum of partial derivatives 
 
 $$
-    D \phi(x) = \sum_{\|\alpha\| \leq M} f^{\alpha}(x) (\partial_\alpha \phi)(x),
+    F \phi(x) = \sum_{\|\alpha\| \leq M} f^{\alpha}(x) (\partial_\alpha \phi)(x),
     \quad \text{where} \quad 
     \partial_\alpha = \frac{\partial^{\|\alpha\|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
@@ -33,14 +33,14 @@ is called a *differential operator*. Here, $$ \alpha = (\alpha_1, ..., \alpha_n)
 &emsp; For a particular type of differential operator, called *elliptic*, the Atiyah-Singer Index Theorem relates the index 
 
 $$
-    \text{Ind}(D) = \dim \ker D - \dim \text{coker} D
+    \text{Ind}(D) = \dim \ker F - \dim \text{coker} F
 $$
 
 to characteristic classes:
 
 $$
-    \text{Ind}(D)
-    = \int_M \text{Ch}(D) \wedge \text{td}(M). 
+    \text{Ind}(F)
+    = \int_M \text{Ch}(F) \wedge \text{td}(M). 
 $$
 
 &emsp; The following Theorems are corollaries of the Atiyah-Singer Index Theorem:
@@ -72,7 +72,7 @@ $$
     H_{\text{dR}}^k(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
 $$
 
-to be the *$$ i $$th de Rham cohomology group of $$ M $$*.
+to be the *$$ k $$th de Rham cohomology group of $$ M $$*.
 
 &emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitely define the later, but the idea is that there is a natural isomorphism $$ \bigwedge^k T^{\ast}M \to \bigwedge^{n-k} T^{\ast}M $$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which is used to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
 
@@ -95,6 +95,48 @@ It is a topological invariant of our manifold.
 
 ## 3. Main Proof
 
-We define the the *Laplace operator* $$ \nabla = (d + \delta)^2 $$ on the de Rham complex. It abstracts the traditional definition of the divergence of the gradient. 
+&emsp; We define call $$ \nabla = (d + \delta)^2 $$ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
 
-**Hodge Isomorphism** Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.
+$$
+    \mathcal{H}^k(M) = \ker \nabla \colon \Omega^k \to \Omega^k
+$$
+
+and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow us to compute the de Rham cohomology groups. 
+
+**Hodge Isomorphism.** *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
+
+&emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \nabla $$.
+
+**Lemma.** *The kernel of $$ D $$ contained in $$ \Omega^k $$ equals $$ \mathcal{H}^k(M) $$. 
+
+*Proof.* Indeed, we see that $$ (d + \delta) \omega = 0 $$ if and only if 
+
+$$
+    \left< (d + \delta) \omega, (d + \delta) \omega \right>
+    = \left< \nabla \omega, \omega \right>
+    = 0,
+$$
+
+giving us our result. $$ \blackbox $$
+
+&emsp; Using decomposition of $$ \Omega^{\ast} $$ into even and odd components, we can restrict $$ D $$ to get adjoint operators 
+
+$$
+\begin{aligned}
+    D^{\text{ev}} & \colon \Omega^{\text{ev}} \to \Omega^{\text{od}} \\
+    D^{\text{od}} & \colon \Omega^{\text{od}} \to \Omega^{\text{ev}}.
+\end{aligned}
+$$
+
+In general, we can calculate the dimension of the kernel of an elliptic operator using its adjoint
+
+$$
+    \dim \coker F = \dim \ker F^{\ast}.
+$$
+
+Thus, we have
+
+$$
+    \text{Ind}(D^{\text{ev}}) = \dim \ker D^{\text{ev}} - \dim \ker D^{\text{\od}}.
+$$
+
