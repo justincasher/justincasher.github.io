@@ -37,7 +37,7 @@ is called a *differential operator*. Here, $$ \alpha = (\alpha_1, ..., \alpha_n)
 &emsp; For a particular type of differential operator, called *elliptic*, the Atiyah-Singer Index Theorem relates the index 
 
 $$
-    \text{Ind}(D) = \dim \ker F - \dim \text{coker} F
+    \text{Ind}(F) = \dim \ker F - \dim \text{coker} F
 $$
 
 to characteristic classes:
