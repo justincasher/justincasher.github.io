@@ -108,115 +108,130 @@ $$
 
 holds.*
 	
-		\begin{proof}
-			We leave the details of this proof to the reader. Taking the derivative with respect to $k_1$ shows that the L.H.S. is constant. To see that this value is $\pi/2$, we take the limit as $k_1$ goes to $0$.
-		\end{proof} 
+*Proof.* We leave the details of this proof to the reader. Taking the derivative with respect to $k_1$ shows that the L.H.S. is constant. To see that this value is $\pi/2$, we take the limit as $k_1$ goes to $0$. $$ \blacksquare $$
 	
 	
-	%
-	%% Proof
-	\section{Main results} \label{sec:Proof}
+## Main results
 		
-		We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in \cite{Salamin1976}.
+We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in \cite{Salamin1976}.
 		
-		\begin{definition}
-			Let $a_0, b_0 \in \RR$. Let $a_{n+1} = (a_n + b_n)/2$ and $b_{n+1} = (a_n + b_n)^{1/2}$ be the arithmetic and geometric means, respectively, of the $n$th terms. Then we call their common limit $\lim a_n = \lim b_n = M(a_0, b_0)$ the arithmetic-geometric (AM-GM) mean of $a_0$ and $b_0$.
-		\end{definition}
+**Definition** Let $$ a_0, b_0 \in \RR $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit $$ \lim a_n = \lim b_n = M(a_0, b_0) $$ the arithmetic-geometric (AM-GM) mean of $$ a_0 $$ and $$ b_0 $$.
 	
-		\begin{theorem}[Gauss-Legendre] \label{Gauss}
-			Set $a_0 = 1$ and $b_0 = \sqrt{2}/2$. Then
-			\begin{gather*}
-				\pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
-			\end{gather*}
-			holds.
-		\end{theorem}
+**Theorem** (Gauss-Legendre) *Set $a_0 = 1$ and $b_0 = \sqrt{2}/2$. Then
+$$
+	\pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
+$$
+holds.*
 		
-		We need two lemmas in order to prove our result. 
+We need two lemmas in order to prove our result. 
 		
-		\begin{lemma} \label{Lemma1}
-			Let $a_0 = a$ and $b_0 = b$ as in Definition 3.1. Set
-			\begin{gather*}
-				S
-				= a^2 - \sum_{n=0}^{\infty} 2^{n-1} \left( a_n^2 - b_n^2 \right).
-			\end{gather*}
-			Then $E_S(a, b) = S F_S(a, b)$.
-		\end{lemma}
+**Lemma** Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
+
+$$
+	S = a^2 - \sum_{n=0}^{\infty} 2^{n-1} \left( a_n^2 - b_n^2 \right).
+$$
+
+Then $$ E_S(a, b) = S F_S(a, b) $$. $$ \blacksquare $$
 	
-		\begin{proof}
-			This proof is taken from \cite{Para09}. Consider the integral 
-			\begin{align}
-				L(a, b)
-				& = a^2 F_S(a, b) - E_S(a, b) \\
-				& = (a^2 - b^2) \int_0^{\pi/2} \frac{\sin^2 \theta}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta.
-			\end{align}
-			Substituting $x^2 = a^2 \cos^2 \theta + b^2 \sin^2 \theta$, 
-			\begin{gather*}
-				L(a, b)
-				= \int_b^a \sqrt{\frac{a^2-x^2}{x^2-b^2}} dx.
-			\end{gather*}
-			Now substituting $y = (x+ab/x)/2$ and considering the associated AM-GM sequence,
-			\begin{align*}
-				L(a, b)
-				& = \frac{1}{2} \int_{b_1}^{a_1} \frac{(a^2 - b^2) + 4(a_1^2 - y^2)}{\sqrt{(a_1^2 - y^2)(y^2 - b_1^2)}} dy \\
-				& = \frac{1}{2} (a^2 - b^2) F_S(a, b) + 2 L(a_1, b_1), 
-			\end{align*}
-			and thus
-			\begin{gather*}
-				\frac{L(a, b)}{F_S(a, b)} = \frac{1}{2}(a_0^2 - b_0^2) + 2 \frac{L(a_1, b_1)}{F_S(a, b)}.
-			\end{gather*}
-			Since $2^n(a_n^2 - b_n^2) \to 0$, we get $2^n L(a_n, b_n) \to 0$, and hence repeatedly applying this identity we get
-			\begin{gather*}
-				L(a, b)
-				= \sum_{n=0}^{\infty} 2^{n-1} (a_n^2 - b_n^2) F_S(a, b).
-			\end{gather*}
-			Rewriting this equation in terms of (2) gives us the result. 
-		\end{proof}
+\begin{proof}
+This proof is taken from \cite{Para09}. Consider the integral 
+
+$$
+\begin{aligned}
+	L(a, b)
+	& = a^2 F_S(a, b) - E_S(a, b) \\
+	& = (a^2 - b^2) \int_0^{\pi/2} \frac{\sin^2 \theta}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta.
+\end{aligned}
+$$
+
+Substituting $$ x^2 = a^2 \cos^2 \theta + b^2 \sin^2 \theta $$, 
+
+$$
+	L(a, b)
+	= \int_b^a \sqrt{\frac{a^2-x^2}{x^2-b^2}} dx.
+$$
+
+Now substituting $$ y = (x+ab/x)/2 $$ and considering the associated AM-GM sequence,
+
+$$
+\begin{aligned}
+	L(a, b) 
+	& = \frac{1}{2} \int_{b_1}^{a_1} \frac{(a^2 - b^2) + 4(a_1^2 - y^2)}{\sqrt{(a_1^2 - y^2)(y^2 - b_1^2)}} dy \\
+	& = \frac{1}{2} (a^2 - b^2) F_S(a, b) + 2 L(a_1, b_1),
+\end{aligned} 
+$$
+
+and thus
+
+$$
+	\frac{L(a, b)}{F_S(a, b)} = \frac{1}{2}(a_0^2 - b_0^2) + 2 \frac{L(a_1, b_1)}{F_S(a, b)}.
+$$
+
+Since $$ 2^n(a_n^2 - b_n^2) \to 0 $$, we get $$ 2^n L(a_n, b_n) \to 0 $$, and hence repeatedly applying this identity we get
+
+$$
+	L(a, b)
+	= \sum_{n=0}^{\infty} 2^{n-1} (a_n^2 - b_n^2) F_S(a, b).
+$$
+
+Rewriting this equation in terms of (2) gives us the result. $$ \blacksquare $$
 	
-		\begin{lemma} \label{Lemma2}
-			The identity
-			\begin{gather*}
-				F_S(a, b) = \frac{\pi}{2 M(a, b)}
-			\end{gather*}
-			holds. In particular, 
-			\begin{gather*}
-				F_S(1, \sqrt{2}) = \frac{\pi}{2 M(1, \sqrt{2})}.
-			\end{gather*}
-		\end{lemma}
 		
-		\begin{proof}
-			It is not hard to calculate the power series expansion
-			\begin{gather*}
-				F(k)
-				= \frac{\pi}{2M(1+k, 1-k)}
-				= \sum_{n=0}^{\infty} \left( \frac{(2n-1)!!}{(2n)!!} k^n \right)^2.
-			\end{gather*}
-			Calculating the AM and GM means gives us $M(1+k, 1-k) = M(1, \sqrt{1-k^2})$. Hence, applying \autoref{Symmetric} for $b/a = \sqrt{1-k^2}$, we get
-			\begin{gather*}
-				a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
-				F_S(a, b) = \frac{\pi}{2 M(a, b)},
-			\end{gather*}
-			with the last equality following from the identity $M(ca, cb) = cM(a, b)$. 
-		\end{proof}
+**Lemma** *The identity*
+
+$$
+F_S(a, b) = \frac{\pi}{2 M(a, b)}
+$$
+
+*holds. In particular,*
+
+$$
+F_S(1, \sqrt{2}) = \frac{\pi}{2 M(1, \sqrt{2})}.
+$$
+
 		
-		We finally have the tools we need to prove the Gauss-Legendre algorithm.
+*Proof.* It is not hard to calculate the power series expansion
+
+$$
+	F(k)
+	= \frac{\pi}{2M(1+k, 1-k)}
+	= \sum_{n=0}^{\infty} \left( \frac{(2n-1)!!}{(2n)!!} k^n \right)^2.
+$$
+
+Calculating the AM and GM means gives us $M(1+k, 1-k) = M(1, \sqrt{1-k^2})$. Hence, applying \autoref{Symmetric} for $b/a = \sqrt{1-k^2}$, we get
+
+$$
+	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
+	F_S(a, b) = \frac{\pi}{2 M(a, b)},
+$$
+
+with the last equality following from the identity $$ M(ca, cb) = cM(a, b) $$. $$ \blacksquare $$
 		
-		\begin{proof}[Proof of \autoref{Gauss}]
-			Set $k = \sqrt{2}/2$ to be our modulus. Then we notice $2k^2 = 1$, and hence we can apply \autoref{Legendre} to get
-			\begin{gather*}
-				2 F (k) E (k) - F(k)^2 = \frac{\pi}{2}.
-			\end{gather*}
-			Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $k^2 = 1 - 1/k^2$, we can set $a = 1$ and $b = k$ in \autoref{Symmetric} to get
-			\begin{gather*}
-				2 F_S(1, k) E_S(1, k) - F_S(1, k)^2 = \frac{\pi}{2}.
-			\end{gather*} 
-			Then applying \autoref{Lemma1} gives us an equation only dependent on $F_S(1, k)$ 
-			\begin{gather*}
-				(2 S - 1) F_S(1, k)^2 = \frac{\pi}{2}.
-			\end{gather*}
-			Finally, we apply \autoref{Lemma2} to write our equation in terms of the AM-GM mean
-			\begin{gather*}
-				(2S-1) \left( \frac{\pi}{2 M(1, k)} \right)^2 = \frac{\pi}{2} \\
-				\pi = \frac{2M(1, k)^2}{2S-1},
-			\end{gather*}
-			with plugging in $S$ gives us our result.
-		\end{proof} 
+We finally have the tools we need to prove the Gauss-Legendre algorithm.
+		
+*Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply \autoref{Legendre} to get
+
+$$
+	2 F (k) E (k) - F(k)^2 = \frac{\pi}{2}.
+$$
+
+Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $$ k^2 = 1 - 1/k^2 $$, we can set $$ a = 1 $$ and $$ b = k $$ in \autoref{Symmetric} to get
+
+$$
+	2 F_S(1, k) E_S(1, k) - F_S(1, k)^2 = \frac{\pi}{2}.
+$$
+
+Then applying \autoref{Lemma1} gives us an equation only dependent on $$ F_S(1, k) $$ 
+
+$$
+	(2 S - 1) F_S(1, k)^2 = \frac{\pi}{2}.
+$$
+
+Finally, we apply \autoref{Lemma2} to write our equation in terms of the AM-GM mean
+
+$$				
+	(2S-1) \left( \frac{\pi}{2 M(1, k)} \right)^2 = \frac{\pi}{2} \\
+	\pi = \frac{2M(1, k)^2}{2S-1},
+$$
+
+with plugging in $$ S $$ gives us our result. $$ \blacksquare $$
