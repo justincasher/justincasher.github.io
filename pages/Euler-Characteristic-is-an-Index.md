@@ -36,7 +36,7 @@ $$
     \text{Ind}(D) = \dim \ker D - \dim \text{coker} D
 $$
 
-to characteristic classes, which we can write as differential forms:
+to characteristic classes:
 
 $$
     \text{Ind}(D)
@@ -45,9 +45,9 @@ $$
 
 &emsp; The following Theorems are corollaries of the Atiyah-Singer Index Theorem:
 
-- Chern-Gauss-Bonnet theorem;
-- Hirzebruch–Riemann–Roch theorem;
-- Hirzebruch signature theorem.
+- Chern-Gauss-Bonnet Theorem;
+- Hirzebruch–Riemann–Roch Theorem;
+- Hirzebruch Signature Theorem.
 
 We focus on the first, which states that the Euler characteristic of $$ M $$ equals the Euler class of the tangent bundle $$ e(TM) $$ integrated over $$ M $$:
 
@@ -59,6 +59,21 @@ In particular, we will show that we can express the Euler characteristic as the 
 
 
 ## 2. The de Rham Complex
+
+&emsp; Write $$ \Omega^k(M) = \Gamma(\bigwedge^k T^{\*}M) $$ for the (real) vector space of differential $$ k $$-forms of $$ M $$. In what follows, we omit $$ M $$ simply writing $$ \Omega^k $$. We further set $$ \Omega^{\*} = \bigoplus_k \Omega^k $$ to be the associated graded vector space. It has a decomposition into components with $$ k $$ even or odd:
+
+$$
+    \Omega^{\*} = \Omega^{\text{ev}} \oplus \Omega^{\text{od}}.
+$$
+
+&emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0$ called the *differentail*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
+
+$$
+    H_{\text{dR}}^i(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
+$$
+
+to be the *$i$th de Rham cohomology group of $$ M $$*.
+
 
 
 
