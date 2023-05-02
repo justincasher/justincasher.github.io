@@ -24,11 +24,15 @@ which can locally be written as a sum of partial derivatives
 
 $$
     F \phi(x) = \sum_{\|\alpha\| \leq M} f^{\alpha}(x) (\partial_\alpha \phi)(x),
-    \quad \text{where} \quad 
+$$
+
+where 
+
+$$
     \partial_\alpha = \frac{\partial^{\|\alpha\|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
 
-is called a *differential operator*. Here, $$ \alpha = (\alpha_1, ..., \alpha_n) $$ is a vector in $$ \mathbb{Z}^n $$ with $$ \|\alpha\| = \sum \alpha_i $$, $$ U \subseteq M $$ is an open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
+is called a *differential operator*. Here, $$ \alpha = (\alpha_1, ..., \alpha_n) $$ is a vector in $$ \mathbb{Z}^n $$ with $$ \|\alpha\| = \sum \alpha_i $$, we let $$ U \subseteq M $$ be any open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
 
 &emsp; For a particular type of differential operator, called *elliptic*, the Atiyah-Singer Index Theorem relates the index 
 
@@ -98,7 +102,7 @@ It is a topological invariant of our manifold.
 &emsp; We define call $$ \Delta = (d + \delta)^2 $$ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
 
 $$
-    \mathcal{H}^k(M) = \ker \Delta \colon \Omega^k \to \Omega^k
+    \mathcal{H}^k(M) = \ker \{\Delta \colon \Omega^k \to \Omega^k\}
 $$
 
 and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow us to compute the de Rham cohomology groups. 
@@ -139,8 +143,8 @@ Combining this with the Hodge isomorphism we get
 $$
 \begin{aligned}
     \text{Ind}(D^{\text{ev}})
-    & = \dim \ker D^{\text{ev}} - \dim \ker D^{\text{\od}} \\
-    & = \sum_{k \text{ even}} \dim \mathcal{H}^k(M) - sum_{k \text{ odd}} \dim \mathcal{H}^k(M) \\
+    & = \dim \ker D^{\text{ev}} - \dim \ker D^{\text{od}} \\
+    & = \sum_{k \text{ even}} \dim \mathcal{H}^k(M) - \sum_{k \text{ odd}} \dim \mathcal{H}^k(M) \\
     & = \sum_{k=0}^{n} (-1)^k \dim H_{\text{dR}}^k(M) \\
     & = \chi(M)
 \end{aligned}
