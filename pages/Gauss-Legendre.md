@@ -1,9 +1,9 @@
 ---
 layout: Post
+indent: true
 permalink: /Gauss-Legendre
 feedformat: card
 title: Gauss-Legendre Algorithm for $$ \pi $$
-indent: true
 ---
 
 ## History
