@@ -16,7 +16,7 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 &emsp; Write $$ M $$ for a closed oriented smooth manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
 
 $$ 
-    D \colon \Gamma(E_0) \to \Gamma(E_1)
+    D \colon \Gamma(E_1) \to \Gamma(E_2)
 $$
 
 which can locally be written as a sum of partial derivatives 
