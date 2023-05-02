@@ -19,14 +19,14 @@ $$
 	= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n+1}}{2n+1}
 $$
 
-evaluated at $x = 1$ gives us 
+evaluated at $$ x = 1 $$ gives us 
 
 $$\
 	\frac{\pi}{4} 
 	= 1-\frac{1}{3}+\frac{1}{5}+\frac{1}{7}-\cdots.
 $$ 
 
-&emsp; Furthermore, in the 1700s, Euler calculated the values of the Riemann zeta function. Famously, for $$ n=2 $$, we get that 
+&emsp; Furthermore, in the 1700s, Euler calculated the values of the Riemann zeta function. Famously, for $$ x=2 $$, we get that 
 
 $$
 	\zeta(2) 
@@ -48,7 +48,7 @@ only need around $$ 65 $$ iterations to converge. They are also now used for lar
 
 ## Elliptic integrals
 	
-Let $(a \cos \theta, b \sin \theta)$ be an ellipse parameterized by $\theta \in [0, 2 \pi]$. Then it's arc-length is given by 
+Let $$ (a \cos \theta, b \sin \theta) $$ be an ellipse parameterized by $$ \theta \in [0, 2 \pi] $$. Then it's arc-length is given by 
 
 $$
 	\int_{0}^{2 \pi} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta. \label{eq:Length}
@@ -58,49 +58,55 @@ This integral is not easy to compute in itself, and it was generalized to the st
 		
 **Definition** Let
 
+$$ 
+\begin{aligned}
+	F(k) & = \int_0^{\pi/2} \frac{1}{\sqrt{1 - k^2 \sin^2 \theta}} d \theta, \\
+	E(k) & = \int_0^{\pi/2} \sqrt{1 - k^2 \sin^2 \theta} d \theta, \\
+	F_S(a, b) & = \int_0^{\pi/2} \frac{1}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta, \\
+	E_S(a, b) & = \int_0^{\pi/2} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta.
+\end{aligned}
+$$
 
-				F(k) & = \int_0^{\pi/2} \frac{1}{\sqrt{1 - k^2 \sin^2 \theta}} d \theta, \\
-				E(k) & = \int_0^{\pi/2} \sqrt{1 - k^2 \sin^2 \theta} d \theta, \\
-				F_S(a, b) & = \int_0^{\pi/2} \frac{1}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta, \\
-				E_S(a, b) & = \int_0^{\pi/2} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta.
-			\end{align*}
-			Then $F(k)$ and $E(k)$ are called complete elliptic integrals of the first and second kinds, respectively, with symmetric forms $F_S(a, b)$ and $E_S(a, b)$. We refer to $k$ as the modulus of our integral.
-		\end{definition}
+Then $$ F(k) $$ and $$ E(k) $$ are called *complete elliptic integrals of the first and second kinds*, respectively, with *symmetric forms* $$ F_S(a, b) $$ and $$ E_S(a, b) $$. We refer to $$ k $$ as the modulus of our integral.
+
 		
-		\noindent  From here on we will assume that by elliptic integral we mean a complete elliptic integral of the first or second kind. 
+From here on we will assume that by elliptic integral we mean a complete elliptic integral of the first or second kind. 
 		
-		We see that the ordinary and symmetric forms of elliptic integrals are related by the following proposition.
+We see that the ordinary and symmetric forms of elliptic integrals are related by the following proposition.
 		
-		\begin{proposition} \label{Symmetric}
-			Let $k^2 = 1 - b^2/a^2$. Then 
-			\begin{align*}
-				F(k) & = a F_S(a, b) \\
-				E(k) & = \frac{1}{a} E_S(a, b).
-			\end{align*}
-		\end{proposition}
+**Proposition** Let $$ k^2 = 1 - b^2/a^2 $$. Then 
+
+$$
+\begin{alined}
+	F(k) & = a F_S(a, b) \\
+	E(k) & = \frac{1}{a} E_S(a, b).
+\end{aligned}
+$$
 	
-		\begin{proof}
-			Let us prove the second equation with the first following similarly. Substituting, we get 
-			\begin{align*}
-				E(k)
-				& = \int_0^{\pi/2} \sqrt{1 - k^2 \sin^2 \theta} d \theta \\
-				& = \int_0^{\pi/2} \sqrt{1 - (1-b^2/a^2) \sin^2 \theta} d \theta \\
-				& = \int_0^{\pi/2} \sqrt{\cos^2 \theta + b^2/a^2 \sin^2 \theta} d \theta \\
-				& = \frac{1}{a} \int_0^{\pi/2} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta \\
-				& = \frac{1}{a} E_S(a, b),
-			\end{align*}
-			and hence our result. 
-		\end{proof}
+*Proof:* Let us prove the second equation with the first following similarly. Substituting, we get 
+
+$$
+\begin{aligned}
+	E(k)
+	& = \int_0^{\pi/2} \sqrt{1 - k^2 \sin^2 \theta} d \theta \\
+	& = \int_0^{\pi/2} \sqrt{1 - (1-b^2/a^2) \sin^2 \theta} d \theta \\
+	& = \int_0^{\pi/2} \sqrt{\cos^2 \theta + b^2/a^2 \sin^2 \theta} d \theta \\
+	& = \frac{1}{a} \int_0^{\pi/2} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta \\
+	& = \frac{1}{a} E_S(a, b),
+\end{aligned}
+$$
+
+and hence our result. $$ \blacksquare $$
 		
-		We also recall a result regarding the symmetry of these integrals originally discovered by Legendre.
-		
-		\begin{proposition}[Legendre's identity] \label{Legendre}
-			Suppose $k_1^2 + k_2^2 = 1$. Then 
-			\begin{gather*}
-				F(k_1) E(k_2) + F(k_2) E(k_1) - F(k_1) F(k_2) = \frac{\pi}{2}
-			\end{gather*}
-			holds.
-		\end{proposition}
+We also recall a result regarding the symmetry of these integrals originally discovered by Legendre.
+
+**Proposition.** (Legendre's Identity) *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then 
+
+$$
+	F(k_1) E(k_2) + F(k_2) E(k_1) - F(k_1) F(k_2) = \frac{\pi}{2}
+$$
+
+holds.*
 	
 		\begin{proof}
 			We leave the details of this proof to the reader. Taking the derivative with respect to $k_1$ shows that the L.H.S. is constant. To see that this value is $\pi/2$, we take the limit as $k_1$ goes to $0$.
