@@ -9,8 +9,8 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 <br>
 ## Table of Contents
 1. [Atiyah-Singer Index Theorem](#1-atiyah-singer-index-theorem)
-2. [The de Rham Complex](##2-the-de-rham-complex)
-3. [Main Proof](##3-main-proof)
+2. [The de Rham Complex](#2-the-de-rham-complex)
+3. [Main Proof](#3-main-proof)
 
 ## 1. Atiyah-Singer Index Theorem
 
