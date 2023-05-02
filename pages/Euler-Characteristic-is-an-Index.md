@@ -28,7 +28,7 @@ $$
     \partial_\alpha = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
 
-is called a *differential operator*. Here, $$ \alpha = (\alpha_1, ..., \alpha_n) $$ is a vector in $$ \mathbb{Z}^n $$ with $$ \|\alpha\| = \sum \alpha_i $$, $$ U \subseteq M $$ is an open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
+is called a *differential operator*. Here, $$ \alpha = (\alpha_1, ..., \alpha_n) $$ is a vector in $$ \mathbb{Z}^n $$ with $$ |\alpha| = \sum \alpha_i $$, $$ U \subseteq M $$ is an open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
 
 &emsp; For a particular type of differential operator, called *elliptic*, the Atiyah-Singer Index Theorem relates the index 
 
