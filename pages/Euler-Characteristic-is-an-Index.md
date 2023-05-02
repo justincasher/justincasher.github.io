@@ -95,17 +95,17 @@ It is a topological invariant of our manifold.
 
 ## 3. Main Proof
 
-&emsp; We define call $$ \nabla = (d + \delta)^2 $$ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
+&emsp; We define call $$ \Delta = (d + \delta)^2 $$ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
 
 $$
-    \mathcal{H}^k(M) = \ker \nabla \colon \Omega^k \to \Omega^k
+    \mathcal{H}^k(M) = \ker \Delta \colon \Omega^k \to \Omega^k
 $$
 
 and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow us to compute the de Rham cohomology groups. 
 
 **Hodge Isomorphism.** *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
 
-&emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \nabla $$.
+&emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \Delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \nabla $$.
 
 **Lemma.** *The kernel of $$ D $$ contained in $$ \Omega^k $$ equals $$ \mathcal{H}^k(M) $$. 
 
@@ -113,7 +113,7 @@ and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow
 
 $$
     \left< (d + \delta) \omega, (d + \delta) \omega \right>
-    = \left< \nabla \omega, \omega \right>
+    = \left< \Delta \omega, \omega \right>
     = 0,
 $$
 
