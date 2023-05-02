@@ -5,7 +5,7 @@ permalink: /Gauss-Legendre
 feedformat: card
 title: The Gauss-Legendre Algorithm
 ---
-
+<br>
 ## Table of Contents
 1. [History](##History)
 2. [Elliptic Integrals](##Elliptic-Integrals)
