@@ -82,7 +82,7 @@ $$
     \left< \omega, \eta \right> = \int_M \omega \wedge \star \eta,
 $$ 
 
-and then we define differential forms of differing degrees to be orthogonal. In particular, given a linear operator $$ T \colon \Omega^{\ast} \to \Omega^{\ast} $$ its *adjoint* is a map $$ T^{\ast} \colon \Omeag^{\ast} \to \Omega^{\ast} $$ such that $$ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $$.
+and then we define differential forms of differing degrees to be orthogonal. In particular, given a linear operator $$ T \colon \Omega^{\ast} \to \Omega^{\ast} $$ its *adjoint* is a map $$ T^{\ast} \colon \Omega^{\ast} \to \Omega^{\ast} $$ such that $$ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $$.
 
 &emsp; Finally, we define the Euler characteristic of $$ M $$ as the alternating sum 
 
@@ -134,9 +134,16 @@ $$
     \dim \coker F = \dim \ker F^{\ast}.
 $$
 
-Thus, we have
+Combining this with the Hodge isomorphism we get 
 
 $$
-    \text{Ind}(D^{\text{ev}}) = \dim \ker D^{\text{ev}} - \dim \ker D^{\text{\od}}.
+\begin{aligned}
+    \text{Ind}(D^{\text{ev}} \\
+    & = \dim \ker D^{\text{ev}} - \dim \ker D^{\text{\od}} \\
+    & = \sum_{k \text{ even}} \dim \mathcal{H}^k(M) - sum_{k \text{ odd}} \dim \mathcal{H}^k(M) \\
+    & = \sum_{k=0}^{n} (-1)^k \dim H_{\text{dR}}^k(M) \\
+    & = \chi(M)
+\end{aligned}
 $$
 
+**Theorem.** We have the equality $$ \chi(M) = \text{Ind}(D^{\text{ev}} $$.
