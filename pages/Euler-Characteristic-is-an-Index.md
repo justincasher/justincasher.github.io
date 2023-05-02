@@ -23,9 +23,7 @@ $$
 which can locally be written as a sum of partial derivatives 
 
 $$
-    D \phi(x) = \sum_{|\alpha| \leq M} f^{\alpha}(x) (\partial_\alpha \phi)(x),
-    \quad \text{where} \quad 
-    \partial_\alpha = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
+    D \phi(x) = 
 $$
 
 is called a *differential operator*. Here, $$ \alpha = (\alpha_1, \dots, \alpha_n) $$ as a vector in $$ \mathbb{Z}^n $$ with $|\alpha| = \sum \alpha_i$, $$ U \subseteq M $$ is an arbitrary open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
