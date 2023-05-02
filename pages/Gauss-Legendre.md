@@ -3,8 +3,10 @@ layout: Post
 indent: true
 permalink: /Gauss-Legendre
 feedformat: card
-title: Gauss-Legendre Algorithm for $$ \pi $$
+title: The Gauss-Legendre Algorithm
 ---
+
+\setlength\parindent{24pt}
 
 ## History
 	
