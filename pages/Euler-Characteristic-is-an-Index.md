@@ -8,11 +8,11 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 
 <br>
 ## Table of Contents
-1. [Atiyah-Singer Index Theorem](#Atiyah-Singer-Index-Theorem)
-2. [The de Rham Complex](##2-The-de-Rham-Complex)
-3. [Main Proof](##3-Main-Proof)
+1. [Atiyah-Singer Index Theorem](#1-atiyah-singer-index-theorem)
+2. [The de Rham Complex](##2-the-de-rham-complex)
+3. [Main Proof](##3-main-proof)
 
-## Atiyah-Singer Index Theorem
+## 1. Atiyah-Singer Index Theorem
 
 &emsp; Write $$ M $$ for a closed oriented Riemannian manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
 
@@ -62,7 +62,7 @@ $$
 In particular, we will show that that the Euler characteristic is the index of a Dirac operator.
 
 
-## 2 The de Rham Complex
+## 2. The de Rham Complex
 
 &emsp; Write $$ \Omega^k(M) = \Gamma(\bigwedge^k T^{\ast}M) $$ for the (real) vector space of differential $$ k $$-forms of $$ M $$. In what follows, we omit $$ M $$ simply writing $$ \Omega^k $$. We further set $$ \Omega^{\ast} = \bigoplus_k \Omega^k $$ to be the associated graded vector space. It has a decomposition into components with $$ k $$ even or odd:
 
