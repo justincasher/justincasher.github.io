@@ -8,7 +8,7 @@ title: The Gauss-Legendre Algorithm
 
 ## History
 	
-&emsp; The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
+The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
 
 $$
 	\arctan(x) 
@@ -22,7 +22,7 @@ $$\
 	= 1-\frac{1}{3}+\frac{1}{5}+\frac{1}{7}-\cdots.
 $$ 
 
-Furthermore, in the 1700s, Euler calculated the values of the Riemann zeta function. Famously, for $n=2$, we get that 
+&emsp; Furthermore, in the 1700s, Euler calculated the values of the Riemann zeta function. Famously, for $n=2$, we get that 
 
 $$
 	\zeta(2) 
@@ -32,7 +32,7 @@ $$
 
 The underlying problem is this family of methods are slow, often taking hundreds of iterations to even yield a couple of digits.
 		
-In contrast, the Gauss-Legendre algorithm has quadratic convergence. Let us say we want to calculate 512 decimal places of $$ \pi $$. Then the Gauss-Legendre algorithm only needs 9 iterations, while almost all of the older methods (normally) need at least 800 iterations, if not significantly more. As an aside, Ramanujan's equations for $$ \pi $$
+&emsp; In contrast, the Gauss-Legendre algorithm has quadratic convergence. Let us say we want to calculate 512 decimal places of $$ \pi $$. Then the Gauss-Legendre algorithm only needs 9 iterations, while almost all of the older methods (normally) need at least 800 iterations, if not significantly more. As an aside, Ramanujan's equations for $$ \pi $$
 
 $$
 	\frac{1}{\pi} 
