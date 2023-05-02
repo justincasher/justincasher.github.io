@@ -8,11 +8,11 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 
 <br>
 ## Table of Contents
-1. [Atiyah-Singer Index Theorem](##-Atiyah-Singer-Index-Theorem)
+1. [Atiyah-Singer Index Theorem](#Atiyah-Singer-Index-Theorem)
 2. [The de Rham Complex](##2-The-de-Rham-Complex)
 3. [Main Proof](##3-Main-Proof)
 
-## 1 Atiyah-Singer Index Theorem
+## Atiyah-Singer Index Theorem
 
 &emsp; Write $$ M $$ for a closed oriented Riemannian manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
 
