@@ -27,18 +27,18 @@ $$
     \partial_{\alpha} = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
 
-is called a *differential operator*. Here, $$ \alpha = (\alpha_1, \dots, \alpha_n) $$ as a vector in $$ \mathbb{Z}^n $$ with $|\alpha| = \sum \alpha_i$, $$ U \subseteq M $$ is an arbitrary open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \Hom(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
+is called a *differential operator*. Here, $$ \alpha = (\alpha_1, \dots, \alpha_n) $$ as a vector in $$ \mathbb{Z}^n $$ with $|\alpha| = \sum \alpha_i$, $$ U \subseteq M $$ is an arbitrary open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
 
 &emsp; For a particular type of differential operator, called *elliptic* The Atiyah-Singer Index Theorem relates the index 
 
 $$
-    \text{Ind}(D) = \dim \ker D - \dim \coker D
+    \text{Ind}(D) = \dim \ker D - \dim \text{coker} D
 $$
 
 to characteristic classes, which we can write as differential forms:
 
 $$
-    \ind(D)
+    \text{Ind}(D)
     = \int_M \text{Ch}(D) \wedge \text{td}(M). 
 $$
 
