@@ -69,7 +69,7 @@ $$
 &emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0 $$ called the *differentail*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
 
 $$
-    H_{\text{dR}}^i(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
+    H_{\text{dR}}^i(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
 $$
 
 to be the *$i$th de Rham cohomology group of $$ M $$*.
