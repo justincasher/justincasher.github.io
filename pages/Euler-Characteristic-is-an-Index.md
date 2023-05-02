@@ -5,6 +5,10 @@ permalink: /Euler-Characteristic-is-an-Index
 feedformat: card
 title: The Euler Characteristic is the Index of an Elliptic Operator
 ---
+
+\newcommand{\sur}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\sub}[1]{\ensuremath{_{\textrm{#1}}}}
+
 <br>
 ## Table of Contents
 1. [Atiyah-Singer Index Theorem](##Atiyah-Singer-Index-Theorem)
@@ -24,7 +28,7 @@ which can locally be written as a sum of partial derivatives
 $$
     D \phi(x) = \sum_{|\alpha| \leq M} f^{\alpha}(x) (\partial_{\alpha} \phi)(x),
     \quad \text{where} \quad 
-    \partial_{\alpha} = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
+    \partial\sub{\alpha} = \frac{\partial^{|\alpha|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
 
 is called a *differential operator*. Here, $$ \alpha = (\alpha_1, \dots, \alpha_n) $$ as a vector in $$ \mathbb{Z}^n $$ with $|\alpha| = \sum \alpha_i$, $$ U \subseteq M $$ is an arbitrary open subset where $$ E_0, E_1 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
@@ -44,9 +48,9 @@ $$
 
 &emsp; The following Theorems are corollaries of the Atiyah-Singer Index Theorem:
 
-- Chern-Gauss-Bonnet theorem
-- Hirzebruch–Riemann–Roch theorem
-- Hirzebruch signature theorem
+- Chern-Gauss-Bonnet theorem;
+- Hirzebruch–Riemann–Roch theorem;
+- Hirzebruch signature theorem.
 
 We focus on the first, which states that the Euler characteristic of $$ M $$ equals the Euler class of the tangent bundle $$ e(TM) $$ integrated over $$ M $$:
 
