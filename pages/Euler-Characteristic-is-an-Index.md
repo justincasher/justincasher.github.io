@@ -69,14 +69,24 @@ $$
 &emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0 $$ called the *differentail*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
 
 $$
-    H_{\text{dR}}^i(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
+    H_{\text{dR}}^k(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
 $$
 
-to be the *$i$th de Rham cohomology group of $$ M $$*.
+to be the *$$ i $$th de Rham cohomology group of $$ M $$*.
 
-&emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ by using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitely define the later, but the idea is that there is a natural isomorphism $$ \bigwedge^k T^{\ast}M \to \bigwedge^{n-k} T^{\\ast}M $$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which is used to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
+&emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitely define the later, but the idea is that there is a natural isomorphism $$ \bigwedge^k T^{\ast}M \to \bigwedge^{n-k} T^{\ast}M $$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which is used to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
 
+&emsp; Finally, we define the Euler characteristic of $$ M $$ as the alternating sum 
+
+$$
+    \chi(M) = \sum_{k=0}^n (-1)^k \dim H_{\text{dR}}^k(M).
+$$
+
+It is a topological invariant of our manifold.
 
 
 ## 3. Main Proof
 
+We call 
+
+**Hodge Isomorphism** Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists an isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.
