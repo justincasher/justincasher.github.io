@@ -14,7 +14,7 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 
 ## 1. Atiyah-Singer Index Theorem
 
-&emsp; Write $$ M $$ for a closed oriented smooth manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
+&emsp; Write $$ M $$ for a closed oriented Riemannian manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
 
 $$ 
     D \colon \Gamma(E_1) \to \Gamma(E_2)
@@ -74,7 +74,7 @@ $$
 
 to be the *$i$th de Rham cohomology group of $$ M $$*.
 
-
+&emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ by using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitely define the later, but the idea is that there is a natural isomorphism $\bigwedge^k T^{\*}M \to \bigwedge^{n-k} T^{\*}M$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which allows us to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
 
 
 ## 3. Main Proof
