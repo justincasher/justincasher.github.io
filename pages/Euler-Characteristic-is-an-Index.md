@@ -60,13 +60,13 @@ In particular, we will show that we can express the Euler characteristic as the 
 
 ## 2. The de Rham Complex
 
-&emsp; Write $$ \Omega^k(M) = \Gamma(\bigwedge^k T^{\*}M) $$ for the (real) vector space of differential $$ k $$-forms of $$ M $$. In what follows, we omit $$ M $$ simply writing $$ \Omega^k $$. We further set $$ \Omega^{\*} = \bigoplus_k \Omega^k $$ to be the associated graded vector space. It has a decomposition into components with $$ k $$ even or odd:
+&emsp; Write $$ \Omega^k(M) = \Gamma(\bigwedge^k T^{\ast}M) $$ for the (real) vector space of differential $$ k $$-forms of $$ M $$. In what follows, we omit $$ M $$ simply writing $$ \Omega^k $$. We further set $$ \Omega^{\ast} = \bigoplus_k \Omega^k $$ to be the associated graded vector space. It has a decomposition into components with $$ k $$ even or odd:
 
 $$
-    \Omega^{\*} = \Omega^{\text{ev}} \oplus \Omega^{\text{od}}.
+    \Omega^{\ast} = \Omega^{\text{ev}} \oplus \Omega^{\text{od}}.
 $$
 
-&emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0$ called the *differentail*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
+&emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0 $$ called the *differentail*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
 
 $$
     H_{\text{dR}}^i(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
@@ -75,6 +75,7 @@ $$
 to be the *$i$th de Rham cohomology group of $$ M $$*.
 
 &emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ by using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitely define the later, but the idea is that there is a natural isomorphism $\bigwedge^k T^{\*}M \to \bigwedge^{n-k} T^{\*}M$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which allows us to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
+
 
 
 ## 3. Main Proof
