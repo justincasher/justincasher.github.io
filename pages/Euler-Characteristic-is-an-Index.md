@@ -80,13 +80,13 @@ to be the *$$ k $$th de Rham cohomology group of $$ M $$*.
 
 &emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitely define the later, but the idea is that there is a natural isomorphism $$ \bigwedge^k T^{\ast}M \to \bigwedge^{n-k} T^{\ast}M $$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which is used to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
 
-&emsp; The Hodge star operator yields a natural inner product structure on $$ \Omega^{\ast} $$. For $$ \omega, \eta \in \Omega^k$ $, we set 
+&emsp; The Hodge star operator yields a natural inner product structure on $$ \Omega^{\ast} $$. For $$ \omega, \eta \in \Omega^k $$, we set 
 
 $$
     \left< \omega, \eta \right> = \int_M \omega \wedge \star \eta,
 $$ 
 
-and then we define differential forms of differing degrees to be orthogonal. In particular, given a linear operator $$ T \colon \Omega^{\ast} \to \Omega^{\ast} $$ its *adjoint* is a map $$ T^{\ast} \colon \Omega^{\ast} \to \Omega^{\ast} $$ such that $$ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $$.
+and then we define differential forms of unequal degrees to be orthogonal. In particular, given a linear operator $$ T \colon \Omega^{\ast} \to \Omega^{\ast} $$ its *adjoint* is a map $$ T^{\ast} \colon \Omega^{\ast} \to \Omega^{\ast} $$ such that $$ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $$.
 
 &emsp; Finally, we define the Euler characteristic of $$ M $$ as the alternating sum 
 
