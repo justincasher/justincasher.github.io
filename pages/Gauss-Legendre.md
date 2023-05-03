@@ -194,7 +194,7 @@ $$
     = - S F_S(a, b) + a^2 F_S(a, b).
 $$
 
-Rewriting this equation in terms of (2) gives us the result. $$ \blacksquare $$
+Combining this equation with (2) gives us the result. $$ \blacksquare $$
 	
 **Lemma 3.2.** &nbsp; *The identity*
 
