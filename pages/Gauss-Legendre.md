@@ -58,7 +58,7 @@ $$
 
 This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in (1) all of the data concerning our specific ellipse's arc-length is contained within the interval $$ 0 \leq \theta \leq \pi/2 $$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $$ \pi/2 $$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see [\[2\]](#references).
 		
-**Definition.** Let
+**Definition.** &nbsp; Let
 
 $$ 
 \begin{aligned}
@@ -83,7 +83,7 @@ $$
 \end{aligned}
 $$
 	
-*Proof:* Let us prove the second equation with the first following similarly. Substituting, we get 
+*Proof.* &nbsp; Let us prove the second equation with the first following similarly. Substituting, we get 
 
 $$
 \begin{aligned}
@@ -100,7 +100,7 @@ and hence our result. $$ \blacksquare $$
 		
 &emsp; We also recall a result regarding the symmetry of these integrals originally discovered by Legendre.
 
-**Proposition 2.2.** (Legendre's Identity) *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then*
+**Proposition 2.2.** (Legendre's Identity). &nbsp; *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then*
 
 $$
 	F(k_1) E(k_2) + F(k_2) E(k_1) - F(k_1) F(k_2) = \frac{\pi}{2}
@@ -108,14 +108,14 @@ $$
 
 *holds.*
 	
-*Proof.* We leave the details of this proof to the reader. Taking the derivative with respect to $$ k_1 $$ shows that the L.H.S. is constant. To see that this value is $$ \pi/2 $$, we take the limit as $$ k_1 $$ goes to $$ 0 $$. $$ \blacksquare $$
+*Proof.* &nbsp; We leave the details of this proof to the reader. Taking the derivative with respect to $$ k_1 $$ shows that the L.H.S. is constant. To see that this value is $$ \pi/2 $$, we take the limit as $$ k_1 $$ goes to $$ 0 $$. $$ \blacksquare $$
 	
 	
 ## 3. Main results
 		
 &emsp; We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in [\[4\]](#references).
 		
-**Definition** Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit 
+**Definition.** &nbsp; Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit 
 
 $$ 
     \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = M(a_0, b_0) 
@@ -123,7 +123,7 @@ $$
 
 the *arithmetic-geometric (AM-GM) mean* of $$ a_0 $$ and $$ b_0 $$.
 	
-**Theorem** (Gauss-Legendre). *Set $$ a_0 = 1 $$ and $$ b_0 = \sqrt{2}/2 $$. Then*
+**Theorem.** (Gauss-Legendre). &nbsp; *Set $$ a_0 = 1 $$ and $$ b_0 = \sqrt{2}/2 $$. Then*
 
 $$
 	\pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
@@ -133,7 +133,7 @@ $$
 		
 &emsp; We need two lemmas in order to prove our result. 
 		
-**Lemma 3.1.** Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
+**Lemma 3.1.** &nbsp; Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
 
 $$
 	S = a^2 - \sum_{n=0}^{\infty} 2^{n-1} \left( a_n^2 - b_n^2 \right).
@@ -141,7 +141,7 @@ $$
 
 Then $$ E_S(a, b) = S F_S(a, b) $$. $$ \blacksquare $$
 	
-*Proof.* This proof is taken from [\[5\]](#references). Consider the integral 
+*Proof.* &nbsp; This proof is taken from [\[5\]](#references). Consider the integral 
 
 $$
 \begin{aligned}
@@ -183,7 +183,7 @@ $$
 
 Rewriting this equation in terms of (2) gives us the result. $$ \blacksquare $$
 	
-**Lemma 3.2.** *The identity*
+**Lemma 3.2.** &nbsp; *The identity*
 
 $$
 F_S(a, b) = \frac{\pi}{2 M(a, b)}
@@ -196,7 +196,7 @@ F_S(1, \sqrt{2}) = \frac{\pi}{2 M(1, \sqrt{2})}.
 $$
 
 		
-*Proof.* It is not hard to calculate the power series expansion
+*Proof.* &nbsp; It is not hard to calculate the power series expansion
 
 $$
 	F(k)
@@ -215,7 +215,7 @@ with the last equality following from the identity $$ M(ca, cb) = cM(a, b) $$. $
 		
 &emsp; We finally have the tools we need to prove the Gauss-Legendre Algorithm does indeed converge to $$ \pi $$.
 		
-*Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply Proposition [2.2](#2-elliptic-integrals) to get
+*Proof (Gauss-Legendre).* &nbsp; Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply Proposition [2.2](#2-elliptic-integrals) to get
 
 $$
 	2 F (k) E (k) - F(k)^2 = \frac{\pi}{2}.
