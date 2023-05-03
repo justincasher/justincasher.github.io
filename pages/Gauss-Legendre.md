@@ -53,10 +53,10 @@ only need around $$ 65 $$ iterations to converge. They are also now used for lar
 Let $$ (a \cos \theta, b \sin \theta) $$ be an ellipse parameterized by $$ \theta \in [0, 2 \pi] $$. Then it's arc-length is given by 
 
 $$
-	\int_{0}^{2 \pi} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta. \tag{eq:Length}
+	\int_{0}^{2 \pi} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta. \tag{1}
 $$
 
-This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in \tag{eq:Length} all of the data concerning our specific ellipse's arc-length is contained within the interval $$ 0 \leq \theta \leq \pi/2 $$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $$ \pi/2 $$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see \cite{Leffler1923}.
+This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in (1) all of the data concerning our specific ellipse's arc-length is contained within the interval $$ 0 \leq \theta \leq \pi/2 $$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $$ \pi/2 $$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see \[2\].
 		
 **Definition** Let
 
@@ -79,7 +79,7 @@ We see that the ordinary and symmetric forms of elliptic integrals are related b
 **Proposition** Let $$ k^2 = 1 - b^2/a^2 $$. Then 
 
 $$
-\begin{alined}
+\begin{alinged}
 	F(k) & = a F_S(a, b) \\
 	E(k) & = \frac{1}{a} E_S(a, b).
 \end{aligned}
