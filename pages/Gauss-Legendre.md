@@ -9,8 +9,8 @@ title: The Gauss-Legendre Algorithm
 ## Table of Contents
 1. [History](#1-history)
 2. [Elliptic Integrals](#2-elliptic-integrals)
-3. [Main Results](#3-main-results) <br> <br>
-[References](#references)
+3. [Main Results](#3-main-results) <br> 
+4. [References](#4-references)
 
 ## 1. History
 	
@@ -45,7 +45,7 @@ $$
 	= \frac{2 \sqrt{2}}{9801} \sum_{n=0}^{\infty} \frac{(4n)! (1103+26390n)}{(n!)^4 396^{4n}}.
 $$
 
-only need around $$ 65 $$ iterations to converge [\[3\](#refences). His equations are now used for large approximations of $$ \pi $$ due to computational complexity optimization and storage restrictions. 
+only need around $$ 65 $$ iterations to converge [\[3\]](#refences). His equations are now used for large approximations of $$ \pi $$ due to computational complexity optimization and storage restrictions. 
 		
 
 ## 2. Elliptic integrals
@@ -74,7 +74,7 @@ Then $$ F(k) $$ and $$ E(k) $$ are called *complete elliptic integrals of the fi
 		
 &emsp; From here on we will assume that by elliptic integral we mean a complete elliptic integral of the first or second kind. We see that the ordinary and symmetric forms of elliptic integrals are related by the following proposition.
 		
-**Proposition 2.1** Let $$ k^2 = 1 - b^2/a^2 $$. Then 
+**Proposition 2.1.** &nbsp; Let $$ k^2 = 1 - b^2/a^2 $$. Then 
 
 $$
 \begin{aligned}
@@ -213,7 +213,7 @@ $$
 
 with the last equality following from the identity $$ M(ca, cb) = cM(a, b) $$. $$ \blacksquare $$
 		
-&emsp; We finally have the tools we need to prove the Gauss-Legendre algorithm.
+&emsp; We finally have the tools we need to prove the Gauss-Legendre Algorithm does indeed converge to $$ \pi $$.
 		
 *Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply Proposition [2.2](#2-elliptic-integrals) to get
 
@@ -243,7 +243,7 @@ $$
 with plugging in $$ S $$ gives us our result. $$ \blacksquare $$
 
 
-## References
+## 4. References
 
 1. David H. Bailey, Simon M. Plouffe, Peter B. Borwein, and Jonathan M. Borwein, *The quest for $$ \pi $$*, The Mathematical Intelligencer 19 (1997), no. 1, 50–56.
 2. Gosta Mittag-Leffler, *An introduction to the theory of elliptic functions*, Annals of Mathematics 24 (1923), no. 4, 271–351.
