@@ -7,8 +7,10 @@ title: The Gauss-Legendre Algorithm
 ---
 <br>
 ## Table of Contents
-1. [History](##History)
-2. [Elliptic Integrals](##Elliptic-Integrals)
+1. [History](#1-History)
+2. [Elliptic Integrals](#2-Elliptic-Integrals)
+3. [Main Results](#3-Main-Results)
+[References](#References)
 
 ## 1. History
 	
@@ -111,7 +113,7 @@ holds.*
 *Proof.* We leave the details of this proof to the reader. Taking the derivative with respect to $k_1$ shows that the L.H.S. is constant. To see that this value is $\pi/2$, we take the limit as $k_1$ goes to $0$. $$ \blacksquare $$
 	
 	
-## Main results
+## 3. Main results
 		
 We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in \cite{Salamin1976}.
 		
@@ -235,3 +237,10 @@ $$
 $$
 
 with plugging in $$ S $$ gives us our result. $$ \blacksquare $$
+
+
+## References
+
+1. 
+2. 
+3. 
