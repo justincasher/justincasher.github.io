@@ -102,27 +102,29 @@ and hence our result. $$ \blacksquare $$
 		
 We also recall a result regarding the symmetry of these integrals originally discovered by Legendre.
 
-**Proposition.** (Legendre's Identity) *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then 
+**Proposition.** (Legendre's Identity) *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then*
 
 $$
 	F(k_1) E(k_2) + F(k_2) E(k_1) - F(k_1) F(k_2) = \frac{\pi}{2}
 $$
 
-holds.*
+*holds.*
 	
-*Proof.* We leave the details of this proof to the reader. Taking the derivative with respect to $k_1$ shows that the L.H.S. is constant. To see that this value is $\pi/2$, we take the limit as $k_1$ goes to $0$. $$ \blacksquare $$
+*Proof.* We leave the details of this proof to the reader. Taking the derivative with respect to $$ k_1 $$ shows that the L.H.S. is constant. To see that this value is $$ \pi/2 $$, we take the limit as $$ k_1 $$ goes to $$ 0 $$. $$ \blacksquare $$
 	
 	
 ## 3. Main results
 		
 We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in \cite{Salamin1976}.
 		
-**Definition** Let $$ a_0, b_0 \in \RR $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit $$ \lim a_n = \lim b_n = M(a_0, b_0) $$ the arithmetic-geometric (AM-GM) mean of $$ a_0 $$ and $$ b_0 $$.
+**Definition** Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit $$ \lim a_n = \lim b_n = M(a_0, b_0) $$ the arithmetic-geometric (AM-GM) mean of $$ a_0 $$ and $$ b_0 $$.
 	
-**Theorem** (Gauss-Legendre) *Set $a_0 = 1$ and $b_0 = \sqrt{2}/2$. Then
+**Theorem** (Gauss-Legendre) *Set $$ a_0 = 1 $$ and $$ b_0 = \sqrt{2}/2 $$. Then
+
 $$
 	\pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
 $$
+
 holds.*
 		
 We need two lemmas in order to prove our result. 
@@ -200,7 +202,7 @@ $$
 	= \sum_{n=0}^{\infty} \left( \frac{(2n-1)!!}{(2n)!!} k^n \right)^2.
 $$
 
-Calculating the AM and GM means gives us $M(1+k, 1-k) = M(1, \sqrt{1-k^2})$. Hence, applying \autoref{Symmetric} for $b/a = \sqrt{1-k^2}$, we get
+Calculating the AM and GM means gives us $$ M(1+k, 1-k) = M(1, \sqrt{1-k^2}) $$. Hence, applying \autoref{Symmetric} for $$ b/a = \sqrt{1-k^2} $$, we get
 
 $$
 	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
