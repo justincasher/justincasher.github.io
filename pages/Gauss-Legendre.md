@@ -113,17 +113,23 @@ $$
 	
 ## 3. Main results
 		
-&emsp; We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in \cite{Salamin1976}.
+&emsp; We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in [\[4\]](#references).
 		
-**Definition** Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit $$ \lim a_n = \lim b_n = M(a_0, b_0) $$ the arithmetic-geometric (AM-GM) mean of $$ a_0 $$ and $$ b_0 $$.
+**Definition** Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit 
+
+$$ 
+    \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = M(a_0, b_0) 
+$$ 
+
+the *arithmetic-geometric (AM-GM) mean* of $$ a_0 $$ and $$ b_0 $$.
 	
-**Theorem** (Gauss-Legendre) *Set $$ a_0 = 1 $$ and $$ b_0 = \sqrt{2}/2 $$. Then
+**Theorem** (Gauss-Legendre). *Set $$ a_0 = 1 $$ and $$ b_0 = \sqrt{2}/2 $$. Then*
 
 $$
 	\pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
 $$
 
-holds.*
+*holds.*
 		
 &emsp; We need two lemmas in order to prove our result. 
 		
