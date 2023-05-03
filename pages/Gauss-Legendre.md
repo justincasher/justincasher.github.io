@@ -217,7 +217,13 @@ $$
 	= \sum_{n=0}^{\infty} \left( \frac{(2n-1)!!}{(2n)!!} k^n \right)^2.
 $$
 
-(The "!!" means double factorial.) Calculating the AM and GM means gives us $$ M(1+k, 1-k) = M(1, \sqrt{1-k^2}) $$. Hence, applying Proposition [2.1](#2-elliptic-integrals) for $$ b/a = \sqrt{1-k^2} $$, we get
+(The "!!" means double factorial.) Calculating the AM and GM means gives us 
+
+$$ 
+    M(1+k, 1-k) = M(1, \sqrt{1-k^2}).
+$$
+
+Hence, applying Proposition [2.1](#2-elliptic-integrals) for $$ b/a = \sqrt{1-k^2} $$, we get
 
 $$
 	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
