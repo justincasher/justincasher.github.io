@@ -74,7 +74,7 @@ Then $$ F(k) $$ and $$ E(k) $$ are called *complete elliptic integrals of the fi
 		
 &emsp; From here on we will assume that by elliptic integral we mean a complete elliptic integral of the first or second kind. We see that the ordinary and symmetric forms of elliptic integrals are related by the following proposition.
 		
-**Proposition 2.1.** &nbsp; Let $$ k^2 = 1 - b^2/a^2 $$. Then 
+**Proposition 2.1.** &nbsp; *Let $$ k^2 = 1 - b^2/a^2 $$. Then the identities*
 
 $$
 \begin{aligned}
@@ -82,6 +82,8 @@ $$
 	E(k) & = \frac{1}{a} E_S(a, b).
 \end{aligned}
 $$
+
+*are true.*
 	
 *Proof.* &nbsp; Let us prove the second equation with the first following similarly. Substituting, we get 
 
