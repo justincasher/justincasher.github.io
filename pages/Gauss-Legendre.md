@@ -147,14 +147,14 @@ Then $$ E_S(a, b) = S F_S(a, b) $$. $$ \blacksquare $$
 
 $$
     L(a, b)
-	= a^2 F_S(a, b) - E_S(a, b) \tag{(2)}
+	= a^2 F_S(a, b) - E_S(a, b) \tag{2}
 $$
 
-Explicitely, this is
+Explicitely, this expands to
 
 $$
     L(a, b)
-	= (a^2 - b^2) \int_0^{\pi/2} \frac{\sin^2 \theta}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta. \tag{(2)} 
+	= (a^2 - b^2) \int_0^{\pi/2} \frac{\sin^2 \theta}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta.
 $$
 
 &emsp; Substituting $$ x^2 = a^2 \cos^2 \theta + b^2 \sin^2 \theta $$, 
