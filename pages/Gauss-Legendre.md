@@ -9,12 +9,12 @@ title: The Gauss-Legendre Algorithm
 ## Table of Contents
 1. [History](#1-history)
 2. [Elliptic Integrals](#2-elliptic-integrals)
-3. [Main Results](#3-main-results) <br> <br> 
+3. [Main Results](#3-main-results) <br> <br>
 [References](#references)
 
 ## 1. History
 	
-&emsp; The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular and more rigorous methods. The reference here is \cite{Bailey1996}. Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
+&emsp; The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular methods. The reference here is [\[1\]](#references). Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
 
 $$
 	\arctan(x) 
@@ -38,14 +38,14 @@ $$
 
 The underlying problem is this family of methods are slow, often taking hundreds of iterations to even yield a couple of digits.
 		
-&emsp; In contrast, the Gauss-Legendre algorithm has quadratic convergence. Let us say we want to calculate 512 decimal places of $$ \pi $$. Then the Gauss-Legendre algorithm only needs 9 iterations, while almost all of the older methods (normally) need at least 800 iterations, if not significantly more. As an aside, Ramanujan's equations for $$ \pi $$
+&emsp; In contrast, the Gauss-Legendre algorithm has quadratic convergence. Let us say we want to calculate 512 decimal places of $$ \pi $$. Then the Gauss-Legendre algorithm only needs 9 iterations, while almost all of the older methods (normally) need at least 800 iterations, if not significantly more. As an aside, Ramanujan's equation for $$ \pi $$
 
 $$
 	\frac{1}{\pi} 
 	= \frac{2 \sqrt{2}}{9801} \sum_{n=0}^{\infty} \frac{(4n)! (1103+26390n)}{(n!)^4 396^{4n}}.
 $$
 
-only need around $$ 65 $$ iterations to converge. They are also now used for large approximations due to computational complexity and storage restrictions. 
+only need around $$ 65 $$ iterations to converge [\[3\](#refences). His equations are now used for large approximations of $$ \pi $$ due to computational complexity optimization and storage restrictions. 
 		
 
 ## 2. Elliptic integrals
@@ -74,7 +74,7 @@ Then $$ F(k) $$ and $$ E(k) $$ are called *complete elliptic integrals of the fi
 		
 &emsp; From here on we will assume that by elliptic integral we mean a complete elliptic integral of the first or second kind. We see that the ordinary and symmetric forms of elliptic integrals are related by the following proposition.
 		
-**Proposition** Let $$ k^2 = 1 - b^2/a^2 $$. Then 
+**Proposition 2.1** Let $$ k^2 = 1 - b^2/a^2 $$. Then 
 
 $$
 \begin{aligned}
@@ -100,7 +100,7 @@ and hence our result. $$ \blacksquare $$
 		
 &emsp; We also recall a result regarding the symmetry of these integrals originally discovered by Legendre.
 
-**Proposition.** (Legendre's Identity) *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then*
+**Proposition 2.2.** (Legendre's Identity) *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then*
 
 $$
 	F(k_1) E(k_2) + F(k_2) E(k_1) - F(k_1) F(k_2) = \frac{\pi}{2}
@@ -177,8 +177,7 @@ $$
 
 Rewriting this equation in terms of (2) gives us the result. $$ \blacksquare $$
 	
-		
-**Lemma** *The identity*
+**Lemma 3.2.** *The identity*
 
 $$
 F_S(a, b) = \frac{\pi}{2 M(a, b)}
@@ -199,7 +198,7 @@ $$
 	= \sum_{n=0}^{\infty} \left( \frac{(2n-1)!!}{(2n)!!} k^n \right)^2.
 $$
 
-Calculating the AM and GM means gives us $$ M(1+k, 1-k) = M(1, \sqrt{1-k^2}) $$. Hence, applying \autoref{Symmetric} for $$ b/a = \sqrt{1-k^2} $$, we get
+Calculating the AM and GM means gives us $$ M(1+k, 1-k) = M(1, \sqrt{1-k^2}) $$. Hence, applying Proposition [2.1](#2-elliptic-integrals) for $$ b/a = \sqrt{1-k^2} $$, we get
 
 $$
 	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
@@ -208,27 +207,27 @@ $$
 
 with the last equality following from the identity $$ M(ca, cb) = cM(a, b) $$. $$ \blacksquare $$
 		
-We finally have the tools we need to prove the Gauss-Legendre algorithm.
+&emsp; We finally have the tools we need to prove the Gauss-Legendre algorithm.
 		
-*Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply \autoref{Legendre} to get
+*Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply Proposition [2.2](#2-elliptic-integrals) to get
 
 $$
 	2 F (k) E (k) - F(k)^2 = \frac{\pi}{2}.
 $$
 
-Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $$ k^2 = 1 - 1/k^2 $$, we can set $$ a = 1 $$ and $$ b = k $$ in \autoref{Symmetric} to get
+Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $$ k^2 = 1 - 1/k^2 $$, we can set $$ a = 1 $$ and $$ b = k $$ in Proposition [2.1](#2-elliptic-integrals) to get
 
 $$
 	2 F_S(1, k) E_S(1, k) - F_S(1, k)^2 = \frac{\pi}{2}.
 $$
 
-Then applying \autoref{Lemma1} gives us an equation only dependent on $$ F_S(1, k) $$ 
+Then applying Lemma [3.1](#3-main-results) gives us an equation only dependent on $$ F_S(1, k) $$ 
 
 $$
 	(2 S - 1) F_S(1, k)^2 = \frac{\pi}{2}.
 $$
 
-Finally, we apply Lemma 2 to write our equation in terms of the AM-GM mean
+Finally, we apply Lemma [3.2](#3-main-results) to write our equation in terms of the AM-GM mean
 
 $$				
 	(2S-1) \left( \frac{\pi}{2 M(1, k)} \right)^2 = \frac{\pi}{2} \\
