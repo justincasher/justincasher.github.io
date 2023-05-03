@@ -9,7 +9,7 @@ title: The Gauss-Legendre Algorithm
 ## Table of Contents
 1. [History](#1-History)
 2. [Elliptic Integrals](#2-Elliptic-Integrals)
-3. [Main Results](#3-Main-Results)
+3. [Main Results](#3-Main-Results) <br>
 [References](#References)
 
 ## 1. History
@@ -56,7 +56,7 @@ $$
 	\int_{0}^{2 \pi} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta. \tag{1}
 $$
 
-This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in (1) all of the data concerning our specific ellipse's arc-length is contained within the interval $$ 0 \leq \theta \leq \pi/2 $$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $$ \pi/2 $$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see \[2\].
+This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in (1) all of the data concerning our specific ellipse's arc-length is contained within the interval $$ 0 \leq \theta \leq \pi/2 $$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $$ \pi/2 $$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see ['\[2\]'](#References).
 		
 **Definition** Let
 
