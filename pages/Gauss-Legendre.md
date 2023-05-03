@@ -9,8 +9,7 @@ title: The Gauss-Legendre Algorithm
 ## Table of Contents
 1. [History](#1-history)
 2. [Elliptic Integrals](#2-elliptic-integrals)
-3. [Main Results](#3-main-results) 
-
+3. [Main Results](#3-main-results) <br> <br> 
 [References](#references)
 
 ## 1. History
@@ -51,7 +50,7 @@ only need around $$ 65 $$ iterations to converge. They are also now used for lar
 
 ## 2. Elliptic integrals
 	
-Let $$ (a \cos \theta, b \sin \theta) $$ be an ellipse parameterized by $$ \theta \in [0, 2 \pi] $$. Then it's arc-length is given by 
+&emsp; Let $$ (a \cos \theta, b \sin \theta) $$ be an ellipse parameterized by $$ \theta \in [0, 2 \pi] $$. Then it's arc-length is given by 
 
 $$
 	\int_{0}^{2 \pi} \sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta} d \theta. \tag{1}
@@ -59,7 +58,7 @@ $$
 
 This integral is not easy to compute in itself, and it was generalized to the study of so-called elliptic integrals in the early 1700s. Now notice that in (1) all of the data concerning our specific ellipse's arc-length is contained within the interval $$ 0 \leq \theta \leq \pi/2 $$. Hence, it would make sense to reduce our study to complete elliptic integrals, meaning those with amplitude $$ \pi/2 $$. Furthermore, we will restrict ourselves to complete elliptic integrals of the first and second kind. For the proof that every elliptic integral is of the first, second, or third kind, see [\[2\]](#references).
 		
-**Definition** Let
+**Definition.** Let
 
 $$ 
 \begin{aligned}
@@ -73,9 +72,7 @@ $$
 Then $$ F(k) $$ and $$ E(k) $$ are called *complete elliptic integrals of the first and second kinds*, respectively, with *symmetric forms* $$ F_S(a, b) $$ and $$ E_S(a, b) $$. We refer to $$ k $$ as the modulus of our integral.
 
 		
-From here on we will assume that by elliptic integral we mean a complete elliptic integral of the first or second kind. 
-		
-We see that the ordinary and symmetric forms of elliptic integrals are related by the following proposition.
+&emsp; From here on we will assume that by elliptic integral we mean a complete elliptic integral of the first or second kind. We see that the ordinary and symmetric forms of elliptic integrals are related by the following proposition.
 		
 **Proposition** Let $$ k^2 = 1 - b^2/a^2 $$. Then 
 
@@ -101,7 +98,7 @@ $$
 
 and hence our result. $$ \blacksquare $$
 		
-We also recall a result regarding the symmetry of these integrals originally discovered by Legendre.
+&emsp; We also recall a result regarding the symmetry of these integrals originally discovered by Legendre.
 
 **Proposition.** (Legendre's Identity) *Suppose $$ k_1^2 + k_2^2 = 1 $$. Then*
 
@@ -116,7 +113,7 @@ $$
 	
 ## 3. Main results
 		
-We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in \cite{Salamin1976}.
+&emsp; We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in \cite{Salamin1976}.
 		
 **Definition** Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit $$ \lim a_n = \lim b_n = M(a_0, b_0) $$ the arithmetic-geometric (AM-GM) mean of $$ a_0 $$ and $$ b_0 $$.
 	
@@ -128,9 +125,9 @@ $$
 
 holds.*
 		
-We need two lemmas in order to prove our result. 
+&emsp; We need two lemmas in order to prove our result. 
 		
-**Lemma** Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
+**Lemma 3.1.** Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
 
 $$
 	S = a^2 - \sum_{n=0}^{\infty} 2^{n-1} \left( a_n^2 - b_n^2 \right).
@@ -138,8 +135,7 @@ $$
 
 Then $$ E_S(a, b) = S F_S(a, b) $$. $$ \blacksquare $$
 	
-\begin{proof}
-This proof is taken from \cite{Para09}. Consider the integral 
+*Proof.* This proof is taken from [\[5\]](#references). Consider the integral 
 
 $$
 \begin{aligned}
