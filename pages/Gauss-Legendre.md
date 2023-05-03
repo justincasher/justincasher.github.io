@@ -154,7 +154,7 @@ Explicitely, this is
 
 $$
     L(a, b)
-	= (a^2 - b^2) \int_0^{\pi/2} \frac{\sin^2 \theta}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta.
+	= (a^2 - b^2) \int_0^{\pi/2} \frac{\sin^2 \theta}{\sqrt{a^2 \cos^2 \theta + b^2 \sin^2 \theta}} d \theta. \tag{(2)} 
 $$
 
 &emsp; Substituting $$ x^2 = a^2 \cos^2 \theta + b^2 \sin^2 \theta $$, 
@@ -169,7 +169,7 @@ Now substituting $$ y = (x+ab/x)/2 $$ and considering the associated AM-GM seque
 $$
 \begin{aligned}
 	L(a, b) 
-	& = \frac{1}{2} \int_{b_1}^{a_1} \frac{(a^2 - b^2) + 4(a_1^2 - y^2)}{\sqrt{(a_1^2 - y^2)(y^2 - b_1^2)}} dy \tag{(2)} \\
+	& = \frac{1}{2} \int_{b_1}^{a_1} \frac{(a^2 - b^2) + 4(a_1^2 - y^2)}{\sqrt{(a_1^2 - y^2)(y^2 - b_1^2)}} dy \\
 	& = \frac{1}{2} (a^2 - b^2) F_S(a, b) + 2 L(a_1, b_1),
 \end{aligned} 
 $$
