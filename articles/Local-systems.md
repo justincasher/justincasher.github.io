@@ -1,15 +1,11 @@
 ---
 layout: Writing
-header-includes:
-   - \usepackage{tikz}
-   - \usetikzlibrary{shapes.geometric,arrows}
 indent: true
 permalink: /Local-Systems
 feedformat: card
 title: Local Systems
 ---
-$$ \DeclareMathOperator{\LC}{LC} $$
-$$ \DeclareMathOperator{\LS}{LS} $$
+$$ \DeclareMathOperator{\LC}{LC} \DeclareMathOperator{\LS}{LS}  \usepackage{tikz} \usetikzlibrary{shapes.geometric,arrows} \newcommand{\CA}{\mathcal{A}} \newcommand{\CB}{\mathcal{B}} \DeclareMathOperator{\Aut}{Aut}$$
 <br>
 ## Table of Contents
 1. [Overview](#1-overview)
@@ -49,7 +45,7 @@ where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: fo
 In the case that $$ F $$ is locally constant, its étale space is a covering. Indeed, let $$ U $$ be a neighborhood of $$ x $$ such that $$ S \mid_U = \underline{M} $$. Then the étale space restricted to $$ U $$ takes the form $p \colon U \times M \to U$, which is a cover by the assumption that the topology on $$ M $$ is discrete. If we assume that $$ X $$ is locally connected, then this condition is also sufficient.
 
 
-**Lemma 1** &nbsp; *Let $X$ be a locally connected space. A sheaf $F$ of $R$-modules on $X$ is locally constant if and only if its étale space is a covering.*
+**Lemma 1** &nbsp; *Let $$ X $$ be a locally connected space. A sheaf $$ F $$ of $$ R $$-modules on $$ X $$ is locally constant if and only if its étale space is a covering.*
 
 *Proof.* &nbsp; Suppose the étale space of $$ F $$ is a covering. Then every point $$ x \in X $$ has a neighborhood $$ U $$ such that the restriction is $$ p \colon U \times M \to U $$. Assuming $$ U $$ to be connected implies that the sections of this map are constant, and thus our sheaf is constant on $$ U $$. $$ \blacksquare $$
 
@@ -85,7 +81,7 @@ $$
 The fundamental groupoid $$ \Pi(X) $$ acts on $\widetilde{X}$ by considering the orbits of $$ \pi_1(X, x) $$ for differing $$ x $$. In particular, $$ \widetilde{X}/\Pi(X) = X $$. Likewise, $$ \Pi(X) $$ acts on each $$ L^{\ast}(x) $$ via the induced map $$ L \colon \pi_1(X, x) \to \Aut(L^{\ast}(x)) $$. This allows us to form the quotient bundle
 
 $$
-    \overline{\nu} \colon \[\coprod_{x \in \widetilde{X}} L{\ast}(x)\] /\Pi(X) \to X. 
+    \overline{\nu} \colon [\coprod_{x \in \widetilde{X}} L^{\ast}(x)] /\Pi(X) \to X. 
 $$
 
 We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ are sections $$ s \colon U \to \coprod_{x \in U} L(x) $$, such that for any class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$, we get that $$ s(y) = L([\gamma])(s(x)) $$. Our sheaf being locally constant follows from $$ X $$ being locally simply connected. 
