@@ -10,6 +10,8 @@ title: Local Systems
 1. [Overview](#1-overview)
 2. [Proof](#proof)
 
+$$ \DeclareMathOperator{\LC}{LC} $$
+
 ## 1. Overview
 	
 &emsp; Let $$ X $$ be a topological space. Associated to any $$ R $$-module $$ M $$ is a presheaf on $$ X $$, which is given by mapping every open subset to $$ M $$ and setting restrictions to be the identity map. The sheafification of this presheaf is called a *constant sheaf* on $$ X $$ and is denoted $$ \underline{M} $$. Consequently, a sheaf $$ F $$ on $$ X $$ of $$ R $$-modules is said to be *locally constant* if for every point $$ x \in X $$, there exists a neighborhood $$ U $$ such that $$ F \mid_{U} $$ is a constant sheaf. This is equivalent to giving an open cover $$ \{U_{\alpha}\} $$ and $$ R $$-modules $$ \{M_{\alpha}\} $$ which satisfy $$ F \mid_{U_{\alpha}} = \underline{M_{\alpha}} $$. We denote the category of locally constant sheaves of $$R $$-modules on $$ X $$ by $$ \LC(X, R) $$; it is an abelian category.
