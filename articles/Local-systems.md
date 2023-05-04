@@ -5,12 +5,11 @@ permalink: /Local-Systems
 feedformat: card
 title: Local Systems
 ---
+$$ \DeclareMathOperator{\LC}{LC} $$
 <br>
 ## Table of Contents
 1. [Overview](#1-overview)
 2. [Proof](#proof)
-
-$$ \DeclareMathOperator{\LC}{LC} $$
 
 ## 1. Overview
 	
