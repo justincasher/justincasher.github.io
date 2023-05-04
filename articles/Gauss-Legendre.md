@@ -45,7 +45,7 @@ $$
 	= \frac{2 \sqrt{2}}{9801} \sum_{n=0}^{\infty} \frac{(4n)! (1103+26390n)}{(n!)^4 396^{4n}}.
 $$
 
-only need around $$ 65 $$ iterations to converge [\[3\]](#4-refences). His equations are now used for large approximations of $$ \pi $$ due to computational complexity optimization and storage restrictions. 
+only need around $$ 65 $$ iterations to converge [\[3\]](#4-references). His equations are now used for large approximations of $$ \pi $$ due to computational complexity optimization and storage restrictions. 
 		
 
 ## 2. Elliptic integrals
