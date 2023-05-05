@@ -1,14 +1,11 @@
 ---
 layout: Writing
-header-includes: 
-    - \usepackage{tikz}
-    - \usepackage{tikz-cd}
 indent: true
 permalink: /Local-Systems
 feedformat: card
 title: Local Systems
 ---
-$$ \DeclareMathOperator{\LC}{LC} \DeclareMathOperator{\LS}{LS}  \usepackage{tikz} \usetikzlibrary{shapes.geometric,arrows} \newcommand{\CA}{\mathcal{A}} \newcommand{\CB}{\mathcal{B}} \DeclareMathOperator{\Aut}{Aut}$$
+$$ \DeclareMathOperator{\LC}{LC} \DeclareMathOperator{\LS}{LS} \newcommand{\CA}{\mathcal{A}} \newcommand{\CB}{\mathcal{B}} \DeclareMathOperator{\Aut}{Aut}$$
 <br>
 ## Table of Contents
 1. [Overview](#1-overview)
@@ -16,23 +13,24 @@ $$ \DeclareMathOperator{\LC}{LC} \DeclareMathOperator{\LS}{LS}  \usepackage{tikz
 3. [References](#3-references)
 
 ## 1. Overview
-	
+    
 &emsp; Let $$ X $$ be a topological space. Associated to any $$ R $$-module $$ M $$ is a presheaf on $$ X $$, which is given by mapping every open subset to $$ M $$ and setting restrictions to be the identity map. The sheafification of this presheaf is called a *constant sheaf* on $$ X $$ and is denoted $$ \underline{M} $$. Consequently, a sheaf $$ F $$ on $$ X $$ of $$ R $$-modules is said to be *locally constant* if for every point $$ x \in X $$, there exists a neighborhood $$ U $$ such that $$ F \mid_{U} $$ is a constant sheaf. This is equivalent to giving an open cover $$ \{U_{\alpha}\} $$ and $$ R $$-modules $$ \{M_{\alpha}\} $$ which satisfy $$ F \mid_{U_{\alpha}} = \underline{M_{\alpha}} $$. We denote the category of locally constant sheaves of $$R $$-modules on $$ X $$ by $$ \LC(X, R) $$; it is an abelian category.
 
 &emsp; Now let $$ \Pi(X) $$ be the fundamental groupoid of $$ X $$ with the operator $$ \star $$ of path composition. We call a functor $$ L \colon \Pi(X) \to R\text{-Mod} $$ an *$$ R $$-local system on $$ X $$*. Morphisms between local systems are given by natural transformations of functors. Write $$ \LS(X, R) $$ for the category of $$ R $$-local systems on $$ X $$; it is again an abelian category. The purpose of this note is to provide a proof of the following theorem.
 
 
 **Theorem.** &nbsp; Let $X$ be a locally simply-connected space. Then the categories $$ \LC(X, R) $$ and $$ \LS(X, R) $$ are equivalent.
-	
-	
+    
+    
 ## 2. Proof
-		
+        
 &emsp; Again assume $$ X $$ to be locally simply-connected. We are going to construct a pair of functors 
 
 $$
-    \begin{tikzcd}
-        \LC(X, R) \arrow[r, "\CA", shift left=1] & \LS(X, R) \arrow[l, "\CB", shift left=1]
-    \end{tikzcd}
+\begin{aligned}
+    \CA & = \LC(X, R) \to \LS(X, R) \\
+    \CB & = \LS(X, R) \to \LC(X, R)
+\end{aligned}
 $$
 
 which induce a categorical equivalence. Our proof can be generalized semi-locally simply connected spaces, cf. \cite{Ach07}. In the sequel, by an $$ R $$-module we mean a left $$ R $$-module equipped with the discrete topology, unless specified elsewise. We are not assuming coverings to be path-connected. In particular, a cover is universal if every other path-connected cover factors through it. 
@@ -45,7 +43,7 @@ $$
 
 where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: for any germ $$ (U, m) $$ the set $$ \coprod_{x \in U} \{m\} $$ is homeomorphic to $$ U $$. The utility of this construction is that the sheaf of sections of $$ p $$ is isomorphic to $$ F $$. Hence, it is not hard to show that the categories of étale maps with codomain $$ X $$ and of sheaves of sets on $$ X $$ are equivalent, cf. \cite[ch. 2, \S6]{Mac92}.
 
-&emsp; In the case that $$ F $$ is locally constant, its étale space is a covering. Indeed, let $$ U $$ be a neighborhood of $$ x $$ such that $$ S \mid_U = \underline{M} $$. Then the étale space restricted to $$ U $$ takes the form $p \colon U \times M \to U$, which is a cover by the assumption that the topology on $$ M $$ is discrete. If we assume that $$ X $$ is locally connected, then this condition is also sufficient.
+&emsp; In the case that $$ F $$ is locally constant, its étale space is a covering. Indeed, let $$ U $$ be a neighborhood of $$ x $$ such that $$ S \mid_U = \underline{M} $$. Then the étale space restricted to $$ U $$ takes the form $$ p \colon U \times M \to U $$, which is a cover by the assumption that the topology on $$ M $$ is discrete. If we assume that $$ X $$ is locally connected, then this condition is also sufficient.
 
 
 **Lemma 1** &nbsp; *Let $$ X $$ be a locally connected space. A sheaf $$ F $$ of $$ R $$-modules on $$ X $$ is locally constant if and only if its étale space is a covering.*
@@ -70,19 +68,20 @@ Observe that $$ F \mid_{U_j} $$ being constant implies that for any $$ a, b \in 
 &emsp; Now let $$ f \colon F \to G $$ be a map of locally constant sheaves on $$ X $$. We define $$ \CA(f) $$ to be the induced map on stalks $$ f_x \colon F_x \to G_x $$. To show this is a natural transformation, we can restrict ourselves to open subsets $$ U $$ where $$ F $$ and $$ G $$ are both constant sheaves $$ \underline{M} $$ and $$ \underline{N} $$, respectively. Our morphism $$ f $$ is induced by an $$ R $$-module homomorphism $$ f_0 \colon M \to N $$. Then our result follows from the following diagram commuting:
 
 $$
-\begin{tikzcd}
-    F_x \arrow[r, "\sim"] \arrow[d, "f_0"] & F(U) \arrow[r, "\sim"] \arrow[d, "f_0"] & F_y \arrow[d, "f_0"] \\
-    G_x \arrow[r, "\sim"] & G(U) \arrow[r, "\sim"] & G_y
-\end{tikzcd}
+\begin{CD}
+    F_x     @>\sim>>    F(U)    @>\sim>>    F_y
+    @VVf_0V             @VVf_0V             @VVf_0V
+    G_x @>\sim>> F(U) @>\sim>> G_y
+\end{CD}
 $$
 
-&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. \cite[ch. 3, \S8]{May}. The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^\*= L \circ \varphi $$, giving us the bundle
+&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. \cite[ch. 3, \S8]{May}. The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^{\ast} = L \circ \varphi $$, giving us the bundle
 
 $$
     \nu \colon \coprod_{x \in \widetilde{X}} L^{\ast}(x) \to \widetilde{X}.
 $$
 
-The fundamental groupoid $$ \Pi(X) $$ acts on $\widetilde{X}$ by considering the orbits of $$ \pi_1(X, x) $$ for differing $$ x $$. In particular, $$ \widetilde{X}/\Pi(X) = X $$. Likewise, $$ \Pi(X) $$ acts on each $$ L^{\ast}(x) $$ via the induced map $$ L \colon \pi_1(X, x) \to \Aut(L^{\ast}(x)) $$. This allows us to form the quotient bundle
+The fundamental groupoid $$ \Pi(X) $$ acts on $$ \widetilde{X} $$ by considering the orbits of $$ \pi_1(X, x) $$ for differing $$ x $$. In particular, $$ \widetilde{X}/\Pi(X) = X $$. Likewise, $$ \Pi(X) $$ acts on each $$ L^{\ast}(x) $$ via the induced map $$ L \colon \pi_1(X, x) \to \Aut(L^{\ast}(x)) $$. This allows us to form the quotient bundle
 
 $$
     \overline{\nu} \colon [\coprod_{x \in \widetilde{X}} L^{\ast}(x)] /\Pi(X) \to X. 
@@ -90,9 +89,9 @@ $$
 
 We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ are sections $$ s \colon U \to \coprod_{x \in U} L(x) $$, such that for any class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$, we get that $$ s(y) = L([\gamma])(s(x)) $$. Our sheaf being locally constant follows from $$ X $$ being locally simply connected. 
 
-&emsp; Finally suppose we are given a natural transformation $\eta \colon L \to L'$ between local systems. Then $\eta$ induces a morphism $$ \CB(\eta) \colon \CB(L) \to \CB(L') $$ by pulling back sections, i.e. for each open subset $$ U $$, we map $$ s \in \CB(L)(U) $$ to $$ \eta \circ s $$. This is indeed a morphism of sheaves since $$ \eta $$ is functorial.
+&emsp; Finally suppose we are given a natural transformation $\eta \colon L \to L'$ between local systems. Then $$ \eta $$ induces a morphism $$ \CB(\eta) \colon \CB(L) \to \CB(L') $$ by pulling back sections, i.e. for each open subset $$ U $$, we map $$ s \in \CB(L)(U) $$ to $$ \eta \circ s $$. This is indeed a morphism of sheaves since $$ \eta $$ is functorial.
 
-&emsp; The proof our theorem them follows by tracing through the definitions. Indeed, it is not hard to see that $$ (\CA \circ \CB)(L) = L $$ and $$ (\CB \circ \CA)(F) = F $$.
+*Proof (Theorem).* &nbsp; Tracing through our definitions, it is not hard to see that $$ (\CA \circ \CB)(L) = L $$ and $$ (\CB \circ \CA)(F) = F $$. $$ \blacksquare $$
 
 
 ## 3. References
