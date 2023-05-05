@@ -6,6 +6,8 @@ feedformat: card
 title: The Gauss-Legendre Algorithm
 ---
 <br>
+*Note: Throughout this article tedious steps are often skipped to illustrate the main picture. In particular, computing substitutions and power series expansions.*
+
 ## Table of Contents
 1. [History](#1-history)
 2. [Elliptic Integrals](#2-elliptic-integrals)
