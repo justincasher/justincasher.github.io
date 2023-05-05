@@ -69,8 +69,8 @@ Observe that $$ F \mid_{U_j} $$ being constant implies that for any $$ a, b \in 
 
 $$
 \begin{CD}
-    F_x     @>\sim>>    F(U)    @>\sim>>    F_y
-    @VVf_0V             @VVf_0V             @VVf_0V
+    F_x     @>\sim>>    F(U)    @>\sim>>    F_y \\
+    @VVf_0V             @VVf_0V             @VVf_0V \\
     G_x @>\sim>> F(U) @>\sim>> G_y
 \end{CD}
 $$
