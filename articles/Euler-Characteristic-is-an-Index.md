@@ -157,5 +157,5 @@ $$
 ## 4. References
 
 1. Michael Atiyah and Isadore Singer, *The index of elliptic operators on compact manifolds*, Bulletin of The American Mathematical Society 69 (1963), no. 3, 422–433.
-2. Daniel Freed, **The Atiyah-Singer index theorem**, Bulletin of The American Mathematical Society 58 (2021), no. 4, 517–566.
+2. Daniel Freed, *The Atiyah-Singer index theorem*, Bulletin of The American Mathematical Society 58 (2021), no. 4, 517–566.
 3. Frank Warner, *Foundations of differentiable manifolds and Lie groups*, Springer, 1983.
