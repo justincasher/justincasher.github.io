@@ -33,7 +33,7 @@ $$
 \end{aligned}
 $$
 
-which induce a categorical equivalence. Our proof can be generalized semi-locally simply connected spaces, cf. \cite{Ach07}. In the sequel, by an $$ R $$-module we mean a left $$ R $$-module equipped with the discrete topology, unless specified elsewise. We are not assuming coverings to be path-connected. In particular, a cover is universal if every other path-connected cover factors through it. 
+which induce a categorical equivalence. Our proof can be generalized semi-locally simply connected spaces, cf. [\[1\]](#3-references). In the sequel, by an $$ R $$-module we mean a left $$ R $$-module equipped with the discrete topology, unless specified elsewise. We are not assuming coverings to be path-connected. In particular, a cover is universal if every other path-connected cover factors through it. 
 
 &emsp; A continuous map $$ f \colon Y \to X $$ is called *étale* if it is a local homeomorphism. For any sheaf $$ F $$ we define *étale space* of $$ F $$ as the bundle
 
@@ -75,7 +75,7 @@ $$
 \end{CD}
 $$
 
-&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. \cite[ch. 3, \S8]{May}. The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^{\ast} = L \circ \varphi $$, giving us the bundle
+&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. [\[ch. 3, \S8\]](#3-references). The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^{\ast} = L \circ \varphi $$, giving us the bundle
 
 $$
     \nu \colon \coprod_{x \in \widetilde{X}} L^{\ast}(x) \to \widetilde{X}.
