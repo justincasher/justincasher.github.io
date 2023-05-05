@@ -41,7 +41,7 @@ $$
     p \colon \coprod_{x \in X} F_x \to X,
 $$
 
-where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: for any germ $$ (U, m) $$ the set $$ \coprod_{x \in U} \{m\} $$ is homeomorphic to $$ U $$. The utility of this construction is that the sheaf of sections of $$ p $$ is isomorphic to $$ F $$. Hence, it is not hard to show that the categories of étale maps with codomain $$ X $$ and of sheaves of sets on $$ X $$ are equivalent, cf. \cite[ch. 2, \S6]{Mac92}.
+where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: for any germ $$ (U, m) $$ the set $$ \coprod_{x \in U} \{m\} $$ is homeomorphic to $$ U $$. The utility of this construction is that the sheaf of sections of $$ p $$ is isomorphic to $$ F $$. Hence, it is not hard to show that the categories of étale maps with codomain $$ X $$ and of sheaves of sets on $$ X $$ are equivalent, cf. [\[5, ch. 2, \S6\](#3-references)
 
 &emsp; In the case that $$ F $$ is locally constant, its étale space is a covering. Indeed, let $$ U $$ be a neighborhood of $$ x $$ such that $$ S \mid_U = \underline{M} $$. Then the étale space restricted to $$ U $$ takes the form $$ p \colon U \times M \to U $$, which is a cover by the assumption that the topology on $$ M $$ is discrete. If we assume that $$ X $$ is locally connected, then this condition is also sufficient.
 
@@ -89,11 +89,15 @@ $$
 
 We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ are sections $$ s \colon U \to \coprod_{x \in U} L(x) $$, such that for any class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$, we get that $$ s(y) = L([\gamma])(s(x)) $$. Our sheaf being locally constant follows from $$ X $$ being locally simply connected. 
 
-&emsp; Finally suppose we are given a natural transformation $\eta \colon L \to L'$ between local systems. Then $$ \eta $$ induces a morphism $$ \CB(\eta) \colon \CB(L) \to \CB(L') $$ by pulling back sections, i.e. for each open subset $$ U $$, we map $$ s \in \CB(L)(U) $$ to $$ \eta \circ s $$. This is indeed a morphism of sheaves since $$ \eta $$ is functorial.
+&emsp; Finally suppose we are given a natural transformation $$ \eta \colon L \to L' $$ between local systems. Then $$ \eta $$ induces a morphism $$ \CB(\eta) \colon \CB(L) \to \CB(L') $$ by pulling back sections, i.e. for each open subset $$ U $$, we map $$ s \in \CB(L)(U) $$ to $$ \eta \circ s $$. This is indeed a morphism of sheaves since $$ \eta $$ is functorial.
 
 *Proof (Theorem).* &nbsp; Tracing through our definitions, it is not hard to see that $$ (\CA \circ \CB)(L) = L $$ and $$ (\CB \circ \CA)(F) = F $$. $$ \blacksquare $$
 
 
 ## 3. References
 
-1. 
+1. Pramod Achar, *Perverse sheaves and applications to representation theory*, American Mathematics Society, 2021.
+2. bavajee, *Why are local systems and representations of the fundamental group equivalent*. URL:https://mathoverflow.net/q/17786 (version: 2016-02-07).
+3. Alexandru Dimca, Sheaves in topology, Springer, 2004.
+4. J.P. May, *A concise course in algebraic topology*, Chicago Lectures in Mathematics, 1999.
+5. Saunders Mac Lane and Ieke Moerdijk, *Sheaves in geometry and logic: A first introduction to topos theory*, Springer-Verlag, 1992.
