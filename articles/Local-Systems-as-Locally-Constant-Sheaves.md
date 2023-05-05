@@ -75,7 +75,7 @@ $$
 \end{CD}
 $$
 
-&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. [\[ch. 3, \S8\]](#3-references). The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^{\ast} = L \circ \varphi $$, giving us the bundle
+&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. [\[ch. 3, §8\]](#3-references). The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^{\ast} = L \circ \varphi $$, giving us the bundle
 
 $$
     \nu \colon \coprod_{x \in \widetilde{X}} L^{\ast}(x) \to \widetilde{X}.
@@ -97,7 +97,7 @@ We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ a
 ## 3. References
 
 1. Pramod Achar, *Perverse sheaves and applications to representation theory*, American Mathematics Society, 2021.
-2. bavajee, *Why are local systems and representations of the fundamental group equivalent*. URL:https://mathoverflow.net/q/17786 (version: 2016-02-07).
+2. bavajee, *Why are local systems and representations of the fundamental group equivalent*. [Link](https://mathoverflow.net/q/17786). (version: 2016-02-07).
 3. Alexandru Dimca, Sheaves in topology, Springer, 2004.
 4. J.P. May, *A concise course in algebraic topology*, Chicago Lectures in Mathematics, 1999.
 5. Saunders Mac Lane and Ieke Moerdijk, *Sheaves in geometry and logic: A first introduction to topos theory*, Springer-Verlag, 1992.
