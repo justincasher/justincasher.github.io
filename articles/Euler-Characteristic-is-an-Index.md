@@ -11,6 +11,7 @@ title: The Euler Characteristic is the Index of an Elliptic Operator
 1. [Atiyah-Singer Index Theorem](#1-atiyah-singer-index-theorem)
 2. [The de Rham Complex](#2-the-de-rham-complex)
 3. [Main Proof](#3-main-proof)
+4. [References](#4-references)
 
 ## 1. Atiyah-Singer Index Theorem
 
@@ -151,3 +152,10 @@ $$
 $$
 
 **Theorem.** We have the equality $$ \chi(M) = \text{Ind}(D^{\text{ev}}) $$.
+
+
+## 4. References
+
+1. Michael Atiyah and Isadore Singer, *The index of elliptic operators on compact manifolds*, Bulletin of The American Mathematical Society 69 (1963), no. 3, 422–433.
+2. Daniel Freed, **The Atiyah-Singer index theorem**, Bulletin of The American Mathematical Society 58 (2021), no. 4, 517–566.
+3. Frank Warner, *Foundations of differentiable manifolds and Lie groups*, Springer, 1983.
