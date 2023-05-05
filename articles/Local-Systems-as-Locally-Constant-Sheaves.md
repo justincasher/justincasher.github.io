@@ -41,7 +41,7 @@ $$
     p \colon \coprod_{x \in X} F_x \to X,
 $$
 
-where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: for any germ $$ (U, m) $$ the set $$ \coprod{x \in U} \{m\} $$ is homeomorphic to $$ U $$. The utility of this construction is that the sheaf of sections of $$ p $$ is isomorphic to $$ F $$. Hence, it is not hard to show that the categories of étale maps with codomain $$ X $$ and of sheaves of sets on $$ X $$ are equivalent, cf. [\[5, ch.2, \S6\]](#3-references).
+where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: for any germ $$ (U, m) $$ the set $$ \coprod_{x \in U} \{m\} $$_ is homeomorphic to $$ U $$. The utility of this construction is that the sheaf of sections of $$ p $$ is isomorphic to $$ F $$. Hence, it is not hard to show that the categories of étale maps with codomain $$ X $$ and of sheaves of sets on $$ X $$ are equivalent, cf. [\[5, ch.2, §6\]](#3-references).
 
 &emsp; In the case that $$ F $$ is locally constant, its étale space is a covering. Indeed, let $$ U $$ be a neighborhood of $$ x $$ such that $$ S \mid_U = \underline{M} $$. Then the étale space restricted to $$ U $$ takes the form $$ p \colon U \times M \to U $$, which is a cover by the assumption that the topology on $$ M $$ is discrete. If we assume that $$ X $$ is locally connected, then this condition is also sufficient.
 
