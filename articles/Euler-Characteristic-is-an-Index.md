@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /Euler-Characteristic-is-an-Index
 feedformat: card
-title: The Euler Characteristic is the Index of an Elliptic Operator
+title: The Euler Characteristic is the Index of an Operator
 ---
 
 <br>
@@ -60,7 +60,7 @@ $$
     \chi(M) = \int_M e(TM)
 $$
 
-In particular, we will show that that the Euler characteristic is the index of a Dirac operator.
+In particular, we will show that that the Euler characteristic is the index of a Dirac operator. Note that in what follows our vector bundles are not complex, nor do we show that this operator is indeed elliptic. In order to do so we would need to complexify the de Rham complex then compute our operator's symbol.
 
 
 ## 2. The de Rham Complex
