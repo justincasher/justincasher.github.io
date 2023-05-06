@@ -5,12 +5,12 @@ permalink: /Categorical-Products-and-Coproducts
 feedformat: card
 title: Categorical Products and Coproducts
 ---
-$$ \newcommand{\cC}{\mathcal{C}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} $$
+$$ \newcommand{\cC}{\mathcal{C}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
 <br>
 ## Table of Contents
-1. [Atiyah-Singer Index Theorem](#1-limits-and-colimits)
-2. [The de Rham Complex](#2-applications-to-sets)
-3. [Main Proof](#3-k-theory)
+1. [Limits and Colimits](#1-limits-and-colimits)
+2. [Applications to Sets](#2-applications-to-sets)
+3. [K-Theory](#3-k-theory)
 4. [References](#4-references)
 
 ## 1. Limits and Colimits
