@@ -13,14 +13,13 @@ This page contains links to (mostly expository) mathematics articles I have writ
 
 
 <details>
-    <summary>How do I dropdown?</summary>
+    <summary>1. The Euler Characteristic is the Index of an Operator. Show description. Here are some more words</summary>
     <br>
-    This is how you dropdown.
+    We show how...
 </details>
 
 <details>
-    <summary>1. How do I dropdown? Show description.</summary>
+    <summary>2. The Gauss-Legendre Algorithm Show description.</summary>
     <br>
     This is how you dropdown.
 </details>
-
