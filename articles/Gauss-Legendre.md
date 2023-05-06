@@ -6,7 +6,14 @@ feedformat: card
 title: The Gauss-Legendre Algorithm
 ---
 <br>
-**Note:** Throughout this article tedious steps are often skipped to illustrate the main picture. In particular, integral substitutions and power series expansions.
+
+**Abstract.** We prove the following approximation of $$ \pi $$:
+
+$$
+    \pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
+$$
+
+**Note.** Throughout this article tedious steps are often skipped to illustrate the main picture; in particular, computing integral substitutions and power series expansions.
 
 ## Table of Contents
 1. [History](#1-history)
