@@ -13,14 +13,14 @@ This page contains links to (mostly expository) mathematics articles I have writ
 
 
 <details>
-<summary>How do I dropdown?</summary>
-<br>
-This is how you dropdown.
+    <summary>How do I dropdown?</summary>
+    <br>
+    This is how you dropdown.
 </details>
 
-1. <details>
-<summary>How do I dropdown?</summary>
-<br>
-This is how you dropdown.
-</details>
+1.  <details>
+        <summary>How do I dropdown?</summary>
+        <br>
+        This is how you dropdown.
+    </details>
 
