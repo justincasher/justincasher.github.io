@@ -100,7 +100,7 @@ It is a topological invariant of our manifold.
 
 ## 3. Main Proof
 
-&emsp; We define call $$ \Delta = (d + \delta)^2 $$ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
+&emsp; We call $$ \Delta = (d + \delta)^2 $$ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
 
 $$
     \mathcal{H}^k(M) = \ker \{\Delta \colon \Omega^k \to \Omega^k\}
