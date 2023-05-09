@@ -108,11 +108,11 @@ $$
 
 and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow us to compute the de Rham cohomology groups. 
 
-**Hodge Isomorphism.** *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
+**Hodge Isomorphism.** &nbsp; *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
 
 &emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \Delta $$.
 
-**Lemma.** *The kernel of $$ D $$ contained in $$ \Omega^k $$ equals $$ \mathcal{H}^k(M) $$.*
+**Lemma.** &nbsp; *The kernel of $$ D $$ contained in $$ \Omega^k $$ equals $$ \mathcal{H}^k(M) $$.*
 
 *Proof.* Indeed, we see that $$ (d + \delta) \omega = 0 $$ if and only if 
 
@@ -151,7 +151,7 @@ $$
 \end{aligned}
 $$
 
-**Theorem.** We have the equality $$ \chi(M) = \text{Ind}(D^{\text{ev}}) $$.
+**Theorem.** &nbsp; *We have the equality $$ \chi(M) = \text{Ind}(D^{\text{ev}}) $$.*
 
 
 ## 4. References

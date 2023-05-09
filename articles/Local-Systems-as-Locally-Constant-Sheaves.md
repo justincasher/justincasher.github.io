@@ -46,7 +46,7 @@ where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: fo
 &emsp; In the case that $$ F $$ is locally constant, its étale space is a covering. Indeed, let $$ U $$ be a neighborhood of $$ x $$ such that $$ S \mid_U = \underline{M} $$. Then the étale space restricted to $$ U $$ takes the form $$ p \colon U \times M \to U $$, which is a cover by the assumption that the topology on $$ M $$ is discrete. If we assume that $$ X $$ is locally connected, then this condition is also sufficient.
 
 
-**Lemma 1** &nbsp; *Let $$ X $$ be a locally connected space. A sheaf $$ F $$ of $$ R $$-modules on $$ X $$ is locally constant if and only if its étale space is a covering.*
+**Lemma 1.** &nbsp; *Let $$ X $$ be a locally connected space. A sheaf $$ F $$ of $$ R $$-modules on $$ X $$ is locally constant if and only if its étale space is a covering.*
 
 *Proof.* &nbsp; Suppose the étale space of $$ F $$ is a covering. Then every point $$ x \in X $$ has a neighborhood $$ U $$ such that the restriction is $$ p \colon U \times M \to U $$. Assuming $$ U $$ to be connected implies that the sections of this map are constant since the topology on $$ M $$ is discrete, and thus our sheaf is constant on $$ U $$. $$ \blacksquare $$
 
