@@ -22,18 +22,7 @@ $$
     \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C).
 $$
 
-- Local identities $$ \Id_A \colon A \to A $$ and $$ \Id_B \colon B \to B $$, such that any $$ f \colon A \to B $$ satisfies $$ f \circ \Id_A = f $$ and $$ \Id_B \circ f = f $$.
 
-&emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
-
-$$ 
-    F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)).
-$$
-
-We require $$ F $$ to preserve
-- the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ 
-- and local identities $$ F(\Id_A) = \Id_{F(A)} $$,
-then we call $$ F $$ a *functor*.
 
 &emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits.
 
