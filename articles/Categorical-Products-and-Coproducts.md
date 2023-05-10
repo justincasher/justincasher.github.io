@@ -5,7 +5,7 @@ permalink: /Categorical-Products-and-Coproducts
 feedformat: card
 title: Categorical Products and Coproducts
 ---
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CC}{\mathcal{D}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
 <br>
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
