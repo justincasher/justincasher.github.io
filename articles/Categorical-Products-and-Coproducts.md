@@ -16,12 +16,18 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \DeclareMathOpera
 ## 1. Limits and Colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law. In particular, for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
-- An associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C $$.
-- Local identities $$ \Id_A \colon A \to A $$ and $$ \Id_B \colon B \to B $$, such that any $$ f \colon A \to B $$ satisfies $$ f \circ \Id_A = f $$ and $$ \Id_B \circ f = f $$.
+1. An associative composition operator 
+
+$$ 
+    \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C).
+    
+$$
+
+2. Local identities $$ \Id_A \colon A \to A $$ and $$ \Id_B \colon B \to B $$, such that any $$ f \colon A \to B $$ satisfies $$ f \circ \Id_A = f $$ and $$ \Id_B \circ f = f $$.
 
 &emsp; Let $$ F \colon \cC \to \CD $$ be a map of categories defined on the level of pairs $$ F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)) $$. If $$ F $$ preserves the category data of 
-- the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ 
-- and local identities $$ F(\Id_A) = \Id_{F(A)} $$,
+1. the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ 
+2. and local identities $$ F(\Id_A) = \Id_{F(A)} $$,
 then we call $$ F $$ a *functor*.
 
 &emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits.
