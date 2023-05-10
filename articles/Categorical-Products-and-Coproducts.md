@@ -16,15 +16,6 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \DeclareMathOpera
 ## 1. Limits and Colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law. In particular, for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
-- An associative composition operator 
-
-$$ 
-    \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C).
-    
-$$
-
-- Local identities $$ \Id_A \colon A \to A $$ and $$ \Id_B \colon B \to B $$, such that any $$ f \colon A \to B $$ satisfies $$ f \circ \Id_A = f $$ and $$ \Id_B \circ f = f $$.
-
 
 
 &emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits.
