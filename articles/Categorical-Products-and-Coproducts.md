@@ -20,7 +20,6 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \DeclareMathOpera
 
 $$ 
     \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C).
-
 $$
 
 - Local identities $$ \Id_A \colon A \to A $$ and $$ \Id_B \colon B \to B $$, such that any $$ f \colon A \to B $$ satisfies $$ f \circ \Id_A = f $$ and $$ \Id_B \circ f = f $$.
