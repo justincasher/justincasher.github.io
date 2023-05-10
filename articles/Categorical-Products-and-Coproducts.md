@@ -31,12 +31,7 @@ $$
     F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)).
 $$
 
-We require $$ F $$ to preserve
-
-- the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ 
-
-- and local identities $$ F(\Id_A) = \Id_{F(A)} $$,
-then we call $$ F $$ a *functor*.
+We call $$ F $$ a *fucntor* if it preserves the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
 
 &emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits.
 
