@@ -7,11 +7,13 @@ title: The Gauss-Legendre Algorithm
 ---
 <br>
 
-**Abstract.** We prove the following approximation of $$ \pi $$:
+**Abstract.** We prove the following approximation of $$ \pi $$
 
 $$
-    \pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
+    \pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}},
 $$
+
+using the arithmetic-geometric mean.
 
 **Note.** Throughout this article tedious steps are often skipped to illustrate the main picture; in particular, computing integral substitutions and power series expansions.
 
