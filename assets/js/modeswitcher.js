@@ -27,9 +27,12 @@ if (systemInitiatedDark.matches) {
 
 function prefersColorTest(systemInitiatedDark) {
   if (systemInitiatedDark.matches) {
-  	document.documentElement.setAttribute('data-theme', 'dark');		
+  	/* document.documentElement.setAttribute('data-theme', 'dark');		
    	changeIconImgSrc(iconMoon);
-   	sessionStorage.setItem('theme', '');
+   	sessionStorage.setItem('theme', ''); */
+    document.documentElement.setAttribute('data-theme', 'light');
+    changeIconImgSrc(iconSun);
+    sessionStorage.setItem('theme', '');
   } else {
   	document.documentElement.setAttribute('data-theme', 'light');
     changeIconImgSrc(iconSun);
@@ -42,9 +45,12 @@ systemInitiatedDark.addListener(prefersColorTest);
 function modeSwitcher() {
 	let theme = sessionStorage.getItem('theme');
 	if (theme === "dark") {
-		document.documentElement.setAttribute('data-theme', 'light');
+	/*	document.documentElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('theme', 'light');
-		changeIconImgSrc(iconSun);
+		changeIconImgSrc(iconSun); */
+        document.documentElement.setAttribute('data-theme', 'dark');
+		sessionStorage.setItem('theme', 'dark');
+		changeIconImgSrc(iconMoon);
 	}	else if (theme === "light") {
 		document.documentElement.setAttribute('data-theme', 'dark');
 		sessionStorage.setItem('theme', 'dark');
