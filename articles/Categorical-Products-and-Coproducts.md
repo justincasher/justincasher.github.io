@@ -43,7 +43,8 @@ $$
 \Gamma(U, \mathcal{O}_X) \\
 \Gamma(U, f'^{-1}(\mathcal{O}_V)) \ar@/^/[ru]^{f'^\sharp}
 \ar@/_/[ru]_{f''^\sharp} &
-}$$
+}
+$$
 
 
 ## 2. Applications to Sets
