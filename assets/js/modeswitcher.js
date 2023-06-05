@@ -61,9 +61,12 @@ function modeSwitcher() {
 }
 
 if (theme === "dark") {
-	document.documentElement.setAttribute('data-theme', 'dark');
+	/* document.documentElement.setAttribute('data-theme', 'dark');
 	sessionStorage.setItem('theme', 'dark');
-	changeIconImgSrc(iconMoon);
+	changeIconImgSrc(iconMoon); */
+    document.documentElement.setAttribute('data-theme', 'light');
+	sessionStorage.setItem('theme', 'light');
+	changeIconImgSrc(iconSun);
 } else if (theme === "light") {
 	document.documentElement.setAttribute('data-theme', 'light');
 	sessionStorage.setItem('theme', 'light');
