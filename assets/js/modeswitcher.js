@@ -7,7 +7,7 @@ https://github.com/derekkedziora/jekyll-demo
 Creative Commons Attribution 4.0 International License
 */
 
-let systemInitiatedDark = false; // window.matchMedia("(prefers-color-scheme: dark)"); 
+let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)"); 
 let theme = sessionStorage.getItem('theme');
 
 const iconSun = "{{ site.baseurl }}/assets/img/sun.svg";
@@ -27,7 +27,7 @@ if (systemInitiatedDark.matches) {
 
 function prefersColorTest(systemInitiatedDark) {
   if (systemInitiatedDark.matches) {
-  	document.documentElement.setAttribute('data-theme', 'dark');		
+  	document.documentElement.setAttribute('data-theme', 'light');		
    	changeIconImgSrc(iconMoon);
    	sessionStorage.setItem('theme', '');
   } else {
@@ -46,23 +46,23 @@ function modeSwitcher() {
 		sessionStorage.setItem('theme', 'light');
 		changeIconImgSrc(iconSun);
 	}	else if (theme === "light") {
-		document.documentElement.setAttribute('data-theme', 'dark');
-		sessionStorage.setItem('theme', 'dark');
+		document.documentElement.setAttribute('data-theme', 'light');
+		sessionStorage.setItem('theme', 'light');
 		changeIconImgSrc(iconMoon);
 	} else if (systemInitiatedDark.matches) {	
 		document.documentElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('theme', 'light');
 		changeIconImgSrc(iconSun);
 	} else {
-		document.documentElement.setAttribute('data-theme', 'dark');
-		sessionStorage.setItem('theme', 'dark');
+		document.documentElement.setAttribute('data-theme', 'light');
+		sessionStorage.setItem('theme', 'light');
 		changeIconImgSrc(iconMoon);
 	}
 }
 
 if (theme === "dark") {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	sessionStorage.setItem('theme', 'dark');
+	document.documentElement.setAttribute('data-theme', 'light');
+	sessionStorage.setItem('theme', 'light');
 	changeIconImgSrc(iconMoon);
 } else if (theme === "light") {
 	document.documentElement.setAttribute('data-theme', 'light');
