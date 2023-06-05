@@ -7,11 +7,11 @@ https://github.com/derekkedziora/jekyll-demo
 Creative Commons Attribution 4.0 International License
 */
 
-let systemInitiatedDark = false // window.matchMedia("(prefers-color-scheme: dark)"); 
+let systemInitiatedDark = false; // window.matchMedia("(prefers-color-scheme: dark)"); 
 let theme = sessionStorage.getItem('theme');
 
-/* const iconSun = "{{ site.baseurl }}/assets/img/sun.svg";
-const iconMoon = "{{ site.baseurl }}/assets/img/moon.svg"; */
+const iconSun = "{{ site.baseurl }}/assets/img/sun.svg";
+const iconMoon = "{{ site.baseurl }}/assets/img/moon.svg";
 
 
 function changeIconImgSrc(src) {
@@ -42,7 +42,7 @@ systemInitiatedDark.addListener(prefersColorTest);
 function modeSwitcher() {
 	let theme = sessionStorage.getItem('theme');
 	if (theme === "dark") {
-	   document.documentElement.setAttribute('data-theme', 'light');
+		document.documentElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('theme', 'light');
 		changeIconImgSrc(iconSun);
 	}	else if (theme === "light") {
