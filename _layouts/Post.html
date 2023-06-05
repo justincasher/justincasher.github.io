@@ -30,7 +30,20 @@
 <html lang="en">
 
 <head>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+        loader: {
+          load: ['[custom]/xypic.js'],
+          paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+        },
+        tex: {
+          packages: {'[+]': ['xypic']}
+        }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+    
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Hiran Venugopalan" property="og:site_name" />
     <meta
