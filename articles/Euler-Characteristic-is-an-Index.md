@@ -71,7 +71,7 @@ $$
     \Omega^{\ast} = \Omega^{\text{ev}} \oplus \Omega^{\text{od}}.
 $$
 
-&emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0 $$ called the *differentail*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
+&emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0 $$ called the *differential*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
 
 $$
     H_{\text{dR}}^k(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
@@ -87,7 +87,7 @@ $$
     \left< \omega, \eta \right> = \int_M \omega \wedge \star \eta,
 $$ 
 
-and then we define differential forms of unequal degrees to be orthogonal. In particular, given a linear operator $$ T \colon \Omega^{\ast} \to \Omega^{\ast} $$ its *adjoint* is a map $$ T^{\ast} \colon \Omega^{\ast} \to \Omega^{\ast} $$ such that $$ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $$.
+and then we define differential forms of unequal degrees to be orthogonal. In particular, given a bounded linear operator $$ T \colon \Omega^{\ast} \to \Omega^{\ast} $$ its *adjoint* is a map $$ T^{\ast} \colon \Omega^{\ast} \to \Omega^{\ast} $$ such that $$ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $$.
 
 &emsp; Finally, we define the Euler characteristic of $$ M $$ as the alternating sum 
 
