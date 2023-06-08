@@ -37,7 +37,7 @@ $$
 
 meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. morphism) in $$ \CD $$. We call $$ F $$ a *functor* if it preserves the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
 
-&emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
+**Remark.** When working with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
 
 &emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Here, we call $$ F $$ a *diagram* and $$ \CI $$ the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$. The *limit* of $$ F $$ is then an object $$ \lim A_i $$ in $$ \cC $$ equipped with a morphism
 
