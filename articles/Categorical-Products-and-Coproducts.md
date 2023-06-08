@@ -55,7 +55,7 @@ f_m \colon \lim A_i \to A_m
 $$ 
 
 for each $$ m \in \CI $$, such that 
-<ol class='custom-marker parens-around lower-roman'>
+<ol type="i">
     <li>for any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( F(\phi) \circ f_m = f_n \);</li>
     <li>any other collection of morphisms \( g_m \colon \CO \to A_m \) factors through the limit, meaning there exists a unique \( h \colon \CO \to \lim A_i \) making this diagram commute: 
         $$ 
