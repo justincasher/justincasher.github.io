@@ -15,7 +15,7 @@ title: Categorical Products and Coproducts
       counter-increment: list;
       margin-top: -15px;
       margin-bottom: -15px;
-      margin-left: 15px;
+      margin-left: 32px;
     }
 
     ol.custom-marker.parens-around.lower-roman > li::marker {
@@ -66,7 +66,6 @@ for each $$ m \in \CI $$. We require
         } 
         $$</li>
 </ol>
-
 
 
 
