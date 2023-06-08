@@ -79,9 +79,9 @@ for each $$ m \in \CI $$, such that
     <li>any other collection of morphisms \( g_m \colon A_m \to \CO \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \colim A_i \to \CO \) making this diagram commute: 
         $$ 
         \xymatrix{ 
-            & \CO \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
+            & \CO & \\
             & \lim A_i \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
-            A_m \ar[rr]_{F(\phi)} & & A_n.
+            A_m \ar[rr]_{F(\phi)} \ar@/_/[uur]_{g_m} & & A_n \ar@/^/[uul]^{g_n}.
         } 
         $$</li>
 </ol>
