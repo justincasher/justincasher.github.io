@@ -13,13 +13,9 @@ title: Categorical Products and Coproducts
     ol.custom-marker > li {
       list-style: none;
       counter-increment: list;
-      margin-top: -10px;
-      margin-bottom: -10px;
-      margin-left: 10px;
-    }
-
-    ol.custom-marker.parens-after.decimal > li::marker {
-      content: counter(list) ")\a0";
+      margin-top: -15px;
+      margin-bottom: -15px;
+      margin-left: 15px;
     }
 
     ol.custom-marker.parens-around.lower-roman > li::marker {
@@ -52,7 +48,13 @@ meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. 
 
 &emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
 
-&emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Here, we call $$ F $$ a *diagram* and $$ \CI $$ the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$. The *limit* of $$ F $$ is then an object $$ \displaystyle \lim_{\leftarrow} A_i $$ in $$ \cC $$ and a morphisms $$ \displaystyle f_m \colon \lim_{\leftarrow} A_i \to A_m $$ for each $$ m \in \CI $$. We require  
+&emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Here, we call $$ F $$ a *diagram* and $$ \CI $$ the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$. The *limit* of $$ F $$ is then an object $$ \displaystyle \lim_{\leftarrow} A_i $$ in $$ \cC $$ and a morphisms 
+
+$$ 
+\displaystyle f_m \colon \lim_{\leftarrow} A_i \to A_m 
+$$ 
+
+for each $$ m \in \CI $$. We require  
 <ol class='custom-marker parens-around lower-roman'>
     <li>for any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( F(\phi) \circ f_m = f_n \);</li>
     <li>any other collection of morphisms \( g_m \colon \CO \to A_m \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \CO \to \lim_{\leftarrow} A_i \) making this diagram commute: 
