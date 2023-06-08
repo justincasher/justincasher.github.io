@@ -72,6 +72,15 @@ $$
 \displaystyle f_m \colon A_m \to \colim A_i
 $$ 
 
+$$ 
+\xymatrix{ 
+    A & B & C \\
+    D & E \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & F \\
+    G \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & H & I \ar[ulu]^{g_n}.
+}
+$$
+
+
 for each $$ m \in \CI $$, such that:
 <ol type="a" class="list-style">
     <li>For any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( f_m =  f_n \circ F(\phi); \)</li>
