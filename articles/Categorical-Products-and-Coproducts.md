@@ -5,6 +5,18 @@ permalink: /Categorical-Products-and-Coproducts
 feedformat: card
 title: Categorical Products and Coproducts
 ---
+<style>
+    ol {
+      counter-reset: list;
+    }
+    ol > li {
+      list-style: none;
+    }
+    ol > li:before {
+      content: counter(list, lower-alpha) ") ";
+      counter-increment: list;
+    }
+</style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
 <br>
 ## Table of Contents
@@ -16,7 +28,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 ## 1. Limits and Colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, such that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
-<ol type="i">
+<ol>
   <li>An associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C). $$</li>
   <li>Local identities $ \Id_A \colon A \to A $, such that for any $ f \colon A \to B $, we get $ f \circ \Id_A = f $ and $ \Id_B \circ f = f $.</li>
 </ol> 
