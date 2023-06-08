@@ -17,18 +17,17 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, such that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
 <ol type="i">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
+  <li>An associative composition operator</li>
+  $$ 
+    \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C).
+    $$
+  <li>Local identities $$ \Id_A \colon A \to A $$, such that for any $$ f \colon A \to B $$, we get $$ f \circ \Id_A = f $$ and $$ \Id_B \circ f = f $$.</li>
 </ol> 
 
 An associative composition operator 
 
-$$ 
-    \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C).
-$$
 
-Local identities $$ \Id_A \colon A \to A $$, such that for any $$ f \colon A \to B $$, we get $$ f \circ \Id_A = f $$ and $$ \Id_B \circ f = f $$.
+
 
 &emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
 
