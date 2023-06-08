@@ -20,7 +20,7 @@ title: Categorical Products and Coproducts
     }
 
     ol.custom-marker.parens-around.lower-roman > li::marker {
-      content: "&emsp;(" counter(list, lower-roman) ")\a0";
+      content: "&Tab;(" counter(list, lower-roman) ")\a0";
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
