@@ -5,7 +5,7 @@ permalink: /Categorical-Products-and-Coproducts
 feedformat: card
 title: Categorical Products and Coproducts
 ---
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
 <br>
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
@@ -15,7 +15,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \DeclareMathOpera
 
 ## 1. Limits and Colimits
 
-&emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law. In particular, for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
+&emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, such that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
 
 - An associative composition operator 
 
@@ -28,12 +28,26 @@ $$
 &emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
 
 $$ 
-    F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)).
+    F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)),
 $$
 
-We call $$ F $$ a *fucntor* if it preserves the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
+meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. morphism) in $$ \CD $$. We call $$ F $$ a *functor* if it preserves the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
 
-&emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits.
+&emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
+
+&emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Sometimes $$ F $$ is reffered to as a a *diagram in $$ \cC $$* and $$ \CI $$ is called the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$ for $$ i \in \CI $$. The *limit* of $$ F $$ is then an object $$ \lim_{\leftarrow} A_i $$ in $$ \cC $$ and a morphisms $$ f_m \colon \lim_{\leftarrow} A_i \to A_m $$ for each $$ m \in \CI $$, which satisfy the following:
+
+- For any morphism $$ \phi \colon m \to n $$ in $$ \CI $$, we have $$ F(\phi) \cic f_m = f_n $$.
+
+- Any other colection of morphisms $$ g_m \colon \CO \to A_m $$ factors through the limit, meaning there exists a unique $$ h \colon \CO \to \lim_{\leftarrow} A_i $$ making this diagram commute
+
+$$
+\xymatrix{
+    & \CO \ar@{-->}[d]^{\exists !h} \ar[ddl]^{g_m} \ar[ddr]^{g_n} & \\
+    & \lim_{\leftarrow} \ar[dl]_{f_m} \ar[dr]_{f_n} & \\
+    A_m \ar[r]_{F(\phi)} & & A_n
+}
+$$
 
 &emsp; DEFINE LIMIT AND COLIMIT 
 
