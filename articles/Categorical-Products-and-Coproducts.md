@@ -8,7 +8,7 @@ title: Categorical Products and Coproducts
 <style>
     ol.list-style {
         margin-top: -15px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         margin-left: -15px;
     }
     
@@ -17,7 +17,7 @@ title: Categorical Products and Coproducts
         padding-top: 0px; 
         padding-bottom: 0px;
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 }
 </style>
