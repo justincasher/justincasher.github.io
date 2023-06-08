@@ -22,7 +22,6 @@ title: Categorical Products and Coproducts
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
-$$ \usepackage[all]{xy} $$
 <br>
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
