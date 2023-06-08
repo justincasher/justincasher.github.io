@@ -15,7 +15,7 @@ title: Categorical Products and Coproducts
       counter-increment: list;
       margin-top: -15px;
       margin-bottom: -10px;
-      margin-left: 48px;
+      margin-left: 46px;
     }
 
     ol.custom-marker.parens-around.lower-roman > li::marker {
