@@ -13,6 +13,7 @@ title: Categorical Products and Coproducts
     ol.custom-marker > li {
       list-style: none;
       counter-increment: list;
+      padding-left: 15em;
     }
 
     ol.custom-marker.parens-after.decimal > li::marker {
@@ -20,7 +21,7 @@ title: Categorical Products and Coproducts
     }
 
     ol.custom-marker.parens-around.lower-roman > li::marker {
-      content: "&Tab;(" counter(list, lower-roman) ")\a0";
+      content: "(" counter(list, lower-roman) ")\a0";
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
