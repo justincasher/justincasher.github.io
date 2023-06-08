@@ -12,7 +12,7 @@ title: Categorical Products and Coproducts
         margin-left: -15px;
     }
     
-    li.nb {
+    li {
         line-height: 1em;
         padding-top: -10px; 
         padding-bottom: -10px;
@@ -33,8 +33,8 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, so that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
 <ol type="a" class="list-style">
-  <li style="nb">An associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C); $$</li>
-  <li style="nb">Local identities \( \Id_A \colon A \to A \), such that for any \( f \colon A \to B \), we get \( f \circ \Id_A = f \) and \( \Id_B \circ f = f \).</li>
+  <li>An associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C); $$</li>
+  <li>Local identities \( \Id_A \colon A \to A \), such that for any \( f \colon A \to B \), we get \( f \circ \Id_A = f \) and \( \Id_B \circ f = f \).</li>
 </ol> 
 
 &emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
