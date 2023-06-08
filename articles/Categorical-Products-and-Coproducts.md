@@ -43,7 +43,7 @@ meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. 
 
 $$
 \xymatrix{
-    & \CO \ar@{-->}[d]^{\exists !h} \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
+    & \CO \ar@{.>}[d]|-{\exists !h} \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
     & \lim_{\leftarrow} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
     A_m \ar[rr]_{F(\phi)} & & A_n
 }
