@@ -80,7 +80,7 @@ for each $$ m \in \CI $$, such that
         $$ 
         \xymatrix{ 
             & \CO & \\
-            & \colim_{\leftarrow} A_i \ar@{.>}[u]|-{\exists !h} & \\
+            & \colim A_i \ar@{.>}[u]|-{\exists !h} & \\
             A_m \ar@/_/[uur]_{g_m} \ar[rr]_{F(\phi)} \ar[ur]^{f_m} & & A_n \ar@/^/[uul]^{g_n} \ar[ul]_{f_n}.
         } 
         $$</li>
