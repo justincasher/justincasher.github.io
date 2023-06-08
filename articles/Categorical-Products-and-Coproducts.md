@@ -80,7 +80,7 @@ for each $$ m \in \CI $$, such that:
         \xymatrix{ 
             & \CO & \\
             & \lim A_i \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
-            A_m \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & & A_n \ar[ulu].
+            A_m \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & & A_n \ar[ulu]^{g_n}.
         } 
         $$</li>
 </ol> 
