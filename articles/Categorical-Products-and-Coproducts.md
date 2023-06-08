@@ -6,20 +6,12 @@ feedformat: card
 title: Categorical Products and Coproducts
 ---
 <style>
-    ol.custom-marker {
-      counter-reset: list;
+    ol.list-style {
+        counter-reset: list;
+        margin-top: -15px;
+        margin-bottom: -10px;
+        margin-left: 46px;
     }
-
-    ol.custom-marker > li {
-      list-style: none;
-      counter-increment: list;
-      margin-top: -15px;
-      margin-bottom: -10px;
-      margin-left: 46px;
-    }
-
-    ol.custom-marker.parens-around.lower-roman > li::marker {
-      content: "(" counter(list, lower-roman) ")\a0";
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
@@ -55,7 +47,7 @@ f_m \colon \lim A_i \to A_m
 $$ 
 
 for each $$ m \in \CI $$, such that 
-<ol type="i">
+<ol type="a" class="list-style">
     <li>for any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( F(\phi) \circ f_m = f_n \);</li>
     <li>any other collection of morphisms \( g_m \colon \CO \to A_m \) factors through the limit, meaning there exists a unique \( h \colon \CO \to \lim A_i \) making this diagram commute: 
         $$ 
