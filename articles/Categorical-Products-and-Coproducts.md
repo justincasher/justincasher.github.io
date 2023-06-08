@@ -72,14 +72,6 @@ $$
 \displaystyle f_m \colon A_m \to \colim A_i
 $$ 
 
-$$ 
-\xymatrix{ 
-    A & B & C \\
-    D & E \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & F \\
-    G \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & H & I \ar[ulu]
-}
-$$
-
 
 for each $$ m \in \CI $$, such that:
 <ol type="a" class="list-style">
@@ -87,9 +79,9 @@ for each $$ m \in \CI $$, such that:
     <li>Any other collection of morphisms \( g_m \colon A_m \to \CO \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \colim A_i \to \CO \) making this diagram commute: 
         $$ 
         \xymatrix{ 
-            & \CO & \\
-            & \lim A_i \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
-            A_m \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & & A_n \ar[ulu]^{g_n}.
+            A_m \ar[r]^{F(\phi)} \ar@/_/[ddr]_{g_m} \ar[dr]_{f_m} & & A_n \ar@/_/[ddl]_{g_n} \ar[dl]_{f_n} \\
+            & \colim A_i \ar@{.>}[d]|-{\exists !h} & \\
+            & \CO &
         } 
         $$</li>
 </ol> 
