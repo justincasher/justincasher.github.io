@@ -9,7 +9,7 @@ title: Categorical Products and Coproducts
     ol.list-style {
         margin-top: -15px;
         margin-bottom: 0px;
-        margin-left: -10px;
+        margin-left: -15px;
     }
 }
 </style>
@@ -66,7 +66,7 @@ $$
 
 for each $$ m \in \CI $$, such that 
 <ol type="a" class="list-style">
-    <li>for any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( f_m =  f_n \circ F(\phi) \);</li>
+    <li>for any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( f_m =  f_n \circ F(\phi); \)</li>
     <li>any other collection of morphisms \( g_m \colon A_m \to \CO \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \colim A_i \to \CO \) making this diagram commute: 
         $$ 
         \xymatrix{ 
