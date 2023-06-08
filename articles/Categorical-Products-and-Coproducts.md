@@ -6,16 +6,22 @@ feedformat: card
 title: Categorical Products and Coproducts
 ---
 <style>
-    ol {
+    ol.custom-marker {
       counter-reset: list;
     }
-    ol > li {
+
+    ol.custom-marker > li {
       list-style: none;
-    }
-    ol > li:before {
-      content: counter(list, lower-alpha) ") ";
       counter-increment: list;
     }
+
+    ol.custom-marker.parens-after.decimal > li::marker {
+      content: counter(list) ")\a0";
+    }
+
+    ol.custom-marker.parens-around.lower-roman > li::marker {
+      content: "(" counter(list, lower-roman) ")\a0";
+}
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
 <br>
@@ -28,9 +34,9 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 ## 1. Limits and Colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, such that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
-<ol>
+<ol class='custom-marker parens-around lower-roman'>
   <li>An associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C). $$</li>
-  <li>Local identities $ \Id_A \colon A \to A $, such that for any $ f \colon A \to B $, we get $ f \circ \Id_A = f $ and $ \Id_B \circ f = f $.</li>
+  <li>Local identities \( \Id_A \colon A \to A \), such that for any $ f \colon A \to B $, we get $ f \circ \Id_A = f $ and $ \Id_B \circ f = f $.</li>
 </ol> 
 
 &emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
