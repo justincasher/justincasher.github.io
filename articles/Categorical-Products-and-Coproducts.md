@@ -76,7 +76,7 @@ $$
 \xymatrix{ 
     A & B & C \\
     D & E \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & F \\
-    G \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & H & I \ar[ulu]^{g_n}.
+    G \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & H & I \ar[ulu]
 }
 $$
 
