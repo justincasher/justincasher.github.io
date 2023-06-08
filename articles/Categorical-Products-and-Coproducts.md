@@ -21,7 +21,9 @@ title: Categorical Products and Coproducts
     }
 }
 </style>
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
+$$ \usepackage[all]{xy} $$
 <br>
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
@@ -78,9 +80,9 @@ for each $$ m \in \CI $$, such that:
     <li>Any other collection of morphisms \( g_m \colon A_m \to \CO \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \colim A_i \to \CO \) making this diagram commute: 
         $$ 
         \xymatrix{ 
-            & & \CO & & \\
-            & & \lim A_i \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & & \\
-            & A_m \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & & A_n \ar[ulu]^{g_n}. &
+            & \CO & \\
+            & \lim A_i \ar@{.>}[u]|-{\exists !h} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
+            A_m \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & & A_n \ar[ulu]^{g_n}.
         } 
         $$</li>
 </ol> 
