@@ -13,7 +13,7 @@ title: Categorical Products and Coproducts
     }
     
     li.nb {
-        padding-bottom = -10px;
+        line-height: 1em;
     }
 }
 </style>
