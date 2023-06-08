@@ -8,8 +8,8 @@ title: Categorical Products and Coproducts
 <style>
     ol.list-style {
         margin-top: -15px;
-        margin-bottom: -10px;
-        margin-left: 24px;
+        margin-bottom: 0px;
+        margin-left: 0px;
     }
 }
 </style>
