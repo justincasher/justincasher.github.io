@@ -13,7 +13,7 @@ title: Categorical Products and Coproducts
     ol.custom-marker > li {
       list-style: none;
       counter-increment: list;
-      margin-left: 5em;
+      margin-left: 1em;
     }
 
     ol.custom-marker.parens-after.decimal > li::marker {
