@@ -35,12 +35,12 @@ meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. 
 
 &emsp; When dealing with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
 
-&emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Here, we call $$ F $$ a *diagram in $$ \cC $$* and $$ \CI $$ the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$ for $$ i \in \CI $$. The *limit* of $$ F $$ is then an object $$ \lim_{\leftarrow} A_i $$ in $$ \cC $$ and a morphisms $$ \displaystyle f_m \colon \lim_{\leftarrow} A_i \to A_m $$ for each $$ m \in \CI $$. We require that (i) for any morphism $$ \phi \colon m \to n $$ in $$ \CI $$, we have $$ F(\phi) \circ f_m = f_n $$; and (ii) any other collection of morphisms $$ g_m \colon \CO \to A_m $$ factors through the limit, meaning there exists a unique $$ \displaystyle h \colon \CO \to \lim_{\leftarrow} A_i $$ making this diagram commute:
+&emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Here, we call $$ F $$ a *diagram (in $$ \cC $$)* and $$ \CI $$ the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$ for $$ i \in \CI $$. The *limit* of $$ F $$ is then an object $$ \displaystyle \lim_{\leftarrow} A_i $$ in $$ \cC $$ and a morphisms $$ \displaystyle f_m \colon \lim_{\leftarrow} A_i \to A_m $$ for each $$ m \in \CI $$. We require that (i) for any morphism $$ \phi \colon m \to n $$ in $$ \CI $$, we have $$ F(\phi) \circ f_m = f_n $$; and (ii) any other collection of morphisms $$ g_m \colon \CO \to A_m $$ factors through the limit, meaning there exists a unique $$ \displaystyle h \colon \CO \to \lim_{\leftarrow} A_i $$ making this diagram commute:
 
 $$
 \xymatrix{
     & \CO \ar@{.>}[d]|-{\exists !h} \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
-    & {\displaystyle }\lim_{\leftarrow}} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
+    & {\displaystyle \lim_{\leftarrow}} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
     A_m \ar[rr]_{F(\phi)} & & A_n.
 }
 $$
