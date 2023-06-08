@@ -7,10 +7,9 @@ title: Categorical Products and Coproducts
 ---
 <style>
     ol.list-style {
-        counter-reset: list;
         margin-top: -15px;
         margin-bottom: -10px;
-        margin-left: 46px;
+        margin-left: 24px;
     }
 }
 </style>
@@ -25,7 +24,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 ## 1. Limits and Colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, such that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
-<ol class='custom-marker parens-around lower-roman'>
+<ol type="a" class="list-style">
   <li>an associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C); $$</li>
   <li>local identities \( \Id_A \colon A \to A \), such that for any \( f \colon A \to B \), we get \( f \circ \Id_A = f \) and \( \Id_B \circ f = f \).</li>
 </ol> 
@@ -66,7 +65,7 @@ $$
 $$ 
 
 for each $$ m \in \CI $$, such that 
-<ol class='custom-marker parens-around lower-roman'>
+<ol type="a" class="list-style">
     <li>for any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( f_m =  f_n \circ F(\phi) \);</li>
     <li>any other collection of morphisms \( g_m \colon A_m \to \CO \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \colim A_i \to \CO \) making this diagram commute: 
         $$ 
