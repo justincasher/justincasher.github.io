@@ -42,7 +42,7 @@ meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. 
 2. Any other collection of morphisms $$ g_m \colon \CO \to A_m $$ factors through the limit, meaning there exists a unique $$ \displaystyle h \colon \CO \to \lim_{\leftarrow} A_i $$ making this diagram commute:
 
 $$
-\xymatrix{
+\xymatrix{ 
     & \CO \ar@{.>}[d]|-{\exists !h} \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
     & {\displaystyle \lim_{\leftarrow} A_i} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
     A_m \ar[rr]_{F(\phi)} & & A_n.
