@@ -37,15 +37,15 @@ meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. 
 
 &emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Sometimes $$ F $$ is reffered to as a a *diagram in $$ \cC $$* and $$ \CI $$ is called the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$ for $$ i \in \CI $$. The *limit* of $$ F $$ is then an object $$ \lim_{\leftarrow} A_i $$ in $$ \cC $$ and a morphisms $$ f_m \colon \lim_{\leftarrow} A_i \to A_m $$ for each $$ m \in \CI $$, which satisfy the following:
 
-- For any morphism $$ \phi \colon m \to n $$ in $$ \CI $$, we have $$ F(\phi) \cic f_m = f_n $$.
+- For any morphism $$ \phi \colon m \to n $$ in $$ \CI $$, we have $$ F(\phi) \circ f_m = f_n $$.
 
-- Any other colection of morphisms $$ g_m \colon \CO \to A_m $$ factors through the limit, meaning there exists a unique $$ h \colon \CO \to \lim_{\leftarrow} A_i $$ making this diagram commute
+- Any other collection of morphisms $$ g_m \colon \CO \to A_m $$ factors through the limit, meaning there exists a unique $$ h \colon \CO \to \lim_{\leftarrow} A_i $$ making this diagram commute
 
 $$
 \xymatrix{
-    & \CO \ar@{-->}[d]^{\exists !h} \ar[ddl]^{g_m} \ar[ddr]^{g_n} & \\
-    & \lim_{\leftarrow} \ar[dl]_{f_m} \ar[dr]_{f_n} & \\
-    A_m \ar[r]_{F(\phi)} & & A_n
+    & \CO \ar@{-->}[d]^{\exists !h} \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
+    & \lim_{\leftarrow} \ar[dl]^{f_m} \ar[dr]_{f_n} & \\
+    A_m \ar[rr]_{F(\phi)} & & A_n
 }
 $$
 
