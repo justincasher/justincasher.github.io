@@ -34,7 +34,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, such that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
 <ol class='custom-marker parens-around lower-roman'>
-  <li>an associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C). $$;</li>
+  <li>an associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C); $$</li>
   <li>local identities \( \Id_A \colon A \to A \), such that for any \( f \colon A \to B \), we get \( f \circ \Id_A = f \) and \( \Id_B \circ f = f \).</li>
 </ol> 
 
@@ -54,7 +54,7 @@ $$
 \displaystyle f_m \colon \lim_{\leftarrow} A_i \to A_m 
 $$ 
 
-for each $$ m \in \CI $$. We require that 
+for each $$ m \in \CI $$, such that 
 <ol class='custom-marker parens-around lower-roman'>
     <li>for any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( F(\phi) \circ f_m = f_n \);</li>
     <li>any other collection of morphisms \( g_m \colon \CO \to A_m \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \CO \to \lim_{\leftarrow} A_i \) making this diagram commute: 
