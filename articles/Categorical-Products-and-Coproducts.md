@@ -14,6 +14,10 @@ title: Categorical Products and Coproducts
     
     li.nb {
         line-height: 1em;
+        padding-top: -10px; 
+        padding-bottom: -10px;
+        margin-top: -10px;
+        margin-bottom: -10px;
     }
 }
 </style>
