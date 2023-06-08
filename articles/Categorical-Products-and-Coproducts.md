@@ -84,7 +84,7 @@ for each $$ m \in \CI $$, such that
             A_m \ar@/^/[uur]^{g_m} \ar[rr]_{F(\phi)} & & A_n \ar[uul].
         } 
         $$</li>
-</ol>
+</ol> 
 
 ## 2. Products and coproducts
 
