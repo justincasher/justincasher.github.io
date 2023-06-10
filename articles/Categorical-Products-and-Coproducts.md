@@ -7,7 +7,9 @@ title: Categorical Products and Coproducts
 ---
 <style>
     ol {
-        list-style-position: outside;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        margin-left: -15px;
     }
     
     li {
@@ -52,7 +54,7 @@ f_m \colon \lim A_i \to A_m
 $$ 
 
 for each $$ m \in \CI $$, such that:
-<ol type="a">
+<ol type="a" style="list-style-position: outside">
     <li>For any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( F(\phi) \circ f_m = f_n \);</li>
     <li>Any other collection of morphisms \( g_m \colon \CO \to A_m \) factors through the limit, meaning there exists a unique \( h \colon \CO \to \lim A_i \) making this diagram commute: 
         $$ 
@@ -72,7 +74,7 @@ $$
 
 
 for each $$ m \in \CI $$, such that:
-<ol type="a">
+<ol type="a" style="list-style-position: outside">
     <li>For any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( f_m =  f_n \circ F(\phi); \)</li>
     <li>Any other collection of morphisms \( g_m \colon A_m \to \CO \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \colim A_i \to \CO \) making this diagram commute: 
         $$ 
