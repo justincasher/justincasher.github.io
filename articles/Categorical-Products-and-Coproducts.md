@@ -160,17 +160,17 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
 &emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. Recall that a set $$ P $$ equipped with a relation $$ \leq \subseteq P \times P $$ is called *partially ordered* if it satisfies
 <ol type="a" class="custom" style="list-style-position: outside">
-    <li>$$ x \leq x $$,<\li>
-    <li>$$ x \leq y $$ and $$y \leq x $$ implies $$ x = y $$, and<\li> 
-    <li>$$ x \leq y $$ and $$y \leq z $$ implies $$ x \leq z $$.<\li>
+    <li>\( x \leq x \),</li>
+    <li>\( x \leq y \) and \(y \leq x \) implies \( x = y \), and</li> 
+    <li>\( x \leq y \) and \( y \leq z \) implies \( x \leq z \).</li>
 </ol> 
 
 <ol type="a" class="custom" style="list-style-position: outside">
-    <li>$$ x \leq x $$,<\li>
+    <li>\( x \leq x \),</li>
     
-    <li>$$ x \leq y $$ and $$y \leq x $$ implies $$ x = y $$, and<\li>
+    <li>\( x \leq y \) and \(y \leq x \) implies \( x = y \), and</li> 
     
-    <li>$$ x \leq y $$ and $$y \leq z $$ implies $$ x \leq z $$.<\li>
+    <li>\( x \leq y \) and \( y \leq z \) implies \( x \leq z \).</li>
 </ol> 
 
 ## 4. K-Theory
