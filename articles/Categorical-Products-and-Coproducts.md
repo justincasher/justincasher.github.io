@@ -153,6 +153,17 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Topological spaces | Box topology | Product topology |
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum | 
 
+<table>
+  <tr>
+    <th>Fruit</th>
+    <td>Banana</td>
+  </tr>
+  <tr>
+    <th>Vegetable</th>
+    <td>Carrot</td>
+  </tr>
+</table>
+
 
 ## 3. Partially Ordered Sets
 
