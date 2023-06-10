@@ -94,11 +94,17 @@ for each $$ m \in \CI $$, such that:
 
 ## 2. Products and coproducts
 
-&emsp; We call the limit over a diagram $$ F \colon \CI \to \cC $$ where $$ \CI $$ has only identity morphisms a *product*. For products, this is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, with their product making the following diagram commute:
+&emsp; We call the limit over a diagram $$ F \colon \CI \to \cC $$ where $$ \CI $$ has only identity morphisms a *product*, which is denoted
+
+$$
+    \prod_i A_i = \colim A_i.
+$$
+
+For products, this is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, with their product making the following diagram commute:
 
 $$ 
 \xymatrix{ 
-    & \CO \ar@{.>}[d]|-{\exists !h} \ar@[dl]_{g_m} \ar@[dr]^{g_n} & \\
+    & \CO \ar@{.>}[d]|-{\exists !h} \ar[dl]_{g_m} \ar[dr]^{g_n} & \\
     A_m & \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & A_n.
 } 
 $$
