@@ -100,7 +100,7 @@ $$
     \prod_i A_i = \colim A_i.
 $$
 
-For products, this is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, with their product making the following diagram commute:
+This is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, such that the following diagram commutes:
 
 $$ 
 \xymatrix{ 
@@ -109,7 +109,7 @@ $$
 } 
 $$
 
-We refer to the induced map $$ \pi_m $$ as the *projection onto $$ A_m $$*.
+Note that we have replaced $$ f_m $$ with $$ \pi_m $$, which we call the *projection onto $$ A_m $$*.
 
 
 
