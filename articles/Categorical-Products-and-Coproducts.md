@@ -29,6 +29,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 3. [K-Theory](#3-k-theory)
 4. [References](#4-references)
 
+
 ## 1. Limits and Colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, so that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
@@ -131,23 +132,25 @@ This is equivalent to choosing an indexed subset of objects $$ \{ A_i \} $$ in $
 
 $$ 
 \xymatrix{ 
-    & \CO \ar@{.>}[d]|-{\exists !h} \ar[dl]_{g_m} \ar[dr]^{g_n} & \\
-    A_m & \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & A_n.
+    A_m \ar@/_/[dr]_{g_m} \ar[r]^{\iota_m} & \colim A_i \ar@{.>}[d]|-{\exists !h} & A_n \ar@/^/[dl]^{g_n} \ar[l]_{\iota_n} \\
+    & \CO &
 } 
 $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives common names of products and coproducts in different categories:
+&emsp; The following table gives common names of products and coproducts in different categories. 
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
 | Sets | Cartesian product | Disjoint union |
-| Groups |  |  |
-| Commutative rings | | |
-| $$ R $$-modules | | |
-| $$ k $$-vector spaces | | |
-| $$ k $$-representations | | |
+| Groups | Direct product | Free product |
+| Rings | Direct product | Free product |
+| Commutative rings | Direct product | Tensor product |
+| $$ R $$-modules | Direct product | Direct sum |
+| $$ k $$-vector spaces | Direct product | Direct sum |
+| Topological spaces | Box topology | Product topology |
+| Pointed topological spaces | Box topology modulo basepoint | Wedge sum | 
 
 
 ## 3. Partial Ordered Sets
