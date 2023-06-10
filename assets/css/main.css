@@ -3229,9 +3229,9 @@ a.navbar-item,
       width: 41.66667%; }
     .column.is-offset-5-desktop {
       margin-left: 41.66667%; }
-    .column.is-6-desktop { /* I edited this */
+    .column.is-6-desktop {
       flex: none;
-      width: 10%; }
+      width: 50%; }
     .column.is-offset-6-desktop {
       margin-left: 50%; }
     .column.is-7-desktop {
@@ -3340,14 +3340,14 @@ a.navbar-item,
       width: 33.33333%; }
     .column.is-offset-4-widescreen {
       margin-left: 33.33333%; }
-    .column.is-5-widescreen { /* I edited this */
+    .column.is-5-widescreen {
       flex: none;
-      width: 10%; }
+      width: 41.66667%; }
     .column.is-offset-5-widescreen {
       margin-left: 41.66667%; }
-    .column.is-6-widescreen {
+    .column.is-6-widescreen { /* I edited this */
       flex: none;
-      width: 50%; }
+      width: 10%; }
     .column.is-offset-6-widescreen {
       margin-left: 50%; }
     .column.is-7-widescreen {
