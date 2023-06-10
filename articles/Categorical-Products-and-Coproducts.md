@@ -94,13 +94,12 @@ for each $$ m \in \CI $$, such that:
 
 ## 2. Products and coproducts
 
-&emsp; We call the (co)limit over a diagram $$ F \colon \CI \to \cC $$ where $$ \CI $$ has only identity morphisms a *(co)product)*. This type of diagram is the same as giving an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, with their product making the following diagram commute:
+&emsp; We call the (co)limit over a diagram $$ F \colon \CI \to \cC $$ where $$ \CI $$ has only identity morphisms a *(co)product)*. For products, this is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, with their product making the following diagram commute:
 
 $$ 
 \xymatrix{ 
-    & \CO \ar@{.>}[d]|-{\exists !h} \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
-    & \lim A_i \ar[dl]^{\pi_m} \ar[dr]_{\pi_n} & \\
-    A_m & & A_n.
+    & \CO \ar@{.>}[d]|-{\exists !h} \ar@/_/[dl]_{g_m} \ar@/^/[dr]^{g_n} & \\
+    A_m & \Prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & A_n.
 } 
 $$
 
