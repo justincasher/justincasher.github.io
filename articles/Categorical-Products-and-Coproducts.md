@@ -21,7 +21,7 @@ title: Categorical Products and Coproducts
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
@@ -43,7 +43,13 @@ $$
     F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)),
 $$
 
-meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. morphism) in $$ \CD $$. We call $$ F $$ a *functor* if it preserves the composition operator $$ F(f \circ g) = F(f) \circ F(g) $$ and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
+meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. morphism) in $$ \CD $$. We call $$ F $$ a *functor* if it preserves the composition operator 
+
+$$ 
+F(f \circ g) = F(f) \circ F(g) 
+$$ 
+
+and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
 
 **Remark.** When working with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
 
@@ -88,7 +94,17 @@ for each $$ m \in \CI $$, such that:
 
 ## 2. Products and coproducts
 
-&emsp; We call the (co)limit over a diagram $$ F \colon \CI \to \cC $$ in which $$ \CI $$ has no morphisms a *(co)product)*. This means the following.
+&emsp; We call the (co)limit over a diagram $$ F \colon \CI \to \cC $$ where $$ \CI $$ has only identity morphisms a *(co)product)*. This type of diagram is the same as giving an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, with their product making the following diagram commute:
+
+$$ 
+\xymatrix{ 
+    & \CO \ar@{.>}[d]|-{\exists !h} \ar@/_/[ddl]_{g_m} \ar@/^/[ddr]^{g_n} & \\
+    & \lim A_i \ar[dl]^{\pi_m} \ar[dr]_{\pi_n} & \\
+    A_m & & A_n.
+} 
+$$
+
+We refer to the induced map $$ \pi_m $$ as the *projection onto $$ A_m $$*.
 
 
 
