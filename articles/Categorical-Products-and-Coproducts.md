@@ -10,9 +10,6 @@ title: Categorical Products and Coproducts
         margin-top: -10px;
         margin-bottom: 20px;
         margin-left: -15px;
-    }
-    
-    ul {
         list-style-position: outside;
     }
     
