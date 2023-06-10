@@ -97,7 +97,7 @@ for each $$ m \in \CI $$, such that:
 &emsp; We call the limit over a diagram $$ F \colon \CI \to \cC $$ such that $$ \CI $$ has only identity morphisms 
 
 $$
-    \Hom(A, B) = 
+    \Hom_{\CI}(A, B) = 
     \begin{cases}
         \Id_A & \text{ if } A = B \\
         \varnothing & \text{ if } A \neq B
@@ -107,7 +107,7 @@ $$
 a *product*, which is denoted
 
 $$
-    \prod_i A_i = \colim A_i.
+    \prod A_i = \colim A_i.
 $$
 
 This is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, such that the following diagram commutes:
@@ -120,6 +120,23 @@ $$
 $$
 
 Here, we have replaced $$ f_m $$ with $$ \pi_m $$, which we call the *projection onto $$ A_m $$*.
+
+&emsp; We likewise define define the coproduct as the colimit over diagrams with no morphisms, which we denote 
+
+$$
+    \coprod A_i = \colim A_i,
+$$
+
+This is equivalent to choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, such that the following diagram commutes:
+
+$$ 
+\xymatrix{ 
+    & \CO \ar@{.>}[d]|-{\exists !h} \ar[dl]_{g_m} \ar[dr]^{g_n} & \\
+    A_m & \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & A_n.
+} 
+$$
+
+We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
 
 
