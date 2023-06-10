@@ -36,6 +36,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, so that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
 <ol type="a" class="custom" style="list-style-position: outside">
   <li>An associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C); $$</li>
+  
   <li>Local identities \( \Id_A \colon A \to A \), such that for any \( f \colon A \to B \), we get \( f \circ \Id_A = f \) and \( \Id_B \circ f = f \).</li>
 </ol> 
 
@@ -64,6 +65,7 @@ $$
 for each $$ m \in \CI $$, such that:
 <ol type="a" class="custom" style="list-style-position: outside">
     <li>For any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( F(\phi) \circ f_m = f_n \);</li>
+    
     <li>Any other collection of morphisms \( g_m \colon \CO \to A_m \) factors through the limit, meaning there exists a unique \( h \colon \CO \to \lim A_i \) making this diagram commute: 
         $$ 
         \xymatrix{ 
@@ -158,13 +160,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
 ## 3. Partially Ordered Sets
 
-&emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. Recall that a set $$ P $$ equipped with a relation $$ \leq \subseteq P \times P $$ is called *partially ordered* if it satisfies
-<ol type="a" class="custom" style="list-style-position: outside">
-    <li>\( x \leq x \),</li>
-    <li>\( x \leq y \) and \(y \leq x \) implies \( x = y \), and</li> 
-    <li>\( x \leq y \) and \( y \leq z \) implies \( x \leq z \).</li>
-</ol> 
-
+&emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. Recall that a set $$ P $$ equipped with a relation $$ \leq $$ is called *partially ordered* if it satisfies
 <ol type="a" class="custom" style="list-style-position: outside">
     <li>\( x \leq x \),</li>
     
