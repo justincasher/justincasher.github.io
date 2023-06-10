@@ -25,9 +25,10 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 <br>
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
-2. [Applications to Sets](#2-applications-to-sets)
-3. [K-Theory](#3-k-theory)
-4. [References](#4-references)
+2. [Products and Coproducts](#2-products-and-coproducts)
+3. [Partially Ordered Sets](#3-partially-ordered-sets)
+4. [K-Theory](#4-k-theory)
+5. [References](#5-references)
 
 
 ## 1. Limits and Colimits
@@ -153,7 +154,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum | 
 
 
-## 3. Partial Ordered Sets
+## 3. Partially Ordered Sets
 
 &emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. 
 
