@@ -2913,7 +2913,7 @@ a.navbar-item,
       margin-left: 91.66667%; }
     .column.is-12-mobile {
       flex: none;
-      width: 10%; }
+      width: 100%; }
     .column.is-offset-12-mobile {
       margin-left: 100%; } }
   @media screen and (min-width: 769px), print {
