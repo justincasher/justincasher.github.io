@@ -94,7 +94,17 @@ for each $$ m \in \CI $$, such that:
 
 ## 2. Products and coproducts
 
-&emsp; We call the limit over a diagram $$ F \colon \CI \to \cC $$ where $$ \CI $$ has only identity morphisms a *product*, which is denoted
+&emsp; We call the limit over a diagram $$ F \colon \CI \to \cC $$ such that $$ \CI $$ has only identity morphisms 
+
+$$
+    \Hom(A, B) = 
+    \begin{cases}
+        \Id_A & \text{ if } A = B \\
+        \varnothing & \text{ if } A \neq B
+    \end{cases}
+$$
+
+a *product*, which is denoted
 
 $$
     \prod_i A_i = \colim A_i.
@@ -109,7 +119,7 @@ $$
 } 
 $$
 
-Note that we have replaced $$ f_m $$ with $$ \pi_m $$, which we call the *projection onto $$ A_m $$*.
+Here, we have replaced $$ f_m $$ with $$ \pi_m $$, which we call the *projection onto $$ A_m $$*.
 
 
 
