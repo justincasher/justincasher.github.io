@@ -112,7 +112,7 @@ $$
 a *product*, which is denoted
 
 $$
-    \prod A_i = \colim A_i.
+    \prod A_i = \lim A_i.
 $$
 
 This is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, such that the following diagram commutes:
@@ -136,7 +136,7 @@ This is equivalent to choosing an indexed subset of objects $$ \{ A_i \} $$ in $
 
 $$ 
 \xymatrix{ 
-    A_m \ar@/_/[dr]_{g_m} \ar[r]^{\iota_m} & \colim A_i \ar@{.>}[d]|-{\exists !h} & A_n \ar@/^/[dl]^{g_n} \ar[l]_{\iota_n} \\
+    A_m \ar[dr]_{g_m} \ar[r]^{\iota_m} & \colim A_i \ar@{.>}[d]|-{\exists !h} & A_n \ar[dl]^{g_n} \ar[l]_{\iota_n} \\
     & \CO &
 } 
 $$
