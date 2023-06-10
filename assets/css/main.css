@@ -3340,9 +3340,9 @@ a.navbar-item,
       width: 33.33333%; }
     .column.is-offset-4-widescreen {
       margin-left: 33.33333%; }
-    .column.is-5-widescreen {
+    .column.is-5-widescreen { /* I edited this */
       flex: none;
-      width: 41.66667%; }
+      width: 10%; }
     .column.is-offset-5-widescreen {
       margin-left: 41.66667%; }
     .column.is-6-widescreen {
