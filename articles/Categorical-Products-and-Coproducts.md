@@ -7,10 +7,10 @@ title: Categorical Products and Coproducts
 ---
 <style>
     ol {
+        list-style-position: outside;
         margin-top: -10px;
         margin-bottom: 20px;
         margin-left: -15px;
-        list-style-position: outside;
     }
     
     li {
@@ -33,7 +33,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Ob}{Ob} \DeclareMat
 ## 1. Limits and Colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(\cC) $$ equipped with a composition law, so that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
-<ol type="a">
+<ol type="a" style="list-style-position: outside">
   <li>An associative composition operator $$ \circ \colon \Hom(B, C) \times \Hom(A, B) \to \Hom(A, C); $$</li>
   <li>Local identities \( \Id_A \colon A \to A \), such that for any \( f \colon A \to B \), we get \( f \circ \Id_A = f \) and \( \Id_B \circ f = f \).</li>
 </ol> 
