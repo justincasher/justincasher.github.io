@@ -3229,9 +3229,9 @@ a.navbar-item,
       width: 41.66667%; }
     .column.is-offset-5-desktop {
       margin-left: 41.66667%; }
-    .column.is-6-desktop {
+    .column.is-6-desktop { /* I edited this */
       flex: none;
-      width: 40%; }
+      width: 10%; }
     .column.is-offset-6-desktop {
       margin-left: 50%; }
     .column.is-7-desktop {
