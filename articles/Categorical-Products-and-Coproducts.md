@@ -84,6 +84,7 @@ $$
 for each $$ m \in \CI $$, such that:
 <ol type="a" class="custom" style="list-style-position: outside">
     <li>For any morphism \( \phi \colon m \to n \) in \( \CI \), we have \( f_m =  f_n \circ F(\phi); \)</li>
+    
     <li>Any other collection of morphisms \( g_m \colon A_m \to \CO \) factors through the limit, meaning there exists a unique \( \displaystyle h \colon \colim A_i \to \CO \) making this diagram commute: 
         $$ 
         \xymatrix{ 
@@ -154,22 +155,23 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Topological spaces | Box topology | Product topology |
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum | 
 
-<table>
-  <tr>
-    <th>Fruit</th>
-    <td>Banana</td>
-  </tr>
-  <tr>
-    <th>Vegetable</th>
-    <td>Carrot</td>
-  </tr>
-</table>
-
 
 ## 3. Partially Ordered Sets
 
-&emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. 
+&emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. Recall that a set $$ P $$ equipped with a relation $$ \leq \subseteq P \times P $$ is called *partially ordered* if it satisfies
+<ol type="a" class="custom" style="list-style-position: outside">
+    <li>$$ x \leq x $$,<\li>
+    <li>$$ x \leq y $$ and $$y \leq x $$ implies $$ x = y $$, and<\li> 
+    <li>$$ x \leq y $$ and $$y \leq z $$ implies $$ x \leq z $$.<\li>
+</ol> 
 
+<ol type="a" class="custom" style="list-style-position: outside">
+    <li>$$ x \leq x $$,<\li>
+    
+    <li>$$ x \leq y $$ and $$y \leq x $$ implies $$ x = y $$, and<\li>
+    
+    <li>$$ x \leq y $$ and $$y \leq z $$ implies $$ x \leq z $$.<\li>
+</ol> 
 
 ## 4. K-Theory
 
@@ -178,6 +180,6 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
 ## 5. References
 
-** FIX THESE**
+**FIX THESE**
 1. Grothendieck, A. (1957), “Sur quelques points d’algèbre homologique”, *Tôhoku Mathematical Journal*. doi:10.2748/tmj/1178244839
 2. Mac Lane, Saunders (September 1998). *Categories for the Working Mathematician. Graduate Texts in Mathematics*. Vol. 5 (Second ed.). Springer.
