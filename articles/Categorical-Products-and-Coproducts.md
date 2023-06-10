@@ -146,6 +146,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | :--------: | :-------: | :---------: |
 | Sets | Cartesian product | Disjoint union |
 | Groups | Direct product | Free product |
+| Abelian groups | | |
 | Rings | Direct product | Free product |
 | Commutative rings | Direct product | Tensor product |
 | $$ R $$-modules | Direct product | Direct sum |
@@ -177,5 +178,6 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
 ## 5. References
 
-1. Include Grothendieck's Tohoku
-2. MacLane Categories
+** FIX THESE**
+1. Grothendieck, A. (1957), “Sur quelques points d’algèbre homologique”, *Tôhoku Mathematical Journal*. doi:10.2748/tmj/1178244839
+2. Mac Lane, Saunders (September 1998). *Categories for the Working Mathematician. Graduate Texts in Mathematics*. Vol. 5 (Second ed.). Springer.
