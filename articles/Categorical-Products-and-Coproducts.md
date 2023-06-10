@@ -141,7 +141,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 &emsp; The following table gives some examples of what we call products and coproducts in different categories:
 
 | Category | Product | Coproduct |
-| -------- | ------- | --------- |
+| :--------: | :-------: | :---------: |
 | Sets | Cartesian product | Disjoint union |
 | Groups |  |  |
 | Commutative rings | | |
@@ -151,7 +151,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
 ## 3. Partial Ordered Sets
 
-&emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. partially ordered set.
+&emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. 
 
 
 ## 4. K-Theory
