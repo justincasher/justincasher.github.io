@@ -138,7 +138,7 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives some examples of what we call products and coproducts in different categories:
+&emsp; The following table gives common names of products and coproducts in different categories:
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -146,6 +146,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Groups |  |  |
 | Commutative rings | | |
 | $$ R $$-modules | | |
+| $$ k $$-vector spaces | | |
 | $$ k $$-representations | | |
 
 
