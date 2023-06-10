@@ -2913,7 +2913,7 @@ a.navbar-item,
       margin-left: 91.66667%; }
     .column.is-12-mobile {
       flex: none;
-      width: 100%; }
+      width: 10%; }
     .column.is-offset-12-mobile {
       margin-left: 100%; } }
   @media screen and (min-width: 769px), print {
@@ -3009,7 +3009,7 @@ a.navbar-item,
       margin-left: 58.33333%; }
     .column.is-8, .column.is-8-tablet {
       flex: none;
-      width: 66.66667%; }
+      width: 10%; }
     .column.is-offset-8, .column.is-offset-8-tablet {
       margin-left: 66.66667%; }
     .column.is-9, .column.is-9-tablet {
@@ -3241,7 +3241,7 @@ a.navbar-item,
       margin-left: 58.33333%; }
     .column.is-8-desktop {
       flex: none;
-      width: 66.66667%; }
+      width: 10%; }
     .column.is-offset-8-desktop {
       margin-left: 66.66667%; }
     .column.is-9-desktop {
@@ -3347,7 +3347,7 @@ a.navbar-item,
       margin-left: 41.66667%; }
     .column.is-6-widescreen {
       flex: none;
-      width: 50%; }
+      width: 10%; }
     .column.is-offset-6-widescreen {
       margin-left: 50%; }
     .column.is-7-widescreen {
