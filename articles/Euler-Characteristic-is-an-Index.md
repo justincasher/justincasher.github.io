@@ -147,7 +147,7 @@ $$
     & = \dim \ker D^{\text{ev}} - \dim \ker D^{\text{od}} \\
     & = \sum_{k \text{ even}} \dim \mathcal{H}^k(M) - \sum_{k \text{ odd}} \dim \mathcal{H}^k(M) \\
     & = \sum_{k=0}^{n} (-1)^k \dim H_{\text{dR}}^k(M) \\
-    & = \chi(M)
+    & = \chi(M).
 \end{aligned}
 $$
 
