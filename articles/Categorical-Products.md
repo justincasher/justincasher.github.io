@@ -20,7 +20,7 @@ title: Categorical Products and Coproducts
     }
 }
 </style>
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\NN}{\mathbb{NN}} \newcommand{\ZZ}{\mathbb{Z}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
@@ -100,6 +100,7 @@ for each $$ m \in \CI $$, such that:
         } 
         $$</li>
 </ol> 
+
 
 ## 2. Products and coproducts
 
@@ -196,13 +197,12 @@ $$
 
 reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than their product.“ Hence, their product is the greatest element less than our collection $$ \{ x_i \} $$, meaning it is their infimum. Likewise their coproduct is their supremum.
 
-&emsp; Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. This allows us to view intersections and unions as category theoretic products and coproducts, respectively.
-
+&emsp; Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then the *Grothendieck group* of $$ \NN $$, meaning we formally define elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process motivates K-theory.
 
 
 ## 4. K-Theory
 
-&emsp; The natural numbers can be be constructed using the empty set. 
+&emsp; 
 
 
 ## 5. References
