@@ -123,8 +123,8 @@ This is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ 
 
 $$ 
 \xymatrix{ 
-    \CO \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_n} & \\
-    \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & A_n.
+    \CO \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_n} \\
+    \prod A_i \ar[r]_{\pi_n} & A_n.
 } 
 $$
 
@@ -141,7 +141,7 @@ This is equivalent to choosing an indexed subset of objects $$ \{ A_i \} $$ in $
 $$ 
 \xymatrix{ 
     A_m \ar[dr]_{g_m} \ar[r]^{\iota_m} & \coprod A_i \ar@{.>}[d]|-{\exists !h} \\
-    \CO
+    & \CO
 } 
 $$
 
@@ -180,9 +180,10 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 $$
 \Hom(x, y) = 
 \begin{cases}
-    \{a single morphism} & \text{ if } x \leq y \\
+    \text{a single morphism} & \text{ if } x \leq y \\
     \varnothing & \text{ else.}
 \end{cases}
+$$
 
 We see that in this category, the diagram 
 
