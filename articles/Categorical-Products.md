@@ -185,14 +185,16 @@ $$
 \end{cases}
 $$
 
-We see that in this category, the diagram 
+We see that in this category for a family of elements $$ \{ x_i \} $$ in $$ X $$, the product diagram
 
 $$ 
 \xymatrix{ 
-    & z \ar@{.>}[d]|-{\exists !h} \ar[dl]_{g_m} \ar[dr]^{g_n} & \\
-    x & \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & y.
+    y \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_n} \\
+    \prod x_i \ar[r]_{\pi_n} & x_n.
 } 
 $$
+
+reads as follows: "For "
 
 ## 4. K-Theory
 
