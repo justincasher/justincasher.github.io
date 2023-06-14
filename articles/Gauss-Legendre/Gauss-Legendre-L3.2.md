@@ -28,7 +28,7 @@ $$
 	= \sum_{n=0}^{\infty} \left( \frac{(2n-1)!!}{(2n)!!} k^n \right)^2.
 $$
 
-(The "!!" means double factorial.) Calculating the AM and GM means gives us 
+(The "!!" means [double factorial](https://en.wikipedia.org/wiki/Double_factorial).) Calculating the AM and GM means gives us 
 
 $$ 
     M(1+k, 1-k) = M(1, \sqrt{1-k^2}).
