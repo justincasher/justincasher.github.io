@@ -20,7 +20,7 @@ title: Categorical Products and Coproducts
     }
 }
 </style>
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\NN}{\mathbb{NN}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\NN}{\mathbb{N}} \newcommand{\ZZ}{\mathbb{Z}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
@@ -148,7 +148,7 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives common names of products and coproducts in different categories. (Note: Only finite products and coproducts of schemes necessarily exist.)
+&emsp; The following table gives common names of products and coproducts in different categories.
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -163,6 +163,8 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum |
 | Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings |
 | Poset | Infimum | Supremum |
+
+Note: Only finite products and coproducts of schemes necessarily exist. Also ADD CONTRAVARIANT
 
 
 ## 3. Partially Ordered Sets
