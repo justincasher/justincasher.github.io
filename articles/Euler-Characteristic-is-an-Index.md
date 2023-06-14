@@ -5,8 +5,10 @@ permalink: /Euler-Characteristic-is-an-Index
 feedformat: card
 title: The Euler Characteristic is the Index of an Operator
 ---
-
 <br>
+
+**Abstract.** Using the Hodge Isomorphism and implicitly de Rham's Theorem, we show how the (analytic) index of a Dirac operator equals the Euler characteristic. This is the first step in showing the Atiyah-Singer Index Theorem implies the Chern-Gauss-Bonnet Theorem.
+
 ## Table of Contents
 1. [Atiyah-Singer Index Theorem](#1-atiyah-singer-index-theorem)
 2. [The de Rham Complex](#2-the-de-rham-complex)
