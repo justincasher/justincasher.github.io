@@ -7,7 +7,7 @@ title: The Euler Characteristic is the Index of an Operator
 ---
 <br>
 
-**Abstract.** Using the Hodge Isomorphism and implicitly de Rham's Theorem, we show how the (analytic) index of a Dirac operator equals the Euler characteristic. This is the first step in showing the Atiyah-Singer Index Theorem implies the Chern-Gauss-Bonnet Theorem.
+**Abstract.** Let $$ M $$ be a closed oriented Riemannian manifold. We show that the (analytic) index of a specific Dirac operator equals the Euler characteristic of $$ M $$. This is the first step in the proof that the Atiyah-Singer Index Theorem implies the Chern-Gauss-Bonnet Theorem.
 
 ## Table of Contents
 1. [Atiyah-Singer Index Theorem](#1-atiyah-singer-index-theorem)
