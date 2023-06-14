@@ -123,8 +123,8 @@ This is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ 
 
 $$ 
 \xymatrix{ 
-    \CO \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_n} \\
-    \prod A_i \ar[r]_{\pi_n} & A_n.
+    \CO \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_m} \\
+    \prod A_i \ar[r]_{\pi_n} & A_m.
 } 
 $$
 
@@ -189,16 +189,20 @@ We see that in this category for a family of elements $$ \{ x_i \} $$ in $$ X $$
 
 $$ 
 \xymatrix{ 
-    y \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_n} \\
-    \prod x_i \ar[r]_{\pi_n} & x_n.
+    y \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_m} \\
+    \prod x_i \ar[r]_{\pi_n} & x_m.
 } 
 $$
 
-reads as follows: "For "
+reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than their product.“ Hence, their product is the greatest element less than our collection $$ \{ x_i \} $$, meaning it is their infimum. Likewise their coproduct is their supremum.
+
+&emsp; Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. This allows us to view intersections and unions as category theoretic products and coproducts, respectively.
+
+
 
 ## 4. K-Theory
 
-&emsp; Addition and coproducts
+&emsp; The natural numbers can be be constructed using the empty set. 
 
 
 ## 5. References
