@@ -147,7 +147,7 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives common names of products and coproducts in different categories. Note that for schemes only finite products and coproducts necessarily exist.
+&emsp; The following table gives common names of products and coproducts in different categories. (Note: for schemes only finite products and coproducts necessarily exist.)
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -160,7 +160,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | $$ k $$-vector spaces | Direct product | Direct sum |
 | Topological spaces | Box topology | Product topology |
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum |
-| Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union | 
+| Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings | 
 
 
 ## 3. Partially Ordered Sets
