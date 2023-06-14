@@ -103,10 +103,10 @@ for each $$ m \in \CI $$, such that:
 &emsp; We call the limit over a diagram $$ F \colon \CI \to \cC $$ such that $$ \CI $$ has only identity morphisms 
 
 $$
-    \Hom_{\CI}(A, B) = 
+    \Hom_{\CI}(m, n) = 
     \begin{cases}
-        \Id_A & \text{ if } A = B \\
-        \varnothing & \text{ if } A \neq B
+        \Id_A & \text{ if } m = n \\
+        \varnothing & \text{ if } m \neq n
     \end{cases}
 $$
 
