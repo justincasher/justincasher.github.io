@@ -1,7 +1,7 @@
 ---
 layout: Writing
 indent: true
-permalink: /Categorical-Products-and-Coproducts
+permalink: /Categorical-Products
 feedformat: card
 title: Categorical Products and Coproducts
 ---
