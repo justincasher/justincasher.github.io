@@ -128,7 +128,7 @@ $$
 		
 &emsp; We now prove the Gauss-Legendre algorithm. We will not discuss error analysis, which is done in [\[4\]](#4-references).
 		
-**Definition.** &nbsp; Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n + b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit 
+**Definition.** &nbsp; Let $$ a_0, b_0 \in \mathbb{R} $$. Let $$ a_{n+1} = (a_n + b_n)/2 $$ and $$ b_{n+1} = (a_n b_n)^{1/2} $$ be the arithmetic and geometric means, respectively, of the $$ n $$th terms. Then we call their common limit 
 
 $$ 
     \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = M(a_0, b_0) 

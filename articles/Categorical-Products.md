@@ -101,6 +101,9 @@ for each $$ m \in \CI $$, such that:
         $$</li>
 </ol> 
 
+**REMARK** limits and colimits of arbitrary diagrams do not necessarily exist 
+
+
 
 ## 2. Products and coproducts
 
@@ -167,6 +170,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 Note: Only finite products and coproducts of schemes necessarily exist. Also ADD CONTRAVARIANT
 
 
+
 ## 3. Partially Ordered Sets
 
 &emsp; We now show how for a poset, i.e. a partially ordered set, the product is the infimum and the coprodcut is the supremum. Recall that a set $$ X $$ equipped with a relation $$ \leq $$ is called a *poset* if it satisfies
@@ -202,9 +206,11 @@ reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than 
 &emsp; Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then the *Grothendieck group* of $$ \NN $$, meaning we formally define elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process motivates K-theory.
 
 
+
 ## 4. K-Theory
 
 &emsp; 
+
 
 
 ## 5. References
