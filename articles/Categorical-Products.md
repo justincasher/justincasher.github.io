@@ -47,7 +47,7 @@ We denote the class of all morphisms in $$ \cC $$ by $$ \Hom(\cC) $$.
 &emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
 
 $$ 
-    F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)),
+F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)),
 $$
 
 meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. morphism) in $$ \CD $$. We call $$ F $$ a *functor* if it preserves the composition operator 
@@ -106,25 +106,25 @@ for each $$ m \in \CI $$, such that:
 &emsp; We call the limit over a diagram $$ F \colon \CI \to \cC $$ such that $$ \CI $$ has only identity morphisms 
 
 $$
-    \Hom_{\CI}(m, n) = 
-    \begin{cases}
-        \Id_A & \text{ if } m = n \\
-        \varnothing & \text{ if } m \neq n
-    \end{cases}
+\Hom_{\CI}(m, n) = 
+\begin{cases}
+    \Id_A & \text{ if } m = n \\
+    \varnothing & \text{ if } m \neq n
+\end{cases}
 $$
 
 a *product*, which is denoted
 
 $$
-    \prod A_i = \lim A_i.
+\prod A_i = \lim A_i.
 $$
 
 This is the same as choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, such that the following diagram commutes:
 
 $$ 
 \xymatrix{ 
-    & \CO \ar@{.>}[d]|-{\exists !h} \ar[dl]_{g_m} \ar[dr]^{g_n} & \\
-    A_m & \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & A_n.
+    \CO \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_n} & \\
+    \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & A_n.
 } 
 $$
 
@@ -133,21 +133,21 @@ Here, we have replaced $$ f_m $$ with $$ \pi_m $$, which we call the *projection
 &emsp; We likewise define define the coproduct as the colimit over diagrams with no morphisms, which we denote 
 
 $$
-    \coprod A_i = \colim A_i,
+\coprod A_i = \colim A_i,
 $$
 
 This is equivalent to choosing an indexed subset of objects $$ \{ A_i \} $$ in $$ \cC $$, such that the following diagram commutes:
 
 $$ 
 \xymatrix{ 
-    A_m \ar[dr]_{g_m} \ar[r]^{\iota_m} & \colim A_i \ar@{.>}[d]|-{\exists !h} & A_n \ar[dl]^{g_n} \ar[l]_{\iota_n} \\
-    & \CO &
+    A_m \ar[dr]_{g_m} \ar[r]^{\iota_m} & \coprod A_i \ar@{.>}[d]|-{\exists !h} \\
+    \CO
 } 
 $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives common names of products and coproducts in different categories. (Note: for schemes only finite products and coproducts necessarily exist.)
+&emsp; The following table gives common names of products and coproducts in different categories. (Note: Only finite products and coproducts of schemes necessarily exist.)
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -160,12 +160,13 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | $$ k $$-vector spaces | Direct product | Direct sum |
 | Topological spaces | Box topology | Product topology |
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum |
-| Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings | 
+| Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings |
+| Poset | Infimum | Supremum |
 
 
 ## 3. Partially Ordered Sets
 
-&emsp; One of the most intuitively insightful categories to deal with is that induced by a poset, i.e. a partially ordered set, as in this case products and coproducts are simple the infimum and supremum. Recall that a set $$ P $$ equipped with a relation $$ \leq $$ is called *partially ordered* if it satisfies
+&emsp; We now show how for a poset, i.e. a partially ordered set, the product is the infimum and the coprodcut is the supremum. Recall that a set $$ X $$ equipped with a relation $$ \leq $$ is called a *poset* if it satisfies
 <ol type="a" class="custom" style="list-style-position: outside">
     <li>\( x \leq x \),</li>
     
@@ -173,6 +174,24 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
     
     <li>\( x \leq y \) and \( y \leq z \) implies \( x \leq z \).</li>
 </ol> 
+
+&emsp; Associated to any poset $$ X $$ is a category whose objects are the elements of $$ X $$ and morphisms represent the relation, meaning
+
+$$
+\Hom(x, y) = 
+\begin{cases}
+    \{a single morphism} & \text{ if } x \leq y \\
+    \varnothing & \text{ else.}
+\end{cases}
+
+We see that in this category, the diagram 
+
+$$ 
+\xymatrix{ 
+    & z \ar@{.>}[d]|-{\exists !h} \ar[dl]_{g_m} \ar[dr]^{g_n} & \\
+    x & \prod A_i \ar[l]^{\pi_m} \ar[r]_{\pi_n} & y.
+} 
+$$
 
 ## 4. K-Theory
 
