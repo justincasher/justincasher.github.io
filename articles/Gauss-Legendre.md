@@ -25,7 +25,7 @@ using the arithmetic-geometric mean.
 
 ## 1. History
 	
-&emsp; The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular methods. The reference here is [\[1\]](#4-references). Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygons of $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
+&emsp; The methods used for approximating $$ \pi $$ span millennia and severely vary in complexity; we will describe a few of the popular methods. The reference here is [\[1\]](#4-references). Around 200 BC, Archimedes approximated the circumference $$ C $$ and radius $$ r $$ of a circle by inscribing it in a polygon with $$ n $$ sides. It is not hard to see that as $$ n $$ approaches infinity, we get $$ \pi $$ using the circumference formula $$ C = 2 \pi r $$. Then during the invention of calculus in the 1600s, Newton and others used integrals and power series expansions to calculate $$ \pi $$. For instance, the identity
 
 $$
 	\arctan(x) 
