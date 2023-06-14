@@ -23,6 +23,9 @@ title: Categorical Products and Coproducts
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
+
+**Abstract.** We first define products and coproducts for arbitrary categories. We then argue that addition is an example of a specific coproduct, which motivates K-theory.
+
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
 2. [Products and Coproducts](#2-products-and-coproducts)
@@ -144,19 +147,20 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives common names of products and coproducts in different categories. 
+&emsp; The following table gives common names of products and coproducts in different categories. Note that for schemes only finite products and coproducts necessarily exist.
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
 | Sets | Cartesian product | Disjoint union |
 | Groups | Direct product | Free product |
-| Abelian groups | | |
+| Abelian groups | Direct product | direct sum |
 | Rings | Direct product | Free product |
-| Commutative rings | Direct product | Tensor product |
+| Commutative rings | Direct product | Tensor product (over $$ \ZZ $$) |
 | $$ R $$-modules | Direct product | Direct sum |
 | $$ k $$-vector spaces | Direct product | Direct sum |
 | Topological spaces | Box topology | Product topology |
-| Pointed topological spaces | Box topology modulo basepoint | Wedge sum | 
+| Pointed topological spaces | Box topology modulo basepoint | Wedge sum |
+| Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union | 
 
 
 ## 3. Partially Ordered Sets
