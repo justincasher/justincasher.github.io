@@ -34,7 +34,7 @@ $$
     M(1+k, 1-k) = M(1, \sqrt{1-k^2}).
 $$
 
-Hence, applying [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2.1) for $$ b/a = \sqrt{1-k^2} $$, we get
+Hence, applying [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1) for $$ b/a = \sqrt{1-k^2} $$, we get
 
 $$
 	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
