@@ -234,7 +234,7 @@ $$
     M(1+k, 1-k) = M(1, \sqrt{1-k^2}).
 $$
 
-Hence, applying [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2.1) for $$ b/a = \sqrt{1-k^2} $$, we get
+Hence, applying [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1) for $$ b/a = \sqrt{1-k^2} $$, we get
 
 $$
 	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
@@ -245,25 +245,25 @@ with the last equality following from the identity $$ M(ca, cb) = cM(a, b) $$. $
 		
 &emsp; We finally have the tools we need to prove the Gauss-Legendre Algorithm does indeed converge to $$ \pi $$.
 		
-*Proof (Gauss-Legendre).* &nbsp; Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply [Proposition 2.2](https://www.justinasher.me/Gauss-Legendre-P2.2) to get
+*Proof (Gauss-Legendre).* &nbsp; Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply [Proposition 2.2](https://www.justinasher.me/Gauss-Legendre-P2:2) to get
 
 $$
 	2 F (k) E (k) - F(k)^2 = \frac{\pi}{2}.
 $$
 
-Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $$ k^2 = 1 - 1/k^2 $$, we can set $$ a = 1 $$ and $$ b = k $$ in [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2.1) to get
+Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $$ k^2 = 1 - 1/k^2 $$, we can set $$ a = 1 $$ and $$ b = k $$ in [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1) to get
 
 $$
 	2 F_S(1, k) E_S(1, k) - F_S(1, k)^2 = \frac{\pi}{2}.
 $$
 
-Then applying [Lemma 3.1](#https://www.justinasher.me/Gauss-Legendre-L3.1) gives us an equation only dependent on $$ F_S(1, k) $$ 
+Then applying [Lemma 3.1](https://www.justinasher.me/Gauss-Legendre-L3:1) gives us an equation only dependent on $$ F_S(1, k) $$ 
 
 $$
 	(2 S - 1) F_S(1, k)^2 = \frac{\pi}{2}.
 $$
 
-Finally, we apply [Lemma 3.2](https://www.justinasher.me/Gauss-Legendre-L3.2) to write our equation in terms of the AM-GM mean
+Finally, we apply [Lemma 3.2](https://www.justinasher.me/Gauss-Legendre-L3:2) to write our equation in terms of the AM-GM mean
 
 $$				
 	(2S-1) \left( \frac{\pi}{2 M(1, k)} \right)^2 = \frac{\pi}{2} \\
