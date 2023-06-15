@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Statement
 indent: true
 permalink: /Gauss-Legendre-P2:2
 feedformat: card
