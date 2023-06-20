@@ -22,7 +22,7 @@ title: Defining a Scheme
 </style>
 $$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fp}{\mathfrak{p}} $$
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CV}{\mathcal{V}} $$ 
-$$ \newcommand{\RR}{\mathbb{RR}} $$
+$$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
 
@@ -56,14 +56,14 @@ DEFINE NATURAL TRANSFORMATION/MORPHISM
 <ol type="a" class="custom" style="list-style-position: outside">
   <li>\( R / \fp \) is a domain;</li>
   
-  <li>if $$ ab \in \fp $$ then $$ a \in \fp $$ or $$ b \in \fp $$.</li>
+  <li>if \( )ab \in \fp \) then \( a \in \fp \) or \( b \in \fp \).</li>
 </ol>
 We denote the set of prime ideals $$ \Spec R $$ and call it the *prime spectrum*.
 
 &emsp; For any ideal $$ \fa $$ we let $$ \CV(\fa) $$ be the set of prime ideals containing $$ \ca $$:
 
 $$
-\CV(\ca) = \{\fp \in \Spec R \mid \ca \subseteq \fp \}
+\CV(\fa) = \{\fp \in \Spec R \mid \fa \subseteq \fp \}
 $$
 
 It is not hard to show that 
