@@ -209,7 +209,7 @@ reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than 
 
 ## 4. K-Theory
 
-&emsp; 
+&emsp; Let $$ \cC $$ be a category in which coproducts exists. Write Then we can form a commutative monoid with elements $$ [\Ob(\cC)] $$ and adition $$ [A]+[B] = [A \oplus B] $$. We then 
 
 
 
