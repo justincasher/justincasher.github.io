@@ -1,9 +1,9 @@
 ---
 layout: Writing
 indent: true
-permalink: /Categorical-Products
+permalink: /Categorical-Coproducts
 feedformat: card
-title: Categorical Products and Coproducts
+title: Categorical Coproducts and K-Theory
 ---
 <style>
     ol.custom {
@@ -50,13 +50,13 @@ $$
 F \colon (\Ob(\cC), \Hom(\cC)) \to (\Ob(\CD), \Hom(\CD)),
 $$
 
-meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. morphism) in $$ \CD $$. We call $$ F $$ a *functor* if it preserves the composition operator 
+meaning each object (resp. morphism) in $$ \cC $$ is mapped to an object (resp. morphism) in $$ \CD $$. We call $$ F $$ a *functor* if it preserves (a) the composition operator 
 
 $$ 
 F(f \circ g) = F(f) \circ F(g) 
 $$ 
 
-and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
+and (b) local identities $$ F(\Id_A) = \Id_{F(A)} $$.
 
 **Remark 1.1.** When working with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
 
@@ -101,11 +101,13 @@ for each $$ m \in \CI $$, such that:
         $$</li>
 </ol>
 
-&emsp; Let $$ f \colon A \to B $$ be a morphism. If there exists a map $$ f^{-1} \colon B \to A $$ such that $$ f \circ f^{-1} = \Id_Y $$ and $$ f^{-1} \circ f = \Id_X $$, then we call $$ f $$ an *isomorphism*. For sets an isomorphism is a bijection; for groups the usual isomorphism; for topological spaces it describes a homeomorphism; etc. 
+&emsp; Let $$ f \colon A \to B $$ be a morphism. If there exists a map $$ f^{-1} \colon B \to A $$ such that $$ f \circ f^{-1} = \Id_Y $$ and $$ f^{-1} \circ f = \Id_X $$, then we call $$ f $$ an *isomorphism*. Likewise $$ A $$ and $$ B $$ are said to be *isomorphic*, which we denote $$ A \cong B $$. For sets an isomorphism is a bijection; for groups the usual notion of an isomorphism; for topological spaces it is a homeomorphism; etc. 
 
 **Proposition 1.2.** The limit (resp. colimit) of a diagram is unique up to isomorphism.
 
-**Remark 1.3.** In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed. If they can be constructed, though, using this universal characterization can greatly simplify proofs.
+**Proof.** Suppose $$ L_1 $$ and $$ L_2 $$ both are limits of a given diagram. Then there exists maps $$ h \colon L_1 \to L_2 $$ and $$ h^{-1} \colon L_2 \to L_1 $$. We observe $$ h \circ h^{-1} \colon L_1 \to L_1 $$ is a map making the diagram commute. Since there exists a unique map $$ L_1 \to L_1 $$ making the diagram commute by assumption, we conclude that $$ h \circ h^{-1} = \Id_{L_1} $$ and that $$ L_1 \cong L_2 $$. $$ \blacksquare $$
+
+**Remark 1.3.** In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed.
 
 
 
@@ -136,7 +138,7 @@ $$
 } 
 $$
 
-Here, we have replaced $$ f_m $$ with $$ \pi_m $$, which we call the *projection onto $$ A_m $$*.
+Here, we have replaced $$ f_m $$ with $$ \pi_m $$, which we call the *projection* onto $$ A_m $$*.
 
 &emsp; We likewise define define the coproduct as the colimit over diagrams with no morphisms, which we denote 
 
@@ -153,7 +155,7 @@ $$
 } 
 $$
 
-We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
+We call the maps $$ \iota_m $$ the *inclusion* into $$ A_m $$*.
 
 **Example 2.1.** The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariance nature of the Spec functor and only finite products and coproducts necessarily existing.
 
@@ -170,7 +172,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum |
 | Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings |
 | Poset | Infimum | Supremum |
-
+<br>
 
 &emsp; We briefly detail the last example: that for a poset, i.e. a partially ordered set, the product is the infimum and the coprodcut is the supremum. Recall that a set $$ X $$ equipped with a relation $$ \leq $$ is called a *poset* if it satisfies
 <ol type="a" class="custom" style="list-style-position: outside">

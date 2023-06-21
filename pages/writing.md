@@ -5,7 +5,7 @@ feedformat: card
 title: Writing
 ---
 <br/>
-This page contains an alphabetized list of (mostly expository) online mathematics articles I have written.
+This page contains an alphabetized list of (mostly expository) online mathematics articles I have written. Please send me an email if you find any errors or typos!
 
 1. [The Euler Characteristic is the Index of an Operator]({{'/Euler-Characteristic-is-an-Index' | relative_url}})
 2. [The Gauss-Legendre Algorithm]({{'/Gauss-Legendre' | relative_url}})
