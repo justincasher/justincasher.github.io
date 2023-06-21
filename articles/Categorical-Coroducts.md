@@ -213,7 +213,7 @@ reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than 
 
 &emsp; Objects being isomorphic is an equivalence relation. Thus, if $$ A $$ and $$ B $$ are isomorphic, then we say that $$ A $$ and $$ B $$ belong to the same isomorphism class, which we denote $$ [A] = [B] $$. We further write $$ [\Ob(\cC)] $$ for the class of all isomorohism classes in $$ \cC $$.
  
-&emsp; Suppose coproducts exist in $$ \cC $$ and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a commutative monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$. This is a commutative monoid. We append inverses by as follows. 
+&emsp; Suppose coproducts exist in $$ \cC $$ and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$, which is commutative since $$ A \oplus B \cong B \oplus A $$. We append inverses by as follows. 
 
 &emsp; Write $$ (M, +) $$ for a commutative monoid and an element of $$ M \times M $$ as a pair $$ (m^+, m^-) $$. Consiwer two such pairs $$ (m_1^+, m_1^-) $$ and $$ (m_2^+, m_2^-) $$. We add them component-wise
 
@@ -229,17 +229,21 @@ $$
 
 We call $$ M \times M $$ modulo this equivalence relation the *Grothendieck group* of $$ M $$.
 
-&emsp; Returning to $$ \cC $$, we call the resulting group $$ [\Ob(\cC)] $$ the *$$ K $$-group* of $$ \cC $$. 
+&emsp; Returning to $$ \cC $$, we call the resulting group $$ [\Ob(\cC)] $$ the *K-group* of $$ \cC $$. 
 
-**Example 3.1.** Sets
+**Example 3.1.** In the category of finite sets, an isomorphism is a bijection, meaning we can associate with each isomorphism class a natural number, i.e. cardinality. We see that the coproduct here is disjoint union, which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-group of finite sets is $$ \ZZ $$. Furthermore, products of sets allow us to define multiplication.
 
-**Example 4.2.** Topological K-theory
+**Example 3.2.** Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally. We denote the K-group of this category $$ KO(X) $$. It is referred to *real topological K-theory*.
 
-**Example 4.3.** Algebraic K-theory
+**Example 3.3.** Let $$ R $$ be a ring, and consider the category of finitely generated projective modules on $$ X $$ with the usual coproduct. We denote 
+
+&emsp; The following theorem motivates the use of projective modules in algebraic K-theory. Note that higher (and lower) K-groups can be defined; we have given the 0th case.
+
+**Theorem 3.4** (Serre-Swan).
 
 
 
-## 5. References
+## 4. References
 
 **FIX THESE**
 1. Grothendieck, A. (1957), “Sur quelques points d’algèbre homologique”, *Tôhoku Mathematical Journal*. doi:10.2748/tmj/1178244839
