@@ -208,11 +208,23 @@ reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than 
 
 ## 3. K-Theory
 
-&emsp; If there exists an isomorphism $$ f \colon A \to B $$, then we say that $$ A $$ and $$ B $$ belong to the same isomorphism class, which we denote $$ [A] = [B] $$. We further write $$ [\Ob(\cC)] $$ for the class of all isomorohism classes 
+&emsp; Objects being isomorphic is an equivalence relation. Thus, if $$ A $$ and $$ B $$ are isomorphic, then we say that $$ A $$ and $$ B $$ belong to the same isomorphism class, which we denote $$ [A] = [B] $$. We further write $$ [\Ob(\cC)] $$ for the class of all isomorohism classes in $$ \cC $$.
  
-&emsp; Suppose coproducts exist in $$ \cC $$ and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a commutative monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$. This is a commutative monoid. We append inverses by forming the *Grothendieck group* of $$ [\Ob(\cC)] $$ as follows. 
+&emsp; Suppose coproducts exist in $$ \cC $$ and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a commutative monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$. This is a commutative monoid. We append inverses by as follows. 
 
-&emsp; GROTHENDIECK GROUP
+&emsp; Write $$ (M, +) $$ for a commutative monoid and an element of $$ M \times M $$ as a pair $$ (m^+, m^-) $$. Consiwer two such pairs $$ (m_1^+, m_1^-) $$ and $$ (m_2^+, m_2^-) $$. We add them component-wise
+
+$$
+(m_1^+, m_1^-) + (m_2^+, m_2^-) = (m_1^+ + m_2^+, m_1^- + m_2^-),
+$$
+
+and we consider them to be equivalent if there exists an $$ a \in M $$ such that 
+
+$$
+m_1^+ + m_2^- + a = m_2^+ + m_1^- + a.
+$$
+
+We call $$ M \times M $$ modulo this equivalence relation the *Grothendieck group* of $$ M $$.
 
 &emsp; Returning to $$ \cC $$, we call the resulting group $$ [\Ob(\cC)] $$ the *$$ K $$-group* of $$ \cC $$. 
 
