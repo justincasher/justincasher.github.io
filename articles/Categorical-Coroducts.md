@@ -172,6 +172,7 @@ We call the maps $$ \iota_m $$ the *inclusion* into $$ A_m $$*.
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum |
 | Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings |
 | Poset | Infimum | Supremum |
+
 <br>
 
 &emsp; We briefly detail the last example: that for a poset, i.e. a partially ordered set, the product is the infimum and the coprodcut is the supremum. Recall that a set $$ X $$ equipped with a relation $$ \leq $$ is called a *poset* if it satisfies
