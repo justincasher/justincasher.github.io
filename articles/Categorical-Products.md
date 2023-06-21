@@ -24,7 +24,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
-**Abstract.** We first define products and coproducts for arbitrary categories. We then argue that addition is an example of a specific coproduct, which motivates K-theory.
+**Abstract.** We define products and coproducts for arbitrary categories, then use them to define K-theory. In particular, we discuss how the integers can be naturally constructed using K-theory.
 
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
@@ -44,6 +44,8 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 </ol>
 We denote the class of all morphisms in $$ \cC $$ by $$ \Hom(\cC) $$.
 
+&emsp; Let $$ f \colon A \to B $$ be a morphism in a category $$ \cC $$. If there exists a map $$ f^{-1} \colon B \to A $$ such that $$ f \circ f^{-1} = \Id_Y $$ and $$ f^{-1} \circ f = \Id_X $$, then we call $$ f $$ an *isomorphism*.
+
 &emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
 
 $$ 
@@ -58,7 +60,7 @@ $$
 
 and local identities $$ F(\Id_A) = \Id_{F(A)} $$.
 
-**Remark.** When working with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
+**Remark 1.1.** When working with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
 
 &emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Here, we call $$ F $$ a *diagram* and $$ \CI $$ the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$. The *limit* of $$ F $$ is then an object $$ \lim A_i $$ in $$ \cC $$ equipped with a morphism
 
@@ -99,9 +101,11 @@ for each $$ m \in \CI $$, such that:
             & \CO &
         } 
         $$</li>
-</ol> 
+</ol>
 
-**REMARK** limits and colimits of arbitrary diagrams do not necessarily exist 
+**Proposition 1.2.** The limit (resp. colimit) of a diagram is unique up to isomorphism.
+
+**Remark 1.2.** In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed. If they can be constructed, though, using this universal characterization can greatly simplify proofs.
 
 
 
@@ -151,7 +155,7 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives common names of products and coproducts in different categories.
+&emsp; The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariance nature of the Spec functor and only finite products and coproducts necessarily existing.
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -166,8 +170,6 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Pointed topological spaces | Box topology modulo basepoint | Wedge sum |
 | Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings |
 | Poset | Infimum | Supremum |
-
-Note: Only finite products and coproducts of schemes necessarily exist. Also ADD CONTRAVARIANT
 
 
 
@@ -203,13 +205,25 @@ $$
 
 reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than their product.“ Hence, their product is the greatest element less than our collection $$ \{ x_i \} $$, meaning it is their infimum. Likewise their coproduct is their supremum.
 
-&emsp; Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then the *Grothendieck group* of $$ \NN $$, meaning we formally define elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process motivates K-theory.
+**Remark.** Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then defined by formally appending elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process (in some sense) motivates K-theory, which gives another construction of the integers.
 
 
 
 ## 4. K-Theory
 
-&emsp; Let $$ \cC $$ be a category in which coproducts exists. Write Then we can form a commutative monoid with elements $$ [\Ob(\cC)] $$ and adition $$ [A]+[B] = [A \oplus B] $$. We then 
+&emsp; If there exists an isomorphism $$ f \colon A \to B $$, then we say that $$ A $$ and $$ B $$ belong to the same isomorphism class, which we denote $$ [A] = [B] $$. We further write $$ [\Ob(\cC)] $$ for the class of all isomorohism classes 
+ 
+&emsp; Suppose coproducts exist in $$ \cC $$ and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a commutative monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$. This is a commutative monoid. We append inverses by forming the *Grothendieck group* of $$ [\Ob(\cC)] $$ as follows. 
+
+&emsp;
+
+&emsp; Returning to $$ \cC $$, we call the resulting group $$ [\Ob(\cC)] $$ the *$$ K $$-group* of $$ \cC $$. 
+
+**Example 4.1.** Sets
+
+**Example 4.2.** Topological K-theory
+
+**Example 4.3.** Algebraic K-theory
 
 
 

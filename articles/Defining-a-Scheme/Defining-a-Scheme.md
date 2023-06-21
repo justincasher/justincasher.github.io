@@ -26,7 +26,7 @@ $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
 
-**Abstract.** We use sheaves of sections to define schemes.
+**Abstract.** We use sheaves of sections to define schemes. Familiarity with category theory is assumed.
 
 ## Table of Contents
 1. [Sheaves](#1-sheaves)
@@ -56,7 +56,7 @@ DEFINE NATURAL TRANSFORMATION/MORPHISM
 <ol type="a" class="custom" style="list-style-position: outside">
   <li>\( R / \fp \) is a domain;</li>
   
-  <li>if \( )ab \in \fp \) then \( a \in \fp \) or \( b \in \fp \).</li>
+  <li>if \( ab \in \fp \) then \( a \in \fp \) or \( b \in \fp \).</li>
 </ol>
 We denote the set of prime ideals $$ \Spec R $$ and call it the *prime spectrum*.
 
