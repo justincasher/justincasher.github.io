@@ -105,7 +105,7 @@ for each $$ m \in \CI $$, such that:
 
 **Proposition 1.2.** The limit (resp. colimit) of a diagram is unique up to isomorphism.
 
-**Proof.** Suppose $$ L_1 $$ and $$ L_2 $$ both are limits of a given diagram. Then there exists maps $$ h \colon L_1 \to L_2 $$ and $$ h^{-1} \colon L_2 \to L_1 $$. We observe $$ h \circ h^{-1} \colon L_1 \to L_1 $$ is a map making the diagram commute. Since there exists a unique map $$ L_1 \to L_1 $$ making the diagram commute by assumption, we conclude that $$ h \circ h^{-1} = \Id_{L_1} $$ and that $$ L_1 \cong L_2 $$. $$ \blacksquare $$
+*Proof.* Suppose $$ L_1 $$ and $$ L_2 $$ both are limits of a given diagram. Then there exists maps $$ h \colon L_1 \to L_2 $$ and $$ h^{-1} \colon L_2 \to L_1 $$. We observe $$ h \circ h^{-1} \colon L_1 \to L_1 $$ is a map making the diagram commute. Since there exists a unique map $$ L_1 \to L_1 $$ making the diagram commute by assumption, we conclude that $$ h \circ h^{-1} = \Id_{L_1} $$ and that $$ L_1 \cong L_2 $$. $$ \blacksquare $$
 
 **Remark 1.3.** In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed.
 
@@ -233,13 +233,15 @@ We call $$ M \times M $$ modulo this equivalence relation the *Grothendieck grou
 
 **Example 3.1.** In the category of finite sets, an isomorphism is a bijection, meaning we can associate with each isomorphism class a natural number, i.e. cardinality. We see that the coproduct here is disjoint union, which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-group of finite sets is $$ \ZZ $$. Furthermore, products of sets allow us to define multiplication.
 
-**Example 3.2.** Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally. We denote the K-group of this category $$ KO(X) $$. It is referred to *real topological K-theory*.
+**Example 3.2.** Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally. We denote the K-group of this category $$ KO_0(X) $$. It is referred to as *real topological K-theory*.
 
-**Example 3.3.** Let $$ R $$ be a ring, and consider the category of finitely generated projective modules on $$ X $$ with the usual coproduct. We denote 
+**Example 3.3.** Let $$ R $$ be a ring, and consider the category of finitely generated projective modules on $$ X $$ with the usual coproduct. We denote the K-theory of this category $$ K_0(R) $$. It is referred to as *algebraic K-theory*.
 
-&emsp; The following theorem motivates the use of projective modules in algebraic K-theory. Note that higher (and lower) K-groups can be defined; we have given the 0th case.
+&emsp; The following theorem motivates the use of projective modules in algebraic K-theory. Note that higher (and lower) K-groups can be defined; we have given the base case.
 
 **Theorem 3.4** (Serre-Swan).
+
+*Proof.*
 
 
 
