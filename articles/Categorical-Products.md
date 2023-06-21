@@ -44,8 +44,6 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 </ol>
 We denote the class of all morphisms in $$ \cC $$ by $$ \Hom(\cC) $$.
 
-&emsp; Let $$ f \colon A \to B $$ be a morphism in a category $$ \cC $$. If there exists a map $$ f^{-1} \colon B \to A $$ such that $$ f \circ f^{-1} = \Id_Y $$ and $$ f^{-1} \circ f = \Id_X $$, then we call $$ f $$ an *isomorphism*.
-
 &emsp; We define maps between categories $$ F \colon \cC \to \CD $$ on the level of pairs 
 
 $$ 
@@ -103,9 +101,11 @@ for each $$ m \in \CI $$, such that:
         $$</li>
 </ol>
 
+&emsp; Let $$ f \colon A \to B $$ be a morphism. If there exists a map $$ f^{-1} \colon B \to A $$ such that $$ f \circ f^{-1} = \Id_Y $$ and $$ f^{-1} \circ f = \Id_X $$, then we call $$ f $$ an *isomorphism*. For sets an isomorphism is a bijection; for groups the usual isomorphism; for topological spaces it describes a homeomorphism; etc. 
+
 **Proposition 1.2.** The limit (resp. colimit) of a diagram is unique up to isomorphism.
 
-**Remark 1.2.** In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed. If they can be constructed, though, using this universal characterization can greatly simplify proofs.
+**Remark 1.3.** In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed. If they can be constructed, though, using this universal characterization can greatly simplify proofs.
 
 
 
@@ -155,7 +155,7 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 
-&emsp; The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariance nature of the Spec functor and only finite products and coproducts necessarily existing.
+**Example 2.1.** The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariance nature of the Spec functor and only finite products and coproducts necessarily existing.
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -172,10 +172,7 @@ We call the maps $$ \iota_m $$ the *inclusion into $$ A_m $$*.
 | Poset | Infimum | Supremum |
 
 
-
-## 3. Partially Ordered Sets
-
-&emsp; We now show how for a poset, i.e. a partially ordered set, the product is the infimum and the coprodcut is the supremum. Recall that a set $$ X $$ equipped with a relation $$ \leq $$ is called a *poset* if it satisfies
+&emsp; We briefly detail the last example: that for a poset, i.e. a partially ordered set, the product is the infimum and the coprodcut is the supremum. Recall that a set $$ X $$ equipped with a relation $$ \leq $$ is called a *poset* if it satisfies
 <ol type="a" class="custom" style="list-style-position: outside">
     <li>\( x \leq x \),</li>
     
@@ -205,21 +202,21 @@ $$
 
 reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than their product.“ Hence, their product is the greatest element less than our collection $$ \{ x_i \} $$, meaning it is their infimum. Likewise their coproduct is their supremum.
 
-**Remark.** Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then defined by formally appending elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process (in some sense) motivates K-theory, which gives another construction of the integers.
+**Remark 2.2.** Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then defined by formally appending elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process (in some sense) motivates K-theory, which gives another construction of the integers.
 
 
 
-## 4. K-Theory
+## 3. K-Theory
 
 &emsp; If there exists an isomorphism $$ f \colon A \to B $$, then we say that $$ A $$ and $$ B $$ belong to the same isomorphism class, which we denote $$ [A] = [B] $$. We further write $$ [\Ob(\cC)] $$ for the class of all isomorohism classes 
  
 &emsp; Suppose coproducts exist in $$ \cC $$ and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a commutative monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$. This is a commutative monoid. We append inverses by forming the *Grothendieck group* of $$ [\Ob(\cC)] $$ as follows. 
 
-&emsp;
+&emsp; GROTHENDIECK GROUP
 
 &emsp; Returning to $$ \cC $$, we call the resulting group $$ [\Ob(\cC)] $$ the *$$ K $$-group* of $$ \cC $$. 
 
-**Example 4.1.** Sets
+**Example 3.1.** Sets
 
 **Example 4.2.** Topological K-theory
 
