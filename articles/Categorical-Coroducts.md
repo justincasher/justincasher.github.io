@@ -173,9 +173,7 @@ We call the maps $$ \iota_m $$ the *inclusion* into $$ A_m $$*.
 | Schemes | Fiber product (over $$ \ZZ $$) | Disjoint union of spaces, product of rings |
 | Poset | Infimum | Supremum |
 
-<div style="line-height:50%;">
-    <br>
-</div>
+<hr style="height:8px; visibility:hidden;" />
 
 &emsp; We briefly detail the last example: that for a poset, i.e. a partially ordered set, the product is the infimum and the coprodcut is the supremum. Recall that a set $$ X $$ equipped with a relation $$ \leq $$ is called a *poset* if it satisfies
 <ol type="a" class="custom" style="list-style-position: outside">
