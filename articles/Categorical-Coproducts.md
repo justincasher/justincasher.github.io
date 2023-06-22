@@ -244,7 +244,7 @@ which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-gro
 
 &emsp; The following theorem motivates the use of projective modules in algebraic K-theory. Note that higher (and lower) K-groups can be defined; we have given the base case.
 
-**Serre-Swan.** &nbsp; *Let $$ X $$ be compact Hausdorff and $$ \cC(X) $$ its algebra of continuous functionals $$ f \colon X \to \RR $$. Then the map sending any real vector bundle on $$ X $$ to its module of continuous sections yields an isomorphism $$ KO_0(X) \cong K_0(X) $$.*
+**Serre-Swan Theorem.** &nbsp; *Let $$ X $$ be compact Hausdorff and $$ \cC(X) $$ its algebra of continuous functionals $$ f \colon X \to \RR $$. Then the map sending any real vector bundle on $$ X $$ to its module of continuous sections yields an isomorphism $$ KO_0(X) \cong K_0(X) $$.*
 
 *Proof.* Serre originally proved a similar statement for the prime spectrum of commutative rings in [\[4\](#4-references). The above statement was shown by Swan in [\[5\](#4-references). A generalization is given in [\[3\](#4-references).
 
