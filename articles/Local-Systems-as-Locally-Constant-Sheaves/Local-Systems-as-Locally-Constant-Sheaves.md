@@ -101,6 +101,6 @@ We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ a
 
 1. Pramod Achar, *Perverse sheaves and applications to representation theory*, American Mathematics Society, 2021.
 2. bavajee, *Why are local systems and representations of the fundamental group equivalent*. [Link](https://mathoverflow.net/q/17786). (version: 2016-02-07).
-3. Alexandru Dimca, Sheaves in topology, Springer, 2004.
+3. Alexandru Dimca, *Sheaves in topology*, Springer, 2004.
 4. J.P. May, *A concise course in algebraic topology*, Chicago Lectures in Mathematics, 1999.
 5. Saunders Mac Lane and Ieke Moerdijk, *Sheaves in geometry and logic: A first introduction to topos theory*, Springer-Verlag, 1992.

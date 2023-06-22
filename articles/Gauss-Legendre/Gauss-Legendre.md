@@ -275,8 +275,8 @@ with plugging in $$ S $$ gives us our result. $$ \blacksquare $$
 
 ## 4. References
 
-1. David H. Bailey, Simon M. Plouffe, Peter B. Borwein, and Jonathan M. Borwein, *The quest for $$ \pi $$*, The Mathematical Intelligencer 19 (1997), no. 1, 50–56.
-2. Gosta Mittag-Leffler, *An introduction to the theory of elliptic functions*, Annals of Mathematics 24 (1923), no. 4, 271–351.
-3. Srinivasa Ramanujan, *Modular equations and approximations to $$ \pi $$*, The Quarterly Joural of Pure and Applied Mathematics 45 (1914), 350372.
-4. Eugene Salamin, *Computation of $$ \pi $$ using arithmetic-geometric mean*, Mathematics of Computation 30 (1976), no. 135, 565–570.
+1. David H. Bailey, Simon M. Plouffe, Peter B. Borwein, and Jonathan M. Borwein, *The quest for $$ \pi $$*, The Mathematical Intelligencer **19** (1997), no. 1, 50–56.
+2. Gosta Mittag-Leffler, *An introduction to the theory of elliptic functions*, Annals of Mathematics **24** (1923), no. 4, 271–351.
+3. Srinivasa Ramanujan, *Modular equations and approximations to $$ \pi $$*, The Quarterly Joural of Pure and Applied Mathematics **45** (1914), 350372.
+4. Eugene Salamin, *Computation of $$ \pi $$ using arithmetic-geometric mean*, Mathematics of Computation **30** (1976), no. 135, 565–570.
 5. Paramanand Singh, *$$ \pi $$ and the AGM: Evaluating elliptic integrals*, 2009. [Link](https://paramanands.blogspot.com/2009/08/pi-and-the-agm-evaluating-elliptic-integrals.html#.Y2CvFILMJb8).

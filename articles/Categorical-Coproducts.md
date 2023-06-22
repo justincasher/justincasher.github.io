@@ -29,9 +29,8 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
 2. [Products and Coproducts](#2-products-and-coproducts)
-3. [Partially Ordered Sets](#3-partially-ordered-sets)
-4. [K-Theory](#4-k-theory)
-5. [References](#5-references)
+3. [K-Theory](#3-k-theory)
+4. [References](#4-references)
 
 
 ## 1. Limits and Colimits
@@ -231,7 +230,13 @@ We call $$ M \times M $$ modulo this equivalence relation the *Grothendieck grou
 
 &emsp; Returning to $$ \cC $$, we call the resulting group $$ [\Ob(\cC)] $$ the *K-group* of $$ \cC $$. 
 
-**Example 3.1.** In the category of finite sets, an isomorphism is a bijection, meaning we can associate with each isomorphism class a natural number, i.e. cardinality. We see that the coproduct here is disjoint union, which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-group of finite sets is $$ \ZZ $$. Furthermore, products of sets allow us to define multiplication.
+**Example 3.1.** In the category of finite sets, an isomorphism is a bijection, meaning we can associate with each isomorphism class a natural number, i.e. its cardinality. We see that the coproduct here is disjoint union
+
+$$
+X \coprod Y = X \times \{0\} \cup Y \times \{1\},
+$$
+
+which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-group of finite sets is $$ \ZZ $$. Furthermore, (Cartesian) products of sets allow us to define multiplication.
 
 **Example 3.2.** Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally. We denote the K-group of this category $$ KO_0(X) $$. It is referred to as *real topological K-theory*.
 
@@ -239,14 +244,21 @@ We call $$ M \times M $$ modulo this equivalence relation the *Grothendieck grou
 
 &emsp; The following theorem motivates the use of projective modules in algebraic K-theory. Note that higher (and lower) K-groups can be defined; we have given the base case.
 
-**Theorem 3.4** (Serre-Swan).
+**Theorem 3.4** (Serre-Swan). Let $$ X $$ be compact Hausdorff and $$ \cC(X) $$ its algebra of continuous functionals $$ f \colon X \to \RR $$. Then the map sending any real vector bundle on $$ X $$ to its module of continuous sections yields an isomorphism $$ KO_0(X) \cong K_0(X) $$. 
 
-*Proof.*
+*Proof.* Serre originally proved a similar statement for the prime spectrum of commutative rings in [\[4\](#4-references). The above statement was shown by Swan in [\[5\](#4-references). A generalization is given in [\[3\](#4-references).
+
+**Example 3.5.** Picard group?
+
+**Example 3.6.** Chow group?
 
 
 
 ## 4. References
 
 **FIX THESE**
-1. Grothendieck, A. (1957), “Sur quelques points d’algèbre homologique”, *Tôhoku Mathematical Journal*. doi:10.2748/tmj/1178244839
-2. Mac Lane, Saunders (September 1998). *Categories for the Working Mathematician. Graduate Texts in Mathematics*. Vol. 5 (Second ed.). Springer.
+1. Alexander Grothendieck, *Sur quelques points d’algèbre homologique, I*, Tohoku Mathematical Journal **9** (1957), no. 2, 119–221.
+2. Saunders Mac Lane, *Categories for the working mathematician*, Springer, 1978.
+3. Archana S. Morye, *Note on the Serre-Swan theorem*, Mathematische Nachrichten **286** (2013), no. 2-3, 272–278.
+4. Jean-Pierre Serre, *Vector bundles and projective modules*, Annals of Mathematics **61** (1955), no. 2, 197–278.
+5. Richard Swan, *Vector bundles and projective modules*, Transactions of the American Mathematical Society **105** (1962), no. 2, 264–277.
