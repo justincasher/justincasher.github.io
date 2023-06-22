@@ -256,7 +256,6 @@ which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-gro
 
 ## 4. References
 
-**FIX THESE**
 1. Alexander Grothendieck, *Sur quelques points d’algèbre homologique, I*, Tohoku Mathematical Journal **9** (1957), no. 2, 119–221.
 2. Saunders Mac Lane, *Categories for the working mathematician*, Springer, 1978.
 3. Archana S. Morye, *Note on the Serre-Swan theorem*, Mathematische Nachrichten **286** (2013), no. 2-3, 272–278.
