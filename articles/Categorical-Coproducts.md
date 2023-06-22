@@ -20,11 +20,11 @@ title: Categorical Coproducts and K-Theory
     }
 }
 </style>
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\NN}{\mathbb{N}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\NN}{\mathbb{N}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
-**Abstract.** We define products and coproducts for arbitrary categories, then use them to define K-theory. In particular, we discuss how the integers can be naturally constructed using K-theory.
+**Abstract.** &nbsp; We define products and coproducts for arbitrary categories, then use them to define K-theory. In particular, we discuss how the integers can be naturally constructed using K-theory.
 
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
@@ -57,7 +57,7 @@ $$
 
 and (b) local identities $$ F(\Id_A) = \Id_{F(A)} $$.
 
-**Remark 1.1.** When working with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
+**Remark 1.1.** &nbsp; When working with categories, we are interested in when a morphism factors through another one. Intuitively, this abstracts the notion of integers dividing each another, and it leads to the notion of categorical limits and colimits. 
 
 &emsp; Let $$ F \colon \CI \to \cC $$ be a functor. Here, we call $$ F $$ a *diagram* and $$ \CI $$ the *indexing category*. We denote an object in the image of $$ F $$ by $$ F(i) = A_i $$. The *limit* of $$ F $$ is then an object $$ \lim A_i $$ in $$ \cC $$ equipped with a morphism
 
@@ -102,11 +102,11 @@ for each $$ m \in \CI $$, such that:
 
 &emsp; Let $$ f \colon A \to B $$ be a morphism. If there exists a map $$ f^{-1} \colon B \to A $$ such that $$ f \circ f^{-1} = \Id_Y $$ and $$ f^{-1} \circ f = \Id_X $$, then we call $$ f $$ an *isomorphism*. Likewise $$ A $$ and $$ B $$ are said to be *isomorphic*, which we denote $$ A \cong B $$. For sets an isomorphism is a bijection; for groups the usual notion of an isomorphism; for topological spaces it is a homeomorphism; etc. 
 
-**Proposition 1.2.** The limit (resp. colimit) of a diagram is unique up to isomorphism.
+**Proposition 1.2.** &nbsp; The limit (resp. colimit) of a diagram is unique up to isomorphism.
 
 *Proof.* Suppose $$ L_1 $$ and $$ L_2 $$ both are limits of a given diagram. Then there exists maps $$ h \colon L_1 \to L_2 $$ and $$ h^{-1} \colon L_2 \to L_1 $$. We observe $$ h \circ h^{-1} \colon L_1 \to L_1 $$ is a map making the diagram commute. Since there exists a unique map $$ L_1 \to L_1 $$ making the diagram commute by assumption, we conclude that $$ h \circ h^{-1} = \Id_{L_1} $$ and that $$ L_1 \cong L_2 $$. $$ \blacksquare $$
 
-**Remark 1.3.** In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed.
+**Remark 1.3.** &nbsp; In arbitrary categories limits (resp. colimits) do not always exist. Hence, this definition describes limits, unique up to isomorphism, under the assumption that they can be constructed.
 
 
 
@@ -156,7 +156,7 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion* into $$ A_m $$*.
 
-**Example 2.1.** The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariance nature of the Spec functor and only finite products and coproducts necessarily existing.
+**Example 2.1.** &nbsp; The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariance nature of the Spec functor and only finite products and coproducts necessarily existing.
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -204,7 +204,7 @@ $$
 
 reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than their product.“ Hence, their product is the greatest element less than our collection $$ \{ x_i \} $$, meaning it is their infimum. Likewise their coproduct is their supremum.
 
-**Remark 2.2.** Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then defined by formally appending elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process (in some sense) motivates K-theory, which gives another construction of the integers.
+**Remark 2.2.** &nbsp; Recall that the class of sets is partially ordered by inclusion. For a collection of sets $$ \{X_i\} $$, the infimum is their intersection $$ \bigcap X_i $$, and the supremum is their union $$ \bigcup X_i $$. Hence, intersections and unions are category theoretic products and coproducts, respectively. This interests us since the natural numbers $$ \NN $$ are recursively constructed using unions; omitting details, we set $$ 0 = \varnothing $$ and define addition by $$ n+1 = n \cup \{ n \} $$. The integers $$ \ZZ $$ are then defined by formally appending elements $$ -n $$ such that $$ n + (-n) = 0 $$. This process (in some sense) motivates K-theory, which gives another construction of the integers.
 
 
 
@@ -230,7 +230,7 @@ We call $$ M \times M $$ modulo this equivalence relation the *Grothendieck grou
 
 &emsp; Returning to $$ \cC $$, we call the resulting group $$ [\Ob(\cC)] $$ the *K-group* of $$ \cC $$. 
 
-**Example 3.1.** In the category of finite sets, an isomorphism is a bijection, meaning we can associate with each isomorphism class a natural number, i.e. its cardinality. We see that the coproduct here is disjoint union
+**Example 3.1.** &nbsp; In the category of finite sets, an isomorphism is a bijection, meaning we can associate with each isomorphism class a natural number, i.e. its cardinality. We see that the coproduct here is disjoint union
 
 $$
 X \coprod Y = X \times \{0\} \cup Y \times \{1\},
@@ -238,19 +238,19 @@ $$
 
 which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-group of finite sets is $$ \ZZ $$. Furthermore, (Cartesian) products of sets allow us to define multiplication.
 
-**Example 3.2.** Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally. We denote the K-group of this category $$ KO_0(X) $$. It is referred to as *real topological K-theory*.
+**Example 3.2.** &nbsp; Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally. We denote the K-group of this category $$ KO_0(X) $$. It is referred to as *real topological K-theory*.
 
-**Example 3.3.** Let $$ R $$ be a ring, and consider the category of finitely generated projective modules on $$ X $$ with the usual coproduct. We denote the K-theory of this category $$ K_0(R) $$. It is referred to as *algebraic K-theory*.
+**Example 3.3.** &nbsp; Let $$ R $$ be a ring, and consider the category of finitely generated projective modules on $$ X $$ with the usual coproduct. We denote the K-theory of this category $$ K_0(R) $$. It is referred to as *algebraic K-theory*.
 
 &emsp; The following theorem motivates the use of projective modules in algebraic K-theory. Note that higher (and lower) K-groups can be defined; we have given the base case.
 
-**Theorem 3.4** (Serre-Swan). Let $$ X $$ be compact Hausdorff and $$ \cC(X) $$ its algebra of continuous functionals $$ f \colon X \to \RR $$. Then the map sending any real vector bundle on $$ X $$ to its module of continuous sections yields an isomorphism $$ KO_0(X) \cong K_0(X) $$. 
+**Theorem 3.4** (Serre-Swan). &nbsp; *Let $$ X $$ be compact Hausdorff and $$ \cC(X) $$ its algebra of continuous functionals $$ f \colon X \to \RR $$. Then the map sending any real vector bundle on $$ X $$ to its module of continuous sections yields an isomorphism $$ KO_0(X) \cong K_0(X) $$.*
 
 *Proof.* Serre originally proved a similar statement for the prime spectrum of commutative rings in [\[4\](#4-references). The above statement was shown by Swan in [\[5\](#4-references). A generalization is given in [\[3\](#4-references).
 
-**Example 3.5.** Picard group?
+**Example 3.5.** &nbsp; Picard group?
 
-**Example 3.6.** Chow group?
+**Example 3.6.** &nbsp; Chow group?
 
 
 

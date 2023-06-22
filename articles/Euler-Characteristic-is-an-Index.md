@@ -7,7 +7,7 @@ title: The Euler Characteristic is the Index of an Operator
 ---
 <br>
 
-**Abstract.** Let $$ M $$ be a closed oriented Riemannian manifold. We show that the (analytic) index of a specific Dirac operator equals the Euler characteristic of $$ M $$. This is the first step in the proof that the Atiyah-Singer Index Theorem implies the Chern-Gauss-Bonnet Theorem.
+**Abstract.** &nbsp; Let $$ M $$ be a closed oriented Riemannian manifold. We show that the (analytic) index of a specific Dirac operator equals the Euler characteristic of $$ M $$. This is the first step in the proof that the Atiyah-Singer Index Theorem implies the Chern-Gauss-Bonnet Theorem.
 
 ## Table of Contents
 1. [Atiyah-Singer Index Theorem](#1-atiyah-singer-index-theorem)
