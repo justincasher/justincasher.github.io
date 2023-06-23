@@ -162,7 +162,7 @@ We call the maps $$ \iota_m $$ the *inclusion* into $$ A_m $$*.
 | :--------: | :-------: | :---------: |
 | Sets | Cartesian product | Disjoint union |
 | Groups | Direct product | Free product |
-| Abelian groups | Direct product | direct sum |
+| Abelian groups | Direct product | Direct sum |
 | Rings | Direct product | Free product |
 | Commutative rings | Direct product | Tensor product (over $$ \ZZ $$) |
 | $$ R $$-modules | Direct product | Direct sum |
@@ -246,7 +246,7 @@ which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-gro
 
 **Serre-Swan Theorem.** &nbsp; *Let $$ X $$ be compact Hausdorff and $$ \cC(X) $$ its algebra of continuous functionals $$ f \colon X \to \RR $$. Then the map sending any real vector bundle on $$ X $$ to its module of continuous sections yields an isomorphism $$ KO_0(X) \cong K_0(X) $$.*
 
-*Proof.* Serre originally proved a similar statement for the prime spectrum of commutative rings in [\[4\](#4-references). The above statement was shown by Swan in [\[5\](#4-references). A generalization is given in [\[3\](#4-references).
+*Proof.* Serre originally proved a similar statement for the prime spectrum of commutative rings in [\[4\]](#4-references). The above statement was shown by Swan in [\[5\]](#4-references). A generalization is given in [\[3\]](#4-references).
 
 **Example 3.5.** &nbsp; Picard group?
 
