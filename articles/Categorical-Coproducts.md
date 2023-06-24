@@ -79,7 +79,7 @@ for each $$ m \in \CI $$, such that:
         $$</li>
 </ol>
 
-&emsp; There is likewise the dual notion of the *colimit* of $$ F $$, which is given by reversing the arrows in the definition of a limit. Explicitely, the colimit is an object $$ \displaystyle \colim A_i $$ in $$ \cC $$ equipped with a morphism
+&emsp; There is likewise the dual notion of the *colimit* of $$ F $$, which is given by reversing the arrows in the definition of a limit. Explicitly, the colimit is an object $$ \displaystyle \colim A_i $$ in $$ \cC $$ equipped with a morphism
 
 $$ 
 \displaystyle f_m \colon A_m \to \colim A_i
@@ -156,7 +156,7 @@ $$
 
 We call the maps $$ \iota_m $$ the *inclusion* into $$ A_m $$*.
 
-**Example 2.1.** &nbsp; The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariance nature of the Spec functor and only finite products and coproducts necessarily existing.
+**Example 2.1.** &nbsp; The following table gives common names of products and coproducts in different categories. Note that schemes are more nuanced due the contravariant nature of the Spec functor and only finite products and coproducts necessarily existing.
 
 | Category | Product | Coproduct |
 | :--------: | :-------: | :---------: |
@@ -214,7 +214,7 @@ reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than 
  
 &emsp; Suppose coproducts exist in $$ \cC $$ and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$, which is commutative since $$ A \oplus B \cong B \oplus A $$. We append inverses by as follows. 
 
-&emsp; Write $$ (M, +) $$ for a commutative monoid and an element of $$ M \times M $$ as a pair $$ (m^+, m^-) $$. Consiwer two such pairs $$ (m_1^+, m_1^-) $$ and $$ (m_2^+, m_2^-) $$. We add them component-wise
+&emsp; Write $$ (M, +) $$ for a commutative monoid and an element of $$ M \times M $$ as a pair $$ (m^+, m^-) $$. Consider two such pairs $$ (m_1^+, m_1^-) $$ and $$ (m_2^+, m_2^-) $$. We add them component-wise
 
 $$
 (m_1^+, m_1^-) + (m_2^+, m_2^-) = (m_1^+ + m_2^+, m_1^- + m_2^-),
