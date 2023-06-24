@@ -24,7 +24,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
-**Abstract.** &nbsp; We define products and coproducts for arbitrary categories, then use them to define K-theory. In particular, we discuss how the integers can be naturally constructed using K-theory, and mention the Serre-Swan Theorem.
+**Abstract.** &nbsp; We define products and coproducts for arbitrary categories, then use them to define K-theory. In particular, we discuss how the integers can be naturally constructed using K-theory and mention the Serre-Swan Theorem.
 
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
