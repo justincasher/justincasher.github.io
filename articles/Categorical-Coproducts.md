@@ -24,7 +24,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
-**Abstract.** &nbsp; We define products and coproducts for arbitrary categories, then use them to define K-theory. In particular, we discuss how the integers can be naturally constructed using K-theory.
+**Abstract.** &nbsp; We define products and coproducts for arbitrary categories, then use them to define K-theory. In particular, we discuss how the integers can be naturally constructed using K-theory, and mention the Serre-Swan Theorem.
 
 ## Table of Contents
 1. [Limits and Colimits](#1-limits-and-colimits)
@@ -247,10 +247,6 @@ which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-gro
 **Serre-Swan Theorem.** &nbsp; *Let $$ X $$ be compact Hausdorff and $$ \cC(X) $$ its algebra of continuous functionals $$ f \colon X \to \RR $$. Then the map sending any real vector bundle on $$ X $$ to its module of continuous sections yields an isomorphism $$ KO_0(X) \cong K_0(X) $$.*
 
 *Proof.* Serre originally proved a similar statement for the prime spectrum of commutative rings in [\[4\]](#4-references). The above statement was shown by Swan in [\[5\]](#4-references). A generalization is given in [\[3\]](#4-references). $$ \blacksquare $$
-
-**Example 3.5.** &nbsp; Picard group?
-
-**Example 3.6.** &nbsp; Chow group?
 
 
 
