@@ -26,7 +26,9 @@ $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
 
-**Abstract.** We use sheaves of sections to define schemes. Familiarity with category theory is assumed.
+**Abstract.** We use sheaves of sections to define schemes. 
+
+**Prerequisites.** Familiarity with category theory and manifolds is assumed. My article [Categorical Coproducts and K-Theory](https://www.justinasher.me/Categorical-Coproducts) gives a brief overview of some of these ideas.
 
 ## Table of Contents
 1. [Sheaves](#1-sheaves)
@@ -34,19 +36,34 @@ $$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOpera
 
 ## 1. Sheaves
 
-&emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V $$. A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC $$. We furthermore call $$ F $$ a *sheaf* if for every open set $$ U $$ the following gluing condition is satisfied: For every open cover $$ \{ U_i \}_{i \in I} $$ of $$ U $$ and elements $$ s_i \in F(U_i) $$ such that $$ s_i \mid_{U_i \cap U_j} = s_j \mid_{U_i \cap U_j} $$, there exists a unique $$ s \in F(U) $$ such that $$ s \mid_{U_i} = s_i $$.
+&emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V $$. A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC $$. Elements in $$ F(U) $$ are called *sections* (see Example 1.1). Inclusions are mapped to restrictions, which we denote $$ F(\iota) = \res_{V, U} $$ or $$ F(\iota)(s) = s \mid_{U} $$. 
 
-**Example 1.1.** Let $$ f \colon Y \to X $$ be a continuous function. Associated to $$ f $$ is a *sheaf of sections* $$ \Gamma_f $$, which maps each open subset of $$ X $$ to the set of sections on $$ X $$:
+We further call $$ F $$ a *sheaf* if a gluing condition is satisfied for every open set $$ U $$: For every open cover $$ \{ U_i \}_{i \in I} $$ of $$ U $$ and elements $$ s_i \in F(U_i) $$ such that $$ s_i \mid_{U_i \cap U_j} = s_j \mid_{U_i \cap U_j} $$, there exists a unique $$ s \in F(U) $$ such that $$ s \mid_{U_i} = s_i $$.
+
+**Example 1.1.** Let $$ \varphi \colon Y \to X $$ be a continuous function. Associated to $$ f $$ is a *sheaf of sections* $$ \Gamma_f $$, which maps each open subset of $$ X $$ to the set of sections on $$ X $$:
 
 $$
-\Gamma_f(U) = \{ s \colon U \to Y \mid f \circ s = \Id_U \},
+\Gamma_{\varphi}(U) = \{ s \colon U \to Y \mid f \circ s = \Id_U \},
 $$
 
-and whose restriction maps are given by restricting the individual sections, i.e. $$ \res_{U, V}(s) = s \mid_{V} $$. It is clear that this is indeed a sheaf. This is the canonical example from which sheaves are derived, and the reason why for any sheaf $$ F $$, we refer to elements of $$ F(U) $$ as *sections*.
+and whose restriction maps are given by restricting the individual sections, i.e. $$ \res_{U, V}(s) = s \mid_{V} $$. It is clear that this is indeed a sheaf. This is the canonical example from which sheaves are derived.
 
-**Example 1.2.** Write $$ M $$ for a smooth real manifold of dimension $$ n $$. The sheaf of smooth sections of the trivial bundle $$ \pi \colon M \times \RR \to M $$ is the algebra of smooth functions $$ f \colon U \to \RR $$ for each $$ U $$ open. This sheaf determines our manifold up to diffeomorphism. In order to describe this correspondence, we need a notion of an (iso)morphism of sheaves.
+**Example 1.2.** Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel, we denote it $$ \cC^{\infty}_M $$.
 
-DEFINE NATURAL TRANSFORMATION/MORPHISM
+A morphism between sheaves $$ f \colon X \to Y $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. This means to each open subset $$ U $$ we have a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
+
+$$ 
+\xymatrix{ 
+F(V) \ar@[d]_{\res_{V, U}} \ar@[r]^{f_V} & G(V) \ar@[d]^{\res_{V, U}} \\
+F(U) \ar@[r]^{f_U} & G(U) 
+} 
+$$
+
+In order to define morphisms between sheaves on different topological spaces, we can use pushforward and inverse image functors.
+
+**Proposition 1.3.** Let $$ M $$ and $$ N $$ be smooth manifolds. Then if there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
+
+*Proof.* Prove this!
 
 
 
@@ -84,4 +101,4 @@ Describe how the inverse image of a prime ideal is prime, but not necessarily ma
 
 ## 4. References
 
-1. 
+1. Categorical Coproducts and K-theory
