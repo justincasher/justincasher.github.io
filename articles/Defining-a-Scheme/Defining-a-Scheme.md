@@ -32,6 +32,8 @@ $$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOpera
 
 ## Table of Contents
 1. [Sheaves](#1-sheaves)
+2. [Zariski Topology](#2-zariski-topology)
+3. [Schemes](#3-schemes)
 4. [References](#4-references)
 
 ## 1. Sheaves

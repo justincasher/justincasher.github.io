@@ -8,7 +8,7 @@ title: Local Systems as Locally Constant Sheaves
 $$ \DeclareMathOperator{\LC}{LC} \DeclareMathOperator{\LS}{LS} \newcommand{\CA}{\mathcal{A}} \newcommand{\CB}{\mathcal{B}} \DeclareMathOperator{\Aut}{Aut}$$
 <br>
 
-**Abstract.** Let $$ X $$ be a locally simply connected space. We prove that the categories of locally constant sheaves and local systems on $$ X $$ are equivalent.
+**Abstract.** &nbsp; Let $$ X $$ be a locally simply connected space. We prove that the categories of locally constant sheaves and local systems on $$ X $$ are equivalent.
 
 ## Table of Contents
 1. [Overview](#1-overview)
