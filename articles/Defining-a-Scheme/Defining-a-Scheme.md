@@ -109,7 +109,7 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
 
 # 3. Schemes
 
-For example, any two fields have the same prime spectrum ($$ \{0\} $$ is the only prime ideal), but are not necessarily isomorphic. Therefore, we equip $$ \Spec R $$ with a sheaf to differentiate between nonisomorphic commutative rings.
+&emsp; Any two fields have the same prime spectrum ($$ \{0\} $$ is the only prime ideal), but are not necessarily isomorphic. Therefore, we need to equip $$ \Spec R $$ with a sheaf to differentiate between nonisomorphic commutative rings as follows.
 
 &emsp; Fix a commutative ring $$ R $$ with prime spectrum $$ \Spec R $$. Equip each $$ R_{\fp} $$ with the discrete topology. Consider the bundle
 
