@@ -107,6 +107,8 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
 
 # 3. Schemes
 
+For example, any two fields have the same prime spectrum ($$ \{0\} $$ is the only prime ideal), but are not necessarily isomorphic. Therefore, we equip $$ \Spec R $$ with a sheaf to differentiate between nonisomorphic commutative rings.
+
 &emsp; Fix a commutative ring $$ R $$ with prime spectrum $$ \Spec R $$. Equip each $$ R_{\fp} $$ with the discrete topology. Consider the bundle
 
 $$
@@ -115,9 +117,16 @@ $$
 
 which sends elements of $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of continuous sections by $$ \CO_X $$ and call the pair ($$ X $$, $$ \CO_X $$) an *affine scheme*. 
 
-**Remark 3.1.** Any continuous function $$ \varphi \colon X \to Y $$ into a discrete space $$ Y $$ is locally constant. Indeed, choose an $$ x \ in X $$ and write $$ \varphi(x) = y $$. By assumption $$ \{y\} $$ is open, so $$ \varphi^{-1}(y) $$ is an open neighborhood of $$ x $$ on which $$ \varphi $$ is constant. Thus, we could replace “continuous sections” by “locally constant sections” in our definition, which is often the given definition.
+**Remark 3.1.** &nbsp; Any continuous function $$ \varphi \colon X \to Y $$ into a discrete space $$ Y $$ is locally constant. Indeed, choose an $$ x \ in X $$ and write $$ \varphi(x) = y $$. By assumption $$ \{y\} $$ is open, so $$ \varphi^{-1}(y) $$ is an open neighborhood of $$ x $$ on which $$ \varphi $$ is constant. Thus, we could replace “continuous sections” by “locally constant sections” in our definition, which is often the given definition.
 
-Any two fields have the same prime spectrum, and hence we need additional data to differentiate between this. This sheaf does just that...
+**Theorem 3.2.** &nbsp; *Let $$ R $$ and $$ S $$ be commutative rings. The following are equivalent:*
+<ol type="a" class="custom" style="list-style-position: outside">
+  <li>\( )f \colon R \to S \) is an isomorphism of rings;</li>
+  
+  <li>\( f^* \colon \Spec S \to \Spec R \) is an isomorphism of locally ringed spaces.</li>
+</ol>
+
+*Proof.* Prove this!
 
 
 
