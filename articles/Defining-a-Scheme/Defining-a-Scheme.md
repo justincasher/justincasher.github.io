@@ -107,15 +107,15 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
 
 # 3. Schemes
 
-&emsp; Write $$ X = \Spec R $$ for the spectrum of a commutative ring. Equip each $$ R_{\fp} $$ with the discrete topology and consider the bundle
+&emsp; Fix a commutative ring $$ R $$ with prime spectrum $$ \Spec R $$. Equip each $$ R_{\fp} $$ with the discrete topology. Consider the bundle
 
 $$
-\coprod_{\fp \in X} R_{\fp} \to X,
+\coprod_{\fp \in \Spec R} R_{\fp} \to X,
 $$
 
-which sends elements of $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of continuous sections by $$ \CO_X $$ and call $$ X $$ equipped with $$ \CO_X $$ an *affine scheme*. 
+which sends elements of $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of continuous sections by $$ \CO_X $$ and call the pair ($$ X $$, $$ \CO_X $$) an *affine scheme*. 
 
-Note that a continuous section of a discrete space is locally constant...
+**Remark 3.1.** Any continuous function $$ \varphi \colon X \to Y $$ into a discrete space $$ Y $$ is locally constant. Indeed, choose an $$ x \ in X $$ and write $$ \varphi(x) = y $$. By assumption $$ \{y\} $$ is open, so $$ \varphi^{-1}(y) $$ is an open neighborhood of $$ x $$ on which $$ \varphi $$ is constant. Thus, we could replace “continuous sections” by “locally constant sections” in our definition, which is often the given definition.
 
 Any two fields have the same prime spectrum, and hence we need additional data to differentiate between this. This sheaf does just that...
 
