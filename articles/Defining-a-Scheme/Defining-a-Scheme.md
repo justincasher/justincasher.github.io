@@ -21,7 +21,7 @@ title: Defining a Scheme
 }
 </style>
 $$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fp}{\mathfrak{p}} $$
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CV}{\mathcal{V}} $$ 
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $$ 
 $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
@@ -83,30 +83,41 @@ $$
 \CV(\fa) = \{\fp \in \Spec R \mid \fa \subseteq \fp \}
 $$
 
+The following proposition shows that these form the closed sets for the *Zariski topology* on $$ \Spec R $$. 
+
 **Proposition 2.1.** &nbsp; The sets $$ V(\fa) $$ are the closed sets of a topology on $$ \Spec R $$.
 
 *Proof.* To show arbitrary intersections, let $$ \fa_i $$ be a (possibility infinite) family of ideals, and observe
 
 $$
-\bigcap_i V(\fa_i) = V(\sum_i \fa_i),
+\bigcap_i \CV(\fa_i) = \CV(\sum_i \fa_i),
 $$
 
 Likewise for finite unions we consider a finite family $$ \fa_1, \dots, \fa_n $$, and observe
 
 $$
-\bigcup_{i=1}^{n} V(\fa_i) = V(\prod_{i=1}^{n} \fa_i).
+\bigcup_{i=1}^{n} \CV(\fa_i) = \CV(\prod_{i=1}^{n} \fa_i).
 $$
 
-Finally, we see that $$ V(\varnothing) = \Spec R$$ and $$ V(R) = \varnothing $$, so the empty set and entire space are both closed. $$ \blacksquare $$
+Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing $$, so the empty set and entire space are both closed. $$ \blacksquare $$
  
+&emsp; Any ring homomorphism $$ f \colon R \to S $$ induces a map $$ f^{\#} \colon \Spec S \to \Spec R $$ given by $$ f^{\#}(\fp) = f^{-1}(\fp). $$ This is one reason to consider prime ideals instead of, for instance, maximal ideals, as they are closed under inverse images.
 
-We call this the *Zariski topology* on $$ \Spec R $$.
-
-Describe how the inverse image of a prime ideal is prime, but not necessarily maximal. 
 
 
 # 3. Schemes
 
+&emsp; Write $$ X = \Spec R $$ for the spectrum of a commutative ring. Equip each $$ R_{\fp} $$ with the discrete topology and consider the bundle
+
+$$
+\coprod_{\fp \in X} R_{\fp} \to X,
+$$
+
+which sends elements of $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of continuous sections by $$ \CO_X $$ and call $$ X $$ equipped with $$ \CO_X $$ an *affine scheme*. 
+
+Note that a continuous section of a discrete space is locally constant...
+
+Any two fields have the same prime spectrum, and hence we need additional data to differentiate between this. This sheaf does just that...
 
 
 
