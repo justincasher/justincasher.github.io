@@ -123,9 +123,9 @@ which sends elements of $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of conti
 
 **Theorem 3.2.** &nbsp; *Let $$ R $$ and $$ S $$ be commutative rings. The following are equivalent:*
 <ol type="a" class="custom" style="list-style-position: outside">
-  <li><i>\( f \colon R \to S \) is an isomorphism of rings;</li>
+  <li>\( f \colon R \to S \) <i>is an isomorphism of rings;</i></li>
   
-  <li>\( f^* \colon \Spec S \to \Spec R \) is an isomorphism of locally ringed spaces.</i></li>
+  <li>\( f^* \colon \Spec S \to \Spec R \) <i>is an isomorphism of locally ringed spaces.</i></li>
 </ol>
 
 *Proof.* Prove this!
