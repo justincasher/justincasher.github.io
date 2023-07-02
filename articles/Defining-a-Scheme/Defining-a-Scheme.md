@@ -54,8 +54,8 @@ A morphism between sheaves $$ f \colon X \to Y $$ on a fixed space $$ X $$ is a 
 
 $$ 
 \xymatrix{ 
-F(V) \ar@[d]_{\res_{V, U}} \ar@[r]^{f_V} & G(V) \ar@[d]^{\res_{V, U}} \\
-F(U) \ar@[r]^{f_U} & G(U) 
+F(V) \ar[d]_{\res_{V, U}} \ar[r]^{f_V} & G(V) \ar[d]^{\res_{V, U}} \\
+F(U) \ar[r]^{f_U} & G(U) 
 } 
 $$
 
