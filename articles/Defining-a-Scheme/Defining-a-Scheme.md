@@ -23,7 +23,7 @@ title: Defining a Scheme
 $$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fp}{\mathfrak{p}} $$
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $$ 
 $$ \newcommand{\RR}{\mathbb{R}} $$
-$$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
+$$ \DeclareMathOperator{\CHom}{\mathcal{H}om}} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
 
 **Abstract.** We use sheaves of sections to define schemes. 
@@ -42,7 +42,7 @@ $$ \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOpera
 
 &emsp; We call a presheaf $$ F $$ a *sheaf* if a gluing condition is satisfied for every open set $$ U $$: For every open cover $$ \{ U_i \}_{i \in I} $$ of $$ U $$ and elements $$ s_i \in F(U_i) $$ such that $$ s_i \mid_{U_i \cap U_j} = s_j \mid_{U_i \cap U_j} $$, there exists a unique $$ s \in F(U) $$ such that $$ s \mid_{U_i} = s_i $$.
 
-**Example 1.1.** &nbsp; Let $$ \varphi \colon Y \to X $$ be a continuous function. Associated to $$ f $$ is a *sheaf of sections* $$ \Gamma_f $$, which maps each open subset of $$ X $$ to the set of sections on $$ X $$:
+**Example 1.1.** &nbsp; Let $$ \varphi \colon Y \to X $$ be a continuous function. Associated to $$ \varphi $$ is a *sheaf of sections* $$ \Gamma_\varphi $$, which maps each open subset of $$ X $$ to the set of sections on $$ X $$:
 
 $$
 \Gamma_{\varphi}(U) = \{ s \colon U \to Y \mid f \circ s = \Id_U \},
@@ -50,9 +50,9 @@ $$
 
 and whose restriction maps are given by restricting the individual sections, i.e. $$ \res_{U, V}(s) = s \mid_{V} $$. It is clear that this is indeed a sheaf. This is the canonical example from which sheaves are derived.
 
-**Example 1.2.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel, we denote it $$ \cC^{\infty}_M $$.
+**Example 1.2.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
 
-&emsp; A morphism between sheaves $$ f \colon X \to Y $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. This means to each open subset $$ U $$ we have a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
+&emsp; A morphism between sheaves $$ f \colon X \to Y $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
 $$ 
 \xymatrix{ 
@@ -61,7 +61,27 @@ F(U) \ar[r]_{f_U} & G(U)
 } 
 $$
 
-In order to define morphisms between sheaves on different topological spaces, we can use pushforward and inverse image functors.
+We denote the set of morphisms $$ \CHom(F, G) $$.
+
+&emsp; The direct image and inverse image functors allow us to define morphisms between sheaves on different spaces (among other things). Fix a continuous map $$ \varphia \colon X \to Y $$, and let $$ F $$ and $$ G $$ be sheaves on $$ X $$ and $$ Y $$, respectively. We call the sheaf
+
+$$
+\varphi_* F(U) = F(\varphi^{-1}(U))
+$$
+
+on $$ Y $$ the direct image of $$ F $$ by $$ \varphi $$. Accordingly, we call the sheaf
+
+$$
+\varphi^{-1} G(U) = \colim_{\varphi(U) \subseteq V) G(V)
+$$
+
+on $$ X $$ the inverse image of $$ F $$ by $$ \varphi $$.
+
+These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
+
+$$
+\CHom(f^{-1} F, G) = \CHom(F, f_* G).
+$$
 
 **Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. Then if there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
 
@@ -103,13 +123,13 @@ $$
 
 Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing $$, so the empty set and entire space are both closed. $$ \blacksquare $$
  
-&emsp; Any ring homomorphism $$ f \colon R \to S $$ induces a map $$ f^{\#} \colon \Spec S \to \Spec R $$ given by $$ f^{\#}(\fp) = f^{-1}(\fp). $$ This is one reason to consider prime ideals instead of, for instance, maximal ideals, as they are closed under inverse images.
+&emsp; Any ring homomorphism $$ f \colon R \to S $$ induces a map $$ f^{\#} \colon \Spec S \to \Spec R $$ given by $$ f^{\#}(\fp) = f^{-1}(\fp). $$ This is one reason to consider prime ideals instead of, for instance, maximal ideals, as the inverse image of a prime ideal is again prime.
 
 
 
 # 3. Schemes
 
-&emsp; Any two fields have the same prime spectrum ($$ \{0\} $$ is the only prime ideal), but are not necessarily isomorphic. Therefore, we need to equip $$ \Spec R $$ with a sheaf to differentiate between nonisomorphic commutative rings as follows.
+&emsp; Any two fields have the same prime spectrum ($$ \Spec k = \{0\} $$) while being not necessarily isomorphic. Therefore, we need to equip $$ \Spec R $$ with a sheaf to differentiate between nonisomorphic commutative rings as follows.
 
 &emsp; Fix a commutative ring $$ R $$ with prime spectrum $$ \Spec R $$. Equip each $$ R_{\fp} $$ with the discrete topology. Consider the bundle
 
