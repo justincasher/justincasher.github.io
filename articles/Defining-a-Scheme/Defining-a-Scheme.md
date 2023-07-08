@@ -23,7 +23,7 @@ title: Defining a Scheme
 $$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fp}{\mathfrak{p}} $$
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $$ 
 $$ \newcommand{\RR}{\mathbb{R}} $$
-$$ \DeclareMathOperator{\CHom}{\mathcal{H}om}} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
+$$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
 
 **Abstract.** We use sheaves of sections to define schemes. 
