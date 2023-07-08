@@ -23,7 +23,7 @@ title: Defining a Scheme
 $$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fp}{\mathfrak{p}} $$
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $$ 
 $$ \newcommand{\RR}{\mathbb{R}} $$
-$$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
+$$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
 
 **Abstract.** We use sheaves of sections to define schemes. 
@@ -63,7 +63,7 @@ $$
 
 We denote the set of morphisms $$ \CHom(F, G) $$.
 
-&emsp; The direct image and inverse image functors allow us to define morphisms between sheaves on different spaces (among other things). Fix a continuous map $$ \varphia \colon X \to Y $$, and let $$ F $$ and $$ G $$ be sheaves on $$ X $$ and $$ Y $$, respectively. We call the sheaf
+&emsp; The direct image and inverse image functors allow us to define morphisms between sheaves on different spaces (among other things). Fix a continuous map $$ \varphi \colon X \to Y $$, and let $$ F $$ and $$ G $$ be sheaves on $$ X $$ and $$ Y $$, respectively. We call the sheaf
 
 $$
 \varphi_* F(U) = F(\varphi^{-1}(U))
