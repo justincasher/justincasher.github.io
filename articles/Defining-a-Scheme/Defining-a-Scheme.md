@@ -127,11 +127,19 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
 
 DISTINGUISHED OPEN SUBSETS AND LOCALIZATION
 
-**Example.** Field 
+Localizaiton is a another way of defining open and closed subsets of the Zariski topology. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
 
-**Example.** DVR
+$$
+S^{-1} R = \{ r/s \mid r \in R, s \in S \}
+$$
 
-**Example.** Affine space
+equipped with the operator 
+
+$$
+\frac{r_1}{s_1} + \frac{r_2}{s_2} = \frac{r_1 s_2 + r_2 s_1}{s_1 s_2}.
+$$
+
+
 
 **Proposition 2.3.** The Zariski topology is quasi-compact.
 
@@ -141,7 +149,13 @@ DISTINGUISHED OPEN SUBSETS AND LOCALIZATION
 
 **Theorem 2.6.** SPECTRAL SPACES
 
-For more properties, see https://stacks.math.columbia.edu/tag/00E0
+For more properties, see https://stacks.math.columbia.edu/tag/00E0 We also include some examples.
+
+**Example.** Let $$ k $$ be a field. Then $$ \Spec k = \{0\} $$ with the trivial topology. Hence, any continuous map $$ f \colon \Spec k \to \Spec R $$ is determined by the image of $$ \{0\} $$. 
+
+**Example.** By definition
+
+**Example.** Affine space
 
 
 
