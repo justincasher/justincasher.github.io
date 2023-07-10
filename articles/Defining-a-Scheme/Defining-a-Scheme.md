@@ -123,7 +123,25 @@ $$
 
 Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing $$, so the empty set and entire space are both closed. $$ \blacksquare $$
  
-&emsp; Any ring homomorphism $$ f \colon R \to S $$ induces a map $$ f^{\#} \colon \Spec S \to \Spec R $$ given by $$ f^{\#}(\fp) = f^{-1}(\fp). $$ This is one reason to consider prime ideals instead of, for instance, maximal ideals, as the inverse image of a prime ideal is again prime.
+**Remark 2.2.** Any ring homomorphism $$ f \colon R \to S $$ induces a continuous map $$ f^{\#} \colon \Spec S \to \Spec R $$ given by $$ f^{\#}(\fp) = f^{-1}(\fp). $$ This is one reason to consider prime ideals instead of, for instance, maximal ideals, as the inverse image of a prime ideal is again prime.
+
+DISTINGUISHED OPEN SUBSETS AND LOCALIZATION
+
+**Example.** Field 
+
+**Example.** DVR
+
+**Example.** Affine space
+
+**Proposition 2.3.** The Zariski topology is quasi-compact.
+
+**Proposition 2.4.** A point is closed if and only if it is a maximal ideal.
+
+**Proposition 2.5.** A subset is closed if and only if it is of the form $$ \CV(\fp) $$ for $$ \fp $$ prime.
+
+**Theorem 2.6.** SPECTRAL SPACES
+
+For more properties, see https://stacks.math.columbia.edu/tag/00E0
 
 
 
@@ -145,7 +163,7 @@ which sends elements of $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of conti
 <ol type="a" class="custom" style="list-style-position: outside">
   <li>\( f \colon R \to S \) <i>is an isomorphism of rings;</i></li>
   
-  <li>\( f^# \colon (\Spec S, \CO_S) \to (\Spec R, \CO_R) \) <i>is an isomorphism of locally ringed spaces.</i></li>
+  <li>\( f^\# \colon (\Spec S, \CO_S) \to (\Spec R, \CO_R) \) <i>is an isomorphism of locally ringed spaces.</i></li>
 </ol>
 
 *Proof.* Prove this!
