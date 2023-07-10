@@ -72,7 +72,7 @@ $$
 on $$ Y $$ the direct image of $$ F $$ by $$ \varphi $$. Accordingly, we call the sheaf
 
 $$
-\varphi^{-1} G(U) = \colim_{\varphi(U) \subseteq V) G(V)
+\varphi^{-1} G(U) = \colim_{\varphi(U) \subseteq V} G(V)
 $$
 
 on $$ X $$ the inverse image of $$ F $$ by $$ \varphi $$.
@@ -138,7 +138,6 @@ equipped with the operator
 $$
 \frac{r_1}{s_1} + \frac{r_2}{s_2} = \frac{r_1 s_2 + r_2 s_1}{s_1 s_2}.
 $$
-
 
 
 **Proposition 2.3.** The Zariski topology is quasi-compact.
