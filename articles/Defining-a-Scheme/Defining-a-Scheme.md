@@ -127,7 +127,7 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
 
 DISTINGUISHED OPEN SUBSETS AND LOCALIZATION
 
-Localizaiton is a another way of defining open and closed subsets of the Zariski topology. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
+The topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
 
 $$
 S^{-1} R = \{ r/s \mid r \in R, s \in S \}
