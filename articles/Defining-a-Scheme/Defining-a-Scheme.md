@@ -146,21 +146,23 @@ $$
 
 *Proof.* Suppose $$ D(f_i) $$ cover $$ \Spec R $$. Then $$ \bigcap V(f_i) = \varnothing, $$ which implies $$ \sum (f_i) = R $$ (if not, $$ \sum (f_i) $$ would be contained in a maximal, and hence prime, ideal). Thus,
 
- $$ 1 = a_1 + \cdots + a_n $$ for some $$ a_i \in f_i $$
+$$ 
+a_1 + \cdots + a_n $$ for some $$ a_i \in f_i = 1
+$$
 
 implies 
 
 $$ 
-(f_1) \bigcup \cdots \bigcup (f_i) = R 
+(f_1) \cup \cdots \cup (f_i) = R 
 $$ 
 
 and thus 
 
 $$
-D(f_1) \bigcup \cdots \bigcup D(f_i) = \Spec R,
+D(f_1) \cup \cdots \cup D(f_i) = \Spec R,
 $$
 
-yielding our finite subfamily. $$ \blacksquare $$
+yielding a finite subcover. $$ \blacksquare $$
  
 **Proposition 2.4.** A point is closed in $$ \Spec R $$ if and only if it is a maximal ideal.
 
