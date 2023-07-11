@@ -52,7 +52,7 @@ and whose restriction maps are given by restricting the individual sections, i.e
 
 **Example 1.2.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
 
-&emsp; A morphism between sheaves $$ f \colon X \to Y $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
+&emsp; A morphism between sheaves $$ f \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
 $$ 
 \xymatrix{ 
@@ -97,7 +97,7 @@ $$
   
   <li>\( ab \in \fp \) implies \( a \in \fp \) or \( b \in \fp \).</li>
 </ol>
-We denote the set of prime ideals $$ \Spec R $$ and call it the *prime spectrum*.
+We denote the set of prime ideals $$ \Spec R $$ and call it the *prime spectrum*. One example is every maximal ideal is prime.
 
 &emsp; For any ideal $$ \fa $$ we let $$ \CV(\fa) $$ be the set of prime ideals containing $$ \fa $$:
 
@@ -125,9 +125,11 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
  
 **Remark 2.2.** Any ring homomorphism $$ f \colon R \to S $$ induces a continuous map $$ f^{\#} \colon \Spec S \to \Spec R $$ given by $$ f^{\#}(\fp) = f^{-1}(\fp). $$ This is one reason to consider prime ideals instead of, for instance, maximal ideals, as the inverse image of a prime ideal is again prime.
 
-DISTINGUISHED OPEN SUBSETS AND LOCALIZATION
 
-The topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
+
+STANDARD OPEN SUBSETS AND LOCALIZATION
+
+&emsp; The topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
 
 $$
 S^{-1} R = \{ r/s \mid r \in R, s \in S \}
@@ -140,9 +142,29 @@ $$
 $$
 
 
-**Proposition 2.3.** The Zariski topology is quasi-compact.
+**Proposition 2.3.** The Zariski topology makes $$ \Spec R $$ quasi-compact. 
 
-**Proposition 2.4.** A point is closed if and only if it is a maximal ideal.
+*Proof.* Suppose $$ D(f_i) $$ cover $$ \Spec R $$. Then $$ \bigcap V(f_i) = \varnothing, $$ which implies $$ \sum (f_i) = R $$ (if not, $$ \sum (f_i) $$ would be contained in a maximal, and hence prime, ideal). Thus,
+
+ $$ 1 = a_1 + \cdots + a_n $$ for some $$ a_i \in f_i $$
+
+implies 
+
+$$ 
+(f_1) \bigcup \cdots \bigcup (f_i) = R 
+$$ 
+
+and thus 
+
+$$
+D(f_1) \bigcup \cdots \bigcup D(f_i) = \Spec R,
+$$
+
+yielding our finite subfamily. $$ \blacksquare $$
+ 
+**Proposition 2.4.** A point is closed in $$ \Spec R $$ if and only if it is a maximal ideal.
+
+*Proof.* Suppose $$ \fp \in \Spec R $$ is closed. Then $$ \CV(\fp) = \{ \fp \} $$, meaning no other prime ideals contain $$ \fp $$, and in particular no maximal ideals properly contain $$ \fp $$. We conclude that $$ \fp $$ is maximal. $$ \blacksquare $$
 
 **Proposition 2.5.** A subset is closed if and only if it is of the form $$ \CV(\fp) $$ for $$ \fp $$ prime.
 
