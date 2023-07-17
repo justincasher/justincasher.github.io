@@ -85,7 +85,7 @@ $$
 
 &emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ \varphi \colon X \to Y $$ and a morphism $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, this is the same as giving a morphism in $$ \CHom( \varphi^{\#} G, F) $$. 
 
-&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will define schemes in a similar manner in \S3 using the Zariski topology introduced in \S2. CAN WE DEFINE SCHEMS USING LOCAL RING MAPS ON SECTIONS, NOT STALKS?
+&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will define schemes in a similar manner in section 3 using the Zariski topology introduced in section 2. CAN WE DEFINE SCHEMES USING LOCAL RING MAPS ON SECTIONS, NOT STALKS?
 
 **Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
 
@@ -132,10 +132,16 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
 &emsp; The Zariski topology has a basis of *distinguished open sets*
 
 $$ 
-D(r) = \{ \fp \in \Spec R \mid f \not \in \fp \}
+D(r) = \Spec R \setminus  V(r) = \{ \fp \in \Spec R \mid f \not \in \fp \}
 $$
 
-for $$ r \in R $$. Indeed, if $$ U = \Spec R \setminus V(\fa) $$ is open, then $$ U = \bigcup_{f \in U} D(f) $$
+for $$ r \in R $$. Indeed, if $$ U = V(\fa)^c $$ is open, then 
+
+$$ 
+U = \Spec R \setminus \bigcap_{r \in \fa} V(r) = \bigcup_{r \in \fa} D(r) 
+$$.
+
+LOCALIZATION
 
 &emsp; The topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
 
