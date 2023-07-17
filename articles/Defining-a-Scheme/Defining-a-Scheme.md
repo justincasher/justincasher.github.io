@@ -81,9 +81,9 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ \|f\| \colon X \to Y $$ and a morphism $$ f^{\flat} \in \CHom(G, \|f\|_* F) $$. Using the adjoint relation, this is the same as giving a map $$ f^{\#} \in \CHom(\|f\|^{-1} G, F) $$
+&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ \mid f \mid \colon X \to Y $$ and a morphism $$ f^{\flat} \in \CHom(G, \mid f \mid_* F) $$. Using the adjoint relation, this is the same as giving a map $$ f^{\#} \in \CHom(\mid f \mid^{-1} G, F) $$
 
-&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. In particular, 
+&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will defined schemes in a similar manner in \S3 using the Zariski topology introduced in \S 
 
 **Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If $$ M $$ 
 
@@ -93,7 +93,7 @@ If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}
 
 
 
-# 2. Zariski topology
+# 2. Zariski Topology
 
 &emsp; Write $$ R $$ for a commutative ring with unit. An ideal $$ \fp $$ is called *prime* if it satisfies the following equivalent conditions: 
 <ol type="a" class="custom" style="list-style-position: outside">
