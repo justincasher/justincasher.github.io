@@ -52,7 +52,7 @@ and whose restriction maps are given by restricting the individual sections, i.e
 
 **Example 1.2.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
 
-&emsp; The stalk of a sheaf at a point allows us to observe its local behavor at a point.
+&emsp; The stalk of a sheaf at a point allows us to observe its local behavor at a point. 
 
 &emsp; A morphism between sheaves $$ f \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -77,19 +77,17 @@ $$
 \varphi^{-1} G(U) = \underset{\varphi(U) \subseteq V}{\colim} G(V)
 $$
 
-on $$ X $$ the inverse image of $$ F $$ by $$ \varphi $$. These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
+on $$ X $$ the inverse image of $$ F $$ by $$ \varphi $$. HOW CAN WE INTERPRET THIS COLIMIT? These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
 
 $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ f \mid \colon X \to Y $$ and a morphism $$ f^{\#} \in \CHom(G, &#124; f &#124;_* F) $$. Using the adjoint relation, this is the same as giving a morphism in $$ \CHom(&#124; f \&#124;^{-1} G, F) $$. LOCAL ISOMORPHISM 
+&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ \varphi \mid \colon X \to Y $$ and a morphism $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, this is the same as giving a morphism in $$ \CHom( \varphi^{\#} G, F) $$. 
 
-&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will define schemes in a similar manner in \S3 using the Zariski topology introduced in \S2. 
+&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will define schemes in a similar manner in \S3 using the Zariski topology introduced in \S2. CAN WE DEFINE SCHEMS USING LOCAL RING MAPS ON SECTIONS, NOT STALKS?
 
-**Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If $$ M $$ 
-
-If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
+**Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
 
 *Proof.* Prove this!
 
@@ -103,7 +101,7 @@ If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}
   
   <li>\( ab \in \fp \) implies \( a \in \fp \) or \( b \in \fp \).</li>
 </ol>
-We denote the set of prime ideals $$ \Spec R $$ and call it the *prime spectrum*. One example is every maximal ideal is prime.
+We denote the set of prime ideals $$ \Spec R $$ and call it the *prime spectrum*. For instance, every maximal ideal is prime, and the zero ideal $$ (0) $$ is prime.
 
 &emsp; For any ideal $$ \fa $$ we let $$ \CV(\fa) $$ be the set of prime ideals containing $$ \fa $$:
 
