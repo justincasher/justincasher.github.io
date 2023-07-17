@@ -72,7 +72,7 @@ $$
 on $$ Y $$ the direct image of $$ F $$ by $$ \varphi $$. Accordingly, we call the sheaf
 
 $$
-\varphi^{-1} G(U) = \underset{\colim}{\varphi(U) \subseteq V} G(V)
+\varphi^{-1} G(U) = \underset{\varphi(U) \subseteq V}{\colim} G(V)
 $$
 
 on $$ X $$ the inverse image of $$ F $$ by $$ \varphi $$. These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
@@ -81,9 +81,13 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ |f| \colon X \to Y $$ and a morphism $$ f^{\flat} \in \CHom(G, |f|_* F) $$. Using the adjoint relation, this is the same as giving a map $$ f^{\#} \in \CHom(|f|^{-1} G, F) $$
+&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ \|f\| \colon X \to Y $$ and a morphism $$ f^{\flat} \in \CHom(G, \|f\|_* F) $$. Using the adjoint relation, this is the same as giving a map $$ f^{\#} \in \CHom(\|f\|^{-1} G, F) $$
 
-**Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. Then if there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
+&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. In particular, 
+
+**Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If $$ M $$ 
+
+If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
 
 *Proof.* Prove this!
 
