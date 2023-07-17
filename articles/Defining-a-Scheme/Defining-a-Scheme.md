@@ -83,7 +83,7 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ \varphi \colon X \to Y $$ and a morphism $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, this is the same as giving a morphism in $$ \CHom( \varphi^{\#} G, F) $$. 
+&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous function $$ \varphi \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, we can also consider $$ F^{\#} $$ as an element in $$ \CHom( \varphi^{-1} G, F) $$. 
 
 &emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will define schemes in a similar manner in section 3 using the Zariski topology introduced in section 2. CAN WE DEFINE SCHEMES USING LOCAL RING MAPS ON SECTIONS, NOT STALKS?
 
