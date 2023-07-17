@@ -52,6 +52,8 @@ and whose restriction maps are given by restricting the individual sections, i.e
 
 **Example 1.2.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
 
+&emsp; The stalk of a sheaf at a point allows us to observe its local behavor at a point.
+
 &emsp; A morphism between sheaves $$ f \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
 $$ 
@@ -81,9 +83,9 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ \mid f \mid \colon X \to Y $$ and a morphism $$ f^{\flat} \in \CHom(G, \mid f \mid_* F) $$. Using the adjoint relation, this is the same as giving a map $$ f^{\#} \in \CHom(\mid f \mid^{-1} G, F) $$
+&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous map $$ f \mid \colon X \to Y $$ and a morphism $$ f^{\#} \in \CHom(G, &#124; f &#124;_* F) $$. Using the adjoint relation, this is the same as giving a morphism in $$ \CHom(&#124; f \&#124;^{-1} G, F) $$. LOCAL ISOMORPHISM 
 
-&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will defined schemes in a similar manner in \S3 using the Zariski topology introduced in \S 
+&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will define schemes in a similar manner in \S3 using the Zariski topology introduced in \S2. 
 
 **Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If $$ M $$ 
 
