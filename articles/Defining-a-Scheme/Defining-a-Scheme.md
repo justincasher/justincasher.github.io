@@ -61,12 +61,14 @@ $$
 where the colimit is taken over open sets containing $$ x $$. This is equivalent to 
 
 $$
-F_x = \{ (U, s) \mid x \in U, s \in F(U) \} / \tilde,
+F_x = \{ (U, s) \mid x \in U, s \in F(U) \} / \sim,
 $$
 
-where $$ (U_1, s_1) \tilde (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$.
+where $$ (U_1, s_1) \sim (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$.
 
-**Example.** Let $$ M $$ be a manifold. Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
+**Example 1.3.** Let $$ M $$ be a manifold. Then the stalk of the sheaf Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
+
+INTRODUCE THE ETALE SPACE
 
 &emsp; A morphism between sheaves $$ f \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -91,7 +93,7 @@ $$
 \varphi^{-1} G(U) = \underset{\varphi(U) \subseteq V}{\colim} G(V)
 $$
 
-on $$ X $$ the *inverse image* of $$ F $$ by $$ \varphi $$. When defineing $$ \varphi^{-1} G(U) $$ we  have to take the inverse image here since not every continuous map is open. 
+on $$ X $$ the *inverse image* of $$ F $$ by $$ \varphi $$. When defineing $$ \varphi^{-1} G(U) $$ we  have to take the colimit here since not every continuous map is open. 
 
 &emsp; These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
 
@@ -101,9 +103,11 @@ $$
 
 In particular, this equivalence shows $$ \varphi_* $$ is left exact (because every right adjoint is) and $$ \varphi^{-1} $$ is right exact. Further proof shows that $$ \varphi^{-1} $$ is, in fact, an exact functor.
 
-&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous function $$ \varphi \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, we can also consider $$ F^{\#} $$ as an element in $$ \CHom( \varphi^{-1} G, F) $$. 
+&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous function $$ \varphi \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( \varphi^{-1} G, F) $$. 
 
-&emsp; We are in particular interested in sheaves of local rings, such as the one given in Example 1.2. We will define schemes in a similar manner in section 3 using the Zariski topology introduced in section 2. CAN WE DEFINE SCHEMES USING LOCAL RING MAPS ON SECTIONS, NOT STALKS?
+&emsp; We are interested in sheaves of local rings, because they generalize the notion of a function space. Indeed, 
+
+such as the one given in Example 1.2. We will define schemes in a similar manner in section 3 using the Zariski topology introduced in section 2. CAN WE DEFINE SCHEMES USING LOCAL RING MAPS ON SECTIONS, NOT STALKS?
 
 **Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
 
@@ -127,7 +131,7 @@ $$
 \CV(\fa) = \{\fp \in \Spec R \mid \fa \subseteq \fp \}
 $$
 
-The following proposition shows that these form the closed sets for the *Zariski topology* on $$ \Spec R $$. 
+The following proposition shows that these form the closed sets for what we call the *Zariski topology* on $$ \Spec R $$. 
 
 **Proposition 2.1.** &nbsp; The sets $$ V(\fa) $$ are the closed sets of a topology on $$ \Spec R $$.
 
@@ -147,21 +151,21 @@ Finally, we see that $$ \CV(\varnothing) = \Spec R$$ and $$ \CV(R) = \varnothing
  
 **Remark 2.2.** Any ring homomorphism $$ f \colon R \to S $$ induces a continuous map $$ f^{\#} \colon \Spec S \to \Spec R $$ given by $$ f^{\#}(\fp) = f^{-1}(\fp). $$ This is one reason to consider prime ideals instead of, for instance, maximal ideals, as the inverse image of a prime ideal is again prime.
 
-&emsp; The Zariski topology has a basis of *distinguished open sets*
+&emsp; The Zariski topology has a basis of the form 
 
 $$ 
 D(r) = \Spec R \setminus  V(r) = \{ \fp \in \Spec R \mid f \not \in \fp \}
 $$
 
-for $$ r \in R $$. Indeed, if $$ U = V(\fa)^c $$ is open, then 
+for $$ r \in R $$. Indeed, if $$ U = \Spec R \setminus V(\fa) $$ is open, then 
 
 $$ 
-U = \Spec R \setminus \bigcap_{r \in \fa} V(r) = \bigcup_{r \in \fa} D(r) 
-$$.
+U = \Spec R \setminus \bigcap_{r \in \fa} V(r) = \bigcup_{r \in \fa} D(r).
+$$
 
-LOCALIZATION
+We call the $$ D(r) $$ *distinguished open sets*.
 
-&emsp; The topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
+&emsp; The Zariki topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
 
 $$
 S^{-1} R = \{ r/s \mid r \in R, s \in S \}
@@ -173,10 +177,27 @@ $$
 \frac{r_1}{s_1} + \frac{r_2}{s_2} = \frac{r_1 s_2 + r_2 s_1}{s_1 s_2}.
 $$
 
+&emsp; One important instance of a multiplicatively closed subset is that associated to a prime ideal $$ S_{\fp} = R \setminus \fp $$. We denote $$ R_{\fp} = S_{\fp}^{-1} R $$. Another is given by taking any $$ f \in R $$ and considering the multiplicative system $$ S_f = \{f, f^2, f^3, \dots, \} $$. We denote $$ R_f = S_f^{-1} R $$.We have 
+
+$$
+V(\fp) = \Spec R_{\fp}
+$$
+
+and 
+
+$$
+D(f) = \Spec R_f.
+$$
+
+INCLUDE HOW THIS RELATES TO COLIMITS
+
+ INCLUDE HOW THIS RELATES TO COLIMITS
+
+&emsp; We conclude this section by listing some properties and examples of the Zariski topology. 
 
 **Proposition 2.3.** The Zariski topology makes $$ \Spec R $$ quasi-compact. 
 
-*Proof.* Suppose $$ D(f_i) $$ cover $$ \Spec R $$. Then $$ \bigcap V(f_i) = \varnothing, $$ which implies $$ \sum (f_i) = R $$ (if not, $$ \sum (f_i) $$ would be contained in a maximal, and hence prime, ideal). Thus,
+*Proof.* Suppose $$ D(f_i) $$ cover $$ \Spec R $$. Then $$ \bigcap V(f_i) = \varnothing, $$ which implies $$ \sum (f_i) = R $$. (If not, $$ \sum (f_i) $$ would be contained in a maximal, and hence prime, ideal). Therefore there exists a finite collection of $$ a_i \in f_i $$ such that $$ a_1 + \cdots + a_n = 1 $$. Consequently,
 
 $$ 
 a_1 + \cdots + a_n $$ for some $$ a_i \in f_i = 1
