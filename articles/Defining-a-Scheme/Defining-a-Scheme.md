@@ -72,7 +72,7 @@ $$
 p \colon \coprod_{x \in X} F_x \to X,
 $$
 
-where $$ F_x $$ is mapped to $$ x $$. Recall that we call a local homeomorphism an étale map. Hence, $$ p $$ is étale in the sense that any for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, and it can be shown that any sheaf of sets is equivalent to an étale map with codomain $$ X $$. The étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
+where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, and it can be shown that any sheaf of sets is equivalent to an étale map with codomain $$ X $$. The étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
 &emsp; A morphism between sheaves $$ f^{\#} \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f^{\#} $$ associates to each open subset $$ U $$ a morphism $$ f^{\#}_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -109,7 +109,7 @@ In particular, this equivalence shows $$ \varphi_* $$ is left exact (because eve
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous function $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. 
 
-&emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)) \subseteq \fm_x $$.
+&emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)}) \subseteq \fm_x $$.
 
  **Example 1.3.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
 
