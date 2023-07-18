@@ -169,7 +169,7 @@ $$
 
 We call the $$ D(r) $$ *distinguished open sets*.
 
-&emsp; The Zariki topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
+&emsp; The Zariski topology can also be described using localization. Let $$ S $$ be a multiplicatively closed subset of $$ R $$, i.e. $$ a, b \in S $$ implies $$ ab \in S $$. Then we define the *localization* of $$ R $$ by $$ S $$ as the set of formal quotients
 
 $$
 S^{-1} R = \{ r/s \mid r \in R, s \in S \}
@@ -181,7 +181,7 @@ $$
 \frac{r_1}{s_1} + \frac{r_2}{s_2} = \frac{r_1 s_2 + r_2 s_1}{s_1 s_2}.
 $$
 
-&emsp; One important instance of a multiplicatively closed subset is that associated to a prime ideal $$ S_{\fp} = R \setminus \fp $$. We denote $$ R_{\fp} = S_{\fp}^{-1} R $$. Another is given by taking any $$ f \in R $$ and considering the multiplicative system $$ S_f = \{f, f^2, f^3, \dots, \} $$. We denote $$ R_f = S_f^{-1} R $$.We have 
+&emsp; One important instance of a multiplicatively closed subset is that associated to a prime ideal $$ S_{\fp} = R \setminus \fp $$. We denote $$ R_{\fp} = S_{\fp}^{-1} R $$. Another is given by taking any $$ f \in R $$ and considering the multiplicative system $$ S_f = \{f, f^2, f^3, \dots, \} $$. We denote $$ R_f = S_f^{-1} R $$. We have 
 
 $$
 V(\fp) = \Spec R_{\fp}
@@ -238,14 +238,14 @@ For more properties, see https://stacks.math.columbia.edu/tag/00E0 We also inclu
 &emsp; Fix a commutative ring $$ R $$ with prime spectrum $$ \Spec R $$. Equip each $$ R_{\fp} $$ with the discrete topology. Consider the bundle
 
 $$
-\coprod_{\fp \in \Spec R} R_{\fp} \to X,
+\coprod_{\fp \in \Spec R} R_{\fp} \to \Spec R,
 $$
 
-which sends elements of $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of continuous sections by $$ \CO_X $$ and call the pair ($$ X $$, $$ \CO_X $$) an *affine scheme*. 
+which sends elements in $$ R_{\fp} $$ to $$ \fp $$. We denote its sheaf of continuous sections by $$ \CO_{\Spec R} $$ and call the pair ($$ \Spec R $$, $$ \CO_{\Spec R}) $$ an *affine scheme*. 
 
 **Remark 3.1.** &nbsp; Any continuous function $$ \varphi \colon X \to Y $$ into a discrete space $$ Y $$ is locally constant. Indeed, choose an $$ x \in X $$ and write $$ \varphi(x) = y $$. By assumption $$ \{y\} $$ is open, so $$ \varphi^{-1}(y) $$ is an open neighborhood of $$ x $$ on which $$ \varphi $$ is constant. Thus, we could replace “continuous sections” by “locally constant sections” in our definition, which is  the given definition in, for instance, Hartshorne's book CITE.
 
-&emsp;
+&emsp; We call a locally ringed space $$ (X, \CO_X) $$ which is locally isomorphic to an affine scheme a *scheme*. PROPERTIES OF THE CATEGORIES OF SCHEMES. The following theorem shows that the category of rings is equivalent to a subcategory of the category of schemes.
 
 **Theorem 3.2.** &nbsp; *Let $$ R $$ and $$ S $$ be commutative rings. The following are equivalent:*
 <ol type="a" class="custom" style="list-style-position: outside">
