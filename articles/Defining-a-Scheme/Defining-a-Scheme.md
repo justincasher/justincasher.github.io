@@ -191,19 +191,11 @@ $$
 
 INCLUDE HOW THIS RELATES TO COLIMITS
 
- INCLUDE HOW THIS RELATES TO COLIMITS
-
 &emsp; We conclude this section by listing some properties and examples of the Zariski topology. 
 
 **Proposition 2.3.** The Zariski topology makes $$ \Spec R $$ quasi-compact. 
 
-*Proof.* Suppose $$ D(f_i) $$ cover $$ \Spec R $$. Then $$ \bigcap V(f_i) = \varnothing, $$ which implies $$ \sum (f_i) = R $$. (If not, $$ \sum (f_i) $$ would be contained in a maximal, and hence prime, ideal). Therefore there exists a finite collection of $$ a_i \in f_i $$ such that $$ a_1 + \cdots + a_n = 1 $$. Consequently,
-
-$$ 
-a_1 + \cdots + a_n $$ for some $$ a_i \in f_i = 1
-$$
-
-implies 
+*Proof.* Suppose $$ D(f_i) $$ cover $$ \Spec R $$. Then $$ \bigcap V(f_i) = \varnothing, $$ which implies $$ \sum (f_i) = R $$. (If not, $$ \sum (f_i) $$ would be contained in a maximal, and hence prime, ideal). Therefore there exists a finite collection of $$ a_i \in f_i $$ such that $$ a_1 + \cdots + a_n = 1 $$. Consequently, 
 
 $$ 
 (f_1) \cup \cdots \cup (f_i) = R 
