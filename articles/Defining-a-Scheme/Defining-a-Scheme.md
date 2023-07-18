@@ -62,7 +62,7 @@ $$
 F_x = \{ (U, s) \mid x \in U, s \in F(U) \} / \sim,
 $$
 
-where $$ (U_1, s_1) \sim (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$.
+where $$ (U_1, s_1) \sim (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$. Elements of the stalk $$ (U, s) $$ are referred to as *germs*.
 
 **Example 1.2.** Let $$ M $$ be a manifold. Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
 
@@ -109,11 +109,13 @@ In particular, this equivalence shows $$ \varphi_* $$ is left exact (because eve
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous function $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. 
 
-&emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)}) \subseteq \fm_x $$.
+&emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. We denote the maximal ideal in $$ F_x $$ by $$ \fm_x $$. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)}) \subseteq \fm_x $$.
 
- **Example 1.3.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
+ **Example 1.3.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the ring of smooth functions $$ s \colon U \to \RR $$. We denote this sheaf $$ \cC^{\infty}_M $$. 
+ 
+ We see that $$ (M, \cC^{\infty}_M) $$ is a localy ringed space. At a point $$ x \in M $$, a germ $$ (U, f) $$ is equivalent to a smooth function $$ f \colon U \to \RR $$. The maximal ideal $$ \fm_x $$ in $$ F_x $$ is then the set of functions which vanish at $$ x $$, i.e. $$ f(x) = 0 $$. 
 
-**Proposition 1.4.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
+**Proposition 1.4.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism of locally ringed spaces, then $$ M $$ and $$ N $$ are diffeomorphic.
 
 *Proof.* Prove this!
 
