@@ -50,8 +50,6 @@ $$
 
 and whose restriction maps are given by restricting the individual sections, i.e. $$ \res_{U, V}(s) = s \mid_{V} $$. It is clear that this is indeed a sheaf. This is the canonical example from which sheaves are derived.
 
-**Example 1.2.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
-
 &emsp; The *stalk* of a sheaf $$ F $$ at a point $$ x \in X $$ allows us to observe its local behavor at $$ x $$. It is defined as 
 
 $$
@@ -66,7 +64,7 @@ $$
 
 where $$ (U_1, s_1) \sim (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$.
 
-**Example 1.3.** Let $$ M $$ be a manifold. Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
+**Example 1.2.** Let $$ M $$ be a manifold. Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
 
 &emsp; Bundling the stalks gives us the *étale space* over $$ X $$
 
@@ -74,14 +72,14 @@ $$
 p \colon \coprod_{x \in X} F_x \to X,
 $$
 
-where $$ F_x $$ is mapped to $$ x $$. Recall that we call a local homeomorphism an étale map. Hence, $$ p $$ is étale in the sense that any for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, and it can be shown that any sheaf of sets is equivalent to an étale map with codomain $$ X $$. This construction can likewise be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
+where $$ F_x $$ is mapped to $$ x $$. Recall that we call a local homeomorphism an étale map. Hence, $$ p $$ is étale in the sense that any for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, and it can be shown that any sheaf of sets is equivalent to an étale map with codomain $$ X $$. The étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
-&emsp; A morphism between sheaves $$ f \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
+&emsp; A morphism between sheaves $$ f^{\#} \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f^{\#} $$ associates to each open subset $$ U $$ a morphism $$ f^{\#}_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
 $$ 
 \xymatrix{ 
-F(V) \ar[d]_{\res_{V, U}} \ar[r]^{f_V} & G(V) \ar[d]^{\res_{V, U}} \\
-F(U) \ar[r]_{f_U} & G(U) 
+F(V) \ar[d]_{\res_{V, U}} \ar[r]^{f^{\#}_V} & G(V) \ar[d]^{\res_{V, U}} \\
+F(U) \ar[r]_{f^{\#}_U} & G(U) 
 } 
 $$
 
@@ -109,13 +107,13 @@ $$
 
 In particular, this equivalence shows $$ \varphi_* $$ is left exact (because every right adjoint is) and $$ \varphi^{-1} $$ is right exact. In fact, $$ \varphi^{-1} $$ is an exact functor.
 
-&emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous function $$ \varphi \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( \varphi^{-1} G, F) $$. 
+&emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous function $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. 
 
-&emsp; We conclude this section by discussing sheaves of local rings. are interested in sheaves of local rings, because they generalize the notion of a function space. Indeed, 
+&emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f^{\#}_x \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f^{\#}_x(\fm_{f(x)) \subseteq \fm_x $$.
 
-such as the one given in Example 1.2. We will define schemes in a similar manner in section 3 using the Zariski topology introduced in section 2. 
+ **Example 1.3.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
 
-**Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
+**Proposition 1.4.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
 
 *Proof.* Prove this!
 
