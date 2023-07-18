@@ -23,7 +23,7 @@ title: Defining a Scheme
 $$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fp}{\mathfrak{p}} $$
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $$ 
 $$ \newcommand{\RR}{\mathbb{R}} $$
-$$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
+$$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\et}{Ét} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Op}{Op} \DeclareMathOperator{\res}{res} \DeclareMathOperator{\Spec}{Spec}  $$
 <br>
 
 **Abstract.** We use sheaves of sections to define schemes. 
@@ -38,9 +38,9 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim
 
 ## 1. Sheaves
 
-&emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V. $$ A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC. $$ Elements in $$ F(U) $$ are called *sections* (see Example 1.1). Inclusions are mapped to restrictions, which we denote $$ F(\iota) = \res_{V, U} $$ or $$ F(\iota)(s) = s \mid_{U} $$. 
+&emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V $$. A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC $$. Elements in $$ F(U) $$ are called *sections* (see Example 1.1). Inclusions are mapped to restrictions, which we denote $$ F(\iota) = \res_{V, U} $$ or $$ F(\iota)(s) = s \mid_{U} $$. 
 
-&emsp; We call a presheaf $$ F $$ a *sheaf* if a gluing condition is satisfied for every open set $$ U $$: For every open cover $$ \{ U_i \}_{i \in I} $$ of $$ U $$ and elements $$ s_i \in F(U_i) $$ such that $$ s_i \mid_{U_i \cap U_j} = s_j \mid_{U_i \cap U_j}, $$ there exists a unique $$ s \in F(U) $$ such that $$ s \mid_{U_i} = s_i. $$
+&emsp; We call a presheaf $$ F $$ a *sheaf* if a gluing condition is satisfied for every open set $$ U $$: For every open cover $$ \{ U_i \}_{i \in I} $$ of $$ U $$ and elements $$ s_i \in F(U_i) $$ such that $$ s_i \mid_{U_i \cap U_j} = s_j \mid_{U_i \cap U_j} $$, there exists a unique $$ s \in F(U) $$ such that $$ s \mid_{U_i} = s_i $$.
 
 **Example 1.1.** &nbsp; Let $$ \varphi \colon Y \to X $$ be a continuous function. Associated to $$ \varphi $$ is a *sheaf of sections* $$ \Gamma_\varphi $$, which maps each open subset of $$ X $$ to the set of sections on $$ X $$:
 
@@ -66,9 +66,15 @@ $$
 
 where $$ (U_1, s_1) \sim (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$.
 
-**Example 1.3.** Let $$ M $$ be a manifold. Then the stalk of the sheaf Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
+**Example 1.3.** Let $$ M $$ be a manifold. Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
 
-INTRODUCE THE ETALE SPACE
+&emsp; Bundling the stalks gives us the *étale space* over $$ X $$
+
+$$
+p \colon \coprod_{x \in X} F_x \to X,
+$$
+
+where $$ F_x $$ is mapped to $$ x $$. Recall that we call a local homeomorphism an étale map. Hence, $$ p $$ is étale in the sense that any for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, and it can be shown that any sheaf of sets is equivalent to an étale map with codomain $$ X $$. This construction can likewise be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
 &emsp; A morphism between sheaves $$ f \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -81,19 +87,19 @@ $$
 
 We denote the set of morphisms $$ \CHom(F, G) $$.
 
-&emsp; The direct image and inverse image functors allow us to define morphisms between sheaves on different spaces (among other things). Fix a continuous map $$ \varphi \colon X \to Y $$, and let $$ F $$ and $$ G $$ be sheaves on $$ X $$ and $$ Y $$, respectively. We call the sheaf
+&emsp; The direct image and inverse image functors allow us to define morphisms between sheaves on different spaces (among other things). Fix a continuous map $$ \varphi \colon X \to Y $$, and let $$ F $$ and $$ G $$ be sheaves on $$ X $$ and $$ Y $$, respectively. We call the sheaf on $$ Y $$ 
 
 $$
 \varphi_* F(U) = F(\varphi^{-1}(U))
 $$
 
-on $$ Y $$ the *direct image* of $$ F $$ by $$ \varphi $$. Accordingly, we call the sheaf
+the *direct image* of $$ F $$ by $$ \varphi $$. Accordingly, we call the sheaf on $$ X $$ 
 
 $$
 \varphi^{-1} G(U) = \underset{\varphi(U) \subseteq V}{\colim} G(V)
 $$
 
-on $$ X $$ the *inverse image* of $$ F $$ by $$ \varphi $$. When defineing $$ \varphi^{-1} G(U) $$ we  have to take the colimit here since not every continuous map is open. 
+the *inverse image* of $$ F $$ by $$ \varphi $$. When defining $$ \varphi^{-1} G(U) $$ we  have to take the colimit here since not every continuous map is open. 
 
 &emsp; These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
 
@@ -101,13 +107,13 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-In particular, this equivalence shows $$ \varphi_* $$ is left exact (because every right adjoint is) and $$ \varphi^{-1} $$ is right exact. Further proof shows that $$ \varphi^{-1} $$ is, in fact, an exact functor.
+In particular, this equivalence shows $$ \varphi_* $$ is left exact (because every right adjoint is) and $$ \varphi^{-1} $$ is right exact. In fact, $$ \varphi^{-1} $$ is an exact functor.
 
 &emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous function $$ \varphi \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( \varphi^{-1} G, F) $$. 
 
-&emsp; We are interested in sheaves of local rings, because they generalize the notion of a function space. Indeed, 
+&emsp; We conclude this section by discussing sheaves of local rings. are interested in sheaves of local rings, because they generalize the notion of a function space. Indeed, 
 
-such as the one given in Example 1.2. We will define schemes in a similar manner in section 3 using the Zariski topology introduced in section 2. CAN WE DEFINE SCHEMES USING LOCAL RING MAPS ON SECTIONS, NOT STALKS?
+such as the one given in Example 1.2. We will define schemes in a similar manner in section 3 using the Zariski topology introduced in section 2. 
 
 **Proposition 1.3.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism, then $$ M $$ and $$ N $$ are diffeomorphic.
 
