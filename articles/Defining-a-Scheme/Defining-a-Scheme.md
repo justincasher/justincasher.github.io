@@ -52,7 +52,21 @@ and whose restriction maps are given by restricting the individual sections, i.e
 
 **Example 1.2.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$. It associates to each open subset $$ U $$ the local ring of smooth functions $$ s \colon U \to \RR $$. In the sequel we denote it $$ \cC^{\infty}_M $$.
 
-&emsp; The stalk of a sheaf at a point allows us to observe its local behavor at a point. 
+&emsp; The *stalk* of a sheaf $$ F $$ at a point $$ x \in X $$ allows us to observe its local behavor at $$ x $$. It is defined as 
+
+$$
+F_x = \underset{x \in U}{\colim} F(U), 
+$$
+
+where the colimit is taken over open sets containing $$ x $$. This is equivalent to 
+
+$$
+F_x = \{ (U, s) \mid x \in U, s \in F(U) \} / \tilde,
+$$
+
+where $$ (U_1, s_1) \tilde (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$.
+
+**Example.** Let $$ M $$ be a manifold. Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
 
 &emsp; A morphism between sheaves $$ f \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f $$ associates to each open subset $$ U $$ a morphism $$ f_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -71,17 +85,21 @@ $$
 \varphi_* F(U) = F(\varphi^{-1}(U))
 $$
 
-on $$ Y $$ the direct image of $$ F $$ by $$ \varphi $$. Accordingly, we call the sheaf
+on $$ Y $$ the *direct image* of $$ F $$ by $$ \varphi $$. Accordingly, we call the sheaf
 
 $$
 \varphi^{-1} G(U) = \underset{\varphi(U) \subseteq V}{\colim} G(V)
 $$
 
-on $$ X $$ the inverse image of $$ F $$ by $$ \varphi $$. HOW CAN WE INTERPRET THIS COLIMIT? These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
+on $$ X $$ the *inverse image* of $$ F $$ by $$ \varphi $$. When defineing $$ \varphi^{-1} G(U) $$ we  have to take the inverse image here since not every continuous map is open. 
+
+&emsp; These are adjoint functors between the categories of sheaves on $$ X $$ and sheaves on $$ Y $$
 
 $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
+
+In particular, this equivalence shows $$ \varphi_* $$ is left exact (because every right adjoint is) and $$ \varphi^{-1} $$ is right exact. Further proof shows that $$ \varphi^{-1} $$ is, in fact, an exact functor.
 
 &emsp; Hence, a morphism of sheaves $$ f \colon F \to G $$ is given by a continuous function $$ \varphi \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, \varphi_* F) $$. Using the adjoint relation, we can also consider $$ F^{\#} $$ as an element in $$ \CHom( \varphi^{-1} G, F) $$. 
 
