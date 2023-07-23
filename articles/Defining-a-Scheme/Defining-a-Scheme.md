@@ -121,7 +121,7 @@ Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \v
 
 $$ 
 \xymatrix{ 
-\coprod_{x \in X} F_x \ar[d] \ar[r]^{f^{\#}} & \coprod_{x \in X} F_x \ar[d] \\
+{\displaystyle \coprod_{x \in X} F_x} \ar[d] \ar[r]^{f^{\#}} & {\displaystyle \coprod_{x \in X} F_x} \ar[d] \\
 X \ar[r]_{f} & Y
 } 
 $$
