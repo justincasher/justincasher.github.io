@@ -109,14 +109,25 @@ Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \v
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous function $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
 
-**Proposition 1.3.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is an monomorphism, epimorphism, or isomorphism if and only if it induces the respective map on each stalk.*
+&emsp; We call a map a MONOMORPHISM
 
-*Proof.* 
+**Proposition 1.3.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism, epimorphism, or isomorphism if and only if it the induced map on each stalk is.*
+
+*Proof.* Consider the induced map on the étale spaces:
+
+$$ 
+\xymatrix{ 
+\coprod_{x \in X} F_x \ar[d] \ar[r]^{f^{\#}} & \coprod_{x \in X} F_x \ar[d] \\
+X \ar[r]_{f} & Y
+} 
+$$
+
+
 
 &emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. We denote the maximal ideal in $$ F_x $$ by $$ \fm_x $$. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)}) \subseteq \fm_x $$. FIX INVERSE IMAGE FUNCTOR 
 
 
-### 1.2 The case of manifolds 
+#### 1.2 The case of manifolds 
 
  **Example 1.4.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$, which we denote $$ \cC^{\infty}_M $$. It associates to each open subset $$ U $$ the ring of smooth functions $$ s \colon U \to \RR $$. Notably, $$ (M, \cC^{\infty}_M) $$ is a localy ringed space. Indeed, at any point $$ x \in M $$, a germ $$ (U, f) $$ is equivalent to a smooth function $$ f \colon U \to \RR $$. The maximal ideal $$ \fm_x $$ in $$ F_x $$ is then the set of functions which vanish at $$ x $$, i.e. $$ f(x) = 0 $$. 
  
