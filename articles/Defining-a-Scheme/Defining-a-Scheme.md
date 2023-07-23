@@ -131,7 +131,7 @@ f^{-1}(U) \ar[r]_{f} & U
 } 
 $$
 
-Assume $$ f $$ is a monomorphism on each stalk, and hence $$ \et(f) $$ is a monomorphism.
+Assume $$ f $$ is a monomorphism on each stalk. Then $$ \et(f) $$ is a monomorphism with left inverse $$ \sigma \colon \et(Y) \to \et(X) $$, i.e. $$ \sigma \circ \et(f) = \Id $$. Then we for each $$ s \in G(U) $$, we define $$ g(s) \colon f^{-1}(U) \to \et(X) $$ by taking $$ \sigma \circ s \circ f $$. FINISH
 
 We define a map $$ g \colon Y \to X $$ as follows. For each $$ s \in F(U) $$
 
