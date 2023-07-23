@@ -32,9 +32,9 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim
 
 ## Table of Contents
 1. [Sheaves](#1-sheaves)
-    1.1. [Sheaves and stalks](#1.1-sheaves-and-stalks)
-    1.2. 
-    1.3. 
+    1. [Sheaves and stalks](#1.1-sheaves-and-stalks)
+    2. 
+    3. 
 2. [Zariski Topology](#2-zariski-topology)
 3. [Schemes](#3-schemes)
 4. [References](#4-references)
@@ -113,7 +113,7 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. In fact, $$ \varphi^{-1} $$ is an exact functor, which follows $$ (\varphi^{-1} G)_x \cong G_{f(x)} $$ and Proposition 1.3. USE THIS TO DEFINE INDUCED MAP ON STALKS
+Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. In fact, $$ \varphi^{-1} $$ is an exact functor, which follows $$ (\varphi^{-1} G)_x \cong G_{\varphi(x)} $$ and Proposition 1.3. USE THIS TO DEFINE INDUCED MAP ON STALKS
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
 
@@ -121,7 +121,8 @@ Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \v
 
 **Proposition 1.3.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism (resp. epimorphism, isomorphism) if and only if it the induced map on each stalk is.*
 
-*Proof.* Consider the following diagram, where $$ \et(f)$$ is given by bundling the induced maps on stalks:
+*Proof.* 
+Consider the following diagram, where $$ \et(f)$$ is given by bundling the induced maps on stalks:
 
 $$ 
 \xymatrix{ 
@@ -131,6 +132,8 @@ X \ar[r]_{f} & Y
 $$
 
 Assume $$ f $$ is a monomorphism on each stalk, and hence $$ \et(f) $$ is a monomorphism. Then for an arbitrary section $$ s \colon Y \to \et(Y) $$ for an arbitrary section. 
+
+We define a map $$ g \colon Y \to X $$ as follows. For each $$ s \in F(U) $$
 
 
 
