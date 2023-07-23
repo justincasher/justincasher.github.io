@@ -38,6 +38,8 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim
 
 ## 1. Sheaves
 
+#### Sheaves and stalks
+
 &emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V $$. A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC $$. Elements in $$ F(U) $$ are called *sections* (see Example 1.1). Inclusions are mapped to restrictions, which we denote $$ F(\iota) = \res_{V, U} $$ or $$ F(\iota)(s) = s \mid_{U} $$. 
 
 &emsp; We call a presheaf $$ F $$ a *sheaf* if a gluing condition is satisfied for every open set $$ U $$: For every open cover $$ \{ U_i \}_{i \in I} $$ of $$ U $$ and elements $$ s_i \in F(U_i) $$ such that $$ s_i \mid_{U_i \cap U_j} = s_j \mid_{U_i \cap U_j} $$, there exists a unique $$ s \in F(U) $$ such that $$ s \mid_{U_i} = s_i $$.
@@ -73,6 +75,8 @@ p \colon \coprod_{x \in X} F_x \to X,
 $$
 
 where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, which (with further proof) yields an equivalence between sheaves of sets on $$ X $$ étale maps with codomain $$ X $$. One application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
+
+#### 1.2 Morphisms
 
 &emsp; A morphism between sheaves $$ f^{\#} \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f^{\#} $$ associates to each open subset $$ U $$ a morphism $$ f^{\#}_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -123,11 +127,9 @@ X \ar[r]_{f} & Y
 $$
 
 
+#### 1.3 Locally ringed spaces
 
 &emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. We denote the maximal ideal in $$ F_x $$ by $$ \fm_x $$. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)}) \subseteq \fm_x $$. FIX INVERSE IMAGE FUNCTOR 
-
-
-#### 1.2 The case of manifolds 
 
  **Example 1.4.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$, which we denote $$ \cC^{\infty}_M $$. It associates to each open subset $$ U $$ the ring of smooth functions $$ s \colon U \to \RR $$. Notably, $$ (M, \cC^{\infty}_M) $$ is a localy ringed space. Indeed, at any point $$ x \in M $$, a germ $$ (U, f) $$ is equivalent to a smooth function $$ f \colon U \to \RR $$. The maximal ideal $$ \fm_x $$ in $$ F_x $$ is then the set of functions which vanish at $$ x $$, i.e. $$ f(x) = 0 $$. 
  
