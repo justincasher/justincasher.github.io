@@ -126,12 +126,12 @@ Consider the following diagram, where $$ \et(f)$$ is given by bundling the induc
 
 $$ 
 \xymatrix{ 
-\et(X) \ar[d] \ar[r]^{\et(f)} & \et(Y) \ar[d] \\
-X \ar[r]_{f} & Y
+\et(f^{-1}(U)) \ar[d] \ar[r]^{\et(f)} & \et(V) \ar[d] \\
+f^{-1}(U) \ar[r]_{f} & U
 } 
 $$
 
-Assume $$ f $$ is a monomorphism on each stalk, and hence $$ \et(f) $$ is a monomorphism. Then for an arbitrary section $$ s \colon Y \to \et(Y) $$ for an arbitrary section. 
+Assume $$ f $$ is a monomorphism on each stalk, and hence $$ \et(f) $$ is a monomorphism.
 
 We define a map $$ g \colon Y \to X $$ as follows. For each $$ s \in F(U) $$
 
