@@ -96,7 +96,7 @@ $$
 
 *are true.*
 	
-*Proof.* &nbsp; Let us prove the second equation with the first following similarly. Substituting, we get 
+*Proof.* Let us prove the second equation with the first following similarly. Substituting, we get 
 
 $$
 \begin{aligned}
@@ -121,7 +121,7 @@ $$
 
 *holds.*
 	
-*Proof.* &nbsp; We leave the details of this proof to the reader. Taking the derivative with respect to $$ k_1 $$ shows that the L.H.S. is constant. To see that this value is $$ \pi/2 $$, we take the limit as $$ k_1 $$ goes to $$ 0 $$. $$ \blacksquare $$
+*Proof.* We leave the details of this proof to the reader. Taking the derivative with respect to $$ k_1 $$ shows that the L.H.S. is constant. To see that this value is $$ \pi/2 $$, we take the limit as $$ k_1 $$ goes to $$ 0 $$. $$ \blacksquare $$
 	
 	
 ## 3. Main results
@@ -136,7 +136,7 @@ $$
 
 the *arithmetic-geometric (AM-GM) mean* of $$ a_0 $$ and $$ b_0 $$.
 	
-**Theorem.** (Gauss-Legendre). &nbsp; *Set $$ a_0 = 1 $$ and $$ b_0 = \sqrt{2}/2 $$. Then the series*
+**Theorem** (Gauss-Legendre). &nbsp; *Set $$ a_0 = 1 $$ and $$ b_0 = \sqrt{2}/2 $$. Then the series*
 
 $$
 	\pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}}
@@ -146,15 +146,15 @@ $$
 		
 &emsp; We need two lemmas in order to prove our result. 
 		
-**Lemma 3.1.** &nbsp; Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
+**Lemma 3.1.** &nbsp; *Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
 
 $$
 	S = a^2 - \sum_{n=0}^{\infty} 2^{n-1} \left( a_n^2 - b_n^2 \right).
 $$
 
-Then $$ E_S(a, b) = S F_S(a, b) $$. $$ \blacksquare $$
+Then $$ E_S(a, b) = S F_S(a, b) $$.*
 	
-*Proof.* &nbsp; This proof is taken from [\[5\]](#4-references). Consider the integral 
+*Proof.* This proof is taken from [\[5\]](#4-references). Consider the integral 
 
 $$
     L(a, b)
@@ -207,20 +207,20 @@ $$
 
 Combining this equation with (2) gives us the result. $$ \blacksquare $$
 	
-**Lemma 3.2.** &nbsp; *The identity*
+**Lemma 3.2.** &nbsp; *We have*
 
 $$
 F_S(a, b) = \frac{\pi}{2 M(a, b)}
 $$
 
-*holds. In particular,*
+*In particular,*
 
 $$
 F_S(1, \sqrt{2}) = \frac{\pi}{2 M(1, \sqrt{2})}.
 $$
 
 		
-*Proof.* &nbsp; It is not hard to calculate the power series expansion
+*Proof.* It is not hard to calculate the power series expansion
 
 $$
 	F(k)
@@ -245,7 +245,7 @@ with the last equality following from the identity $$ M(ca, cb) = cM(a, b) $$. $
 		
 &emsp; We finally have the tools we need to prove the Gauss-Legendre Algorithm does indeed converge to $$ \pi $$.
 		
-*Proof (Gauss-Legendre).* &nbsp; Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply [Proposition 2.2](https://www.justinasher.me/Gauss-Legendre-P2:2) to get
+*Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply [Proposition 2.2](https://www.justinasher.me/Gauss-Legendre-P2:2) to get
 
 $$
 	2 F (k) E (k) - F(k)^2 = \frac{\pi}{2}.

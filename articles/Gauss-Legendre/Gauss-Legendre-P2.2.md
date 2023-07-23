@@ -15,4 +15,4 @@ $$
 
 *holds.*
 	
-*Proof.* &nbsp; We leave the details of this proof to the reader. Taking the derivative with respect to $$ k_1 $$ shows that the L.H.S. is constant. To see that this value is $$ \pi/2 $$, we take the limit as $$ k_1 $$ goes to $$ 0 $$. $$ \blacksquare $$
+*Proof.* We leave the details of this proof to the reader. Taking the derivative with respect to $$ k_1 $$ shows that the L.H.S. is constant. To see that this value is $$ \pi/2 $$, we take the limit as $$ k_1 $$ goes to $$ 0 $$. $$ \blacksquare $$

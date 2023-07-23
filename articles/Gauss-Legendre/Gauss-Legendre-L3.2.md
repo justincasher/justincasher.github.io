@@ -7,20 +7,20 @@ title: The Gauss-Legendre Algorithm
 ---
 <br>
 
-**Lemma 3.2.** &nbsp; *The identity*
+**Lemma 3.2.** &nbsp; *We have*
 
 $$
 F_S(a, b) = \frac{\pi}{2 M(a, b)}
 $$
 
-*holds. In particular,*
+*In particular,*
 
 $$
 F_S(1, \sqrt{2}) = \frac{\pi}{2 M(1, \sqrt{2})}.
 $$
 
 		
-*Proof.* &nbsp; It is not hard to calculate the power series expansion
+*Proof.* It is not hard to calculate the power series expansion
 
 $$
 	F(k)

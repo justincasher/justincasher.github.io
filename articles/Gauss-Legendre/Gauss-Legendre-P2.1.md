@@ -18,7 +18,7 @@ $$
 
 *are true.*
 	
-*Proof.* &nbsp; Let us prove the second equation with the first following similarly. Substituting, we get 
+*Proof.* Let us prove the second equation with the first following similarly. Substituting, we get 
 
 $$
 \begin{aligned}

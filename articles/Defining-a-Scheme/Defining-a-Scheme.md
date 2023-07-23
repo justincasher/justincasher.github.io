@@ -38,7 +38,7 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim
 
 ## 1. Sheaves
 
-#### Sheaves and stalks
+#### 1.1 Sheaves and stalks
 
 &emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V $$. A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC $$. Elements in $$ F(U) $$ are called *sections* (see Example 1.1). Inclusions are mapped to restrictions, which we denote $$ F(\iota) = \res_{V, U} $$ or $$ F(\iota)(s) = s \mid_{U} $$. 
 
@@ -71,12 +71,13 @@ where $$ (U_1, s_1) \sim (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \c
 &emsp; Bundling the stalks gives us the *étale space* over $$ X $$
 
 $$
-p \colon \coprod_{x \in X} F_x \to X,
+p \colon \et(X) = \coprod_{x \in X} F_x \to X,
 $$
 
 where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, which (with further proof) yields an equivalence between sheaves of sets on $$ X $$ étale maps with codomain $$ X $$. One application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
-#### 1.2 Morphisms
+
+#### 1.2 Morphisms of sheaves
 
 &emsp; A morphism between sheaves $$ f^{\#} \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f^{\#} $$ associates to each open subset $$ U $$ a morphism $$ f^{\#}_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -121,7 +122,7 @@ Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \v
 
 $$ 
 \xymatrix{ 
-{\displaystyle \coprod_{x \in X} F_x} \ar[d] \ar[r]^{f^{\#}} & {\displaystyle \coprod_{x \in X} F_x} \ar[d] \\
+\et(X) \ar[d] \ar[r]^{f^{\#}} & \et(Y) \ar[d] \\
 X \ar[r]_{f} & Y
 } 
 $$
@@ -140,6 +141,7 @@ $$
 *Proof.* Prove this!
 
 **Corollary 1.5.** &nbsp; *The category of smooth manifolds is equivalent to the category of locally ringed spaces locally isomorphic to affine space.* 
+
 
 
 ## 2. Zariski Topology

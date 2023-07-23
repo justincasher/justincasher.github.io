@@ -51,7 +51,7 @@ where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: fo
 
 **Lemma 1.** &nbsp; *Let $$ X $$ be a locally connected space. A sheaf $$ F $$ of $$ R $$-modules on $$ X $$ is locally constant if and only if its étale space is a covering.*
 
-*Proof.* &nbsp; Suppose the étale space of $$ F $$ is a covering. Then every point $$ x \in X $$ has a neighborhood $$ U $$ such that the restriction is $$ p \colon U \times M \to U $$. Assuming $$ U $$ to be connected implies that the sections of this map are constant since the topology on $$ M $$ is discrete, and thus our sheaf is constant on $$ U $$. $$ \blacksquare $$
+*Proof.* Suppose the étale space of $$ F $$ is a covering. Then every point $$ x \in X $$ has a neighborhood $$ U $$ such that the restriction is $$ p \colon U \times M \to U $$. Assuming $$ U $$ to be connected implies that the sections of this map are constant since the topology on $$ M $$ is discrete, and thus our sheaf is constant on $$ U $$. $$ \blacksquare $$
 
 
 **Lemma 2.** &nbsp; *A locally constant sheaf on a simply connected space is constant.*
@@ -94,7 +94,7 @@ We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ a
 
 &emsp; Finally suppose we are given a natural transformation $$ \eta \colon L \to L' $$ between local systems. Then $$ \eta $$ induces a morphism $$ \CB(\eta) \colon \CB(L) \to \CB(L') $$ by pulling back sections, i.e. for each open subset $$ U $$, we map $$ s \in \CB(L)(U) $$ to $$ \eta \circ s $$. This is indeed a morphism of sheaves since $$ \eta $$ is functorial.
 
-*Proof (Theorem).* &nbsp; Tracing through our definitions, it is not hard to see that $$ (\CA \circ \CB)(L) = L $$ and $$ (\CB \circ \CA)(F) = F $$. $$ \blacksquare $$
+*Proof (Theorem).* Tracing through our definitions, it is not hard to see that $$ (\CA \circ \CB)(L) = L $$ and $$ (\CB \circ \CA)(F) = F $$. $$ \blacksquare $$
 
 
 ## 3. References

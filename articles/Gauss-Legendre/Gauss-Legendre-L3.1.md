@@ -7,15 +7,15 @@ title: The Gauss-Legendre Algorithm
 ---
 <br>
 		
-**Lemma 3.1.** &nbsp; Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
+**Lemma 3.1.** &nbsp; *Let $$ a_0 = a $$ and $$ b_0 = b $$ as in Definition 3.1. Set
 
 $$
 	S = a^2 - \sum_{n=0}^{\infty} 2^{n-1} \left( a_n^2 - b_n^2 \right).
 $$
 
-Then $$ E_S(a, b) = S F_S(a, b) $$. $$ \blacksquare $$
+Then $$ E_S(a, b) = S F_S(a, b) $$.*
 	
-*Proof.* &nbsp; Consider the integral 
+*Proof.* Consider the integral 
 
 $$
     L(a, b)
