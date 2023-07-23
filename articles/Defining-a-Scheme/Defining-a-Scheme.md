@@ -32,13 +32,16 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim
 
 ## Table of Contents
 1. [Sheaves](#1-sheaves)
+    1.1. [Sheaves and stalks](#1.1-sheaves-and-stalks)
+    1.2. 
+    1.3. 
 2. [Zariski Topology](#2-zariski-topology)
 3. [Schemes](#3-schemes)
 4. [References](#4-references)
 
 ## 1. Sheaves
 
-#### 1.1 Sheaves and stalks
+#### 1.1. Sheaves and stalks
 
 &emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V $$. A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC $$. Elements in $$ F(U) $$ are called *sections* (see Example 1.1). Inclusions are mapped to restrictions, which we denote $$ F(\iota) = \res_{V, U} $$ or $$ F(\iota)(s) = s \mid_{U} $$. 
 
@@ -77,7 +80,7 @@ $$
 where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, which (with further proof) yields an equivalence between sheaves of sets on $$ X $$ étale maps with codomain $$ X $$. One application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
 
-#### 1.2 Morphisms of sheaves
+#### 1.2. Morphisms of sheaves
 
 &emsp; A morphism between sheaves $$ f^{\#} \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f^{\#} $$ associates to each open subset $$ U $$ a morphism $$ f^{\#}_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -110,25 +113,28 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. In fact, $$ \varphi^{-1} $$ is an exact functor, which follows $$ (\varphi^{-1} G)_x \cong G_{f(x)} $$ combined with Proposition 1.3.
+Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. In fact, $$ \varphi^{-1} $$ is an exact functor, which follows $$ (\varphi^{-1} G)_x \cong G_{f(x)} $$ and Proposition 1.3. USE THIS TO DEFINE INDUCED MAP ON STALKS
 
-&emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous function $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
+&emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
 
 &emsp; We call a map a MONOMORPHISM
 
-**Proposition 1.3.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism, epimorphism, or isomorphism if and only if it the induced map on each stalk is.*
+**Proposition 1.3.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism (resp. epimorphism, isomorphism) if and only if it the induced map on each stalk is.*
 
-*Proof.* Consider the induced map on the étale spaces:
+*Proof.* Consider the following diagram, where $$ \et(f)$$ is given by bundling the induced maps on stalks:
 
 $$ 
 \xymatrix{ 
-\et(X) \ar[d] \ar[r]^{f^{\#}} & \et(Y) \ar[d] \\
+\et(X) \ar[d] \ar[r]^{\et(f)} & \et(Y) \ar[d] \\
 X \ar[r]_{f} & Y
 } 
 $$
 
+Assume $$ f $$ is a monomorphism on each stalk, and hence $$ \et(f) $$ is a monomorphism. Then for an arbitrary section $$ s \colon Y \to \et(Y) $$ for an arbitrary section. 
 
-#### 1.3 Locally ringed spaces
+
+
+#### 1.3. Locally ringed spaces
 
 &emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. We denote the maximal ideal in $$ F_x $$ by $$ \fm_x $$. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)}) \subseteq \fm_x $$. FIX INVERSE IMAGE FUNCTOR 
 
