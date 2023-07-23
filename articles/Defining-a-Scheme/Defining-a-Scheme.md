@@ -115,13 +115,14 @@ Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \v
 
  **Example 1.4.** &nbsp; Write $$ M $$ for a smooth (real manifold) of dimension $$ n $$, and consider the sheaf of smooth sections of the trivial bundle $$ M \times \RR \to M $$, which we denote $$ \cC^{\infty}_M $$. It associates to each open subset $$ U $$ the ring of smooth functions $$ s \colon U \to \RR $$. Notably, $$ (M, \cC^{\infty}_M) $$ is a localy ringed space. Indeed, at any point $$ x \in M $$, a germ $$ (U, f) $$ is equivalent to a smooth function $$ f \colon U \to \RR $$. The maximal ideal $$ \fm_x $$ in $$ F_x $$ is then the set of functions which vanish at $$ x $$, i.e. $$ f(x) = 0 $$. 
  
+## 1.2 The case of manifolds 
 &emsp; Write $$ A $$ for a subset of $$ \RR^n $$ and $$ \cC^{\infty}_A $$ its sheaf of smooth functions. The following proposition shows that we could equivalently define a smooth manifold as a locally ringed spaced which is locally isomorphic to an affine space $$ (A, C^{\infty}_A) $$.
 
-**Proposition 1.5.** &nbsp; Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism of locally ringed spaces, then $$ M $$ and $$ N $$ are diffeomorphic.
+**Proposition 1.5.** &nbsp; *Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism of locally ringed spaces, then $$ M $$ and $$ N $$ are diffeomorphic.*
 
 *Proof.* Prove this!
 
-**Corollary 1.5.** &nbsp; The category of smooth manifolds is equivalent to the category of locally ringed spaces locally isomorphic to affine space. 
+**Corollary 1.5.** &nbsp; *The category of smooth manifolds is equivalent to the category of locally ringed spaces locally isomorphic to affine space.* 
 
 
 # 2. Zariski Topology
