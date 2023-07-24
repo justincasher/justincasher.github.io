@@ -32,16 +32,13 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim
 
 ## Table of Contents
 1. [Sheaves](#1-sheaves)
-    1. [Sheaves and stalks](#1.1-sheaves-and-stalks)
-    2. 
-    3. 
 2. [Zariski Topology](#2-zariski-topology)
 3. [Schemes](#3-schemes)
 4. [References](#4-references)
 
 ## 1. Sheaves
 
-#### 1.1. Sheaves and stalks
+#### Sheaves and stalks
 
 &emsp; Let $$ X $$ be a topological space. Then associated to $$ X $$ is a category $$ \Op(X) $$, whose objects are the open subsets of $$ X $$ and morphisms are the inclusion maps $$ \iota \colon U \hookrightarrow V $$ when $$ U \subseteq V $$. A *presheaf of $$ \cC $$* is a contravariant functor $$ F \colon \Op(X) \to \cC $$. Elements in $$ F(U) $$ are called *sections* (see Example 1.1). Inclusions are mapped to restrictions, which we denote $$ F(\iota) = \res_{V, U} $$ or $$ F(\iota)(s) = s \mid_{U} $$. 
 
@@ -80,7 +77,7 @@ $$
 where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, which (with further proof) yields an equivalence between sheaves of sets on $$ X $$ étale maps with codomain $$ X $$. One application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
 
-#### 1.2. Morphisms of sheaves
+#### Morphisms of sheaves
 
 &emsp; A morphism between sheaves $$ f^{\#} \colon F \to G $$ on a fixed space $$ X $$ is a morphism of functors, and hence a natural transformation. Explicitly, $$ f^{\#} $$ associates to each open subset $$ U $$ a morphism $$ f^{\#}_U \colon F(U) \to G(U) $$ such that the following diagram commutes:
 
@@ -137,7 +134,7 @@ We define a map $$ g \colon Y \to X $$ as follows. For each $$ s \in F(U) $$
 
 
 
-#### 1.3. Locally ringed spaces
+#### Locally ringed spaces
 
 &emsp; We conclude this section by discussing locally ringed spaces, which arise naturally in geometry. Let $$ X $$ be a topological space and $$ \CO_X $$ a sheaf of rings such that each stalk $$ \CO_{X, x} $$ is a local ring. Then we call the pair $$ (X, \CO_x) $$ a *locally ringed space*. We denote the maximal ideal in $$ F_x $$ by $$ \fm_x $$. A morphism of locally ringed spaces $$ (f, f^{\#}) \colon (X, \CO_X) \to (Y, \CO_Y) $$ is a map of sheaves of rings, such at each stalk, the map $$ f_x \colon \CO_{Y, f(x)} \to \CO_{X, x} $$ is a local ring homomorphism, i.e. $$ f_x(\fm_{f(x)}) \subseteq \fm_x $$. FIX INVERSE IMAGE FUNCTOR 
 
@@ -171,7 +168,7 @@ $$
 
 The following proposition shows that these form the closed sets for what we call the *Zariski topology* on $$ \Spec R $$. 
 
-**Proposition 2.1.** &nbsp; The sets $$ V(\fa) $$ are the closed sets of a topology on $$ \Spec R $$.
+**Proposition 2.1.** &nbsp; *The sets $$ V(\fa) $$ form the closed sets for a topology on $$ \Spec R $$.*
 
 *Proof.* To show arbitrary intersections, let $$ \fa_i $$ be a (possibility infinite) family of ideals, and observe
 
