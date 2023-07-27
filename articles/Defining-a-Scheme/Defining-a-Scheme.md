@@ -44,10 +44,10 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om} \DeclareMathOperator{\colim}{colim
 
 &emsp; We call a presheaf $$ F $$ a *sheaf* if a gluing condition is satisfied for every open set $$ U $$: For every open cover $$ \{ U_i \}_{i \in I} $$ of $$ U $$ and elements $$ s_i \in F(U_i) $$ such that $$ s_i \mid_{U_i \cap U_j} = s_j \mid_{U_i \cap U_j} $$, there exists a unique $$ s \in F(U) $$ such that $$ s \mid_{U_i} = s_i $$.
 
-**Example 1.1.** &nbsp; Let $$ \varphi \colon Y \to X $$ be a continuous function. Associated to $$ \varphi $$ is a *sheaf of sections* $$ \Gamma_\varphi $$, which maps each open subset of $$ X $$ to the set of sections on $$ X $$:
+**Example 1.1a.** &nbsp; Let $$ \varphi \colon Y \to X $$ be a continuous function. Associated to $$ \varphi $$ is a *sheaf of sections* $$ \Gamma_\varphi $$, which maps each open subset of $$ X $$ to the set of sections on $$ X $$:
 
 $$
-\Gamma_{\varphi}(U) = \{ s \colon U \to Y \mid f \circ s = \Id_U \},
+\Gamma_{\varphi}(U) = \{ s \colon U \to Y \mid \varphi \circ s = \Id_U \},
 $$
 
 and whose restriction maps are given by restricting the individual sections, i.e. $$ \res_{U, V}(s) = s \mid_{V} $$. It is clear that this is indeed a sheaf. This is the canonical example from which sheaves are derived.
@@ -66,7 +66,7 @@ $$
 
 where $$ (U_1, s_1) \sim (U_2, s_2) $$ if there exists a $$ U_3 \subseteq U_1 \cap U_2 $$ such that $$ s_1 \mid_{U_3} = s_2 \mid_{U_3} $$. Elements of the stalk $$ (U, s) $$ are referred to as *germs*.
 
-**Example 1.2.** &nbsp; Let $$ M $$ be a manifold. Consider the sheaf $$ T $$ of all 1-dimensional submanifolds. Then the stalk $$ T_x $$ of this sheaf is the tangent space of $$ M $$ at $$ x $$.
+**Example 1.1b.** &nbsp; With $$ \varphi $$ as above, we see that $$ (\Gamma_\varphi)_x $$ is the set of sections $$ s \colon U \to Y $$ with $$ x \in U $$ modulo if two sections agree on any neighborhood of $$ x $$.
 
 &emsp; Bundling the stalks gives us the *étale space* over $$ X $$
 
@@ -74,7 +74,26 @@ $$
 p \colon \et(X) = \coprod_{x \in X} F_x \to X,
 $$
 
-where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, which (with further proof) yields an equivalence between sheaves of sets on $$ X $$ étale maps with codomain $$ X $$. One application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
+where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, which (with further proof) yields an equivalence between sheaves of sets on $$ X $$ étale maps with codomain $$ X $$. 
+
+**Proposition 1.2.** &nbsp; There is an equivalence between the categories of sheaves on $$ X $$ and étale spaces over $$ X $$, which is given by sending a sheaf to its étale space and an étale space to its sheaf of sections.
+
+*Proof.* See MAC LANE REFERENCE
+
+&emsp; One application of the étale space is sheafification. Given a presheaf $$ F $$ on $$ X $$, we would like to find the smallest sheaf $$ F^{sh} $$ which $$ F $$ factors through. This means for any sheaf $$ G $$ on $$ X $$ and morphism (i.e. natural transformation) of presheaves $$ f \colon F \to G $$, there exists a morphism $$ f^{sh} \colon F^{sh} \to G $$ making the following diagram commute:
+
+$$ 
+\xymatrix{ 
+F \ar[d] \ar[r]^{f} & G  \\
+F^{sh} \ar[ur]_{f^{sh}} & 
+} 
+$$
+
+We can define $$ F^{sh} $$ by taking the sheaf of sections of the étale space of $$ F $$, and call it the *sheafification* of $$ F $$.
+
+**Proposition 1.3.** PROVE THIS IS MINIMAL
+
+ Another application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
 
 #### Morphisms of sheaves
