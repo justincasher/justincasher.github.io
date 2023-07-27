@@ -76,9 +76,9 @@ $$
 
 where $$ F_x $$ is mapped to $$ x $$. Recall that a local homeomorphism is also called an étale map. If we equip each stalk with the discrete topology, then $$ p $$ is étale: for any germ $$ (U, s) $$, we have $$ \coprod_{x \in U} \{s\} $$ is homeomorphic to $$ U $$. Importantly, $$ \Gamma_p(U) = F(U) $$, which (with further proof) yields an equivalence between sheaves of sets on $$ X $$ étale maps with codomain $$ X $$. 
 
-**Proposition 1.2.** &nbsp; There is an equivalence between the categories of sheaves on $$ X $$ and étale spaces over $$ X $$, which is given by sending a sheaf to its étale space and an étale space to its sheaf of sections.
+**Theorem 1.2.** &nbsp; There is an equivalence between the categories of sheaves on $$ X $$ and étale spaces over $$ X $$, which is given by sending a sheaf to its étale space and an étale space to its sheaf of sections.
 
-*Proof.* See MAC LANE REFERENCE
+*Proof.* See MAC LANE REFERENCE page 88 cor 3
 
 &emsp; One application of the étale space is sheafification. Given a presheaf $$ F $$ on $$ X $$, we would like to find the smallest sheaf $$ F^{sh} $$ which $$ F $$ factors through. This means for any sheaf $$ G $$ on $$ X $$ and morphism (i.e. natural transformation) of presheaves $$ f \colon F \to G $$, there exists a morphism $$ f^{sh} \colon F^{sh} \to G $$ making the following diagram commute:
 
@@ -93,7 +93,7 @@ We can define $$ F^{sh} $$ by taking the sheaf of sections of the étale space o
 
 **Proposition 1.3.** PROVE THIS IS MINIMAL
 
- Another application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
+ &emsp; Another application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
 
 #### Morphisms of sheaves
@@ -129,28 +129,37 @@ $$
 \CHom(\varphi^{-1} G, F) = \CHom(G, \varphi_* F).
 $$
 
-Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. In fact, $$ \varphi^{-1} $$ is an exact functor, which follows $$ (\varphi^{-1} G)_x \cong G_{\varphi(x)} $$ and Proposition 1.3. USE THIS TO DEFINE INDUCED MAP ON STALKS
+Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. 
+
+**Proposition 1.4.**
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
 
-&emsp; We call a map a MONOMORPHISM
+&emsp; Recall that in a given category we call a map $$ f \colon F \to G $$
+<ol type="a" class="custom" style="list-style-position: outside">
+  <li>a *monomorphism* if for any \( g_1, g_2 \colon E \to F \) we have \( f \circ g_1 = f \circ g_2 \) implies \( g_1 = g_2 \);</li>
+  
+  <li>an *epimorphism* if for any \( h_1, h_2 \colon G \to H \) we have \( h_1 \circ f = h_2 \circ f \) implies \( h_1 = h_2 \); </li>
+  
+  <li>an *isomorphism* if there exists a \( f^{-1} \colon G \to F \) such that \( f^{-1} \circ f = \Id_F \) and \( f \circ f^{-1} = \Id_G \);</li>
+</ol>
 
-**Proposition 1.3.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism (resp. epimorphism, isomorphism) if and only if it the induced map on each stalk is.*
+**Proposition 1.5.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism (resp. epimorphism, isomorphism) if and only if it the induced map on each stalk is.*
 
-*Proof.* 
-Consider the following diagram, where $$ \et(f)$$ is given by bundling the induced maps on stalks:
+*Proof.* It is clear that if $$ f $$ is a monomorphism then the map induced on stalks is (WHY?). Therefore, suppose $$ f $$ induces a monomorphism on each stalk. Consider the following diagram, where $$ \et(f)$$ is given by bundling the induced maps on stalks:
 
 $$ 
 \xymatrix{ 
-\et(f^{-1}(U)) \ar[d] \ar[r]^{\et(f)} & \et(V) \ar[d] \\
-f^{-1}(U) \ar[r]_{f} & U
+\et(X) \ar[d] \ar[r]^{\et(f)} & \et(Y) \ar[d] \\
+X \ar[r]_{f} & Y
 } 
 $$
 
-Assume $$ f $$ is a monomorphism on each stalk. Then $$ \et(f) $$ is a monomorphism with left inverse $$ \sigma \colon \et(Y) \to \et(X) $$, i.e. $$ \sigma \circ \et(f) = \Id $$. Then we for each $$ s \in G(U) $$, we define $$ g(s) \colon f^{-1}(U) \to \et(X) $$ by taking $$ \sigma \circ s \circ f $$. FINISH
+We see that $$ \et(f) $$ is a monomorphism  FINISH
 
 We define a map $$ g \colon Y \to X $$ as follows. For each $$ s \in F(U) $$
 
+**Corollary 1.6.** The inverse image functor is exact.
 
 
 #### Locally ringed spaces
@@ -161,11 +170,11 @@ We define a map $$ g \colon Y \to X $$ as follows. For each $$ s \in F(U) $$
  
 &emsp; Write $$ A $$ for a subset of $$ \RR^n $$ and $$ \cC^{\infty}_A $$ its sheaf of smooth functions. The following proposition shows that we could equivalently define a smooth manifold as a locally ringed spaced which is locally isomorphic to an affine space $$ (A, C^{\infty}_A) $$.
 
-**Proposition 1.5.** &nbsp; *Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism of locally ringed spaces, then $$ M $$ and $$ N $$ are diffeomorphic.*
+**Proposition 1.7.** &nbsp; *Let $$ M $$ and $$ N $$ be smooth manifolds. If there exists a homeomorphism $$ f \colon M \to N $$ such that $$ \cC^{\infty}_N \to \cC^{\infty}_M $$ is a local isomorphism of locally ringed spaces, then $$ M $$ and $$ N $$ are diffeomorphic.*
 
 *Proof.* Prove this!
 
-**Corollary 1.5.** &nbsp; *The category of smooth manifolds is equivalent to the category of locally ringed spaces locally isomorphic to affine space.* 
+**Corollary 1.8.** &nbsp; *The category of smooth manifolds is equivalent to the category of locally ringed spaces locally isomorphic to affine space.* 
 
 
 
