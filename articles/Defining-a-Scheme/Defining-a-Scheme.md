@@ -89,11 +89,9 @@ F^{sh} \ar[ur]_{f^{sh}} &
 } 
 $$
 
-We can define $$ F^{sh} $$ by taking the sheaf of sections of the étale space of $$ F $$, and call it the *sheafification* of $$ F $$.
+We can construct $$ F^{sh} $$ by taking the sheaf of sections of the étale space of $$ F $$, and call it the *sheafification* of $$ F $$.
 
 **Proposition 1.3.** PROVE THIS IS MINIMAL
-
- &emsp; Another application is that the étale space can be used to show that [local systems are locally constant sheaves](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves). 
 
 
 #### Morphisms of sheaves
@@ -131,7 +129,15 @@ $$
 
 Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. 
 
-**Proposition 1.4.**
+**Proposition 1.4.** &nbsp; Let $$ \varphi \colon X \to Y $$ be continuous and $$ G $$ a sheaf on $$ Y $$. Then $$ (\varphi^{-1} G)_x \cong G_{\varphi(x)} $$. 
+
+*Proof.* Indeed,
+
+$$
+$$
+(\varphi^{-1} G)_x = \underset{x \in U}{\colim} \underset{\varphi(U) \subseteq V}{\colim} G(V)
+$$
+$$
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
 
