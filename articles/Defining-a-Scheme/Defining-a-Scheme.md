@@ -140,6 +140,7 @@ $$
 & = \underset{f(x) \in V}{\colim} G(V),
 \end{aligned}
 $$
+
 where the second equality follows from continuity. $$ \blacksquare $$
 
 
