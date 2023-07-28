@@ -134,20 +134,18 @@ Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \v
 *Proof.* Indeed,
 
 $$
-$$
 (\varphi^{-1} G)_x = \underset{x \in U}{\colim} \underset{\varphi(U) \subseteq V}{\colim} G(V)
-$$
 $$
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
 
-&emsp; Recall that in a given category we call a map $$ f \colon F \to G $$
-<ol type="1" class="custom" style="list-style-position: outside">
-  <li>a *monomorphism* if for any \( g_1, g_2 \colon E \to F \) we have \( f \circ g_1 = f \circ g_2 \) implies \( g_1 = g_2 \);</li>
+&emsp; Recall for a fixed morphism $$ f \colon F \to G $$ in an arbitrary category, we have the following notions:
+<ol type="a" class="custom" style="list-style-position: outside">
+  <li>We call $$ f $$ *monomorphism* if for any \( g_1, g_2 \colon E \to F \) we have \( f \circ g_1 = f \circ g_2 \) implies \( g_1 = g_2 \);</li>
   
-  <li>an *epimorphism* if for any \( h_1, h_2 \colon G \to H \) we have \( h_1 \circ f = h_2 \circ f \) implies \( h_1 = h_2 \); </li>
+  <li>We call $$ f $$ an *epimorphism* if for any \( h_1, h_2 \colon G \to H \) we have \( h_1 \circ f = h_2 \circ f \) implies \( h_1 = h_2 \); </li>
   
-  <li>an *isomorphism* if there exists a \( f^{-1} \colon G \to F \) such that \( f^{-1} \circ f = \Id_F \) and \( f \circ f^{-1} = \Id_G \);</li>
+  <li>We call $$ f $$ an *isomorphism* if there exists a \( f^{-1} \colon G \to F \) such that \( f^{-1} \circ f = \Id_F \) and \( f \circ f^{-1} = \Id_G \);</li>
 </ol>
 
 **Proposition 1.5.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism (resp. epimorphism, isomorphism) if and only if it the induced map on each stalk is.*
