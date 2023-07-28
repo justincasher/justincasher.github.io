@@ -137,9 +137,11 @@ $$
 \begin{aligned}
 (\varphi^{-1} G)_x 
 & = \underset{x \in U}{\colim} \underset{\varphi(U) \subseteq V}{\colim} G(V) \\
-& = 
+& = \underset{f(x) \in V}{\colim} G(V),
 \end{aligned}
 $$
+where the second equality follows from continuity. $$ \blacksquare $$
+
 
 &emsp; Hence, a morphism of sheaves $$ (f, f^{\#}) \colon (X, F) \to (Y, G) $$ is given by a continuous $$ f \colon X \to Y $$ and a map $$ f^{\#} \in \CHom(G, f_* F) $$. Using the adjoint relation, we can also consider $$ f^{\#} $$ as an element in $$ \CHom( f^{-1} G, F) $$. We will often use the supressed notation $$ f \colon F \to G $$ to denote a morphism. 
 
