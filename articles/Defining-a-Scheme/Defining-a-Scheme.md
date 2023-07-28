@@ -147,11 +147,11 @@ where the second equality follows from continuity. $$ \blacksquare $$
 
 &emsp; Recall for a fixed morphism $$ f \colon F \to G $$ in an arbitrary category, we have the following notions:
 <ol type="a" class="custom" style="list-style-position: outside">
-  <li>We call $$ f $$ *monomorphism* if for any \( g_1, g_2 \colon E \to F \) we have \( f \circ g_1 = f \circ g_2 \) implies \( g_1 = g_2 \);</li>
+  <li>We call \( f \) a *monomorphism* if for any \( g_1, g_2 \colon E \to F \) we have \( f \circ g_1 = f \circ g_2 \) implies \( g_1 = g_2 \);</li>
   
-  <li>We call $$ f $$ an *epimorphism* if for any \( h_1, h_2 \colon G \to H \) we have \( h_1 \circ f = h_2 \circ f \) implies \( h_1 = h_2 \); </li>
+  <li>We call \( f \) an *epimorphism* if for any \( h_1, h_2 \colon G \to H \) we have \( h_1 \circ f = h_2 \circ f \) implies \( h_1 = h_2 \); </li>
   
-  <li>We call $$ f $$ an *isomorphism* if there exists a \( f^{-1} \colon G \to F \) such that \( f^{-1} \circ f = \Id_F \) and \( f \circ f^{-1} = \Id_G \);</li>
+  <li>We call \( f \) an *isomorphism* if there exists a \( f^{-1} \colon G \to F \) such that \( f^{-1} \circ f = \Id_F \) and \( f \circ f^{-1} = \Id_G \);</li>
 </ol>
 
 **Proposition 1.5.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism (resp. epimorphism, isomorphism) if and only if it the induced map on each stalk is.*
@@ -166,8 +166,6 @@ X \ar[r]_{f} & Y
 $$
 
 We see that $$ \et(f) $$ is a monomorphism  FINISH
-
-We define a map $$ g \colon Y \to X $$ as follows. For each $$ s \in F(U) $$
 
 **Corollary 1.6.** The inverse image functor is exact.
 
