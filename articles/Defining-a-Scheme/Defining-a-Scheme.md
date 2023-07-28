@@ -129,7 +129,7 @@ $$
 
 Since every right (resp. left) adjoint is left (resp. right) exact, we see $$ \varphi_* F $$ is left exact and $$ \varphi^{-1} $$ is right exact. 
 
-**Proposition 1.4.** &nbsp; Let $$ \varphi \colon X \to Y $$ be continuous and $$ G $$ a sheaf on $$ Y $$. Then $$ (\varphi^{-1} G)_x \cong G_{\varphi(x)} $$. 
+**Lemma 1.4.** &nbsp; Let $$ \varphi \colon X \to Y $$ be continuous and $$ G $$ a sheaf on $$ Y $$. Then $$ (\varphi^{-1} G)_x \cong G_{\varphi(x)} $$. 
 
 *Proof.* Indeed,
 
