@@ -665,10 +665,10 @@ $$
 *Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Expanding $$ f_n(x) $$, we have 
 
 $$
-f_n(x) = \frac{1}{2^n} \left( \sum_{n=-2^{n-1}-1}^{2^{n-1}+1} f(x+\frac{n}{2^{n}}) \right)
+f_n(x) = \frac{1}{2^n} \left( \sum_{a=-2^{n-1}-1}^{2^{n-1}+1} f(x+\frac{a}{2^{n}}) \right)
 $$
 
-with the sum skipping $$ n = 0 $$. Hence, for each $$ k > 0 $$, we have 
+with the sum skipping $$ a = 0 $$. Hence, for each $$ k > 0 $$, we have 
 
 $$
 \| f_n(x) - f_{n+k} \|
