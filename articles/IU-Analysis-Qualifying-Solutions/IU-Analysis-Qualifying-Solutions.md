@@ -288,8 +288,17 @@ which reduces to $$ 2 \leq x_n $$. This is true by (a).
 
 (c) Our sequence is bounded below and monotonically decreasing, so it has a limit.
 
-(d) Define $$ f \colon [1.5, \infty) \to [1.5, \infty) $$ by $$ f = \frac{1}{2}(x + \frac{4}{x}) $$. Then $$ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $$ is strictly less than $$ 1 $$ for our domain, so $$ f $$ is a contraction. Applying the Banach Fixed Point Theorem to $$ [1.5, \infty) $$ tells us our sequence has a unique limit. Solving $$ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $$ yields $$ x_* = 2 $$.
+(d) Define $$ f \colon [1.5, \infty) \to [1.5, \infty) $$ by $$ f = \frac{1}{2}(x + \frac{4}{x}) $$. Then $$ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $$ is strictly less than $$ 1 $$ on our domain, so $$ f $$ is a contraction. Applying the Banach Fixed Point Theorem to $$ [1.5, \infty) $$ tells us our sequence has a unique limit. Solving $$ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $$ yields $$ x_* = 2 $$. $$ \blacksquare $$
 
+**2020 W P1.** &nbsp; *Let $$ \{a_n\} $$ be a sequence in $$ \RR^+ $$ with $$ \lim a_n = 0 $$. Show there exists infinitely many $$ N \in \NN $$ such that $$ n \geq N $$ implies $$ a_n \leq a_N $$.*
+
+*Proof.* Let 
+
+$$ 
+N = \sup\{n \mid |a_n| \geq |a_0| },
+$$
+
+which is finite since our sequence converges to 0. Then $$ n \geq N $$ implies $$ a_n \leq a_N $$. Now delete the first $$ n $$ terms and repeat to get infinitely many such $$ N $$. $$ \blacksquare $$
 
 
 ## 3. Uniform Continuity
