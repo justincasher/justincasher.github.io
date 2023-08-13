@@ -112,8 +112,66 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 **Theorem 2.1.** &nbsp; *In $$ \RR^n $$ every Cauchy sequence convergences, i.e. it is a complete metric space.*
 
-**Ratio Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ L = \lim_n \|a_{n+1}/a_n\| $$. Then $$ L < 1 $$ implies absolute convergence; $$ L > 1 $$ implies divergence; and $$ L = 1 $$ is inconclusive.* This is a test $$ \mid a - b \mid $$. 
+**Ratio Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ L = \lim_n \|a_{n+1}/a_n\| $$. Then $$ L < 1 $$ implies absolute convergence; $$ L > 1 $$ implies divergence; and $$ L = 1 $$ is inconclusive.*
 
+**Root Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ r = \limsup_n \|a_n\|^{1/n} $$. Then $$ < 1 $$ implies absolute convergence; $$ r > 1 $$ implies divergence; and $$ r = 1 $$ is inconclusive.*
+
+**Integral Test.** &nbsp; *Let $$ f \colon \RR \to \RR^+ $$ be nonnegative and monotonically decreasing with $$ f(n) = a_n $$. Then $$ \sum a_n $$ converges if and only if $$ \int_1^{\infty} f(x) dx < \infty $$.*
+
+**Limit Comparison Test.** &nbsp; *Let $$ \{a_n\} $$ and $$ \{b_n\} $$ be sequences in $$ \RR $$. Suppose $$ L = \lim a_n / b_n $$ exists. Then $$ \sum a_n $$ converges if and only if $$ \sum b_n $$ converges.*
+
+**Alternating Series Test.** &nbsp; *Suppose $$ \{a_n\} $$ is a monotonically decreasing sequence in $$ \RR^+ $$ with $$ \lim_n a_n = 0 $$. Then $$ \sum (-1)^n a_n $$ converges.*
+
+**2023 W P2.** &nbsp; *Consider the series $$ \sum_{a, b \geq 0} p^{-a} p^{-b} $$ for fixed $$ p, q $$ prime. Prove it converges and find its sum.*
+
+*Proof.* For each $$ r > 0 $$ even, we see 
+
+$$
+\left( \sum_{a=0}^{r/2} p^{-a} \right) \left( \sum_{b=0}^{r/2} q^{-b} \right)
+\sum_{a+b \leq r} p^{-a} q^{-b} 
+\leq \left( \sum_{a=0}^{r} p^{-a} \right) \left( \sum_{b=0}^{r} q^{-b} \right).
+$$
+
+Hence, as $$ r $$ goes to infinity, our sum goes to 
+
+$$
+\leq \left( \sum_{a=0}^{\infty} p^{-a} \right) \left( \sum_{b=0}^{\infty} q^{-b} \right)
+= \left( \frac{1}{1-p} \right) \left( \frac{1}{1-q} \right)
+$$
+
+giving us our limit. $$ \blacksquare $$
+
+**2023 W P5.** &nbsp; *Show*
+
+$$
+\lim_n \left( \sum_{k=1}^{n} \frac{\sqrt{k}}{n} - \frac{2}{3} \sqrt{n} \right) = 0.
+$$
+
+*Proof.* We see 
+
+$$
+\int_1^{\infty} \frac{\sqrt{x}}{n} dx \leq \sum_{k=1}^{n} \frac{\sqrt{k}}{n} \leq \int_0^n \frac{\sqrt{x}}{n} dx.
+$$
+
+Integrating yields
+
+$$
+\frac{2}{3} - \frac{2}{3n} \leq \sum_{k=1}^{n} \frac{\sqrt{k}}{n} \leq \frac{2}{3} \sqrt{n}, 
+$$
+
+or equivalently 
+
+$$
+-\frac{2}{3n} \leq \sum_{k=1}^{n} \frac{\sqrt{k}}{n} - \frac{2}{3} \sqrt{n} \leq 0.
+$$
+
+Letting $$ n $$ approach infinity gives us the desired equality. $$ \blacksquare $$
+
+**2022 F P1.** &nbsp; *Define $$ \{x_n\} $$ by $$ 0 < x_1 < 1 $$ and $$ x_{n+1} = 1 - \sqrt{1-x_n} $$. Prove that (a) $$ \{x_n\} $$ monotonically decreases to $$ 0 $$, and that (b) $$ \lim_n x_{n+1}/x_n = 1/2 $$.
+
+*Proof.* (a)  
+
+ 
 
 ## 3. Uniform Continuity
 
