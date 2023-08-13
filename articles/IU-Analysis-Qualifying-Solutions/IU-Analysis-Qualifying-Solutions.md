@@ -43,7 +43,7 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 
 ## 1. Compact Spaces 
 
-Fix a topological space $$ X $$. We say $$ X $$ is compact if every open cover $$ \{U_{\alpha}\} $$ of $$ X $$ admits a finite subcover $$ U_1, \dots, U_n $$. 
+Fix a topological space $$ X $$. We say $$ X $$ is *compact* if every open cover $$ \{U_{\alpha}\} $$ of $$ X $$ admits a finite subcover $$ U_1, \dots, U_n $$. 
 
 **Heine-Borel Theorem.** &nbsp; *Let $$ X $$ be a subset of $$ \RR^n $$. Then $$ X $$ is compact with respect to the Euclidean metric if and only if $$ X $$ is closed and bounded.*
 
@@ -379,7 +379,7 @@ Thus, $$ f $$ is a bounded function. $$ \blacksquare $$
 
 **2020 W P7.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be continuous and $$ f' \colon \RR \to \RR $$ uniformly continous. If $$ \displaystyle \lim_{x \to \infty} f(x) = 0 $$, does $$ \displaystyle \lim_{x \to \infty} f'(x) $$ exist?*
 
-*Proof.* We will show the derivative goes to $$ 0 $$. Suppose not. Then there exists a sequence $$ \{x_n\} $$ such that $$ \| f'(x_n) \| > C $$ for some $$ C > 0 $$ and \lim_n x_n = \infty $$. Without loss of generality, we suppose $$ f'(x_n) > C $$. Since $$ f' $$ is uniformly continuous, there exists a $$ \delta > 0 $$ so that $$ \| x-y \| < \delta $$ implies $$ \| f'(x) - f'(y) \| < C/2 $$. Therefore, 
+*Proof.* We will show the derivative goes to $$ 0 $$. Suppose not. Then there exists a sequence $$ \{x_n\} $$ such that $$ \| f'(x_n) \| > C $$ for some $$ C > 0 $$ and $$ \lim_n x_n = \infty $$. Without loss of generality, we suppose $$ f'(x_n) > C $$. Since $$ f' $$ is uniformly continuous, there exists a $$ \delta > 0 $$ so that $$ \| x-y \| < \delta $$ implies $$ \| f'(x) - f'(y) \| < C/2 $$. Therefore, 
 
 $$
 \int_{x_n - \delta}^{x_n + \delta} f'(x) dx 
@@ -388,6 +388,20 @@ $$
 $$
 
 which implies $$ f(x_n + \delta) \geq f(x_n - \delta) + \delta C $$. This contradicts $$ f $$ having limit $$ 0 $$. $$ \blacksquare $$
+
+**2019 W P5.** &nbsp; *Give an exxample of a continuous function $$ f \colon (0, 1] \to \RR $$ that attains neither a maximum nor a minimum. (b) Show that if $$ f $$ is uniformly continuous, then it must attain a maximum or a minimum.*
+
+*Proof.* (a) Consider $$ f(x) = (1-x) \sin(\frac{1}{x}) $$. This is a continuous function which obtains no maximum or minimum, because $$ \sin(\frac{1}{x}) $$ is oscillating, and $$ (1-x) $$ causes $$ f $$ to decrease in absolute value away from $$ 0 $$.
+
+(b) Suppose not. Then there exists sequences $$ \{x_n\} $$ and $$ \{y_n\} $$ in $$ (0, 1] $$ with $$ \lim_n x_n = 0 $$ (resp. $$ \lim y_n = 0 $$), $$ f(x_n) $$ monotonically increasing (resp. $$ f(y_n) $$ monotonically decreasing), and $$ \lim_n f(x_n) = \sup f(x) $$ (resp. $$ \lim_n f(y_n) = \inf f(x) $$). Since $$ f $$ is uniformly continuous, there exists a $$ \delta > 0 $$ such that $$ 
+
+**2018 F P5** &nbsp; *Let $$ B $$ be the closed unit ball in $$ \RR^2 $$. Set $$ \rho(x, y) = \|x-y\| $$ if $$ x $$ and $$ y $$ are collinear and $$ \rho(x, y) = \|x\| + \|y\| $$ elsewise. This is a metric on $$ B $$. Suppose $$ f \colon (B, \rho) \to \RR $$ is uniformly continuous. Show $$ f $$ is bounded.*
+
+*Proof.*
+
+**2017 W P6** &nbsp; *Let $$ f c\olon \RR^n \to \RR $$ be continuous with $$ n < \infty $$. Suppose $$ \displaystyle \lim_{\|x\| \to \infty} f(x) = 0 $$. Prove that $$ f $$ is uniformly continuous.*
+
+*Proof.*
 
 
 ## 4. Uniform Convergence
