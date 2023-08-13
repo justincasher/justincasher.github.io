@@ -74,7 +74,7 @@ $$
 
 cannot have pairwise distinct first $$ N_{\ell} $$ terms by the pigeon-hole principle, a contradiction.
 
-(b) Suppose $$ \{an\} $$ is an isolated point. Then there exists an $$ N \gg 0 $$ with $$ B(\{a_n\}, 2^{-N}) $$ only containing $$ \{a_n\} $$. But
+(b) Suppose $$ \{a_n\} $$ is an isolated point. Then there exists an $$ N \gg 0 $$ with $$ B(\{a_n\}, 2^{-N}) $$ only containing $$ \{a_n\} $$. But
 
 $$
 b_n = 
@@ -122,12 +122,14 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 **Alternating Series Test.** &nbsp; *Suppose $$ \{a_n\} $$ is a monotonically decreasing sequence in $$ \RR^+ $$ with $$ \lim_n a_n = 0 $$. Then $$ \sum (-1)^n a_n $$ converges.*
 
+**Contraction Fixed Point Theorem.** &nbsp; *Let $$ (X, d) $$ be a complete metric space, and let $$ f \colon X \to X $$ be contractive. Then $$ X $$ has a unique fixed point $$ f(x_*) = x_* $$, which is given by taking n arbitrary $$ x_0 \in X $$, setting $$ x_{n+1} = f(x_n) $$, and evaluating $$ \lim_n f(x_n) = x_* $$.*
+
 **2023 W P2.** &nbsp; *Consider the series $$ \sum_{a, b \geq 0} p^{-a} p^{-b} $$ for fixed $$ p, q $$ prime. Prove it converges and find its sum.*
 
 *Proof.* For each $$ r > 0 $$ even, we see 
 
 $$
-\left( \sum_{a=0}^{r/2} p^{-a} \right) \left( \sum_{b=0}^{r/2} q^{-b} \right)
+\left( \sum_{a=0}^{r/2} p^{-a} \right) \left( \sum_{b=0}^{r/2} q^{-b} \right) \leq
 \sum_{a+b \leq r} p^{-a} q^{-b} 
 \leq \left( \sum_{a=0}^{r} p^{-a} \right) \left( \sum_{b=0}^{r} q^{-b} \right).
 $$
@@ -135,7 +137,7 @@ $$
 Hence, as $$ r $$ goes to infinity, our sum goes to 
 
 $$
-\leq \left( \sum_{a=0}^{\infty} p^{-a} \right) \left( \sum_{b=0}^{\infty} q^{-b} \right)
+\left( \sum_{a=0}^{\infty} p^{-a} \right) \left( \sum_{b=0}^{\infty} q^{-b} \right)
 = \left( \frac{1}{1-p} \right) \left( \frac{1}{1-q} \right)
 $$
 
@@ -169,7 +171,16 @@ Letting $$ n $$ approach infinity gives us the desired equality. $$ \blacksquare
 
 **2022 F P1.** &nbsp; *Define $$ \{x_n\} $$ by $$ 0 < x_1 < 1 $$ and $$ x_{n+1} = 1 - \sqrt{1-x_n} $$. Prove that (a) $$ \{x_n\} $$ monotonically decreases to $$ 0 $$, and that (b) $$ \lim_n x_{n+1}/x_n = 1/2 $$.
 
-*Proof.* (a)  
+*Proof.* (a) Set $$ y_n = 1-x_n $$ so that $$ y_{n+1} = \sqrt{y_n} $$. Then $$ y_1 \neq 0 $$ implies $$ \lim_n y_n = 1 $$ (this is well known). Then $$ lim_n x_n = \lim_n 1-y_n = 0 $$. To show $$ x_n $$ is monotonically decreasing, we observe $$ y_n $$ is monotonically increasing, i.e. $$ \sqrt{x} > x $$ for $$ x \in (0, 1) $$. 
+
+(b) By L'Hôpital's Rule, 
+
+$$
+\lim_{n \to \infty} \frac{x_{n+1}}{x_n}
+= \lim_{x \to 0} \frac{1-\sqrt{1-x}}{x} 
+= \lim_{x \to 0} \frac{1}{2 \sqrt{1-x}} 
+= \frac{1}{2}.
+$$
 
  
 
