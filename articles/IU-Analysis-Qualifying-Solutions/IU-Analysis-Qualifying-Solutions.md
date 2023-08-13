@@ -26,7 +26,7 @@ $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 <br>
 
-**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]".
+**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful.
 
 ## Table of Contents
 1. [Compact Spaces](#1-compact-spaces)
@@ -105,13 +105,14 @@ and we set $$ M = C/\delta $$.
 For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \sqrt{x} $$. We see $$ \lim_{x \to 0^+} f'(x) = \infty $$ implies no such $$ M $$ exists. $$ \blacksquare $$.
 
 
+
 ## 2. Sequences and Series
 
 **Monotone Convergence Theorem.** &nbsp; *Let $$ \{a_n\} $$ be a monotonically increasing sequence in $$ \RR $$. Then $$ \{a_n\} $$ has a limit if and only if it is bounded.*
 
 **Theorem 2.1.** &nbsp; *In $$ \RR^n $$ every Cauchy sequence convergences, i.e. it is a complete metric space.*
 
-**Ratio Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ L = \lim_n |a_{n+1}/a_n|. If $$ 1 > L $$ implies absolute convergence; $$ L > 1 $$ implies divergence *
+**Ratio Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ L = \lim_n \|a_{n+1}/a_n\| $$. Then $$ L < 1 $$ implies absolute convergence; $$ L > 1 $$ implies divergence; and $$ L = 1 $$ is inconclusive.*
 
 
 ## 3. Uniform Continuity
