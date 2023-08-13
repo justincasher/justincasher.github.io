@@ -496,10 +496,14 @@ for each $$ i $$. Then for any $$ x \in [t_i, t_{i+1}] $$, we have
 $$
 \begin{aligned}
 \| f_n(x) - f(x) \| & \leq \|f_n(x) - f_n(t_i) \| + \| f_n(t_i) - f(x) \| \\
-& < a
+& <\| f_n(t_{i+1}) - f_n(t_i) \| + \frac{\varepsilon}{4} \\
+& \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| + \| f_n(t_i) - f(t_i) \| + \frac{\varepsilon}{4} \\
+& < \frac{\varepsilon}{4} + \frac{\varepsilon}{4} + \frac{\varepsilon}{4} + \frac{\varepsilon}{4} \\
+& = \varepsilon.
 \end{aligned}
 $$
 
+Hence, $$ f_n $$ converges uniformly to $$ f $$. $$ \blacksquare $$
 
 
 ## 5. Derivatives
