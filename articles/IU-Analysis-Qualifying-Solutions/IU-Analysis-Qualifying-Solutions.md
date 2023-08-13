@@ -26,7 +26,7 @@ $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 <br>
 
-**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful.
+**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I appreciate Chia-Tz Liang for proof reading these.
 
 ## Table of Contents
 1. [Compact Spaces](#1-compact-spaces)
@@ -179,9 +179,12 @@ $$
 \lim_{n \to \infty} \frac{x_{n+1}}{x_n}
 = \lim_{x \to 0} \frac{1-\sqrt{1-x}}{x} 
 = \lim_{x \to 0} \frac{1}{2 \sqrt{1-x}} 
-= \frac{1}{2}.
+= \frac{1}{2},
 $$
 
+and so the limit is $$ 1/2 $$. $$ \blacksquare $$
+
+**2022 W P2.**
  
 
 ## 3. Uniform Continuity
