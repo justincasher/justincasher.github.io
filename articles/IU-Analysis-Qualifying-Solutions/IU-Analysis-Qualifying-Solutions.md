@@ -211,7 +211,7 @@ We conclude that the partial sums do not converge. $$ \blacksquare $$
 
 $$
 \sum_n \frac{a_{n+1}-a_n}{a_n}
-= \sum_n \frac{a_{n+1}}}{a_n} - 1
+= \sum_n \frac{a_{n+1}}{a_n} - 1
 \geq \sum_n \log(a_{n+1}/a_n)
 = \lim_n a_n - a_1,
 $$
