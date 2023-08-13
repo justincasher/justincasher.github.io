@@ -265,6 +265,9 @@ $$
 
 We conclude that $$ u^{-\ln(u)} e^u > 1 $$, our interal diverges, and so does our series. $$ \blacksquare $$
 
+**2020 F P1.** &nbsp; *Let $$ x_0 > 0 $$ and $$ x_{n+1} = \frac{1}{2} (x_n + \frac{4}{x_n}) $$. 
+
+
 
 ## 3. Uniform Continuity
 
