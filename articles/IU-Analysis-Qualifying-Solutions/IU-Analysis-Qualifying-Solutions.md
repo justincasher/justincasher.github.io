@@ -497,6 +497,11 @@ $$
 \begin{aligned}
 \| f_n(x) - f(x) \| & \leq \| f_n(x) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(x) \| \\
 & < \| f_n(x) - f(t_{i+1}) \| + \frac{\varepsilon}{4} \\
+& \leq \| f_n(x) - f_n(t_{i+1}) \| + \| f_n(t_{i+1}) - f(t_{i+1}) \| + \frac{\varepsilon}{4} \\
+& < \| f_n(x) - f_n(t_{i+1}) \| + \frac{\varepsilon}{2} \\ 
+& \leq \| f_n(t_{i+1}) - f_n(t_i) \| + \frac{\varepsilon}{2} \\
+& \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| + \| f(t_i) - f_n(t_i) \\
+& < \frac{5 \varepsilon}{4}
 \end{aligned}
 $$
 
