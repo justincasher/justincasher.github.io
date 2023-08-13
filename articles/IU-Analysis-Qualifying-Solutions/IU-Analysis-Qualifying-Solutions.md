@@ -687,7 +687,7 @@ $$
 
 *converges uniformly and compute its derivative.*
 
-*Proof.* 
+*Proof.* Since $$ \| \sin(x^n)/n! \| \leq 1/n! $$, we have $$ F(x) \leq e-1 $$, so $$ F $$ converges uniformly by the Weierstrass M-Test. 
 
 **2018 F P7.** &nbsp; *Define $$ f_n \colon [0, 2\pi] \to \RR $$ by $$ f_n(x) = e^{\sin(nx)} $$ and $$ F_n(x) = \int_0^x f_n(y) dy $$. Show there exists a subsequence of $$ \{F_n\} $$ that converges uniformly to a continuous function.*
 
