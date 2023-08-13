@@ -263,7 +263,7 @@ x & > \ln(x)^2.
 \end{aligned}
 $$
 
-We conclude that $$ u^{-\ln(u)} e^u > 1 $$, our interal diverges, and so does our series. $$ \blacksqaure $$
+We conclude that $$ u^{-\ln(u)} e^u > 1 $$, our interal diverges, and so does our series. $$ \blacksquare $$
 
 
 ## 3. Uniform Continuity
