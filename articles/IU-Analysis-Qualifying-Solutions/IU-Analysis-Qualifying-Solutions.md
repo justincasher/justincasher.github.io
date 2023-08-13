@@ -30,9 +30,16 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 
 ## Table of Contents
 1. [Compact Spaces](#1-compact-spaces)
-2. [Zariski Topology](#2-zariski-topology)
-3. [Schemes](#3-schemes)
-4. [References](#4-references)
+2. [Sequences and Series](#2-sequences-and-series)
+3. [Uniform Continuity](#3-uniform-continuity)
+4. [Uniform Convergence](#4-uniform-convergence)
+5. [Derivatives](#5-derivatives)
+6. [Optimization](#6-optimization)
+7. [Integration](#7-integration)
+8. [Convergence of Integrals](#8-convergence-of-integrals)
+9. [Polynomials and Stone-Weierstrass](#9-polynomials-and-stone-weierstrauss)
+10. [Stoke's Theorem](#10-stokes-theorem)
+11. [Implicit Function Theorem](#11-implicit-function-theorem)
 
 ## 1. Compact Spaces 
 
@@ -371,6 +378,8 @@ $$
 Thus, $$ f $$ is a bounded function. $$ \blacksquare $$
 
 **2020 W P7.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be continuous and $$ f' \colon \RR \to \RR $$ uniformly continous. If $$ \displaystyle \lim_{x \to \infty} f(x) = 0 $$, does $$ \displaystyle \lim_{x \to \infty} f'(x) $$ exist?*
+
+*Proof.* We will show the derivative goes to $$ 0 $$. Suppose not. 
 
 
 ## 4. Uniform Convergence
