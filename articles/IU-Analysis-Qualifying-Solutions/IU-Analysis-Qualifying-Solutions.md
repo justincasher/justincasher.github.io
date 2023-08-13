@@ -473,8 +473,37 @@ for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ ad
 
 This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $$ given by $$ f_n = x/n $$. $$ \blacksquare $$
 
+**2023 W P4.** &nbsp; *Does there exists a sequence of continuously differentiable functions that cnverge uniformly to a non-differentiable function?*
+
+*Proof.* Yes, we see that $$ f_n = \sqrt{x^2+1/n} $$ is continuously differentiable, but $$ f_n $$ converge to $$ |x| $$ uniformly on $$ \RR $$. $$ \blacksquare $$
+
+**2022 F P2.** &nbsp; *Suppose $$ f_n \colon [a, b] \to \RR $$ converge pointwise to $$ f $$ and that each $$ f_n $$ is monotonically increasing. Then $$ f_n $$ converge uniformly to $$ f $$.* 
+
+*Proof.* Fix $$ \varepsilon > 0 $$. Partition $$ [a, b] $$ into intervals $$ [t_i, t_{i+1}] $$ such that 
+
+$$ 
+\|f(t_{i+1}) - f(t_i) \| < \varepsilon / N,
+$$ 
+
+which can be done since $$ f $$ is bounded between $$ f(a) $$ and $$ f(b) $$. Choose an $$ N \gg 0 $$ such that for $$ n \geq N $$ we have 
+
+$$ 
+\| f_n(t_i) - f(t_i) \| < \varepsilon/4
+$$
+
+for each $$ i $$. Then for any $$ x \in [t_i, t_{i+1}] $$, we have 
+
+$$
+\begin{aligned}
+\|f_n(x) - f(x) \| 
+& \leq \|f_n(x) - f_n(t_i) \| + \| f_n(t_i) - f(x) \| \\
+& < \| f_n(t_{i+1)) - f_n(t_i) \| + \frac{\varepsilon}{4}
+\end{aligned}
+$$
 
 ## 5. Derivatives
+
+
 
 
 ## 6. Optimization
