@@ -26,7 +26,7 @@ $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 <br>
 
-**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I would like to thank Chia-Tz Liang for proof reading these.
+**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I would like to thank Chia-Tz Liang for proof reading these. Please email me if you find any errors or have any solutions you would like to add.
 
 ## Table of Contents
 1. [Compact Spaces](#1-compact-spaces)
@@ -228,11 +228,42 @@ which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
 **2021 F P6.** &nbsp; *Let $$ a_0 \in (0, 1) $$ and $$ a_{n+1} = a_n^3 - a_n^2 + 1 $$. Prove that (a) $$ \{a_n\} $$ converges and find its limit; and (b) that $$ b_n = \prod_{i=1}^{n} a_i $$ converges and find its limit.*
 
-*Proof.* (a) We observe $$ a_{n+1} > a_n $$ implies $$ a_n^3 - a_n^2 - a_n + 1 > 0 $$.  Writing this as a polynomial $$ f(x) = x^3 - x^2 - x + 1 $$, we observe  $$ f(x) = (x-1)^2 (x+1) $$ and $$ f(0) = 1 $$. Hence $$ f $$ is strictly positive on $$ (-1, 1) $$, and our sequence is monotonically increasing. We further observe $$ a_n^3 - a_n^2 +1 < 1 $$ implies $$ a_n < 1 $$, which is true by assumption, so our sequence is bounded above by $$ 1 $$; thus, our sequence has a limit. We conclude that the limit is $$ 1 $$: for every $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ \| 1 - x \| > \delta $$ implies $$ \| f(x) \| > \varepsilon $$ on $$ [0, 1] $$; i.e. the difference between terms only approaches  $$ 0 $$ at $$ 1 $$.
+*Proof.* (a) We observe $$ a_{n+1} > a_n $$ implies $$ a_n^3 - a_n^2 - a_n + 1 > 0 $$.  Writing this as a polynomial $$ f(x) = x^3 - x^2 - x + 1 $$, we observe  $$ f(x) = (x-1)^2 (x+1) $$ and $$ f(0) = 1 $$. Hence $$ f $$ is strictly positive on $$ (-1, 1) $$, and our sequence is monotonically increasing. We further observe $$ a_n^3 - a_n^2 +1 < 1 $$ implies $$ a_n < 1 $$, which is true by assumption, so our sequence is bounded above by $$ 1 $$; thus, our sequence has a limit. We conclude that the limit is $$ 1 $$: for every $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ \| 1 - x \| > \delta $$ implies $$ \| f(x) \| > \varepsilon $$ on $$ [0, 1] $$; i.e. the difference between terms only approaches  $$ 0 $$ at $$ 1 $$. You can also apply the Banach Fixed Point Theorem here; the derivative of $$ x^3 - x^2 + 1 $$ is strictly less than $$ 1 $$ on $$ (0, 1) $$.
 
-(b) Since $$ \{b_n\} $$ is a bounded monotonically decreasing sequence, its limit exists. 
+(b) Since $$ \{b_n\} $$ is a bounded monotonically decreasing sequence, its limit exists. The limit is $$ 0 $$, but I am not sure how to show this directly. $$ \blacksquare $$ 
 
+**2021 F P8.** &nbsp; *Is the series* 
 
+$$ 
+\sum_{n = 100}^{\infty} \ln(n)^{-\ln(\ln(n))}
+$$
+
+*convergent?*
+
+*Proof.* By the integral test, our series converges if and only if the integral
+
+$$
+I = \int_{100}^{\infty} \ln(x)^{-ln(ln(x))} dx
+$$
+
+does. Substituting $$ u = \ln(x) $$ and $$ dx = e^u du $$, we have 
+
+$$
+I = \int_{ln(100)}^{\infty} u^{-\ln(u)} e^u du.
+$$
+
+The following inequalities are equivalent:
+
+$$
+\begin{aligned}
+e^x & > x^{\ln(x)} \\
+\log_x(e^x) & > \ln(x) \\
+\frac{\ln(e^x)}{\ln(x)} & > \ln(x) \\
+x & > \ln(x)^2.
+\end{aligned}
+$$
+
+We conclude that $$ u^{-\ln(u)} e^u > 1 $$, our interal diverges, and so does our series. $$ \blacksqaure $$
 
 
 ## 3. Uniform Continuity
