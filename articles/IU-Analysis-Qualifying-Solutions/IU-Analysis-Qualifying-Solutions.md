@@ -220,11 +220,11 @@ which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
 **2022 W P4.** &nbsp; *Let $$ t_0 \in \RR $$ and set $$ t_{n+1} = \sin(\cos(t_n) $$. Prove this sequence converges with limit independent of $$ t_0 $$.*
 
-*Proof.* Consider $$ f(x) = \sin(\cos(x))) $$ as a function $$ f \colon [0, 2 \pi] \to [0, 2 \pi] $$. Set $$ g(x) = f(f(x)) $$. Computing the derivative, we observe that $$ g'(x) < 1 $$ for each $$ x \in [0, 2 \pi] $$, so $$ g $$ is a contraction on $$ [0, 2 \pi] $$, and consequently $$ g $$ admits a unique fixed point by the Banach Fixed Point Theorem. We conclude that our desired sequence has a unique limit independent of $$ t_0 $$, because $$ f $$ does not oscillate between 2 points anywhere. $$ \blacksquare $$
+*Proof.* Consider $$ f(x) = \sin(\cos(x))) $$ as a function $$ f \colon [0, 2 \pi] \to [0, 2 \pi] $$. Set $$ g(x) = f(f(x)) $$. Computing the derivative, we observe that $$ \|g'(x)\| < 1 $$ for each $$ x \in [0, 2 \pi] $$, so $$ g $$ is a contraction on $$ [0, 2 \pi] $$, and consequently $$ g $$ admits a unique fixed point by the Banach Fixed Point Theorem. We conclude that our desired sequence has a unique limit independent of $$ t_0 $$, because $$ f $$ does not oscillate between 2 distinct points anywhere. $$ \blacksquare $$
 
-**2021 F P6.** &nbsp; *Let $$ 0 \leq a_0 \leq 1 $$ and $$ a_{n+1} = a_n^3 - a_n^2 + 1 $$. Prove that (a) $$ \{a_n\} $$ converges and find its limit; and (b) that $$ b_n = \prod_{i=1}^{n} a_i $$ converges and find its limit.*
+**2021 F P6.** &nbsp; *Let $$ a_0 \in (0, 1) $$ and $$ a_{n+1} = a_n^3 - a_n^2 + 1 $$. Prove that (a) $$ \{a_n\} $$ converges and find its limit; and (b) that $$ b_n = \prod_{i=1}^{n} a_i $$ converges and find its limit.*
 
-*Proof.* (a) Set $$ f(x) = x^3
+*Proof.* (a) We see $$ f(x) = x^3 - x^2 + 1 $$ is a function $$ f \colon [0, 1] \to [0, 1] $$. 
  
 
 ## 3. Uniform Continuity
