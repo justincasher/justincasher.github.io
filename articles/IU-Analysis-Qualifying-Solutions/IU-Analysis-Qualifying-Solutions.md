@@ -346,7 +346,7 @@ Since the logarithm is continuous, we see our sequence is bounded if and only if
 
 $$
 \ln(a_n) 
-= \sum_{k=1}^{n} \frak{1}{2^k} \ln(k)
+= \sum_{k=1}^{n} \frac{1}{2^k} \ln(k)
 $$
 
 is. Since $$ \ln(k) \leq \sqrt{k} $$ and $$ 2^k \geq k^2 $$, we have 
@@ -354,7 +354,7 @@ is. Since $$ \ln(k) \leq \sqrt{k} $$ and $$ 2^k \geq k^2 $$, we have
 $$
 \lim_{n \to \infty} \ln(a_n)
 \leq \sum_{k=1}^{\infty} \frac{1}{n^2} \sqrt{n}
-= \leq \sum_{k=1}^{\infty} \frac{1}{n^{3/2},
+\leq \sum_{k=1}^{\infty} \frac{1}{n^{3/2}},
 $$
 
 which is bounded by the p-series test. Thus, $$ \{a_n\} $$ is bounded. $$ \blacksquare $$
@@ -362,7 +362,7 @@ which is bounded by the p-series test. Thus, $$ \{a_n\} $$ is bounded. $$ \black
 
 ## 3. Uniform Continuity
 
-
+Let l
 
 
 ## 4. Uniform Convergence
