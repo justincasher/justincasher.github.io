@@ -482,32 +482,34 @@ This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $
 *Proof.* Fix $$ \varepsilon > 0 $$. Observe that this implies $$ f $$ is monotonically increasing, so we can partition $$ [a, b] $$ into intervals $$ [t_i, t_{i+1}] $$ such that 
 
 $$ 
-\|f(t_{i+1}) - f(t_i) \| < \varepsilon / 4.
+\|f(t_{i+1}) - f(t_i) \| < \varepsilon/5.
 $$ 
 
 Choose an $$ N \gg 0 $$ such that for $$ n \geq N $$ we have 
 
 $$ 
-\| f_n(t_i) - f(t_i) \| < \varepsilon/4
+\| f_n(t_i) - f(t_i) \| < \varepsilon/5
 $$
 
-for each $$ i $$. Then for any $$ x \in [t_i, t_{i+1}] $$, we have 
+for each $$ i $$. We observe 
+
+$$ 
+\begin{aligned}
+\| f_n(t_{i+1}) - f_n(t_i)\| & \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| + \| f(t_i) - f_n(t_i) \|
+& < \frac{3\varepsilon}{5}.
+\end{aligned}
+$$
+
+Therefore, for any $$ x \in [t_i, t_{i+1}] $$, we have 
 
 $$
 \begin{aligned}
 \| f_n(x) - f(x) \| & \leq \| f_n(x) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(x) \| \\
-& < \| f_n(x) - f(t_{i+1}) \| + \frac{\varepsilon}{4} \\
-& \leq \| f_n(x) - f_n(t_{i+1}) \| + \| f_n(t_{i+1}) - f(t_{i+1}) \| + \frac{\varepsilon}{4} \\
-& < \| f_n(x) - f_n(t_{i+1}) \| + \frac{\varepsilon}{2} \\ 
-& \leq \| f_n(t_{i+1}) - f_n(t_i) \| + \frac{\varepsilon}{2} \\
-& \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| + \| f(t_i) - f_n(t_i) \| + \frac{\varepsilon}{2} \\
-& < \frac{5 \varepsilon}{4}.
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\| f_n(x) - f(x) \| & \leq \| f_n(t_{i+1}) 
+& < \| f_n(x) - f(t_{i+1}) \| + \frac{\varepsilon}{5} \\
+& \leq \| f_n(x) - f_n(t_{i+1}) \| + \| f_n(t_{i+1}) - f(t_{i+1}) \| + \frac{\varepsilon}{5} \\
+& < \| f_n(x) - f_n(t_{i+1}) \| + \frac{2\varepsilon}{5} \\ 
+& \leq \| f_n(t_{i+1}) - f_n(t_i) \| + \frac{2\varepsilon}{5} \\ 
+& < \varepsilon.
 \end{aligned}
 $$
 
