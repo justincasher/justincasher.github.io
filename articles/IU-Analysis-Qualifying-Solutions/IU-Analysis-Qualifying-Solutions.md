@@ -68,14 +68,6 @@ $$
 
 *Proof.* (a) Let $$ \{ a_{n, m}\} $$ be a sequence in $$ X $$ indexed by $$ m $$. Without loss of generality, there exists infinitely many $$ m $$ such that $$ a_{1, m} = 0 $$. Deleting every term with $$ a_{1, m} = 1 $$ yields us an infinite subsequence. Repeating this deletion process inductively gives us a convergent subsequence.
 
-Hence, for each term $$ s_{\ell} $$, there exists a $$ N_{\ell} > 0 $$ such that $$ B(s_{\ell}, 2^{-N_{\ell}) $$ contains no other elements from our sequence. But 
-
-$$ 
-s_1, \dots, s_{2^{N_{\ell}}+1} 
-$$ 
-
-cannot have pairwise distinct first $$ N_{\ell} $$ terms by the pigeon-hole principle, a contradiction.
-
 (b) Suppose $$ \{a_n\} $$ is an isolated point. Then there exists an $$ N \gg 0 $$ with $$ B(\{a_n\}, 2^{-N}) $$ only containing $$ \{a_n\} $$. But
 
 $$
@@ -362,7 +354,18 @@ which is bounded by the p-series test. Thus, $$ \{a_n\} $$ is bounded. $$ \black
 
 ## 3. Uniform Continuity
 
-Let l
+Let $$ f, g \colon X \to Y $$ be maps between metric spaces. We say $$ f $$ is *uniformly continuous* if for each $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ d_X(x, y) < \delta $$ implies $$ d_Y(f(x), f(y)) < \varepsilon $$ for all $$ x, y \in X $$.
+
+**Heine-Cantor Theorem.** &nbsp; *Let $$ f \colon  \to Y $$ be continuous. If $$ X $$ is compact, then $$ f $$ is uniformly continuous.*
+
+**2020 W P3.** &nbsp; *Let $$ X $$ be the space of sequences $$ x = \{x_n\} $$ with $$ x_n \in [0, 1] $$. Set $$ d(x, y) = \sup_n \| x_n - y_n \| $$. Suppose $$ f \colon X \to \RR $$ is uniformly continuous. Prove that $$ f $$ is bounded.*
+
+*Proof.* Choose a $$ \delta > 0 $$ such that $$ d(x, y) \leq \delta $$ implies $$ \| f(x)-f(y) \| < 1 $$. Set $$ M = \lceil 1 / \delta \rceil $$. Now for any two points $$ x, y \in X $$, we define $$ x_n = x + \frac{n}{M} (y-x) $$ for $$ 0 \leq n \leq M $$. Since $$ d(x_n, x_{n+1}) \leq \delta $$, we have 
+
+$$
+d(x, y) 
+\leq 
+$$
 
 
 ## 4. Uniform Convergence
