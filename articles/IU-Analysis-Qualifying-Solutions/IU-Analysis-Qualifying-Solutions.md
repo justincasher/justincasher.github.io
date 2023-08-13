@@ -1,9 +1,9 @@
 ---
 layout: Writing
 indent: true
-permalink: /Defining-a-Scheme
+permalink: /IU-Analysis-Qualifying-Solutions
 feedformat: card
-title: Defining a Scheme
+title: IU Analysis Qualifying Solutions
 ---
 <style>
     ol.custom {
@@ -46,9 +46,9 @@ Fix a topological space $$ X $$. We say $$ X $$ is compact if every open cover $
 
 **2019 F P5.** &nbsp; *Let $$ f \colon \RR^n \to \RR^m $$ be continuous ($$ n, m < \infty $$), and let $$ K \subseteq \RR^n $$ be compact. Show $$ f(K) $$ is compact.*
 
-*Proof.* We show this holds for any $$ f \colon X \to Y $$ continuous. Let $$ \{U_{\alpha}\} $$ cover $$ f(K) $$. Then $$ \{f^{-1}(U_{\alpha})\} $$ forms an open cover of $$ K $$ by continuity, and hence admits a finite subcover $$ f^{-1}(U_1), \dots, f^{-1}(U_n) $$. We conclude that $$ U_1, \dots, U_n $$ cover $$ f(K) $$. $$ \blacksquare $$ 
+*Proof.* We show this holds for any $$ f \colon X \to Y $$ continuous. Let $$ \{U_{\alpha}\} $$ cover $$ f(K) $$. Then $$ \{f^{-1}(U_{\alpha})\} $$ forms an open cover of $$ K $$ by (the topological definition of) continuity, and hence admits a finite subcover $$ f^{-1}(U_1), \dots, f^{-1}(U_n) $$. We conclude that $$ U_1, \dots, U_n $$ cover $$ f(K) $$. $$ \blacksquare $$ 
 
-*Alternative proof.*
+*Alternative proof.* Let $$ \{ y_n \} $$ be a sequence in $$ f(K) $$. Then it lifts to a (not necessarily unique) sequence $$ \{x_n\} $$ in $$ K $$, i.e. $$ f(x_n) = y_n $$. By Theorem 1.2, this sequence has a convergence subsequence $$ \{x_{n_i}\} $$, whose image $$ \{ y_{n_i} \} $$ is a convergent subsequence of $$ \{ y_n \} $$ by continuity, i.e. $$ \lim_i f(x_{n_i}) = f(\lim_i x_{n_i}) $$. $$ \blacksquare $$.
 
 ## 2. Sequences and Series
 
