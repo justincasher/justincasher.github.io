@@ -26,7 +26,7 @@ $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 <br>
 
-**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I appreciate Chia-Tz Liang for proof reading these.
+**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I would like to thank Chia-Tz Liang for proof reading these.
 
 ## Table of Contents
 1. [Compact Spaces](#1-compact-spaces)
@@ -66,7 +66,9 @@ $$
 
 *(a) Prove $$ (X, d) $$ is compact, and (b) that there exists no isolated points.*
 
-*Proof.* (a) Suppose not. By Theorem 1.2, there exists a sequence $$ \{s_{\ell}\} = \{ \{a_n\}_{\ell} \} $$ in $$ X $$ with no convergent subsequence. Further suppose $$ S $$ has no repeating values. Hence, for each term $$ s_{\ell} $$, there exists a $$ N_{\ell} > 0 $$ such that $$ B(s_{\ell}, 2^{-N_{\ell}) $$ contains no other elements from our sequence. But 
+*Proof.* (a) Let $$ \{ a_{n, m}\} $$ be a sequence in $$ X $$ indexed by $$ m $$. Without loss of generality, there exists infinitely many $$ m $$ such that $$ a_{1, m} = 0 $$. Deleting every term with $$ a_{1, m} = 1 $$ yields us an infinite subsequence. Repeating this deletion process inductively gives us a convergent subsequence.
+
+Hence, for each term $$ s_{\ell} $$, there exists a $$ N_{\ell} > 0 $$ such that $$ B(s_{\ell}, 2^{-N_{\ell}) $$ contains no other elements from our sequence. But 
 
 $$ 
 s_1, \dots, s_{2^{N_{\ell}}+1} 
@@ -122,7 +124,7 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 **Alternating Series Test.** &nbsp; *Suppose $$ \{a_n\} $$ is a monotonically decreasing sequence in $$ \RR^+ $$ with $$ \lim_n a_n = 0 $$. Then $$ \sum (-1)^n a_n $$ converges.*
 
-**Contraction Fixed Point Theorem.** &nbsp; *Let $$ (X, d) $$ be a complete metric space, and let $$ f \colon X \to X $$ be contractive. Then $$ X $$ has a unique fixed point $$ f(x_*) = x_* $$, which is given by taking n arbitrary $$ x_0 \in X $$, setting $$ x_{n+1} = f(x_n) $$, and evaluating $$ \lim_n f(x_n) = x_* $$.*
+**Banach Fixed Point Theorem.** &nbsp; *Let $$ (X, d) $$ be a complete metric space, and let $$ f \colon X \to X $$ be contractive. Then $$ X $$ has a unique fixed point $$ f(x_*) = x_* $$, which is given by taking n arbitrary $$ x_0 \in X $$, setting $$ x_{n+1} = f(x_n) $$, and evaluating $$ \lim_n f(x_n) = x_* $$.*
 
 **2023 W P2.** &nbsp; *Consider the series $$ \sum_{a, b \geq 0} p^{-a} p^{-b} $$ for fixed $$ p, q $$ prime. Prove it converges and find its sum.*
 
@@ -200,7 +202,7 @@ and so the limit is $$ 1/2 $$. $$ \blacksquare $$
  
  $$
  \sum_{n=N}^{M} \frac{a_{n+1}-a_n}{a_n} 
- \geq \sum_{n=N}^{M} \frac{a_{n+1}-a_n}{a_{M+1} 
+ \geq \sum_{n=N}^{M} \frac{a_{n+1}-a_n}{a_{M+1}} 
  = \frac{a_{M+1} - a_N}{a_{M+1}}
  > 1/2.
  $$
