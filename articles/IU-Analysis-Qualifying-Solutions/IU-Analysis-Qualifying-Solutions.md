@@ -463,15 +463,13 @@ $$
 
 *for every sequence $$ \{x_n\} $$ in $$ [0, 1] $$. Show $$ \{f_n\} $$ converges uniformly to $$ f $$ or provide a counterexample.*
 
-*Proof.* This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $$ given by $$ f_n = x/n $$. 
-
-Suppose not. Then there exists an $$ a_n \in \mathbb{N} $$ and $$ x_n \in [0, 1] $$ such that 
+*Proof.* Suppose not. Then there exists sequences $$ a_n \in \mathbb{N} $$ and $$ x_n \in [0, 1] $$ such that 
 
 $$
 |f_{a_{2n}}(x_n) - f_{a_{2n+1}}(x_n) | > \varepsilon 
 $$
 
-for some fixed $$ \varepsilon $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$. Hence, 
+for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$. Hence, 
 
 $$
 |f_{a_{2n_k}}(x_n) - f_{a_{2n_k+1}}(x_n) | > \varepsilon 
@@ -483,7 +481,9 @@ $$
 \lim_n f_{a_{2n_k}}(x_{n_k}) = f(x_*),
 $$
 
-a contradiction.
+a contradiction. 
+
+This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $$ given by $$ f_n = x/n $$. $$ \blacksquare $$
 
 
 ## 5. Derivatives
