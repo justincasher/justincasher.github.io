@@ -21,7 +21,7 @@ title: IU Analysis Qualifying Solutions
 }
 </style>
 $$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fm}{\mathfrak{m}} \newcommand{\fp}{\mathfrak{p}} $$
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $$ 
+$$ \newcommand{\CB}{\mathcal{B}} \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $$ 
 $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 <br>
@@ -52,7 +52,23 @@ Fix a topological space $$ X $$. We say $$ X $$ is compact if every open cover $
 
 **2019 W P2.** &nbsp; *Let $$ X $$ be a compact metric space with open cover $$ \{U_{\alpha}\} $$. Show that for some $$ \varepsilon > 0 $$ every ball of radius $$ \varepsilon $$ is contained in some $$ U_{\alpha} $$.*
 
-*Proof.* 
+*Proof.* Suppose not. Then there exists a sequence $$ \{x_n\} $$ such that the ball of radius $$ 1/n $$ at $$ x_n $$, i.e. $$ B(x_n, 1/n) $$ is not contained in any $$ U_{\alpha} $$. By Theorem 1.2, there exists a convergent subsequence $$ \{x_{n_i}\} $$. Consequently, for $$ N \gg 0 $$ large, we have $$ i > N $$ implies $$ x_{n_i} $$ is contained in some $$ U_{\alpha} $$. We conclude that for $$ i $$ large, we have  $$ B(x_i, 1/n_i) $$ is contained in $$ U_{\alpha} $$ as well, a contradiction. $$ \blacksquare $$
+
+**2017 F P1.** &nbsp; *Let $$ X $$ be the set of sequences $$ \{ a_n \} $$ with $$ a_n \in \{0, 1\} $$. Equip $$ X $$ with the metric*
+
+$$
+d(\{a_n\}, \{b_n\}) = 
+\begin{cases} 
+    0 & \text{if } \{a_n\} = \{b_n\} \\
+    2^{-m} & \text{if } m = \min\{n \mid a_n \neq b_n \}.
+\end{cases}
+$$
+
+*(a) Prove $$ (X, d) is compact, and (b) that there exists no isolated points.*
+
+*Proof.* (a) Suppose not. By Theorem 1.2, there exists a sequence $$ \{a_n\}_{\ell} $$ in $$ X $$ with no convergence subsequence. 
+
+(b) $$ \blacksquare $$
 
 
 
