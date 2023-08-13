@@ -495,8 +495,8 @@ for each $$ i $$. We observe
 
 $$ 
 \begin{aligned}
-\| f_n(t_{i+1}) - f_n(t_i)\| & \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| + \| f(t_i) - f_n(t_i) \|
-& < \frac{3\varepsilon}{5}.
+\| f_n(t_{i+1}) - f_n(t_i)\| & \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| \\
+& \quad + \| f(t_i) - f_n(t_i) \| < \frac{3\varepsilon}{5}.
 \end{aligned}
 $$
 
