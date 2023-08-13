@@ -226,8 +226,10 @@ which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
 **2021 F P6.** &nbsp; *Let $$ a_0 \in (0, 1) $$ and $$ a_{n+1} = a_n^3 - a_n^2 + 1 $$. Prove that (a) $$ \{a_n\} $$ converges and find its limit; and (b) that $$ b_n = \prod_{i=1}^{n} a_i $$ converges and find its limit.*
 
-*Proof.* (a) We see $$ f(x) = x^3 - x^2 + 1 $$ is a function $$ f \colon [0, 1] \to [0, 1] $$. 
- 
+*Proof.* (a) We observe $$ a_{n+1} > a_n $$ implies $$ a_n^3 - a_n^2 - a_n + 1 > 0 $$.  Writing this as a polynomial $$ f(x) = x^3 - x^2 - x + 1 $$, we observe  $$ f(x) = (x-1)^2 (x+1) $$ and $$ f(0) = 1 $$. Hence $$ f $$ is strictly positive on $$ (-1, 1) $$, and our sequence is monotonically increasing. We further observe $$ a_n^3 - a_n^2 +1 < 1 $$ implies $$ a_n < 1 $$, which is true by assumption, so our sequence is bounded above by $$ 1 $$; thus, our sequence has a limit. We conclude that the limit is $$ 1 $$: for every $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ \| 1 - x \| > \delta $$ implies $$ \| f(x) \| > \varepsilon $$ on $$ [0, 1] $$; i.e. the difference between terms only goes to $$ 0 $$ at $$ 1 $$.
+
+(b) Since $$ \{b_n\} $$ is a bounded monotonically decreasing sequence, its limit exists. 
+
 
 ## 3. Uniform Continuity
 
