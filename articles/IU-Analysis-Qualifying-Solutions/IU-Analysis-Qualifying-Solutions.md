@@ -516,7 +516,7 @@ $$
 
 Hence, $$ f_n $$ converges uniformly to $$ f $$. $$ \blacksquare $$
 
-**2022 F P9.** &nbsp; *Define $$ F \colon \RR to \RR $$ by*
+**2022 F P9.** &nbsp; *Define $$ F \colon \RR \to \RR $$ by*
 
 $$
 F(x) = \sum_{n=1}^{\infty} \frac{1}{n^x}.
@@ -529,6 +529,39 @@ F'(x)
 = - \sum_{n=1}^{\infty} \frac{\ln(n)}{n^x}.
 $$
 
+*Proof.* (a) On $$ [1+ \delta, \infty) $$ we have $$ n^{-x} \leq n^{-(1+\delta)} $$. Since 
+
+$$ 
+\sum_{n=1}^{\infty} \frac{1}{n^{1+\delta}} 
+$$ 
+
+converges by the p-test, the Weierstrauss M-test implies $$ F $$ converges uniformly. $$ F $$ is continuous by the Uniform Limit Theorem. $$ F $$ is not continuous at $$ 1 $$ since it approaches infinity as $$ x $$ approaches $$ 1 $$.
+
+(b) We see that 
+
+$$
+\frac{d}{dx} \frac{1}{n^x} = - \ln(n) \frac{1}{n^x}.
+$$
+
+Again, in order to apply the Weierstrass M-Test for $$ \delta > 0 $$, we observe 
+
+$$
+\begin{aligned}
+F'(1+\delta) & = -\sum_{n=1}^{\infty} \ln(n) \frac{1}{n^{-(1+\delta}} \\
+& \leq - \int_1^{\infty} \ln(x) x^{-(1+\delta)} dx;
+\end{aligned}
+$$
+
+setting $$ u = \ln(x) $$ and $$ du = x^{-1} $$, 
+
+$$
+\begin{aligned}
+F'(1+\delta) & = \int_0^{\infty} e^{-\delta u} du < \infty.
+\end{aligned}
+$$
+
+We conclude that $$ F'(x) $$ converges uniformly, and that it is indeed the derivative of $$ F $$ by Theorem 4.2. $$ \blacksquare $$
+
 **2022 W P1.** &nbsp; *Define $$ f_n \colon [0, 1] \to \RR $$ by*
 
 $$
@@ -538,7 +571,15 @@ $$
 
 *Show $$ \{f_n\} $$ is not equicontinuous.*
 
-*Proof.*
+*Proof.* Let $$ x_n = (1/2)^{1/n} $$ and $$ y_n = (3/4)^{1/n} $$. Then $$ \lim_n \| x_n - y_n \| = 0 $$, but 
+
+$$
+\lim_n \| f(x_n) - f(y_n) \| 
+= \lim_n \frac{1/2 - 3/4}{1 + 2^{-n}}
+= \frac{1}{4},
+$$
+
+so our sequence is not equicontinuous. $$ \blacksquare $$
 
 **2021 F P7.** &nbsp; *Let $$ f_n \colon [0, 1]^2 \to \RR $$ be a uniformly bounded sequence of continuous functions. Set*
 
@@ -548,11 +589,69 @@ $$
 
 *(a) Show for each $$ n $$ that $$ F_n(x, y) $$ is well defined. (b) Show that $$ \{F_n\} $$ has a subsequence $$ \{F_{n_j}\} $$ which converges uniformly to a continuous $$ F $$.*
 
-*Proof.*
+*Proof.* (a) Since the $$ \{f_n\} $$ are uniformly bounded there exists an $$ M \in \RR $$ such that 
+
+$$
+\sup_{n \in \mathbb{N}, (x, y) \in \RR^n} \| f_n(x, y) \| \leq M.
+$$
+
+Hence, 
+
+$$ 
+\begin{aligned}
+\| F_n(x, y) \| & \leq M \int_y^1 t^{-1/3} dt \int_x^1 s^{-1/2} ds \\
+& = M [\frac{3}{2} t^{2/3} \mid_y^1 ] [2 s^{1/2} \mid_x^1 ] \\
+& = 3 M (1-y^{2/3})(1-x^{1/2}).
+\end{aligned}
+$$
+
+This limit is bounded as $$ (x, y) $$ approaches $$ 0 $$, and hence $$ F_n $$ is well defined. 
+
+(b) In (a) we showed that $$ \{F_n\} $$ is uniformly bounded by $$ 3M $$. Letting $$ x_2 \geq x_1 $$ and $$ y_2 \geq y_1 $$ with loss of generality, we see for each $$ n \in \mathbb{N} $$
+
+$$
+\begin{aligned}
+\|F_n(x_1, y_1) - F_n(x_2, y_2)\| & = \| \int_{y_1}^{y_2} \int_{x_1}^{x_2} s^{-1/2} t^{-1/3} f_n(s, t) ds dt \| \\
+& \leq 3M (y_2^{2/3} - y_1^{2/3})(x_2^{1/2} - x_1^{1/2}).
+\end{aligned}
+$$
+
+Since both $$ x^{1/2} $$ and $$ y^{2/3} $$ are continuous functions, we see that $$ \{F_n\} $$ is equicontinuous. Hence, by the Ascoli-Arzelà Theorem we can find our desired subsequence. $$ \blacksquare $$
+
 
 **2020 F P9.** &nbsp; *Let $$ f_n \colon [0, 1] \to [0, 1] $$ converge uniformly to $$ f \colon [0, 1] \to [0, 1] $$ (a not necessarily continuous function). Suppose the $$ f_n $$ map compact sets to compact sets. Does $$ f $$ map compact sets to compact sets?*
 
-*Proof.*
+*Proof.* Not necessarily. Set 
+
+$$
+f_0(x)) =
+\begin{cases}
+    0 & \text{if } x = 2^{-n} \text{ for some } n
+    1 & \text{elsewise},
+\end{cases}
+$$
+
+and inductively define
+
+$$
+f_{n+1}(x) =
+\begin{cases}
+    x & \text{if } x = 2^{-(n+1)} 
+    f_n(x) & \text{elsewise}.
+\end{cases}
+$$
+
+Then the sequence $$ \{f_n\} $$ converges uniformly to the function 
+
+$$
+f(x) = 
+\begin{cases}
+    x & \text{if } x = 2^{-n} \text{ for some } n
+    1 & \text{elsewise}.
+\end{cases}
+$$
+
+Each $$ f_n $$ is compact (its image contains finitely many points). Although, the image of $$ x_n = 2^{-n}$$ by $$ f $$ is not compact: it contains $$ 1 $$ and $$ 2^{-n} $$ for each $$ n $$, but not $$ 0 $$. $$ \blacksquare $$
 
 **2020 W P8.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be continuous with $$ f(x+1) = f(x) $$. Define $$ f_n \colon \RR \to \RR $$ by $$ f_1 = f $$ and for $$ n > 1 $$*
 
@@ -563,7 +662,12 @@ $$
 
 *Show that $$ f_n $$ converges uniformly on $$ \RR $$.* $$ \blacksquare $$ 
 
-*Proof.* 
+*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Then for $$ k \geq 0 $$ we have 
+
+$$
+\| f_n(x) - f_{n+k}(x) \|
+< 
+$$
 
 **2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
 
@@ -576,6 +680,8 @@ F(x) = \sum_{n=1}^{\infty} \frac{\sin(x^n)}{n!}
 $$
 
 *converges uniformly and compute its derivative.*
+
+*Proof.* 
 
 **2018 F P7.** &nbsp; *Define $$ f_n \colon [0, 2\pi] \to \RR $$ by $$ f_n(x) = e^{\sin(nx)} $$ and $$ F_n(x) = \int_0^x f_n(y) dy $$. Show there exists a subsequence of $$ \{F_n\} $$ that converges uniformly to a continuous function.*
 
@@ -590,6 +696,7 @@ $$
 *(b) What if $$ \|f_n(x)\| \leq M $$ for all $$ n $$ and $$ x $$?*
 
 *Proof.*
+
 
 
 ## 5. Derivatives
