@@ -171,7 +171,7 @@ Letting $$ n $$ approach infinity gives us the desired equality. $$ \blacksquare
 
 **2022 F P1.** &nbsp; *Define $$ \{x_n\} $$ by $$ 0 < x_1 < 1 $$ and $$ x_{n+1} = 1 - \sqrt{1-x_n} $$. Prove that (a) $$ \{x_n\} $$ monotonically decreases to $$ 0 $$, and that (b) $$ \lim_n x_{n+1}/x_n = 1/2 $$.
 
-*Proof.* (a) Set $$ y_n = 1-x_n $$ so that $$ y_{n+1} = \sqrt{y_n} $$. Then $$ y_1 \neq 0 $$ implies $$ \lim_n y_n = 1 $$ (this is well known). Then $$ lim_n x_n = \lim_n 1-y_n = 0 $$. To show $$ x_n $$ is monotonically decreasing, we observe $$ y_n $$ is monotonically increasing, i.e. $$ \sqrt{x} > x $$ for $$ x \in (0, 1) $$. 
+*Proof.* (a) Set $$ y_n = 1-x_n $$ so that $$ y_{n+1} = \sqrt{y_n} $$. Then $$ y_1 \neq 0 $$ implies $$ \lim_n y_n = 1 $$ (this is well known). Thus, $$ \lim_n x_n = \lim_n 1-y_n = 0 $$. To show $$ x_n $$ is monotonically decreasing, we observe $$ y_n $$ is monotonically increasing, i.e. $$ \sqrt{x} > x $$ for $$ x \in (0, 1) $$. 
 
 (b) By L'Hôpital's Rule, 
 
@@ -184,7 +184,45 @@ $$
 
 and so the limit is $$ 1/2 $$. $$ \blacksquare $$
 
-**2022 W P2.**
+**2022 W P2.** &nbsp; *Let $$ \{a_n\} $$ be a sequence in $$ \RR $$. If $$ \sum_n \| a_n - a_{n+1} \| < \varepsilon $$, then the sequence is convergent.*
+ 
+ *Proof.* Fix $$ \varepsilon > 0 $$. Then there exists an $$ N \gg 0 $$ such that $$ m \geq n \geq N $$ implies 
+ 
+ $$
+ \| a_n - a_m \| \leq \sum_{k=N}^{\infty} \| a_k - a_{k+1} \| < \varepsilon.
+ $$
+ 
+ We conclude that our sequence is Cauchy, and hence has a limit. $$ \blacksquare $$
+ 
+ **2022 W P7.** &nbsp; *Suppose $$ \{a_n\} $$ is an unbounded increasing sequence in $$ \RR^+ $$. Show $$ \sum_n (a_{n+1}-a_n)/a_n $$ diverges.*
+ 
+ *Proof.* Fix $$ N \gg 0 $$. Since $$ \{a_n\} $$ is unbounded, there exists an $$ M > N $$ such that $$ a_{M+1} > 2 a_N $$. Hence, 
+ 
+ $$
+ \sum_{n=N}^{M} \frac{a_{n+1}-a_n}{a_n} 
+ \geq \sum_{n=N}^{M} \frac{a_{n+1}-a_n}{a_{M+1} 
+ = \frac{a_{M+1} - a_N}{a_{M+1}}
+ > 1/2.
+ $$
+ 
+We conclude that the partial sums do not converge. $$ \blacksquare $$
+ 
+*Alternative proof.* The inequality $$ x \geq \log(1+x) $$ implies 
+
+$$
+\sum_n \frac{a_{n+1}-a_n}{a_n}
+= \sum_n \frac{a_{n+1}}}{a_n} - 1
+\geq \sum_n \log(a_{n+1}/a_n)
+= \lim_n a_n - a_1,
+$$
+
+which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
+
+**2022 W P4.** &nbsp; *Let $$ t_0 \in \RR $$ and set $$ t_{n+1} = \sin(\cos(t_n) $$. Prove this sequence converges with limit independent of $$ t_0 $$.*
+
+*Proof.* Consider $$ f(x) = \sin(\cos(x))) $$ as a function $$ f \colon [0, 2 \pi] \to [0, 2 \pi] $$. Set $$ g(x) = f(f(x)) $$. Computing the derivative, we observe that $$ g'(x) < 1 $$ for each $$ x \in [0, 2 \pi] $$, so $$ g $$ is a contraction on $$ [0, 2 \pi] $$, and consequently $$ g $$ admits a unique fixed point by the Banach Fixed Point Theorem. We conclude that our desired sequence has a unique limit independent of $$ t_0 $$, because $$ f $$ does not oscillate between 2 points anywhere. $$ \blacksquare $$
+
+
  
 
 ## 3. Uniform Continuity
