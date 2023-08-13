@@ -379,7 +379,15 @@ Thus, $$ f $$ is a bounded function. $$ \blacksquare $$
 
 **2020 W P7.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be continuous and $$ f' \colon \RR \to \RR $$ uniformly continous. If $$ \displaystyle \lim_{x \to \infty} f(x) = 0 $$, does $$ \displaystyle \lim_{x \to \infty} f'(x) $$ exist?*
 
-*Proof.* We will show the derivative goes to $$ 0 $$. Suppose not. 
+*Proof.* We will show the derivative goes to $$ 0 $$. Suppose not. Then there exists a sequence $$ \{x_n\} $$ such that $$ \| f'(x_n) \| > C $$ for some $$ C > 0 $$ and \lim_n x_n = \infty $$. Without loss of generality, we suppose $$ f'(x_n) > C $$. Since $$ f' $$ is uniformly continuous, there exists a $$ \delta > 0 $$ so that $$ \| x-y \| < \delta $$ implies $$ \| f'(x) - f'(y) \| < C/2 $$. Therefore, 
+
+$$
+\int_{x_n - \delta}^{x_n + \delta} f'(x) dx 
+\geq \int_{x_n-\delta}^{x_n+\delta} C/2 dx 
+= \delta C,
+$$
+
+which implies $$ f(x_n + \delta) \geq f(x_n - \delta) + \delta C $$. This contradicts $$ f $$ having limit $$ 0 $$. $$ \blacksquare $$
 
 
 ## 4. Uniform Convergence
