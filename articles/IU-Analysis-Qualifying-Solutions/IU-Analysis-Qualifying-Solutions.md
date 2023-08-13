@@ -415,6 +415,42 @@ Thus, $$ f $$ is uniformly continuous on $$ \RR^n \setminus D_r $$. Furthermore,
 
 ## 4. Uniform Convergence
 
+Let $$ X, Y $$ be metric spaces, and let $$ f, g \colon X \to Y $$ be functions. Define the *uniform metric* by 
+
+$$
+\rho(f, g)
+= \sup_{x \in X} d_Y(f(x), g(x)). 
+$$
+
+(This need not be a metric if $$ d_Y $$ is unbounded on $$ f(X) $$.) We say a sequence of functions $$ f_n \colon X \to Y $$ converges uniformly to $$ f_* $$ if it does with respect to $$ \rho $$. We say $$ \{f_n\} $$ is *uniformly equicontinuous* if for every $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ d_X(x, y) < \delta $$ implies $$ d_Y(f_n(x), f_n(y)) < \varepsilon $$ for all $$ n $$.
+
+Now assume $$ K $$ is a compact subset of $$ \RR^m $$, and our sequence is $$ f_n \colon K \to \RR^n $$. We say $$ \{f_n\} $$ is *uniformly bounded* if there exists an $$ M $$ such that 
+
+$$
+\sup_{x \in K, n \in \mathbb{N}} \|f_n(x)\| \leq M.
+$$
+
+**Ascoli-Arzelà Theorem.** &nbsp; *Let $$ K \subset \RR^m $$ be compact, and let $$ f_n \colon K \to \RR^n $$ be a sequence of functions. If $$ \{f_n\} $$ is uniformly bounded and uniformly equicontinuous, then there exists a subsequence which converges uniformly.*
+
+**Weierstrass M-Test.** &nbsp; *Let $$ f_n \colon X \to \RR^n $$ be a sequence of functions defined on a set $$ X $$. Set $$ M_n = \sup_x \| f_n(x) \| $$. If $$ \sum M_n $$ converges, then $$ \sum f_n(x) $$ converges absolutely and uniformly.*
+
+**Uniform Limit Theorem.** &nbsp; *Write $$ X $$ for a topological space and $$ Y $$ a metric space. If $$ f_n \colon X \to Y $$ are continuous and converge uniformly to $$ f \colon X \to Y $$, then $$ f $$ is continuous. (In other words, the space of continuous functions are closed with respect to $$ \rho $$.)*
+
+**Theorem 4.1.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be integrable with uniform limit $$ f $$. Then $$ \int_a^b f dx = \lim_n \int_a^b f_n dx $$.*
+
+**Theorem 4.2.** &nbsp; *Suppose $$ f_n \colon [a, b] \to \RR $$ are differentiable such that their derivatives $$ f_n' $$ converge uniformly on $$ [a, b] $$. If $$ f_n(x_0) $$ converges for some point $$ x_0 \in [a, b] $$, then $$ f_n $$ converge uniformly to some $$ f $$, and $$ f'(x) = \lim_n f_n'(x) $$.*
+
+**2023 W P1.** &nbsp; *Let $$ f_n \colon [0, 1] \to \RR^+ $$ be monotonically increasing with uniform limit $$ f $$. Prove that*
+
+$$
+\lim_n \int_0^1 \left( \sum_{k=1}^{n} f_k(x)^n \right)^{1/n} dx 
+= \int_0^1 f(x) dx.
+$$
+
+*Proof.* 
+
+
+
 
 ## 5. Derivatives
 
