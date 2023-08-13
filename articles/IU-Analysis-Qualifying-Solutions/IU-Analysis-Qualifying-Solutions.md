@@ -665,18 +665,19 @@ $$
 *Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Expanding $$ f_n(x) $$, we have 
 
 $$
-f_n(x) = \frac{1}{2^n} \left( \sum_{a=-2^{n-1}-1}^{2^{n-1}+1} f(x+\frac{a}{2^{n}}) \right)
+f_n(x) = \frac{1}{2^n} \sum_{a=-2^{n-1}-1}^{2^{n-1}+1} f\left( x+\frac{a}{2^{n}} \right)
 $$
 
 with the sum skipping $$ a = 0 $$. Hence, for each $$ k > 0 $$, we have 
 
 $$
-\| f_n(x) - f_{n+k} \|
+\| f_n(x) - f_{n+k}(x) \|
+& = \| \frac{1}{2^n} \sum_{a=-2^{n-1}-1}^{2^{n-1}+1} f\left( x+\frac{a}{2^{n}} \right) - \frac{1}{2^{n+k}} \sum_{a=-2^{n+k-1}-1}^{2^{n+k-1}+1} f\left( x+\frac{a}{2^{n+k}} \right)
 $$
 
 **2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
 
-*Proof.* 
+*Proof.* We wil show $$ g_n = f-f_n $$ converges uniformly to $$ 0 $$. Fix $$ \varepsilon > 0 $$. For each $$ x \in [a, b] $$, chose an $$ N_x \gg 0 $$ such that $$ g_n(x) < \varepsilon for all $$ n > N_x $$. Since our $$ g_n $$ are continuous, for each $$ x $$ there exisrts an $$ r_x $$ such that $$ g_{N_x}(B(x, r_x)) \subseteq [0, \varepsilon) $$. Since $$ [a, b] $$ is compact, we can choose a finite subcover $$ B(x_1, r_1), \dots, B(x_{\ell}, r_{\ell}). $$ Letting $$ N = \max \{N_{x_0}, \dots, N_{x_\ell}\} $$, we get $$ g_n(x) < \varepsilon $$ for all $$ x \in [a, b] $$ and $$ n \geq N $$.
 
 **2018 F P2.** &nbsp; *Show that*
 
