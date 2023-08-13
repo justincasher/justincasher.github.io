@@ -5,9 +5,9 @@ feedformat: card
 title: Seminars
 ---
 <br/>
-This fall I am planning on organizing a seminar on algebraic geometry (p-adic Hodge theory, or another topic of interest) at Indiana University. Some details:
+This fall I am organizing a graduate seminar at Indiana University on topics in algebraic geometry and number theory. 
 
-- We have four people interested in participating including myself.
-- If you already know what your schedule looks like, please submit [this survey](https://www.when2meet.com/?19957395-gEG9R).
+- We have 14 people interested (including myself).
+- If you already know what your schedule looks like, please submit [this survey](https://www.when2meet.com/?20865999-IQjje).
 
 More information will posted here soon!

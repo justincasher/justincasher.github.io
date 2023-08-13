@@ -157,16 +157,7 @@ where the second equality follows from continuity. $$ \blacksquare $$
 
 **Proposition 1.5.** &nbsp; *Let $$ f \colon F \to G $$ be a morphism of sheaves. Then $$ f $$ is a monomorphism (resp. epimorphism, isomorphism) if and only if it the induced map on each stalk is.*
 
-*Proof.* It is clear that if $$ f $$ is a monomorphism then the map induced on stalks is (WHY?). Therefore, suppose $$ f $$ induces a monomorphism on each stalk. Consider the following diagram, where $$ \et(f)$$ is given by bundling the induced maps on stalks:
-
-$$ 
-\xymatrix{ 
-\et(X) \ar[d] \ar[r]^{\et(f)} & \et(Y) \ar[d] \\
-X \ar[r]_{f} & Y
-} 
-$$
-
-We see that $$ \et(f) $$ is a monomorphism  FINISH
+*Proof.* It is clear that if $$ f $$ is a monomorphism then the map induced on stalks is. So assume $$ f $$ induces a monomorphism on stalks . The cases of epimorphisms and isomorphisms follow similarily. 
 
 **Corollary 1.6.** The inverse image functor is exact.
 
