@@ -662,18 +662,21 @@ $$
 
 *Show that $$ f_n $$ converges uniformly on $$ \RR $$.* $$ \blacksquare $$ 
 
-*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Then
+*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Expanding $$ f_n(x) $$, we have 
 
 $$
-\begin{aligned}
-\| f_n(x) - f_{n+1}(x) \| & < \| f_n(x) - \frac{1}{2}(f_{n-1}(x-2^{-n}) + f_{n-1}(x+2^{-n})) \| \\
-& = 
-\end{aligned}
+f_n(x) = \frac{1}{2^n} \left( \sum_{n=-2^{n-1}-1}^{2^{n-1}+1} f(x+\frac{n}{2^{n}}) \right)
+$$
+
+with the sum skipping $$ n = 0 $$. Hence, for each $$ k > 0 $$, we have 
+
+$$
+\| f_n(x) - f_{n+k} \|
 $$
 
 **2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
 
-*Proof.*
+*Proof.* 
 
 **2018 F P2.** &nbsp; *Show that*
 
