@@ -94,11 +94,7 @@ $$
 
 *Show this is not necessarily true for $$ \varepsilon = 0 $$.*
 
-*Proof.* By continuity, there exists a $$ \delta > 0 $$ such that $$ \delta > \|x-y\| $$ implies $$ |f(x) - f(y)| \leq \varepsilon $$; consequently, we can assume $$ \|x-y\| \geq \delta $$. Then the Heinel-Borel Theorem and 2019 F P5 show that $$ K $$ and $$ f(K) $$ are bounded, i.e. $$ |f(x) - f(y)| \leq C $$ for a fixed $$ C $$. Consequently, 
-
-$$
-|f(x) - f(y) | \leq C/\delta \|x-y\| + \varepsilon,
-$$
+*Proof.* By continuity, there exists a $$ \delta > 0 $$ such that $$ \delta > \|x-y\| $$ implies $$ |f(x) - f(y)| \leq \varepsilon $$; consequently, we can assume $$ \|x-y\| \geq \delta $$. Then the Heinel-Borel Theorem and 2019 F P5 show that $$ K $$ and $$ f(K) $$ are bounded, i.e. 
 
 and we set $$ M = C/\delta $$.
 
