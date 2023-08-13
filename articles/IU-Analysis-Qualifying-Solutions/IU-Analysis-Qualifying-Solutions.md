@@ -495,7 +495,7 @@ for each $$ i $$. Then for any $$ x \in [t_i, t_{i+1}] $$, we have
 
 $$
 \begin{aligned}
-\| f_n(x) - f(x) \| & \leq \|f_n(x) - f_n(t_i) \| + \| f_n(t_i) - f(x) \| \\
+\| f_n(x) - f(x) \| & \leq \|f_n(x) - f_n(t_i) \| + \| f_n(t_i) - f(x) \| 
 \end{aligned}
 $$
 
