@@ -228,7 +228,7 @@ which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
 **2021 F P6.** &nbsp; *Let $$ a_0 \in (0, 1) $$ and $$ a_{n+1} = a_n^3 - a_n^2 + 1 $$. Prove that (a) $$ \{a_n\} $$ converges and find its limit; and (b) that $$ b_n = \prod_{i=1}^{n} a_i $$ converges and find its limit.*
 
-*Proof.* (a) We observe $$ a_{n+1} > a_n $$ implies $$ a_n^3 - a_n^2 - a_n + 1 > 0 $$.  Writing this as a polynomial $$ f(x) = x^3 - x^2 - x + 1 $$, we observe  $$ f(x) = (x-1)^2 (x+1) $$ and $$ f(0) = 1 $$. Hence $$ f $$ is strictly positive on $$ (-1, 1) $$, and our sequence is monotonically increasing. We further observe $$ a_n^3 - a_n^2 +1 < 1 $$ implies $$ a_n < 1 $$, which is true by assumption, so our sequence is bounded above by $$ 1 $$; thus, our sequence has a limit. We conclude that the limit is $$ 1 $$: for every $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ \| 1 - x \| > \delta $$ implies $$ \| f(x) \| > \varepsilon $$ on $$ [0, 1] $$; i.e. the difference between terms only approaches  $$ 0 $$ at $$ 1 $$. You can also apply the Banach Fixed Point Theorem here; the derivative of $$ x^3 - x^2 + 1 $$ is strictly less than $$ 1 $$ on $$ (0, 1) $$.
+*Proof.* (a) We observe $$ a_{n+1} > a_n $$ implies $$ a_n^3 - a_n^2 - a_n + 1 > 0 $$.  Writing this as a polynomial $$ f(x) = x^3 - x^2 - x + 1 $$, we observe  $$ f(x) = (x-1)^2 (x+1) $$ and $$ f(0) = 1 $$. Hence $$ f $$ is strictly positive on $$ (-1, 1) $$, and our sequence is monotonically increasing. We further observe $$ a_n^3 - a_n^2 +1 < 1 $$ implies $$ a_n < 1 $$, which is true by assumption, so our sequence is bounded above by $$ 1 $$; thus, our sequence has a limit. We conclude that the limit is $$ 1 $$: for every $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ \| 1 - x \| > \delta $$ implies $$ \| f(x) \| > \varepsilon $$ on $$ [0, 1] $$; i.e. the difference between terms only approaches  $$ 0 $$ at $$ 1 $$.
 
 (b) Since $$ \{b_n\} $$ is a bounded monotonically decreasing sequence, its limit exists. The limit is $$ 0 $$, but I am not sure how to show this directly. $$ \blacksquare $$ 
 
@@ -265,7 +265,30 @@ $$
 
 We conclude that $$ u^{-\ln(u)} e^u > 1 $$, our interal diverges, and so does our series. $$ \blacksquare $$
 
-**2020 F P1.** &nbsp; *Let $$ x_0 > 0 $$ and $$ x_{n+1} = \frac{1}{2} (x_n + \frac{4}{x_n}) $$. 
+**2020 F P1.** &nbsp; *Let $$ x_0 > 0 $$ and $$ x_{n+1} = \frac{1}{2} (x_n + \frac{4}{x_n}) $$. Show that (a) $$ x_{n+1} \geq 2 $$ for $$ n \geq 0 $$, (b) $$ x_{n+1} \leq x_n $$ if $$ n \geq 1 $$, (c) $$ \lim x_n = x_* $$ exists, and (d) find $$ x_* $$.*
+
+*Proof.* (a) By the AM-GM inequality (cf. optimization), 
+
+$$
+x_{n+1}
+= \frac{1}{2} (x_n + \frac{4}{x_n})
+\geq \sqrt{x_n \frac{4}{x_n}}
+= 2
+$$
+
+for $$ n \geq 0 $$. 
+
+(b) We see $$ x_{n+1} \leq x_n $$ if and only if 
+
+$$
+\frac{1}{2}(x_n + \frac{4}{x_n}) \leq x_n,
+$$
+
+which reduces to $$ 2 \leq x_n $$. This is true by (a).
+
+(c) Our sequence is bounded below and monotonically decreasing, so it has a limit.
+
+(d) Define $$ f \colon [1.5, \infty) \to [1.5, \infty) $$ by $$ f = \frac{1}{2}(x + \frac{4}{x}) $$. Then $$ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $$ is strictly less than $$ 1 $$ for our domain, so $$ f $$ is a contraction. Applying the Banach Fixed Point Theorem to $$ [1.5, \infty) $$ tells us our sequence has a unique limit. Solving $$ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $$ yields $$ x_* = 2 $$.
 
 
 
