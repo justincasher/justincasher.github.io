@@ -469,16 +469,10 @@ $$
 |f_{a_{2n}}(x_n) - f_{a_{2n+1}}(x_n) | > \varepsilon 
 $$
 
-for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$. Hence, 
+for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$. Therefore let us assume without loss of generality $$ x_n $$ has limit $$ x_* $$. But
 
 $$
-|f_{a_{2n_k}}(x_n) - f_{a_{2n_k+1}}(x_n) | > \varepsilon 
-$$
-
-but 
-
-$$
-\lim_n f_{a_{2n_k}}(x_{n_k}) = f(x_*),
+\lim_n f_{a_{2n}}(x_n) = f(x_*),
 $$
 
 a contradiction. 
