@@ -295,10 +295,35 @@ which reduces to $$ 2 \leq x_n $$. This is true by (a).
 *Proof.* Let 
 
 $$ 
-N = \sup\{n \mid |a_n| \geq |a_0| },
+N = \sup\{n \mid a_n \geq a_0 },
 $$
 
 which is finite since our sequence converges to 0. Then $$ n \geq N $$ implies $$ a_n \leq a_N $$. Now delete the first $$ n $$ terms and repeat to get infinitely many such $$ N $$. $$ \blacksquare $$
+
+**2020 w P2.** &nbsp; *Write $$ \{a_n\} $$ for a sequence in $$ \RR^+ $$ such that $$ \lim_n a_n = 0 $$ and $$ \|a_n - a_{n+1}\| \leq n^{-2} $$. Prove $$ \sum_n (-1)^{n-1} a_n $$ converges.*
+
+*Proof.* We will show the partial sums converge. Fix $$ \varepsilon > 0 $$, and choose $$ N \gg 0 $$ such that $$ a_n < \varepsilon/2 $$ for $$ n \geq N $$ and 
+
+$$ 
+\sum_{k = \lfloor N/2 \rfloor}^{\infty} \frac{1}{n^2} < \frac{\varepsilon}{2}.
+$$
+
+Then for each $$ M > N $$, we see that if $$ N $$ is odd 
+
+$$
+|\sum_{n=N}^M (-1)^{n-1} a_n|
+\leq \sum_{n=N/2}^{\lceil M/2 \rceil} |a_n - a_{n+1}|
+< \frac{\varepsilon}{2}
+
+and if $$ N $$ is even
+
+$$
+|\sum_{n=N}^M (-1)^{n-1} a_n|
+\leq |a_N| + |\sum_{n=N+1}^M (-1)^{n-1} a_n |
+< \frac{\varepsilon}{2} + \frac{\varepsilon}{2}.
+$$
+
+Thus, our series converges. $$ \blacksquare $$
 
 
 ## 3. Uniform Continuity
