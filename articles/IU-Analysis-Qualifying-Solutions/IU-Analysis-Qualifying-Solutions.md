@@ -111,7 +111,7 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 **Theorem 2.1.** &nbsp; *In $$ \RR^n $$ every Cauchy sequence convergences, i.e. it is a complete metric space.*
 
-**Ratio Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ L = \lim_n |a_{n+1}/a_n|. If $$ L < 1 $$ then  *
+**Ratio Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ L = \lim_n |a_{n+1}/a_n|. If $$ L \lessdot 1 $$ then $$ $$ *
 
 
 ## 3. Uniform Continuity
