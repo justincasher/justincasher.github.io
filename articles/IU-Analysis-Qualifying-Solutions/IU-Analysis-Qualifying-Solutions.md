@@ -308,7 +308,7 @@ $$
 \sum_{k = \lfloor N/2 \rfloor}^{\infty} \frac{1}{n^2} < \frac{\varepsilon}{2}.
 $$
 
-Then for each $$ M > N $$, we see that if $$ N $$ is odd 
+(This is possible by the p-series, or integral, test.) Then for each $$ M > N $$, we see that if $$ N $$ is odd 
 
 $$
 |\sum_{n=N}^M (-1)^{n-1} a_n|
@@ -333,6 +333,30 @@ a_n = \sqrt{2\sqrt{3\sqrt{\cdots\sqrt{n}}}}
 $$
 
 *converges in $$ \RR $$.*
+
+*Proof.* First we observe that our sequence is monotonically increasing, and hence we need to show it is bounded. Rewrite each term as 
+
+$$
+a_n = \prod_{k=2}^{n} k^{2^{-k}}.
+$$
+
+Since the logarithm is continuous, we see our sequence is bounded if and only if the sequence 
+
+$$
+\ln(a_n) 
+= \sum_{k=1}^{n} \frak{1}{2^k} \ln(k)
+$$
+
+is. Since $$ \ln(k) \leq \sqrt{k} $$ and $$ 2^k \geq k^2 $$, we have 
+
+$$
+\lim_{n \to \infty} \ln(a_n)
+\leq \sum_{k=1}^{\infty} \frac{1}{n^2} \sqrt{n}
+= \leq \sum_{k=1}^{\infty} \frac{1}{n^{3/2},
+
+$$
+
+which is bounded by the p-series test. Thus, $$ \{a_n\} $$ is bounded. $$ \blacksquare $$
 
 
 ## 3. Uniform Continuity
