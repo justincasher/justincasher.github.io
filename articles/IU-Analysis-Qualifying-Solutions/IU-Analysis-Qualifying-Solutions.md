@@ -120,6 +120,8 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 **Integral Test.** &nbsp; *Let $$ f \colon \RR \to \RR^+ $$ be nonnegative and monotonically decreasing with $$ f(n) = a_n $$. Then $$ \sum a_n $$ converges if and only if $$ \int_1^{\infty} f(x) dx < \infty $$.*
 
+**P-Series Test.** &nbsp; *A series of the form $$ \sum_n n^{-p} $$ converges if and only if $$ p > 1 $$.* 
+
 **Limit Comparison Test.** &nbsp; *Let $$ \{a_n\} $$ and $$ \{b_n\} $$ be sequences in $$ \RR $$. Suppose $$ L = \lim a_n / b_n $$ exists. Then $$ \sum a_n $$ converges if and only if $$ \sum b_n $$ converges.*
 
 **Alternating Series Test.** &nbsp; *Suppose $$ \{a_n\} $$ is a monotonically decreasing sequence in $$ \RR^+ $$ with $$ \lim_n a_n = 0 $$. Then $$ \sum (-1)^n a_n $$ converges.*
@@ -353,13 +355,14 @@ $$
 \lim_{n \to \infty} \ln(a_n)
 \leq \sum_{k=1}^{\infty} \frac{1}{n^2} \sqrt{n}
 = \leq \sum_{k=1}^{\infty} \frac{1}{n^{3/2},
-
 $$
 
 which is bounded by the p-series test. Thus, $$ \{a_n\} $$ is bounded. $$ \blacksquare $$
 
 
 ## 3. Uniform Continuity
+
+
 
 
 ## 4. Uniform Convergence
