@@ -479,13 +479,13 @@ This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $
 
 **2022 F P2.** &nbsp; *Suppose $$ f_n \colon [a, b] \to \RR $$ converge pointwise to $$ f $$ and that each $$ f_n $$ is monotonically increasing. Then $$ f_n $$ converge uniformly to $$ f $$.* 
 
-*Proof.* Fix $$ \varepsilon > 0 $$. Partition $$ [a, b] $$ into intervals $$ [t_i, t_{i+1}] $$ such that 
+*Proof.* Fix $$ \varepsilon > 0 $$. Observe that this implies $$ f $$ is monotonically increasing, so we can partition $$ [a, b] $$ into intervals $$ [t_i, t_{i+1}] $$ such that 
 
 $$ 
-\|f(t_{i+1}) - f(t_i) \| < \varepsilon / 4,
+\|f(t_{i+1}) - f(t_i) \| < \varepsilon / 4.
 $$ 
 
-which can be done since $$ f $$ is bounded between $$ f(a) $$ and $$ f(b) $$. Choose an $$ N \gg 0 $$ such that for $$ n \geq N $$ we have 
+Choose an $$ N \gg 0 $$ such that for $$ n \geq N $$ we have 
 
 $$ 
 \| f_n(t_i) - f(t_i) \| < \varepsilon/4
@@ -495,11 +495,8 @@ for each $$ i $$. Then for any $$ x \in [t_i, t_{i+1}] $$, we have
 
 $$
 \begin{aligned}
-\| f_n(x) - f(x) \| & \leq \|f_n(x) - f_n(t_i) \| + \| f_n(t_i) - f(x) \| \\
-& <\| f_n(t_{i+1}) - f_n(t_i) \| + \frac{\varepsilon}{4} \\
-& \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| + \| f_n(t_i) - f(t_i) \| + \frac{\varepsilon}{4} \\
-& < \frac{\varepsilon}{4} + \frac{\varepsilon}{4} + \frac{\varepsilon}{4} + \frac{\varepsilon}{4} \\
-& = \varepsilon.
+\| f_n(x) - f(x) \| & \leq \| f_n(x) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(x) \| \\
+& < \| f_n(x) - f(t_{i+1}) \| + \frac{\varepsilon}{4} \\
 \end{aligned}
 $$
 
