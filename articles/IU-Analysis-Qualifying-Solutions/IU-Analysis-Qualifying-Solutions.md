@@ -475,14 +475,14 @@ This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $
 
 **2023 W P4.** &nbsp; *Does there exists a sequence of continuously differentiable functions that cnverge uniformly to a non-differentiable function?*
 
-*Proof.* Yes, we see that $$ f_n = \sqrt{x^2+1/n} $$ is continuously differentiable, but $$ f_n $$ converge to $$ |x| $$ uniformly on $$ \RR $$. $$ \blacksquare $$
+*Proof.* Yes, we see that $$ f_n = \sqrt{x^2+1/n} $$ is continuously differentiable, but $$ f_n $$ converge to $$ \|x\| $$ uniformly on $$ \RR $$. $$ \blacksquare $$
 
 **2022 F P2.** &nbsp; *Suppose $$ f_n \colon [a, b] \to \RR $$ converge pointwise to $$ f $$ and that each $$ f_n $$ is monotonically increasing. Then $$ f_n $$ converge uniformly to $$ f $$.* 
 
 *Proof.* Fix $$ \varepsilon > 0 $$. Partition $$ [a, b] $$ into intervals $$ [t_i, t_{i+1}] $$ such that 
 
 $$ 
-\|f(t_{i+1}) - f(t_i) \| < \varepsilon / N,
+\|f(t_{i+1}) - f(t_i) \| < \varepsilon / 4,
 $$ 
 
 which can be done since $$ f $$ is bounded between $$ f(a) $$ and $$ f(b) $$. Choose an $$ N \gg 0 $$ such that for $$ n \geq N $$ we have 
