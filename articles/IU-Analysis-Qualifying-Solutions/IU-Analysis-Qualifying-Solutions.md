@@ -469,10 +469,9 @@ $$
 |f_{a_{2n}}(x_n) - f_{a_{2n+1}}(x_n) | > \varepsilon 
 $$
 
-for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$. Therefore let us assume without loss of generality $$ x_n $$ has limit $$ x_* $$. But
-
+for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$; let us assume without loss of generality $$ x_n $$ has limit $$ x_* $$. Define a sequence $$ \{y_n\} $$ by $$ y_{a_{2n}} = x_n $$, $$ y_{a_{2n+1}} = x_n $$, and $$ y_n = x_* $$ elsewise. Then $$ f_n(y_n) $$ is not a Cauchy sequence by assumption, but 
 $$
-\lim_n f_{a_{2n}}(x_n) = f(x_*),
+\lim_n f_n(y_n) = f(x_*),
 $$
 
 a contradiction. 
