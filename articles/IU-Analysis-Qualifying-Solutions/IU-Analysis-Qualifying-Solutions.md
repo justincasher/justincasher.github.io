@@ -64,13 +64,45 @@ d(\{a_n\}, \{b_n\}) =
 \end{cases}
 $$
 
-*(a) Prove $$ (X, d) is compact, and (b) that there exists no isolated points.*
+*(a) Prove $$ (X, d) $$ is compact, and (b) that there exists no isolated points.*
 
-*Proof.* (a) Suppose not. By Theorem 1.2, there exists a sequence $$ \{a_n\}_{\ell} $$ in $$ X $$ with no convergence subsequence. 
+*Proof.* (a) Suppose not. By Theorem 1.2, there exists a sequence $$ \{s_{\ell}\} = \{ \{a_n\}_{\ell} \} $$ in $$ X $$ with no convergent subsequence. Further suppose $$ S $$ has no repeating values. Hence, for each term $$ s_{\ell} $$, there exists a $$ N_{\ell} > 0 $$ such that $$ B(s_{\ell}, 2^{-N_{\ell}) $$ contains no other elements from our sequence. But 
 
-(b) $$ \blacksquare $$
+$$ 
+s_1, \dots, s_{2^{N_{\ell}}+1} 
+$$ 
 
+cannot have pairwise distinct first $$ N_{\ell} $$ terms by the pigeon-hole principle, a contradiction.
 
+(b) Suppose $$ \{an\} $$ is an isolated point. Then there exists an $$ N \gg 0 $$ with $$ B(\{a_n\}, 2^{-N}) $$ only containing $$ \{a_n\} $$. But
+
+$$
+b_n = 
+\begin{cases}
+    a_n & \text{if } n \leq N \\
+    1-a_n & \text{if } n > N
+\end{cases}
+$$
+
+is an element of $$ X $$ distinct from $$ \{a_n\} $$ contained in $$ B(\{a_n\}, 2^{-N}) $$. $$ \blacksquare $$
+
+**2014 F P2.** &nbsp; *Let $$ K $$ be a compact subset of $$ \RR^n $$, and let $$ f \colon K \to \RR $$ be continuous. Prove that there exists an $$ M \geq 0 $$ such that for all $$ x, y \in K $$,*
+
+$$
+|f(x)-f(y)| \leq M \|x-y\| + \varepsilon.
+$$
+
+*Show this is not necessarily true for $$ \varepsilon = 0 $$.*
+
+*Proof.* By continuity, there exists a $$ \delta > 0 $$ such that $$ \|x-y\| < \delta $$ implies $$ |f(x) - f(y)| \leq \varepsilon $$; consequently, we can assume $$ \|x-y\| \geq \delta $$. Then the Heinel-Borel Theorem and 2019 F P5 show that $$ K $$ and $$ f(K) $$ are bounded, i.e. $$ |f(x) - f(y)| < C $$ for a fixed $$ C $$. Consequently, 
+
+$$
+|f(x) - f(y) | \leq C/\delta \|x-y\| + \varepsilon,
+$$
+
+and we set $$ M = C/\delta $$.
+
+For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \sqrt{x} $$. We see $$ \lim_{x \to 0^+} f'(x) = \infty $$ implies no such $$ M $$ exists. $$ \blacksquare $$.
 
 
 ## 2. Sequences and Series
