@@ -447,9 +447,43 @@ $$
 = \int_0^1 f(x) dx.
 $$
 
-*Proof.* 
+*Proof.* Recall that for the $$ \ell^p $$ norm on sequences, we have $$ \lim_p \| (a_n) \|_p = \| (a_n) \|_{\infty} $$. Hence, 
 
+$$
+f(x) = \lim_n \left( \sum_{k=1}^n f_k(x)^n \right)^{1/n}
+$$
 
+uniformly. Our result then follows from Theorem 4.1. $$ \blacksquare $$
+
+**2023 W P3.** &nbsp; *Let $$ f_n \colon [0, 1] \to \RR $$ be a sequence of function. Suppose that for some $$ f \colon [0, 1] \to \RR $$, we have*
+
+$$
+\lim_n f_n(x_n) = f(\lim_n x_n)
+$$
+
+*for every sequence $$ \{x_n\} $$ in $$ [0, 1] $$. Show $$ \{f_n\} $$ converges uniformly to $$ f $$ or provide a counterexample.*
+
+*Proof.* This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $$ given by $$ f_n = x/n $$. 
+
+Suppose not. Then there exists an $$ a_n \in \mathbb{N} $$ and $$ x_n \in [0, 1] $$ such that 
+
+$$
+|f_{a_{2n}}(x_n) - f_{a_{2n+1}}(x_n) | > \varepsilon 
+$$
+
+for some fixed $$ \varepsilon $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$. Hence, 
+
+$$
+|f_{a_{2n_k}}(x_n) - f_{a_{2n_k+1}}(x_n) | > \varepsilon 
+$$
+
+but 
+
+$$
+\lim_n f_{a_{2n_k}}(x_{n_k}) = f(x_*),
+$$
+
+a contradiction.
 
 
 ## 5. Derivatives
