@@ -393,15 +393,24 @@ which implies $$ f(x_n + \delta) \geq f(x_n - \delta) + \delta C $$. This contra
 
 *Proof.* (a) Consider $$ f(x) = (1-x) \sin(\frac{1}{x}) $$. This is a continuous function which obtains no maximum or minimum, because $$ \sin(\frac{1}{x}) $$ is oscillating, and $$ (1-x) $$ causes $$ f $$ to decrease in absolute value away from $$ 0 $$.
 
-(b) Suppose not. Then there exists sequences $$ \{x_n\} $$ and $$ \{y_n\} $$ in $$ (0, 1] $$ with $$ \lim_n x_n = 0 $$ (resp. $$ \lim y_n = 0 $$), $$ f(x_n) $$ monotonically increasing (resp. $$ f(y_n) $$ monotonically decreasing), and $$ \lim_n f(x_n) = \sup f(x) $$ (resp. $$ \lim_n f(y_n) = \inf f(x) $$). Since $$ f $$ is uniformly continuous, there exists a $$ \delta > 0 $$ such that $$ 
+(b) Suppose not. Then there exists sequences $$ \{x_n\} $$ and $$ \{y_n\} $$ in $$ (0, 1] $$ with $$ \lim_n x_n = 0 $$ (resp. $$ \lim y_n = 0 $$), $$ f(x_n) $$ monotonically increasing (resp. $$ f(y_n) $$ monotonically decreasing), and $$ \lim_n f(x_n) = \sup f(x) $$ (resp. $$ \lim_n f(y_n) = \inf f(x) $$). Since $$ f $$ is uniformly continuous, there exists a $$ \delta > 0 $$ such that $$ \|x-y\| < \delta
 
-**2018 F P5** &nbsp; *Let $$ B $$ be the closed unit ball in $$ \RR^2 $$. Set $$ \rho(x, y) = \|x-y\| $$ if $$ x $$ and $$ y $$ are collinear and $$ \rho(x, y) = \|x\| + \|y\| $$ elsewise. This is a metric on $$ B $$. Suppose $$ f \colon (B, \rho) \to \RR $$ is uniformly continuous. Show $$ f $$ is bounded.*
+**2018 F P5.** &nbsp; *Let $$ B $$ be the closed unit ball in $$ \RR^2 $$. Set $$ \rho(x, y) = \|x-y\| $$ if $$ x $$ and $$ y $$ are collinear and $$ \rho(x, y) = \|x\| + \|y\| $$ elsewise. This is a metric on $$ B $$. Suppose $$ f \colon (B, \rho) \to \RR $$ is uniformly continuous. Show $$ f $$ is bounded.*
 
-*Proof.*
+*Proof.* Using the same proof technique as 2020 W P3, we are reduced to showing $$ \rho $$ is a bounded function on $$ B $$. Clearly $$ \rho(x, y) \leq 2 $$. $$ \blacksquare $$
 
-**2017 W P6** &nbsp; *Let $$ f c\olon \RR^n \to \RR $$ be continuous with $$ n < \infty $$. Suppose $$ \displaystyle \lim_{\|x\| \to \infty} f(x) = 0 $$. Prove that $$ f $$ is uniformly continuous.*
+**2017 W P6.** &nbsp; *Let $$ f \colon \RR^n \to \RR $$ be continuous with $$ n < \infty $$. Suppose $$ \displaystyle \lim_{\|x\| \to \infty} f(x) = 0 $$. Prove that $$ f $$ is uniformly continuous.*
 
-*Proof.*
+*Proof.* Fix $$ \varepsilon > 0 $$. Write $$ D_r $$ for the closed disk of radius $$ r $$ at $$ 0 $$. By assumption, there exists an $$ r > 0 $$ such that $$ x, y \in \RR^{n} \setminus D_r $$ implies 
+
+$$
+\| f(x) - f(y) \|
+\leq \|f(x)\| + \|f(y)\| 
+< \frac{\varepsilon}{2} + \frac{\varepsilon}{2}
+= \varepsilon.
+$$
+
+Thus, $$ f $$ is uniformly continuous on $$ \RR^n \setminus D_r $$. Furthermore, $$ D_{r+1} $$ is compact, so $$ f $$ is uniformly continuous on $$ D_{r+1} $$ by the Heine-Borel Theorem. Since our desired property is local and every point has a ball of radius $$ 1/2 $$ contained in $$ D_{r+1} $$ or $$ \RR^{n} \setminus D_r $$, we get our result. $$ \blacksquare $$
 
 
 ## 4. Uniform Convergence
