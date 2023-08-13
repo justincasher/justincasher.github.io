@@ -370,6 +370,8 @@ $$
 
 Thus, $$ f $$ is a bounded function. $$ \blacksquare $$
 
+**2020 W P7.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be continuous and $$ f' \colon \RR \to \RR $$ uniformly continous. If $$ \displaystyle \lim_{x \to \infty} f(x) = 0 $$, does $$ \displaystyle \lim_{x \to \infty} f'(x) $$ exist?
+
 
 ## 4. Uniform Convergence
 
