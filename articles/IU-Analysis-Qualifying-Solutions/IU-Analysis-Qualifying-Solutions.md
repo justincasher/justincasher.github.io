@@ -360,12 +360,15 @@ Let $$ f, g \colon X \to Y $$ be maps between metric spaces. We say $$ f $$ is *
 
 **2020 W P3.** &nbsp; *Let $$ X $$ be the space of sequences $$ x = \{x_n\} $$ with $$ x_n \in [0, 1] $$. Set $$ d(x, y) = \sup_n \| x_n - y_n \| $$. Suppose $$ f \colon X \to \RR $$ is uniformly continuous. Prove that $$ f $$ is bounded.*
 
-*Proof.* Choose a $$ \delta > 0 $$ such that $$ d(x, y) \leq \delta $$ implies $$ \| f(x)-f(y) \| < 1 $$. Set $$ M = \lceil 1 / \delta \rceil $$. Now for any two points $$ x, y \in X $$, we define $$ x_n = x + \frac{n}{M} (y-x) $$ for $$ 0 \leq n \leq M $$. Since $$ d(x_n, x_{n+1}) \leq \delta $$, we have 
+*Proof.* Choose a $$ \delta > 0 $$ such that $$ d(x, y) \leq \delta $$ implies $$ \| f(x)-f(y) \| < 1 $$. Set $$ M = \lceil 1 / \delta \rceil $$. Now fix $$ x \in X $$, and define $$ x_n = \frac{n}{M} x $$ for $$ 0 \leq n \leq M $$. Then, using that $$ \|x_{n+1} - x_n\| < \delta $$, we have
 
 $$
-d(x, y) 
-\leq 
+\|f(x)\| 
+\leq \sum_{n=0}^{M-1} \|f(x_{n+1}) - f(x_n)\|
+\leq M.
 $$
+
+Thus, $$ f $$ is a bounded function. $$ \blacksquare $$
 
 
 ## 4. Uniform Convergence
