@@ -626,7 +626,7 @@ Since both $$ x^{1/2} $$ and $$ y^{2/3} $$ are continuous functions, we see that
 $$
 f_0(x)) =
 \begin{cases}
-    0 & \text{if } x = 2^{-n} \text{ for some } n
+    0 & \text{if } x = 2^{-n} \text{ for some } n \\
     1 & \text{elsewise},
 \end{cases}
 $$
@@ -636,7 +636,7 @@ and inductively define
 $$
 f_{n+1}(x) =
 \begin{cases}
-    x & \text{if } x = 2^{-(n+1)} 
+    x & \text{if } x = 2^{-(n+1)} \\
     f_n(x) & \text{elsewise}.
 \end{cases}
 $$
@@ -646,7 +646,7 @@ Then the sequence $$ \{f_n\} $$ converges uniformly to the function
 $$
 f(x) = 
 \begin{cases}
-    x & \text{if } x = 2^{-n} \text{ for some } n
+    x & \text{if } x = 2^{-n} \text{ for some } n \\
     1 & \text{elsewise}.
 \end{cases}
 $$
@@ -662,11 +662,13 @@ $$
 
 *Show that $$ f_n $$ converges uniformly on $$ \RR $$.* $$ \blacksquare $$ 
 
-*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Then for $$ k \geq 0 $$ we have 
+*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Then
 
 $$
-\| f_n(x) - f_{n+k}(x) \|
-< 
+\begin{aligned}
+\| f_n(x) - f_{n+1}(x) \| & < \| f_n(x) - \frac{1}{2}(f_{n-1}(x-2^{-n}) + f_{n-1}(x+2^{-n})) \| \\
+& = 
+\end{aligned}
 $$
 
 **2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
