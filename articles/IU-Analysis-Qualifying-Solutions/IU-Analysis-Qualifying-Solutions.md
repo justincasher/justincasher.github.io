@@ -496,7 +496,8 @@ for each $$ i $$. We observe
 $$ 
 \begin{aligned}
 \| f_n(t_{i+1}) - f_n(t_i)\| & \leq \| f_n(t_{i+1}) - f(t_{i+1}) \| + \| f(t_{i+1}) - f(t_i) \| \\
-& \quad + \| f(t_i) - f_n(t_i) \| < \frac{3\varepsilon}{5}.
+& \quad + \| f(t_i) - f_n(t_i) \| \\
+& < \frac{3\varepsilon}{5}.
 \end{aligned}
 $$
 
@@ -514,6 +515,81 @@ $$
 $$
 
 Hence, $$ f_n $$ converges uniformly to $$ f $$. $$ \blacksquare $$
+
+**2022 F P9.** &nbsp; *Define $$ F \colon \RR to \RR $$ by*
+
+$$
+F(x) = \sum_{n=1}^{\infty} \frac{1}{n^x}.
+$$
+
+*(a) Prove that $$ F $$ converges uniformly on $$ [1+\delta, \infty) $$ for any $$ \delta > 0 $$ . Explain why $$ f $$ is continuous on $$ (1, \infty) $$. Is $$ f $$ continuous on $$ [1, \infty) $$? (b) Prove $$ f $$ is continuously differentiable on $$ (1, \infty) $$ with* 
+
+$$
+F'(x) 
+= - \sum_{n=1}^{\infty} \frac{\ln(n)}{n^x}.
+$$
+
+**2022 W P1.** &nbsp; *Define $$ f_n \colon [0, 1] \to \RR $$ by*
+
+$$
+f_n(x) 
+= \frac{1+x^n}{1+2^{-n}}.
+$$
+
+*Show $$ \{f_n\} $$ is not equicontinuous.*
+
+*Proof.*
+
+**2021 F P7.** &nbsp; *Let $$ f_n \colon [0, 1]^2 \to \RR $$ be a uniformly bounded sequence of continuous functions. Set*
+
+$$
+F_n(x, y) = \int_y^1 \int_x^1 s^{-1/2} t^{-1/3} f_n(s, t) ds dt.
+$$
+
+*(a) Show for each $$ n $$ that $$ F_n(x, y) $$ is well defined. (b) Show that $$ \{F_n\} $$ has a subsequence $$ \{F_{n_j}\} $$ which converges uniformly to a continuous $$ F $$.*
+
+*Proof.*
+
+**2020 F P9.** &nbsp; *Let $$ f_n \colon [0, 1] \to [0, 1] $$ converge uniformly to $$ f \colon [0, 1] \to [0, 1] $$ (a not necessarily continuous function). Suppose the $$ f_n $$ map compact sets to compact sets. Does $$ f $$ map compact sets to compact sets?*
+
+*Proof.*
+
+**2020 W P8.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be continuous with $$ f(x+1) = f(x) $$. Define $$ f_n \colon \RR \to \RR $$ by $$ f_1 = f $$ and for $$ n > 1 $$*
+
+$$
+f_n(x) 
+= \frac{1}{2} (f_{n-1}(x-2^{-n}) + f_{n-1}(x+2^{-n})).
+$$
+
+*Show that $$ f_n $$ converges uniformly on $$ \RR $$.* $$ \blacksquare $$ 
+
+*Proof.* 
+
+**2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
+
+*Proof.*
+
+**2018 F P2.** &nbsp; *Show that*
+
+$$
+F(x) = \sum_{n=1}^{\infty} \frac{\sin(x^n)}{n!} 
+$$
+
+*converges uniformly and compute its derivative.*
+
+**2018 F P7.** &nbsp; *Define $$ f_n \colon [0, 2\pi] \to \RR $$ by $$ f_n(x) = e^{\sin(nx)} $$ and $$ F_n(x) = \int_0^x f_n(y) dy $$. Show there exists a subsequence of $$ \{F_n\} $$ that converges uniformly to a continuous function.*
+
+*Proof.* 
+
+**2017 W P7.** &nbsp; *Let $$ f_n \colon [0, 1] \to \RR $$ converge pointwise to $$ f $$. Assume $$ f_n $$ and $$ f $$ are continuous. (a) Does*
+
+$$ 
+\lim_n \int_0^1 f_n(x) dx = \int_0^1 f(x) dx?
+$$
+
+*(b) What if $$ \|f_n(x)\| \leq M $$ for all $$ n $$ and $$ x $$?*
+
+*Proof.*
 
 
 ## 5. Derivatives
