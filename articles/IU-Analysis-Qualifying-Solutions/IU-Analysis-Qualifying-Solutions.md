@@ -94,7 +94,7 @@ $$
 
 *Show this is not necessarily true for $$ \varepsilon = 0 $$.*
 
-*Proof.* By continuity, there exists a $$ \delta > 0 $$ such that $$ \|x-y\| &lt; \delta $$ implies $$ |f(x) - f(y)| \leq \varepsilon $$; consequently, we can assume $$ \|x-y\| \geq \delta $$. Then the Heinel-Borel Theorem and 2019 F P5 show that $$ K $$ and $$ f(K) $$ are bounded, i.e. $$ |f(x) - f(y)| &lt; C $$ for a fixed $$ C $$. Consequently, 
+*Proof.* By continuity, there exists a $$ \delta > 0 $$ such that $$ \|x-y\| \lessdot \delta $$ implies $$ |f(x) - f(y)| \leq \varepsilon $$; consequently, we can assume $$ \|x-y\| \geq \delta $$. Then the Heinel-Borel Theorem and 2019 F P5 show that $$ K $$ and $$ f(K) $$ are bounded, i.e. $$ |f(x) - f(y)| \lessdot C $$ for a fixed $$ C $$. Consequently, 
 
 $$
 |f(x) - f(y) | \leq C/\delta \|x-y\| + \varepsilon,
@@ -107,7 +107,11 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 ## 2. Sequences and Series
 
-**Monotone Convergence Theorem.** &nbsp;*Let $$ \{a_n\} $$ be a monotonically increasing 
+**Monotone Convergence Theorem.** &nbsp; *Let $$ \{a_n\} $$ be a monotonically increasing sequence in $$ \RR $$. Then $$ \{a_n\} $$ has a limit if and only if it is bounded.*
+
+**Theorem 2.1.** &nbsp; *In $$ \RR^n $$ every Cauchy sequence convergences, i.e. it is a complete metric space.*
+
+**Ratio Test.** &nbsp; *Let $$ \sum a_n $$ be a series in $$ \RR $$. Write $$ L = \lim_n |a_{n+1}/a_n|. If $$ L < 1 $$ then  *
 
 
 ## 3. Uniform Continuity
