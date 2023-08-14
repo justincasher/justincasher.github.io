@@ -1021,11 +1021,53 @@ $$
 
 *converge for $$ p \geq 0 $$?*
 
-*Proof.* 
+*Proof.* The answer depends on the value of $$ p $$. Substitute $$ u = \ln x $$ and $$ du = x^{-1} dx $$. Then 
 
-**2022 W P5.** &nbsp; *Does $$ \int_0^{\infty} \cos(x^{2/3}) dx $$ converge?*
+$$
+I = \int_{\ln 3}^{\infty} \frac{u e^{-u(p-1)}}{\ln(u)} du.
+$$
 
-*Proof.* 
+If $$ p < 1 $$, then $$ -(p-1) > 0 $$ implies for $$ u $$ large that $$ u e^{-u(p-1)} > \ln(u)  $$ and $$ I $$ diverges. If $$ p = 1 $$ then $$ u > \ln(u) $$ for $$ u $$ large and $$ I $$ diverges. Thus, we are reduced to the case when $$ p > 1 $$. Then
+
+$$
+I \leq \int_{\ln 3}^{\infty} u e^{-u(p-1)} du.
+$$
+
+Substitute $$ y = u(p-1) $$ and $$ dy = (p-1) du $$ we get
+
+$$
+I \leq \frac{1}{(p-1)^2} \int_{a}^{\infty} y e^{-y} dy,
+$$ 
+
+where $$ a = \ln(3) (p-1) $$. Integrating by parts shows
+
+$$
+I 
+\leq \frac{1}{(p-1)^2} [-e^{-y} y - e^{-y}]_{a}^{\infty} 
+= \frac{1}{(p-1)^2} e^{-a}(a-1).
+$$
+
+Thus $$ I $$ converges when $$ p > 1 $$. $$ \blacksquare $$
+
+**2022 W P5.** &nbsp; *Does $$ I = \int_0^{\infty} \cos(x^{2/3}) dx $$ converge?*
+
+*Proof.* Set $$ u = x^{2/3} $$ and $$ dx = \frac{3}{2} \sqrt{u} du $$. Then 
+
+$$ 
+I = \frac{3}{2} \int_0^{\infty} \sqrt{u} \cos(u) du.
+$$
+
+Hence, for each $$ n \geq 0 $$ we have 
+
+$$
+\begin{aligned}
+\int_{n \pi - \pi/2}^{2 \pi + \pi/2} \sqrt{u} \cos(u) du & \geq \sqrt{n \pi - \pi/2} \int_{n \pi - \pi/2}^{n \pi+\pi/2} \cos(u) \\
+& = \sqrt{n \pi - n/2}(\sin(\pi/2) - \sin(-\pi/2)) \\
+& = 2 \sqrt{n \pi - \pi/2}.
+\end{aligned}
+$$
+
+We conclude that the integral does not converge. $$ \blacksquare $$
 
 **2022 W P8.** &nbsp; *Let $$ f \colon \RR^2 \to \RR $$ be a continuous compactly support function. Define $$ g \colon \RR^2 \to \RR $$ by*
 
@@ -1036,12 +1078,28 @@ $$
 
 *Prove that this integral converges (and $$ g $$ is continuous).* 
 
-*Proof.* (I have not shown continuity.)
+*Proof.* Without loss of generality, assume $$ f $$ is supported on $$ D^2 $$ and $$ x = 0 $$. Since $$ f $$ is compactly supported, there exists an $$ M $$ such that $$ \sup \| f \| \leq M $$. Thus, 
+
+$$
+g(0)
+= \int_{D^2} \frac{f(y)}{\|y\|} dy 
+\leq M \int_{D^2} \frac{1}{\|y\|} dy.
+$$
+
+Substituting polar coordinates yields 
+
+$$
+g(0)
+\leq M \int_0^{2 \pi} \int_0^1 dr d \theta
+= 2 \pi M.
+$$
+
+Thus, $$ g $$ converges. (I have not shown continuity.) $$ \blacksquare $$
 
 **2021 F P5.** &nbsp; *Let $$ f \colon \RR^2 \to \RR $$ be continuous. Suppose $$ \int_0^{\infty} f(x, y) dy $$ exists for every $$ x \in [0, 1] $$. Assume there exists a $$ C \geq 0 $$ such that for $$ z > 0 $$,*
 
 $$
-
+\| \int_z^{\infty} f(x, y) dy \| \leq \frac{C}{\log(2+z)}
 $$
 
 *for every fixed $$ x $$. Show*
@@ -1051,7 +1109,26 @@ $$
 = \int_0^{\infty} \left[ \int_0^1 f(x, y) dx \right] dy.
 $$
 
-*Proof.* 
+*Proof.* We apply the Fubini-Tonelli Theorem as follows. For each $$ z \in (0, \infty) $$, we have 
+
+$$
+\begin{aligned}
+\int_0^1 \left[ \int_0^{\infty} f(x, y) dy \right] dx 
+& = \int_0^1 \int_0^z f(x, y) dx dy + \int_0^1 \int_z^{\infty} f(x, y) dy dx. 
+\end{aligned}
+$$
+
+Observing
+
+$$
+\begin{aligned}
+\lim_{z \to \infty} \int_0^1 \int_z^{\infty} f(x, y) dy dx & \leq \lim_{z \to \infty} \int_0^1 \left\| \int_z^{\infty} f(x, y) dy \right\| dx \\
+& \leq \lim_{z \to \infty} \frac{C}{\log(2+z)} \\
+& = 0
+\end{aligned}
+$$
+
+we get our desired inequality. $$ \blacksquare $$
 
 **2020 F P5.** &nbsp; *Set $$ a _0 = 0 $$ and for $$ k \geq 1 $$*
 
