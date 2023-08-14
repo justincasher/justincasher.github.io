@@ -696,9 +696,9 @@ $$
 *Proof.* Since $$ \| \sin(x^n)/n! \| \leq 1/n! $$, we have $$ F(x) \leq e-1 $$, so $$ F $$ converges uniformly by the Weierstrass M-Test. Likewise 
 
 $$
-\| \frac{d}{dx} \frac{\sin(x^n)}{n!} \|
-= \| \frac{n x^{n-1} \cos(x^n)}{n!} \| 
-\leq \| \frac{x^n}{(n-1)!} \|.
+\left\| \frac{d}{dx} \frac{\sin(x^n)}{n!} \right\|
+= \left\| \frac{n x^{n-1} \cos(x^n)}{n!} \right\| 
+\leq \left\| \frac{x^n}{(n-1)!} \right\|.
 $$
 
 Hence, locally the sum 
@@ -726,7 +726,7 @@ implies our sequence is uniformly bounded. Assuming $$ y \geq x $$,
 
 $$
 \| F_n(y) - F_n(x) \|
-= \| \int_x^y f_n(y) dy \|
+= \left\| \int_x^y f_n(y) dy \right\|
 \leq e (y-x)
 $$
 
@@ -740,8 +740,16 @@ $$
 
 *(b) What if $$ \|f_n(x)\| \leq M $$ for all $$ n $$ and $$ x $$?*
 
-*Proof.*
+*Proof.* (a) Consider bump functions of radius $$ 2/n $$ and equal volume:
 
+$$
+f_n(x)
+= n \exp \left( - \frac{1}{1-(nx-1)^2} \right).
+$$
+
+Then our $$ f_n $$ converge pointwise to $$ 0 $$ but have constant nonzero integral.
+
+(b) 
 
 
 ## 5. Derivatives
