@@ -754,13 +754,118 @@ Then our $$ f_n $$ converge pointwise to $$ 0 $$ but have constant nonzero integ
 
 ## 5. Derivatives
 
-
+**2022 W P3.** &nbsp; 
 
 
 ## 6. Optimization
 
+**AM-GM Inequality.** &nbsp; *Let $$ x_1, \dots, x_n \in \RR^+ $$ be positive reals. Then*
+
+$$
+\frac{1}{n} \sum_{i=1}^{n} x_i \geq \left( \prod_{i=1}^{n} x_i \right)^{1/n}.
+$$
+
+*Equality is only achieved when the $$ x_i $$ are equal.*
+
+**Jenson's Inequality.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be convex. For $$ x_1, \dots, x_n \in \RR $$ and $$ a_1, \dots, a_n \in \RR^+ $$ we have*
+
+$$
+f(\left( \frac{\sum a_i x_i}{\sum a_i} \right) \leq \sum a_i \frac{f(x_i)}{\sum a_i}.
+$$
+
+**2016 F P7.** Let $$ \Omega = \{(x, y) \in \RR^ \mid y > 0 \} $$, and define $$ f \colon \Omega \to \RR $$ by
+
+$$
+f(x, y)
+= \frac{2 + \sqrt{(1+x)^2 + y^2} - \sqrt{(1-x)^2 +y^2}}{\sqrt{y}}.
+$$ 
+
+*Show $$ f $$ achives its minimum at a unique point $$ (x_0, y_0) \in \Omega $$ and find $$ (x_0, y_0) $$.*
+
+*Proof.* We proceed by minimizing in each variable independently. Fix $$ y = 1 $$. Then 
+
+$$
+\frac{d}{dx}f(x, 1) 
+= \frac{1+x}{\sqrt{(1+x)^2+1}} - \frac{1-x}{\sqrt{(1-x)^2+1}} = 0 
+$$
+
+if and only if 
+
+$$
+(1+x) \sqrt{(1-x)^2+1}
+= (1-x)\sqrt{(1+x)^2+1}.
+$$
+
+Squaring both sides reduces the equation to $$ (1+x)^2 = (1-x)^2 $$, and hence our minimum is achieved when $$ x = 0 $$. Thus, fix $$ x = 0 $$. Then 
+
+$$
+\frac{d}{dy} f(0, y)
+= \frac{y^2 - \sqrt{y^2+1}-1}{\sqrt{y^5+y^3}}
+= 0
+$$
+
+if and only if $$ y^2 - 1 = \sqrt{y^2+1} $$, which implies $$ y = \sqrt{3} $$. Thus, our minimum is achieved at $$ (0, \sqrt{3}) $$. 
+
+**2022 F P7.** &nbsp; *Let $$ f_n \colon \RR^2 \to \RR $$ be a sequence of continuously differentiable functions which converge pointwise to a continuously differentiable function $$ f $$. Suppose that for each $$ n $$ that $$ (0, 0) $$ is a local minimum for $$ f_n $$. Is it a local minimum for $$ f $$?*
+
+*Proof.* Not necessarily. Since the projection $$ \pi_1 \colon \RR^2 \to \RR $ is continuously differentiable, we can reduce ourselves to the case $$ f_n \colon \RR \to \RR $$. Set 
+
+$$
+f_n(x) = -x^2 + B_1(x, n) + B_2(x, n),
+$$
+
+where $$ B_1(x, n) $$ and $$ B_2(x, n) $$ are bump functions of height $$ 1 $$ from $$ -1/n $$ to $$ 0 $$ and from $$ 0 $$ to $$ 1/n $$, respectively. Then $$ \{f_n\} $$ converges to $$ -x^2 $$ pointwise and $$ 0 $$ is a local minimum for each $$ n $$ but not of the limit. $$ \blacksquare $$ 
+
+**2021 F P2.** &nbsp; *Find all $$ x, y > 0 $$ which minimize $$ f(x, y) = x/y + y/x $$ on the curve $$ x^2 + 2y^2 = 3 $$.*
+
+*Proof.* The AM-GM inequality implies
+
+$$
+\frac{x}{y} + \frac{y}{x} 
+= \frac{1}{2} \left( \frac{2x}{y} + \frac{2y}{x} \right)
+\geq \sqrt{4} 
+= 2,
+$$
+
+and that this minimum is achieved only at $$ (1, 1) $$. We see that $$ 1 + 2 = 3 $$, and hence is our minimum on the curve. $$ \blacksquare $$
+
+**2020 F P4.** &nbsp; *Find the absolute minimum of $$ x^2 y + y^2 z + z^2 w + w^2 x $$ for $$ xyzw = 1 $$ and $$ x, y, z, w > 0 $$.* 
+
+*Proof.* The $$ AM-GM $$ inequality implies 
+
+$$
+\frac{1}{4} \left( 4x^2 y + 4y^2 z + 4z^2 w + 4w^2 x \right)
+\geq (4^4 x^3 y^3 z^3 w^3)^{1/4}
+= 4,
+$$
+
+and this minimum is obtained when $$ x = y = z = w = 1 $$. $$ \blacksquare $$
+
+**2018 W P7.** &nbsp; *Find the absolute minimum of*
+
+$$ 
+f(x, y, z) = xy + yz + zx 
+$$ 
+
+*on*
+
+$$ 
+g(x, y, z) = x^2 + y^2 + z^2 = 12.
+$$
+
+*Proof.* We observe 
+
+$$
+2 f(x, y, z) = (x+y+z)^2 - g(x, y, z) \geq -12
+$$
+
+implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we conclude that this is the minimum. $$ \blacksquare $$
+
+ 
 
 ## 7. Integration
+
+
 
 
 ## 8. Convergence of Integrals
