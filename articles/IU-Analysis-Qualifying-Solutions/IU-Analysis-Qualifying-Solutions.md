@@ -1508,3 +1508,26 @@ Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 
 ## 11. Inverse and Implicit Function Theorems
 
+**Inverse Function Theorem.** &nbsp; *Let $$ \RR^n \to \RR^n $$ be a continuously differentiable function. Then $$ \det f'(x) \neq 0 $$, i.e. $$ f'(x) $$ invertible as a linear transformation, if and only if $$ f $$ is invertible in a neighborhood of $$ x $$.*
+
+**Implicit Function Theorem.** &nbsp; *Let $$ f \colon D \subseteq \RR^{n+m} \to \RR^n $$ be continuously differentiable with $$ f(a, b) = 0 $$ for some $$ (a, b) \in D $$. Put $$ A = f'(a, b) $$ and assume $$ A_x $$ is invertible. Then there exists open subsets $$ U \subseteq D $$ and $$ W \subseteq \RR^m $$ with $$ (a, b) \in U $$ and $$ b \in W $$, such that there is a unique continuously differentiable $$ g \colon W \to \RR^n $$ with $$ g(b) = a $$, $$ f(g(y), y) = 0 $$, and $$ g'(b) = -(A_x)^{-1} A_y $$.*
+
+**2023 W P8.** &nbsp; 
+
+*Proof.*
+
+**2022 F P4.** &nbsp;
+
+*Proof.*
+
+**2022 W P4.** &nbsp;
+
+*Proof.*
+
+**2021 W P9.** &nbsp;
+
+*Proof.
+
+**2019 F P8.** &nbsp;
+
+*Proof.
