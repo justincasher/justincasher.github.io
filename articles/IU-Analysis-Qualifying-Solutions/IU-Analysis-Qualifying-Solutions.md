@@ -229,7 +229,20 @@ which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
 **2021 F P6.** &nbsp; *Let $$ a_0 \in (0, 1) $$ and $$ a_{n+1} = a_n^3 - a_n^2 + 1 $$. Prove that (a) $$ \{a_n\} $$ converges and find its limit; and (b) that $$ b_n = \prod_{i=1}^{n} a_i $$ converges and find its limit.*
 
-*Proof.* (a) We observe $$ a_{n+1} > a_n $$ implies $$ a_n^3 - a_n^2 - a_n + 1 > 0 $$.  Writing this as a polynomial $$ f(x) = x^3 - x^2 - x + 1 $$, we observe  $$ f(x) = (x-1)^2 (x+1) $$ and $$ f(0) = 1 $$. Hence $$ f $$ is strictly positive on $$ (-1, 1) $$, and our sequence is monotonically increasing. We further observe $$ a_n^3 - a_n^2 +1 < 1 $$ implies $$ a_n < 1 $$, which is true by assumption, so our sequence is bounded above by $$ 1 $$; thus, our sequence has a limit. We conclude that the limit is $$ 1 $$: for every $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ \| 1 - x \| > \delta $$ implies $$ \| f(x) \| > \varepsilon $$ on $$ [0, 1] $$; i.e. the difference between terms only approaches  $$ 0 $$ at $$ 1 $$.
+*Proof.* (a) We observe $$ a_{n+1} > a_n $$ implies $$ a_n^3 - a_n^2 - a_n + 1 > 0 $$.  Writing this as a polynomial $$ f(x) = x^3 - x^2 - x + 1 $$, we observe  $$ f(x) = (x-1)^2 (x+1) $$ and $$ f(0) = 1 $$. Hence $$ f $$ is strictly positive on $$ (-1, 1) $$, and our sequence is monotonically increasing. We further observe $$ a_n^3 - a_n^2 +1 < 1 $$ implies $$ a_n < 1 $$, which is true by assumption, so our sequence is bounded above by $$ 1 $$; thus, our sequence has a limit. To find the limit $$ a_* $$, we see 
+
+$$
+\lim_n a_{n+1} = \lim_n a_n^3 - a_n^2 + 1 $$ 
+$$
+
+implies 
+
+$$
+a_* = a_*^3 - a_*^2 + 1,
+$$
+
+and the only root of this polynomial on $$ (0, 1] $$ is $$ 1 $$. Thus, $$ a _* = 1 $$.
+
 
 (b) Since $$ \{b_n\} $$ is a bounded monotonically decreasing sequence, its limit exists. The limit is $$ 0 $$, but I am not sure how to show this directly. $$ \blacksquare $$ 
 
@@ -289,7 +302,21 @@ which reduces to $$ 2 \leq x_n $$. This is true by (a).
 
 (c) Our sequence is bounded below and monotonically decreasing, so it has a limit.
 
-(d) Define $$ f \colon [1.5, \infty) \to [1.5, \infty) $$ by $$ f = \frac{1}{2}(x + \frac{4}{x}) $$. Then $$ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $$ is strictly less than $$ 1 $$ on our domain, so $$ f $$ is a contraction. Applying the Banach Fixed Point Theorem to $$ [1.5, \infty) $$ tells us our sequence has a unique limit. Solving $$ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $$ yields $$ x_* = 2 $$. $$ \blacksquare $$
+(d) Write $$ x_* = \lim_n x_n $$. We observe
+
+$$
+\lim_n x_{n+1} = \lim_n \frac{1}{2} (x_n + \frac{4}{x_n})
+$$
+
+implies
+
+$$
+x_* = \frac{1}{2} (x_* + \frac{4}{x_*}).
+$$
+
+Solving this equation shows $$ x_* = 2 $$ is the only positive solution, and thus our limit.  
+
+Alternatively, define $$ f \colon [1.5, \infty) \to [1.5, \infty) $$ by $$ f = \frac{1}{2}(x + \frac{4}{x}) $$. Then $$ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $$ is strictly less than $$ 1 $$ on our domain, so $$ f $$ is a contraction. Applying the Banach Fixed Point Theorem to $$ [1.5, \infty) $$ tells us our sequence has a unique limit. Solving $$ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $$ yields $$ x_* = 2 $$. $$ \blacksquare $$
 
 **2020 W P1.** &nbsp; *Let $$ \{a_n\} $$ be a sequence in $$ \RR^+ $$ with $$ \lim a_n = 0 $$. Show there exists infinitely many $$ N \in \mathbb{N} $$ such that $$ n \geq N $$ implies $$ a_n \leq a_N $$.*
 
@@ -854,8 +881,19 @@ $$
 
 *for all $$ x \in \RR $$. Show that $$ f $$ is continuously differentiable.* 
 
-*Proof.* 
+*Proof.* (a) Consider the function $$ f(x) x^2 \sin(\frac{1}{x}) $$ continuously extended by $$ f(0) = 0 $$. Then $$ f $$ is everywhere differentiable with $$ f'(0) = 0 $$ but $ $\displaystyle_{x \to 0} f(x) $$ does not exist. 
 
+(b) By definition $$ f'(x) = g(x) $$. Let $$ \varepsilon > 0 $$ and choose $$ \delta > 0 $$ as stated in the problem. Then for any $$ x, y \in \RR $$ with $$ \| x-y \| < \delta/2 $$, we see $$ y = x+h $$ with $$ \| h \| < \delta/2 $$, and hence 
+
+$$
+\begin{aligned}
+\| g(x) - g(y) \| & = \leq \left\| g(x) - \frac{f(x+h) - f(x)}{h} \right\| + \left\| \frac{f(x+h) - f(x)}{h} - g(y) \right\| \\
+& = \left\| \frac{f(x+h) - f(x)}{h} - g(x) \right\| + \left\| - \frac{ f(y-h) - f(y)}{h} - g(y) \right\|
+\end{aligned}
+\end{aligned}
+$$
+
+Thus, $$ g $$ is continuus and so is $$ f' $$.
 
 ## 6. Optimization
 
