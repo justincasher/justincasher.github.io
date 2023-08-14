@@ -808,7 +808,7 @@ if and only if $$ y^2 - 1 = \sqrt{y^2+1} $$, which implies $$ y = \sqrt{3} $$. T
 
 **2022 F P7.** &nbsp; *Let $$ f_n \colon \RR^2 \to \RR $$ be a sequence of continuously differentiable functions which converge pointwise to a continuously differentiable function $$ f $$. Suppose that for each $$ n $$ that $$ (0, 0) $$ is a local minimum for $$ f_n $$. Is it a local minimum for $$ f $$?*
 
-*Proof.* Not necessarily. Since the projection $$ \pi_1 \colon \RR^2 \to \RR $ is continuously differentiable, we can reduce ourselves to the case $$ f_n \colon \RR \to \RR $$. Set 
+*Proof.* Not necessarily. Since the projection $$ \pi_1 \colon \RR^2 \to \RR $$ is continuously differentiable, we can reduce ourselves to the case $$ f_n \colon \RR \to \RR $$. Set 
 
 $$
 f_n(x) = -x^2 + B_1(x, n) + B_2(x, n),
