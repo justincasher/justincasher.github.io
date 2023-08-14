@@ -754,7 +754,45 @@ Then our $$ f_n $$ converge pointwise to $$ 0 $$ but have constant nonzero integ
 
 ## 5. Derivatives
 
-**2022 W P3.** &nbsp; 
+**2022 W P3.** &nbsp; *Let $$ f \colon \RR \to [0, \infty) $$ be a differentiable function such that $$ f $$ is decreasing and $$ f' $$ is increasing. Show $$ \displaystyle \lim_{x \to \infty} f'(x) = 0 $$.*
+
+*Proof.*
+
+**2022 F P7.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by* 
+
+$$
+f(x, y)
+= \frac{x^3}{x^2 + y^2}
+$$
+
+*for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show $$ f $$ is continuous at $$ (0, 0) $$. (b) Show $$ f $$ has every direcctional derivative at $$ (0, 0). (c) Decide if $$ f $$ is differentiable at $$ (0, 0) $$.*
+
+*Proof.*
+
+**2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
+
+*Proof.*
+
+**2019 F P1.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by*
+
+$$
+f(x, y)
+= \frac{xy^2}{x^2 + y^4} 
+$$
+
+*for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show that $$ f $$ has every directional derivative at $$ 0 $$. (b) Show that $$ f $$ is not continuous at $$ (0, 0) $$.*
+
+*Proof.
+
+**2019 W P4.** &nbsp; *(a) Give an example of an everywhere differentiable function with discontinuous derivative. (b) Let $$ f, g \colon \RR \to \RR $$. Suppose for every $$ \varepsilon > 0 $$ there exists a $$ \delta > 0 $$ such that $$ \| h \| < \delta $$ implies*
+
+$$
+\left\| \frac{f(x+h)-f(x)}{h} - g(x) \right\| < \varepsilon
+$$
+
+*for all $$ x \in \RR $$. Show that $$ f $$ is continuously differentiable.* $$ \blacksquare $$.
+
+*Proof.
 
 
 ## 6. Optimization
@@ -773,7 +811,7 @@ $$
 f(\left( \frac{\sum a_i x_i}{\sum a_i} \right) \leq \sum a_i \frac{f(x_i)}{\sum a_i}.
 $$
 
-**2016 F P7.** Let $$ \Omega = \{(x, y) \in \RR^ : y > 0 \} $$, and define $$ f \colon \Omega \to \RR $$ by
+**2016 F P7.** Let $$ \Omega = \{(x, y) \in \RR \mid y > 0 \} $$, and define $$ f \colon \Omega \to \RR $$ by
 
 $$
 f(x, y)
