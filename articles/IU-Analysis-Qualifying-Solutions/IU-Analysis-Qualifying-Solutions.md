@@ -37,7 +37,7 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 6. [Optimization](#6-optimization)
 7. [Integration](#7-integration)
 8. [Convergence of Integrals](#8-convergence-of-integrals)
-9. [Polynomials and Stone-Weierstrass](#9-polynomials-and-stone-weierstrass)
+9. [Polynomials and Stone-Weierstrass](#9-polynomials-and-stoneweierstrass)
 10. [Stoke's Theorem](#10-stokes-theorem)
 11. [Implicit Function Theorem](#11-implicit-function-theorem)
 
