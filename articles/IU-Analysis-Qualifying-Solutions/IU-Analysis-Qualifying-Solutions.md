@@ -1309,7 +1309,7 @@ implies $$ \| f(x) \| \geq 1 $$ and $$ \|g(x)\| \leq M $$. $$ \blacksquare $$
 
 $$
 \int \int_S (\text{Curl} F \cdot n) dA
-= \int_{\partial S} F \cdot n dB,
+= \int_{\partial S} (F \cdot n) dB,
 $$
 
 *where $$ n $$ is the unit normal.*
@@ -1318,7 +1318,7 @@ $$
 
 $$
 \int_M \text{Div } F dV 
-= \int_{\partial M} F \cdot n dS,
+= \int_{\partial M} (F \cdot n) dS,
 $$
 
 *where $$ n $$ is the unit normal.*
@@ -1341,7 +1341,7 @@ The Divergence Theorem tells us
 
 $$
 \int_H \text{Div} F dV
-= \int_E F \cdot n dS + \int_D^2 F \cdot n dS,
+= \int_E (F \cdot n) dS + \int_D^2 (F \cdot n) dS,
 $$
 
 where $$ D^2 $$ denotes the unit disk on $$ z=0 $$. We see 
@@ -1355,7 +1355,7 @@ $$
 Next our unit normal on $$ D^2 $$ is $$ (0, 0, -1) $$, so 
 
 $$
-\int_{D^2} F \cdot n dS
+\int_{D^2} (F \cdot n) dS
 = \int_{D^2} -y^2 dS
 = - \frac{\pi}{4}.
 $$
@@ -1368,10 +1368,17 @@ $$
 \int_C z dx - 2xdy + 3y dz
 $$
 
-*only depends on the region enclosed by $$ C $$.*
+*only depends on the region $$ R $$ enclosed by $$ C $$.*
 
 
-*Proof.* 
+*Proof.* The curl of $$ (z, -2x, 3y) $$ is $$ (3, 1, -2) $$. We see $$ n = (1, 1, 1)/\sqr{3} $$. Hence, 
+
+$$
+\int_C z dx - 2xdy + 3y dz 
+= \int \int_R 2 dA,
+$$
+
+and thus our integral is $$ 2 \text{Vol}(R) $$. $$ \blacksquare $$
 
 **2022 W P9.** &nbsp; *Let $$ F = (6yz, 2xz, 4xy) $$, and define $$ \alpha, \gamma \colon [-\pi, \pi] \to \RR^3 $$ by*
 
@@ -1392,9 +1399,41 @@ $$
 S = \{(\cos(t), \sin(t), z) \mid t \in [-\pi, \pi], 0 \leq z \leq 4t \sin(t) \cos(t^3)\}
 $$
 
-*to express $$ \int_{\gamma} F \cdot n $$ in terms of $$ \int_{\alpha} F \cdot n $$. (b) Use (a) to evaluate the first integral.*
+*to express $$ \int_{\gamma} (F \cdot n) dA$$ in terms of $$ \int_{\alpha} (F \cdot n) dA$$. (b) Use (a) to evaluate the first integral.*
 
-*Proof.* 
+*Proof.* (a) Stoke's Theorem tells us 
+
+$$
+\int_S (\text{Curl} \cdot n) dS = \int_{\alpha} (F \cdot n) dA + \int_{\gamma} (F \cdot n) dA.
+$$
+
+Here, $$ \text{Curl} F = (2x, 2y, -4z) $$ and our unit normal is $$ (\cos(t), \sin(t), 0) $$. Therefore
+
+$$
+\begin{aligned}
+\int_S (\text{Curl} F \cdot n) dS & = \int_{-\pi}^{\pi} \int_0^{4 \sin(t) \cos(t^3)} 2 \cos^2(t) + 2 \sin^2(t) dz dt \\
+& = 2 \int_{- \pi}^{\pi} 4t \sin(t) \cos(t^3) dt \\
+& = 16 \pi.
+\end{aligned}
+$$
+
+Thus, 
+
+$$
+16 \pi = \int_{\alpha} (F \cdot n) dA + \int_{\gamma} (F \cdot n) dA.
+$$
+
+(b) We see 
+
+$$
+\begin{aligned}
+\int_{\alpha} (F \cdot n) dA  & = \int_{-\pi}^{\pi} F(\alpha(t)) \cdot n(t) \\
+& = \int_{-\pi}^{\pi} (0, 0, 4 \cos(t) \sin(t^3)) \cdot (-\cos(t), -\sin(t), 0) dt \\
+& = 0.
+\end{aligned}
+$$
+
+We conclude that $$ \int_{\gamma} (F \cdot n) dA = 16 \pi $$. $$ \blacksquare $$
 
 **2021 W P4.** &nbsp; *Let $$ E $$ be the square-based pyramid in $$ \RR^3 $$ with top vertex $$ (1, 2, 5) $$ and base $$ (x, y, 0) $$ with $$ 0 \leq x, y, \leq 3 $$, and let $$ S_1, S_2, S_3, S_4 $$ be the triangular sides of $$ E $$. Define $$ F \colon \RR^3 \to \RR^3 $$ by*
 
