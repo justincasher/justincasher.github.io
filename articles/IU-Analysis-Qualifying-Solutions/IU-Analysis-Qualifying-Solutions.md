@@ -1142,7 +1142,7 @@ $$
 
 $$
 \begin{aligned}
-\int_{\RR^2} f(x) dx & = \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} f(r \cos \theta, r \sin \theta} r dr d \theta \\
+\int_{\RR^2} f(x) dx & = \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} f(r \cos \theta, r \sin \theta) r dr d \theta \\
 & \leq \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} b_{k+1} r dr d \theta \\
 & \leq \sum_{k=0}^{\infty} \pi b_{k+1} [a_{k+1}^2 - a_k^2] \\
 & = \sum_{k=0}^{\infty} \pi b_{k+1} \frac{1}{k+1} \\
@@ -1210,7 +1210,7 @@ $$
 
 *Suppose $$ f = (f_1, \dots, f_n) \colon \RR^n \to \RR^n $$ is continuously differentiable function with $$ p (f(x)) = 0 $$ for all $$ x \in \RR^n $$. Prove $$ \det f' = 0 $$.*
 
-*Proof.* 
+*Proof.* Suppose not. Then there exists a point $$ (x_1, \dots, x_n) \in \RR $$ with $$ \det f'(x_1, \dots, x_n) \neq 0 $$. 
 
 **2020 F P8.** &nbsp; *Let $$ f \colon [0, 1] \to \RR $$ be continuous such that $$ \int_0^1 f(x) x^n dx = 0 $$ for $$ n = 3, 4, \dots $$. Prove $$ f(x) = 0 $$. 
 
