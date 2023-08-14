@@ -1146,7 +1146,7 @@ $$
 & \leq \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} b_{k+1} r dr d \theta \\
 & \leq \sum_{k=0}^{\infty} \pi b_{k+1} [a_{k+1}^2 - a_k^2] \\
 & = \sum_{k=0}^{\infty} \pi b_{k+1} \frac{1}{k+1} \\
-& \leq \sum_{k=1}^{\infty} \pi \max \{b_k^2, \frac{1}{k^2}\} \\
+& \leq \sum_{k=1}^{\infty} \pi \text{max} \{b_k^2, \frac{1}{k^2}\} \\
 & \leq \pi \sum_{k=1}^{\infty} b_k^2 + \pi \sum_{k=1}^{\infty} \frac{1}{k^2} \\
 & < \infty.
 \end{aligned}
@@ -1174,11 +1174,29 @@ $$
 \begin{aligned}
 I & = \int_0^{2 \pi} \int_0^1 \frac{f(r \cos \theta, r \sin \theta)}{r^{5/3}} dr d \theta \\
 & \int_0^{2 \pi} \int_0^1 \frac{g(r, \theta) - g(0, 0)}{r} \frac{1}{r^{2/3}} dr d \theta \\
-& \leq int_0^{2 \pi} \int_0^1 \frac{g(r, \theta) - g(0, 0)}{r} \frac{1}{r^{2/3}} dr d \theta 
 \end{aligned}
 $$
 
-By the Mean Value Theorem, 
+Since $$ f $$ is continuously differentiable and our domain is compact we see $$ f' $$ is bounded by som $$ M $$, and so $$ g' $$ is bounded by some $$ N $$. Fixing $$ \theta $$, the Mean Value Theorem implies that for each $$ r $$ there exists an $$ r_0 $$ such that 
+
+$$
+\left\| \frac{g(r, \theta) - g(0, 0)}{r} \right\| 
+= \left\| g'(r_0, \theta) \right\|
+\leq N
+$$
+
+where the derivative is taken in the first variable. Hence,
+
+$$
+\begin{aligned}
+I & \leq int_0^{2 \pi} \int_0^1 \left\| \frac{g(r, \theta) - g(0, 0)}{r} \right\| \frac{1}{r^{2/3}} dr d \theta \\
+& \leq N \leq int_0^{2 \pi} \int_0^1 \frac{1}{r^{2/3}} dr d \theta \\
+& 6 \pi N.
+\end{aligned}
+$$
+
+Thus, our integral converges. $$ \blacksquare $$
+
 
 ## 9. Polynomials and Stone Weierstrass
 
