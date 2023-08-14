@@ -39,7 +39,7 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 8. [Convergence of Integrals](#8-convergence-of-integrals)
 9. [Polynomials and Stone-Weierstrass](#9-polynomials-and-stone-weierstrass)
 10. [Stoke's Theorem](#10-stokes-theorem)
-11. [Inverse and Implicit Function Theorems](#11-inverse-and-implicit-function-theorem)
+11. [Inverse and Implicit Function Theorems](#11-inverse-and-implicit-function-theorems)
 
 ## 1. Compact Spaces 
 
@@ -1371,7 +1371,7 @@ $$
 *only depends on the region $$ R $$ enclosed by $$ C $$.*
 
 
-*Proof.* The curl of $$ (z, -2x, 3y) $$ is $$ (3, 1, -2) $$. We see $$ n = (1, 1, 1)/\sqr{3} $$. Hence, 
+*Proof.* The curl of $$ (z, -2x, 3y) $$ is $$ (3, 1, -2) $$. We see $$ n = (1, 1, 1)/\sqrt{3} $$. Hence, 
 
 $$
 \int_C z dx - 2xdy + 3y dz 
@@ -1454,7 +1454,7 @@ $$
 = \int_E \text{Div} F dV - \int_B (F \cdot n) dA. 
 $$
 
-We see $$ \text{Div} F = 0 $$ and the volume of any pyramid is $$ \frac{1/3} b h $$ where $$ b = 9 $$ and $$ h = 5 $$, so 
+We see $$ \text{Div} F = 0 $$ and the volume of any pyramid is $$ \frac{1}{3} b h $$ where $$ b = 9 $$ and $$ h = 5 $$, so 
 
 $$
 \int_E \text{Div} F dV 
