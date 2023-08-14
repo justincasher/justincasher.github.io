@@ -765,7 +765,7 @@ $$
 \frac{1}{n} \sum_{i=1}^{n} x_i \geq \left( \prod_{i=1}^{n} x_i \right)^{1/n}.
 $$
 
-*Equality is only achieved when the $$ x_i $$ are equal.*
+*This is an equality if and only if $$ x_1 = \cdots = x_n $$.*
 
 **Jenson's Inequality.** &nbsp; *Let $$ f \colon \RR \to \RR $$ be convex. For $$ x_1, \dots, x_n \in \RR $$ and $$ a_1, \dots, a_n \in \RR^+ $$ we have*
 
@@ -773,7 +773,7 @@ $$
 f(\left( \frac{\sum a_i x_i}{\sum a_i} \right) \leq \sum a_i \frac{f(x_i)}{\sum a_i}.
 $$
 
-**2016 F P7.** Let $$ \Omega = \{(x, y) \in \RR^ \mid y > 0 \} $$, and define $$ f \colon \Omega \to \RR $$ by
+**2016 F P7.** Let $$ \Omega = \{(x, y) \in \RR^ : y > 0 \} $$, and define $$ f \colon \Omega \to \RR $$ by
 
 $$
 f(x, y)
@@ -804,7 +804,7 @@ $$
 = 0
 $$
 
-if and only if $$ y^2 - 1 = \sqrt{y^2+1} $$, which implies $$ y = \sqrt{3} $$. Thus, our minimum is achieved at $$ (0, \sqrt{3}) $$. 
+if and only if $$ y^2 - 1 = \sqrt{y^2+1} $$, which implies $$ y = \sqrt{3} $$. Thus, our minimum is achieved at $$ (0, \sqrt{3}) $$. $$ \blacksquare $$
 
 **2022 F P7.** &nbsp; *Let $$ f_n \colon \RR^2 \to \RR $$ be a sequence of continuously differentiable functions which converge pointwise to a continuously differentiable function $$ f $$. Suppose that for each $$ n $$ that $$ (0, 0) $$ is a local minimum for $$ f_n $$. Is it a local minimum for $$ f $$?*
 
