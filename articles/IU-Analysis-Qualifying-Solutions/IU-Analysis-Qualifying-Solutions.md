@@ -832,7 +832,9 @@ $$
 While for the path $$ (t, \sqrt{t}) $$ we have 
 
 $$
-
+\lim_{t \to 0} f(t, \sqrt{t}) 
+= \lim_{t \to 0} \frac{t^2}{t^2+t^2}
+= \frac{1}{2}.
 $$
 
 Thus, $$ f $$ is not continuous at the origin. $$ \blacksquare $$
