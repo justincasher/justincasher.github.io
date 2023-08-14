@@ -756,22 +756,39 @@ Then our $$ f_n $$ converge pointwise to $$ 0 $$ but have constant nonzero integ
 
 **2022 W P3.** &nbsp; *Let $$ f \colon \RR \to [0, \infty) $$ be a differentiable function such that $$ f $$ is decreasing and $$ f' $$ is increasing. Show $$ \displaystyle \lim_{x \to \infty} f'(x) = 0 $$.*
 
-*Proof.*
+*Proof.* Suppose not. Then $$ f'(x) < C $$ for some $$ C > 0 $$ for all $$ x $$. Hence, $$ f(x) \leq - Cx + f(0 ) $$ implying $$ \displaystyle \lim_{x \to \infty} f(x) = -\infty $$, a contradiction. $$ \blacksquare $$
 
-**2022 F P7.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by* 
+**2022 F P6.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by* 
 
 $$
 f(x, y)
 = \frac{x^3}{x^2 + y^2}
 $$
 
-*for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show $$ f $$ is continuous at $$ (0, 0) $$. (b) Show $$ f $$ has every direcctional derivative at $$ (0, 0) $$. (c) Decide if $$ f $$ is differentiable at $$ (0, 0) $$.*
+*for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show $$ f $$ is continuous at $$ (0, 0) $$. (b) Show $$ f $$ has every directional derivative at $$ (0, 0) $$. (c) Decide if $$ f $$ is differentiable at $$ (0, 0) $$.*
 
-*Proof.*
+*Proof.* (a) We observe
+
+$$
+f(r \cos \theta, r \sin \theta)
+= r^2 \cos^3 \theta,
+$$
+
+which approaches $$ 0 $$ as $$ r $$ goes to $$ 0 $$. 
+
+(b) Set $$ (x, y) = (at, bt) $$ for $$ a^2 + b^2 = 1 $$. Then 
+
+$$
+\lim_{t \to 0} f(at, bt)
+= \lim_{t \to 0} \frac{(at)^3}{(at)^2 + (bt)^2}
+= \lim_{t \to 0} \frac{a^3t}{a^2+b^2}
+= \lim_{t \to 0} a^3 t
+= 0.
+$$
 
 **2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
 
-*Proof.*
+*Proof.* We see $$ f'(x) > f(x) $$ implies $$ \frac{d}{dx} f(x) > 1 $$, and hence $$ \ln f(x) > x $$ for $$ x \gg 0 $$. Consequently, $$ f(x) > e^x $$ for $$ x \gg 0 $$, 
 
 **2019 F P1.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by*
 
