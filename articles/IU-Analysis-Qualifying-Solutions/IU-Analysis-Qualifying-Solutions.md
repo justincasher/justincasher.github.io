@@ -756,7 +756,7 @@ Then our $$ f_n $$ converge pointwise to $$ 0 $$ but have constant nonzero integ
 
 **2022 W P3.** &nbsp; *Let $$ f \colon \RR \to [0, \infty) $$ be a differentiable function such that $$ f $$ is decreasing and $$ f' $$ is increasing. Show $$ \displaystyle \lim_{x \to \infty} f'(x) = 0 $$.*
 
-*Proof.* Suppose not. Then $$ f'(x) < C $$ for some $$ C > 0 $$ for all $$ x $$. Hence, $$ f(x) \leq - Cx + f(0 ) $$ implying $$ \displaystyle \lim_{x \to \infty} f(x) = -\infty $$, a contradiction. $$ \blacksquare $$
+*Proof.* Suppose not. Then $$ f'(x) < C $$ for some $$ C > 0 $$ for all $$ x $$. Hence, $$ f(x) \leq - Cx + f(0 ) $$ implies $$ \displaystyle \lim_{x \to \infty} f(x) = -\infty $$, a contradiction. $$ \blacksquare $$
 
 **2022 F P6.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by* 
 
@@ -776,19 +776,29 @@ $$
 
 which approaches $$ 0 $$ as $$ r $$ goes to $$ 0 $$. 
 
-(b) Set $$ (x, y) = (at, bt) $$ for $$ a^2 + b^2 = 1 $$. Then 
+(b) Set $$ v = (a, b) $$. Then 
 
 $$
-\lim_{t \to 0} f(at, bt)
-= \lim_{t \to 0} \frac{(at)^3}{(at)^2 + (bt)^2}
-= \lim_{t \to 0} \frac{a^3t}{a^2+b^2}
-= \lim_{t \to 0} a^3 t
-= 0.
+\begin{aligned}
+\nabla_v f(x) & = \lim_{h \to 0} \frac{f(0+hv}-f(0)}{h} \\
+& = \lim_{h \to 0} \frac{(ah)^3}{(ah)^2 + (bh)^2} \frac{1}{h} \\
+& = \lim_{h \to 0} \frac{h^3 a^3}{h^3(a^2+b^2)} \\
+& = \frac{a^3}{a^2+b^2}.
+\end{aligned}
 $$
+
+(c) Suppose that the derivative $$ \nabla f(0, 0) $$ exists. Then 
+
+$$
+\nabla f \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+= \nabla f \cdot \begin{bmatrix} 1 \\ 0 \end{bmatrix} + \nabla f \cdot \begin{bmatrix} 0 \\ 1 \end{bmatrix} 
+$$
+
+
 
 **2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
 
-*Proof.* We see $$ f'(x) > f(x) $$ implies $$ \frac{d}{dx} f(x) > 1 $$, and hence $$ \ln f(x) > x $$ for $$ x \gg 0 $$. Consequently, $$ f(x) > e^x $$ for $$ x \gg 0 $$, 
+*Proof.* We see $$ f'(x) > f(x) $$ implies $$ \frac{d}{dx} f(x) > 1 $$, and hence $$ \ln f(x) > x $$ for $$ x \gg 0 $$. Consequently, $$ f(x) > e^x $$ for $$ x \gg 0 $$, yielding $$ \displaystyle \lim_{x \to \infty} f(x) e^{-k} = \infty $$ for $$ 0 < k < 1 $$. We see our least upper bound on such $$ k $$ is $$ 1 $$. $$ \blacksquare $$
 
 **2019 F P1.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by*
 
@@ -799,7 +809,7 @@ $$
 
 *for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show that $$ f $$ has every directional derivative at $$ 0 $$. (b) Show that $$ f $$ is not continuous at $$ (0, 0) $$.*
 
-*Proof.*
+*Proof.* 
 
 **2019 W P4.** &nbsp; *(a) Give an example of an everywhere differentiable function with discontinuous derivative. (b) Let $$ f, g \colon \RR \to \RR $$. Suppose for every $$ \varepsilon > 0 $$ there exists a $$ \delta > 0 $$ such that $$ \| h \| < \delta $$ implies*
 
