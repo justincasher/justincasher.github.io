@@ -1007,7 +1007,11 @@ implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we 
 
 ## 8. Convergence of Integrals
 
-**Fubini-Tonelli Theorem.** &nbsp;
+**Fubini-Tonelli Theorem.** &nbsp; *Let $$f \colon [a, b] \times [c, d] \to \RR $$ be continuous. Then*
+
+$$
+\int_a^b \int_c^d f(x, y) dydx = \int_c^d \int_a^b f(y, x) dx dy.
+$$
 
 **2022 F P8.** &nbsp; *Does*
 
@@ -1166,7 +1170,7 @@ $$
 *(a) Apply Stoke's Theorem on*
 
 $$
-S = \{(\cos(t), \sin(t), z) \mid t \in [-\pi, \pi], 0 \leq z \leq 4t \sin(t) \cos(t^3)}
+S = \{(\cos(t), \sin(t), z) \mid t \in [-\pi, \pi], 0 \leq z \leq 4t \sin(t) \cos(t^3)\}
 $$
 
 *to express $$ \int_{\gamma} F \cdot n $$ in terms of $$ \int_{\alpha} F \cdot n $$. (b) Use (a) to evaluate the first integral.*
