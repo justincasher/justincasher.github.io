@@ -780,7 +780,7 @@ which approaches $$ 0 $$ as $$ r $$ goes to $$ 0 $$.
 
 $$
 \begin{aligned}
-\nabla_v f(0) & = \lim_{h \to 0} \frac{f(0+hv}-f(0)}{h} \\
+\nabla_v f(0) & = \lim_{h \to 0} \frac{f(0+hv)-f(0)}{h} \\
 & = \lim_{h \to 0} \frac{(ah)^3}{(ah)^2 + (bh)^2} \frac{1}{h} \\
 & = \lim_{h \to 0} \frac{h^3 a^3}{h^3(a^2+b^2)} \\
 & = \frac{a^3}{a^2+b^2}.
@@ -793,7 +793,7 @@ $$
 \nabla_{(1, 1)} f(0) = \nabla_{(1, 0)} f(0) + \nabla_{(0, 1)} f(0)
 $$
 
-implies $$ 1/2 = 1 $$, a contradiction. Thus, the derivative does not exists. $$ \blacksquare $$
+implies $$ 1/2 = 1 $$, a contradiction. Thus, the derivative does not exist. $$ \blacksquare $$
 
 **2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
 
