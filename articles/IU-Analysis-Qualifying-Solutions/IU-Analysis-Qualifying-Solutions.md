@@ -1512,22 +1512,49 @@ Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 
 **Implicit Function Theorem.** &nbsp; *Let $$ f \colon D \subseteq \RR^{n+m} \to \RR^n $$ be continuously differentiable with $$ f(a, b) = 0 $$ for some $$ (a, b) \in D $$. Put $$ A = f'(a, b) $$ and assume $$ A_x $$ is invertible. Then there exists open subsets $$ U \subseteq D $$ and $$ W \subseteq \RR^m $$ with $$ (a, b) \in U $$ and $$ b \in W $$, such that there is a unique continuously differentiable $$ g \colon W \to \RR^n $$ with $$ g(b) = a $$, $$ f(g(y), y) = 0 $$, and $$ g'(b) = -(A_x)^{-1} A_y $$.*
 
-**2023 W P8.** &nbsp; 
+**2023 W P8.** &nbsp; *Define $$ f^3 \colon \RR^3 \to \RR $$ by $$ f(x, y, z) = x^2y + e^x + z $$. (a) Show there exists a continuously differentiable $$ \phi $$ defined in a neighborhood of $$ (1, -1) $$ such that $$ \phi(1, -1) = 0 $$ and $$ f(\phi(y, z), y, z) = 0 $$ for all $$ (y, z) \in U $$. (b) Find $$ \nabla \phi(-1, 1) $$.*
 
 *Proof.*
 
-**2022 F P4.** &nbsp;
+**2022 F P4.** &nbsp; *(a) Let $$ G \colon \RR^3 \to \RR^2 $$ G = (g_1, g_2) $$ and $$ G(x_0, y_0, z_0) = 0 $$. When does there exist continuously differentiable $$ \phi \colon I \to \RR $$ and $$ \psi \colon I \to \RR $$ defined on an open interval $$ x_0 \in I $$ such that* 
+
+$$
+\{(x_1, x_2, x_3) \mid G(x_1, x_2, x_3) = 0 \}
+= \{ (x_1, \phi(x_1), \phi(x_1) \mid x_1 \in I \}
+$$
+
+*in a neighborhood of $$ (x_0, y_0, z_0) $$?*
+
+*(b) Suppose $$ f \colon \RR^2 \to \RR $$ is continuously differentiable, that $$ f(1, 1) = 1 $$, and $$ \frac{\partial f}{\partial x_1}(1, 1) \neq 0 $$, $$ \frac{\partial f}{\partial x_2}(1, 1) \neq 0 $$, and $$ (\frac{\partial f}{\partial x_2}(1, 1))^2 \neq 1 $$. Show the system*
+
+$$
+f(x_3, f(x_1, x_2)) = 1, \qquad f(f(x_1, x_3), x_2) = 1
+$$
+
+*defines functions $$ x_2 = \phi(x_1) $$ and $$ x_3 = \psi(x_1) $$ in a neighborhood of $$ 1 $$ satisfying*
+
+$$
+f(\psi(x_1), f(x_1, \phi(x_1))) = 1, \qquad f(f(x_1, \phi(x_2)), \phi(x_1)) = 1.
+$$
+
+*Proof.* (a) 
+
+(b) 
+
+**2022 W P4.** &nbsp; *Let $$ G \subseteq \RR^5 $$ be the set of vectors $$ A = (a_0, \dots, a_4) $$ such that*
+
+$$
+P_A(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + a_4 x^4
+$$
+
+*has $$ 5 $$ distinct roots. Show that $$ G $$ is open.*
 
 *Proof.*
 
-**2022 W P4.** &nbsp;
-
-*Proof.*
-
-**2021 W P9.** &nbsp;
+**2021 W P9.** &nbsp; *Suppose $$ F \colon \RR^3 \to \RR $$ is continuous, that for each $$ (x, y) \in \RR^2 $$ the function $$ z \to F(x, y, z) $$ is strictly increasing, and $$ F(x_0, y_0, z_0) $$. (a) Prove that there exists an open neighborhood $$ U $$ of $$ (x_0, y_0) $$ in $$ \RR^2 $$ such that there is a unique $$ g \colon U \to \RR $$ with $$ F(x, y, g(x, y)) = 0 $$ for $$ (x, y) \in U $$. (b) Show $$ g $$ is continuous in $$ U $$.*
 
 *Proof.
 
-**2019 F P8.** &nbsp;
+**2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and $$ G(x, y, z) = \ln(1+x+2y+3z) + \sin(2x-y+z) $$. (a) Prove that in a neighborhood of $$ 0 $$ the intersection of $$ F = 0 $$ and $$ G = 0 $$ can be represented as a continuously differentiable curve parameterized by $$ x $$. (b) Find a tangent vector to this curve at $$ 0 $$.* 
 
 *Proof.
