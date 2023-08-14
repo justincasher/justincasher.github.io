@@ -174,7 +174,7 @@ $$
 
 Letting $$ n $$ approach infinity gives us the desired equality. $$ \blacksquare $$
 
-**2022 F P1.** &nbsp; *Define $$ \{x_n\} $$ by $$ 0 < x_1 < 1 $$ and $$ x_{n+1} = 1 - \sqrt{1-x_n} $$. Prove that (a) $$ \{x_n\} $$ monotonically decreases to $$ 0 $$, and that (b) $$ \lim_n x_{n+1}/x_n = 1/2 $$.
+**2022 F P1.** &nbsp; *Define $$ \{x_n\} $$ by $$ 0 < x_1 < 1 $$ and $$ x_{n+1} = 1 - \sqrt{1-x_n} $$. Prove that (a) $$ \{x_n\} $$ monotonically decreases to $$ 0 $$, and that (b) $$ \lim_n x_{n+1}/x_n = 1/2 $$.*
 
 *Proof.* (a) Set $$ y_n = 1-x_n $$ so that $$ y_{n+1} = \sqrt{y_n} $$. Then $$ y_1 \neq 0 $$ implies $$ \lim_n y_n = 1 $$ (this is well known). Thus, $$ \lim_n x_n = \lim_n 1-y_n = 0 $$. To show $$ x_n $$ is monotonically decreasing, we observe $$ y_n $$ is monotonically increasing, i.e. $$ \sqrt{x} > x $$ for $$ x \in (0, 1) $$. 
 
@@ -223,7 +223,7 @@ $$
 
 which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
-**2022 W P4.** &nbsp; *Let $$ t_0 \in \RR $$ and set $$ t_{n+1} = \sin(\cos(t_n) $$. Prove this sequence converges with limit independent of $$ t_0 $$.*
+**2022 W P4.** &nbsp; *Let $$ t_0 \in \RR $$ and set $$ t_{n+1} = \sin(\cos(t_n)) $$. Prove this sequence converges with limit independent of $$ t_0 $$.*
 
 *Proof.* Consider $$ f(x) = \sin(\cos(x))) $$ as a function $$ f \colon [0, 2 \pi] \to [0, 2 \pi] $$. Set $$ g(x) = f(f(x)) $$. Computing the derivative, we observe that $$ \|g'(x)\| < 1 $$ for each $$ x \in [0, 2 \pi] $$, so $$ g $$ is a contraction on $$ [0, 2 \pi] $$, and consequently $$ g $$ admits a unique fixed point by the Banach Fixed Point Theorem. We conclude that our desired sequence has a unique limit independent of $$ t_0 $$, because $$ f $$ does not oscillate between 2 distinct points anywhere. $$ \blacksquare $$
 
@@ -469,7 +469,14 @@ $$
 |f_{a_{2n}}(x_n) - f_{a_{2n+1}}(x_n) | > \varepsilon 
 $$
 
-for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$; let us assume without loss of generality $$ x_n $$ has limit $$ x_* $$. Define a sequence $$ \{y_n\} $$ by $$ y_{a_{2n}} = x_n $$, $$ y_{a_{2n+1}} = x_n $$, and $$ y_n = x_* $$ elsewise. Then $$ f_n(y_n) $$ is not a Cauchy sequence by assumption, but $$ \lim_n f_n(y_n) = f(x_*), $$ a contradiction. 
+for some fixed $$ \varepsilon > 0 $$. Since $$ [0, 1] $$ is compact $$ x_n $$ admits a convergent subsequence $$ x_{n_k} $$ with limit $$ x_* $$; let us assume without loss of generality $$ x_n $$ has limit $$ x_* $$. Define a sequence $$ \{y_n\} $$ by 
+
+$$ 
+y_{a_{2n}} = y_{a_{2n+1}} = x_n 
+
+$$
+
+and $$ y_n = x_* $$ elsewise. Then $$ f_n(y_n) $$ is not a Cauchy sequence by assumption, but $$ \lim_n f_n(y_n) = f(x_*), $$ a contradiction. 
 
 This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $$ given by $$ f_n = x/n $$. $$ \blacksquare $$
 
@@ -662,7 +669,7 @@ $$
 
 *Show that $$ f_n $$ converges uniformly on $$ \RR $$.* $$ \blacksquare $$ 
 
-*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. We observe that we can write $$ f_n(x) $$ as a sum of $$ 2^n $$ functions of the form $$ f(x+a_i) $$. In particular, we can write $$ f_{n+k}(x) $$ a a sum of $$ 2^{n+k} $$ functions of the form $$ f(x+b_i) $$, such that for each $$ a_i $$ the nearest $$ 2^k $$ of the $$ b_i $$ satisfy
+*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. We observe that we can write $$ f_n(x) $$ as a sum of $$ 2^n $$ functions of the form $$ f(x+a_i) $$. In particular, we can write $$ f_{n+k}(x) $$ as a sum of $$ 2^{n+k} $$ functions of the form $$ f(x+b_i) $$, such that for each $$ a_i $$ the nearest $$ 2^k $$ of the $$ b_i $$ satisfy
 
 $$
 \|a_i - b_i\|
@@ -787,7 +794,7 @@ $$
 \end{aligned}
 $$
 
-(c) Suppose that the derivative $$ \nabla f(0) $$ exists. Then, by linearity,
+(c) Suppose that the derivative $$ D f(0) $$ exists. Then, by linearity,
 
 $$
 \nabla_{(1, 1)} f(0) = \nabla_{(1, 0)} f(0) + \nabla_{(0, 1)} f(0)
@@ -845,9 +852,9 @@ $$
 \left\| \frac{f(x+h)-f(x)}{h} - g(x) \right\| < \varepsilon
 $$
 
-*for all $$ x \in \RR $$. Show that $$ f $$ is continuously differentiable.* $$ \blacksquare $$.
+*for all $$ x \in \RR $$. Show that $$ f $$ is continuously differentiable.* 
 
-*Proof.*
+*Proof.* 
 
 
 ## 6. Optimization
