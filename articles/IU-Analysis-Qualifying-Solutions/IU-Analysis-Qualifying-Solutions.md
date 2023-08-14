@@ -888,12 +888,13 @@ $$
 $$
 \begin{aligned}
 \| g(x) - g(y) \| & = \leq \left\| g(x) - \frac{f(x+h) - f(x)}{h} \right\| + \left\| \frac{f(x+h) - f(x)}{h} - g(y) \right\| \\
-& = \left\| \frac{f(x+h) - f(x)}{h} - g(x) \right\| + \left\| frac{f(y-h)-f(y)}{-h} - g(y) \right\| \\
+& = \left\| \frac{f(x+h) - f(x)}{h} - g(x) \right\| + \left\| \frac{f(y-h)-f(y)}{-h} - g(y) \right\| \\
 & < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
 \end{aligned}
 $$
 
 Thus, $$ g $$ is continuus and so is $$ f' $$.
+
 
 ## 6. Optimization
 
@@ -998,7 +999,6 @@ $$
 $$
 
 implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we conclude that this is the minimum. $$ \blacksquare $$
-
  
 
 ## 7. Integration
@@ -1009,7 +1009,10 @@ implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we 
 ## 8. Convergence of Integrals
 
 
+
+
 ## 9. Polynomials and Stone Weierstrass
+
 
 
 
@@ -1019,5 +1022,4 @@ implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we 
 
 
 ## 11. Implicit Function Theorem
-
 
