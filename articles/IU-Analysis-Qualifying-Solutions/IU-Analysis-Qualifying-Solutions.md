@@ -787,7 +787,7 @@ $$
 \end{aligned}
 $$
 
-(c) Suppose that the derivative $$ \nabla f(0, 0) $$ exists. Then, by linearity,
+(c) Suppose that the derivative $$ \nabla f(0) $$ exists. Then, by linearity,
 
 $$
 \nabla_{(1, 1)} f(0) = \nabla_{(1, 0)} f(0) + \nabla_{(0, 1)} f(0)
@@ -808,9 +808,34 @@ $$
 
 *for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show that $$ f $$ has every directional derivative at $$ 0 $$. (b) Show that $$ f $$ is not continuous at $$ (0, 0) $$.*
 
-*Proof.* (a) 
+*Proof.* (a) Set $$ v = (a, b) $$. Then 
 
-(b) 
+$$
+\begin{aligned}
+\nabla_v f(0) & = \lim_{h \to 0} \frac{f(0+hv)-f(0)}{h} \\
+& = \lim_{h \to 0} \frac{ab^2 h^3}{a^2 h^2 + b^4 h^4} \frac{1}{h} \\
+& = \lim_{h \to 0} \frac{ab^2}{a^2 + b^4 h^2}.
+\end{aligned} 
+$$
+
+If $$ a = 0 $$ this limit evaluates to $$ 0 $$; elsewise it equals $$ b^2/a $$.
+
+(b) For the path $$ (t, t) $$ we see 
+
+$$
+\lim_{t \to 0} f(t, t) 
+= \lim_{t \to 0} \frac{t^3}{t^2+t^4} 
+= \lim_{t \to 0} \frac{t}{1+t^2}
+= 0
+$$
+
+While for the path $$ (t, \sqrt{t}) $$ we have 
+
+$$
+
+$$
+
+Thus, $$ f $$ is not continuous at the origin. $$ \blacksquare $$
 
 **2019 W P4.** &nbsp; *(a) Give an example of an everywhere differentiable function with discontinuous derivative. (b) Let $$ f, g \colon \RR \to \RR $$. Suppose for every $$ \varepsilon > 0 $$ there exists a $$ \delta > 0 $$ such that $$ \| h \| < \delta $$ implies*
 
