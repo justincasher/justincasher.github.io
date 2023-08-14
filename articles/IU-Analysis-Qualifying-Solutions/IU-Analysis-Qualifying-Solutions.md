@@ -780,21 +780,20 @@ which approaches $$ 0 $$ as $$ r $$ goes to $$ 0 $$.
 
 $$
 \begin{aligned}
-\nabla_v f(x) & = \lim_{h \to 0} \frac{f(0+hv}-f(0)}{h} \\
+\nabla_v f(0) & = \lim_{h \to 0} \frac{f(0+hv}-f(0)}{h} \\
 & = \lim_{h \to 0} \frac{(ah)^3}{(ah)^2 + (bh)^2} \frac{1}{h} \\
 & = \lim_{h \to 0} \frac{h^3 a^3}{h^3(a^2+b^2)} \\
 & = \frac{a^3}{a^2+b^2}.
 \end{aligned}
 $$
 
-(c) Suppose that the derivative $$ \nabla f(0, 0) $$ exists. Then 
+(c) Suppose that the derivative $$ \nabla f(0, 0) $$ exists. Then, by linearity,
 
 $$
-\nabla f \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
-= \nabla f \cdot \begin{bmatrix} 1 \\ 0 \end{bmatrix} + \nabla f \cdot \begin{bmatrix} 0 \\ 1 \end{bmatrix} 
+\nabla_{(1, 1)} f(0) = \nabla_{(1, 0)} f(0) + \nabla_{(0, 1)} f(0)
 $$
 
-
+implies $$ 1/2 = 1 $$, a contradiction. Thus, the derivative does not exists. $$ \blacksquare $$
 
 **2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
 
@@ -809,7 +808,9 @@ $$
 
 *for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show that $$ f $$ has every directional derivative at $$ 0 $$. (b) Show that $$ f $$ is not continuous at $$ (0, 0) $$.*
 
-*Proof.* 
+*Proof.* (a) 
+
+(b) 
 
 **2019 W P4.** &nbsp; *(a) Give an example of an everywhere differentiable function with discontinuous derivative. (b) Let $$ f, g \colon \RR \to \RR $$. Suppose for every $$ \varepsilon > 0 $$ there exists a $$ \delta > 0 $$ such that $$ \| h \| < \delta $$ implies*
 
