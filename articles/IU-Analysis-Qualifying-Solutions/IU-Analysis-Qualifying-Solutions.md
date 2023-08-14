@@ -39,7 +39,7 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 8. [Convergence of Integrals](#8-convergence-of-integrals)
 9. [Polynomials and Stone-Weierstrass](#9-polynomials-and-stone-weierstrass)
 10. [Stoke's Theorem](#10-stokes-theorem)
-11. [Implicit Function Theorem](#11-implicit-function-theorem)
+11. [Inverse and Implicit Function Theorems](#11-inverse-and-implicit-function-theorem)
 
 ## 1. Compact Spaces 
 
@@ -1111,28 +1111,92 @@ $$
 
 ## 10. Stoke's Theorem
 
-**Stoke's Theorem.** &nbsp; 
+**Stoke's Theorem.** &nbsp; *Let $$ S $$ be a smooth oriented surface in $$ \RR^3 $$ with boundary $$ \partial S $$. If $$ F \colon \RR^3 \to \RR^3 $$ is a vector field with continuous first order partials, then*
 
-**Divergence Theorem.** &nbsp; 
+$$
+\int \int_S (\text{Curl} F \cdot n) dA
+= \int_{\partial S} F \cdot n dB,
+$$
 
-**2022 F P3.** &nbsp; 
+*where $$ n $$ is the unit normal.*
 
-*Proof.*
+**Divergence Theorem.** &nbsp; *Let $$ M $$ be a smooth manifold in $$ \RR^n $$ with boundary $$ \partial M $$. Then*
 
-**2022 W P6.** &nbsp; 
+$$
+\int_M \text{Div } F dV 
+= \int_{\partial M} F \cdot n dS,
+$$
+
+*where $$ n $$ is the unit normal.*
+
+**2022 F P3.** &nbsp; *Find the value of $$ \int \int_E F \cdot n dS $$ where $$ F(x, y, z) = (x, ze^x, y^z) $$,* 
+
+$$
+E = \{(x, y, z) \in \RR^3 \mid \|(x, y, z) \| = 1, z \geq 0,
+$$
+
+*and $$ n $$ is the unit normal.*
 
 *Proof.* 
 
-**2022 W P9.** &nbsp; 
+**2023 W P6.** &nbsp; *Let $$ C $$ be a simple closed curve that lies in the plane $$ x + y + z = 1 $$. Show*
+
+$$
+\int_C z dx - 2xdy + 3y dz
+$$
+
+*only depends on the region enclosed by $$ C $$.*
+
 
 *Proof.* 
 
-**2021 W P4.** &nbsp; 
+**2022 W P9.** &nbsp; *Let $$ F = (6yz, 2xz, 4xy) $$, and define $$ \alpha, \gamma \colon [-\pi, \pi] \to \RR^3 $$ by*
+
+$$
+\alpha(t) = (\cos(t), \sin(t), 0)
+$$
+
+*and*
+
+$$
+\gamma(t) 
+= (\cos(t), \sin(t), 4t \sin(t) \cos(t^3)).
+$$
+
+*(a) Apply Stoke's Theorem on*
+
+$$
+S = \{(\cos(t), \sin(t), z) \mid t \in [-\pi, \pi], 0 \leq z \leq 4t \sin(t) \cos(t^3)}
+$$
+
+*to express $$ \int_{\gamma} F \cdot n $$ in terms of $$ \int_{\alpha} F \cdot n $$. (b) Use (a) to evaluate the first integral.*
+
+*Proof.* 
+
+**2021 W P4.** &nbsp; *Let $$ E $$ be the square-based pyramid in $$ \RR^3 $$ with top vertex $$ (1, 2, 5) $$ and base $$ (x, y, 0) $$ with $$ 0 \leq x, y, \leq 3 $$, and let $$ S_1, S_2, S_3, S_4 $$ be the triangular sides of $$ E $$. Define $$ F \colon \RR^3 \to \RR^3 $$ by*
+
+$$
+F(x, y, z) = (3x-y+4z, x+5y-2z, x^2+y^2-z).
+$$
+
+*If $$ n $$ is the unit normal with positive component, find*
+
+$$
+\sum_{i=1}^4 \int \int_{S_i} F \cdot n d A.
+$$
 
 *Proof.*
 
-**2020 F P2.** &nbsp; 
+**2020 F P2.** &nbsp; *Find the value of $$ \int \int_E F \cdot n dS $$, where $$ F(x, y, z) = (yz^2, \sin x, x^2) $$,*
+
+$$ 
+E = \{(x, y, z) \in \RR^3 \mid x^2 + y^2 + 4z^2 = 1, z \geq 0\},
+$$
+
+*and $$ n $$ is the outward unit normal.*
+
+*Proof.*
 
 
-## 11. Implicit Function Theorem
+## 11. Inverse and Implicit Function Theorems
 
