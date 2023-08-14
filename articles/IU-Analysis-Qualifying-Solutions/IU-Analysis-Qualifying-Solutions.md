@@ -1141,6 +1141,7 @@ $$
 *Proof.* Indeed, 
 
 $$
+\begin{aligned}
 \int_{\RR^2} f(x) dx 
 & = \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} f(r \cos \theta, r \sin \theta} r dr d \theta \\
 & \leq \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} b_{k+1} r dr d \theta \\
@@ -1149,6 +1150,7 @@ $$
 & \leq \sum_{k=1}^{\infty} \pi \max \{b_k^2, \frac{1}{k^2}\} \\
 & \leq \pi \sum_{k=1}^{\infty} b_k^2 + \pi \sum_{k=1}^{\infty} \frac{1}{k^2} \\
 & < \infty.
+\end{aligned}
 $$
 
 We conclude that the limit exists. $$ \blacksquare $$
