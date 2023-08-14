@@ -918,6 +918,6 @@ implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we 
 
 
 
-## 11. Implicit Functin Theorem
+## 11. Implicit Function Theorem
 
 
