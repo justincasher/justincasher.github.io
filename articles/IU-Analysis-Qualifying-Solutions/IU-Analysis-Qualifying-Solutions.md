@@ -1210,15 +1210,73 @@ $$
 
 *Suppose $$ f = (f_1, \dots, f_n) \colon \RR^n \to \RR^n $$ is continuously differentiable function with $$ p (f(x)) = 0 $$ for all $$ x \in \RR^n $$. Prove $$ \det f' = 0 $$.*
 
-*Proof.* Suppose not. Then there exists a point $$ (x_1, \dots, x_n) \in \RR $$ with $$ \det f'(x_1, \dots, x_n) \neq 0 $$. 
+*Proof.* Suppose not. Then there exists a point $$ x = (x_1, \dots, x_n) \in \RR $$ with $$ \det f'(x) \neq 0 $$. Since $$ \det f' \neq 0 $$ and the determinant along with our derivative are continuous, we can assume without loss of generality that $$ f(x) \neq 0 $$. The identity $$ p(f) = 0 $$ impies $$ d [p(f)] = 0 $$, or equivalently $$ p'(f) f' = 0 $$. Expanding this equation, we see that for each $$ 1 \leq j \leq n $$ we have
 
-**2020 F P8.** &nbsp; *Let $$ f \colon [0, 1] \to \RR $$ be continuous such that $$ \int_0^1 f(x) x^n dx = 0 $$ for $$ n = 3, 4, \dots $$. Prove $$ f(x) = 0 $$. 
+$$
+(2j+1) f_j^{2j}(x_1, \dots, x_n) \left( \sum_{k=1}^{n} \partial_j f_k \right)
+= 0. 
+$$
 
-*Proof.*
+Since $$ f_j(x) \neq 0 $$ for each $$ j $$, we have $$ \sum_k \partial_j f_k = 0 $$. This implies the rows of $$ \det f' $$ sum to $$ 0 $$, and thus are linearly dependent. This contradicts the assumption that $$ \det f' \neq 0 $$. $$ \blacksquare $$
+
+**2020 F P8.** &nbsp; *Let $$ f \colon [0, 1] \to \RR $$ be continuous such that $$ \int_0^1 f(x) x^n dx = 0 $$ for $$ n = 3, 4, \dots $$. Prove $$ f(x) = 0 $$.*
+
+*Proof.* The Stone-Weierstrass Theorem implies we can approximate $$ f(x) x^4 $$ by polynomials $$ p_n \in \RR[x] $$. Since this sequence converges uniformly, Theorem 4.1 then implies 
+
+$$
+\lim_{n \to \infty} \int_0^1 [f(x) x^4] p(x) dx 
+= \int_0^1 f(x)^2 x^8 dx.
+$$
+
+Each integral on the left hand side is $$ 0 $$, and hence the right hand side is too. This can only happen when $$ f(x) = 0 $$. $$ \blacksquare $$
 
 **2018 W P10.** &nbsp; *Let $$ f \colon \RR^2 \to \RR$$ be a function such that $$ f(x_0, y) $$ is polynomial for fixed $$ x_0 $$ and $$ f(x, y_0) $$ is polynomial for fixed $$ y_0 $$. Show that $$ f $$ is polynomial.*
 
-*Proof.* 
+*Proof.* Write 
+
+$$
+f(x, y) 
+= \sum_{n=0}^{\infty} c_n(y) x^n
+$$
+
+and 
+
+$$
+Y_n = \{ y_0 \in \RR \mid \deg f(x, y_0) = n \}.
+$$
+
+Since $$ \bigcup_n Y_n = \RR $$ and $$ \RR $$ is uncountable while our union is indexed by a countable set, we see that for some $$ N $$ that $$ Y_N $$ is infinite. We denote the restriction of $$ f $$ to $$ \RR \times Y_N $$ by $$ Y_N $$, where
+
+$$
+Y_n 
+= \sum_{n=0}^{N} c_n(y) x^n. 
+$$
+
+Choosing $$ N $$ distinct reals $$ x_0, \dots, x_N \in \RR $$ allows us to solve for the $$ c_n $$ on this subset:
+
+$$
+c_n(y) = \sum_{n=0}^{N} a_{j, n} f_N(x_j, y}.
+$$
+
+Using that $$ f_N $$ is polynomial for each fixed $$ x_j $$ we see that 
+
+$$ 
+f_N(x, y) = \sum_{n=0}^{N} a_{j, n} f_N(x_j, y) x^n
+$$
+
+is polynomial in both variables. Finally, for each $$ x \in \RR $$ we observe 
+
+$$
+f(x, y) - \sum_{n=0}^{N} a_{j, n} f(x_j, y) x^n
+$$
+
+is $$ 0 $$ for infinitely many $$ y $$, so
+
+$$
+f(x, y) = \sum_{n=0}^{N} a_{j, n} f_N(x_j, y) x^n.
+$$
+
+Thus, it is polynomial in both variables. $$ \blacksquare $$
 
 **2010 W P5.** &nbsp; *Let $$ g_n \colon [0, 1] \to \RR $$ be a sequence of continuous functions. Suppose the $$ g_n $$ are uniformly bounded by $$ M $$, and that there exists a continuous $$ g \colon [0, 1] \to \RR $$ such that*
 
@@ -1234,7 +1292,15 @@ $$
 
 *for every continuous $$ f $$.*
 
-*Proof.* 
+*Proof.* The second statement follows from the Stone-Weierstrass Theorem in a manner similar to 2020 F P8. For the first statement, suppose $$ g(x) \neq 0 $$ and choose $$ f(x) $$ such that $$ g(x) f(x) = M $$. Then
+
+$$
+\lim_n \int_0^1 g_n(x) f(x) dx 
+= \int_0^1 g(x) f(x) dx 
+= M
+$$
+
+implies $$ \| f(x) \| \geq 1 $$ and $$ \|g(x)\| \leq M $$. $$ \blacksquare $$
 
 
 ## 10. Stoke's Theorem
