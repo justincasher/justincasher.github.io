@@ -1138,7 +1138,20 @@ $$
 
 *Assume $$ \{b_k\} $$ is a sequence in $$ \RR^+ $$ such that $$ \sum_k b_k^2 < \infty $$, and that $$ f \colon \RR^2 \to \RR^+ $$ is a continuous function such that $$ f(x) \leq b_k $$ when $$ a_{k-q} \leq \|x\| \leq a_k $$ . Show that $$ \int_{\RR^2} f(x) dA $$ exists.*
 
-*Proof.* 
+*Proof.* Indeed, 
+
+$$
+\int_{\RR^2} f(x) dx 
+& = \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} f(r \cos \theta, r \sin \theta} r dr d \theta \\
+& \leq \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} b_{k+1} r dr d \theta \\
+& \leq \sum_{k=0}^{\infty} \pi b_{k+1} [a_{k+1}^2 - a_k^2] \\
+& = \sum_{k=0}^{\infty} \pi b_{k+1} \frac{1}{k+1} \\
+& \leq \sum_{k=1}^{\infty} \pi \max \{b_k^2, \frac{1}{k^2}\} \\
+& \leq \pi \sum_{k=1}^{\infty} b_k^2 + \pi \sum_{k=1}^{\infty} \frac{1}{k^2} \\
+& < \infty.
+$$
+
+We conclude that the limit exists. $$ \blacksquare $$
 
 **2020 W P5.** &nbsp; *Let $$ f \colon \RR^2 \to \RR $$ be a differentiable function such that $$ f(0, 0) = 0 $$. Show that*
 
