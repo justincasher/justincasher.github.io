@@ -1290,7 +1290,7 @@ $$
 \lim_n \int_0^1 g_n(x) f(x) dx = \int_0^1 g(x) f(x) dx
 $$
 
-*for every continuous $$ f $$.*
+*for every continuous $$ f \colon [0, 1] \to \RR $$.*
 
 *Proof.* The second statement follows from the Stone-Weierstrass Theorem in a manner similar to 2020 F P8. For the first statement, suppose $$ g(x) \neq 0 $$ and choose $$ f(x) $$ such that $$ g(x) f(x) = M $$. Then
 
@@ -1331,7 +1331,17 @@ $$
 
 *and $$ n $$ is the unit normal.*
 
-*Proof.* 
+*Proof.* Write 
+
+$$
+H = \{(x, y, z) \in \RR^3 \mid \| (x, y, z) \| \leq 1, z \geq 0\}.
+$$
+
+The Divergence Theorem tells us
+
+$$
+
+$$
 
 **2023 W P6.** &nbsp; *Let $$ C $$ be a simple closed curve that lies in the plane $$ x + y + z = 1 $$. Show*
 
