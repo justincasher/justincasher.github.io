@@ -1005,20 +1005,133 @@ implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we 
 
 
 
-
 ## 8. Convergence of Integrals
 
+**Fubini-Tonelli Theorem.** &nbsp;
 
+**2022 F P8.** &nbsp; *Does*
+
+$$
+I = \int_3^{\infty} \frac{\ln(x)}{x^p \ln(ln(x))} dx
+$$
+
+*converge for $$ p \geq 0 $$?*
+
+*Proof.* 
+
+**2022 W P5.** &nbsp; *Does $$ \int_0^{\infty} \cos(x^{2/3}) dx $$ converge?*
+
+*Proof.* 
+
+**2022 W P8.** &nbsp; *Let $$ f \colon \RR^2 \to \RR $$ be a continuous compactly support function. Define $$ g \colon \RR^2 \to \RR $$ by*
+
+$$
+g(x) 
+= \int_{\RR^2} \frac{f(y)}{\|x-y\|} dy 
+$$
+
+*Prove that this integral converges (and $$ g $$ is continuous).* 
+
+*Proof.* (I have not shown continuity.)
+
+**2021 F P5.** &nbsp; *Let $$ f \colon \RR^2 \to \RR $$ be continuous. Suppose $$ \int_0^{\infty} f(x, y) dy $$ exists for every $$ x \in [0, 1] $$. Assume there exists a $$ C \geq 0 $$ such that for $$ z > 0 $$,*
+
+$$
+
+$$
+
+*for every fixed $$ x $$. Show*
+
+$$
+\int_0^1 \left[ \int_0^{\infty} f(x, y) dy \right] dx
+= \int_0^{\infty} \left[ \int_0^1 f(x, y) dx \right] dy.
+$$
+
+*Proof.* 
+
+**2020 F P5.** &nbsp; *Set $$ a _0 = 0 $$ and for $$ k \geq 1 $$*
+
+$$
+a_k = \sqrt{1 + \frac{1}{2} + \cdots + \frac{1}{k}}.
+$$
+
+*Assume $$ \{b_k\} $$ is a sequence in $$ \RR^+ $$ such that $$ \sum_k b_k^2 < \infty $$, and that $$ f \colon \RR^2 \to \RR^+ $$ is a continuous function such that $$ f(x) \leq b_k $$ when $$ a_{k-q} \leq \|x\| \leq a_k $$ . Show that $$ \int_{\RR^2} f(x) dA $$ exists.*
+
+*Proof.* 
+
+**2020 W P5.** &nbsp; *Let $$ f \colon \RR^2 \to \RR $$ be a differentiable function such that $$ f(0, 0) = 0 $$. Show that*
+
+$$
+I = \int \int_{x^2+y^2 \leq 1} \frac{f(x, y)}{(x^2+y^2)^{4/3}} dx dy   
+$$
+
+*converges.*
+
+*Proof.* 
 
 
 ## 9. Polynomials and Stone Weierstrass
 
+**Stone-Weierstrass Theorem.**  &nbsp; *Let $$ f \colon [a, b] \to \RR $$ be cotninuous. Then there exists a sequence $$ p_n \in \RR[x] $$ that converges uniformly to $$ f $$.*
 
+**2023 W P9.** &nbsp; *For $$ n \geq 2 $$ let $$ p \colon \RR^n \to \RR $$ be*
+
+$$
+p(x_1, \dots, x_n) = \sum_{j=1}^n x_j^{2j+1}.
+$$
+
+*Suppose $$ f = (f_1, \dots, f_n) \colon \RR^n \to \RR^n $$ is continuously differentiable function with $$ p (f(x)) = 0 $$ for all $$ x \in \RR^n $$. Prove $$ \det f' = 0 $$.*
+
+*Proof.* 
+
+**2020 F P8.** &nbsp; *Let $$ f \colon [0, 1] \to \RR $$ be continuous such that $$ \int_0^1 f(x) x^n dx = 0 $$ for $$ n = 3, 4, \dots $$. Prove $$ f(x) = 0 $$. 
+
+*Proof.*
+
+**2018 W P10.** &nbsp; *Let $$ f \colon \RR^2 \to \RR$$ be a function such that $$ f(x_0, y) $$ is polynomial for fixed $$ x_0 $$ and $$ f(x, y_0) $$ is polynomial for fixed $$ y_0 $$. Show that $$ f $$ is polynomial.*
+
+*Proof.* 
+
+**2010 W P5.** &nbsp; *Let $$ g_n \colon [0, 1] \to \RR $$ be a sequence of continuous functions. Suppose the $$ g_n $$ are uniformly bounded by $$ M $$, and that there exists a continuous $$ g \colon [0, 1] \to \RR $$ such that*
+
+$$
+\lim_n \int_0^1 g_n(x) p(x) dx = \int_0^1 g(x) p(x) dx
+$$
+
+*for every $$ p \in \RR[x] $$. Show that $$ \| g(x) \| \leq M $$, and that*
+
+$$
+\lim_n \int_0^1 g_n(x) f(x) dx = \int_0^1 g(x) f(x) dx
+$$
+
+*for every continuous $$ f $$.*
+
+*Proof.* 
 
 
 ## 10. Stoke's Theorem
 
+**Stoke's Theorem.** &nbsp; 
 
+**Divergence Theorem.** &nbsp; 
+
+**2022 F P3.** &nbsp; 
+
+*Proof.*
+
+**2022 W P6.** &nbsp; 
+
+*Proof.* 
+
+**2022 W P9.** &nbsp; 
+
+*Proof.* 
+
+**2021 W P4.** &nbsp; 
+
+*Proof.*
+
+**2020 F P2.** &nbsp; 
 
 
 ## 11. Implicit Function Theorem
