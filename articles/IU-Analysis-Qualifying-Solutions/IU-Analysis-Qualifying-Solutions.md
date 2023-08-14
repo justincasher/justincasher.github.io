@@ -889,7 +889,7 @@ $$
 \begin{aligned}
 \| g(x) - g(y) \| & = \leq \left\| g(x) - \frac{f(x+h) - f(x)}{h} \right\| + \left\| \frac{f(x+h) - f(x)}{h} - g(y) \right\| \\
 & = \left\| \frac{f(x+h) - f(x)}{h} - g(x) \right\| + \left\| frac{f(y-h)-f(y)}{-h} - g(y) \right\| \\
-& < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilons 
+& < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
 \end{aligned}
 \end{aligned}
 $$
