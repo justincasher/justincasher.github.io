@@ -1344,7 +1344,7 @@ $$
 = \int_E (F \cdot n) dS + \int_D^2 (F \cdot n) dS,
 $$
 
-where $$ D^2 $$ denotes the unit disk on $$ z=0 $$. We see 
+where $$ D^2 $$ denotes the unit disk with $$ z=0 $$. We see 
 
 $$
 \int_H \text{Div} F dV 
@@ -1447,7 +1447,31 @@ $$
 \sum_{i=1}^4 \int \int_{S_i} F \cdot n d A.
 $$
 
-*Proof.*
+*Proof.* Let $$ B = [0, 3] \times [0, 3] \times 0 $$ denote the base of our pyramid. The Divergence Theorem tells us 
+
+$$
+\sum_{i=1}^4 \int \int_{S_i} F \cdot n d A 
+= \int_E \text{Div} F dV - \int_B (F \cdot n) dA. 
+$$
+
+We see $$ \text{Div} F = 0 $$ and the volume of any pyramid is $$ \frac{1/3} b h $$ where $$ b = 9 $$ and $$ h = 5 $$, so 
+
+$$
+\int_E \text{Div} F dV 
+= 7 \text{Vol}(E) 
+= 7 (\frac{1}{3} 9 \cdot 5) 
+= 105.
+$$
+
+Likewise 
+
+$$
+\int_B (F \cdot n) dA
+= \int_0^3 \int_0^3 (3x-y, x+5y, x^2+y^2) \cdot (0, 0, -1) 
+= -54. 
+$$
+
+We conclude that our desired value is $$ 105+54 = 59 $$. $$ \blacksquare $$
 
 **2020 F P2.** &nbsp; *Find the value of $$ \int \int_E F \cdot n dS $$, where $$ F(x, y, z) = (yz^2, \sin x, x^2) $$,*
 
@@ -1457,8 +1481,30 @@ $$
 
 *and $$ n $$ is the outward unit normal.*
 
-*Proof.*
+*Proof.* Write 
 
+$$
+V = \{(x, y, z) \in \RR^3 \mid x^2 + y^2 + 4z^2 \leq 1, z \geq 0\}.
+$$
+
+The Divergence Theorem tells us 
+
+$$
+\int \int_E (F \cdot n) dS 
+= \int_V \text{Div} F dV - \int_{D^2} (F \cdot n) dA,
+$$
+
+where $$ D^2 $$ is the unit disk with $$ z = 0 $$. We see that $$ \text{Div} F = 0 $$ implies $$ \int_V \text{Div} F dV = 0 $$. On $$ D^2 $$ the unit normal is $$ n = (0, 0, -1) $$, and we compute
+
+$$
+\begin{aligned}
+\int_D^2 (F \cdot n) dA & = \int_{D^2} - x^2 dA \\
+& = \int_0^{2 \pi} \int_0^1 -r^3 \cos^2(\theta) dr d \theta \\
+& = - \frac{\pi}{4}.
+\end{aligned}
+$$ 
+
+Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 
 ## 11. Inverse and Implicit Function Theorems
 
