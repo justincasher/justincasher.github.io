@@ -749,7 +749,7 @@ $$
 
 Then our $$ f_n $$ converge pointwise to $$ 0 $$ but have constant nonzero integral.
 
-(b) 
+(b) It is not hard to see that if the left limit is nonzero and the right limit is $$ 0 $$, then for each $$ n $$ there exists a set $$ A_n $$ of measure greater than some fixed constant $$ C $$, i.e. $$ \mu(A_n) > C $$, such that $$ \|f_n(A_n)\| > D $$ for some fixed constant $$ D $$. This contradicts pointwise convergence. $$ \blacksquare  $$
 
 
 ## 5. Derivatives
