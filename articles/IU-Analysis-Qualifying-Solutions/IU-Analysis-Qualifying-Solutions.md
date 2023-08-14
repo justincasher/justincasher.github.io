@@ -782,7 +782,7 @@ $$
 
 *for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show that $$ f $$ has every directional derivative at $$ 0 $$. (b) Show that $$ f $$ is not continuous at $$ (0, 0) $$.*
 
-*Proof.
+*Proof.*
 
 **2019 W P4.** &nbsp; *(a) Give an example of an everywhere differentiable function with discontinuous derivative. (b) Let $$ f, g \colon \RR \to \RR $$. Suppose for every $$ \varepsilon > 0 $$ there exists a $$ \delta > 0 $$ such that $$ \| h \| < \delta $$ implies*
 
@@ -792,7 +792,7 @@ $$
 
 *for all $$ x \in \RR $$. Show that $$ f $$ is continuously differentiable.* $$ \blacksquare $$.
 
-*Proof.
+*Proof.*
 
 
 ## 6. Optimization
