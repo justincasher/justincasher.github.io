@@ -715,9 +715,9 @@ $$
 
 We conclude that $$ \{f_n\} $$ is Cauchy with respect to the uniform metric, and thus converges uniformly. $$ \blacksquare $$
 
-**2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
+**2019 F P9.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
 
-*Proof.* We wil show $$ g_n = f-f_n $$ converges uniformly to $$ 0 $$. Fix $$ \varepsilon > 0 $$. For each $$ x \in [a, b] $$, chose an $$ N_x \gg 0 $$ such that $$ g_n(x) < \varepsilon R$$ for all $$ n > N_x $$. Since our $$ g_n $$ are continuous, for each $$ x $$ there exisrts an $$ r_x $$ such that $$ g_{N_x}(B(x, r_x)) \subseteq [0, \varepsilon) $$. Since $$ [a, b] $$ is compact, we can choose a finite subcover $$ B(x_1, r_1), \dots, B(x_{\ell}, r_{\ell}). $$ Letting $$ N = \max \{N_{x_0}, \dots, N_{x_\ell}\} $$, we get $$ g_n(x) < \varepsilon $$ for all $$ x \in [a, b] $$ and $$ n \geq N $$.
+*Proof.* We wil show $$ g_n = f-f_n $$ converges uniformly to $$ 0 $$. Fix $$ \varepsilon > 0 $$. For each $$ x \in [a, b] $$, chose an $$ N_x \gg 0 $$ such that $$ g_n(x) < \varepsilon R$$ for all $$ n > N_x $$. Since our $$ g_n $$ are continuous, for each $$ x $$ there exisrts an $$ r_x $$ such that $$ g_{N_x}(B(x, r_x)) \subseteq [0, \varepsilon) $$. Since $$ [a, b] $$ is compact, we can choose a finite subcover $$ B(x_1, r_1), \dots, B(x_{\ell}, r_{\ell}). $$ Letting $$ N = \max \{N_{x_0}, \dots, N_{x_\ell}\} $$, we get $$ g_n(x) < \varepsilon $$ for all $$ x \in [a, b] $$ and $$ n \geq N $$. $$ \blacksquare $$
 
 **2018 F P2.** &nbsp; *Show that*
 
@@ -1553,8 +1553,44 @@ $$
 
 **2021 W P9.** &nbsp; *Suppose $$ F \colon \RR^3 \to \RR $$ is continuous, that for each $$ (x, y) \in \RR^2 $$ the function $$ z \to F(x, y, z) $$ is strictly increasing, and $$ F(x_0, y_0, z_0) $$. (a) Prove that there exists an open neighborhood $$ U $$ of $$ (x_0, y_0) $$ in $$ \RR^2 $$ such that there is a unique $$ g \colon U \to \RR $$ with $$ F(x, y, g(x, y)) = 0 $$ for $$ (x, y) \in U $$. (b) Show $$ g $$ is continuous in $$ U $$.*
 
-*Proof.
+*Proof.*
 
 **2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and $$ G(x, y, z) = \ln(1+x+2y+3z) + \sin(2x-y+z) $$. (a) Prove that in a neighborhood of $$ 0 $$ the intersection of $$ F = 0 $$ and $$ G = 0 $$ can be represented as a continuously differentiable curve parameterized by $$ x $$. (b) Find a tangent vector to this curve at $$ 0 $$.* 
 
-*Proof.
+*Proof.* Set $$ f \colon \RR^3 \to \RR^2 $$ by $$ f(x, y, z) = (F(x, y, z), G(x, y, z)) $$. Then $$ f(0, 0, 0) = (0, 0) $$ and 
+$$
+f'(0, 0, 0)
+=
+\begin{bmatrix}
+1 & 1 & -1 \\
+3 & 1 & 4 
+\end{bmatrix}
+$$
+
+so 
+
+$$ 
+\det A_x 
+= 
+\det 
+\begin{bmatrix}
+1 & -1 \\
+1 & 4
+\end{bmatrix}
+= 6.
+$$ 
+
+Thus, we can apply the Implicit Function theorem to get our curve $$ \phi(x) $$. 
+
+(b) We see 
+
+$$ 
+\phi'(0, 0, 0) 
+= -(A_x)^{-1} A_y 
+= \frac{-1}{5} \begin{bmatrix} 4 & 1 \\ -1 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+= \begin{bmatrix} -7/5 \\ -2/5 \end{bmatrix}.
+$$
+
+Thus, $$ (-7/5, -2/5) $$ is tangent to our curve at $$ 0 $$. $$ \blacksquare $$
+
+
