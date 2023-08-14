@@ -1142,8 +1142,7 @@ $$
 
 $$
 \begin{aligned}
-\int_{\RR^2} f(x) dx 
-& = \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} f(r \cos \theta, r \sin \theta} r dr d \theta \\
+\int_{\RR^2} f(x) dx & = \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} f(r \cos \theta, r \sin \theta} r dr d \theta \\
 & \leq \sum_{k=0}^{\infty} \int_0^{2 \pi} \int_{a_k}^{a_{k+1}} b_{k+1} r dr d \theta \\
 & \leq \sum_{k=0}^{\infty} \pi b_{k+1} [a_{k+1}^2 - a_k^2] \\
 & = \sum_{k=0}^{\infty} \pi b_{k+1} \frac{1}{k+1} \\
@@ -1163,8 +1162,23 @@ $$
 
 *converges.*
 
-*Proof.* 
+*Proof.* The following proof holds if $$ f $$ is $$ C^1 $$. Performing a polar substitution 
 
+$$
+g(r, \theta) = f(r \cos \theta, r \sin \theta)
+$$
+
+yields 
+
+$$
+\begin{aligned}
+I & = \int_0^{2 \pi} \int_0^1 \frac{f(r \cos \theta, r \sin \theta)}{r^{5/3}} dr d \theta \\
+& \int_0^{2 \pi} \int_0^1 \frac{g(r, \theta) - g(0, 0)}{r} \frac{1}{r^{2/3}} dr d \theta \\
+& \leq int_0^{2 \pi} \int_0^1 \frac{g(r, \theta) - g(0, 0)}{r} \frac{1}{r^{2/3}} dr d \theta 
+\end{aligned}
+$$
+
+By the Mean Value Theorem, 
 
 ## 9. Polynomials and Stone Weierstrass
 
