@@ -1344,7 +1344,23 @@ $$
 = \int_E F \cdot n dS + \int_D^2 F \cdot n dS,
 $$
 
-where $$ D^2 $$ denotes the unit disk on $$ z=0 $$.
+where $$ D^2 $$ denotes the unit disk on $$ z=0 $$. We see 
+
+$$
+\int_H \text{Div} F dV 
+= \int_H 1 dV
+= \frac{2}{3} \pi.
+$$
+
+Next our unit normal on $$ D^2 $$ is $$ (0, 0, -1) $$, so 
+
+$$
+\int_{D^2} F \cdot n dS
+= \int_{D^2} -y^2 dS
+= - \frac{\pi}{4}.
+$$
+
+Thus, $$ \int_E F \cdot n dS = \frac{2 \pi}{3} + \frac{\pi}{4} $$. $$ \blacksquare $$
 
 **2023 W P6.** &nbsp; *Let $$ C $$ be a simple closed curve that lies in the plane $$ x + y + z = 1 $$. Show*
 
