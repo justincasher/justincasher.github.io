@@ -667,7 +667,7 @@ $$
 $$
 \|a_i - b_i\|
 \leq \sum_{j=1}^{k} \frac{1}{2^{-n-j}} 
-\leq \sum_{j=1}^{\infty} \frac{1}{2^{-n-j}}  
+< \sum_{j=1}^{\infty} \frac{1}{2^{-n-j}}  
 = 2^{-n}.
 $$
 
@@ -679,7 +679,7 @@ $$
 = \varepsilon. 
 $$
 
-We conclude that $$ \{f_n\} $$ is Cauchy with respect to the uniform metric, and thus converge uniformly. $$ \blacksquare $$
+We conclude that $$ \{f_n\} $$ is Cauchy with respect to the uniform metric, and thus converges uniformly. $$ \blacksquare $$
 
 **2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
 
@@ -693,11 +693,44 @@ $$
 
 *converges uniformly and compute its derivative.*
 
-*Proof.* Since $$ \| \sin(x^n)/n! \| \leq 1/n! $$, we have $$ F(x) \leq e-1 $$, so $$ F $$ converges uniformly by the Weierstrass M-Test. 
+*Proof.* Since $$ \| \sin(x^n)/n! \| \leq 1/n! $$, we have $$ F(x) \leq e-1 $$, so $$ F $$ converges uniformly by the Weierstrass M-Test. Likewise 
+
+$$
+\| \frac{d}{dx} \frac{\sin(x^n)}{n!} \|
+= \| \frac{n x^{n-1} \cos(x^n)}{n!} \| 
+\leq \| \frac{x^n}{(n-1)!} \|.
+$$
+
+Hence, locally the sum 
+
+$$
+F'(x) 
+= \sum_{n=1}^{\infty} \frac{x^{n-1}}{(n-1)!} \cos(x^n)
+$$
+
+converges uniformly by the Weierstrass M-Test, and by Theorem 4.2 it is the derivative of $$ F $$. $$ \blacksquare $$
+
 
 **2018 F P7.** &nbsp; *Define $$ f_n \colon [0, 2\pi] \to \RR $$ by $$ f_n(x) = e^{\sin(nx)} $$ and $$ F_n(x) = \int_0^x f_n(y) dy $$. Show there exists a subsequence of $$ \{F_n\} $$ that converges uniformly to a continuous function.*
 
-*Proof.* 
+*Proof.* We see that 
+
+$$
+\|F_n(x)\| 
+\leq \int_0^{2\pi} \| f_n(y) \| dy
+\leq \int_0^{2 \pi} e dy 
+= 2 \pi e
+$$
+
+implies our sequence is uniformly bounded. Assuming $$ y \geq x $$, 
+
+$$
+\| F_n(y) - F_n(x) \|
+= \| \int_x^y f_n(y) dy \|
+\leq e (y-x)
+$$
+
+implies our sequence is uniformly equicontinuous since $$ x $$ is continuous. Thus, we can apply the Ascoli-Arzelà Theorem to a get a uniformly convergent subsequence, and the Uniform Limit Theorem to see that the limit of this subsequence is continuous. $$ \blacksquare $$
 
 **2017 W P7.** &nbsp; *Let $$ f_n \colon [0, 1] \to \RR $$ converge pointwise to $$ f $$. Assume $$ f_n $$ and $$ f $$ are continuous. (a) Does*
 
