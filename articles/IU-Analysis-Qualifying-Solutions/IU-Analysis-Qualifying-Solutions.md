@@ -765,7 +765,7 @@ f(x, y)
 = \frac{x^3}{x^2 + y^2}
 $$
 
-*for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show $$ f $$ is continuous at $$ (0, 0) $$. (b) Show $$ f $$ has every direcctional derivative at $$ (0, 0). (c) Decide if $$ f $$ is differentiable at $$ (0, 0) $$.*
+*for $$ (x, y) \neq 0 $$ and $$ f(0, 0) = 0 $$. (a) Show $$ f $$ is continuous at $$ (0, 0) $$. (b) Show $$ f $$ has every direcctional derivative at $$ (0, 0) $$. (c) Decide if $$ f $$ is differentiable at $$ (0, 0) $$.*
 
 *Proof.*
 
