@@ -1255,7 +1255,7 @@ $$
 Choosing $$ N $$ distinct reals $$ x_0, \dots, x_N \in \RR $$ allows us to solve for the $$ c_n $$ on this subset:
 
 $$
-c_n(y) = \sum_{n=0}^{N} a_{j, n} f_N(x_j, y}.
+c_n(y) = \sum_{n=0}^{N} a_{j, n} f_N(x_j, y).
 $$
 
 Using that $$ f_N $$ is polynomial for each fixed $$ x_j $$ we see that 
@@ -1340,8 +1340,11 @@ $$
 The Divergence Theorem tells us
 
 $$
-
+\int_H \text{Div} F dV
+= \int_E F \cdot n dS + \int_D^2 F \cdot n dS,
 $$
+
+where $$ D^2 $$ denotes the unit disk on $$ z=0 $$.
 
 **2023 W P6.** &nbsp; *Let $$ C $$ be a simple closed curve that lies in the plane $$ x + y + z = 1 $$. Show*
 
