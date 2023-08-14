@@ -662,22 +662,28 @@ $$
 
 *Show that $$ f_n $$ converges uniformly on $$ \RR $$.* $$ \blacksquare $$ 
 
-*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n+1} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. Expanding $$ f_n(x) $$, we have 
+*Proof.* Since $$ f $$ is periodic we can consider it as a bounded and uniformly continuous function on $$ [0, 1] $$. Let $$ \varepsilon > 0 $$, and choose an $$ n \gg 0 $$ such that $$ \| x-y \| < 2^{-n} $$ implies $$ \|f(x) - f(y)\| < \varepsilon $$. We observe that we can write $$ f_n(x) $$ as a sum of $$ 2^n $$ functions of the form $$ f(x+a_i) $$. In particular, we can write $$ f_{n+k}(x) $$ a a sum of $$ 2^{n+k} $$ functions of the form $$ f(x+b_i) $$, such that for each $$ a_i $$ the nearest $$ 2^k $$ of the $$ b_i $$ satisfy
 
 $$
-f_n(x) = \frac{1}{2^n} \sum_{a=-2^{n-1}-1}^{2^{n-1}+1} f\left( x+\frac{a}{2^{n}} \right)
+\|a_i - b_i\|
+\leq \sum_{j=1}^{k} \frac{1}{2^{-n-j}} 
+\leq \sum_{j=1}^{\infty} \frac{1}{2^{-n-j}}  
+= 2^{-n}.
 $$
 
-with the sum skipping $$ a = 0 $$. Hence, for each $$ k > 0 $$, we have 
+Consequently, 
 
 $$
-\| f_n(x) - f_{n+k}(x) \|
-& = \| \frac{1}{2^n} \sum_{a=-2^{n-1}-1}^{2^{n-1}+1} f\left( x+\frac{a}{2^{n}} \right) - \frac{1}{2^{n+k}} \sum_{a=-2^{n+k-1}-1}^{2^{n+k-1}+1} f\left( x+\frac{a}{2^{n+k}} \right)
+\|f_{n+k}(x) - f_n(x) \|
+<  \frac{1}{2^k} (2^k \varepsilon)
+= \varepsilon. 
 $$
+
+We conclude that $$ \{f_n\} $$ is Cauchy with respect to the uniform metric, and thus converge uniformly. $$ \blacksquare $$
 
 **2019 F P8.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
 
-*Proof.* We wil show $$ g_n = f-f_n $$ converges uniformly to $$ 0 $$. Fix $$ \varepsilon > 0 $$. For each $$ x \in [a, b] $$, chose an $$ N_x \gg 0 $$ such that $$ g_n(x) < \varepsilon for all $$ n > N_x $$. Since our $$ g_n $$ are continuous, for each $$ x $$ there exisrts an $$ r_x $$ such that $$ g_{N_x}(B(x, r_x)) \subseteq [0, \varepsilon) $$. Since $$ [a, b] $$ is compact, we can choose a finite subcover $$ B(x_1, r_1), \dots, B(x_{\ell}, r_{\ell}). $$ Letting $$ N = \max \{N_{x_0}, \dots, N_{x_\ell}\} $$, we get $$ g_n(x) < \varepsilon $$ for all $$ x \in [a, b] $$ and $$ n \geq N $$.
+*Proof.* We wil show $$ g_n = f-f_n $$ converges uniformly to $$ 0 $$. Fix $$ \varepsilon > 0 $$. For each $$ x \in [a, b] $$, chose an $$ N_x \gg 0 $$ such that $$ g_n(x) < \varepsilon R$$ for all $$ n > N_x $$. Since our $$ g_n $$ are continuous, for each $$ x $$ there exisrts an $$ r_x $$ such that $$ g_{N_x}(B(x, r_x)) \subseteq [0, \varepsilon) $$. Since $$ [a, b] $$ is compact, we can choose a finite subcover $$ B(x_1, r_1), \dots, B(x_{\ell}, r_{\ell}). $$ Letting $$ N = \max \{N_{x_0}, \dots, N_{x_\ell}\} $$, we get $$ g_n(x) < \varepsilon $$ for all $$ x \in [a, b] $$ and $$ n \geq N $$.
 
 **2018 F P2.** &nbsp; *Show that*
 
