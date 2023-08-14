@@ -1516,7 +1516,7 @@ Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 
 *Proof.*
 
-**2022 F P4.** &nbsp; *(a) Let $$ G \colon \RR^3 \to \RR^2 $$ G = (g_1, g_2) $$ and $$ G(x_0, y_0, z_0) = 0 $$. When does there exist continuously differentiable $$ \phi \colon I \to \RR $$ and $$ \psi \colon I \to \RR $$ defined on an open interval $$ x_0 \in I $$ such that* 
+**2022 F P4.** &nbsp; *(a) Let $$ G \colon \RR^3 \to \RR^2 $$ with $$ G = (g_1, g_2) $$ and $$ G(x_0, y_0, z_0) = 0 $$. When does there exist continuously differentiable $$ \phi \colon I \to \RR $$ and $$ \psi \colon I \to \RR $$ defined on an open interval $$ x_0 \in I $$ such that* 
 
 $$
 \{(x_1, x_2, x_3) \mid G(x_1, x_2, x_3) = 0 \}
