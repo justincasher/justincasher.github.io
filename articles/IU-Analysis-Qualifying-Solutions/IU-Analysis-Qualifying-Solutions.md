@@ -514,7 +514,7 @@ and $$ y_n = x_* $$ elsewise. Then $$ f_n(y_n) $$ is not a Cauchy sequence by as
 
 This if false if the domain is not compact: consider $$ f_n \colon \RR \to \RR $$ given by $$ f_n = x/n $$. $$ \blacksquare $$
 
-**2023 W P4.** &nbsp; *Does there exists a sequence of continuously differentiable functions that cnverge uniformly to a non-differentiable function?*
+**2023 W P4.** &nbsp; *Does there exists a sequence of continuously differentiable functions that converge uniformly to a non-differentiable function?*
 
 *Proof.* Yes, we see that $$ f_n = \sqrt{x^2+1/n} $$ is continuously differentiable, but $$ f_n $$ converge to $$ \|x\| $$ uniformly on $$ \RR $$. $$ \blacksquare $$
 
@@ -724,7 +724,7 @@ We conclude that $$ \{f_n\} $$ is Cauchy with respect to the uniform metric, and
 
 **2019 F P9.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be continuous with $$ f_n(x) \leq f_{n+1}(x) $$. Suppose $$ f_n $$ converge pointwise to a continuous $$ f $$. Show they converge uniformly to $$ f $$.*
 
-*Proof.* We wil show $$ g_n = f-f_n $$ converges uniformly to $$ 0 $$. Fix $$ \varepsilon > 0 $$. For each $$ x \in [a, b] $$, chose an $$ N_x \gg 0 $$ such that $$ g_n(x) < \varepsilon R$$ for all $$ n > N_x $$. Since our $$ g_n $$ are continuous, for each $$ x $$ there exisrts an $$ r_x $$ such that $$ g_{N_x}(B(x, r_x)) \subseteq [0, \varepsilon) $$. Since $$ [a, b] $$ is compact, we can choose a finite subcover $$ B(x_1, r_1), \dots, B(x_{\ell}, r_{\ell}). $$ Letting $$ N = \max \{N_{x_0}, \dots, N_{x_\ell}\} $$, we get $$ g_n(x) < \varepsilon $$ for all $$ x \in [a, b] $$ and $$ n \geq N $$. $$ \blacksquare $$
+*Proof.* We will show $$ g_n = f-f_n $$ converges uniformly to $$ 0 $$. Fix $$ \varepsilon > 0 $$. For each $$ x \in [a, b] $$, chose an $$ N_x \gg 0 $$ such that $$ g_n(x) < \varepsilon R$$ for all $$ n > N_x $$. Since our $$ g_n $$ are continuous, for each $$ x $$ there exisrts an $$ r_x $$ such that $$ g_{N_x}(B(x, r_x)) \subseteq [0, \varepsilon) $$. Since $$ [a, b] $$ is compact, we can choose a finite subcover $$ B(x_1, r_1), \dots, B(x_{\ell}, r_{\ell}). $$ Letting $$ N = \max \{N_{x_0}, \dots, N_{x_\ell}\} $$, we get $$ g_n(x) < \varepsilon $$ for all $$ x \in [a, b] $$ and $$ n \geq N $$. $$ \blacksquare $$
 
 **2018 F P2.** &nbsp; *Show that*
 
@@ -995,7 +995,7 @@ $$
 \end{aligned}
 $$
 
-Thus, $$ g $$ is continuus and so is $$ f' $$. $$ \blacksquare 
+Thus, $$ g $$ is continuus and so is $$ f' $$. $$ \blacksquare $$
 
 
 ## 6. Optimization
@@ -1023,7 +1023,7 @@ f(x, y)
 = \frac{2 + \sqrt{(1+x)^2 + y^2} - \sqrt{(1-x)^2 +y^2}}{\sqrt{y}}.
 $$ 
 
-*Show $$ f $$ achives its minimum at a unique point $$ (x_0, y_0) \in \Omega $$ and find $$ (x_0, y_0) $$.*
+*Show $$ f $$ achieves its minimum at a unique point $$ (x_0, y_0) \in \Omega $$ and find $$ (x_0, y_0) $$.*
 
 *Proof.* We proceed by minimizing in each variable independently. Fix $$ y = 1 $$. Then 
 
@@ -1300,7 +1300,7 @@ Thus, our integral converges. $$ \blacksquare $$
 
 ## 8. Polynomials and Stone Weierstrass
 
-**Stone-Weierstrass Theorem.**  &nbsp; *Let $$ f \colon [a, b] \to \RR $$ be cotninuous. Then there exists a sequence $$ p_n \in \RR[x] $$ that converges uniformly to $$ f $$.*
+**Stone-Weierstrass Theorem.**  &nbsp; *Let $$ f \colon [a, b] \to \RR $$ be continuous. Then there exists a sequence $$ p_n \in \RR[x] $$ that converges uniformly to $$ f $$.*
 
 #### Problems
 
