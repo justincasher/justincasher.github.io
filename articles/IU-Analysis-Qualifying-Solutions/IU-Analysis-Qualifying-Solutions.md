@@ -1537,9 +1537,34 @@ $$
 f(\psi(x_1), f(x_1, \phi(x_1))) = 1, \qquad f(f(x_1, \phi(x_2)), \phi(x_1)) = 1.
 $$
 
-*Proof.* (a) 
+*Proof.* (a) When the derivative $$ A_x $$ where $$ x = (x_2, x_3) $$ is invertible and $$ G $$ is continuously differentiable; i.e.  
 
-(b) 
+$$
+A_x = 
+\begin{bmatrix}
+\frac{\partial g_1}{\partial x_2} & \frac{\partial g_1}{\partial x_3} \\
+\frac{\partial g_2}{\partial x_2} & \frac{\partial g_2}{\partial x_3} \\
+\end{bmatrix}
+$$
+
+is invertible, which is equivalent to its derivative being nonzero.
+
+(b) Set 
+
+$$
+G(x, y, z) 
+= (f(z, f(x, y))-1, f(f(x, z), y)-1).
+$$
+
+Then 
+
+$$
+G' =
+\begin{bmatrix}
+\frac{\partial f}{\partial x_1} \frac{\partial f}{\partial x_2} & \left(\frac{\partial f}{\partial x_2} \right)^2 & \frac{\partial f}{\partial x_1} \\
+\left(\frac{\partial f}{\partial x_1} \right)^2 & \frac{\partial f}{\partial x_2} & frac{\partial f}{\partial x_1} \frac{\partial f}{\partial x_2}
+\end{bmatrix}
+$$
 
 **2022 W P4.** &nbsp; *Let $$ G \subseteq \RR^5 $$ be the set of vectors $$ A = (a_0, \dots, a_4) $$ such that*
 
