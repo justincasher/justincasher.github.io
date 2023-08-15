@@ -26,7 +26,7 @@ $$ \newcommand{\RR}{\mathbb{R}} $$
 $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 <br>
 
-**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I would like to thank Chia-Tz Liang for proof reading these. Please email me if you find any errors or have any solutions you would like to add.
+**Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I would like to thank Chia-Tz Liang for proof reading these. Please email me if you find any errors or have any solutions you would like to add. I also never added a section on integration.
 
 ## Table of Contents
 1. [Compact Spaces](#1-compact-spaces)
@@ -35,11 +35,10 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 4. [Uniform Convergence](#4-uniform-convergence)
 5. [Derivatives](#5-derivatives)
 6. [Optimization](#6-optimization)
-7. [Integration](#7-integration)
-8. [Convergence of Integrals](#8-convergence-of-integrals)
-9. [Polynomials and Stone-Weierstrass](#9-polynomials-and-stone-weierstrass)
-10. [Stoke's Theorem](#10-stokes-theorem)
-11. [Inverse and Implicit Function Theorems](#11-inverse-and-implicit-function-theorems)
+7. [Convergence of Integrals](#7-convergence-of-integrals)
+8. [Polynomials and Stone-Weierstrass](#8-polynomials-and-stone-weierstrass)
+9. [Stoke's Theorem](#9-stokes-theorem)
+10. [Inverse and Implicit Function Theorems](#10-inverse-and-implicit-function-theorems)
 
 ## 1. Compact Spaces 
 
@@ -1090,13 +1089,9 @@ $$
 $$
 
 implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we conclude that this is the minimum. $$ \blacksquare $$
- 
-
-## 7. Integration
 
 
-
-## 8. Convergence of Integrals
+## 7. Convergence of Integrals
 
 **Fubini-Tonelli Theorem.** &nbsp; *Let $$f \colon [a, b] \times [c, d] \to \RR $$ be continuous. Then*
 
@@ -1289,7 +1284,7 @@ $$
 Thus, our integral converges. $$ \blacksquare $$
 
 
-## 9. Polynomials and Stone Weierstrass
+## 8. Polynomials and Stone Weierstrass
 
 **Stone-Weierstrass Theorem.**  &nbsp; *Let $$ f \colon [a, b] \to \RR $$ be cotninuous. Then there exists a sequence $$ p_n \in \RR[x] $$ that converges uniformly to $$ f $$.*
 
@@ -1394,7 +1389,7 @@ $$
 implies $$ \| f(x) \| \geq 1 $$ and $$ \|g(x)\| \leq M $$. $$ \blacksquare $$
 
 
-## 10. Stoke's Theorem
+## 9. Stoke's Theorem
 
 **Stoke's Theorem.** &nbsp; *Let $$ S $$ be a smooth oriented surface in $$ \RR^3 $$ with boundary $$ \partial S $$. If $$ F \colon \RR^3 \to \RR^3 $$ is a vector field with continuous first order partials, then*
 
@@ -1597,7 +1592,7 @@ $$
 
 Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 
-## 11. Inverse and Implicit Function Theorems
+## 10. Inverse and Implicit Function Theorems
 
 **Inverse Function Theorem.** &nbsp; *Let $$ \RR^n \to \RR^n $$ be a continuously differentiable function. Then $$ \det f'(x) \neq 0 $$, i.e. $$ f'(x) $$ invertible as a linear transformation, if and only if $$ f $$ is invertible in a neighborhood of $$ x $$.*
 
