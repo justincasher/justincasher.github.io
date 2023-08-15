@@ -983,7 +983,7 @@ $$
 
 *for all $$ x \in \RR $$. Show that $$ f $$ is continuously differentiable.* 
 
-*Proof.* (a) Consider the function $$ f(x) x^2 \sin(\frac{1}{x}) $$ continuously extended by $$ f(0) = 0 $$. Then $$ f $$ is everywhere differentiable with $$ f'(0) = 0 $$ but $ $\displaystyle_{x \to 0} f(x) $$ does not exist. 
+*Proof.* (a) Consider the function $$ f(x) x^2 \sin(\frac{1}{x}) $$ continuously extended by $$ f(0) = 0 $$. Then $$ f $$ is everywhere differentiable with $$ f'(0) = 0 $$ but $$ \displaystyle_{x \to 0} f(x) $$ does not exist. 
 
 (b) By definition $$ f'(x) = g(x) $$. Let $$ \varepsilon > 0 $$ and choose $$ \delta > 0 $$ as stated in the problem. Then for any $$ x, y \in \RR $$ with $$ \| x-y \| < \delta/2 $$, we see $$ y = x+h $$ with $$ \| h \| < \delta/2 $$, and hence 
 
@@ -995,7 +995,7 @@ $$
 \end{aligned}
 $$
 
-Thus, $$ g $$ is continuus and so is $$ f' $$.
+Thus, $$ g $$ is continuus and so is $$ f' $$. $$ \blacksquare 
 
 
 ## 6. Optimization
@@ -1289,8 +1289,8 @@ where the derivative is taken in the first variable. Hence,
 
 $$
 \begin{aligned}
-I & \leq int_0^{2 \pi} \int_0^1 \left\| \frac{g(r, \theta) - g(0, 0)}{r} \right\| \frac{1}{r^{2/3}} dr d \theta \\
-& \leq N \leq int_0^{2 \pi} \int_0^1 \frac{1}{r^{2/3}} dr d \theta \\
+I & \leq \int_0^{2 \pi} \int_0^1 \left\| \frac{g(r, \theta) - g(0, 0)}{r} \right\| \frac{1}{r^{2/3}} dr d \theta \\
+& \leq N \leq \int_0^{2 \pi} \int_0^1 \frac{1}{r^{2/3}} dr d \theta \\
 & 6 \pi N.
 \end{aligned}
 $$
@@ -1424,6 +1424,8 @@ $$
 $$
 
 *where $$ n $$ is the unit normal.*
+
+#### Stoke's Theorem
 
 **2022 F P3.** &nbsp; *Find the value of $$ \int \int_E F \cdot n dS $$ where $$ F(x, y, z) = (x, ze^x, y^z) $$,* 
 
