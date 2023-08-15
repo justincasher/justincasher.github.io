@@ -42,8 +42,6 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 
 ## 1. Compact Spaces 
 
-#### Theory
-
 Fix a topological space $$ X $$. We say $$ X $$ is *compact* if every open cover $$ \{U_{\alpha}\} $$ of $$ X $$ admits a finite subcover $$ U_1, \dots, U_n $$. 
 
 **Heine-Borel Theorem.** &nbsp; *Let $$ X $$ be a subset of $$ \RR^n $$. Then $$ X $$ is compact with respect to the Euclidean metric if and only if $$ X $$ is closed and bounded.*
@@ -131,6 +129,8 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 **Theorem 2.2.** &nbsp; *Let $$ \{a_n\} $$ be a sequence in $$ \RR^+ $$. Then $$ \prod_n (1+a_n) $$ converges if and only if $$ \sum_n a_n $$ converges. If $$ 0 < a_n < 1 $$, then $$ \prod_n (1-a_n) \neq 0 $$ if and only if $$ \sum_n a_n $$ converges.*
 
 **Banach Fixed Point Theorem.** &nbsp; *Let $$ (X, d) $$ be a complete metric space, and let $$ f \colon X \to X $$ be contractive. Then $$ X $$ has a unique fixed point $$ f(x_*) = x_* $$, which is given by taking n arbitrary $$ x_0 \in X $$, setting $$ x_{n+1} = f(x_n) $$, and evaluating $$ \lim_n f(x_n) = x_* $$.*
+
+#### Problems
 
 **2023 W P2.** &nbsp; *Consider the series $$ \sum_{a, b \geq 0} p^{-a} p^{-b} $$ for fixed $$ p, q $$ prime. Prove it converges and find its sum.*
 
@@ -395,6 +395,8 @@ Let $$ f, g \colon X \to Y $$ be maps between metric spaces. We say $$ f $$ is *
 
 **Heine-Cantor Theorem.** &nbsp; *Let $$ f \colon  \to Y $$ be continuous. If $$ X $$ is compact, then $$ f $$ is uniformly continuous.*
 
+#### Problems
+
 **2020 W P3.** &nbsp; *Let $$ X $$ be the space of sequences $$ x = \{x_n\} $$ with $$ x_n \in [0, 1] $$. Set $$ d(x, y) = \sup_n \| x_n - y_n \| $$. Suppose $$ f \colon X \to \RR $$ is uniformly continuous. Prove that $$ f $$ is bounded.*
 
 *Proof.* Choose a $$ \delta > 0 $$ such that $$ d(x, y) \leq \delta $$ implies $$ \| f(x)-f(y) \| < 1 $$. Set $$ M = \lceil 1 / \delta \rceil $$. Now fix $$ x \in X $$, and define $$ x_n = \frac{n}{M} x $$ for $$ 0 \leq n \leq M $$. Then, using that $$ d(x_{n+1}, x_n) < \delta $$, we have
@@ -469,6 +471,8 @@ $$
 **Theorem 4.1.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be integrable with uniform limit $$ f $$. Then $$ \int_a^b f dx = \lim_n \int_a^b f_n dx $$.*
 
 **Theorem 4.2.** &nbsp; *Suppose $$ f_n \colon [a, b] \to \RR $$ are differentiable such that their derivatives $$ f_n' $$ converge uniformly on $$ [a, b] $$. If $$ f_n(x_0) $$ converges for some point $$ x_0 \in [a, b] $$, then $$ f_n $$ converge uniformly to some $$ f $$, and $$ f'(x) = \lim_n f_n'(x) $$.*
+
+#### Problems
 
 **2023 W P1.** &nbsp; *Let $$ f_n \colon [0, 1] \to \RR^+ $$ be monotonically increasing with uniform limit $$ f $$. Prove that*
 
@@ -1006,6 +1010,8 @@ $$
 f(\left( \frac{\sum a_i x_i}{\sum a_i} \right) \leq \sum a_i \frac{f(x_i)}{\sum a_i}.
 $$
 
+#### Problems
+
 **2016 F P7.** Let $$ \Omega = \{(x, y) \in \RR \mid y > 0 \} $$, and define $$ f \colon \Omega \to \RR $$ by
 
 $$
@@ -1291,6 +1297,8 @@ Thus, our integral converges. $$ \blacksquare $$
 ## 8. Polynomials and Stone Weierstrass
 
 **Stone-Weierstrass Theorem.**  &nbsp; *Let $$ f \colon [a, b] \to \RR $$ be cotninuous. Then there exists a sequence $$ p_n \in \RR[x] $$ that converges uniformly to $$ f $$.*
+
+#### Problems
 
 **2023 W P9.** &nbsp; *For $$ n \geq 2 $$ let $$ p \colon \RR^n \to \RR $$ be*
 
@@ -1601,6 +1609,8 @@ Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 **Inverse Function Theorem.** &nbsp; *Let $$ \RR^n \to \RR^n $$ be a continuously differentiable function. Then $$ \det f'(x) \neq 0 $$, i.e. $$ f'(x) $$ invertible as a linear transformation, if and only if $$ f $$ is invertible in a neighborhood of $$ x $$.*
 
 **Implicit Function Theorem.** &nbsp; *Let $$ f \colon D \subseteq \RR^{n+m} \to \RR^n $$ be continuously differentiable with $$ f(a, b) = 0 $$ for some $$ (a, b) \in D $$. Put $$ A = f'(a, b) $$ and assume $$ A_x $$ is invertible. Then there exists open subsets $$ U \subseteq D $$ and $$ W \subseteq \RR^m $$ with $$ (a, b) \in U $$ and $$ b \in W $$, such that there is a unique continuously differentiable $$ g \colon W \to \RR^n $$ with $$ g(b) = a $$, $$ f(g(y), y) = 0 $$, and $$ g'(b) = -(A_x)^{-1} A_y $$.*
+
+#### Problems
 
 **2023 W P8.** &nbsp; *Define $$ f^3 \colon \RR^3 \to \RR $$ by $$ f(x, y, z) = x^2y + e^x + z $$. (a) Show there exists a continuously differentiable $$ \phi $$ defined in a neighborhood of $$ (1, -1) $$ such that $$ \phi(1, -1) = 0 $$ and $$ f(\phi(y, z), y, z) = 0 $$ for all $$ (y, z) \in U $$. (b) Find $$ \nabla \phi(-1, 1) $$.*
 
