@@ -421,7 +421,7 @@ $$
 
 which implies $$ f(x_n + \delta) \geq f(x_n - \delta) + \delta C $$. This contradicts $$ f $$ having limit $$ 0 $$. $$ \blacksquare $$
 
-**2019 W P5.** &nbsp; *Give an exxample of a continuous function $$ f \colon (0, 1] \to \RR $$ that attains neither a maximum nor a minimum. (b) Show that if $$ f $$ is uniformly continuous, then it must attain a maximum or a minimum.*
+**2019 W P5.** &nbsp; *Give an example of a continuous function $$ f \colon (0, 1] \to \RR $$ that attains neither a maximum nor a minimum. (b) Show that if $$ f $$ is uniformly continuous, then it must attain a maximum or a minimum.*
 
 *Proof.* (a) Consider $$ f(x) = (1-x) \sin(\frac{1}{x}) $$. This is a continuous function which obtains no maximum or minimum, because $$ \sin(\frac{1}{x}) $$ is oscillating, and $$ (1-x) $$ causes $$ f $$ to decrease in absolute value away from $$ 0 $$.
 
