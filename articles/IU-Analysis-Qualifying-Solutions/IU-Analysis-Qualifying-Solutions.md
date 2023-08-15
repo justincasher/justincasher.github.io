@@ -864,11 +864,65 @@ $$
 
 so $$ f $$ is differentiable $$ (0, 0) $$. $$ \blacksquare $$
 
-
-
 **2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
 
 *Proof.* We see $$ f'(x) > f(x) $$ implies $$ \frac{d}{dx} f(x) > 1 $$, and hence $$ \ln f(x) > x $$ for $$ x \gg 0 $$. Consequently, $$ f(x) > e^x $$ for $$ x \gg 0 $$, yielding $$ \displaystyle \lim_{x \to \infty} f(x) e^{-k} = \infty $$ for $$ 0 < k < 1 $$. We see our least upper bound on such $$ k $$ is $$ 1 $$. $$ \blacksquare $$
+
+**2020 F P7.** &nbsp; *Let $$ f \colon \RR^2 \to \RR^2 $$ be a differentiable map with $$ f = f(f_1, f_2) $$. Suppose that for all $$ (x_1, x_2) \in \RR^2 $$*
+
+$$
+\left| \frac{\partial f_1}{\partial x_1}(x_1, x_2) - 2 \right|
++ \left| \frac{\partial f_1}{\partial x_2}(x_1, x_2) \right|
++ \left| \frac{\partial f_2}{\partial x_1}(x_1, x_2) \right|
++ \left| \frac{\partial f_2}{\partial x_2}(x_1, x_2) - 2 \right|.
+$$
+
+*Prove $$ f $$ is globally injective.*
+
+*Proof.* We start by showing $$ Df $$ is positive definite at every point. Indeed, 
+
+$$
+Q(a, b)
+= 
+\begin{bmatrix} a & b \end{bmatrix} 
+\begin{bmatrix} \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} \\ \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2}
+= a^2 \frac{\partial f_1}{\partial x_1} + b^2 \frac{\partial f_2}{\partial x_2} + ab \left( \frac{\partial f_1}{\partial x_2} + \frac{\partial f_2}{\partial x_1} \right).
+$$
+
+The inequality implies $$ \frac{\partial f_1}{\partial x_1}, \frac{\partial f_2}{\partial x_2} \geq 1.5 $$, so 
+
+$$
+Q(a,b) \geq 1.5(a^2 + b^2) + \left( \frac{\partial f_1}{\partial x_2} + \frac{\partial f_2}{\partial x_1} \right).
+$$
+
+In order to minimize the $$ ab $$ term we assume $$ ab \geq 0 $$ and set $$ \frac{\partial f_1}{\partial x_2} + \frac{\partial f_2}{\partial x_1} = -1 $$. Thus, 
+
+$$
+Q(a, b) \geq 1.5(a^2 + b^2) - ab.
+$$
+
+If $$ a^2 \geq b^2 $$, 
+
+$$
+Q(a, b) \geq 1.5(a^2 + b^2) - a^2
+= 0.5 a^2 + 1.5 b^2.
+$$
+
+Thus, $$ Df $$ is positive definite. 
+
+Now assume $$ f(a) = f(b) $$ for $$ a \neq b $$. We set $$ \gamma(t) = a + t(b-a) $$ and $$ t \in [0, 1] $$ and 
+
+$$
+F(t) = \left< f(\gamma(t)) - f(a), b-a \right>.
+$$
+
+Then $$ F(0) = F(1) = 0 $$, so the Mean Value Theorem tells us $$ F'(t) = 0 $$ for some $$ t \in (0, 1) $$. Hence, by the chain rule,
+
+$$
+F'(t) = (b-a)^T Df(\gamma(t)) (b-a) = 0 
+$$
+
+contradicts $$ Df $$ being positive definite. $$ \blacksquare $$
 
 **2019 F P1.** &nbsp; *Define $$ f \colon \RR^2 \to \RR $$ by*
 
