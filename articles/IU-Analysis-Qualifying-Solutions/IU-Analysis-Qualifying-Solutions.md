@@ -1563,8 +1563,25 @@ G' =
 \begin{bmatrix}
 \frac{\partial f}{\partial x_1} \frac{\partial f}{\partial x_2} & \left(\frac{\partial f}{\partial x_2} \right)^2 & \frac{\partial f}{\partial x_1} \\
 \left(\frac{\partial f}{\partial x_1} \right)^2 & \frac{\partial f}{\partial x_2} & frac{\partial f}{\partial x_1} \frac{\partial f}{\partial x_2}
-\end{bmatrix}
+\end{bmatrix}.
 $$
+
+Hence,
+
+$$
+\begin{aligned}
+\det A_x(1, 1)
+& = \det 
+\begin{bmatrix}
+\left(\frac{\partial f}{\partial x_2}(1, 1) \right)^2 & \frac{\partial f}{\partial x_1}(1, 1) \\
+frac{\partial f}{\partial x_2}(1, 1) & frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1)
+\end{bmatrix} \\
+& = \frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1) \left [ \left( \frac{\partial f}{\partial x_2}(1, 1) - 1 \right)^2 \right] \\
+& \neq 0.
+\end{aligned}
+$$
+
+Thus, $$ \phi, \psi $$ exists by (a). $$ \blacksquare $$
 
 **2022 W P4.** &nbsp; *Let $$ G \subseteq \RR^5 $$ be the set of vectors $$ A = (a_0, \dots, a_4) $$ such that*
 
