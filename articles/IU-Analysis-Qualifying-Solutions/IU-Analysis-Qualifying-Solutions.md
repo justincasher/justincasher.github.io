@@ -1555,15 +1555,22 @@ $$
 
 *Proof.*
 
-**2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and 
+**2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and *
 
 $$ 
 G(x, y, z) = \ln(1+x+2y+3z) + \sin(2x-y+z).
 $$
 
-(a) Prove that in a neighborhood of $$ 0 $$ the intersection of $$ F = 0 $$ and $$ G = 0 $$ can be represented as a continuously differentiable curve parameterized by $$ x $$. (b) Find a tangent vector to this curve at $$ 0 $$.* 
+*(a) Prove that in a neighborhood of $$ 0 $$ the intersection of $$ F = 0 $$ and $$ G = 0 $$ can be represented as a continuously differentiable curve parameterized by $$ x $$. (b) Find a tangent vector to this curve at $$ 0 $$.* 
 
-*Proof.* Set $$ f \colon \RR^3 \to \RR^2 $$ by $$ f(x, y, z) = (F(x, y, z), G(x, y, z)) $$. Then $$ f(0, 0, 0) = (0, 0) $$ and 
+*Proof.* Define $$ f \colon \RR^3 \to \RR^2 $$ by 
+
+$$ 
+f(x, y, z) = (F(x, y, z), G(x, y, z)).
+$$ 
+
+Then $$ f(0, 0, 0) = (0, 0) $$ and 
+
 $$
 f'(0, 0, 0)
 =
