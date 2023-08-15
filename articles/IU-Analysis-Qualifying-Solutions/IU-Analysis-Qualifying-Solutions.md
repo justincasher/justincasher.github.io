@@ -837,13 +837,13 @@ $$
 f(x,y) - f(0, 0) = f(x, y) - f(x, 0) + f(x, 0) - f(0, 0)
 $$
 
-Then, by the MVT, there exists a function $$ a(x, y) \colon \RR^2 \to \RR $$ such that 
+Denote our partials $$ f_x $$ and $$ f_y $$. Then, by the MVT, there exists a function $$ a(x, y) \colon \RR^2 \to \RR $$ such that 
 
 $$
 \begin{aligned}
-f(x, y) - f(x, 0) & = \frac{\partial}{\partial y} f(x, a(x, y)) y \\
-& = \frac{\partial}{\partial y} f(0, 0) y + \left[\frac{\partial}{\partial y} f(x, a(x, y)) - \frac{\partial}{\partial y} f(0,0) \right] y \\
-& = \frac{\partial}{\partial y} f(0, 0) y + O(y).
+f(x, y) - f(x, 0) & = f_y(x, a(x, y)) y \\
+& = f_y(0, 0) y + \left[ f_y(x, a(x, y)) - f_y(0,0) \right] y \\
+& = f_y(0, 0) y + O(y).
 \end{aligned}
 $$
 
@@ -851,18 +851,18 @@ Likewise
 
 $$
 \begin{aligned}
-f(x, 0) - f(0, 0) &= \frac{\partial}{\partial x} f(0, 0) x + \left[ \frac{f(x, 0) - f(0, 0)}{x} - \frac{\partial}{\partial x} f(0, 0) \right] x \\
-& = \frac{\partial}{\partial x_1} f(0, 0) x + O(x).
+f(x, 0) - f(0, 0) &= f_x(0, 0) x + \left[ \frac{f(x, 0) - f(0, 0)}{x} - f_x(0, 0) \right] x \\
+& = f_x(0, 0) x + O(x).
 \end{aligned}
 $$
 
 Thus,
 
 $$
-f(x, y) - f(0, 0) = \frac{\partial}{\partial x} f(0, 0) x + \frac{\partial}{\partial y} f(0, 0) y + O(x) + O(y).
+f(x, y) - f(0, 0) = f_x(0, 0) x + f_y(0, 0) y + O(x) + O(y).
 $$
 
-so $$ f $$ is differentiable $$ (0, 0) $$.
+so $$ f $$ is differentiable $$ (0, 0) $$. $$ \blacksquare $$
 
 
 
