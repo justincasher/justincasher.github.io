@@ -886,14 +886,18 @@ $$
 
 *Prove $$ f $$ is globally injective.*
 
-*Proof.* We start by showing $$ Df $$ is positive definite at every point. Indeed, 
+*Proof.* We start by showing $$ Df $$ is positive definite at every point. Indeed, set 
 
 $$
-Q(a, b)
-= 
-\begin{bmatrix} a & b \end{bmatrix} 
-\begin{bmatrix} \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} \\ \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2}
-= a^2 \frac{\partial f_1}{\partial x_1} + b^2 \frac{\partial f_2}{\partial x_2} + ab \left( \frac{\partial f_1}{\partial x_2} + \frac{\partial f_2}{\partial x_1} \right).
+Q(a, b) = \begin{bmatrix} a & b \end{bmatrix} 
+\begin{bmatrix} \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} \\ \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} \end{bmatrix} 
+\begin{bmatrix} a \\ b \end{bmatrix}.
+$$
+
+Then 
+
+$$
+Q(a, b) = a^2 \frac{\partial f_1}{\partial x_1} + b^2 \frac{\partial f_2}{\partial x_2} + ab \left( \frac{\partial f_1}{\partial x_2} + \frac{\partial f_2}{\partial x_1} \right).
 $$
 
 The inequality implies $$ \frac{\partial f_1}{\partial x_1}, \frac{\partial f_2}{\partial x_2} \geq 1.5 $$, so 
