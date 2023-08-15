@@ -42,6 +42,8 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 
 ## 1. Compact Spaces 
 
+#### Theory
+
 Fix a topological space $$ X $$. We say $$ X $$ is *compact* if every open cover $$ \{U_{\alpha}\} $$ of $$ X $$ admits a finite subcover $$ U_1, \dots, U_n $$. 
 
 **Heine-Borel Theorem.** &nbsp; *Let $$ X $$ be a subset of $$ \RR^n $$. Then $$ X $$ is compact with respect to the Euclidean metric if and only if $$ X $$ is closed and bounded.*
@@ -49,6 +51,8 @@ Fix a topological space $$ X $$. We say $$ X $$ is *compact* if every open cover
 **Proposition 1.1.** &nbsp; *Let $$ X $$ be a topological space. Then $$ X $$ is compact if and only if there exists a subbase $$ \CB $$ of $$ X $$ such that every open cover by elements of $$ \CB $$ admits a finite subcover.*
 
 **Theorem 1.2.** &nbsp; *Let $$ X $$ be a metric space. Then $$ X $$ is compact if and only if every sequence in $$ X $$ has a convergent subsequence.*
+
+#### Problems
 
 **2019 F P5.** &nbsp; *Let $$ f \colon \RR^n \to \RR^m $$ be continuous ($$ n, m < \infty $$), and let $$ K \subseteq \RR^n $$ be compact. Show $$ f(K) $$ is compact.*
 
