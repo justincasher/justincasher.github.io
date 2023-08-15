@@ -1562,7 +1562,7 @@ $$
 G' =
 \begin{bmatrix}
 \frac{\partial f}{\partial x_1} \frac{\partial f}{\partial x_2} & \left(\frac{\partial f}{\partial x_2} \right)^2 & \frac{\partial f}{\partial x_1} \\
-\left(\frac{\partial f}{\partial x_1} \right)^2 & \frac{\partial f}{\partial x_2} & frac{\partial f}{\partial x_1} \frac{\partial f}{\partial x_2}
+\left(\frac{\partial f}{\partial x_1} \right)^2 & \frac{\partial f}{\partial x_2} & \frac{\partial f}{\partial x_1} \frac{\partial f}{\partial x_2}
 \end{bmatrix}.
 $$
 
