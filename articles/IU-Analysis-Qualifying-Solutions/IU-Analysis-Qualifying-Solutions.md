@@ -829,9 +829,42 @@ $$
 
 implies $$ 1/2 = 1 $$, a contradiction. Thus, the derivative does not exist. $$ \blacksquare $$
 
-**2021 F P5.** &nbsp; *Let $$ f^2 \colon \RR^2 \to \RR $$. Suppose $$ \frac{\partial f}{\partial x_1} $$ exists at $$ (0, 0) $$, and that $$ \frac{\partial f}{\partial x_2} $$ exists in a neighborhood of $$ 0 $$ and is continuous at $$ 0 $$. Show $$ f $$ is differentiable at $$ 0 $$.
+**2021 F P5.** &nbsp; *Let $$ f^2 \colon \RR^2 \to \RR $$. Suppose $$ \frac{\partial f}{\partial x_1} $$ exists at $$ (0, 0) $$, and that $$ \frac{\partial f}{\partial x_2} $$ exists in a neighborhood of $$ 0 $$ and is continuous at $$ 0 $$. Show $$ f $$ is differentiable at $$ 0 $$.*
 
-*Proof.*
+*Proof.* Write
+
+$$
+f(x,y) - f(0, 0) = f(x, y) - f(x, 0) + f(x, 0) - f(0, 0)
+$$
+
+Then, by the MVT, there exists a function $$ a(x, y) \colon \RR^2 \to \RR $$ such that 
+
+$$
+\begin{aligned}
+f(x, y) - f(x, 0) & = \frac{\partial}{\partial y} f(x, a(x, y)) y \\
+& = \frac{\partial}{\partial y} f(0, 0) y + \left\[\frac{\partial}{\partial y} f(x, a(x, y)) - \frac{\partial}{\partial y} f(0,0) \right\] y \\
+& = \frac{\partial}{\partial y} f(0, 0) y + O(y).
+\end{aligned}
+$$
+
+Likewise
+
+$$
+\begin{aligned}
+f(x, 0) - f(0, 0) &= \frac{\partial}{\partial x} f(0, 0) x + \left[ \frac{f(x, 0) - f(0, 0)}{x} - \frac{\partial}{\partial x} f(0, 0) \right] x \\
+& = \frac{\partial}{\partial x_1} f(0, 0) x + O(x).
+\end{aligned}
+$$
+
+Thus,
+
+$$
+f(x, y) - f(0, 0) = \frac{\partial}{\partial x} f(0, 0) x + \frac{\partial}{\partial y} f(0, 0) y + O(x) + O(y).
+$$
+
+so $$ f $$ is differentiable $$ (0, 0) $$.
+
+
 
 **2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
 
