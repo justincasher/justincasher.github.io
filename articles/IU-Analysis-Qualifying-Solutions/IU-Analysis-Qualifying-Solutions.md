@@ -842,7 +842,7 @@ Then, by the MVT, there exists a function $$ a(x, y) \colon \RR^2 \to \RR $$ suc
 $$
 \begin{aligned}
 f(x, y) - f(x, 0) & = \frac{\partial}{\partial y} f(x, a(x, y)) y \\
-& = \frac{\partial}{\partial y} f(0, 0) y + \left\[\frac{\partial}{\partial y} f(x, a(x, y)) - \frac{\partial}{\partial y} f(0,0) \right\] y \\
+& = \frac{\partial}{\partial y} f(0, 0) y + \left[\frac{\partial}{\partial y} f(x, a(x, y)) - \frac{\partial}{\partial y} f(0,0) \right] y \\
 & = \frac{\partial}{\partial y} f(0, 0) y + O(y).
 \end{aligned}
 $$
