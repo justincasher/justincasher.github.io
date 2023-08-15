@@ -1606,11 +1606,11 @@ $$
 
 **2021 W P9.** &nbsp; *Suppose $$ F \colon \RR^3 \to \RR $$ is continuous, that for each $$ (x, y) \in \RR^2 $$ the function $$ z \to F(x, y, z) $$ is strictly increasing, and $$ F(x_0, y_0, z_0) $$. (a) Prove that there exists an open neighborhood $$ U $$ of $$ (x_0, y_0) $$ in $$ \RR^2 $$ such that there is a unique $$ g \colon U \to \RR $$ with $$ F(x, y, g(x, y)) = 0 $$ for $$ (x, y) \in U $$. (b) Show $$ g $$ is continuous in $$ U $$.*
 
-*Proof.* (a) Since $$ f $$ is strictly increasing in $$ z $$ it has nonzero, and thus invertible, derivative in $$ z $4. Therefore we can apply the Implicit Function Theorem to get $$ g $$. 
+*Proof.* (a) Since $$ f $$ is strictly increasing in $$ z $$ it has nonzero, and thus invertible, derivative in $$ z $$. Therefore we can apply the Implicit Function Theorem to get $$ g $$. 
 
 (b) The Implicit Function Theorem tells us $$ g $$ is continuously differentiable and hence continuous. $$ \blacksquare $$
 
-**2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and *
+**2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and*
 
 $$ 
 G(x, y, z) = \ln(1+x+2y+3z) + \sin(2x-y+z).
