@@ -1574,7 +1574,7 @@ $$
 & = \det 
 \begin{bmatrix}
 \left(\frac{\partial f}{\partial x_2}(1, 1) \right)^2 & \frac{\partial f}{\partial x_1}(1, 1) \\
-frac{\partial f}{\partial x_2}(1, 1) & frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1)
+\frac{\partial f}{\partial x_2}(1, 1) & \frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1)
 \end{bmatrix} \\
 & = \frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1) \left [ \left( \frac{\partial f}{\partial x_2}(1, 1) - 1 \right)^2 \right] \\
 & \neq 0.
