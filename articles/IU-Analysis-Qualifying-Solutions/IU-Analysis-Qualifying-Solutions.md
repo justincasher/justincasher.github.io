@@ -829,6 +829,10 @@ $$
 
 implies $$ 1/2 = 1 $$, a contradiction. Thus, the derivative does not exist. $$ \blacksquare $$
 
+**2021 F P5.** &nbsp; *Let $$ f^2 \colon \RR^2 \to \RR $$. Suppose $$ \frac{\partial f}{\partial x_1} $$ exists at $$ (0, 0) $$, and that $$ \frac{\partial f}{\partial x_2} $$ exists in a neighborhood of $$ 0 $$ and is continuous at $$ 0 $$. Show $$ f $$ is differentiable at $$ 0 $$.
+
+*Proof.*
+
 **2020 W P6.** &nbsp; *Let $$ f \colon \RR \to (0, \infty) $$ be a differentiable function such that $$ f'(x) > f(x) $$ for every $$ x\in \RR $$. Show there exists a $$ k > 0 $$ such that $$ \displaystyle \lim_{x \to \infty} f(x) e^{-kx} = \infty $$, and find the least upper bound on such $$ k $$.*
 
 *Proof.* We see $$ f'(x) > f(x) $$ implies $$ \frac{d}{dx} f(x) > 1 $$, and hence $$ \ln f(x) > x $$ for $$ x \gg 0 $$. Consequently, $$ f(x) > e^x $$ for $$ x \gg 0 $$, yielding $$ \displaystyle \lim_{x \to \infty} f(x) e^{-k} = \infty $$ for $$ 0 < k < 1 $$. We see our least upper bound on such $$ k $$ is $$ 1 $$. $$ \blacksquare $$

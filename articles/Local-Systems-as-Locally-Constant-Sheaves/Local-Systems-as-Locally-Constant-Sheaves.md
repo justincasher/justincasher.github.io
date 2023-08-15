@@ -22,7 +22,7 @@ $$ \DeclareMathOperator{\LC}{LC} \DeclareMathOperator{\LS}{LS} \newcommand{\CA}{
 &emsp; Now let $$ \Pi(X) $$ be the fundamental groupoid of $$ X $$ with the operator $$ \star $$ of path composition. We call a functor $$ L \colon \Pi(X) \to R\text{-Mod} $$ an *$$ R $$-local system on $$ X $$*. Morphisms between local systems are given by natural transformations of functors. Write $$ \LS(X, R) $$ for the category of $$ R $$-local systems on $$ X $$; it is again an abelian category. The purpose of this note is to provide a proof of the following theorem.
 
 
-**Theorem.** &nbsp; Let $$ X $$ be a locally simply-connected space. Then the categories $$ \LC(X, R) $$ and $$ \LS(X, R) $$ are equivalent.
+**Theorem.** &nbsp; *Let $$ X $$ be a locally simply-connected space. Then the categories $$ \LC(X, R) $$ and $$ \LS(X, R) $$ are equivalent.*
     
     
 ## 2. Proof
