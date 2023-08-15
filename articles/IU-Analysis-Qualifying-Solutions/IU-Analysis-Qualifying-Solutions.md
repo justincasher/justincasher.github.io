@@ -1514,7 +1514,18 @@ Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 
 **2023 W P8.** &nbsp; *Define $$ f^3 \colon \RR^3 \to \RR $$ by $$ f(x, y, z) = x^2y + e^x + z $$. (a) Show there exists a continuously differentiable $$ \phi $$ defined in a neighborhood of $$ (1, -1) $$ such that $$ \phi(1, -1) = 0 $$ and $$ f(\phi(y, z), y, z) = 0 $$ for all $$ (y, z) \in U $$. (b) Find $$ \nabla \phi(-1, 1) $$.*
 
-*Proof.*
+*Proof.* (a) Observe $$ f(0, -1, 1) = 0 $$ and $$ \frac{\partial f}{\partial x}(0, -1, 1) = 1 $$. Hence, we can apply the Implicit Function Theorem to our $$ U $$ and $$ \phi $$.
+
+(b) The Implicit Function Theorem tells us 
+
+$$
+\nabla \phi(-1, 1)
+= \phi'(-1, 1)^T
+= - 1 \cdot \begin{bmatrix} 0 \\ 1 \end{bmatrix},
+$$
+
+so $$ \nabla \phi(-1, 1) = (0, -1)^T $$. $$ \blacksquare $$
+
 
 **2022 F P4.** &nbsp; *(a) Let $$ G \colon \RR^3 \to \RR^2 $$ with $$ G = (g_1, g_2) $$ and $$ G(x_0, y_0, z_0) = 0 $$. When does there exist continuously differentiable $$ \phi \colon I \to \RR $$ and $$ \psi \colon I \to \RR $$ defined on an open interval $$ x_0 \in I $$ such that* 
 
