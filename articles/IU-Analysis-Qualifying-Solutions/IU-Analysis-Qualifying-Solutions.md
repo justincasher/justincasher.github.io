@@ -1,7 +1,7 @@
 ---
 layout: Writing
 indent: true
-permalink: /IU-Analysis-Qualifying-Solutions
+permalink: /67439
 feedformat: card
 title: IU Analysis Qualifying Solutions
 ---
