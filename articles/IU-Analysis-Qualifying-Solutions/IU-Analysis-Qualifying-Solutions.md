@@ -56,7 +56,7 @@ Fix a topological space $$ X $$. We say $$ X $$ is *compact* if every open cover
 
 *Proof.* We show this holds for any $$ f \colon X \to Y $$ continuous. Let $$ \{U_{\alpha}\} $$ cover $$ f(K) $$. Then $$ \{f^{-1}(U_{\alpha})\} $$ forms an open cover of $$ K $$ by (the topological definition of) continuity, and hence admits a finite subcover $$ f^{-1}(U_1), \dots, f^{-1}(U_n) $$. We conclude that $$ U_1, \dots, U_n $$ cover $$ f(K) $$. $$ \blacksquare $$ 
 
-*Alternative proof.* Let $$ \{ y_n \} $$ be a sequence in $$ f(K) $$. Then it lifts to a (not necessarily unique) sequence $$ \{x_n\} $$ in $$ K $$, i.e. $$ f(x_n) = y_n $$. By Theorem 1.2, this sequence has a convergence subsequence $$ \{x_{n_i}\} $$, whose image $$ \{ y_{n_i} \} $$ is a convergent subsequence of $$ \{ y_n \} $$ by continuity, i.e. $$ \lim_i f(x_{n_i}) = f(\lim_i x_{n_i}) $$. $$ \blacksquare $$.
+*Alternative proof.* Let $$ \{ y_n \} $$ be a sequence in $$ f(K) $$. Then it lifts to a (not necessarily unique) sequence $$ \{x_n\} $$ in $$ K $$, i.e. $$ f(x_n) = y_n $$. By Theorem 1.2, this sequence has a convergent subsequence $$ \{x_{n_i}\} $$, whose image $$ \{ y_{n_i} \} $$ is a convergent subsequence of $$ \{ y_n \} $$ by continuity, i.e. $$ \lim_i f(x_{n_i}) = f(\lim_i x_{n_i}) $$. $$ \blacksquare $$.
 
 **2019 W P2.** &nbsp; *Let $$ X $$ be a compact metric space with open cover $$ \{U_{\alpha}\} $$. Show that for some $$ \varepsilon > 0 $$ every ball of radius $$ \varepsilon $$ is contained in some $$ U_{\alpha} $$.*
 
@@ -588,7 +588,7 @@ Again, in order to apply the Weierstrass M-Test for $$ \delta > 0 $$, we observe
 
 $$
 \begin{aligned}
-F'(1+\delta) & = -\sum_{n=1}^{\infty} \ln(n) \frac{1}{n^{-(1+\delta}} \\
+F'(1+\delta) & = -\sum_{n=1}^{\infty} \ln(n) \frac{1}{n^{-(1+\delta)}} \\
 & \leq - \int_1^{\infty} \ln(x) x^{-(1+\delta)} dx;
 \end{aligned}
 $$
@@ -881,7 +881,7 @@ $$
 \left| \frac{\partial f_1}{\partial x_1}(x_1, x_2) - 2 \right|
 + \left| \frac{\partial f_1}{\partial x_2}(x_1, x_2) \right|
 + \left| \frac{\partial f_2}{\partial x_1}(x_1, x_2) \right|
-+ \left| \frac{\partial f_2}{\partial x_2}(x_1, x_2) - 2 \right|.
++ \left| \frac{\partial f_2}{\partial x_2}(x_1, x_2) - 2 \right| < 1/2.
 $$
 
 *Prove $$ f $$ is globally injective.*
@@ -996,6 +996,46 @@ $$
 $$
 
 Thus, $$ g $$ is continuus and so is $$ f' $$. $$ \blacksquare $$
+
+**2016 W P5.** &nbsp; *Assume that a function $$ f \colon \RR^2 \to \RR $$ satisfies*
+
+$$
+f(x_1+t, x_2+s) \geq f(x_1, x_2) - s^2 - t^2
+$$
+
+*for each $$ (x_1, x_2) \in \RR^2 $$ and each $$ (s, t) \in \RR^2 $$. Prove $$ f $$ must be constant.*
+
+*Proof.* Let $$ x, y \in \RR^2 $$ be arbitrary. Then we have 
+
+$$
+f(x) \geq f(y) - \| x-y \|^2 
+$$
+
+and 
+
+$$
+f(y) \geq f(x) - \| x-y \|^2.
+$$
+
+Hence,
+
+$$
+\| x-y \|^2 \geq f(x) - f(y) \geq -\| x-y \|^2,
+$$
+
+so
+
+$$
+\| x-y \| \geq \frac{\|f(x) - f(y)\|}{\|x-y\|}.
+$$
+
+Using this to take the derivative of $$ f $$ at $$ x $$ we get 
+
+$$
+\lim_{\| h \| \to 0} \frac{\|f(x+h) - f(x)\|}{\| h \|} \leq \lim_{\| h \| \to 0} \| h \| = 0.
+$$
+
+We conclude that $$ f $$ has zero derivative at every point, and therefore is constant. $$ \blacksquare $$
 
 
 ## 6. Optimization
@@ -1199,7 +1239,7 @@ Thus, $$ g $$ converges. (I have not shown continuity.) $$ \blacksquare $$
 **2021 F P5.** &nbsp; *Let $$ f \colon \RR^2 \to \RR $$ be continuous. Suppose $$ \int_0^{\infty} f(x, y) dy $$ exists for every $$ x \in [0, 1] $$. Assume there exists a $$ C \geq 0 $$ such that for $$ z > 0 $$,*
 
 $$
-\| \int_z^{\infty} f(x, y) dy \| \leq \frac{C}{\log(2+z)}
+\left\| \int_z^{\infty} f(x, y) dy \right\| \leq \frac{C}{\log(2+z)}
 $$
 
 *for every fixed $$ x $$. Show*
@@ -1708,7 +1748,7 @@ $$
 
 *has $$ 5 $$ distinct roots. Show that $$ G $$ is open.*
 
-*Proof.*
+*Proof.* Define $$ f \colon \RR^6 \to \RR $$ by $$ f(A, x) = P_A(x) $$; this is a $$ C^1 $$ function since it is polynomial. Fix an $$ A_0 \in G $$, and let $$ \alpha $$ be root of $$ P_{A_0} $$. Since our roots are distinct we have $$ P_{A_0}'(\alpha) \neq 0 $$. Hence, we can apply the Implicit Function Theorem to find a unique function $$ \phi_{\alpha} \colon U \to \RR $$, where $$ U $$ is a neighborhood of $$ A_0 $$, such that $$ f(x, \phi_{\alpha}(x)) = 0 $$. Since our $$ \phi_{\alpha} $$ are continuously differentiable, there exists a neighborhood of $$ A_0 $$ such that they do not intersect, i.e. $$ P_A $$ has distinct roots. $$ \blacksquare $$
 
 **2021 W P9.** &nbsp; *Suppose $$ F \colon \RR^3 \to \RR $$ is continuous, that for each $$ (x, y) \in \RR^2 $$ the function $$ z \to F(x, y, z) $$ is strictly increasing, and $$ F(x_0, y_0, z_0) $$. (a) Prove that there exists an open neighborhood $$ U $$ of $$ (x_0, y_0) $$ in $$ \RR^2 $$ such that there is a unique $$ g \colon U \to \RR $$ with $$ F(x, y, g(x, y)) = 0 $$ for $$ (x, y) \in U $$. (b) Show $$ g $$ is continuous in $$ U $$.*
 
@@ -1767,4 +1807,8 @@ $$
 
 We conclude that $$ (-7/5, -2/5) $$ is tangent to our curve at $$ 0 $$. $$ \blacksquare $$
 
+**2018 W P8.** &nbsp; *Let $$ f \colon \RR^2 \to \RR^2 $$ be a continuously differentiable map such that $$ f^{-1}(y) $$ is a finite set for all $$ y $$. Show that the determinant $$ \det df $$ of the Jacobi matrix of $$ f $$ cannot vanish on any open subset of $$ \RR^2 $$.*
 
+*Proof.* Suppose $$ \det df $$ vanishes on $$ U $$. Then the Inverse Function Theorem tells us the image $$ f(U) $$ cannot be locally isomorphic to $$ \RR^2 $$, else it would be invertible in a neighborhood, and hence have nonvanishing determinant. Thus, the image of $$ f $$ is locally isomorphic to $$ \RR $$. The kernel of a surjective map from a 2-manifold to a 1-manifold is a 1-manifold, and hence $$ f $$ has infinite kernel.
+
+Note: It is also a well known fact that there exists no continuous bijections from $$ \RR^2 \to \RR $$ (this requires the Baire Category Theorem), and hence our map has infinite kernel. $$ \blacksquare $$
