@@ -15,7 +15,7 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 
 | Date | Speaker | Topic | References |
 | -------- | ---------- | -------- | ---------- |
-| 8/25/2023 | Justin Asher | Motivating schemes with <br /> the Weil Conjectures | - P. Deligne's *La Conjecture de Weil I* <br /> - P. Deligne's *SGA 4 1/2* <br /> - Guilliman and Pollack's *Differential Topology* <br /> R. Hartshorne's *Algebraic Geometry* <br /> R- A. Weil's *Number of solutions of equations  <br /> in finite fields* | 
+| 8/25/2023 | Justin Asher | Motivating schemes with <br /> the Weil Conjectures | - P. Deligne's *La Conjecture de Weil I* <br /> - P. Deligne's *SGA 4 1/2* <br /> - Guilliman and Pollack's *Differential Topology* <br /> - R. Hartshorne's *Algebraic Geometry* <br /> - A. Weil's *Number of solutions of equations  <br /> in finite fields* | 
 | 9/1/2023 | | | |
 | 9/8/2023 | | | |
 | 9/15/2023 | | | |
