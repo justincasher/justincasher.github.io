@@ -11,4 +11,8 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 - Please submit [this survey](https://www.when2meet.com/?20865999-IQjje) with when you are available to meet.
 - Submit [this form](https://forms.gle/LcYwuqz3Bteqezdk9) once for each talk you would like to give.
 
-More information will posted here soon!
+#### Schedule
+
+| Date | Speaker | Topic | References |
+| -------- | ---------- | -------- | ---------- |
+| 8/25/2023 | Justin Asher | Motivating schemes with the Weil Conjectures | NA | 
