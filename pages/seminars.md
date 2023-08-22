@@ -15,7 +15,7 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 
 | Date | Speaker | Topic | References |
 | -------- | ---------- | -------- | ---------- |
-| 8/25/2023 | Justin Asher | Motivating schemes with <br /> the Weil Conjectures | NA | 
+| 8/25/2023 | Justin Asher | Motivating schemes with <br /> the Weil Conjectures | Weil's paper 'Number of solutions <br /> of equations in finite fields' <br /> SGA 4 1/2 <br /> Guilliman and Pollack's 'Differential Topology' | 
 | 9/1/2023 | | | |
 | 9/8/2023 | | | |
 | 9/15/2023 | | | |
