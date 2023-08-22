@@ -15,4 +15,4 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 
 | Date | Speaker | Topic | References |
 | -------- | ---------- | -------- | ---------- |
-| 8/25/2023 | Justin Asher | Motivating schemes with the Weil Conjectures | NA | 
+| 8/25/2023 | Justin Asher | Motivating schemes with <br /> the Weil Conjectures | NA | 
