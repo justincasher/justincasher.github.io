@@ -5,7 +5,7 @@ feedformat: card
 title: Seminars
 ---
 <br/>
-This fall I am organizing a graduate seminar at Indiana University on topics in algebraic geometry and number theory. We meet Friday 3:00–4:00 PM in Rawles Hall 104. Submit [this form](https://forms.gle/LcYwuqz3Bteqezdk9) once for each talk you would like to give.
+This fall I am organizing a graduate seminar at Indiana University on topics in algebraic geometry and number theory. We meet Fridays from 3:00–4:00 PM in Rawles Hall 104. Submit [this form](https://forms.gle/LcYwuqz3Bteqezdk9) once for each talk you would like to give.
 
 #### Schedule
 
