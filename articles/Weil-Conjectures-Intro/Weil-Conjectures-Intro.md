@@ -76,15 +76,14 @@ for the Riemann zeta function. It has the following properties:
     <li>The \( B_i \) are called the *Betti numbers* of our zeta function and we have \( \chi = \sum_i (-1)^i B_i \).</li>
 </ol>
 
+EXPLAIN HOW WEIL ARRIVED AT THIS CONCLUSION
 
 **Example.** &nbsp; Recall that 
-
-Fix an algebraic closure $$ \overline{\FF}_q $$ of 
 
 
 ## 2. Lefschetz Theory
 
-Write 
+Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to tell whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious $$ F = x^p $$ applied $$ n $$ times. 
 
 
 ## 3. Étale Cohomology
