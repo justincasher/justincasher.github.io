@@ -20,7 +20,7 @@ title: Motivating Schemes with the Weil Conjectures
     }
 }
 </style>
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\NN}{\mathbb{N}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
@@ -55,16 +55,32 @@ for the Riemann zeta function. It has the following properties:
   
     <li>It has an Euler product expansion 
     
-    
+    \[
+    \zeta(z) = \prod_{p \text{ prime}} \frac{1}{1-p^{-z}}.
+    \]
     
     </li>
 </ol>
 
-Now 
+&emsp; Let $$ V $$ be a nonsingular variety of dimension $$ n $$ over $$ \FF_q $$ a finite field with $$ q $$ elements. For instance, we could let $$ f \in \FF_q[X_1, \dots, X_n] $$ and set $$ V $$ to be the zero set of $$ f $$. Write $$ N_d $$ for the number of points (e.g. zeros) of $$ V $$ in a field extension of $$ \FF_q $$ of dimension $$ d $$.
+
+&emsp; Weil conjectured in REFERENCE the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which satisfies the following properties:
+
+<ol type="i" class="custom" style="list-style-position: outside">
+    <li>Its logarithmic derivative is the generating function for our \( N_d \), meaning \[ \sum_{d=1}^{\infty} N_d U^{d-1} = \frac{d}{du} \ln(Z(U)) \] with \( Z(U) \) being a rational polynomial. Meaning, the generating function for the \( N_d \) is the logarithmic derivative of the zeta function. </li>
+  
+    <li>It satisfies the functional equation \[ Z((q^n U)^{-1}) = q^{\chi/2} U^{\chi} Z(U). \]</li>
+    
+    <li></li>
+
+    <li>The \( B_i \) are called the *Betti numbers* of our zeta function and we have \( \chi = \sum_i (-1)^i B_i \).</li>
+</ol>
+
+
 
 ## 2. Lefschetz Theory
 
-
+Fix an algebraic closure $$ \overline{\FF}_q $$ of 
 
 
 ## 3. Étale Cohomology
