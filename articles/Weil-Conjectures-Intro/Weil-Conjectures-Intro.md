@@ -71,7 +71,7 @@ for the Riemann zeta function. It has the following properties:
   
     <li>It satisfies the functional equation \[ Z((q^n U)^{-1}) = q^{\chi/2} U^{\chi} Z(U). \]</li>
     
-    <li>We have \[ \], where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U) \]. The \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \). </li>
+    <li>We have \[ Z(U) = \prod_{i=0}^{2n} \frac{P_0(U) P_2(U) \cdots P_{2n}(U)}{P_1(U) P_3(U) \cdots P_{2n-1}(U) \], where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U) \]. The \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \). </li>
 
     <li>The \( B_i \) are called the *Betti numbers* of our zeta function and we have \( \chi = \sum_i (-1)^i B_i \).</li>
 </ol>
