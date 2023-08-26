@@ -35,7 +35,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 
 ## 1. Weil's Conjectures
 
-Write
+&emsp; Write
 
 $$
 \zeta(z) = \sum_{n=1}^{\infty} \frac{1}{n^z}
@@ -47,15 +47,20 @@ for the Riemann zeta function. It has the following properties:
   
     <li>It satisfies the functional equation 
     
-    \( 
+    \[ 
     \zeta(z) = 2^{z} \pi^{z-1} \sin(\pi z/2) \Gamma(1-z) \zeta(1-z).
-    \)
+    \]
 
     </li>
   
-    <li></li>
+    <li>It has an Euler product expansion 
+    
+    
+    
+    </li>
 </ol>
 
+Now 
 
 ## 2. Lefschetz Theory
 
