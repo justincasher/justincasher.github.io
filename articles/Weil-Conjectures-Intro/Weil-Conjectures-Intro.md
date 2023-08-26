@@ -64,7 +64,7 @@ for the Riemann zeta function. It has the following properties:
 
 &emsp; Let $$ V $$ be a nonsingular variety of dimension $$ n $$ over $$ \FF_q $$ a finite field with $$ q $$ elements. For instance, we could let $$ f \in \FF_q[X_1, \dots, X_n] $$ and set $$ V $$ to be the zero set of $$ f $$. Write $$ N_d $$ for the number of points (e.g. zeros) of $$ V $$ in a field extension of $$ \FF_q $$ of dimension $$ d $$.
 
-&emsp; Weil conjectured in REFERENCE the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which satisfies the following properties:
+&emsp; In 1948, Weil conjectured in REFERENCE the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which satisfies the following properties:
 
 <ol type="i" class="custom" style="list-style-position: outside">
     <li>The logarithmic derivative of \( Z(U) \) is the generating function for our \( N_d \), meaning \[ \sum_{d=1}^{\infty} N_d U^{d-1} = \frac{d}{du} \ln(Z(U)). \] Furthermore, \( Z(U) \) is a rational polynomial.</li>
@@ -83,7 +83,13 @@ EXPLAIN HOW WEIL ARRIVED AT THIS CONCLUSION
 
 ## 2. Lefschetz Theory
 
-Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to tell whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious $$ F = x^p $$ applied $$ n $$ times. 
+Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to tell whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious $$ F(x) = x^p $$ applied $$ n $$ times. In the classical case, Fermat's little theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$, which follows from $$ \| \FF_p^{\times} \| = p-1 $$. Hence, we have reduced counting our $$ N_d $$ to counting the number of fixed points of $$ F^{q^d}(x) = x^{q^d} $$.
+
+In manifold theory, algebraic topology had been used to count fixed points.
+
+**Brouwer Fixed Point Theorem.**
+
+Lefschetz theory
 
 
 ## 3. Étale Cohomology
