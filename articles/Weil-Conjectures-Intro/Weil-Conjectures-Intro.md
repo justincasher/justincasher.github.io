@@ -46,10 +46,12 @@ for the Riemann zeta function. It has the following properties:
     <li>The logarithmic derivative is \( \frac{d}{dz} \ln(\zeta(z)) = \sum_{n=1}^{\infty} \Lambda(n) n^{-z} \), where \( \Lambda(n) \) is the Von Mangoldt function which equals \( \ln p \) when \( n = p^q \) for some \( p \) and \( 0 \) elsewise.</li>
   
     <li>It satisfies the functional equation 
+    
     \( 
-    \zeta(z) = 2^{z} \pi^{z-1} \sin(\pi z/2) \Gamma(1-z) \zeta(1-z) 
+    \zeta(z) = 2^{z} \pi^{z-1} \sin(\pi z/2) \Gamma(1-z) \zeta(1-z).
     \)
-    .</li>
+
+    </li>
   
     <li></li>
 </ol>
