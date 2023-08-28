@@ -74,12 +74,12 @@ for the Riemann zeta function. It has the following properties:
     
     <li>We have \[ Z(U) = \prod_{i=0}^{2n} \frac{P_1(U) P_3(U) \cdots P_{2n-1}(U)}{P_0(U) P_2(U) \cdots P_{2n}(U)}, \] where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U). \] We further guess that the \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \). </li>
 
-    <li>The \( B_i \) are called the <i>Betti numbers</i> of our zeta function and we have \( \chi = \sum_i (-1)^i B_i \).</li>
+    <li>The \( B_i \) are called the <i>Betti numbers</i> of our zeta function and satisfy the identity \( \chi = \sum_i (-1)^i B_i \).</li>
 </ol>
 
 **Remark 1.1.** 
 
-**Example 1.2.** &nbsp; Let $$ \Gr(\FF_q^n, m) $$ be the Grassmanian, i.e. the number of $$ m $$-dimensional subspaces of $$ \FF_q^n $$. Set $$ k = \FF_p $$ and $$ V = \Gr(\FF_p^n, m) $$. Then writing $$ q = p^d $$, by a well known formula,
+**Example 1.2.** &nbsp; Let $$ \Gr(\FF_q^n, m) $$ be the Grassmanian, i.e. the number of $$ m $$-dimensional subspaces of $$ \FF_q^n $$. Set $$ k = \FF_p $$ and $$ V = \Gr(\FF_p^n, m) $$. Writing $$ q = p^d $$, by a well known formula,
 
 $$
 N_d = \frac{(q^n-q)(q^n-q) \cdots (q^n-q^{m-1})}{(q^m-1)(q^m-q) \cdots (q^m-q^{m-1})}.
@@ -90,8 +90,8 @@ $$
 $$
 \begin{aligned}
 Z(U) & = \left( \sum_{d=1}^{\infty} (p^d+1) \frac{U^d}{d} \right) \\
-& = \exp\left( \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} \right) \\
-& = \exp(-\ln(1-qU) - \ln(1-U)) \\
+& = \exp{ \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} }\\
+& = \exp{ -\ln(1-qU) - \ln(1-U) } \\
 & = \frac{1}{(1-U)(1-qU),
 \end{aligned} 
 $$
