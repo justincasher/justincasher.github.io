@@ -89,7 +89,7 @@ $$
 
 $$
 \begin{aligned}
-Z(U) & = \exp \left( \sum_{d=1}^{\infty} (p^d+1) \frac{U^d}{d} \right \\
+Z(U) & = \exp \left( \sum_{d=1}^{\infty} (p^d+1) \frac{U^d}{d} \right) \\
 & = \exp \left( \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} \right) \\
 & = \exp ( -\ln(1-qU) - \ln(1-U) ) \\
 & = \frac{1}{(1-U)(1-qU)},
