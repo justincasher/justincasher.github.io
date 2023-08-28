@@ -20,11 +20,11 @@ title: Motivating Schemes with the Weil Conjectures
     }
 }
 </style>
-$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
+$$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\PP}{\mathbb{P}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
-**Abstract.** &nbsp; We introduce the Weil Conjectures, then give an overview of how Lefschetz theory and étale cohomology can be used to prove them.
+**Abstract.** &nbsp; We introduce the Weil Conjectures, then give an overview of how Lefschetz theory and étale cohomology can be used to prove them. I would like to thank Nathan Lowry and Vladimir Shein for useful feedback during the talk.
 
 ## Table of Contents
 1. [Weil's Conjectures](#1-weil-conjectures)
@@ -62,23 +62,55 @@ for the Riemann zeta function. It has the following properties:
     </li>
 </ol>
 
-&emsp; Let $$ V $$ be a nonsingular variety of dimension $$ n $$ over $$ \FF_q $$ a finite field with $$ q $$ elements. For instance, we could let $$ f \in \FF_q[X_1, \dots, X_n] $$ and set $$ V $$ to be the zero set of $$ f $$. Write $$ N_d $$ for the number of points (e.g. zeros) of $$ V $$ in a field extension of $$ \FF_q $$ of dimension $$ d $$.
+&emsp; Let $$ V $$ be a nonsingular variety of dimension $$ n $$ over $$ k = \FF_q $$ a finite field with $$ q $$ elements. For instance, we could let $$ f \in \FF_q[X_1, \dots, X_n] $$ and set $$ V $$ to be the zero set of $$ f $$. Write $$ N_d $$ for the number of points (e.g. zeros) of $$ V $$ in a field extension of $$ \FF_q $$ of dimension $$ d $$.
 
-&emsp; In 1948, Weil conjectured in REFERENCE the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which satisfies the following properties:
+&emsp; In 1948, Weil conjectured in REFERENCE the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which has the following properties. Weil arrived at these conjectures by first observing that they are true for curves, and that they are true for certain higher dimensional varieties, such as the Grassmanian.
 
+**Weil Conjectures.**
 <ol type="i" class="custom" style="list-style-position: outside">
     <li>The logarithmic derivative of \( Z(U) \) is the generating function for our \( N_d \), meaning \[ \sum_{d=1}^{\infty} N_d U^{d-1} = \frac{d}{du} \ln(Z(U)). \] Furthermore, \( Z(U) \) is a rational polynomial.</li>
   
-    <li>It satisfies the functional equation \[ Z((q^n U)^{-1}) = q^{\chi/2} U^{\chi} Z(U). \]</li>
+    <li>It satisfies the functional equation \[ Z((q^n U)^{-1}) = \pm q^{n \chi/2} U^{\chi} Z(U), \] where $$ \chi $$ is the Euler characteristic of our variety (see remark).</li>
     
-    <li>We have \[ Z(U) = \prod_{i=0}^{2n} \frac{P_0(U) P_2(U) \cdots P_{2n}(U)}{P_1(U) P_3(U) \cdots P_{2n-1}(U)}, \] where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U). \] We impose that the \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \). </li>
+    <li>We have \[ Z(U) = \prod_{i=0}^{2n} \frac{P_1(U) P_3(U) \cdots P_{2n-1}(U)}{P_0(U) P_2(U) \cdots P_{2n}(U)}, \] where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U). \] We further guess that the \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \). </li>
 
     <li>The \( B_i \) are called the *Betti numbers* of our zeta function and we have \( \chi = \sum_i (-1)^i B_i \).</li>
 </ol>
 
-EXPLAIN HOW WEIL ARRIVED AT THIS CONCLUSION
+**Remark 1.1.** 
 
-**Example.** &nbsp; Recall that 
+**Example 1.2.** &nbsp; Let $$ \Gr(\FF_q^n, m) $$ be the Grassmanian, i.e. the number of $$ m $$-dimensional subspaces of $$ \FF_q^n $$. Set $$ k = \FF_p $$ and $$ V = \Gr(\FF_p^n, m) $$. Then writing $$ q = p^d $$, by a well known formula,
+
+$$
+N_d = \frac{(q^n-q)(q^n-q) \cdots (q^n-q^{m-1})}{(q^m-1)(q^m-q) \cdots (q^m-q^{m-1})}.
+$$
+
+&emsp; We will verify the Weil Conjectures when $$ n = 2 $$ and $$ m = 1 $$, meaning we are reduced to computing the zeta function for $$ \PP_{\FF_p}^1 = \Gr(\FF_p^n, m) $$. Solving for $$ Z(U) $$ in (i) for $$ U $$ near $$ 0 $$,
+
+$$
+\begin{aligned}
+Z(U) & = \left( \sum_{d=1}^{\infty} (p^d+1) \frac{U^d}{d} \right) \\
+& = \exp\left( \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} \right) \\
+& = \exp(-\ln(1-qU) - \ln(1-U)) \\
+& = \frac{1}{(1-U)(1-qU),
+\end{aligned} 
+$$
+
+since
+
+$$
+\sum_{n=1}^{\infty} \frac{x^n}{n} = -\ln(1-x)
+$$
+
+for $$ x $$ near $$ 0 $$. Here, $$ B_0 = 1 $$, $$ B_1 = 0 $$, and $$ B_2 = 1 $$. This implies $$ \chi = 1 - 0 + 1 = 2 $$, which agrees with the geometric picture of moving a circle slightly off of itself and observing it has two points of intersection, and hence (iii). Finally, we verify (ii) by computing 
+
+$$
+\begin{aligned}
+Z((q^n U)^{-1}) & = \frac{1}{(1-(qU)^{-1})(1-q(qU)^{-1})} \\
+& = qU^2 \frac{1}{(qU-1)(U-1)}
+= qU^2 Z(U).
+\end{aligned}
+$$ 
 
 
 ## 2. Lefschetz Theory
