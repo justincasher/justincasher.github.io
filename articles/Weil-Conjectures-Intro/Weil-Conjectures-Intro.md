@@ -74,7 +74,7 @@ for the Riemann zeta function. It has the following properties:
     
     <li>We have \[ Z(U) = \prod_{i=0}^{2n} \frac{P_1(U) P_3(U) \cdots P_{2n-1}(U)}{P_0(U) P_2(U) \cdots P_{2n}(U)}, \] where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U). \] We further guess that the \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \). </li>
 
-    <li>The \( B_i \) are called the *Betti numbers* of our zeta function and we have \( \chi = \sum_i (-1)^i B_i \).</li>
+    <li>The \( B_i \) are called the <i>Betti numbers</i> of our zeta function and we have \( \chi = \sum_i (-1)^i B_i \).</li>
 </ol>
 
 **Remark 1.1.** 
@@ -115,7 +115,7 @@ $$
 
 ## 2. Lefschetz Theory
 
-Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to tell whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious $$ F(x) = x^p $$ applied $$ n $$ times. In the classical case, Fermat's little theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$, which follows from $$ \| \FF_p^{\times} \| = p-1 $$. Hence, we have reduced counting our $$ N_d $$ to counting the number of fixed points of $$ F^{q^d}(x) = x^{q^d} $$.
+&emsp; Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to tell whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious $$ F(x) = x^p $$ applied $$ n $$ times. In the classical case, Fermat's little theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$, which follows from $$ \| \FF_p^{\times} \| = p-1 $$. Hence, we have reduced counting our $$ N_d $$ to counting the number of fixed points of $$ F^{q^d}(x) = x^{q^d} $$.
 
 In manifold theory, algebraic topology had been used to count fixed points.
 
