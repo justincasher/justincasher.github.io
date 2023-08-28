@@ -131,9 +131,15 @@ We conclude that the Weil Conjectures hold for $$ \PP_{\FF_p}^1 $$.
 
 **Brouwer Fixed Point Theorem.** &nbsp; *Let $$ f \colon D^2 \to D^2 $$ be a continuous map from the disk to itself. Then $$ f $$ has a fixed point.*
 
-*Proof.* Suppose $$ f $$ has no fixed points. Let $$ h \colon D^2 \to S^1 $$ be the map which sends $$ x $$ to the point on $$ S^1 $$ which intersects the ray starting at $$ f(x) $$ and passing through $$ x $$. Since $$ f $$ has no fixed points this map is well-defined. Writing $$ \iota \colon S^1 \to D^2 $$ for the inclusion, we see $$ h \circ \iota = \text{Id}_{S_1} $$. But $$ \pi_1(S^1) = \ZZ $$ and $$ \pi_1(D^1) = 0 $$ implies $$ \pi_1(h \circ \iota) $$ factors through zero, a contradiction. $$ \blacksquare $$
+*Proof.* Suppose $$ f $$ has no fixed points. Let $$ h \colon D^2 \to S^1 $$ be the map which sends $$ x $$ to the point on $$ S^1 $$ which intersects the ray starting at $$ f(x) $$ and passing through $$ x $$. Since $$ f $$ has no fixed points this map is well-defined and continuous. Writing $$ \iota \colon S^1 \to D^2 $$ for the inclusion, we see $$ h \circ \iota = \text{Id}_{S_1} $$. But $$ \pi_1(S^1) = \ZZ $$ and $$ \pi_1(D^1) = 0 $$ implies $$ \pi_1(h \circ \iota) $$ factors through zero, contradicting that its image is $$ \ZZ $$. $$ \blacksquare $$
 
-&emsp; We are more interested in Lefschetz Theory, as it will allow us to write our Zeta function using trace formulas. Let $$ M $$ be a compact oriented manifold and $$ F \colon M \to M $$ smooth. We call $$ L(f) = I(\Delta, \text{graph}(f)) $$ the *global Lefschetz number* of $$ f $$, where $$ I $$ is the oriented intersection number. It is related to the singular homology groups by the Lefschetz-Hopf Theorem.
+&emsp; Our main use of algebraic topology will be abstracting Lefschetz Theory, as it will allow us to write our Zeta function using trace formulas. Let $$ M $$ be a compact oriented manifold and $$ F \colon M \to M $$ smooth. We call the oriented intersection 
+
+$$ 
+L(f) = I(\Delta, \text{graph}(f)) 
+$$ 
+
+the *global Lefschetz number* of $$ f $$. Recall that the oriented intersection is the sum over each intersection $$ x $$ as $$ +1 $$ if $$ f $$ preserves the orientation at $$ x $$ and $$ - 1 $$ elsewise. The global Lefschetz number is related to the singular homology groups by the Lefschetz-Hopf Theorem.
 
 **Lefschetz-Hopf Theorem.** &nbsp; *We have the equality*
 
@@ -143,9 +149,21 @@ $$
 
 **Corollary 2.1.** &nbsp; *Let $$ b_i = \dim_{\QQ} H_i(M, \QQ) $$ be the $$ i $$th Betti number of our manifold. Then $$\chi(M) = \sum_{i} (-1) b_i $$.*
 
-*Proof.* Let $$ f $$ be the identity.
+*Proof.* As in Remark 1.2 let $$ f $$ be the identity. Then $$ f_* $$ is the identity, and hence 
 
-&emsp; Now let $$ x $$ be a fixed point of $$ f $$. We define the local Lefschetz number $$ L_x(f) $$ as $$ +1 $$ if $$ f $$ preserves the orientation at $$ x $$ and $$ - 1 $$ elsewise.
+$$ 
+\text{Tr}(f_* \mid H_i(M, \QQ)) = \dim_{\QQ} H_i(M, \QQ).
+$$
+
+Our result follows. $$ \blacksquare $$
+
+&emsp; Now let $$ x $$ be a fixed point of $$ f $$. We define the local Lefschetz number $$ L_x(f) $$ as $$ +1 $$ if $$ f $$ preserves the orientation at $$ x $$ and $$ - 1 $$ elsewise. Clearly 
+
+$$
+\sum_{f(x) = x} L_x(f) = L(f),
+$$ 
+
+and combining this with the Lefschetz-Hopf Theorem we arrive at the following.
 
 **Corollary 2.2.** &nbsp; *We have the equality*
 
@@ -157,7 +175,7 @@ $$
 
 ## 3. Étale Cohomology
 
-Let $$ X_0 $$ be a scheme of finite type over $$ \FF_q $$, and $$ X = X \times_{\FF_q} \text{Spec} \overline{\FF}_q $$ its extension to the algebraic closure. Write $$ A_0 $$ for a constructible $$ \QQ_{\ell} $$-sheaf on $$ X_0 $$, and $$ A $$ for its extension to $$ X $$. 
+&emsp; Let $$ X_0 $$ be a scheme of finite type over $$ \FF_q $$, and $$ X = X \times_{\FF_q} \text{Spec} \overline{\FF}_q $$ its extension to the algebraic closure. Write $$ A_0 $$ for a constructible $$ \QQ_{\ell} $$-sheaf on $$ X_0 $$, and $$ A $$ for its extension to $$ X $$. 
 
 **Theorem 3.1.** &nbsp; *For every $$ n $$,*
 
