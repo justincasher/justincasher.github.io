@@ -186,7 +186,7 @@ $$
 **Theorem 3.2.** &nbsp; *We have* 
 
 $$
-Z(U) = \prod_{i=0}^{\infty} \det(1-F^*U, H_c^i(X, \QQ_{\ell}))^{(-1)^{i+1}.
+Z(U) = \prod_{i=0}^{\infty} \det(1-F^* U, H_c^i(X, \QQ_{\ell}))^{(-1)^{i+1}}.
 $$
 
 *Since our cohomology groups vanish for $$ i > 2n $$, our zeta function is indeed a rational polynomial.*
