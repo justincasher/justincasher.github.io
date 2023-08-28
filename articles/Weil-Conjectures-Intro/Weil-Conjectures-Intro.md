@@ -121,7 +121,11 @@ We conclude that the Weil Conjectures hold in this case.
 
 ## 2. Lefschetz Theory
 
-&emsp; Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to tell whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious $$ F(x) = x^p $$ applied $$ n $$ times. In the classical case, Fermat's little theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$, which follows from $$ \| \FF_p^{\times} \| = p-1 $$. Hence, we have reduced counting our $$ N_d $$ to counting the number of fixed points of $$ F^{q^d}(x) = x^{q^d} $$.
+&emsp; Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to check whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious automorphism $$ F(x) = x^p $$ applied $$ n $$ times. This is an old idea: Fermat's Little Theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$ since $$ \FF_p^{\times} $$ has $$ p - 1 $$ elements. The general case follows by considering $$ \FF_q $$ as the splitting field of $$ x^{p^n} - x $$. 
+
+&emsp; To apply this idea to varieties we 
+
+Thus, we have reduced counting our $$ N_d $$ to counting the number of fixed points of $$ F^{q^d}(x) = x^{q^d} $$.
 
 In manifold theory, algebraic topology had been used to count fixed points.
 
