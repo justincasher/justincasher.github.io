@@ -136,26 +136,40 @@ We conclude that the Weil Conjectures hold in this case.
 **Lefschetz-Hopf Theorem.** &nbsp; *We have the equality*
 
 $$
-L(f) = \sum_{i=0}^{\infty} (-1)^i \text{trace}(f_* \mid H_i(M, \QQ)).
+L(f) = \sum_{i=0}^{\infty} (-1)^i \text{Tr}(f_* \mid H_i(M, \QQ)).
 $$
 
-**Corollary 1.** &nbsp; *Let $$ b_i = \dim_{\QQ} H_i(M, \QQ) $$ be the $$ i $$th Betti number of our manifold. Then $$\chi(M) = \sum_{i} (-1) b_i $$.
+**Corollary 2.1.** &nbsp; *Let $$ b_i = \dim_{\QQ} H_i(M, \QQ) $$ be the $$ i $$th Betti number of our manifold. Then $$\chi(M) = \sum_{i} (-1) b_i $$.
 
 *Proof.* Let $$ f $$ be the identity.
 
 &nbsp; Now let $$ x $$ be a fixed point of $$ f $$. We define the local Lefschetz number $$ L_x(f) $$ as $$ +1 $$ if $$ f $$ preserves the orientation at $$ x $$ and $$ - 1 $$ elsewise.
 
-**Corollary 2.** &nbsp; *We have the equality*
+**Corollary 2.2.** &nbsp; *We have the equality*
 
 $$
-\sum_{f(x)=x} L_x(f) = \sum_{i=0}^{\infty} (-1)^i \text{trace}(f_* \mid H_i(M, \QQ)).
+\sum_{f(x)=x} L_x(f) = \sum_{i=0}^{\infty} (-1)^i \text{Tr}(f_* \mid H_i(M, \QQ)).
 $$
 
 
 
 ## 3. Étale Cohomology
 
+Let $$ X_0 $$ be a scheme of finite type over $$ \FF_q $$, and $$ X = X \times_{\FF_q} \text{Spec} \overline{\FF}_q $$ its extension to the algebraic closure. Write $$ A_0 $$ for a constructible $$ \QQ_{\ell} $$-sheaf on $$ X_0 $$, and $$ A $$ for its extension to $$ X $$. 
 
+**Theorem 3.1.** &nbsp; *For every $$ n $$, 
+
+$$
+\sum_{F^n(x) = x} \text{Tr}(F^{n*}, A_x) = \sum_{i=0}^{\infty} \text{Tr}(F^{*n}, H_c^i(X, A))
+$$
+
+**Theorem 3.2.** &nbsp; *We have* 
+
+$$
+Z(U) = \prod_{i=0}^{\infty} \frac{\det(1-F^*U, H_c^i(X, \QQ_{\ell}))^{(-1)^{i+1}.
+$$
+
+*Since our cohomology groups vanish for $$ i > 2n $$, our zeta function is indeed a rational polynomial.*
 
 
 ## 4. References
