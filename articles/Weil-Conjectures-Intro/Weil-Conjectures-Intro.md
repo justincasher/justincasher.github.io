@@ -116,7 +116,7 @@ Z((q^n U)^{-1}) & = \frac{1}{(1-(qU)^{-1})(1-q(qU)^{-1})} \\
 \end{aligned}
 $$ 
 
-We conclude that the Weil Conjectures hold in this case.
+We conclude that the Weil Conjectures hold for $$ \PP_{\FF_p}^1 $$.
 
 
 ## 2. Lefschetz Theory
@@ -174,8 +174,4 @@ $$
 
 ## 4. References
 
-1. Alexander Grothendieck, *Sur quelques points d’algèbre homologique, I*, Tohoku Mathematical Journal **9** (1957), no. 2, 119–221.
-2. Saunders Mac Lane, *Categories for the working mathematician*, Springer, 1978.
-3. Archana S. Morye, *Note on the Serre-Swan theorem*, Mathematische Nachrichten **286** (2013), no. 2-3, 272–278.
-4. Jean-Pierre Serre, *Vector bundles and projective modules*, Annals of Mathematics **61** (1955), no. 2, 197–278.
-5. Richard Swan, *Vector bundles and projective modules*, Transactions of the American Mathematical Society **105** (1962), no. 2, 264–277.
+1. FIX THESE
