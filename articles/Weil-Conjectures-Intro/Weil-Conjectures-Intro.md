@@ -66,9 +66,9 @@ for the Riemann zeta function. It has the following properties:
 
 &emsp; In 1948, Weil conjectured in REFERENCE the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which has the following properties. Weil arrived at these conjectures by first observing that they are true for curves, and that they are true for certain higher dimensional varieties, such as the Grassmanian.
 
-**Weil Conjectures.**
+**Weil Conjectures.** *With $$ V $$ and $$ Z $$ as above, the following are true*:
 <ol type="i" class="custom" style="list-style-position: outside">
-    <li>The logarithmic derivative of \( Z(U) \) is the generating function for our \( N_d \), meaning \[ \sum_{d=1}^{\infty} N_d U^{d-1} = \frac{d}{du} \ln(Z(U)). \] Furthermore, \( Z(U) \) is a rational polynomial.</li>
+    <li><i>The logarithmic derivative of \( Z(U) \) is the generating function for our \( N_d \), meaning \[ \sum_{d=1}^{\infty} N_d U^{d-1} = \frac{d}{du} \ln(Z(U)). \] Furthermore, \( Z(U) \) is a rational polynomial.</i></li>
   
     <li>It satisfies the functional equation \[ Z((q^n U)^{-1}) = \pm q^{n \chi/2} U^{\chi} Z(U), \] where \( \chi \) is the Euler characteristic of our variety (see remark).</li>
     
