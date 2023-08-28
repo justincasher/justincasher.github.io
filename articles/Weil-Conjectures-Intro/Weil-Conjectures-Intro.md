@@ -24,7 +24,7 @@ $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
-**Abstract.** &nbsp; We introduce the Weil Conjectures, then give an overview of how Lefschetz theory and étale cohomology can be used to prove them. I would like to thank Nathan Lowry and Vladimir Shein for useful feedback during the talk.
+**Abstract.** &nbsp; We introduce the Weil Conjectures, then give an overview of how Lefschetz theory and étale cohomology can be used to prove them. I would like to thank Nathan Lowry and Vladimir Shein for useful feedback.
 
 ## Table of Contents
 1. [Weil's Conjectures](#1-weil-conjectures)
@@ -89,9 +89,9 @@ $$
 
 $$
 \begin{aligned}
-Z(U) & = \exp{ \sum_{d=1}^{\infty} (p^d+1) \frac{U^d}{d} } \\
-& = \exp{ \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} } \\
-& = \exp{ -\ln(1-qU) - \ln(1-U) } \\
+Z(U) & = \exp \left( \sum_{d=1}^{\infty} (p^d+1) \frac{U^d}{d} \right \\
+& = \exp \left( \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} \right) \\
+& = \exp ( -\ln(1-qU) - \ln(1-U) ) \\
 & = \frac{1}{(1-U)(1-qU)},
 \end{aligned} 
 $$
