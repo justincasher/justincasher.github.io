@@ -85,7 +85,7 @@ $$
 N_d = \frac{(q^n-q)(q^n-q) \cdots (q^n-q^{m-1})}{(q^m-1)(q^m-q) \cdots (q^m-q^{m-1})}.
 $$
 
-&emsp; We will verify the Weil Conjectures when $$ n = 2 $$ and $$ m = 1 $$, meaning we are reduced to computing the zeta function for $$ \PP_{\FF_p}^1 = \Gr(\FF_p^n, m) $$. Solving for $$ Z(U) $$ in (i) for $$ U $$ near $$ 0 $$,
+&emsp; We will verify the Weil Conjectures when $$ n = 2 $$ and $$ m = 1 $$, meaning we are reduced to computing the zeta function for 1-dimensional projectice space $$ \PP_{\FF_p}^1 $$. Solving for $$ Z(U) $$ in (i) for $$ U $$ near $$ 0 $$,
 
 $$
 \begin{aligned}
