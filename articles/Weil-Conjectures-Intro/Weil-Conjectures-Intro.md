@@ -29,7 +29,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Gr}{Gr} \DeclareMat
 ## Table of Contents
 1. [Weil's Conjectures](#1-weil-conjectures)
 2. [Lefschetz Theory](#2-lefschetz-theory)
-3. [Étale Cohomology](#3-etale-cohomology)
+3. [Étale Cohomology](#3-étale-cohomology)
 4. [References](#4-references)
 
 
@@ -189,12 +189,30 @@ $$
 \sum_{F^n(x) = x} \text{Tr}(F^{n*}, A_x) = \sum_{i=0}^{\infty} \text{Tr}(F^{n*}, H_c^i(X, A))
 $$
 
-&emsp; Likewise we can prove the following product expansion of our zeta function using trace formulas. Here, we are writing it using
+&emsp; Likewise we can prove the following product expansion of our zeta function using trace formulas. Set 
+
+$$
+\zeta_X(z) = \prod_{x \in |X|} (1-\text{Card}(k(x))^{-s})^{-1}, 
+$$
+
+where $$ |X| $$ is the set of closed points of $$ X $$ (i.e. points which are locally maximal ideals). If we set $$ q_x = \text{Card(k(x)) $$, $$ \text{deg}(x) = [k(x), \FF_q] $$, and $$ U = q^{-z} $$, we can write
+
+$$
+\zeta_X(z) = Z_X(q^{-z}),
+$$
+
+where 
+
+$$
+Z_X(U) = \prod_{x \in |X|} (1-U^{\text{deg}(x)})^{-1}.
+$$
+
+Again $$ Z_X(U) $$ converges for $$ U $$ small.
 
 **Theorem 3.2.** &nbsp; *We have* 
 
 $$
-Z(U) = \prod_{i=0}^{\infty} \det(1-F^* U, H_c^i(X, \QQ_{\ell}))^{(-1)^{i+1}}.
+Z_X(U) = \prod_{i=0}^{\infty} \det(1-F^* U, H_c^i(X, \QQ_{\ell}))^{(-1)^{i+1}}.
 $$
 
 *Since our cohomology groups vanish for $$ i > 2n $$, our zeta function is indeed a rational polynomial.*
@@ -206,4 +224,4 @@ $$
 2. Pierre Deligne, *Sga 4 1/2: Cohomologie étale*, Springer, 1977.
 3. Victor Guillemin and Alan Pollack, *Differential topology*, Prentice-Hall, 1974.
 4. Robin Hartshorne, *Algebraic geometry*, Springer, 1977.
-5. André Weil. "Numbers of solutions of equations in finite fields". *Bulletin of the American Mathematical Society*, 55(5) 497-508 May 1949.
+5. André Weil. "Numbers of solutions of equations in finite fields". *Bulletin of the American Mathematical Society*, 55(5) pp. 497-508, May 1949.
