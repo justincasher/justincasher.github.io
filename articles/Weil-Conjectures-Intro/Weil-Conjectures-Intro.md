@@ -64,7 +64,7 @@ for the Riemann zeta function. It has the following properties:
 
 &emsp; Let $$ V $$ be a nonsingular variety of dimension $$ n $$ over $$ k = \FF_q $$ a finite field with $$ q $$ elements. For instance, we could let $$ f \in \FF_q[X_1, \dots, X_n] $$ and set $$ V $$ to be the zero set of $$ f $$. Write $$ N_d $$ for the number of points (e.g. zeros) of $$ V $$ in a field extension of $$ \FF_q $$ of dimension $$ d $$.
 
-&emsp; In 1948, Weil conjectured in REFERENCE the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which has the following properties. Weil arrived at these conjectures by first observing that they are true for curves, and that they are true for certain higher dimensional varieties, such as the Grassmanian. These are now known to be true.
+&emsp; In 1948, Weil conjectured in [\[5\]](#4-references) the existence of a *zeta function* $$ Z(U) $$ attached to $$ V $$, which has the following properties. Weil arrived at these conjectures by first observing that they are true for curves, and that they are true for certain higher dimensional varieties, such as the Grassmanian. These are now known to be true.
 
 **Weil Conjectures.** &nbsp; *With $$ V $$ and $$ Z $$ as above, the following are true*:
 <ol type="i" class="custom" style="list-style-position: outside">
@@ -189,7 +189,7 @@ $$
 \sum_{F^n(x) = x} \text{Tr}(F^{n*}, A_x) = \sum_{i=0}^{\infty} \text{Tr}(F^{n*}, H_c^i(X, A))
 $$
 
-&emsp; Likewise we can prove the following product expansion of our zeta function, where now we are writing it 
+&emsp; Likewise we can prove the following product expansion of our zeta function using trace formulas. Here, we are writing it using
 
 **Theorem 3.2.** &nbsp; *We have* 
 
@@ -202,4 +202,8 @@ $$
 
 ## 4. References
 
-1. FIX THESE
+1. Pierre Deligne. "La conjecture de Weil: I". *Publications Mathématiques de l'IHÉS*, Volume 43 (1974), pp. 273-307. [Link](http://www.numdam.org/item/PMIHES_1974__43__273_0/)
+2. Pierre Deligne, *Sga 4 1/2: Cohomologie étale*, Springer, 1977.
+3. Victor Guillemin and Alan Pollack, *Differential topology*, Prentice-Hall, 1974.
+4. Robin Hartshorne, *Algebraic geometry*, Springer, 1977.
+5. André Weil. "Numbers of solutions of equations in finite fields". *Bulletin of the American Mathematical Society*, 55(5) 497-508 May 1949.
