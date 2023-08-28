@@ -175,7 +175,7 @@ $$
 
 ## 3. Étale Cohomology
 
-&emsp; In order to develop a Lefschetz theory for algebraic varieties we need a suitable notion of cohomology. This was one of the main purposes for writing the EGA and SGA. In the 1950s there was a developing notion of sheaf cohomology, which can be shown to be equal to singular cohomology in the case of manifolds. Thus, like how a manifold is an object which locally looks like $$ \RR^n $$, Grothendieck defined a scheme as an object which locally looks like a commutative ring using sheaves. 
+&emsp; In order to develop a Lefschetz theory for algebraic varieties we need a suitable notion of cohomology. This was one of the main purposes for writing the EGA and SGA. In the 1950s there was a developing theory of sheaf cohomology, which can be shown to be equal to singular cohomology in the case of manifolds. Thus, like how a manifold is an object which locally looks like $$ \RR^n $$, Grothendieck defined a scheme as an object which locally looks like a commutative ring using sheaves. 
 
 &emsp; Although simply using the derived global section functor of the structure sheaf did not include the needed information. Hence, a functor called *étale cohomology* based on covering spaces of schemes was developed. It is a rule which assigns to each étale map $$ f \colon Y \to X $$ an object in a category and satisfies gluing. The following results can be found in the SGA $$ 4 1/2 $$.
 
