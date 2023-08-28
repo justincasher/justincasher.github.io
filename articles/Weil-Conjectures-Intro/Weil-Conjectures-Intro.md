@@ -90,9 +90,9 @@ $$
 $$
 \begin{aligned}
 Z(U) & = \exp{ \sum_{d=1}^{\infty} (p^d+1) \frac{U^d}{d} } \\
-& = \exp{ \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} }\\
+& = \exp{ \sum_{d=1}^{\infty} \frac{(pU)^d}{d} + \sum_{d=1}^{\infty} \frac{U^d}{d} } \\
 & = \exp{ -\ln(1-qU) - \ln(1-U) } \\
-& = \frac{1}{(1-U)(1-qU),
+& = \frac{1}{(1-U)(1-qU)},
 \end{aligned} 
 $$
 
