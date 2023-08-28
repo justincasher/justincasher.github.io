@@ -195,7 +195,7 @@ $$
 \zeta_X(z) = \prod_{x \in C_X} (1-\text{Card}(k(x))^{-s})^{-1}, 
 $$
 
-where $$ C_X $$ is the set of closed points of $$ X $$ (i.e. points which are locally maximal ideals). If we set $$ q_x = \text{Card(k(x)) $$, $$ \text{deg}(x) = [k(x), \FF_q] $$, and $$ U = q^{-z} $$, we can write
+where $$ C_X $$ is the set of closed points of $$ X $$ (i.e. points which are locally maximal ideals). If we set $$ q_x = \text{Card}(k(x)) $$, $$ \text{deg}(x) = [k(x), \FF_q] $$, and $$ U = q^{-z} $$, we can write
 
 $$
 \zeta_X(z) = Z_X(q^{-z}),
