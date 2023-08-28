@@ -181,6 +181,8 @@ $$
 
 &emsp; Let $$ X_0 $$ be a scheme of finite type over $$ \FF_q $$ (i.e. locally $$ X_0 $$ looks like a finite $$ \FF_q $$ algebra), and $$ X = X \times_{\FF_q} \text{Spec} \overline{\FF}_q $$ its extension to the algebraic closure. Write $$ A_0 $$ for a constructible $$ \QQ_{\ell} $$-sheaf on $$ X_0 $$ (a type of formal sheaf on the étale site), and $$ A $$ for its extension to $$ X $$. 
 
+&emsp; An analogue of Corollary 2.2 is the following:
+
 **Theorem 3.1.** &nbsp; *For every $$ n $$,*
 
 $$
