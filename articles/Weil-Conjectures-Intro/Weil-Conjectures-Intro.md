@@ -70,11 +70,11 @@ for the Riemann zeta function. It has the following properties:
 <ol type="i" class="custom" style="list-style-position: outside">
     <li><i>The logarithmic derivative of \( Z(U) \) is the generating function for our \( N_d \), meaning \[ \sum_{d=1}^{\infty} N_d U^{d-1} = \frac{d}{du} \ln(Z(U)). \] Furthermore, \( Z(U) \) is a rational polynomial.</i></li>
   
-    <li>It satisfies the functional equation \[ Z((q^n U)^{-1}) = \pm q^{n \chi/2} U^{\chi} Z(U), \] where \( \chi \) is the Euler characteristic of our variety (see remark).</li>
+    <li><i>\( Z(U) \) satisfies the functional equation \[ Z((q^n U)^{-1}) = \pm q^{n \chi/2} U^{\chi} Z(U), \] where \( \chi \) is the Euler characteristic of our variety (see remark).</i></li>
     
-    <li>We have \[ Z(U) = \prod_{i=0}^{2n} \frac{P_1(U) P_3(U) \cdots P_{2n-1}(U)}{P_0(U) P_2(U) \cdots P_{2n}(U)}, \] where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U). \] We further guess that the \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \). </li>
+    <li><i>We have \[ Z(U) = \prod_{i=0}^{2n} \frac{P_1(U) P_3(U) \cdots P_{2n-1}(U)}{P_0(U) P_2(U) \cdots P_{2n}(U)}, \] where \( P_0(U) = 1-U \), \(P_{2n}(U) = 1-q^{2n} U\), and \[P_{i}(U) = \prod_{k=1}^{B_i} (1-\alpha_{i, k} U). \] We further guess that the \( \alpha_{i, k} \) are algebraic integers over \( \ZZ \) and satisfy \( \| \alpha_{i, k} \| = q^{i/2} \).</i></li>
 
-    <li>The \( B_i \) are called the <i>Betti numbers</i> of our zeta function and satisfy the identity \( \chi = \sum_i (-1)^i B_i \).</li>
+    <li><i>The \( B_i \) are called the <i>Betti numbers</i> of our zeta function and satisfy the identity \( \chi = \sum_i (-1)^i B_i \).</i></li>
 </ol>
 
 **Remark 1.1.** 
