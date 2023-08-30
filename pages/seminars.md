@@ -12,9 +12,8 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 | Date | Speaker | Topic | References |
 | -------- | ---------- | -------- | ---------- |
 | 8/25/2023 | Justin Asher | Motivating schemes with the Weil Conjectures | [Notes]({{'/Weil-Conjectures-Intro-S' | relative_url}}) | 
-| 9/1/2023 | | | |
-| 9/8/2023 | | | |
-| 9/15/2023 | | | |
+| 9/8/2023 | Justin Asher | The Casas-Alvero Conjecture | |
+| 9/15/2023 | Nathan Lowry | TBD | |
 | 9/22/2023 | | | |
 | 9/29/2023 | | | |
 | 10/6/2023 | | | |
