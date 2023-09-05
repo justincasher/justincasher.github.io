@@ -17,7 +17,7 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 | 9/22/2023 | Vladimir Shein | Motivic zeta functions | |
 | 9/29/2023 | Justin Asher | Nagata's rings | |
 | 10/6/2023 | | | |
-| 10/20/2023 | | | |
+| 10/20/2023 | Yuxuan Liao | TBD | |
 | 10/27/2023 | | | |
 | 11/3/2023 | | | |
 | 11/10/2023 | | | |
