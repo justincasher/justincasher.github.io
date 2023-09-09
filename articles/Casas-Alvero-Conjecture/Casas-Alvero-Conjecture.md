@@ -1,9 +1,9 @@
 ---
 layout: Writing
 indent: true
-permalink: /Weil-Conjectures-Intro
+permalink: /Casas-Alvero
 feedformat: card
-title: Motivating Schemes with the Weil Conjectures
+title: The Casas-Alvero Conjecture
 ---
 <style>
     ol.custom {
