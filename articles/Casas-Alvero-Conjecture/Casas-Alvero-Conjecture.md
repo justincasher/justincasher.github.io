@@ -21,10 +21,10 @@ title: The Casas-Alvero Conjecture
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\PP}{\mathbb{P}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
 <br>
 
-**Abstract.** &nbsp; 
+**Abstract.** &nbsp; The Casas-Alvero Conjecture asserts that if $$ F(X) \in k[X] $$, $$ k $$ is of characteristic 0, and $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$. We show that it is true for polynomials of degree $$ n = p^k $$ following [\[3\]](#3-references). 
 
 ## Table of Contents
 1. [Overview](#1-overview)
@@ -45,4 +45,4 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Gr}{Gr} \DeclareMat
 
 1. Eduardo Casas-Alvero, "Higher order polar germs", *Journal of Algebra* **240** (2001), no. 1, 326–337.
 2. Jan Draisma and J. W. De Jong, "On the casas-alvero conjecture", 2011.
-3. Hans-Christian Graf von Bothmer, Oliver Labs, Josef Schicho, and Christiaan van de Woestijne, "The casas-alvero conjecture for infinitely many degrees", *Journal of Algebra* **316** (2007), no. 1, 224–230.
+3. H.C. Graf von Bothmer, O. Labs, J. Schicho, and C. van de Woestijne, "The casas-alvero conjecture for infinitely many degrees", *Journal of Algebra* **316** (2007), no. 1, 224–230.
