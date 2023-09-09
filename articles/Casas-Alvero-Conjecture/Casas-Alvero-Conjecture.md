@@ -38,7 +38,22 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 **Casas-Alvero Conjecture.** &nbsp; Let $$ F(X) \in k[X] $$ for $$ k $$ of characteristic 0. If $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$.
 
-**Example.** &nbsp;
+**Example.** &nbsp; Consider (INSERT mod p case)
+
+&emsp; We start by making some assumptions. Dividing by the leading coefficient, we can assume $$ F $$ is monomial. Hence, 
+
+$$
+F(X) = \sum a_i X^i = X^n + a_{n-1} X^{n-1} + \cdots + a_1 X + a_0.
+$$
+
+&emsp; The $$ i $$th Hasse derivative is given by $$ H^i F(X) = F^{(i)}(X)/i! $$. Since our field is of characteristic 0, we are going to assume that $$ F $$ shares a root with each $$ H^i F $$ for each $$ 1 \leq i \leq n $$. We can expand this as 
+
+$$
+H^i F(X) = {n \choose i} X^{n-i} + {n-1 \choose i} a_{n-1} X^{n-i-1} + \cdots + {i+1 \choose i} a_{i+1} X + a_i.
+$$
+
+&emsp; Since $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Hence, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$. 
+
 
 ## 2. Proof
 
