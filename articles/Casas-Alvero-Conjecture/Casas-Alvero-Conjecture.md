@@ -36,7 +36,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 &emsp; Our goal is to prove the following conjecture when $$ F $$ is of degree $$ n = p^k $$ for $$ p $$ prime.
 
-**Casas-Alvero Conjecture.** &nbsp; Let $$ F(X) \in k[X] $$ for $$ k $$ of characteristic 0. If $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$.
+**Casas-Alvero Conjecture.** &nbsp; *Let $$ F(X) \in k[X] $$ for $$ k $$ of characteristic 0. If $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$.*
 
 **Example.** &nbsp; This is from [\[2\]](#3-references). Consider (INSERT mod p case)
 
@@ -52,9 +52,9 @@ $$
 H^i F(X) = {n \choose i} X^{n-i} + \cdots + {i+1 \choose i} a_{i+1} X + a_i.
 $$
 
-(iii) Because $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Hence, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$.
+(iii) Because $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Thus, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$. 
 
-
+**Theorem.** &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
 
 
 ## 2. Proof
