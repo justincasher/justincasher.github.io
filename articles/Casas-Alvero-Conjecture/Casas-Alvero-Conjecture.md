@@ -40,7 +40,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 **Example.** &nbsp; This is from [\[2\]](#3-references). Consider (INSERT mod p case)
 
-&emsp; We start by making some assumptions. (i) Dividing by the leading coefficient, we can assume $$ F $$ is monomial. Hence, 
+&emsp; We can assume the following. (i) Dividing by the leading coefficient, we can assume $$ F $$ is monomial. Hence, 
 
 $$
 F(X) = \sum a_i X^i = X^n + a_{n-1} X^{n-1} + \cdots + a_1 X + a_0.
@@ -54,12 +54,12 @@ $$
 
 (iii) Because $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Thus, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$. 
 
-**Theorem.** &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
+**Theorem** (Goal). &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
 
 
 ## 2. Proof
 
-&emsp; 
+&emsp; Recall that the resultant of two polynomials $$ F, G \in k[X] $$  
 
 
 ## 3. References
