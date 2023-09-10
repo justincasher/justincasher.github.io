@@ -21,7 +21,7 @@ title: The Casas-Alvero Conjecture
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\PP}{\mathbb{P}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} $$
 <br>
 
 **Abstract.** &nbsp; The Casas-Alvero Conjecture asserts that if $$ F(X) \in k[X] $$, $$ k $$ is of characteristic 0, and $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$. We show that it is true for polynomials of degree $$ n = p^k $$ for $$ p $$ prime following [\[3\]](#3-references). 
@@ -52,14 +52,35 @@ $$
 H^i F(X) = {n \choose i} X^{n-i} + \cdots + {i+1 \choose i} a_{i+1} X + a_i.
 $$
 
-(iii) Because $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Thus, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$. 
+(iii) Because $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Thus, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$, allowing us to restate our theorem as follows:
 
-**Theorem** (Goal). &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
+**Theorem.** &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
 
 
 ## 2. Proof
 
-&emsp; Recall that the resultant of two polynomials $$ F, G \in k[X] $$  
+&emsp; Recall that the resultant of two polynomials $$ F, G \in k[X] $$ is defined as the determinant 
+
+INSERT DETERMINANT
+
+Suppose $$ F $$ (resp. $$ G $$) has roots $$ \alpha_i $$ (resp. $$ \beta_i $$). One can rewrite the resultant as the product
+
+$$
+\Res(F, G)
+= a_n^m b_m^n \prod_{i, j} (\alpha_i - \beta_j).
+$$
+
+In particular, the $$ F $$ sharing a root with $$ H^i F $$ is equivalent to $$ \Res(F, H^i F) = 0 $$. 
+
+&emsp; Writing 
+
+$$ 
+F = X^n + Y_{n-1} X^{n-1} + \cdots + Y_1 X,
+$$
+
+we can consider $$ \Res(F, H^iF) $$ as a polynomial map from $$ \ZZ[X_1, \dots, X_{n-1}] $$ to itself. Our problem then reduces to finding the zeroes of $$ \Res(F, H^iF) $$ in our field $$ k $$. We can rephrase this using a weighted projective scheme.
+
+&emsp; Given an $$ n $$-tuple of positive integers $$ (w_1, \dots, w_n) $$ and $$ R $$ a commutative ring, we define 
 
 
 ## 3. References
