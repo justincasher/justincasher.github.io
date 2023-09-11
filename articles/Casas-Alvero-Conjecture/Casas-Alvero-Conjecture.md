@@ -102,9 +102,11 @@ $$
 
 is homogeneous in $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. We define $$ X_n $$ to be the closed subscheme of $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$ given by the sheaf of ideals $$ I_n $$.
 
-&emsp; The $$ k $$-valued points $$ X_n(k) $$ correspond to monomials over $$ k $$ of degree $$ n $$ which share a root with each Hasse derivative. Since we want $$ a_1 = \cdots = a_{n-1} = 0 $$ and $$ 0 $$ is not a point in projective space, we have the following proposition.
+&emsp; The $$ k $$-valued points $$ X_n(k) $$ correspond to monomials over $$ k $$ of degree $$ n $$ which share a root with each Hasse derivative. Since we want $$ a_1 = \cdots = a_{n-1} = 0 $$ and $$ 0 $$ is not a point in projective space, and hence
 
 **Lemma 2.1.** &nbsp; *The Casas-Alvero Conjecture is true for polynomials of degree $$ n $$ over $$ k $$ if and only if $$ X_n(k) $$ is empty.*
+
+&emsp; The following lemma tells us it e
 
 **Lemma 2.2.** &nbsp; *If $$ X_n(\FF_p) $$ is empty for some $$ p $$, then $$ X_n(k) $$ is empty.*
 
@@ -163,7 +165,7 @@ Since $$ S_1 $$ contains $$ v_p(n) = k $$ and $$ S_2 $$ does not, it is not hard
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 
-*Proof (Theorem 1.2).* Let $$ F(X) \in \FF_p[X] $$.
+*Proof (Theorem 1.2).* Let $$ F(X) \in \FF_p[X] $$. 
 
 ## 3. References
 
