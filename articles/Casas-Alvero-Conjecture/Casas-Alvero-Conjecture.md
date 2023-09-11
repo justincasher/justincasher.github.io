@@ -145,6 +145,8 @@ $$
 
 is empty. $$ \blacksquare $$
 
+**Lemma 2.3.** &nbsp; *Let $$ n = p^k $$ for $$ p $$ prime. Then for $$ j \leq n $$ we have $$ {n \choose j } \cong 0 $$ modulo $$ p $$.*
+
 ## 3. References
 
 1. Eduardo Casas-Alvero, "Higher order polar germs", *Journal of Algebra* **240** (2001), no. 1, 326–337.
