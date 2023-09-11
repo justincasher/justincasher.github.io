@@ -28,7 +28,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 ## Table of Contents
 1. [Overview](#1-overview)
-2. [Proof](#2-main-proof)
+2. [Proof](#2-proof)
 3. [References](#3-references)
 
 
@@ -165,7 +165,7 @@ Since $$ S_1 $$ contains $$ v_p(n) = k $$ and $$ S_2 $$ does not, it is not hard
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 
-*Proof (Theorem 1.2).* Let $$ F(X) \in \FF_p[X] $$. 
+*Proof (Theorem 1.2).* By Lemmas 2.1 and 2.2, we are reduced to proving the theorem for $$ F(X) \in \FF_p[X] $$. 
 
 ## 3. References
 
