@@ -38,7 +38,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 **Casas-Alvero Conjecture.** &nbsp; *Let $$ F(X) \in k[X] $$ for $$ k $$ of characteristic 0. If $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$.*
 
-**Example.** &nbsp; This is from [\[2\]](#3-references). Consider (INSERT mod p case)
+**Example 1.1.** &nbsp; This is from [\[2\]](#3-references). Consider (INSERT mod p case)
 
 &emsp; We can assume the following. (i) Dividing by the leading coefficient, we can assume $$ F $$ is monomial. Hence, 
 
@@ -54,7 +54,7 @@ $$
 
 (iii) Because $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Thus, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$, allowing us to state our target theorem as follows:
 
-**Theorem.** &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial of degree $$ n = p^k $$ satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
+**Theorem 1.2.** &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial of degree $$ n = p^k $$ satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
 
 
 ## 2. Proof
@@ -146,6 +146,12 @@ $$
 is empty. $$ \blacksquare $$
 
 **Lemma 2.3.** &nbsp; *Let $$ n = p^k $$ for $$ p $$ prime. Then for $$ j \leq n $$ we have $$ {n \choose j } \cong 0 $$ modulo $$ p $$.*
+
+*Proof.*
+
+&emsp; We now have the tools needed to prove Theorem 1.2.
+
+*Proof (Theorem 1.2).* 
 
 ## 3. References
 
