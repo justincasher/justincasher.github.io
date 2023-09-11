@@ -102,7 +102,7 @@ $$
 
 is homogeneous in $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. We define $$ X_n $$ to be the closed subscheme of $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$ given by the sheaf of ideals $$ I_n $$.
 
-&emsp; The $$ k $$-valued points $$ X_n(k) $$ correspond to monomials over $$ k $$ of degree $$ n $$ which share a root with each Hasse derivative. Since we want $$ a_1 = \cdots = a_{n-1} = 0 $$ and $$ 0 $$ is not a point in projective space, and hence
+&emsp; The $$ k $$-valued points $$ X_n(k) $$ correspond to monomials over $$ k $$ of degree $$ n $$ which share a root with each Hasse derivative. Since we want $$ a_1 = \cdots = a_{n-1} = 0 $$ and $$ 0 $$ is not a point in projective space, we have
 
 **Lemma 2.1.** &nbsp; *The Casas-Alvero Conjecture is true for polynomials of degree $$ n $$ over $$ k $$ if and only if $$ X_n(k) $$ is empty.*
 
