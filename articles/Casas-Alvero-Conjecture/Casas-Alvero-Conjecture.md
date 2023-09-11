@@ -130,7 +130,7 @@ X_n(\FF_p)
 = \Hom_{\FF_p}(\Spec \FF_p, X_n \times \FF_p),
 $$
 
-we see $$ X_n(\FF_p) $$ being empty is equivalent to $$ X_n \times \FF_p $$ being empty. In particular, the fiber of $$ \phi_n $$ at $$ p $$ is empty, and therefore the subset 
+we see $$ X_n(\FF_p) $$ being empty is equivalent to $$ X_n \times \FF_p $$ being empty. In particular, the fiber $$ X_n \times \FF_p $$ of $$ \phi_n $$ at $$ p $$ is empty, and therefore the subset 
 
 $$ 
 U = \ZZ \setminus \phi_n(X_n)
