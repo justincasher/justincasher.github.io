@@ -145,9 +145,18 @@ $$
 
 is empty. $$ \blacksquare $$
 
-**Lemma 2.3.** &nbsp; *Let $$ n = p^k $$ for $$ p $$ prime. Then for $$ j \leq n $$ we have $$ {n \choose j } \cong 0 $$ modulo $$ p $$.*
+**Lemma 2.3.** &nbsp; *Let $$ n = p^k $$ for $$ p $$ prime. Then for $$ 1 \leq i \leq n-1 $$ we have $$ {n \choose i } \cong 0 $$ modulo $$ p $$.*
 
-*Proof.*
+*Proof.* This is equivalent to showing $$ v_p({n \choose i }) > 0 $$. Indeed,
+
+$$
+\begin{aligned}
+v_p({n \choose i}) & = v_p \left( \frac{n!}{i!(n-i)!} \right) \\
+& = \sum_{h=1}^n v_p(h) - \sum_{h=1}^i v_p(h) - \sum_{h=1}^{n-i} v_p(h) \\
+& = \sum_{h=n-i+1}^n v_p(h) - \sum_{h=1}^i v_p(h) \\
+& = \sum_{h=0}^{i} v_p(h+i) - \sum_{h=1}^i v_p(h).
+\end{aligned}
+$$
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 
