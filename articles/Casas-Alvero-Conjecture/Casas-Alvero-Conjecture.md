@@ -106,7 +106,7 @@ is homogeneous in $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. We define $$ X_n $$ to be t
 
 **Lemma 2.1.** &nbsp; *The Casas-Alvero Conjecture is true for polynomials of degree $$ n $$ over $$ k $$ if and only if $$ X_n(k) $$ is empty.*
 
-&emsp; The following lemma tells us it e
+&emsp; The following lemma tells us it is enough to prove Theorem 1.2 for polynomials over $$ \FF_p $$ of degree $$ n $$.
 
 **Lemma 2.2.** &nbsp; *If $$ X_n(\FF_p) $$ is empty for some $$ p $$, then $$ X_n(k) $$ is empty.*
 
