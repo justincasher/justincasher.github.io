@@ -130,10 +130,10 @@ X_n(\FF_p)
 = \Hom_{\FF_p}(\Spec \FF_p, X_n \times \FF_p),
 $$
 
-we have $$ X_n(\FF_p) $$ being empty implies $$ X_n \times \FF_p $$ is empty. In particular, the fiber of $$ \phi_n $$ at $$ p $$ is empty, and therefore the subset 
+we see $$ X_n(\FF_p) $$ being empty is equivalent to $$ X_n \times \FF_p $$ being empty. In particular, the fiber of $$ \phi_n $$ at $$ p $$ is empty, and therefore the subset 
 
 $$ 
-U = \PP_{\ZZ}(1, \dots, n-1) \setminus \phi_n(X_n)
+U = \ZZ \setminus \phi_n(X_n)
 $$
 
 is nonempty. Furthermore, $$ X_n $$ being projective implies it is proper, and so $$ \phi_n $$ has closed image. We conclude that $$ U $$ is a nonempty open subset of $$ \ZZ $$, meaning it contains $$ (0) $$. Thus, the fiber $$ X_n \times \QQ $$ is empty, meaning
