@@ -21,7 +21,7 @@ title: The Casas-Alvero Conjecture
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\PP}{\mathbb{P}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\Spec}{Spec} $$
 <br>
 
 **Abstract.** &nbsp; The Casas-Alvero Conjecture asserts that if $$ F(X) \in k[X] $$, $$ k $$ is of characteristic 0, and $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$. We show that it is true for polynomials of degree $$ n = p^k $$ for $$ p $$ prime following [\[3\]](#3-references). 
@@ -54,12 +54,12 @@ $$
 
 (iii) Because $$ H^{n-1} F $$ is linear, we observe $$ F $$ has a zero $$ \alpha $$ in $$ k $$. Translating $$ \alpha $$ to 0 we can further assume $$ a_0 = 0 $$. Thus, we need to show that $$ a_1 = \cdots = a_{n-1} = 0 $$, allowing us to restate our theorem as follows:
 
-**Theorem.** &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
+**Theorem.** &nbsp; *Let $$ F \in k[X] $$ be a monic polynomial of degree $$ n = p^k $$ satisfying (i), (ii), and (iii) with $$ k $$ of characteristic zero. Then $$ a_1 \cdots = a_{n-1} = 0 $$.*
 
 
 ## 2. Proof
 
-&emsp; Recall that the resultant of two polynomials $$ F, G \in k[X] $$ is defined as the determinant 
+&emsp; In the sequel, write $$ k $$ for a field of characteristic zero. Recall that the resultant of two polynomials $$ F, G \in k[X] $$ is defined as the determinant 
 
 INSERT DETERMINANT
 
@@ -89,10 +89,45 @@ $$
 In classical terms, we are setting
 
 $$
-(x_0, \dots, x_n) \sim (\lambda^{w_1} x_1, \dots, \lamba^{w_n} x_n)
+(x_0, \dots, x_n) \sim (\lambda^{w_1} x_1, \dots, \lambda^{w_n} x_n)
 $$
 
 with $$ \lambda \in R $$. For an example, $$ x_1^2 x_3 + x_2 $$ is homogeneous of degree $$ 4 $$ in $$ \PP_{\ZZ}(1, 4, 2) $$.
+
+&emsp; Consider the resultant $$ \Res(F, H^i F) $$ as a polynomial in $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. CHECK Then it is homogeneous of degree $$ n(n-i) $$. Hence, the ideal 
+
+$$
+I_n = \left< \Res(F, H^iF) \mid 1 \leq i \leq n-1 \right>
+$$
+
+is homogeneous in $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. We define $$ X_n $$ to be the closed subscheme of $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$ given by the sheaf of ideals $$ I_n $$.
+
+&emsp; The $$ k $$-valued points $$ X_n(k) $$ correspond to monomials over $$ k $$ of degree $$ n $$ which share a root with each Hasse derivative. Since we want $$ a_1 = \cdots = a_{n-1} = 0 $$ and $$ 0 $$ is not a point in projective space, we have the following proposition.
+
+**Lemma 2.1.** &nbsp; *The Casas-Alvero Conjecture is true for polynomials of degree $$ n $$ over $ k $$ if and only if $$ X_n(k) $$ is empty.*
+
+**Lemma 2.2.** &nbsp; *If $$ X_n(\FF_p) $$ is empty for some $$ p $$, then $$ X_n(k) $$ is empty.*
+
+*Proof.* Since $$ k $$ is of characteristic zero, $$ \QQ $$ is a subfield of $$ k $$. Hence if
+
+$$
+X_n(\QQ) = \Hom_{\ZZ}(\Spec \QQ, X_n) 
+$$
+
+is empty, then 
+
+$$
+X_n(k) = \Hom_{\ZZ}(\Spec k, X_n) 
+$$
+
+is empty as well. Thus, we have reduced ourselves to showing $$ X_n(\QQ) $$ is empty. 
+
+&emsp; Consider the structure morphism $$ \phi_n \colon X_n \to \ZZ $$. Since 
+
+$$
+X_n(\FF_p) = \Hom_{\ZZ}(\Spec \FF_p, X_n) = \Hom_{\FF_p}(\Spec \FF, X_n \times \FF_p)
+$$
+
 
 ## 3. References
 
