@@ -154,9 +154,12 @@ $$
 v_p \left({n \choose i} \right) & = v_p \left( \frac{n!}{i!(n-i)!} \right) \\
 & = \sum_{h=1}^n v_p(h) - \sum_{h=1}^i v_p(h) - \sum_{h=1}^{n-i} v_p(h) \\
 & = \sum_{h=n-i+1}^n v_p(h) - \sum_{h=1}^{n-i} v_p(h) \\
-& = \sum_{h=0}^{n-i} v_p(h+i) - \sum_{h=1}^{n-i} v_p(h).
+& = \sum_{h=0}^{n-i} v_p(h+i) - \sum_{h=1}^{n-i} v_p(h) \\
+& = S_1 - S_2.
 \end{aligned}
 $$
+
+Since $$ S_1 $$ contains $$ v_p(n) = k $$ and $$ S_2 $$ does not, it is not hard to see $$ S_1 - S_2 > 0 $$, and hence our result. $$ \blacksquare $$
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 
