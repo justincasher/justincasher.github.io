@@ -80,8 +80,19 @@ $$
 
 we can consider $$ \Res(F, H^iF) $$ as a polynomial map from $$ \ZZ[X_1, \dots, X_{n-1}] $$ to itself. Our problem then reduces to finding the zeroes of $$ \Res(F, H^iF) $$ in our field $$ k $$. We can rephrase this using a weighted projective scheme.
 
-&emsp; Given an $$ n $$-tuple of positive integers $$ (w_1, \dots, w_n) $$ and $$ R $$ a commutative ring, we define 
+&emsp; Let $$ (w_1, \dots, w_n) $$ be an $$ n $$-tuple of positive integers and $$ R $$ be a commutative ring. Grade $$ k[x_1, \dots, x_n] $$ by setting $$ x_i $$ to be of weight (or degree) $$ w_i $$. We define *weighted projective space* as 
 
+$$ 
+\PP_R(w_1, \dots, w_n) = \text{Proj}(k[x_1, \dots, x_n])
+$$
+
+In classical terms, we are setting
+
+$$
+(x_0, \dots, x_n) \sim (\lambda^{w_1} x_1, \dots, \lamba^{w_n} x_n)
+$$
+
+with $$ \lambda \in R $$. For an example, $$ x_1^2 x_3 + x_2 $$ is homogeneous of degree $$ 4 $$ in $$ \PP_{\ZZ}(1, 4, 2) $$.
 
 ## 3. References
 
