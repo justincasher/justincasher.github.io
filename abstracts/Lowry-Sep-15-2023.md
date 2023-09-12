@@ -8,6 +8,4 @@ title: Topos Theory in Algebraic Geometry
 
 ## Nathan Lowry
 
-**Abstract.** &nbsp; The Casas-Alvero Conjecture asserts that if $$ F(X) \in k[X] $$, $$ k $$ is of characteristic 0, and $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$. We show that it is true for polynomials of degree $$ n = p^k $$ for $$ p $$ prime following [\[3\]](#3-references). 
-
-
+**Abstract.** &nbsp; Through Grothendieck's functor of points perspective, every category carries with it an ``internal language.'' In the presence of extra structure, one can even use this internal language to describe and generalize the basic notions of mathematical logic from a purely categorical perspective. In this talk, we will take a closer look at the ``internal logic'' definable on the category of sheaves over a scheme and use it to prove non-trivial result in algebraic geometry.
