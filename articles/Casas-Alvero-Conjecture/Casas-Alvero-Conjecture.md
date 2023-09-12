@@ -63,10 +63,10 @@ $$
 
 $$
 \Res(F, G) =
-{\begin{vmatrix}a_{m}&0&\cdots &0&b_{n}&0&\cdots &0\\a_{m-1}&a_{m}&\cdots &0&b_{n-1}&b_{n}&\cdots &0\\a_{m-2}&a_{m-1}&\ddots &0&b_{n-2}&b_{n-1}&\ddots &0\\\vdots &\vdots &\ddots &a_{m}&\vdots &\vdots &\ddots &b_{n}\\a_{d}&a_{1}&\cdots &\vdots &b_{0}&b_{1}&\cdots &\vdots \\0&a_{0}&\ddots &\vdots &0&b_{0}&\ddots &\vdots \\\vdots &\vdots &\ddots &a_{1}&\vdots &\vdots &\ddots &b_{1}\\0&0&\cdots &a_{0}&0&0&\cdots &b_{0}\end{vmatrix}}.
+{\begin{vmatrix}a_{m}&0&\cdots &0&b_{n}&0&\cdots &0\\a_{m-1}&a_{m}&\cdots &0&b_{n-1}&b_{n}&\cdots &0\\a_{m-2}&a_{m-1}&\ddots &0&b_{n-2}&b_{n-1}&\ddots &0\\\vdots &\vdots &\ddots &a_{m}&\vdots &\vdots &\ddots &b_{n}\\a_{0}&a_{1}&\cdots &\vdots &b_{0}&b_{1}&\cdots &\vdots \\0&a_{0}&\ddots &\vdots &0&b_{0}&\ddots &\vdots \\\vdots &\vdots &\ddots &a_{1}&\vdots &\vdots &\ddots &b_{1}\\0&0&\cdots &a_{0}&0&0&\cdots &b_{0}\end{vmatrix}}.
 $$
 
-Suppose $$ F $$ (resp. $$ G $$) has roots $$ \alpha_i $$ (resp. $$ \beta_i $$). One can rewrite the resultant as the product
+Suppose $$ F $$ (resp. $$ G $$) has roots $$ \alpha_i $$ (resp. $$ \beta_i $$). Then we can rewrite the resultant as the product
 
 $$
 \Res(F, G)
