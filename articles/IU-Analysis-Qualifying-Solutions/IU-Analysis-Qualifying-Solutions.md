@@ -1750,12 +1750,6 @@ $$
 
 *Proof.* Define $$ f \colon \RR^6 \to \RR $$ by $$ f(A, x) = P_A(x) $$; this is a $$ C^1 $$ function since it is polynomial. Fix an $$ A_0 \in G $$, and let $$ \alpha $$ be root of $$ P_{A_0} $$. Since our roots are distinct we have $$ P_{A_0}'(\alpha) \neq 0 $$. Hence, we can apply the Implicit Function Theorem to find a unique function $$ \phi_{\alpha} \colon U \to \RR $$, where $$ U $$ is a neighborhood of $$ A_0 $$, such that $$ f(x, \phi_{\alpha}(x)) = 0 $$. Since our $$ \phi_{\alpha} $$ are continuously differentiable, there exists a neighborhood of $$ A_0 $$ such that they do not intersect, i.e. $$ P_A $$ has distinct roots. $$ \blacksquare $$
 
-**2021 W P9.** &nbsp; *Suppose $$ F \colon \RR^3 \to \RR $$ is continuous, that for each $$ (x, y) \in \RR^2 $$ the function $$ z \to F(x, y, z) $$ is strictly increasing, and $$ F(x_0, y_0, z_0) $$. (a) Prove that there exists an open neighborhood $$ U $$ of $$ (x_0, y_0) $$ in $$ \RR^2 $$ such that there is a unique $$ g \colon U \to \RR $$ with $$ F(x, y, g(x, y)) = 0 $$ for $$ (x, y) \in U $$. (b) Show $$ g $$ is continuous in $$ U $$.*
-
-*Proof.* (a) Since $$ f $$ is strictly increasing in $$ z $$ it has nonzero, and thus invertible, derivative in $$ z $$. Therefore we can apply the Implicit Function Theorem to get $$ g $$. 
-
-(b) The Implicit Function Theorem tells us $$ g $$ is continuously differentiable and hence continuous. $$ \blacksquare $$
-
 **2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and*
 
 $$ 
