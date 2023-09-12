@@ -73,7 +73,7 @@ $$
 = a_n^m b_m^n \prod_{i, j} (\alpha_i - \beta_j).
 $$
 
-In particular, the $$ F $$ sharing a root with $$ H^i F $$ is equivalent to $$ \Res(F, H^i F) = 0 $$. 
+In particular, $$ F $$ sharing a root with $$ H^i F $$ is equivalent to $$ \Res(F, H^i F) = 0 $$. 
 
 &emsp; Writing 
 
