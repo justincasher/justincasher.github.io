@@ -75,7 +75,7 @@ $$
 
 In particular, $$ F $$ sharing a root with $$ H^i F $$ is equivalent to $$ \Res(F, H^i F) = 0 $$. 
 
-&emsp; Writing 
+&emsp; Setting 
 
 $$ 
 F = X^n + Y_{n-1} X^{n-1} + \cdots + Y_1 X,
@@ -97,7 +97,7 @@ $$
 
 with $$ \lambda \in R $$. For an example, $$ x_1^2 x_3 + x_2 $$ is homogeneous of degree $$ 4 $$ in $$ \PP_{\ZZ}(1, 4, 2) $$.
 
-&emsp; Consider the resultant $$ \Res(F, H^i F) $$ as a polynomial in $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. CHECK Then it is homogeneous of degree $$ n(n-i) $$. Hence, the ideal 
+&emsp; Consider the resultant $$ \Res(F, H^i F) $$ as a polynomial in the weighted projective space $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. Then it is homogeneous of degree $$ n(n-i) $$. Hence, the ideal 
 
 $$
 I_n = \left< \Res(F, H^iF) \mid 1 \leq i \leq n-1 \right>
@@ -168,7 +168,37 @@ Since $$ S_1 $$ contains $$ v_p(n) = k $$ and $$ S_2 $$ does not, it is not hard
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 
-*Proof (Theorem 1.2).* By Lemmas 2.1 and 2.2, we are reduced to proving the theorem for $$ F(X) \in \FF_p[X] $$. 
+*Proof (Theorem 1.2).* By Lemmas 2.1 and 2.2, we are reduced to proving the theorem for $$ F(X) \in \FF_p[X] $$ of degree $$ n = p^k $$. Recall 
+
+$$
+H^i F(X)
+= {n \choose i} X^{n-i} + \cdots + {i+1 \choose i} a_{i+1} X + a_i.
+$$
+
+In particular, $$ F $$ shares a root with
+
+$$
+H^{n-1} F(X) 
+= {n \choose n-1} X + a_{n-1}
+= n X + a_{n-1}
+= a_{n-1},
+$$
+
+but this is only possible if $$ a_{n-1} = 0 $$. Next we see $$ F $$ shares a root with
+
+$$
+H^{n-1} F(X) 
+= {n \choose n-2} X^2 + {n-1 \choose n-2} a_{n-1} X + a_{n-2}.
+$$
+
+By Lemma 2.3 and since $$ a_{n-1} = 0 $$,
+
+$$
+H^{n-1} F(X) 
+= a_{n-2},
+$$
+
+which implies $$ a_{n-2} = 0 $$. Proceeding by induction we see $$ a_1 = \cdots = a_{n-1} = 0 $$. $$ \blacksquare $$
 
 ## 3. References
 
