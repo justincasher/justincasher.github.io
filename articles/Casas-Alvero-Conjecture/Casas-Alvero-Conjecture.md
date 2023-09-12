@@ -38,7 +38,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 **Casas-Alvero Conjecture.** &nbsp; *Let $$ F(X) \in k[X] $$ for $$ k $$ of characteristic 0. If $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$.*
 
-**Example 1.1.** &nbsp; This is from [\[2\]](#3-references). Consider (INSERT mod p case)
+**Example 1.1.** &nbsp; This is from [\[2\]](#3-references). Consider $$ F(X) = x^4 + X^2 + 2x $$ in $$ \FF_7[X] $$. Then $$ F'(X) = 4x^3 + 2x + 2 $$ shares root $$ 4 $$ with $$ F $$, $$ F''(X) = 5X^2 + 2 $$ shares root $$ 6 $$, and $$ F'''(X) = 3x $$ shares root $$ 0 $$. But $$ F(X) $$ is not of the desired form.
 
 &emsp; We can assume the following. (i) Dividing by the leading coefficient, we can assume $$ F $$ is monomial. Hence, 
 
