@@ -34,7 +34,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 ## 1. Overview
 
-$$ . $$ versus . 
+$$ . $$ versus . and $$ , $$ versus ,
 
 &emsp; Our goal is to prove the following conjecture when $$ F $$ is of degree $$ n = p^k $$ for $$ p $$ prime.
 
