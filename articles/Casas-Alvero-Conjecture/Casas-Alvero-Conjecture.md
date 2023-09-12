@@ -34,6 +34,8 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareM
 
 ## 1. Overview
 
+$$ . $$ versus . 
+
 &emsp; Our goal is to prove the following conjecture when $$ F $$ is of degree $$ n = p^k $$ for $$ p $$ prime.
 
 **Casas-Alvero Conjecture.** &nbsp; *Let $$ F(X) \in k[X] $$ for $$ k $$ of characteristic 0. If $$ F $$ shares a root with each derivative $$ F^{(i)} $$, then $$ F(X) = (x - \alpha)^n $$ for some $$ \alpha \in k $$.*
