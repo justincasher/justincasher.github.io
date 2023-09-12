@@ -12,7 +12,7 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 | Date | Speaker | Topic | References |
 | -------- | ---------- | -------- | ---------- |
 | 8/25/2023 | Justin Asher | Motivating schemes with the Weil Conjectures | [Notes]({{'/Weil-Conjectures-Intro-S' | relative_url}}) | 
-| 9/8/2023 | Justin Asher | The Casas-Alvero Conjecture | |
+| 9/8/2023 | Justin Asher | The Casas-Alvero Conjecture | [Notes]({{'/Casas-Alvero-S' | relative_url}}) |
 | 9/15/2023 | Nathan Lowry |  Topos theory in algebraic geometry |  |
 | 9/22/2023 | Vladimir Shein | Motivic zeta functions | |
 | 9/29/2023 | Justin Asher | Nagata's rings | |
