@@ -95,7 +95,7 @@ $$
 (x_0, \dots, x_n) \sim (\lambda^{w_1} x_1, \dots, \lambda^{w_n} x_n)
 $$
 
-with $$ \lambda \in R $$. For an example, $$ x_1^2 x_3 + x_2 $$ is homogeneous of degree $$ 4 $$ in $$ \PP_{\ZZ}(1, 4, 2) $$.
+with $$ \lambda \in R $$. For example, $$ x_1^2 x_3 + x_2 $$ is homogeneous of degree $$ 4 $$ in $$ \PP_{\ZZ}(1, 4, 2) $$.
 
 &emsp; Consider the resultant $$ \Res(F, H^i F) $$ as a polynomial in the weighted projective space $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. Then it is homogeneous of degree $$ n(n-i) $$. Hence, the ideal 
 
@@ -184,7 +184,7 @@ H^{n-1} F(X)
 = a_{n-1},
 $$
 
-but this is only possible if $$ a_{n-1} = 0 $$. Next we see $$ F $$ shares a root with
+but this is only possible if $$ a_{n-1} = 0 $$. Next, we observe $$ F $$ shares a root with
 
 $$
 H^{n-1} F(X) 
@@ -198,7 +198,7 @@ H^{n-1} F(X)
 = a_{n-2},
 $$
 
-which implies $$ a_{n-2} = 0 $$. Proceeding by induction we see $$ a_1 = \cdots = a_{n-1} = 0 $$. $$ \blacksquare $$
+which implies $$ a_{n-2} = 0 $$. Proceeding by induction, we conclude $$ a_1 = \cdots = a_{n-1} = 0 $$. $$ \blacksquare $$
 
 ## 3. References
 
