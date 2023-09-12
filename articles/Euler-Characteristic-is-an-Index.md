@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /Euler-Characteristic-is-an-Index
 feedformat: card
-title: The Euler Characteristic is the Index of an Operator
+title: Euler Characteristic is the Index of an Operator
 ---
 <br>
 
