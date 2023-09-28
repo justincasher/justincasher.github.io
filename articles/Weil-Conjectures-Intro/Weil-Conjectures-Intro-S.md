@@ -106,7 +106,7 @@ $$
 
 for $$ x $$ near $$ 0 $$. 
 
-&emsp; We observe $$ B_0 = 1 $$, $$ B_1 = 0 $$, and $$ B_2 = 1 $$. This implies $$ \chi = 1 - 0 + 1 = 2 $$, which agrees with the geometric picture of moving a circle slightly off of itself and observing it has two points of intersection, and hence (iii). 
+&emsp; (iii) We observe $$ B_0 = 1 $$, $$ B_1 = 0 $$, and $$ B_2 = 1 $$. This implies $$ \chi = 1 - 0 + 1 = 2 $$. This agrees with the Euler characteristic of the Riemann sphere in the complex case.
 
 &emsp; Finally, we verify (ii) by computing 
 
