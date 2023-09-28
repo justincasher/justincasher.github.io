@@ -87,7 +87,7 @@ $$
 N_d = \frac{(q^n-q)(q^n-q) \cdots (q^n-q^{m-1})}{(q^m-1)(q^m-q) \cdots (q^m-q^{m-1})}.
 $$
 
-&emsp; We will verify the Weil Conjectures when $$ n = 2 $$ and $$ m = 1 $$, meaning we are reduced to computing the zeta function for 1-dimensional projectice space $$ \PP_{\FF_p}^1 $$. Solving for $$ Z(U) $$ in (i),
+&emsp; We will verify the Weil Conjectures when $$ n = 2 $$ and $$ m = 1 $$, meaning we are reduced to computing the zeta function for 1-dimensional projective space $$ \PP_{\FF_p}^1 $$. Solving for $$ Z(U) $$ in (i),
 
 $$
 \begin{aligned}
@@ -106,7 +106,7 @@ $$
 
 for $$ x $$ near $$ 0 $$. 
 
-&emsp; We observe $$ B_0 = 1 $$, $$ B_1 = 0 $$, and $$ B_2 = 1 $$. This implies $$ \chi = 1 - 0 + 1 = 2 $$, which agrees with the geometric picture of moving a circle slightly off of itself and observing it has two points of intersection, and hence (iii). 
+&emsp; We observe $$ B_0 = 1 $$, $$ B_1 = 0 $$, and $$ B_2 = 1 $$. This implies $$ \chi = 1 - 0 + 1 = 2 $$. This agrees with the Euler characteristic of the Riemann sphere in the complex case.
 
 &emsp; Finally, we verify (ii) by computing 
 
