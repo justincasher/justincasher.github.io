@@ -238,7 +238,7 @@ $$
 
 which is indeed the usual notion of addition on $$ \NN $$. Thus, the $$ K $$-group of finite sets is $$ \ZZ $$. Furthermore, (Cartesian) products of sets allow us to define multiplication.
 
-**Example 3.2.** &nbsp; Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally. We denote the K-group of this category $$ KO_0(X) $$. It is referred to as *real topological K-theory*.
+**Example 3.2.** &nbsp; Write $$ X $$ for a compact Hausdorff space, and consider the category of real vector bundles on $$ X $$ with the coproduct being given locally (i.e. the Whitney sum). We denote the K-group of this category $$ KO_0(X) $$. It is referred to as *real topological K-theory*.
 
 **Example 3.3.** &nbsp; Let $$ R $$ be a ring, and consider the category of finitely generated projective modules on $$ X $$ with the usual coproduct. We denote the K-theory of this category $$ K_0(R) $$. It is referred to as *algebraic K-theory*.
 
