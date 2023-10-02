@@ -212,7 +212,7 @@ reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than 
 
 &emsp; Let $$ \cC $$ be a suitably nice category, i.e. abelian. Objects being isomorphic is an equivalence relation. Thus, if $$ A $$ and $$ B $$ are isomorphic, then we say that $$ A $$ and $$ B $$ belong to the same isomorphism class, which we denote $$ [A] = [B] $$. We further write $$ [\Ob(\cC)] $$ for the class of all isomorohism classes in $$ \cC $$.
  
-&emsp; Suppose coproducts exist in $$ \cC $$, that every element in $$ \cC $$ is projective, and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$, which is commutative since $$ A \oplus B \cong B \oplus A $$. (If we do not assume every object is projective, then we can define addition by $$ 0 \to A \to B \to C $$  implies $$ [B] = [A] + [C] $$.) We append inverses by as follows. 
+&emsp; Suppose coproducts exist in $$ \cC $$, that every element in $$ \cC $$ is projective meaning $$ \cC $$ is semisimple, and that the collection of isomorphism classes form a set, i.e. $$ \cC $$ modulo isomorphism is a set. Then we can form a monoid with elements $$ [\Ob(\cC)] $$ and addition $$ [A] + [B] = [A \oplus B] $$, which is commutative since $$ A \oplus B \cong B \oplus A $$. (If we do not assume every object is projective, then we can define addition by $$ 0 \to A \to B \to C $$  implies $$ [B] = [A] + [C] $$.) We append inverses by as follows. 
 
 &emsp; Write $$ (M, +) $$ for a commutative monoid and an element of $$ M \times M $$ as a pair $$ (m^+, m^-) $$. Consider two such pairs $$ (m_1^+, m_1^-) $$ and $$ (m_2^+, m_2^-) $$. We add them component-wise
 
