@@ -178,12 +178,12 @@ $$
 2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|
 $$
 
-to bound $$ \mid \tau(p) \mid $$. Deligne's proof then relies on the Riemann hypothesis part of the Weil conjectues to compute the absolute value of $$ \alpha_{\pm} $$.
+to bound $$ \mid \tau(p) \mid $$. Deligne's proof relies on the Riemann hypothesis part of the Weil conjectues to compute the absolute value of $$ \alpha_{\pm} $$.
 
 
 ## 3. Deligne's Proof
 
-&emsp; 
+&emsp; We would like to prove $$ H_p(X) = \det(1-FX; _1^10 W_{\ell}) $$
 
 
 ## 4. References
