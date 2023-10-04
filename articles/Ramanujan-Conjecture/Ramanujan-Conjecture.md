@@ -101,7 +101,7 @@ T_k(n) F(L)
 = n^{k-1} \sum_{[L : L'] = n} F(L'). 
 $$
 
-Using our correspondence, this is yields an operator $$ T_k(n) \colon M_k \to M_k $$. These satisfy $$ T_k(m) T_k(n) = T_k(mn) $$ for $$ m $$ and $$ n $$  coprime, and for $$ p $$ prime 
+Using our correspondence, this is yields an operator $$ T_k(n) \colon M_k \to M_k $$. These satisfy $$ T_k(m) T_k(n) = T_k(mn) $$ for $$ m $$ and $$ n $$  coprime, and for $$ p $$ prime,
 
 $$
 T_k(p^r) T_k(p)
@@ -122,10 +122,11 @@ $$
 
 If $$ f $$ is an eigenform this series factors.
 
-**Theorem** &emsp; *Suppose $$ f $$ is an eigenform of weight $$ k $$. Then its Dirichlet series is*
+**Theorem** &emsp; *Let $$ f $$ is an eigenform of weight $$ k $$. Then its Dirichlet series factors as*
 
 $$
-
+D_f(z) =
+\prod_{p \text{ prime}} (1-a_p p^{-z} + p^{k-1-2z})^{-1}
 $$
 
 
