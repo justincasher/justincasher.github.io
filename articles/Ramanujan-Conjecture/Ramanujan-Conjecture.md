@@ -170,18 +170,16 @@ H_p(z)
 = 1 - \tau(p) z + p^{11} z^2.
 $$
 
-We see $$ H_p $$ has roots
+**Lemma 3.1.** &nbsp; *Ramanujan's conjecture is if the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$.* 
+
+*Proof.* We see $$ H_p $$ has roots
 
 $$
 \alpha_{\pm}
 = \frac{\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}}{2}
 $$
 
-This allows us to deduce the Ramanujan conjecture from the Weil conjectures via the following lemma.
-
-**Lemma 3.1.** &nbsp; *Ramanujan's conjecture is if the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$.* 
-
-*Proof.* Since
+Hence, if
 
 $$
 2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|,
@@ -189,7 +187,16 @@ $$
 
 choosing our sign $$ \pm $$ appropriately shows $$ \vert \tau(p) \vert \leq 2 p^{11/2}. $$ $$ \blacksquare $$
 
-&emsp; We would like to find a representation $$ \rho \colon \Gal(\overline{\QQ}/\QQ) \to \GL_2(\QQ_{\ell}) $$ such that $$ H_p(X) = \det(1-FX; W_{\ell}) $$.  
+&emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \QQ_\ell $$ vector space $$ _1^10 W_{\ell} $$. Deligne shows that 
+
+$$ 
+H_p(z) = \det(1-FX; \, _1^10 W_{\ell}),
+$$
+
+and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result will then follow from the Weil conjectures.
+
+Thus, if we can construct such a vector space $$ W_{\ell} $$, 
+
 
 So we define 
 
