@@ -20,19 +20,20 @@ title: The Ramanujan Conjecture
     }
 }
 </style>
-$$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{CL}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL}  \DeclareMathOperator{\Spec}{Spec} $$
 <br>
 
 **Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture.
 
 ## Table of Contents
-1. [Background](#1-background)
-2. [Deligne](#2-deligne)
-3. [References](#3-references)
+1. [Modular Forms](#1-Modular Forms)
+2. [Ramanujan's Conjectures](#2-ramanujans-conjectures)
+3. [Deligne's Proof](#3-delignes-proof)
+4. [References](#references)
 
 
-## 1. Background
+## 1. Modular Forms
 
 &emsp; Let 
 
@@ -41,7 +42,7 @@ $$
 = \{ z \in \CC \mid \text{im} \, z > 0 \}
 $$
 
-denote the upper half complex plane. The group $$ \SL_2(\ZZ) $$ acts on $$ \CH $$ via mobius transformations
+denote the upper half complex plane. The group $$ \SL_2(\ZZ) $$ acts on $$ \CH $$ via Möbius transformations
 
 $$
 \gamma
@@ -102,11 +103,13 @@ $$
 
 Using our correspondence, this is yields an operator $$ T_k(n) \colon M_k \to M_k $$. 
 
-## 2. Deligne
+## 2. Ramanujan's Conjectures
+
+## 3. Deligne's Proof
 
 &emsp; 
 
 
-## 3. References
+## 4. References
 
 1. 
