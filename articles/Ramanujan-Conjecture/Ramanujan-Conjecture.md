@@ -172,7 +172,13 @@ $$
 = \frac{\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}}{2}
 $$
 
-Ramanujan's third conjecture is follows from showing the roots of $$ H_p $$ being of absolute value $$ p^{11/2} $$.
+&emsp; Ramanujan's third conjecture is follows from showing the roots of $$ H_p $$ being of absolute value $$ p^{11/2} $$. Indeed
+
+$$
+2 p^{11/2} = |\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}|
+$$
+
+implies $$ |\tau(p)| \leq 2 p^{11/2} $$.
 
 ## 3. Deligne's Proof
 
