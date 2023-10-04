@@ -202,17 +202,17 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 &emsp; Let $$ S $$ be a complex analytic space. An *elliptic curve* on $$ S $$ is a map $$ f \colon E \to S $$ with a section $$ e \colon S \to E $$, such that the fibres of $$ f $$ are elliptic curves with origin given by $$ e $$.
 
-&emsp; We denote $$ \omega = f_* \Omega^1_{E/S} $$. 
-
 &emsp; We say an isomorphism $$ R^1 f_* \underline{\ZZ} \to \underline{\ZZ}^2 $$ of sheaves on $$ S $$ is *permitted* if it induces -1 on the map 
 
 $$ 
 \bigwedge^2 R^1 f_* \underline{\ZZ} \to \bigwedge^2 \underline{\ZZ}^2.
 $$
 
-&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set $$ X = \CC^* \backslash \Isom^+(\RR^2, \CC) $$.
+&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set $$ X = \CC^* \backslash \Isom^+(\RR^2, \CC) $$. We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where $$ e_1, e_2 $$ are sent.
 
 **Proposition 3.2.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
+
+&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$, $$ z \in \CC^{\times} $$. We therefore construct a universal elliptic curve $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
 
