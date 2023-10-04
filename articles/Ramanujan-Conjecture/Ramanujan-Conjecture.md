@@ -198,11 +198,13 @@ $$
 and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result will then follow from the Riemann hypothesis of the Weil conjectures. 
 
 
-#### The Shimura isomorphism
+#### The Shimura Isomorphism
 
 &emsp; We begin by expressing $$ M_k $$ as the space of global sections of a sheaf. 
 
-**Theorem (Shimura).** &nbsp; *There exists an isomorphism $$ \sh $$ making the following diagram commute:* 
+**Proposition.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$ equipped with $$ R_1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
+
+**Theorem (Shimura).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
 
 $$
 \xymatrix{ 
