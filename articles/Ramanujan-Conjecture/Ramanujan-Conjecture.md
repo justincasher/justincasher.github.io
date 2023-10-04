@@ -172,13 +172,15 @@ $$
 = \frac{\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}}{2}
 $$
 
-&emsp; Ramanujan's third conjecture is follows from showing the roots of $$ H_p $$ being of absolute value $$ p^{11/2} $$. Indeed
+&emsp; Ramanujan's third conjecture is follows from showing the roots of $$ H_p $$ being of absolute value $$ p^{11/2} $$. Indeed, consider
 
 $$
-2 p^{11/2} = |\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}|
+2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|
 $$
 
-implies \( |\tau(p)| \leq 2 p^{11/2} \). Showing the \( |\alpha_{\pm}| = p^{11/2} \) $$ can be done using the Riemann hypothesis of the Weil conjectures.
+to bound <p> \tau(p) </p>.
+
+This can be done that \( |\alpha_{\pm}| = p^{11/2} \) $$ can be done using the Riemann hypothesis of the Weil conjectures.
 
 
 ## 3. Deligne's Proof
