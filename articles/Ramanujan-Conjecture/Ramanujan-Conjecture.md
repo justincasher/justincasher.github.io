@@ -24,7 +24,7 @@ $$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\FF}{
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
-**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. Note that we skip most of the main proofs, focusing on the main objects.
+**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so they skip many proofs.
 
 ## Table of Contents
 1. [Modular Forms](#1-Modular Forms)
@@ -158,7 +158,7 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
 
 #### Overview
 
-&emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. Theorem 1 tells us
+&emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. By Theorem 1,
 
 $$
 D(s)
@@ -172,7 +172,7 @@ H_p(z)
 = 1 - \tau(p) z + p^{11} z^2.
 $$
 
-**Lemma 3.1.** &nbsp; *Ramanujan's conjecture is if the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$.* 
+**Lemma 3.1.** &nbsp; *Ramanujan's conjecture is true if the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$.* 
 
 *Proof.* We see $$ H_p $$ has roots
 
@@ -189,7 +189,7 @@ $$
 
 choosing our sign $$ \pm $$ appropriately shows $$ \vert \tau(p) \vert \leq 2 p^{11/2}. $$ $$ \blacksquare $$
 
-&emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \QQ_\ell $$ vector space $$ _1^10 W_{\ell} $$. Deligne shows that 
+&emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \QQ_\ell $$ vector space $$ _1^10 W_{\ell} $$. Deligne proves 
 
 $$ 
 H_p(z) = \det(1-FX; \, _1^{10} W_{\ell}),
@@ -197,7 +197,6 @@ $$
 
 and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result will then follow from the Weil conjectures.
 
-Thus, if we can construct such a vector space $$ W_{\ell} $$, 
 
 #### Step 1 
 
