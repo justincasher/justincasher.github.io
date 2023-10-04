@@ -215,7 +215,7 @@ $$
 &emsp; Set $$ \omega = f_* \Omega_{X/S} $$. We identify $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ to the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, and $$ \omega^{-1} $$ to $$ R^1 f_* \CO_X $$ by Poincaré duality. Then the Hodge decomposition
 
 $$
-\CH^1(X) \cong \CH^0(X, \Omega^1_X) \oplus \CH^1(X, \Omega^0_X)
+\CH^1(Z) \cong \CH^0(Z, \Omega^1_Z) \oplus \CH^1(Z, \Omega^0_Z)
 $$
 
 yields a short exact sequence 
