@@ -21,7 +21,7 @@ title: The Ramanujan Conjecture
 }
 </style>
 $$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
 **Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so they skip many proofs.
@@ -200,9 +200,19 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 #### The Shimura Isomorphism
 
-&emsp; Let $$ S $$ be a 
+&emsp; Let $$ S $$ be a complex analytic space. An *elliptic curve* on $$ S $$ is a map $$ f \colon E \to S $$ with a section $$ e \colon S \to E $$, such that the fibres of $$ f $$ are elliptic curves with origin given by $$ e $$.
 
-**Proposition.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R_1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
+&emsp; We denote $$ \omega = f_* \Omega^1_{E/S} $$. 
+
+&emsp; We say an isomorphism $$ R^1 f_* \underline{\ZZ} \to \underline{\ZZ}^2 $$ of sheaves on $$ S $$ is *permitted* if it induces -1 on the map 
+
+$$ 
+\bigwedge^2 R^1 f_* \underline{\ZZ} \to \bigwedge^2 \underline{\ZZ}^2.
+$$
+
+&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set $$ X = \CC^* \ \Isom^+(\RR^2, \CC) $$ 
+
+**Proposition.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
 **Theorem (Shimura).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
 
