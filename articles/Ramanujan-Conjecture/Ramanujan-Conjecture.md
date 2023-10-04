@@ -165,6 +165,8 @@ H_p(z)
 = 1 - \tau(p) z + p^{11} z^2.
 $$
 
+Ramanujan's third conjecture is equivalent to the roots of this polynomial being of absolute value $$ p^{-11/2} $$.
+
 ## 3. Deligne's Proof
 
 &emsp; 
