@@ -205,6 +205,7 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 **Theorem (Shimura).** &nbsp; *There exists an isomorphism $$ \sh $$ making the following diagram commute:* 
 
 $$
+\xymatrixcolsep{5pc}
 \xymatrix{ 
     H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)}  \ar[r]^{\sh} & \widetilde{H}^1(X, U^k \otimes \CC) \\
     H^0(X, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(X, \Omega^0 \otimes \omega^k)}  \ar[r]_{\sh_0} & \widetilde{H}^1(X, U^k \otimes \CC) 
