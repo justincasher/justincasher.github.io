@@ -156,6 +156,8 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
 
 ## 3. Deligne's Proof
 
+#### Overview
+
 &emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. Theorem 1 tells us
 
 $$
@@ -190,13 +192,14 @@ choosing our sign $$ \pm $$ appropriately shows $$ \vert \tau(p) \vert \leq 2 p^
 &emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \QQ_\ell $$ vector space $$ _1^10 W_{\ell} $$. Deligne shows that 
 
 $$ 
-H_p(z) = \det(1-FX; \, _1^10 W_{\ell}),
+H_p(z) = \det(1-FX; \, _1^{10} W_{\ell}),
 $$
 
 and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result will then follow from the Weil conjectures.
 
 Thus, if we can construct such a vector space $$ W_{\ell} $$, 
 
+#### Step 1 
 
 So we define 
 
