@@ -200,9 +200,9 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 #### The Shimura Isomorphism
 
-&emsp; We begin by expressing $$ M_k $$ as the space of global sections of a sheaf. 
+&emsp; Let $$ S $$ be a 
 
-**Proposition.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$ equipped with $$ R_1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
+**Proposition.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R_1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
 **Theorem (Shimura).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
 
