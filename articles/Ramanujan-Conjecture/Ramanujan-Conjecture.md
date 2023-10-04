@@ -69,7 +69,7 @@ $$
 \lim_{\im(z) \to \infty} (cz+d)^{-k} f(\gamma(z)) = 0.
 $$
 
-We denote the space of modular forms of weight $$ k $$ by $$ M_k $$, and of cusp forms by $$ S_k $$.
+This is equivalent to $$ f $$ having constant term 0 in its $$ q $$ expansion. We denote the space of modular forms of weight $$ k $$ by $$ M_k $$, and of cusp forms by $$ S_k $$.
 
 &emsp; We can consider modular forms as homogenious functions $$ F \colon \CL \to \CC $$ on complex lattices of degree $$ -k $$. Here, $$ \CL $$ is the space of complex lattices $$ \ZZ[a, b] $$ with $$ a, b \in \CC $$; and homogeneity means for $$ \lambda \in \CC^{\times} $$
 
@@ -122,7 +122,7 @@ $$
 
 If $$ f $$ is an eigenform this series factors.
 
-**Theorem 1.** &emsp; *Let $$ f $$ is an eigenform of weight $$ k $$. Then its Dirichlet series factors as*
+**Theorem 1.** &nbsp; *Let $$ f $$ is an eigenform of weight $$ k $$. Then its Dirichlet series factors as*
 
 $$
 D_f(z) =
@@ -131,6 +131,15 @@ $$
 
 
 ## 2. Ramanujan's Conjectures
+
+&emsp; Consider the space $$ M_{12} $$. It is of dimension 1 and contains the cusp form
+
+$$
+\Delta(z)
+= \sum_{n>0} \tau(n) q^n
+= q \prod_{n > 0} (1-q^n)^{24}.
+$$ 
+
 
 ## 3. Deligne's Proof
 
