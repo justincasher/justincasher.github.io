@@ -212,7 +212,7 @@ $$
 
 &emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$. We therefore construct a universal elliptic curve $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
 
-&emsp; Set $$ \omega = f_* \Omega_{X/S} $$. Since $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ is the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, the Hodge decomposition
+&emsp; Set $$ \omega = f_* \Omega_{X/S} $$. We identify $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ to the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, and $$ \omega^{-1} $$ to $$ R^1 f_* \CO_X $$ by Poincaré duality. Then the Hodge decomposition
 
 $$
 \CH^1(X) \cong \CH^0(X, \Omega^1_X) \oplus \CH^1(X, \Omega^0_X)
