@@ -151,7 +151,7 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
   <li>\( |\tau(p)| \leq 2 p^{11/2} \). </li>
 </ol>
 
-&emsp; These were conjectured in 1916. The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne in 1971 (modulo the Weil conjectures).
+&emsp; These were conjectured in 1916. The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne in 1971 (modulo the Weil conjectures). We will refer to this as ``Ramanujan's conecture'' in the sequel.
 
 
 ## 3. Deligne's Proof
@@ -177,13 +177,20 @@ $$
 = \frac{\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}}{2}
 $$
 
-&emsp; Ramanujan's third conjecture follows from showing the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$: use
+This allows us to deduce the Ramanujan conjecture from the Weil conjectures via the following lemma.
+
+**Lemma 3.1.** &nbsp; *Ramanujan's conjecture is if the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$.* 
+
+*Proof.* Since
 
 $$
-2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|
+2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|,
 $$
 
-to bound $$ \vert \tau(p) \vert $$. To compute the absolute value of $$ \alpha_{\pm} $$, we will use the Riemann hypothesis part of the Weil conjectues. 
+choosing our sign $$ \pm $$ appropriately shows $$ \vert \tau(p) \vert \leq 2 p^{11/2. $$ $$ \blacksquare $$
+
+&emsp; 
+
 
 &emsp; We would like to prove $$ H_p(X) = \det(1-FX; \, _1^{10} W_{\ell}) $$
 
