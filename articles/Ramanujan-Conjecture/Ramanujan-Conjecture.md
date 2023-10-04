@@ -206,7 +206,7 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 $$
 \xymatrix{ 
-    H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)} \ar@{^{(}->}[d] \ar[r]^-\sh & \widetilde{H}^1(X, U^k \otimes \CC) \\
+    H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)} \ar@{^{(}->}[d] \ar[r]^-\sh & \widetilde{H}^1(X, U^k \otimes \CC) \ar@{^{(}->}[d] \\
     H^0(X, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(X, \Omega^0 \otimes \omega^k)}  \ar[r]^-{\sh_0} & \widetilde{H}^1(X, U^k \otimes \CC) 
 } 
 $$
