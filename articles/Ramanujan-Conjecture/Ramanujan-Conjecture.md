@@ -35,7 +35,7 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 
 ## 1. Modular Forms
 
-&emsp; Let 
+&emsp; See Lang's book (CITE) for the details of this section. Let 
 
 $$ 
 \CH 
