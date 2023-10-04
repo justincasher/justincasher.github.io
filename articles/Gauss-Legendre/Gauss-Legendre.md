@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /Gauss-Legendre
 feedformat: card
-title: Gauss-Legendre Algorithm
+title: The Gauss-Legendre Algorithm
 ---
 <br>
 
