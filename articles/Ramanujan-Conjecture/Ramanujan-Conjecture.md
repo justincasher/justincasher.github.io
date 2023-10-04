@@ -142,7 +142,7 @@ $$
 
 and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The coefficient function $$ \tau \colon \NN \to \CC $$ is called the *Ramanujan tau function*. 
 
-**Ramanujan conjecture.** &nbsp; *The following should hold:
+**Ramanujan conjecture.** &nbsp; *The following should hold:*
 <ol type="1" class="custom" style="list-style-position: outside">
   <li>\( \tau(m) \tau(n) = \tau(mn) \) for \( m \) and \( n \) coprime;</li>
   
@@ -151,7 +151,7 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
   <li>\( |\tau(p))| \leq 2 p^{11/2} \). </li>
 </ol>
 
-&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in.
+&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in. 
 
 ## 3. Deligne's Proof
 
