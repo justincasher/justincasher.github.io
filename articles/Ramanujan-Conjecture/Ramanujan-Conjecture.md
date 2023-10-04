@@ -142,7 +142,7 @@ $$
 
 and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The coefficient function $$ \tau \colon \NN \to \CC $$ is called the *Ramanujan tau function*. 
 
-**Ramanujan conjecture.** &nbsp; *The following should hold:*
+**Ramanujan Conjectures.** &nbsp; *The following should hold:*
 <ol type="1" class="custom" style="list-style-position: outside">
   <li>\( \tau(m) \tau(n) = \tau(mn) \) for \( m \) and \( n \) coprime;</li>
   
@@ -178,7 +178,8 @@ $$
 2 p^{11/2} = |\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}|
 $$
 
-implies $$ |\tau(p)| \leq 2 p^{11/2} $$. Showing the roots are of absolute value $$ p^{11/2} $$ can be done using the Riemann hypothesis of the Weil conjectures.
+implies \( |\tau(p)| \leq 2 p^{11/2} \). Showing the roots are of absolute value $$ p^{11/2} $$ can be done using the Riemann hypothesis of the Weil conjectures.
+
 
 ## 3. Deligne's Proof
 
