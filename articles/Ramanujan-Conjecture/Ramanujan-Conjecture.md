@@ -185,7 +185,7 @@ to bound $$ \vert \tau(p) \vert $$. To compute the absolute value of $$ \alpha_{
 
 ## 3. Deligne's Proof
 
-&emsp; We would like to prove $$ H_p(X) = \det(1-FX; _1^10 W_{\ell}) $$
+&emsp; We would like to prove $$ H_p(X) = \det(1-FX; \, _1^{10} W_{\ell}) $$
 
 
 ## 4. References
