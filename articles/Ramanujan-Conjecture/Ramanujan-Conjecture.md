@@ -200,14 +200,14 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 #### The Shimura isomorphism
 
-&emsp; We begin by expressing $$ M_k $$ the global sections of a sheaf. 
+&emsp; We begin by expressing $$ M_k $$ as the space of global sections of a sheaf. 
 
 **Theorem (Shimura).** &nbsp; *There exists an isomorphism $$ \sh $$ making the following diagram commute:* 
 
 $$
 \xymatrix{ 
-    H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)}  \ar[r]_{\sh} & \widetilde{H}^1(X, U^k \otimes \CC) \\
-    H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)}  \ar[r]_{\sh_0} & \widetilde{H}^1(X, U^k \otimes \CC) 
+    H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)}  \ar[r]^{\sh} & \widetilde{H}^1(X, U^k \otimes \CC) \\
+    H^0(X, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(X, \Omega^0 \otimes \omega^k)}  \ar[r]_{\sh_0} & \widetilde{H}^1(X, U^k \otimes \CC) 
 } 
 $$
 
