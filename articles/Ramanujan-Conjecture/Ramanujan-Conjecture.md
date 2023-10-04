@@ -20,7 +20,7 @@ title: The Ramanujan Conjecture
     }
 }
 </style>
-$$ \newcommand{\CH}{\mathcal{H}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\PP}{\mathbb{P}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \newcommand{\CH}{\mathcal{H}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL}  \DeclareMathOperator{\Spec}{Spec} $$
 <br>
 
@@ -58,15 +58,14 @@ We denote this action by $$ \gamma(z) $$.
 
 &emsp; A holomorphic function $$ f \colon \CH \to \CC $$ is called a *modular form of weight $$ k $$* if for any $$ \gamma \in \SL_2(\ZZ) $$,
 <ol type="a" class="custom" style="list-style-position: outside">
-  <li>$$ f(\gamma(z) = (cz+d)^k f(z) $$; and</li>
+  <li>\( f(\gamma(z) = (cz+d)^k f(z) \); and</li>
   
-  <li>$$ (cz+d)^{-k}f(\gamma(z)) $$ remains bounded as $$ \im(z) $$ approaches infinity.</li>
+  <li>\( (cz+d)^{-k}f(\gamma(z)) \) remains bounded as \( \im(z) \) approaches infinity.</li>
 </ol>
-Condition (b) is equivalent to $ f $ having a $ q $-expansion at infinity. Additionally, we call $$ f $$ as cusp form if 
+Condition (b) is equivalent to $$ f $$ having a $$ q $$-expansion at infinity. Additionally, we call $$ f $$ as cusp form if 
 
 $$ 
-\lim_{\im(z) \to \infty}
-(cz+d)^{-k) f(\gamma(z)) = 0.
+\lim_{\im(z) \to \infty} (cz+d)^{-k} f(\gamma(z)) = 0.
 $$
 
 We denote the space of modular forms of weight $$ k $$ by $$ M_k $$, and of cusp forms by $$ S_k $$.
