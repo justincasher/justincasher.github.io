@@ -21,10 +21,10 @@ title: The Ramanujan Conjecture
 }
 </style>
 $$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL}  \DeclareMathOperator{\Spec}{Spec} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
-**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture.
+**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. Note that we skip most of the main proofs, focusing on the main objects.
 
 ## Table of Contents
 1. [Modular Forms](#1-Modular Forms)
@@ -151,7 +151,7 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
   <li>\( |\tau(p)| \leq 2 p^{11/2} \). </li>
 </ol>
 
-&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne. 
+&emsp; These were conjectured in 1916. The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne in 1971 (modulo the Weil conjectures).
 
 &emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. Theorem 1 tells us
 
@@ -187,6 +187,14 @@ to bound $$ \vert \tau(p) \vert $$. To compute the absolute value of $$ \alpha_{
 
 &emsp; We would like to prove $$ H_p(X) = \det(1-FX; \, _1^{10} W_{\ell}) $$
 
+So we define 
+
+$$
+^{10}_1 W_{\ell}
+= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \Sym^k(R^1 f_{n *}(\underline{\QQ}_{\ell})))
+$$
+
+and the Frobenious $$ F $$ as on page 161. 
 
 ## 4. References
 
