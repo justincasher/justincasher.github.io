@@ -111,10 +111,10 @@ for $$ p $$ prime.
 &emsp; We say a modular form $$ f $$ of weight $$ k $$ is an *eigenform* if it is an eigenvector for every $$ T_k(n) $$. Suppose $$ f $$ has a $$ q $$-expansion 
 
 $$ 
-f(q) = \sum_{n=0}^{\infty} a_n q^n.
+f(q) = \sum_{n=0}^{\infty} a_n q^n
 $$ 
 
-We can then attach a Dirichlet series to $$ f $$ by 
+with $$ q= e^{2 \pi i z} $$. We can then attach a Dirichlet series to $$ f $$ by 
 
 $$
 D_f(z) = \sum_{n=1}^{\infty} a_n n^{-z}.
@@ -132,14 +132,26 @@ $$
 
 ## 2. Ramanujan's Conjectures
 
-&emsp; Consider the space $$ M_{12} $$. It is of dimension 1 and contains the cusp form
+&emsp; Consider the space $$ M_{12} $$. It contains the cusp form
 
 $$
 \Delta(z)
 = \sum_{n>0} \tau(n) q^n
-= q \prod_{n > 0} (1-q^n)^{24}.
+= q \prod_{n > 0} (1-q^n)^{24},
 $$ 
 
+and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The coefficient function $$ \tau \colon \NN \to \CC $$ is called the *Ramanujan tau function*. 
+
+**Ramanujan conjecture.** &nbsp; *The following should hold:
+<ol type="1" class="custom" style="list-style-position: outside">
+  <li>\( \tau(m) \tau(n) = \tau(mn) \) for \( m \) and \( n \) coprime;</li>
+  
+  <li>\(\tau(p^r) \tau(p) = \tau(p^{r+1}) + p^{11} \tau(p^{r-1}) \) for \( p \) prime; and</li>
+  
+  <li>\( |\tau(p))| \leq 2 p^{11/2} \). </li>
+</ol>
+
+&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in.
 
 ## 3. Deligne's Proof
 
