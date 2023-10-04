@@ -21,7 +21,7 @@ title: The Ramanujan Conjecture
 }
 </style>
 $$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
 **Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so they skip many proofs.
@@ -122,7 +122,7 @@ $$
 
 If $$ f $$ is an eigenform this series factors.
 
-**Theorem 1.** &nbsp; *Let $$ f $$ is an eigenform of weight $$ k $$. Then its Dirichlet series factors as*
+**Theorem 1.** &nbsp; *Let $$ f $$ be an eigenform of weight $$ k $$. Then its Dirichlet series factors as*
 
 $$
 D_f(s) =
@@ -200,9 +200,18 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 #### The Shimura isomorphism
 
+&emsp; We begin by expressing $$ M_k $$ the global sections of a sheaf. 
 
+**Theorem (Shimura).** &nbsp; *There exists an isomorphism $$ \sh $$ making the following diagram commute:* 
 
-####
+$$
+\xymatrix{ 
+    H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)}  \ar[r]_{\sh} & \widetilde{H}^1(X, U^k \otimes \CC) \\
+    H^0(\overline{X}, \Omega^0 \otimes \omega^k) \oplus \overline{H^0(\overline{X}, \Omega^0 \otimes \omega^k)}  \ar[r]_{\sh_0} & \widetilde{H}^1(X, U^k \otimes \CC) 
+} 
+$$
+
+#### Step 2
 
 So we define 
 
