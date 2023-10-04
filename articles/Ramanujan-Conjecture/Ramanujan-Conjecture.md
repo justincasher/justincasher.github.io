@@ -117,7 +117,7 @@ $$
 with $$ q= e^{2 \pi i z} $$. We can then attach a Dirichlet series to $$ f $$ by 
 
 $$
-D_f(z) = \sum_{n=1}^{\infty} a_n n^{-z}.
+D_f(s) = \sum_{n=1}^{\infty} a_n n^{-s}.
 $$
 
 If $$ f $$ is an eigenform this series factors.
@@ -125,8 +125,8 @@ If $$ f $$ is an eigenform this series factors.
 **Theorem 1.** &nbsp; *Let $$ f $$ is an eigenform of weight $$ k $$. Then its Dirichlet series factors as*
 
 $$
-D_f(z) =
-\prod_{p \text{ prime}} (1-a_p p^{-z} + p^{k-1-2z})^{-1}.
+D_f(s) =
+\prod_{p \text{ prime}} (1-a_p p^{-s} + p^{k-1-2s})^{-1}.
 $$
 
 
@@ -151,7 +151,19 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
   <li>\( |\tau(p))| \leq 2 p^{11/2} \). </li>
 </ol>
 
-&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in. 
+&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in. Let $$ D $$ denote the associated Dirichlet series. Theorem 1 tells us
+
+$$
+D(s)
+= \prod_{p \text{ prime}} H_p(p^{-s})^{-1},
+$$
+
+where 
+
+$$
+H_p(z)
+= 1 - \tau(p) z + p^{11} z^2.
+$$
 
 ## 3. Deligne's Proof
 
