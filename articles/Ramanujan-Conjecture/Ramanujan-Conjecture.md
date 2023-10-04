@@ -153,6 +153,9 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
 
 &emsp; These were conjectured in 1916. The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne in 1971 (modulo the Weil conjectures).
 
+
+## 3. Deligne's Proof
+
 &emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. Theorem 1 tells us
 
 $$
@@ -174,7 +177,7 @@ $$
 = \frac{\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}}{2}
 $$
 
-&emsp; Ramanujan's third conjecture follows from showing the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$. Indeed, use
+&emsp; Ramanujan's third conjecture follows from showing the roots of $$ H_p $$ are of absolute value $$ p^{11/2} $$: use
 
 $$
 2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|
@@ -182,19 +185,22 @@ $$
 
 to bound $$ \vert \tau(p) \vert $$. To compute the absolute value of $$ \alpha_{\pm} $$, we will use the Riemann hypothesis part of the Weil conjectues. 
 
-
-## 3. Deligne's Proof
-
 &emsp; We would like to prove $$ H_p(X) = \det(1-FX; \, _1^{10} W_{\ell}) $$
 
 So we define 
 
 $$
 ^{10}_1 W_{\ell}
-= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \Sym^k(R^1 f_{n *}(\underline{\QQ}_{\ell})))
+= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \, \Sym^k(R^1 f_{n *}(\underline{\QQ}_{\ell})))
 $$
 
+M_n is defined on page 151. 
+
 and the Frobenious $$ F $$ as on page 161. 
+
+In order to define the Frobenious, we must define $$ W^{(p)} $$.
+
+
 
 ## 4. References
 
