@@ -21,7 +21,7 @@ title: The Ramanujan Conjecture
 }
 </style>
 $$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
 **Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. Note that we skip most of the main proofs, focusing on the main objects.
@@ -187,12 +187,9 @@ $$
 2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|,
 $$
 
-choosing our sign $$ \pm $$ appropriately shows $$ \vert \tau(p) \vert \leq 2 p^{11/2. $$ $$ \blacksquare $$
+choosing our sign $$ \pm $$ appropriately shows $$ \vert \tau(p) \vert \leq 2 p^{11/2}. $$ $$ \blacksquare $$
 
-&emsp; 
-
-
-&emsp; We would like to prove $$ H_p(X) = \det(1-FX; \, _1^{10} W_{\ell}) $$
+&emsp; We would like to find a representation $$ \rho \colon \Gal(\overline{\QQ}/\QQ) \to \GL_2(\QQ_{\ell}) $$ such that $$ H_p(X) = \det(1-FX; W_{\ell}) $$.  
 
 So we define 
 
