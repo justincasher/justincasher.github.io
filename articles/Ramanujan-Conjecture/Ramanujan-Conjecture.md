@@ -80,6 +80,7 @@ F(\lambda a, \lambda b)
 $$
 
 The correspondence is given as follows. For $$ f $$ a modular form of weight $$ k $$, we set
+
 $$ 
 F(a, b) = b^{-k} F(a/b).
 $$ 
