@@ -99,12 +99,14 @@ T_k(n) F(L)
 = n^{k-1} \sum_{[L : L'] = n} F(L'). 
 $$
 
-Using our correspondence, this is yields an operator $$ T_k(n) \colon M_k \to M_k $$. These satisfy $$ T_k(m) T_k(n) = T_k(mn) $$ for $$ m $$ and $$ n $$  coprime, and for $$ p $$ prime,
+Using our correspondence, this is yields an operator $$ T_k(n) \colon M_k \to M_k $$. These satisfy $$ T_k(m) T_k(n) = T_k(mn) $$ for $$ m $$ and $$ n $$  coprime, and
 
 $$
 T_k(p^r) T_k(p)
-= T_k(p^{r+1}) + p^{k-1} T_k(p^{r-1}).
+= T_k(p^{r+1}) + p^{k-1} T_k(p^{r-1})
 $$
+
+for $$ p $$ prime.
 
 &emsp; We say a modular form $$ f $$ of weight $$ k $$ is an *eigenform* if it is an eigenvector for every $$ T_k(n) $$. Suppose $$ f $$ has a $$ q $$-expansion 
 
