@@ -62,7 +62,7 @@ We denote this action by $$ \gamma(z) $$.
   
   <li>\( (cz+d)^{-k}f(\gamma(z)) \) remains bounded as \( \im(z) \) approaches infinity.</li>
 </ol>
-Condition (b) is equivalent to $$ f $$ having a $$ q $$-expansion at infinity. Additionally, we call $$ f $$ as cusp form if 
+Condition (b) is equivalent to $$ f $$ having a $$ q $$-expansion at infinity. Additionally, we call $$ f $$ a *cusp form* if 
 
 $$ 
 \lim_{\im(z) \to \infty} (cz+d)^{-k} f(\gamma(z)) = 0.
@@ -88,10 +88,12 @@ $$
 Conversely, given such an $$ F $$, we set
 
 $$ 
-f(z) = F(z, 1),
+f(z) = F(z, 1).
 $$ 
 
-to be our modular form.
+It follows immediately that these satisfy the desired properties.
+
+&emsp; Using this correspondence we can define the $$ n $$th *Hecke operator* by 
 
 ## 2. Deligne
 
