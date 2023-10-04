@@ -151,7 +151,9 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
   <li>\( |\tau(p)| \leq 2 p^{11/2} \). </li>
 </ol>
 
-&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne. Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. Theorem 1 tells us
+&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne. 
+
+&emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. Theorem 1 tells us
 
 $$
 D(s)
@@ -178,7 +180,7 @@ $$
 2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|
 $$
 
-to bound $$ \mid \tau(p) \mid $$. Deligne's proof relies on the Riemann hypothesis part of the Weil conjectues to compute the absolute value of $$ \alpha_{\pm} $$.
+to bound $$ \vert \tau(p) \vert $$. To compute the absolute value of $$ \alpha_{\pm} $$, we will use the Riemann hypothesis part of the Weil conjectues. 
 
 
 ## 3. Deligne's Proof
