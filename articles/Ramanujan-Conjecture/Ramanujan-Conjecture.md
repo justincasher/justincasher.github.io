@@ -100,7 +100,7 @@ T_k(n) F(L)
 = n^{k-1} \sum_{[L : L'] = n} F(L'). 
 $$
 
-Using the previous
+Using our correspondence, this is yields an operator $$ T_k(n) \colon M_k \to M_k $$. 
 
 ## 2. Deligne
 
