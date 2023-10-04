@@ -151,7 +151,7 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
   <li>\( |\tau(p)| \leq 2 p^{11/2} \). </li>
 </ol>
 
-&emsp; These were conjectured in 1916. The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne in 1971 (modulo the Weil conjectures). We will refer to this as ``Ramanujan's conecture'' in the sequel.
+&emsp; These were conjectured in 1916. The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in and was proved by Deligne in 1971 (modulo the Weil conjectures). We will refer to this as "Ramanujan's conecture" in the sequel.
 
 
 ## 3. Deligne's Proof
@@ -189,16 +189,20 @@ $$
 
 choosing our sign $$ \pm $$ appropriately shows $$ \vert \tau(p) \vert \leq 2 p^{11/2}. $$ $$ \blacksquare $$
 
-&emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \QQ_\ell $$ vector space $$ _1^10 W_{\ell} $$. Deligne proves 
+&emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \QQ_\ell $$ vector space $$ _1^{10} W_{\ell} $$. Deligne proves 
 
 $$ 
 H_p(z) = \det(1-FX; \, _1^{10} W_{\ell}),
 $$
 
-and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result will then follow from the Weil conjectures.
+and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result will then follow from the Riemann hypothesis of the Weil conjectures. 
 
 
-#### Step 1 
+#### The Shimura isomorphism
+
+
+
+####
 
 So we define 
 
