@@ -148,10 +148,10 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
   
   <li>\(\tau(p^r) \tau(p) = \tau(p^{r+1}) + p^{11} \tau(p^{r-1}) \) for \( p \) prime; and</li>
   
-  <li>\( |\tau(p))| \leq 2 p^{11/2} \). </li>
+  <li>\( |\tau(p)| \leq 2 p^{11/2} \). </li>
 </ol>
 
-&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in. Let $$ D $$ denote the associated Dirichlet series. Theorem 1 tells us
+&emsp; The first two relations were proved by Mordell in 1917 using Hecke operators. The third conjecture is what we are interested in. Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. Theorem 1 tells us
 
 $$
 D(s)
@@ -168,10 +168,11 @@ $$
 We see $$ H_p $$ has roots
 
 $$
-\frac{\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}}{2}
+\alpha_{\pm}
+= \frac{\tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}}}{2}
 $$
 
-Ramanujan's third conjecture is equivalent to the roots of this polynomial being of absolute value $$ p^{-11/2} $$.
+Ramanujan's third conjecture is follows from showing the roots of $$ H_p $$ being of absolute value $$ p^{11/2} $$.
 
 ## 3. Deligne's Proof
 
