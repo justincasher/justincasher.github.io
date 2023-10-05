@@ -283,7 +283,7 @@ $$
 Since $$  $$ is a complex space 
 -->
 
-&emsp; Using this identification, we can then identify cusp forms with the first reduced cohomology group of the symmetric power of a local system on $$ \overline{X/\Gamma} $$ tensored over $$ \CC $$. We will not explicitely construct this map since we will only be using its existence.
+&emsp; Using this theorem, we can then identify cusp forms with the first reduced cohomology group of the symmetric power of a local system on $$ \overline{X/\Gamma} $$ tensored over $$ \CC $$. We will not explicitely construct this map since we will only be using its existence.
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism*
 
@@ -301,10 +301,26 @@ $$
 -->
 
 $$
-S_{k+2}(\Gamma) \oplus \overline{S_{k+2}(\Gamma)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC
+S_{k+2}(\Gamma) \oplus \overline{S_{k+2}(\Gamma)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC.
 $$
 
-#### Step 2
+#### Full Level $$ n $$ Structures
+
+&emsp; Let $$ \Gamma(N) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ N $$, i.e.
+
+$$
+\begin{bmatrix}
+a & b \\
+c & d 
+\end{bmatrix}  
+\equiv 
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix} 
+$$
+
+or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ N $$.
 
 So we define 
 
