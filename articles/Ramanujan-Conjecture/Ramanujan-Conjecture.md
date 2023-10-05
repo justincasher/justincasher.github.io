@@ -384,22 +384,29 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 
 #### Frobenious and Verschiebung
 
-&emsp; Given a pair $$ (E, \alpha) $$ (as in proposition 3.4), we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram
+&emsp; Fix a pair $$ (E, \alpha) $$ as in proposition 3.4, and let $$ F \colon E \to E^{(p)} $$ denote the Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram
 
 $$
 \xymatrix{
 & (\ZZ/n\ZZ)^2 & \\
-E_n \ar[ru]^{\alpha} & & E_n^{(p)} \ar[lu]^{\alpha^{(p)}} \\
-E \ar[rr]^{F} & & E^{(p)}
+E_n \ar[ru]^{\alpha} \ar[rr] & & E_n^{(p)} \ar[lu]_{\alpha^{(p)}} \\
+E \ar[u] \ar[rr]^{F} & & E^{(p)} \ar[u]
 }
 $$
 
+This defines a map $$ F \colon M_n \otimes \FF_p \to M_n \otimes \FF_p $$.
+
+&emsp; We likewise have a diagram
+
 $$
-^k W^{(p)} 
-= {^k W^{GL_2(\ZZ_p)}}
+\xymatrix{
+& (\ZZ/n\ZZ)^2 & \\
+E_n^{(p)} \ar[ru]^{p \alpha^{(p)}} \ar[rr] & & E_n \ar[lu]_{\alpha} \\
+E^{(p)} \ar[u] \ar[rr]^{F} & & E \ar[u]
+}
 $$
 
-We get a Frobenious diagram 
+which defines the transponse of the Frobenious, the vershiebung, with respect to an abstracted Peterson inner product.
 
 #### Step 4
 
