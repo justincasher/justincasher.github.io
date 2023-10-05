@@ -216,16 +216,16 @@ $$
 
 **Proposition 3.2.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
-&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$ (identify $$ X $$ with $$ \CH $$ and consider $$ b/a $$). We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
+&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$ (identify $$ X $$ with $$ \CH $$ and consider $$ b/a $$). We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from each isomorphism class of elliptic curves. 
 
 &emsp; Let $$ \Gamma $$ be a discrete subgroup of $$ \SL_2(\ZZ) $$ without torsion elements such that $$ X/\Gamma $$ has finite volume (with respect to the Poincaré metric). We can identify $$ X/\Gamma $$ to a smooth projective curve $$ \overline{X/\Gamma} $$ minus a finite number of points.
 
-&emsp; One of the main ideas of Deligne's paper is to use a cohomological description of cusp forms. We define a cusp form of weight $$ k $$ with respect to $$ \Gamma $$ by assuming $$ \gamma \in \Gamma $$ in the definitions given in \S1, and we denote the resulting space $$ S_k(\Gamma) $$. 
+&emsp; One of the main ideas of Deligne's paper is to use a cohomological description of cusp forms. We define a cusp form of weight $$ k $$ with respect to $$ \Gamma $$ by restricting to $$ \gamma \in \Gamma $$ in the definitions given in section 1, and we denote the resulting space $$ S_k(\Gamma) $$. 
 
 &emsp; Alternatively, we see for $$ \gamma \in \SL_2(\ZZ) $$, 
 
 $$
-\frac{d(\gamma(z)))}{dz}
+\frac{d \gamma(z)}{dz}
 = (cz+d)^{-2}.
 $$
 
@@ -241,7 +241,7 @@ $$
 f(\gamma(z)) d\gamma(z)^k = f(z) dz^k.
 $$
 
-In other words, we are interested in the differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \SL_2(\ZZ) $$.
+In other words, we are interested in the holomorphic differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \SL_2(\ZZ) $$. This can be achieved by taking sections of the pushforward $$ \omega = f_* \Omega_{E_X/X} $$.
 
 **Theorem 3.3.** &nbsp; *$$ S_{k+2}(\Gamma) $$ can be identified with $$ H^0(\overline{X/\Gamma}, \Omega^1 \otimes \omega^k) $$.*
 
