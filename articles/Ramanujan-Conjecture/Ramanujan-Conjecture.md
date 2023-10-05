@@ -206,13 +206,15 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 #### The Shimura Isomorphism
 
-&emsp; Let $$ S $$ be a complex analytic space. An *elliptic curve* on $$ S $$ is a map $$ f \colon E \to S $$ with a section $$ e \colon S \to E $$, such that the fibres of $$ f $$ are elliptic curves with origin given by $$ e $$. We say an isomorphism $$ R^1 f_* \underline{\ZZ} \to \underline{\ZZ}^2 $$ of sheaves on $$ S $$ is *permitted* if it induces -1 on the map 
+&emsp; Let $$ S $$ be a complex analytic space. An *elliptic curve* on $$ S $$ is a map $$ f \colon E \to S $$ with a section $$ e \colon S \to E $$, such that the fibres of $$ f $$ are elliptic curves with origin given by $$ e $$. 
+
+We say an isomorphism $$ R^1 f_* \underline{\ZZ} \to \underline{\ZZ}^2 $$ of sheaves on $$ S $$ is *permitted* if it induces -1 on the map 
 
 $$ 
 \bigwedge^2 R^1 f_* \underline{\ZZ} \to \bigwedge^2 \underline{\ZZ}^2.
 $$
 
-&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set 
+Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set 
 
 $$ 
 X = \CC^* \backslash \Isom^+(\RR^2, \CC). 
@@ -306,6 +308,8 @@ $$
 
 #### Full Level $$ n $$ Structures
 
+&emsp; We would like to emulate proposition 3.2 in the case of schemes.
+
 &emsp; Let $$ \Gamma(n) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ n $$, i.e.
 
 $$
@@ -321,9 +325,11 @@ c & d
 \quad \text{modulo } n
 $$
 
-or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. We set $$ M_n  = X/\Gamma(n) $$.
+or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Set $$ M_n  = X/\Gamma(n) $$.
 
-**Proposition 3.4.** &nbsp; *$$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ T_f(E) \cong \underline{Z}^2 $$.*
+
+
+**Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ T_f(E) \cong \underline{Z}^2 $$.*
 
 #### Step 3
 
