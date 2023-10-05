@@ -210,7 +210,11 @@ $$
 
 **Proposition 3.2.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
-&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$. We therefore construct a universal elliptic curve $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
+&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$. We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
+
+$emsp; Set $$ \omega = f_* \Omega_{E_x/X} $$. 
+
+**Theorem 3.3.** &nbsp; *$$ S_{k+2} $$ can be identified to $$ H^0(\overline{X}, \Omega^1 \otimes \omega^k) $$.
 
 <!---
 &emsp; Set $$ \omega = f_* \Omega_{X/S} $$. We identify $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ to the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, and $$ \omega^{-1} $$ to $$ R^1 f_* \CO_X $$ by Poincaré duality. Then the Hodge decomposition
