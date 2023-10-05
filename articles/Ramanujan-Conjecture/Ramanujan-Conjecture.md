@@ -285,7 +285,8 @@ Since $$  $$ is a complex space
 
 &emsp; Using this identification, we can then identify cusp forms with the first reduced cohomology group of the symmetric power of a local system on $$ \overline{X/\Gamma} $$ tensored over $$ \CC $$. We will not explicitely construct this map since we will only be using its existence.
 
-**Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism 
+**Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism*
+
 <!--
 $$
 \xymatrix{ 
@@ -298,6 +299,7 @@ $$
 
 *In particular,*
 -->
+
 $$
 S_{k+2}(\Gamma) \oplus \overline{S_{k+2}(\Gamma)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC
 $$
