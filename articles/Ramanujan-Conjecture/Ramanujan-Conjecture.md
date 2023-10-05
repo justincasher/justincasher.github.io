@@ -310,7 +310,11 @@ $$
 
 &emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$.
 
-&emsp; This is a group scheme, and hence we define $$ E_n $$ to be the kernel of the multiply-by-$$ n $$ endomorphism of $$ E $$.
+&emsp; This is a group scheme, and hence we define $$ E_n $$ to be the kernel of the multiply-by-$$ n $$ endomorphism of $$ E $$. Let $$ \ell $$ be a prime inversible on $$ S $$. We define the $$ \ell $$ th *Tate module* as the colimit
+
+$$ 
+T_{\ell}(E) = \colim E_{\ell}.
+$$
 
 &emsp; Let $$ \Gamma(n) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ n $$, i.e.
 
