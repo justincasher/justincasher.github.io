@@ -387,11 +387,11 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 &emsp; Given a pair $$ (E, \alpha) $$ (as in proposition 3.4), we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram
 
 $$
-\xymatrix
+\xymatrix{
 & (\ZZ/n\ZZ)^2 & \\
 E_n \ar[ur]^{\alpha} & & E_n^{(p)} \arrow[ul]^{\alpha^{(p)}} \\
 E \ar[rr]^{F} & & E^{(p)}
-\xymatrix
+}
 $$
 
 $$
