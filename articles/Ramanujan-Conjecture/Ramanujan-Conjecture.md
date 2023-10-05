@@ -24,7 +24,7 @@ $$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\CO}{
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
-**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so they skip many proofs.
+**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.
 
 ## Table of Contents
 1. [Modular Forms](#1-modular-forms)
@@ -212,9 +212,11 @@ $$
 
 &emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$. We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
 
-$emsp; Set $$ \omega = f_* \Omega_{E_x/X} $$. 
+&emsp; Let $$ \Omega = \Omega^1_{E_X/X} $$ and set $$ \omega = f_* \Omega $$. 
 
-**Theorem 3.3.** &nbsp; *$$ S_{k+2} $$ can be identified to $$ H^0(\overline{X}, \Omega^1 \otimes \omega^k) $$.
+INCLUDE EXPLAINATION
+
+**Theorem 3.3.** &nbsp; *$$ S_{k+2} $$ can be identified with $$ H^0(\overline{X}, \Omega^1 \otimes \omega^k) $$.*
 
 <!---
 &emsp; Set $$ \omega = f_* \Omega_{X/S} $$. We identify $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ to the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, and $$ \omega^{-1} $$ to $$ R^1 f_* \CO_X $$ by Poincaré duality. Then the Hodge decomposition
@@ -248,7 +250,7 @@ $$
 Since $$  $$ is a complex space 
 -->
 
-&emsp; In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use the following result, we will not define it here.
+&emsp; In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use the following result, we will not construct it here.
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
 
