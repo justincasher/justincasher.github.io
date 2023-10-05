@@ -309,6 +309,7 @@ $$
 #### Full Level $$ n $$ Structures
 
 &emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. 
+
 <!-- Likewise, set 
 
 $$
