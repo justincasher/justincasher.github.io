@@ -389,8 +389,8 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 $$
 \xymatrix{
 & (\ZZ/n\ZZ)^2 & \\
-E_n  & & E_n^{(p)}  \\
-E  & & E^{(p)}
+E_n \ar[ru]^{\alpha} & & E_n^{(p)} \arrow[lu]^{\alpha^{(p)}} \\
+E \ar[rr]^{F} & & E^{(p)}
 }
 $$
 
