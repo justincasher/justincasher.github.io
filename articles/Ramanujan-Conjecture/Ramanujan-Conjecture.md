@@ -212,7 +212,7 @@ $$
 \bigwedge^2 R^1 f_* \underline{\ZZ} \to \bigwedge^2 \underline{\ZZ}^2.
 $$
 
-&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set $$ X = \CC^* \backslash \Isom^+(\RR^2, \CC) $$. We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where $$ e_1, e_2 $$ are sent.
+&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set $$ X = \CC^* \backslash \Isom^+(\RR^2, \CC) $$. We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where $$ (1, 0), (0, 1) $$ are sent.
 
 **Proposition 3.2.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
@@ -241,9 +241,9 @@ $$
 f(\gamma(z)) d\gamma(z)^k = f(z) dz^k.
 $$
 
-In other words, we are interested in the holomorphic differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \SL_2(\ZZ) $$. This can be achieved by taking sections of the pushforward $$ \omega = f_* \Omega_{E_X/X} $$.
+In other words, we are interested in the holomorphic differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \Gamma $$. This can be achieved by taking sections of powers of the pushforward $$ \omega = f_* \Omega_{E_X/X} $$ on $$ \overline{X/\Gamma} $$. Deligne then identifies $$ \Omega_X^1 $ with $$ \omega^2 $$ to and, with additional proof, gets the following:
 
-**Theorem 3.3.** &nbsp; *$$ S_{k+2}(\Gamma) $$ can be identified with $$ H^0(\overline{X/\Gamma}, \Omega^1 \otimes \omega^k) $$.*
+**Theorem 3.3.** &nbsp; *$$ S_{k+2}(\Gamma) $$ can be identified with $$ H^0(\overline{X/\Gamma}, \Omega_X^1 \otimes \omega^k) $$.*
 
 <!---
 &emsp; Set $$ \omega = f_* \Omega_{X/S} $$. We identify $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ to the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, and $$ \omega^{-1} $$ to $$ R^1 f_* \CO_X $$ by Poincaré duality. Then the Hodge decomposition
