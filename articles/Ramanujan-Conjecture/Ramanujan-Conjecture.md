@@ -59,7 +59,7 @@ We denote this action by $$ \gamma(z) $$.
 
 &emsp; A holomorphic function $$ f \colon \CH \to \CC $$ is called a *modular form of weight $$ k $$* if for any $$ \gamma \in \SL_2(\ZZ) $$,
 <ol type="a" class="custom" style="list-style-position: outside">
-  <li>\( f(\gamma(z) = (cz+d)^k f(z) \); and</li>
+  <li>\( f(\gamma(z)) = (cz+d)^k f(z) \); and</li>
   
   <li>\( (cz+d)^{-k}f(\gamma(z)) \) remains bounded as \( \im(z) \) approaches infinity.</li>
 </ol>
@@ -212,9 +212,7 @@ $$
 
 &emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$. We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
 
-&emsp; Let $$ \Omega = \Omega^1_{E_X/X} $$ and set $$ \omega = f_* \Omega $$. 
-
-INCLUDE EXPLAINATION
+&emsp; Let $$ \Omega = \Omega_X^1 $$ and $$ \omega = f_* \Omega_{E_X/X} $$. USE SERRE AND DELIGNE
 
 **Theorem 3.3.** &nbsp; *$$ S_{k+2} $$ can be identified with $$ H^0(\overline{X}, \Omega^1 \otimes \omega^k) $$.*
 
