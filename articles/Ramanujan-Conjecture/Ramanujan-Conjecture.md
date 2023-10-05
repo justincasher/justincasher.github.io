@@ -277,8 +277,6 @@ $$
 Since $$  $$ is a complex space 
 -->
 
-&emsp; We denote the restriction of the local system $$ \underline{R}^2 \otimes_{\RR} \CO $$ on $$ X $$ to $$ X / \Gamma $$ by $$ U $$. 
-
 In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use the following result, we will not construct it here.
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
@@ -286,9 +284,9 @@ In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use 
 $$
 \xymatrix{ 
     H^0(\overline{X/\Gamma}, \, \Omega^1 \otimes \omega^k) \oplus \overline{H^0(\overline{X/\Gamma}, \, \Omega^1 \otimes \omega^k)} \ar@{^{(}->}[d] \ar[r]^-\sh 
-    & \widetilde{H}^1(X, \, U^k \otimes \CC) \ar@{^{(}->}[d] \\
+    & \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC \ar@{^{(}->}[d] \\
     H^0(X/\Gamma, \, \Omega^1 \otimes \omega^k) \oplus \overline{H^0(X/\Gamma, \, \Omega^1 \otimes \omega^k)}  \ar[r]^-{\sh_0} 
-    & \widetilde{H}^1(X, \, U^k \otimes \CC) 
+    & \widetilde{H}^1(X/\Gamma, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC
 } 
 $$
 
