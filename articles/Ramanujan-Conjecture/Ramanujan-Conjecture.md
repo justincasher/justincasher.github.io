@@ -367,11 +367,17 @@ which satisfy $$ {^k W_{\ell}} = {^k W} \otimes \QQ_{\ell} $$.
 
 $$
 \begin{aligned}
-^k W_{\infty} & = \lim_{n \to} S_{k+2}(\overline{M_n^{\an}}) \oplus \overline{S_{k+2}(\overline{M_n^{\an}})} .
+^k W_{\infty} & = \lim_{n \to} S_{k+2}(\overline{M_n^{\an}}) \oplus \overline{S_{k+2}(\overline{M_n^{\an}})}.
 \end{aligned}
 $$
 
-We define $$ _1^k W = {_n^k W^{\GL_2(\ZZ/n\ZZ)}} $$, we define 
+Defining $$ _1^k W = {_n^k W^{\GL_2(\ZZ/n\ZZ)}} $$, we get
+
+$$
+_1^k W_{\infty}
+= _1^k W \otimes \CC
+= S_{k+2} \oplus \overline{S_{k+2}}.
+$$
 
 
 #### Frobenious and Verschiebung
