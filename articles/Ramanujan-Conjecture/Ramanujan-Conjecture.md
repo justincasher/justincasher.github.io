@@ -308,7 +308,8 @@ $$
 
 #### Full Level $$ n $$ Structures
 
-&emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. <!-- Likewise, set 
+&emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. 
+<!-- Likewise, set 
 
 $$
 \underline{\ZZ}_{\ell} = \colim_r \underline{\ZZ/(\ell^r)}, \quad 
@@ -323,6 +324,7 @@ $$
 
 which is a $$ \ZZ_{\ell} $$ sheaf. We can think of $$ T_{\ell}(E) $$ as the "first étale homology group $$ H_1(E, \underline{\ZZ}_{\ell}) $$". Thus, bundling our Tate modules for each prime $$ \ell $$ yields a $$ \hat{\ZZ} $$ sheaf $$ T_f(E) $$.
 --> 
+
 &emsp; Let $$ \Gamma(n) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ n $$, i.e.
 
 $$
