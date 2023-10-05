@@ -357,11 +357,20 @@ $$
 and 
 
 $$
-^kW = \lim_{\to} {_n^k W}, \qquad 
-{^k W_{\ell}} = \lim_{\to} {_n^k W_{\ell}},
+^kW = \lim_{\to n} {_n^k W}, \qquad 
+{^k W_{\ell}} = \lim_{\to n} {_n^k W_{\ell}},
 $$
 
 which satisfy $$ {^k W_{\ell}} = {^k W} \otimes \QQ_{\ell} $$.
+
+&emsp; Setting $$ ^kW_{\infty} = {^k W} \otimes \CC $$, the Shimura isomorphism implies
+
+$$
+\begin{aligned}
+W_{\infty} & = \lim_{n \to}
+\end{aligned}
+$$
+
 
 #### Frobenious and Verschiebung
 
@@ -376,7 +385,7 @@ $$
 $$
 
 
-We need to identify $$ _1^{10} W_{\ell} $$ to $$ S_12 \oplus \overline{S_12} $$.
+We need to identify $$ _1^{10} W_{\ell} $$ to $$ S_{12} \oplus \overline{S_{12}} $$.
 
 and the Frobenious $$ F $$ as on page 161. 
 
