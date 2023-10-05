@@ -357,13 +357,11 @@ $$
 and 
 
 $$
-\begin{aligned}
-W & = \lim_{\to} {_n^k W} \\
-W_{\ell} & = \lim_{\to} {_n^k W_{\ell}}.
-\end{aligned}
+^kW = \lim_{\to} {_n^k W}, \qquad 
+{^k W_{\ell}} = \lim_{\to} {_n^k W_{\ell}},
 $$
 
-They satisfy $$ W_{\ell} = W \otimes \QQ_{\ell} $$.
+which satisfy $$ {^k W_{\ell}} = {^k W} \otimes \QQ_{\ell} $$.
 
 #### Frobenious and Verschiebung
 
