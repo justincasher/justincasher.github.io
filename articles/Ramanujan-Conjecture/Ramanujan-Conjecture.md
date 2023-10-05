@@ -358,14 +358,17 @@ and
 
 $$
 \begin{aligned}
-W & = \lim_{\to} _n^k W \\
-W_{\ell} & = \lim_{\to} _n^k W_{\ell}.
+W & = \lim_{\to} {_n^k W} \\
+W_{\ell} & = \lim_{\to} {_n^k W_{\ell}}.
 \end{aligned}
 $$
 
 They satisfy $$ W_{\ell} = W \otimes \QQ_{\ell} $$.
 
-#### Step 3
+#### Frobenious and Verschiebung
+
+
+#### Step 4
 
 So we define 
 
