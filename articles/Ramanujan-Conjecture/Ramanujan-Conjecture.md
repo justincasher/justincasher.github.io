@@ -224,6 +224,21 @@ $$
 0 \to \omega \to R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X \to \omega^{-1} \to 0.
 $$
 
+&emsp; Set $$ U = R^1 f_* \underline{\RR} $$ and denote $$ U^k $$ its $$ k $$th symmetric power.
+
+&emsp; The de Rham resolution of $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CC $$ induces an exact sequence
+
+$$
+\xymatrix{ 
+    0 \ar[r] & U \otimes_{\RR} \CC \ar[r] & U \otimes_{\RR} \CO_X \ar[r]^-d & U \otimes_{\RR} \Omega_X^1 \ar[r] & 0
+}
+$$
+
+induces a map 
+
+$$
+\delta \colon H^0(X, \Omega^1 \otimes U^k)
+$$
 
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
@@ -234,6 +249,8 @@ $$
     H^0(X, \, \Omega^1 \otimes \omega^k) \oplus \overline{H^0(X, \, \Omega^1 \otimes \omega^k)}  \ar[r]^-{\sh_0} & \widetilde{H}^1(X, \, U^k \otimes \CC) 
 } 
 $$
+
+
 
 #### Step 2
 
