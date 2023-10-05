@@ -289,6 +289,10 @@ Since $$  $$ is a complex space
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism*
 
+$$
+H^0(\overline{X/\Gamma}, \, \Omega^1 \otimes \omega^k) \oplus \overline{H^0(\overline{X/\Gamma}, \, \Omega^1 \otimes \omega^k)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC,
+$$
+
 <!--
 $$
 \xymatrix{ 
@@ -301,6 +305,8 @@ $$
 
 *In particular,*
 -->
+
+and in particular,
 
 $$
 S_{k+2}(\Gamma) \oplus \overline{S_{k+2}(\Gamma)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC.
