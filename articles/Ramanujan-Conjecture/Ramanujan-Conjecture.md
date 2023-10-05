@@ -21,7 +21,7 @@ title: The Ramanujan Conjecture
 }
 </style>
 $$ \newcommand{\AA}{\mathcal{A}} \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \DeclareMathOperator{\char}{char} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
+$$ \DeclareMathOperator{\an}{an} \DeclareMathOperator{\char}{char} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
 **Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.
@@ -341,18 +341,27 @@ c & d
 \quad \text{modulo } n
 $$
 
-or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Define $$ M_n  = X/\Gamma(n) $$.
+or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Define $$ M_n $$ to be $$ X/\Gamma(n) $$ considered as a complex algebraic variety; and let $$ M_n^{\an} $$ be $$ X/\Gamma(n) $$ considered as a complex analytic space.
 
 **Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ E_n \cong (\ZZ/n\ZZ)^2 $$.*
 
-&emsp; Let $$ f_n \colon E \to M_n $$ be the universal elliptic curve on $$ M_n $$. Fix an algebraic closure $$ \overline{\QQ} $$ of $$ \QQ $$. We define 
+&emsp; Write $$ f_n \colon E \to M_n $$ for the universal elliptic curve on $$ M_n $$ (or $$ M_n^{\an} $$). Fix an algebraic closure $$ \overline{\QQ} $$ of $$ \QQ $$. We define 
+
+$$
+$$
+
+$$
+\begin{aligned}
+_n^k W & = \widetilde{H}^1(M_n^{\an}, \, \Sym^k(R^1 f_{n*}(\underline{\QQ}))) \\
+_n^k W_{\ell} & = \widetilde{H}^1(M_n \otimes \overline{\QQ}, \, \Sym^k(R^1 f_{n*}(\underline{\QQ}_{\ell})))
+\end{aligned}
+$$
 
 $$
 _n^k W_{\ell}
-= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \Sym^k(R^1 f_{n*}(\underline{\QQ}_{\ell})))
+= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \, \Sym^k(R^1 f_{n*}(\underline{\QQ}_{\ell})))
 $$
 
-to mimic the right hand side of the Shimura isomorphism in the $$ \ell $$-adic case. (Deline gives more general constructions which we will not need.)
 
 #### Step 3
 
@@ -364,7 +373,7 @@ $$
 $$
 
 
-We need to identify $$ _1^10 W_{\ell} $$ to $$ S_12 \oplus \overline{S_12} $$.
+We need to identify $$ _1^{10} W_{\ell} $$ to $$ S_12 \oplus \overline{S_12} $$.
 
 and the Frobenious $$ F $$ as on page 161. 
 
