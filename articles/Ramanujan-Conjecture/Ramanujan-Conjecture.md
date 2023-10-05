@@ -241,7 +241,7 @@ $$
 f(\gamma(z)) d\gamma(z)^k = f(z) dz^k.
 $$
 
-In other words, we are interested in the holomorphic differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \Gamma $$. This can be achieved by taking sections of powers of the pushforward $$ \omega = f_* \Omega_{E_X/X} $$ on $$ \overline{X/\Gamma} $$. Deligne then identifies $$ \Omega_X^1 $$ with $$ \omega^2 $$ and, with additional proof, gets the following:
+In other words, we are interested in the holomorphic differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \Gamma $$. This can be achieved by taking sections of powers of the pushforward $$ \omega = f_* \Omega_{E_X/X} $$ and prolonging $$ \omega $$ to $$ \overline{X/\Gamma} $$. Deligne then identifies $$ \Omega_X^1 $$ with $$ \omega^2 $$ and, with additional proof, gets the following:
 
 **Theorem 3.3.** &nbsp; *$$ S_{k+2}(\Gamma) $$ can be identified with $$ H^0(\overline{X/\Gamma}, \Omega_X^1 \otimes \omega^k) $$.*
 
