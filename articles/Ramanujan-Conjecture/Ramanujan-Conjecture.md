@@ -296,7 +296,11 @@ $$
 } 
 $$
 
+*In particular,*
 
+$$
+S_{k+2)(\Gamma) \oplus \overline{S_{k+2}(\Gamma)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC
+$$
 
 #### Step 2
 
