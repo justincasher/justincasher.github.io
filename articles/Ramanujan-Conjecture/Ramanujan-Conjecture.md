@@ -343,7 +343,7 @@ $$
 
 or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Define $$ M_n $$ to be $$ X/\Gamma(n) $$ considered as a complex algebraic variety; and let $$ M_n^{\an} $$ be $$ X/\Gamma(n) $$ considered as a complex analytic space.
 
-**Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ E_n \cong (\ZZ/n\ZZ)^2 $$.*
+**Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ \alpha \colon E_n \to (\ZZ/n\ZZ)^2 $$.*
 
 &emsp; Write $$ f_n \colon E \to M_n $$ for the universal elliptic curve on $$ M_n $$ (or $$ M_n^{\an} $$) for $$ n \geq 3 $$. Fix an algebraic closure $$ \overline{\QQ} $$ of $$ \QQ $$. We define 
 
@@ -384,11 +384,19 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 
 #### Frobenious and Verschiebung
 
-Page 155, we define
+&emsp; Given a pair $$ (E, \alpha) $$ (as in proposition 3.4), we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram
+
+$$
+\begin{xymatrix}
+& (\ZZ/n\ZZ)^2 & \\
+E_n \ar[ur]^{\alpha} & & E_n^{(p)} \arrow[ul]^{\alpha^{(p)}} \\
+E \ar[rr]^{F} & & E^{(p)}
+\end{xymatrix}
+$$
 
 $$
 ^k W^{(p)} 
-= ^k W^{GL_2(\ZZ_p)}
+= {^k W^{GL_2(\ZZ_p)}}
 $$
 
 We get a Frobenious diagram 
