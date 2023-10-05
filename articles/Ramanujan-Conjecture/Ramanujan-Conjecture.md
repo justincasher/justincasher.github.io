@@ -212,6 +212,7 @@ $$
 
 &emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$. We therefore construct a universal elliptic curve $$ f \colon E_X \to X $$ whose fibers consist of representatives from every isomorphism class of elliptic curves. 
 
+<!---
 &emsp; Set $$ \omega = f_* \Omega_{X/S} $$. We identify $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ to the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, and $$ \omega^{-1} $$ to $$ R^1 f_* \CO_X $$ by Poincaré duality. Then the Hodge decomposition
 
 $$
@@ -226,20 +227,24 @@ $$
 
 &emsp; Set $$ U = R^1 f_* \underline{\RR} $$ and denote $$ U^k $$ its $$ k $$th symmetric power.
 
-&emsp; The de Rham resolution of $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CC $$ induces an exact sequence
+&emsp; The de Rham resolution of $$ U \otimes_{\RR} \CC $$,
 
 $$
 \xymatrix{ 
-    0 \ar[r] & U \otimes_{\RR} \CC \ar[r] & U \otimes_{\RR} \CO_X \ar[r]^-d & U \otimes_{\RR} \Omega_X^1 \ar[r] & 0
+    0 \ar[r] & U \otimes_{\RR} \CC \ar[r] & U \otimes_{\RR} \CO_X \ar[r]^-d & U \otimes_{\RR} \Omega_X^1 \ar[r] & 0,
 }
 $$
 
 induces a map 
 
 $$
-\delta \colon H^0(X, \Omega^1 \otimes U^k)
+\delta \colon H^0(X, U^k \otimes \Omega^1) \to H^1(X, U^k \otimes \CC).
 $$
 
+Since $$  $$ is a complex space 
+-->
+
+&emsp; In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use the following result, we will not define it here.
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
 
