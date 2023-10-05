@@ -348,20 +348,22 @@ or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Defin
 &emsp; Write $$ f_n \colon E \to M_n $$ for the universal elliptic curve on $$ M_n $$ (or $$ M_n^{\an} $$). Fix an algebraic closure $$ \overline{\QQ} $$ of $$ \QQ $$. We define 
 
 $$
-$$
-
-$$
 \begin{aligned}
 _n^k W & = \widetilde{H}^1(M_n^{\an}, \, \Sym^k(R^1 f_{n*}(\underline{\QQ}))) \\
-_n^k W_{\ell} & = \widetilde{H}^1(M_n \otimes \overline{\QQ}, \, \Sym^k(R^1 f_{n*}(\underline{\QQ}_{\ell})))
+_n^k W_{\ell} & = \widetilde{H}^1(M_n \otimes \overline{\QQ}, \, \Sym^k(R^1 f_{n*}(\underline{\QQ}_{\ell}))),
 \end{aligned}
 $$
 
+and 
+
 $$
-_n^k W_{\ell}
-= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \, \Sym^k(R^1 f_{n*}(\underline{\QQ}_{\ell})))
+\begin{aligned}
+W & = \lim_{\to} _n^k W \\
+W_{\ell} & = \lim_{\to} _n^k W_{\ell}.
+\end{aligned}
 $$
 
+They satisfy $$ W_{\ell} = W \otimes \QQ_{\ell} $$.
 
 #### Step 3
 
