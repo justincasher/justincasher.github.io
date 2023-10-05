@@ -283,7 +283,7 @@ $$
 Since $$  $$ is a complex space 
 -->
 
-&emsp; Using this identification, we can then identify cusp forms with the first reduced cohomology group of the symmetric power of a local system on $$ \overline{X/\Gamma} $$ tensored over $$ \CC $$.
+&emsp; Using this identification, we can then identify cusp forms with the first reduced cohomology group of the symmetric power of a local system on $$ \overline{X/\Gamma} $$ tensored over $$ \CC $$. We will not explicitely construct this map since we will only be using its existence.
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism 
 <!--
