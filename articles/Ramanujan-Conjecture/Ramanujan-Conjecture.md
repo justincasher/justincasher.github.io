@@ -310,13 +310,13 @@ $$
 
 &emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning for each $$ s \in S $$ we have $$ \char k(s) = 0 $$. 
 
-&emsp; This is a group scheme, and hence we define $$ E_n $$ to be the kernel of the multiply-by-$$ n $$ endomorphism of $$ E $$. Let $$ \ell $$ be a prime inversible on $$ S $$. We define the $$ \ell $$ th *Tate module* as the colimit
+&emsp; It can be shown that an elliptic curve over $$ S $$ is a group scheme, and hence we define $$ E_n $$ to be the kernel of the multiply-by-$$ n $$ endomorphism of $$ E $$. For $$ \ell $$ prime, we define the $$ \ell $$ th *Tate module* as the colimit
 
 $$ 
 T_{\ell}(E) = \colim E_{\ell}.
 $$
 
-We can think of $$ T_{\ell}(E) $$ as the first étale homology group $$ H_1(E, \underline{ZZ}_{\ell}) $$.
+We can think of $$ T_{\ell}(E) $$ as the "first étale homology group $$ H_1(E, \underline{ZZ}_{\ell}) $$".
 
 &emsp; Let $$ \Gamma(n) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ n $$, i.e.
 
