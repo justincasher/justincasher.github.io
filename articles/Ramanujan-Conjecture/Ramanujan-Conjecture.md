@@ -20,7 +20,7 @@ title: The Ramanujan Conjecture
     }
 }
 </style>
-$$ \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
+$$ \newcommand{\AA}{\mathcal{A}} \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{\mathcal{L}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\CC}{\mathbb{C}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
 $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
@@ -308,13 +308,15 @@ $$
 
 #### Full Level $$ n $$ Structures
 
-&emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$.
+&emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning for each $$ s \in S $$ we have $$ \char k(s) = 0 $$. 
 
 &emsp; This is a group scheme, and hence we define $$ E_n $$ to be the kernel of the multiply-by-$$ n $$ endomorphism of $$ E $$. Let $$ \ell $$ be a prime inversible on $$ S $$. We define the $$ \ell $$ th *Tate module* as the colimit
 
 $$ 
 T_{\ell}(E) = \colim E_{\ell}.
 $$
+
+We can think of $$ T_{\ell}(E) $$ as the first étale homology group $$ H_1(E, \underline{ZZ}_{\ell}) $$.
 
 &emsp; Let $$ \Gamma(n) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ n $$, i.e.
 
