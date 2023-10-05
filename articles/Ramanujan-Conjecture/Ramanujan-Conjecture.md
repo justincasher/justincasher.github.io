@@ -249,7 +249,7 @@ $$
 
 In other words, we are interested in the holomorphic differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \Gamma $$. This can be achieved by taking sections of powers of the pushforward $$ \omega = f_* \Omega_{E_X/X} $$ and prolonging $$ \omega $$ to $$ \overline{X/\Gamma} $$. Deligne then identifies $$ \Omega_X^1 $$ with $$ \omega^2 $$ and, with additional proof, gets the following:
 
-**Theorem 3.3.** &nbsp; *$$ S_{k+2}(\Gamma) $$ can be identified with $$ H^0(\overline{X/\Gamma}, \Omega_X^1 \otimes \omega^k) $$.*
+**Proposition 3.3.** &nbsp; *$$ S_{k+2}(\Gamma) $$ can be identified with $$ H^0(\overline{X/\Gamma}, \Omega_X^1 \otimes \omega^k) $$.*
 
 <!---
 &emsp; Set $$ \omega = f_* \Omega_{X/S} $$. We identify $$ R^1 f_* \underline{\RR} \otimes_{\RR} \CO_X $$ to the sheaf of relative de Rham cohomology of $$ E_X $$ over $$ X $$, and $$ \omega^{-1} $$ to $$ R^1 f_* \CO_X $$ by Poincaré duality. Then the Hodge decomposition
@@ -311,17 +311,21 @@ $$
 $$
 \begin{bmatrix}
 a & b \\
-c & d 
-\end{bmatrix}  
-\equiv 
+c & d
+\end{bmatrix}
+\equiv
 \begin{bmatrix}
 1 & 0 \\
 0 & 1
-\end{bmatrix} 
-\quad \text{modulo } N
+\end{bmatrix}
+\quad \text{modulo } n
 $$
 
-or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$.
+or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. We set $$ M_n  = X/\Gamma(n) $$.
+
+**Proposition 3.4.** &nbsp; *$$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ T_f(E) \cong \underline{Z}^2 $$.*
+
+#### Step 3
 
 So we define 
 
