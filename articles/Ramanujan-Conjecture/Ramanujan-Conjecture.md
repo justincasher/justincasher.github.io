@@ -212,7 +212,13 @@ $$
 \bigwedge^2 R^1 f_* \underline{\ZZ} \to \bigwedge^2 \underline{\ZZ}^2.
 $$
 
-&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set $$ X = \CC^* \backslash \Isom^+(\RR^2, \CC) $$. We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where $$ e_1 = (1, 0) $$ and $$ e_2 = (0, 1) $$ are sent, i.e. $$ f(e_2)/f(e_1) $$.
+&emsp; Let $$ \Isom^+(\RR^2, \CC) $$ be the collection of $$ \RR $$-vector space isomorphisms which reverse the orientation, and set 
+
+$$ 
+X = \CC^* \backslash \Isom^+(\RR^2, \CC). 
+$$ 
+
+We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where $$ e_1 = (1, 0) $$ and $$ e_2 = (0, 1) $$ are sent, i.e. $$ f(e_2)/f(e_1) $$.
 
 **Proposition 3.2.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
@@ -277,7 +283,7 @@ $$
 Since $$  $$ is a complex space 
 -->
 
-In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use the following result, we will not construct it here.
+&emsp; In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use the following result, we will not construct it here.
 
 **Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
 
