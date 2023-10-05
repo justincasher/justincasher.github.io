@@ -306,7 +306,7 @@ $$
 
 #### Full Level $$ n $$ Structures
 
-&emsp; Let $$ \Gamma(N) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ N $$, i.e.
+&emsp; Let $$ \Gamma(n) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ n $$, i.e.
 
 $$
 \begin{bmatrix}
@@ -318,9 +318,10 @@ c & d
 1 & 0 \\
 0 & 1
 \end{bmatrix} 
+\quad \text{modulo } N
 $$
 
-or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ N $$.
+or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$.
 
 So we define 
 
