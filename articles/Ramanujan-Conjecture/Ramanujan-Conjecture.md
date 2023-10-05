@@ -24,7 +24,7 @@ $$ \newcommand{\AA}{\mathcal{A}} \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{
 $$ \DeclareMathOperator{\an}{an} \DeclareMathOperator{\char}{char} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
-**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.
+**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see Deligne's paper.
 
 ## Table of Contents
 1. [Modular Forms](#1-modular-forms)
@@ -371,7 +371,7 @@ $$
 \end{aligned}
 $$
 
-Defining $$ _1^k W = {_n^k W^{\GL_2(\ZZ/n\ZZ)}} $$, we get
+Defining $$ _1^k W = {_n^k W^{\GL_2(\ZZ/n\ZZ)}} $$, Deligne shows
 
 $$
 _1^k W_{\infty}
@@ -379,9 +379,19 @@ _1^k W_{\infty}
 = S_{k+2} \oplus \overline{S_{k+2}}.
 $$
 
+Here, the notation means we are considering the elements of $$ ^k_n W $$ invariant under the $$ \GL_2(\ZZ/n\ZZ) $$.
+
 
 #### Frobenious and Verschiebung
 
+Page 155, we define
+
+$$
+^k W^{(p)} 
+= ^k W^{GL_2(\ZZ_p)}
+$$
+
+We get a Frobenious diagram 
 
 #### Step 4
 
