@@ -283,10 +283,10 @@ $$
 Since $$  $$ is a complex space 
 -->
 
-&emsp; In Deligne's paper he defines a map $$ \sh_0 $$. Since we are only going to use the following result, we will not construct it here.
+&emsp; Using this identification, we can then identify cusp forms with the first reduced cohomology group of the symmetric power of a local system on $$ \overline{X/\Gamma} $$ tensored over $$ \CC $$.
 
-**Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism $$ \sh $$, called the Shimura isomorphism, making the following diagram commute:* 
-
+**Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism 
+<!--
 $$
 \xymatrix{ 
     H^0(\overline{X/\Gamma}, \, \Omega^1 \otimes \omega^k) \oplus \overline{H^0(\overline{X/\Gamma}, \, \Omega^1 \otimes \omega^k)} \ar@{^{(}->}[d] \ar[r]^-\sh 
@@ -297,7 +297,7 @@ $$
 $$
 
 *In particular,*
-
+-->
 $$
 S_{k+2}(\Gamma) \oplus \overline{S_{k+2}(\Gamma)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC
 $$
