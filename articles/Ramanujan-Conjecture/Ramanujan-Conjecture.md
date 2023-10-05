@@ -311,26 +311,17 @@ $$
 &emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. Likewise, set 
 
 $$
-\underline{\ZZ}_{\ell} = \colim_r \underline{\ZZ/(ell^r)}
-$$
-
-and 
-
-$$
-\underline{\hat{\ZZ}} = (\underline{\ZZ}_{\ell)
+\underline{\ZZ}_{\ell} = \colim_r \underline{\ZZ/(ell^r)}, \quad 
+\underline{\hat{\ZZ}} = (\underline{\ZZ}_{\ell})
 $$
 
 &emsp; It can be shown that an elliptic curve over $$ S $$ is a group scheme, and hence we define $$ E_n $$ to be the kernel of the multiply-by-$$ n $$ endomorphism of $$ E $$. For $$ \ell $$ prime, we define the $$ \ell $$ th *Tate module* as the colimit
 
 $$ 
-T_{\ell}(E) = \colim_r E_{\ell^r}.
+T_{\ell}(E) = \colim_r E_{\ell^r},
 $$
 
-We can think of $$ T_{\ell}(E) $$ as the "first étale homology group $$ H_1(E, \underline{\ZZ}_{\ell}) $$", where 
-
-
-
-We define a $$ \hat{\ZZ} $$ sheaf $$ T_f(E) $$ by bundling our Tate modules for each prime $$ \ell $$.
+which is a $$ \ZZ_{\ell} $$ sheaf. We can think of $$ T_{\ell}(E) $$ as the "first étale homology group $$ H_1(E, \underline{\ZZ}_{\ell}) $$". Thus, bundling our Tate modules for each prime $$ \ell $$ yields a $$ \hat{\ZZ} $$ sheaf $$ T_f(E) $$.
 
 &emsp; Let $$ \Gamma(n) $$ be the elements $$ \gamma \in \SL_2(\ZZ) $$ such that $$ \gamma \equiv \Id $$ modulo $$ n $$, i.e.
 
@@ -349,7 +340,7 @@ $$
 
 or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Finally, defining $$ M_n  = X/\Gamma(n) $$ we get the following.
 
-**Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ T_f(E) \cong \underline{Z}^2 $$.*
+**Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ T_f(E) \cong \underline{\hat{Z}}^2 $$.*
 
 #### Step 3
 
