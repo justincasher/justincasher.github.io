@@ -349,10 +349,10 @@ or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Defin
 
 $$
 _n^k W_{\ell}
-= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \Sym^k(R^1 f_{n*}(\underline{\QQ_{\ell})))
+= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \Sym^k(R^1 f_{n*}(\underline{\QQ}_{\ell})))
 $$
 
-to mimic the right hand side of the Shimura isomorphism in the $$ \ell $$-adic case. (Deline defines $$ \displaystyle ^kW_{\ell} = \lim_{\to} _n^kW_{\ell} $$, but we will not need this here.)
+to mimic the right hand side of the Shimura isomorphism in the $$ \ell $$-adic case. (Deline gives more general constructions which we will not need.)
 
 #### Step 3
 
