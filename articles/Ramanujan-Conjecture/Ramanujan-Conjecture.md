@@ -345,7 +345,7 @@ or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Defin
 
 **Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ E_n \cong (\ZZ/n\ZZ)^2 $$.*
 
-&emsp; Write $$ f_n \colon E \to M_n $$ for the universal elliptic curve on $$ M_n $$ (or $$ M_n^{\an} $$). Fix an algebraic closure $$ \overline{\QQ} $$ of $$ \QQ $$. We define 
+&emsp; Write $$ f_n \colon E \to M_n $$ for the universal elliptic curve on $$ M_n $$ (or $$ M_n^{\an} $$) for $$ n \geq 3 $$. Fix an algebraic closure $$ \overline{\QQ} $$ of $$ \QQ $$. We define 
 
 $$
 \begin{aligned}
@@ -357,8 +357,8 @@ $$
 and 
 
 $$
-^kW = \lim_{\to n} {_n^k W}, \qquad 
-{^k W_{\ell}} = \lim_{\to n} {_n^k W_{\ell}},
+^kW = \lim_{n \to} {_n^k W}, \qquad 
+{^k W_{\ell}} = \lim_{n \to} {_n^k W_{\ell}},
 $$
 
 which satisfy $$ {^k W_{\ell}} = {^k W} \otimes \QQ_{\ell} $$.
@@ -367,9 +367,11 @@ which satisfy $$ {^k W_{\ell}} = {^k W} \otimes \QQ_{\ell} $$.
 
 $$
 \begin{aligned}
-W_{\infty} & = \lim_{n \to}
+^k W_{\infty} & = \lim_{n \to} H^0(\overline{M}_n^{\an}, \Omega^k \otimes \omega^k) \oplus \overline{H^0(\overline{M}_n^{\an}, \Omega^k \otimes \omega^k)}.
 \end{aligned}
 $$
+
+We define $$ _1^k W = {_n^k W^{\GL_2(\ZZ/n\ZZ)}} $$, we define 
 
 
 #### Frobenious and Verschiebung
