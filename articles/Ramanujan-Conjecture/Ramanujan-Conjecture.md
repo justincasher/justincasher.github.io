@@ -220,7 +220,28 @@ $$
 
 &emsp; Let $$ \Gamma $$ be a discrete subgroup of $$ \SL_2(\ZZ) $$ without torsion elements such that $$ X/\Gamma $$ has finite volume (with respect to the Poincaré metric). We can identify $$ X/\Gamma $$ to a smooth projective curve $$ \overline{X/\Gamma} $$ minus a finite number of points.
 
-&emsp; One of the main ideas of Deligne's paper is to use a cohomological description of cusp forms. We define a cusp form of weight $$ k $$ with respect to $$ \Gamma $$ by assuming $$ \gamma \in \Gamma $$ in the definitions given in \S1, and we denote the resulting space $$ S_k(\Gamma) $$. Alternatively, for $$ \gamma \in \SL_2(\ZZ) $$,
+&emsp; One of the main ideas of Deligne's paper is to use a cohomological description of cusp forms. We define a cusp form of weight $$ k $$ with respect to $$ \Gamma $$ by assuming $$ \gamma \in \Gamma $$ in the definitions given in \S1, and we denote the resulting space $$ S_k(\Gamma) $$. 
+
+&emsp; Alternatively, we see for $$ \gamma \in \SL_2(\ZZ) $$, 
+
+$$
+\frac{d(\gamma(z)))}{dz}
+= (cz+d)^{-2}.
+$$
+
+Hence, the condition 
+
+$$
+f(\gamma(z)) = (cz+d)^k f(z) 
+$$
+
+is equivalent to 
+
+$$
+f(\gamma(z)) d\gamma(z)^k = f(z) dz^k.
+$$
+
+In other words, we are interested in the differential forms $$ f(z) dz^k $$ of weight $$ k $$ invariant under $$ \SL_2(\ZZ) $$.
 
 **Theorem 3.3.** &nbsp; *$$ S_{k+2}(\Gamma) $$ can be identified with $$ H^0(\overline{X/\Gamma}, \Omega^1 \otimes \omega^k) $$.*
 
