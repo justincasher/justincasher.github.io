@@ -463,7 +463,7 @@ $$
 
 &emsp; Deligne uses the $$ j $$-invariant and Abyankhar's lemma to compactify $$ M_n $$ into a space $$ M_n^* $$ which is projective and smooth over $$ \Spec(\ZZ[1/n]) $$, as $$ M_n $$ is not. With a bit of proof, this allows us to apply the Riemann hypothesis to get the following:
 
-**Theorem 3.8.** &nbsp; *The absolute values of the Frobenious $$ F $$ acting on $$ ^k_n W_{\ell} $$ are algebraic integers of absolute value $$ p^{(k+1)/10} $$.*
+**Theorem 3.8.** &nbsp; *The eigenvalues of the Frobenious $$ F $$ acting on $$ ^k_n W_{\ell} $$ are algebraic integers of absolute value $$ p^{(k+1)/10} $$.*
 
 &emsp; Since $$ I_p^* $$ induces the identity on $$ _1^k W_{\ell} $$, we have 
 
@@ -487,7 +487,7 @@ $$
 &nbsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply lemma 3.5 to get
 
 $$
-\det(1-T_p+p^{k+1}X; _1^k W_{\ell}) & = \det(1-T_p+p^{k+1}X; S_{k+2})^2,
+\det(1-T_p+p^{k+1}X; {_1^k W_{\ell}}) & = \det(1-T_p+p^{k+1}X; S_{k+2})^2,
 $$
 
 and hence 
@@ -500,7 +500,7 @@ $$
 &emsp; In the case $$ k = 10 $$, because $$ S_{12} $$ is of dimension 1, this tells us
 
 $$
-H_p(X) = \det(1-FX; {_1^{10} W_{\ell}),
+H_p(X) = \det(1-FX; {_1^{10} W_{\ell}}),
 $$
 
 and we are done.
