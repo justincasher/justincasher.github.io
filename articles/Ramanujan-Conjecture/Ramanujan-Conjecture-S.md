@@ -494,7 +494,7 @@ and hence
 
 $$
 \det(1-T_p+p^{k+1}X; S_{k+2})
-= \det(1-FX; _1^k W_{\ell})^2.
+= \det(1-FX; _1^k W_{\ell}).
 $$
 
 &emsp; In the case $$ k = 10 $$, because $$ S_{12} $$ is of dimension 1, this tells us
