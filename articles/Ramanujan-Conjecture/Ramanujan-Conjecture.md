@@ -343,7 +343,7 @@ $$
 
 or $$ a \equiv d \equiv 1 $$ and $$ b \equiv c \equiv 0 $$ modulo $$ n $$. Define $$ M_n $$ to be $$ X/\Gamma(n) $$ considered as a complex algebraic variety; and let $$ M_n^{\an} $$ be $$ X/\Gamma(n) $$ considered as a complex analytic space.
 
-**Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ represents the functor which sends a scheme $$ S $$ of characteristic 0 to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ \alpha \colon E_n \to (\ZZ/n\ZZ)^2 $$.*
+**Proposition 3.4.** &nbsp; *For $$ n \geq 3 $$, $$ M_n $$ (resp. $$ M_n^{\an} $$) represents the functor which sends a scheme $$ S $$ of characteristic 0 (resp. an analytic space) to the isomorphism classes of elliptic curves $$ E $$ on $$ S $$, equipped with an isomorphism $$ \alpha \colon E_n \to (\ZZ/n\ZZ)^2 $$.*
 
 &emsp; Write $$ f_n \colon E \to M_n $$ for the universal elliptic curve on $$ M_n $$ (or $$ M_n^{\an} $$) for $$ n \geq 3 $$. Fix an algebraic closure $$ \overline{\QQ} $$ of $$ \QQ $$. We define 
 
@@ -461,19 +461,7 @@ $$
 
 #### Applying the Riemann Hypothesis
 
-So we define 
-
-$$
-^{10}_1 W_{\ell}
-= \widetilde{H}^1(M_n \otimes \overline{\QQ}, \, \Sym^k(R^1 f_{n *}(\underline{\QQ}_{\ell})))
-$$
-
-
-We need to identify $$ _1^{10} W_{\ell} $$ to $$ S_{12} \oplus \overline{S_{12}} $$.
-
-and the Frobenious $$ F $$ as on page 161. 
-
-In order to define the Frobenious, we must define $$ W^{(p)} $$.
+&emsp; 
 
 
 
