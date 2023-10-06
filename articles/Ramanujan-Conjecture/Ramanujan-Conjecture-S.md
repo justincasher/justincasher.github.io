@@ -24,7 +24,7 @@ $$ \newcommand{\AA}{\mathcal{A}} \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{
 $$ \DeclareMathOperator{\an}{an} \DeclareMathOperator{\char}{char} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
-**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see Deligne's paper.
+**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see [\[1\]](#4-references).
 
 ## Table of Contents
 1. [Modular Forms](#1-modular-forms)
@@ -507,7 +507,7 @@ and we are done.
 
 ## 4. References
 
-1. Pierre Deligne. "La conjecture de Weil: I". *Publications Mathématiques de l'IHÉS*, Volume 43 (1974), pp. 273-307. [Link](http://www.numdam.org/item/PMIHES_1974__43__273_0/)
-2. Pierre Deligne. "Formes modulaires et représentations $$ l $$-adiques". *Séminaire Bourbaki*, no. 355 (1968–1969).
+1. Pierre Deligne. "Formes modulaires et représentations $$ l $$-adiques". *Séminaire Bourbaki*, no. 355 (1968–1969).
+2. Pierre Deligne. "La conjecture de Weil: I". *Publications Mathématiques de l'IHÉS*, Volume 43 (1974), pp. 273-307. [Link](http://www.numdam.org/item/PMIHES_1974__43__273_0/)
 3. Serge Lang, *Introduction to modular forms*, Springer-Verlag, 1976.
 4. Jean-Pierre Serre, *A course in arithmetic*, Springer-Verlag, 1973.
