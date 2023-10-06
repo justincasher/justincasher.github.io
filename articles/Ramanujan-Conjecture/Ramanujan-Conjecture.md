@@ -376,15 +376,17 @@ Defining $$ _1^k W = {_n^k W^{\GL_2(\ZZ/n\ZZ)}} $$, Deligne shows
 $$
 _1^k W_{\infty}
 = _1^k W \otimes \CC
-= S_{k+2} \oplus \overline{S_{k+2}}.
+\cong S_{k+2} \oplus \overline{S_{k+2}}.
 $$
 
 Here, the notation means we are considering the elements of $$ ^k_n W $$ invariant under the $$ \GL_2(\ZZ/n\ZZ) $$.
 
+**Lemma 3.5.** &nbsp; *We have _1^k W_{\infty} \cong S_{k+2} \oplus \overline{S_{k+2}} $$.*
+
 
 #### Frobenious and Verschiebung
 
-&emsp; Fix a pair $$ (E, \alpha) $$ as in proposition 3.4, and let $$ F \colon E \to E^{(p)} $$ denote the Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram
+&emsp; Fix a pair $$ (E, \alpha) $$ as in proposition 3.4, and let $$ F \colon E \to E^{(p)} $$ denote the (classical) Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram over $$ M_n \otimes \FF_p $$
 
 $$
 \xymatrix{
@@ -394,7 +396,13 @@ E \ar[u] \ar[rr]^{F} & & E^{(p)} \ar[u]
 }
 $$
 
-This defines a map $$ F \colon M_n \otimes \FF_p \to M_n \otimes \FF_p $$.
+This defines an endomorphism of
+
+$$
+\widetilde{H}^1(M_n \otimes \overline{\FF}_p, \Sym^k(R^1 f_{n*} \underline{\ZZ}_{\ell}))
+$$
+
+by acting on our constant sheaf $$ \underline{\ZZ}_{\ell} $$.
 
 &emsp; We likewise have a diagram
 
@@ -402,11 +410,11 @@ $$
 \xymatrix{
 & (\ZZ/n\ZZ)^2 & \\
 E_n^{(p)} \ar[ru]^{p \alpha^{(p)}} \ar[rr] & & E_n \ar[lu]_{\alpha} \\
-E^{(p)} \ar[u] \ar[rr]^{F} & & E \ar[u]
+E^{(p)} \ar[u] \ar[rr]^{V} & & E \ar[u]
 }
 $$
 
-which defines the transponse of the Frobenious, the vershiebung, with respect to an abstracted Peterson inner product.
+which defines the transponse of the Frobenious, the Vershiebung, with respect to an abstracted Peterson inner product.
 
 #### Step 4
 
