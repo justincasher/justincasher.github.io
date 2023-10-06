@@ -416,7 +416,7 @@ $$
 
 which defines the transponse of the Frobenious, the Vershiebung, with respect to an abstracted Peterson inner product.
 
-&emsp; Finally, we can define Hecke operators $$ T_p $$ acting on $$ _1^k W_{\infty} $$ by the coset of 
+&emsp; Finally, we define the Hecke operator $$ T_p $$ acting on $$ _1^k W_{\infty} $$ by the coset of 
 
 $$
 \begin{bmatrix}
@@ -425,7 +425,32 @@ $$
 \end{bmatrix}
 $$
 
-in $$ \GL_2(\ZZ_p) \backslash \GL_2(\QQ_p)/\GL_2(\ZZ_p) $$.
+in $$ \GL_2(\ZZ_p) \backslash \GL_2(\QQ_p)/\GL_2(\ZZ_p) $$. Likewise define $$ R_p $$ to be the coset of 
+
+$$
+\begin{bmatrix}
+p^{-1} & 0 \\
+0 & p^{-1}
+\end{bmatrix}
+$$
+
+Setting $$ I_p \colon M_n \to M_n $$ to be the functor $$ (E, \alpha) \to (E, \alpha/p) $$, Deligne proved the following:
+
+**Proposition 3.6.** &nbsp; *$$ F $$ is the inverse of the Frobenious from the action of $$ \Gal(\overline{\FF}_p/\FF_p) $$ on*
+
+$$
+\widetilde{H}^1(M_n \otimes \overline{\FF}_p, \Sym^k(R^1 f_{n*} \underline{\ZZ}_{\ell})).
+$$
+
+*Over $$ \FF_p $$, we have $$ T_p = F + I_p^* V $$ and $$ FV = VF = p^{k+1} $$. This allows us to factor*
+
+$$
+1 - T_p + p R_p X^2 = (1-FX)(1+I_p^*VX).
+$$
+
+&emsp; From this, we get the following theorem.
+
+**Theorem 3.7.** &nbsp; 
 
 
 
