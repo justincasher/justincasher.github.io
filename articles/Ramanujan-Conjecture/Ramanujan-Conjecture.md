@@ -463,7 +463,7 @@ $$
 
 &emsp; Deligne uses the $$ j $$-invariant and Abyankhar's lemma to compactify $$ M_n $$ into a space $$ M_n^* $$ which is projective and smooth over $$ \Spec(\ZZ[1/n]) $$, as $$ M_n $$ is not. With a bit of proof, this allows us to apply the Riemann hypothesis to get the following:
 
-**Theorem 3.8.** &nbsp; *The eigenvalues of the Frobenious $$ F $$ acting on $$ ^k_n W_{\ell} $$ are algebraic integers of absolute value $$ p^{(k+1)/10} $$.*
+**Theorem 3.8.** &nbsp; *The eigenvalues of the Frobenious $$ F $$ acting on $$ ^k_n W_{\ell} $$ are algebraic integers of absolute value $$ p^{(k+1)/2} $$.*
 
 &emsp; Since $$ I_p^* $$ induces the identity on $$ _1^k W_{\ell} $$, we have 
 
