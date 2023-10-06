@@ -431,7 +431,7 @@ $$
 \begin{bmatrix}
 p^{-1} & 0 \\
 0 & p^{-1}
-\end{bmatrix}
+\end{bmatrix}.
 $$
 
 Setting $$ I_p \colon M_n \to M_n $$ to be the functor $$ (E, \alpha) \to (E, \alpha/p) $$, Deligne proved the following:
@@ -442,16 +442,21 @@ $$
 \widetilde{H}^1(M_n \otimes \overline{\FF}_p, \Sym^k(R^1 f_{n*} \underline{\ZZ}_{\ell})).
 $$
 
-*Over $$ \FF_p $$, we have $$ T_p = F + I_p^* V $$ and $$ FV = VF = p^{k+1} $$. This allows us to factor*
+*Over $$ \FF_p $$, we have $$ T_p = F + I_p^* V $$ and $$ FV = VF = p^{k+1} $$.*
+
+
+
+&emsp; From this, we get the following theorem.
+
+**Theorem 3.7.** &nbsp; *Let $$ K_{n, \ell} $$ be the largest unramified extension of $$ \overline{\QQ} $$ away from $$ n $$ and $$ \ell $$, $$ \varphi_p $$ a relative Frobenious to $$ p $$ in $$ \Gal(K_{n, \ell}/\QQ) $$, $$ F $$ the endomorphism $$ \varphi_p^{-1} $$ of $$ ^k_n W_{\ell} $$, and $$ V $$ the transpose. Then*
+
+$$
+T_p = F + I_p^* V, \qquad FV = p^{k+1},
+$$
 
 $$
 1 - T_p + p R_p X^2 = (1-FX)(1+I_p^*VX).
 $$
-
-&emsp; From this, we get the following theorem.
-
-**Theorem 3.7.** &nbsp; 
-
 
 
 #### Applying the Riemann Hypothesis
