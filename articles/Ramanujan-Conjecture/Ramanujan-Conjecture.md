@@ -461,7 +461,11 @@ $$
 
 #### Applying the Riemann Hypothesis
 
-&emsp; 
+&emsp; Deligne uses the $$ j $$-invariant and Abyankhar's lemma to compactify $$ M_n $$ into a space $$ M_n^* $$ which is projective and smooth over $$ \Spec(\ZZ[1/n]) $$, as $$ M_n $$ is not. With a bit of proof, this allows us to apply the Riemann hypothesis to get the following:
+
+**Theorem.** &emsp; *The absolute values of the Frobenious $$ F $$ acting on $$ ^k_n W_{\ell} $$ are algebraic integers of absolute value $$ p^{(k+1)/10} $$.*
+
+&emsp; Furthermore, in 
 
 
 
