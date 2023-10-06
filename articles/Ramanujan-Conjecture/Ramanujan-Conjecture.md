@@ -381,7 +381,7 @@ $$
 
 Here, the notation means we are considering the elements of $$ ^k_n W $$ invariant under the $$ \GL_2(\ZZ/n\ZZ) $$.
 
-**Lemma 3.5.** &nbsp; *We have _1^k W_{\infty} \cong S_{k+2} \oplus \overline{S_{k+2}} $$.*
+**Lemma 3.5.** &nbsp; *We have $$ _1^k W_{\infty} \cong S_{k+2} \oplus \overline{S_{k+2}} $$.*
 
 
 #### Frobenious and Verschiebung
@@ -415,6 +415,17 @@ E^{(p)} \ar[u] \ar[rr]^{V} & & E \ar[u]
 $$
 
 which defines the transponse of the Frobenious, the Vershiebung, with respect to an abstracted Peterson inner product.
+
+&emsp; Finally, we can define Hecke operators $$ T_p $$ acting on $$ _1^k W_{\infty} $$ by the coset of 
+
+$$
+\begin{bmatrix}
+1 & 0 \\
+0 & p^{-1}
+\end{bmatrix}
+$$
+
+in $$ \GL_2(\ZZ_p)\\GL_2(\QQ_p)/\GL_2(\ZZ_p) $$.
 
 #### Step 4
 
