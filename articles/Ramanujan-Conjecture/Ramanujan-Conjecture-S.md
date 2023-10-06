@@ -35,7 +35,7 @@ $$ \DeclareMathOperator{\an}{an} \DeclareMathOperator{\char}{char} \DeclareMathO
 
 ## 1. Modular Forms
 
-&emsp; See Lang's book [\[1\]](#4-references) for the details of this section. Let 
+&emsp; See Lang's book [\[3\]](#4-references) for the details of this section. Let 
 
 $$ 
 \CH 
@@ -507,4 +507,7 @@ and we are done.
 
 ## 4. References
 
-1. Serge Lang, *Introduction to modular forms*, Springer-Verlag, 1976.
+1. Pierre Deligne. "La conjecture de Weil: I". *Publications Mathématiques de l'IHÉS*, Volume 43 (1974), pp. 273-307. [Link](http://www.numdam.org/item/PMIHES_1974__43__273_0/)
+2. Pierre Deligne. "Formes modulaires et représentations $$ l $$-adiques". *Séminaire Bourbaki*, no. 355 (1968–1969).
+3. Serge Lang, *Introduction to modular forms*, Springer-Verlag, 1976.
+4. Jean-Pierre Serre, *A course in arithmetic*, Springer-Verlag, 1973.
