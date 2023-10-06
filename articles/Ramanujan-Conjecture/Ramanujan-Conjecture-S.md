@@ -164,7 +164,7 @@ and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
 
 #### Overview
 
-&emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. By Theorem 1,
+&emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. By [Theorem 1](https://www.justinasher.me/Ramanujan-Conjecture-T1),
 
 $$
 D(s)
@@ -206,7 +206,7 @@ and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result 
 
 #### The Shimura Isomorphism
 
-&emsp; Let $$ S $$ be a complex analytic space. An *elliptic curve* over $$ S $$ is a map $$ f \colon E \to S $$ with a section $$ e \colon S \to E $$, such that the fibres of $$ f $$ are elliptic curves with origin given by $$ e $$. 
+&emsp; Let $$ S $$ be a complex analytic space. An *elliptic curve* over $$ S $$ is a map $$ f \colon E \to S $$ with a section $$ e \colon S \to E $$, such that the fibers of $$ f $$ are elliptic curves with origin given by $$ e $$. 
 
 &emsp; We say an isomorphism $$ R^1 f_* \underline{\ZZ} \to \underline{\ZZ}^2 $$ of sheaves on $$ S $$ is *permitted* if it induces -1 on the map 
 
@@ -224,7 +224,7 @@ We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where
 
 **Proposition 3.2.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
-&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homomthety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$ (identify $$ X $$ with $$ \CH $$ and consider $$ b/a $$). We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from each isomorphism class of elliptic curves. 
+&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homothety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$ (identify $$ X $$ with $$ \CH $$ and consider $$ b/a $$). We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from each isomorphism class of elliptic curves. 
 
 &emsp; Let $$ \Gamma $$ be a discrete subgroup of $$ \SL_2(\ZZ) $$ without torsion elements such that $$ X/\Gamma $$ has finite volume (with respect to the Poincaré metric). We can identify $$ X/\Gamma $$ to a smooth projective curve $$ \overline{X/\Gamma} $$ minus a finite number of points.
 
@@ -308,7 +308,7 @@ $$
 
 #### Full Level $$ n $$ Structures
 
-&emsp; We would like to emulate proposition 3.2 in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. 
+&emsp; We would like to emulate [proposition 3.2]((https://www.justinasher.me/Ramanujan-Conjecture-P3:2)) in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. 
 
 <!-- Likewise, set 
 
@@ -386,7 +386,7 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 
 #### Frobenious and Verschiebung
 
-&emsp; Fix a pair $$ (E, \alpha) $$ as in proposition 3.4, and let $$ F \colon E \to E^{(p)} $$ denote the (classical) Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram over $$ M_n \otimes \FF_p $$
+&emsp; Fix a pair $$ (E, \alpha) $$ as in [proposition 3.4](https://www.justinasher.me/Ramanujan-Conjecture-P3:4), and let $$ F \colon E \to E^{(p)} $$ denote the (classical) Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram over $$ M_n \otimes \FF_p $$
 
 $$
 \xymatrix{
@@ -414,7 +414,7 @@ E^{(p)} \ar[u] \ar[rr]^{V} & & E \ar[u]
 }
 $$
 
-which defines the transponse of the Frobenious, the Vershiebung, with respect to an abstracted Peterson inner product.
+which defines the transpose of the Frobenious, the Vershiebung, with respect to an abstracted Peterson inner product.
 
 &emsp; Finally, we define the Hecke operator $$ T_p $$ acting on $$ _1^k W_{\infty} $$ by the coset of 
 
@@ -443,8 +443,6 @@ $$
 $$
 
 *Over $$ \FF_p $$, we have $$ T_p = F + I_p^* V $$ and $$ FV = VF = p^{k+1} $$.*
-
-
 
 &emsp; From this, we get the following theorem.
 
@@ -484,7 +482,7 @@ $$
 = \det(1-FX; \, {_1^k W_{\ell}})^2.
 $$
 
-&nbsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply lemma 3.5 to get
+&nbsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-Conjecture-L3:5) to get
 
 $$
 \det(1-T_p+p^{k+1}X; \, {_1^k W_{\ell}}) = \det(1-T_p+p^{k+1}X; \, S_{k+2})^2,
@@ -500,10 +498,10 @@ $$
 &emsp; In the case $$ k = 10 $$, because $$ S_{12} $$ is of dimension 1, this tells us
 
 $$
-H_p(X) = \det(1-FX; \, {_1^{10} W_{\ell}}),
+H_p(X) = \det(1-FX; \, {_1^{10} W_{\ell}}).
 $$
 
-and we are done.
+Applying [theorem 3.8](https://www.justinasher.me/Ramanujan-Conjecture-T3:8) completes Deligne's proof of the Ramanujan conjecture. Q.E.D.
 
 ## 4. References
 
