@@ -138,7 +138,7 @@ $$
 
 ## 2. Ramanujan's Conjectures
 
-&emsp; Consider the space $$ M_{12} $$. It contains the cusp form
+&emsp; Consider the space $$ S_{12} $$. It contains the cusp form
 
 $$
 \Delta(z)
@@ -146,7 +146,7 @@ $$
 = q \prod_{n > 0} (1-q^n)^{24},
 $$ 
 
-and since $$ M_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The coefficient function $$ \tau \colon \NN \to \CC $$ is called the *Ramanujan tau function*. 
+and since $$ S_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The coefficient function $$ \tau \colon \NN \to \CC $$ is called the *Ramanujan tau function*. 
 
 **Ramanujan Conjectures.** &nbsp; *The following should hold:*
 <ol type="1" class="custom" style="list-style-position: outside">
@@ -466,7 +466,7 @@ $$
 &emsp; Since $$ I_p^* $$ induces the identity on $$ _1^k W_{\ell} $$, we have 
 
 $$
-1 - T_p X + p^{k+1} X = (1-FX)(1-VX);
+1 - T_p X + p^{k+1} X^2 = (1-FX)(1-VX);
 $$
 
 and because $$ F $$ and $$ V $$ are transposes, 
@@ -478,20 +478,20 @@ $$
 Thus,
 
 $$
-\det(1-T_p+p^{k+1}X; \, {_1^k W_{\ell}})
+\det(1-T_pX+p^{k+1}X^2; \, {_1^k W_{\ell}})
 = \det(1-FX; \, {_1^k W_{\ell}})^2.
 $$
 
 &nbsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-Conjecture-L3:5) to get
 
 $$
-\det(1-T_p+p^{k+1}X; \, {_1^k W_{\ell}}) = \det(1-T_p+p^{k+1}X; \, S_{k+2})^2,
+\det(1-T_pX +p^{k+1}X^2; \, {_1^k W_{\ell}}) = \det(1-T_p+p^{k+1}X^2; \, S_{k+2})^2,
 $$
 
 and hence 
 
 $$
-\det(1-T_p+p^{k+1}X; \, S_{k+2})
+\det(1-T_pX+p^{k+1}X^2; \, S_{k+2})
 = \det(1-FX; \, {_1^k W_{\ell}}).
 $$
 
