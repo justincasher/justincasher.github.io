@@ -448,7 +448,7 @@ $$
 
 &emsp; From this, we get the following theorem.
 
-**Theorem 3.7.** &nbsp; *Let $$ K_{n, \ell} $$ be the largest unramified extension of $$ \overline{\QQ} $$ away from $$ n $$ and $$ \ell $$, $$ \varphi_p $$ a relative Frobenious to $$ p $$ in $$ \Gal(K_{n, \ell}/\QQ) $$, $$ F $$ the endomorphism $$ \varphi_p^{-1} $$ of $$ ^k_n W_{\ell} $$, and $$ V $$ the transpose. Then*
+**Theorem 3.7.** &nbsp; *Let $$ K_{n, \ell} $$ be the largest unramified extension of $$ \overline{\QQ} $$ away from $$ n $$ and $$ \ell $$, $$ \varphi_p $$ a relative Frobenious to $$ p $$ in $$ \Gal(K_{n, \ell}/\QQ) $$, $$ F $$ the endomorphism $$ \varphi_p^{-1} $$ of $$ ^k_n W_{\ell} $$, and $$ V $$ the transpose of $$ F $$. Then*
 
 $$
 T_p = F + I_p^* V, \qquad FV = p^{k+1},
@@ -463,11 +463,47 @@ $$
 
 &emsp; Deligne uses the $$ j $$-invariant and Abyankhar's lemma to compactify $$ M_n $$ into a space $$ M_n^* $$ which is projective and smooth over $$ \Spec(\ZZ[1/n]) $$, as $$ M_n $$ is not. With a bit of proof, this allows us to apply the Riemann hypothesis to get the following:
 
-**Theorem.** &emsp; *The absolute values of the Frobenious $$ F $$ acting on $$ ^k_n W_{\ell} $$ are algebraic integers of absolute value $$ p^{(k+1)/10} $$.*
+**Theorem 3.8.** &nbsp; *The absolute values of the Frobenious $$ F $$ acting on $$ ^k_n W_{\ell} $$ are algebraic integers of absolute value $$ p^{(k+1)/10} $$.*
 
-&emsp; Furthermore, in 
+&emsp; Since $$ I_p^* $$ induces the identity on $$ _1^k W_{\ell} $$, we have 
 
+$$
+1 - T_p X + p^{k+1} X = (1-FX)(1-VX);
+$$
 
+and because $$ F $$ and $$ V $$ are transposes, 
+
+$$
+\det(1-FX; _1^k W_{\ell}) = \det(1-VX; _1^k W_{\ell}).
+$$ 
+
+Thus,
+
+$$
+\det(1-T_p+p^{k+1}X; _1^k W_{\ell})
+= \det(1-FX; _1^k W_{\ell})^2.
+$$
+
+&nbsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply lemma 3.5 to get
+
+$$
+\det(1-T_p+p^{k+1}X; _1^k W_{\ell}) & = \det(1-T_p+p^{k+1}X; S_{k+2})^2,
+$$
+
+and hence 
+
+$$
+\det(1-T_p+p^{k+1}X; S_{k+2})
+= \det(1-FX; _1^k W_{\ell})^2.
+$$
+
+&emsp; In the case $$ k = 10 $$, because $$ S_{12} $$ is of dimension 1, this tells us
+
+$$
+H_p(X) = \det(1-FX; {_1^{10} W_{\ell}),
+$$
+
+and we are done.
 
 ## 4. References
 
