@@ -425,9 +425,11 @@ $$
 \end{bmatrix}
 $$
 
-in $$ \GL_2(\ZZ_p)\\GL_2(\QQ_p)/\GL_2(\ZZ_p) $$.
+in $$ \GL_2(\ZZ_p) \backslash \GL_2(\QQ_p)/\GL_2(\ZZ_p) $$.
 
-#### Step 4
+
+
+#### Applying the Riemann Hypothesis
 
 So we define 
 
