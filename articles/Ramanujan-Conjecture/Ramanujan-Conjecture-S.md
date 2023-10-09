@@ -386,6 +386,8 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 
 #### Frobenious and Verschiebung
 
+&emsp; We have a Hecke operator acting on $$ S_{12}(\Gamma) $$. We would like to see what these operators correspond to under the isomorphism given by lemma 3.5. In particular, we can decompose this corresponding operator as a sum of the Frobenious and its adjoint, the Vershiebung. 
+
 &emsp; Fix a pair $$ (E, \alpha) $$ as in [proposition 3.4](https://www.justinasher.me/Ramanujan-Conjecture-P3:4), and let $$ F \colon E \to E^{(p)} $$ denote the (classical) Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram over $$ M_n \otimes \FF_p $$
 
 $$
