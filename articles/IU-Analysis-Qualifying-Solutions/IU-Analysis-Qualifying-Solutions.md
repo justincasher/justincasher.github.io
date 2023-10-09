@@ -1465,7 +1465,7 @@ $$
 
 *where $$ n $$ is the unit normal.*
 
-#### Stoke's Theorem
+#### Problems
 
 **2022 F P3.** &nbsp; *Find the value of $$ \int \int_E F \cdot n dS $$ where $$ F(x, y, z) = (x, ze^x, y^z) $$,* 
 
