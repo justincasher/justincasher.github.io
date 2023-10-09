@@ -14,5 +14,6 @@ This page contains an alphabetized list of (mostly expository) online mathematic
 5. [IU Analysis Qualifying Solutions]({{'/IU-Analysis-Qualifying-Solutions' | relative_url}})
 6. [Local Systems as Locally Constant Sheaves]({{'/Local-Systems-as-Locally-Constant-Sheaves' | relative_url}})
 7. [Motivating Schemes with the Weil Conjectures]({{'/Weil-Conjectures-Intro' | relative_url}})
+8. [Ramanujan Conjecture]({{'/Ramanujan-Conjecture' | relative_url}})
 
 
