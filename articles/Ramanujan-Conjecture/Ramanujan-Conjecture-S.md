@@ -484,7 +484,7 @@ $$
 = \det(1-FX; \, {_1^k W_{\ell}})^2.
 $$
 
-&nbsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-Conjecture-L3:5) to get
+&emsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-Conjecture-L3:5) to get
 
 $$
 \det(1-T_pX +p^{k+1}X^2; \, {_1^k W_{\ell}}) = \det(1-T_pX+p^{k+1}X^2; \, S_{k+2})^2,
