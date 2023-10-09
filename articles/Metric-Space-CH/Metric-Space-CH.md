@@ -9,7 +9,7 @@ $$ \newcommand{\AA}{\mathcal{A}} \newcommand{\CH}{\mathcal{H}} \newcommand{\CL}{
 $$ \DeclareMathOperator{\an}{an} \DeclareMathOperator{\char}{char} \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\GL}{GL} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\sh}{sh} \DeclareMathOperator{\SL}{SL} \DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Sym}{Sym} $$
 <br>
 
-**Abstract.** &nbsp; We present S. Alexander and R. Bishop's proof of a metric space Cartan-Hadamard theorem, filling in some details which were skipped.
+**Abstract.** &nbsp; We present S. Alexander and R. Bishop's proof of a metric space Cartan-Hadamard theorem. Our goal is to make the proof more motivated and accessible to non-experts.
 
 ## Table of Contents
 1. [Modular Forms](#1-modular-forms)
@@ -20,4 +20,4 @@ $$ \DeclareMathOperator{\an}{an} \DeclareMathOperator{\char}{char} \DeclareMathO
 
 ## 1. Classical Cartan-Hadamard Theorem
 
-**Cartan-Hadamard Theorem.** &emsp; Let $$ M $$ be a complete, connected Riemannian manifold of nonpositive curvature. Fix a point $$ p $$. Then the exponential $$ \exp_p \colon T_p M \to M $$ is a universal cover.
+**Cartan-Hadamard Theorem.** &nbsp; Let $$ M $$ be a complete, connected Riemannian manifold of nonpositive curvature. Fix a point $$ p \in M $$. Then the exponential $$ \exp_p \colon T_p M \to M $$ is a universal cover.
