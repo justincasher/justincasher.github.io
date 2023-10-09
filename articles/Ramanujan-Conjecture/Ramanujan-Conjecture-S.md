@@ -398,7 +398,7 @@ E \ar[u] \ar[rr]^{F} & & E^{(p)} \ar[u]
 }
 $$
 
-This defines an endomorphism of
+For $$ \ell \neq p $$, this defines an endomorphism of
 
 $$
 \widetilde{H}^1(M_n \otimes \overline{\FF}_p, \Sym^k(R^1 f_{n*} \underline{\ZZ}_{\ell}))
