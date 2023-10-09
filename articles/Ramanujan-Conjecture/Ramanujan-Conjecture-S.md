@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Seminar
 indent: true
 permalink: /Ramanujan-Conjecture-S
 feedformat: card
