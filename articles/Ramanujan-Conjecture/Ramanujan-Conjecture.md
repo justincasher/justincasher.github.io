@@ -164,7 +164,7 @@ and since $$ S_{12} $$ is of dimension 1, $$ \Delta(z) $$ is an eigenform. The c
 
 #### Overview
 
-&emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. By [theorem 1](https://www.justinasher.me/Ramanujan-Conjecture-T1),
+&emsp; Let $$ D $$ denote the Dirichlet series associated to $$ \Delta $$. By [theorem 1](https://www.justinasher.me/Ramanujan-Conjecture-T1){:target="_blank"},
 
 $$
 D(s)
