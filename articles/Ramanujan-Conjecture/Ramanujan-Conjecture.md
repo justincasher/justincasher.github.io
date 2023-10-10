@@ -308,7 +308,7 @@ $$
 
 #### Full Level $$ n $$ Structures
 
-&emsp; We would like to emulate [proposition 3.2](https://www.justinasher.me/Ramanujan-Conjecture-P3:2) in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. 
+&emsp; We would like to emulate [proposition 3.2](https://www.justinasher.me/Ramanujan-Conjecture-P3:2){:target="_blank"} in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. 
 
 <!-- Likewise, set 
 
@@ -388,7 +388,7 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 
 &emsp; We have a Hecke operator acting on $$ S_{12}(\Gamma) $$. We would like to see what these operators correspond to under the isomorphism given by lemma 3.5. In particular, we can decompose this corresponding operator as a sum of the Frobenious and its adjoint, the Vershiebung. 
 
-&emsp; Fix a pair $$ (E, \alpha) $$ as in [proposition 3.4](https://www.justinasher.me/Ramanujan-Conjecture-P3:4), and let $$ F \colon E \to E^{(p)} $$ denote the (classical) Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram over $$ M_n \otimes \FF_p $$
+&emsp; Fix a pair $$ (E, \alpha) $$ as in [proposition 3.4](https://www.justinasher.me/Ramanujan-Conjecture-P3:4){:target="_blank"}, and let $$ F \colon E \to E^{(p)} $$ denote the (classical) Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram over $$ M_n \otimes \FF_p $$
 
 $$
 \xymatrix{
@@ -484,7 +484,7 @@ $$
 = \det(1-FX; \, {_1^k W_{\ell}})^2.
 $$
 
-&emsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-Conjecture-L3:5) to get
+&emsp; Since $$ T_p $$ action on $$ _n^k W_{\ell} $$ is induced by its action on $$ _n^k W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-Conjecture-L3:5){:target="_blank"} to get
 
 $$
 \det(1-T_pX +p^{k+1}X^2; \, {_1^k W_{\ell}}) = \det(1-T_pX+p^{k+1}X^2; \, S_{k+2})^2,
@@ -503,7 +503,7 @@ $$
 H_p(X) = \det(1-FX; \, {_1^{10} W_{\ell}}).
 $$
 
-Applying [theorem 3.8](https://www.justinasher.me/Ramanujan-Conjecture-T3:8) completes Deligne's proof of the Ramanujan conjecture. Q.E.D.
+Applying [theorem 3.8](https://www.justinasher.me/Ramanujan-Conjecture-T3:8){:target="_blank"} completes Deligne's proof of the Ramanujan conjecture. Q.E.D.
 
 ## 4. References
 
