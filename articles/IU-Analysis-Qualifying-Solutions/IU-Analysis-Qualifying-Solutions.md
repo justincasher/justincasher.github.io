@@ -1352,7 +1352,7 @@ $$
 
 *Suppose $$ f = (f_1, \dots, f_n) \colon \RR^n \to \RR^n $$ is continuously differentiable function with $$ p (f(x)) = 0 $$ for all $$ x \in \RR^n $$. Prove $$ \det f' = 0 $$.*
 
-*Proof.* Suppose not. Then there exists a point $$ x = (x_1, \dots, x_n) \in \RR $$ with $$ \det f'(x) \neq 0 $$. Since $$ \det f' \neq 0 $$ and the determinant along with our derivative are continuous, we can assume without loss of generality that $$ f(x) \neq 0 $$. The identity $$ p(f) = 0 $$ impies $$ d [p(f)] = 0 $$, or equivalently $$ p'(f) f' = 0 $$. Expanding this equation, we see that for each $$ 1 \leq j \leq n $$ we have
+*Proof.* Suppose not. Then there exists a point $$ x = (x_1, \dots, x_n) \in \RR $$ with $$ \det f'(x) \neq 0 $$. Since $$ \det f' \neq 0 $$ and the determinant and derivatives are continuous, we can assume $$ f_j(x) \neq 0 $$. The identity $$ p(f) = 0 $$ implies $$ d [p(f)] = 0 $$, or equivalently $$ p'(f) f' = 0 $$. Expanding this equation, we see that for each $$ 1 \leq j \leq n $$ we have
 
 $$
 (2j+1) f_j^{2j}(x_1, \dots, x_n) \left( \sum_{k=1}^{n} \partial_j f_k \right)
