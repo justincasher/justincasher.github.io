@@ -16,7 +16,7 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 | 9/15/2023 | Nathan Lowry |  Topos theory in algebraic geometry | [Abstract]({{'/Lowry-2023-9-15' | relative_url}}) |
 | 9/22/2023 | Vladimir Shein | Motivic zeta functions | [Abstract]({{'/Shein-2023-9-22' | relative_url}}) |
 | 10/6/2023 | Justin Asher | Deligne's proof of the Ramanujan conjecture | [Notes]({{'/Ramanujan-Conjecture-S' | relative_url}}) |
-| 10/20/2023 | Yuxuan Liao | TBD | |
+| 10/20/2023 | Yuxuan Liao | Rigid cohomology |  [Abstract]({{'/Liao-2023-10-20' | relative_url}}) | 
 | 10/27/2023 | Nai-Heng Sheu | TBD | |
 | 11/3/2023 | Matthias Strauch | TBD | |
 | 11/10/2023 | Michael Larsen | TBD | |
