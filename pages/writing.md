@@ -13,7 +13,7 @@ This page contains an alphabetized list of (mostly expository) online mathematic
 4. [Gauss-Legendre algorithm]({{'/Gauss-Legendre' | relative_url}})
 5. [IU analysis qualifying solutions]({{'/IU-analysis-qualifying-solutions' | relative_url}})
 6. [Local systems as locally constant sheaves]({{'/LS-as-LCS' | relative_url}})
-7. [Motivating schemes with the Weil conjectures]({{'/Weil-conjectures-Intro' | relative_url}})
+7. [Motivating schemes with the Weil conjectures]({{'/Weil-conjectures-intro' | relative_url}})
 8. [Ramanujan conjecture]({{'/Ramanujan-Conjecture' | relative_url}})
 
 
