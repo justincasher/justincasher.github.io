@@ -1,9 +1,9 @@
 ---
 layout: Seminar-Notes
 indent: true
-permalink: /Ramanujan-Conjecture-S
+permalink: /Ramanujan-conjecture-S
 feedformat: card
-title: The Ramanujan Conjecture
+title: The Ramanujan conjecture
 ---
 <style>
     ol.custom {
