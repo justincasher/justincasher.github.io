@@ -228,13 +228,13 @@ $$
 	= \sum_{n=0}^{\infty} \left( \frac{(2n-1)!!}{(2n)!!} k^n \right)^2.
 $$
 
-(The "!!" means [double factorial](https://en.wikipedia.org/wiki/Double_factorial).) Calculating the AM and GM means gives us 
+(The "!!" means [double factorial](https://en.wikipedia.org/wiki/Double_factorial){:target="_blank"}.) Calculating the AM and GM means gives us 
 
 $$ 
     M(1+k, 1-k) = M(1, \sqrt{1-k^2}).
 $$
 
-Hence, applying [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1) for $$ b/a = \sqrt{1-k^2} $$, we get
+Hence, applying [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1){:target="_blank"} for $$ b/a = \sqrt{1-k^2} $$, we get
 
 $$
 	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
@@ -245,25 +245,25 @@ with the last equality following from the identity $$ M(ca, cb) = cM(a, b) $$. $
 		
 &emsp; We finally have the tools we need to prove the Gauss-Legendre Algorithm does indeed converge to $$ \pi $$.
 		
-*Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply [Proposition 2.2](https://www.justinasher.me/Gauss-Legendre-P2:2) to get
+*Proof (Gauss-Legendre).* Set $$ k = \sqrt{2}/2 $$ to be our modulus. Then we notice $$ 2k^2 = 1 $$, and hence we can apply [Proposition 2.2](https://www.justinasher.me/Gauss-Legendre-P2:2){:target="_blank"} to get
 
 $$
 	2 F (k) E (k) - F(k)^2 = \frac{\pi}{2}.
 $$
 
-Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $$ k^2 = 1 - 1/k^2 $$, we can set $$ a = 1 $$ and $$ b = k $$ in [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1) to get
+Now let us evaluate these integrals by first converting them into symmetric form then applying our lemmas. Since $$ k^2 = 1 - 1/k^2 $$, we can set $$ a = 1 $$ and $$ b = k $$ in [Proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1){:target="_blank"} to get
 
 $$
 	2 F_S(1, k) E_S(1, k) - F_S(1, k)^2 = \frac{\pi}{2}.
 $$
 
-Then applying [Lemma 3.1](https://www.justinasher.me/Gauss-Legendre-L3:1) gives us an equation only dependent on $$ F_S(1, k) $$ 
+Then applying [Lemma 3.1](https://www.justinasher.me/Gauss-Legendre-L3:1){:target="_blank"} gives us an equation only dependent on $$ F_S(1, k) $$ 
 
 $$
 	(2 S - 1) F_S(1, k)^2 = \frac{\pi}{2}.
 $$
 
-Finally, we apply [Lemma 3.2](https://www.justinasher.me/Gauss-Legendre-L3:2) to write our equation in terms of the AM-GM mean
+Finally, we apply [Lemma 3.2](https://www.justinasher.me/Gauss-Legendre-L3:2){:target="_blank"} to write our equation in terms of the AM-GM mean
 
 $$				
 	(2S-1) \left( \frac{\pi}{2 M(1, k)} \right)^2 = \frac{\pi}{2} \\
@@ -279,4 +279,4 @@ with plugging in $$ S $$ gives us our result. $$ \blacksquare $$
 2. Gosta Mittag-Leffler, *An introduction to the theory of elliptic functions*, Annals of Mathematics **24** (1923), no. 4, 271–351.
 3. Srinivasa Ramanujan, *Modular equations and approximations to $$ \pi $$*, The Quarterly Joural of Pure and Applied Mathematics **45** (1914), 350372.
 4. Eugene Salamin, *Computation of $$ \pi $$ using arithmetic-geometric mean*, Mathematics of Computation **30** (1976), no. 135, 565–570.
-5. Paramanand Singh, *$$ \pi $$ and the AGM: Evaluating elliptic integrals*, 2009. [Link](https://paramanands.blogspot.com/2009/08/pi-and-the-agm-evaluating-elliptic-integrals.html#.Y2CvFILMJb8).
+5. Paramanand Singh, *$$ \pi $$ and the AGM: Evaluating elliptic integrals*, 2009. [Link](https://paramanands.blogspot.com/2009/08/pi-and-the-agm-evaluating-elliptic-integrals.html#.Y2CvFILMJb8){:target="_blank"}.

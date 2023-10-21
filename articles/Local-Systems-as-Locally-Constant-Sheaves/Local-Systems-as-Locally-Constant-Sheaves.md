@@ -56,7 +56,7 @@ where elements of $$ F_x $$ are mapped to $$ x $$. This map is indeed étale: fo
 
 **Lemma 2.** &nbsp; *A locally constant sheaf on a simply connected space is constant.*
 
-*Proof.* Let $$ X $$ be a simply connected space with $$ F $$ locally constant. Then by [Lemma 1](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves-L1) the étale space of $$ F $$ covers $$ X $$. The only covers of a simply connected space are a discretely indexed copies of itself, and hence we can write our étale space in the form $$ p \colon X \times M \to X $$. Since $$ X $$ is connected, the sections of this map are constant, meaning our sheaf is constant. $$ \blacksquare $$
+*Proof.* Let $$ X $$ be a simply connected space with $$ F $$ locally constant. Then by [Lemma 1](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves-L1){:target="_blank"} the étale space of $$ F $$ covers $$ X $$. The only covers of a simply connected space are a discretely indexed copies of itself, and hence we can write our étale space in the form $$ p \colon X \times M \to X $$. Since $$ X $$ is connected, the sections of this map are constant, meaning our sheaf is constant. $$ \blacksquare $$
 
 
 &emsp; Now we are ready to construct are functors and start with constructing $$ \CA $$. Fix an element $$ F \in \LC(X, R) $$ and define $$ \CA(F) = L $$ as follows. For each $$ x \in X $$ set $$ L(x) = F_x $$. Next take a homotopy class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$ and choose a representative $$ \gamma $$. Since $$ \gamma $$ has compact image, there exists a finite open cover $$ U_1, \dots, U_n $$ and a partition $$ t_0, \dots, t_n $$ of $$ [0, 1] $$ such that
@@ -90,7 +90,7 @@ $$
     \overline{\nu} \colon [\coprod_{x \in \widetilde{X}} L^{\ast}(x)] /\Pi(X) \to X. 
 $$
 
-We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ are sections $$ s \colon U \to \coprod_{x \in U} L(x) $$, such that for any class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$, we get that $$ s(y) = L([\gamma])(s(x)) $$. Our sheaf being locally constant follows from $$ X $$ being locally simply connected ([Lemma 2](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves-L2)).
+We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ are sections $$ s \colon U \to \coprod_{x \in U} L(x) $$, such that for any class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$, we get that $$ s(y) = L([\gamma])(s(x)) $$. Our sheaf being locally constant follows from $$ X $$ being locally simply connected ([Lemma 2](https://www.justinasher.me/Local-Systems-as-Locally-Constant-Sheaves-L2)){:target="_blank"}.
 
 &emsp; Finally suppose we are given a natural transformation $$ \eta \colon L \to L' $$ between local systems. Then $$ \eta $$ induces a morphism $$ \CB(\eta) \colon \CB(L) \to \CB(L') $$ by pulling back sections, i.e. for each open subset $$ U $$, we map $$ s \in \CB(L)(U) $$ to $$ \eta \circ s $$. This is indeed a morphism of sheaves since $$ \eta $$ is functorial.
 
@@ -100,7 +100,7 @@ We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ a
 ## 3. References
 
 1. Pramod Achar, *Perverse sheaves and applications to representation theory*, American Mathematics Society, 2021.
-2. bavajee, *Why are local systems and representations of the fundamental group equivalent*. [Link](https://mathoverflow.net/q/17786). (version: 2016-02-07).
+2. bavajee, *Why are local systems and representations of the fundamental group equivalent*. [Link](https://mathoverflow.net/q/17786){:target="_blank"}. (version: 2016-02-07).
 3. Alexandru Dimca, *Sheaves in topology*, Springer, 2004.
 4. J.P. May, *A concise course in algebraic topology*, Chicago Lectures in Mathematics, 1999.
 5. Saunders Mac Lane and Ieke Moerdijk, *Sheaves in geometry and logic: A first introduction to topos theory*, Springer-Verlag, 1992.
