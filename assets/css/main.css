@@ -1893,7 +1893,7 @@ a.tag:hover {
   position: relative;
   z-index: 30; }
   .navbar.is-white {
-    background-color: var(--color-bg-sub);
+    background-color: red;
     color: #0a0a0a; }
     .navbar.is-white .navbar-brand > .navbar-item,
     .navbar.is-white .navbar-brand .navbar-link {
@@ -1983,7 +1983,7 @@ a.tag:hover {
         background-color: #0a0a0a;
         color: var(--color-bg-sub); } }
   .navbar.is-light {
-    background-color: var(--color-bg-main);
+    background-color: red;
     color: rgba(0, 0, 0, 0.7); }
     .navbar.is-light .navbar-brand > .navbar-item,
     .navbar.is-light .navbar-brand .navbar-link {
