@@ -1892,8 +1892,8 @@ a.tag:hover {
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
-  .navbar.is-white {
-    background-color: red;
+  .navbar.is-blue {
+    background-color: blue;
     color: #0a0a0a; }
     .navbar.is-white .navbar-brand > .navbar-item,
     .navbar.is-white .navbar-brand .navbar-link {
