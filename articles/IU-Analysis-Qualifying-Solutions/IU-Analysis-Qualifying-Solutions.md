@@ -1,7 +1,7 @@
 ---
 layout: Writing
 indent: true
-permalink: /IU-Analysis-Qualifying-Solutions
+permalink: /IU-analysis-qualifying-solutions
 feedformat: card
 title: IU Analysis Qualifying Solutions
 ---
@@ -29,22 +29,22 @@ $$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 **Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I would like to thank Chia-Tz Liang for proof reading these. Please email me if you find any errors or have any solutions you would like to add. I also omitted adding a section on integration.
 
 ## Table of Contents
-1. [Compact Spaces](#1-compact-spaces)
-2. [Sequences and Series](#2-sequences-and-series)
-3. [Uniform Continuity](#3-uniform-continuity)
-4. [Uniform Convergence](#4-uniform-convergence)
+1. [Compact spaces](#1-compact-spaces)
+2. [Sequences and series](#2-sequences-and-series)
+3. [Uniform continuity](#3-uniform-continuity)
+4. [Uniform convergence](#4-uniform-convergence)
 5. [Derivatives](#5-derivatives)
 6. [Optimization](#6-optimization)
-7. [Convergence of Integrals](#7-convergence-of-integrals)
+7. [Convergence of integrals](#7-convergence-of-integrals)
 8. [Polynomials and Stone-Weierstrass](#8-polynomials-and-stone-weierstrass)
-9. [Stoke's Theorem](#9-stokes-theorem)
-10. [Inverse and Implicit Function Theorems](#10-inverse-and-implicit-function-theorems)
+9. [Stoke's theorem](#9-stokes-theorem)
+10. [Inverse and implicit function theorems](#10-inverse-and-implicit-function-theorems)
 
-## 1. Compact Spaces 
+## 1. Compact spaces 
 
 Fix a topological space $$ X $$. We say $$ X $$ is *compact* if every open cover $$ \{U_{\alpha}\} $$ of $$ X $$ admits a finite subcover $$ U_1, \dots, U_n $$. 
 
-**Heine-Borel Theorem.** &nbsp; *Let $$ X $$ be a subset of $$ \RR^n $$. Then $$ X $$ is compact with respect to the Euclidean metric if and only if $$ X $$ is closed and bounded.*
+**Heine-Borel theorem.** &nbsp; *Let $$ X $$ be a subset of $$ \RR^n $$. Then $$ X $$ is compact with respect to the Euclidean metric if and only if $$ X $$ is closed and bounded.*
 
 **Proposition 1.1.** &nbsp; *Let $$ X $$ be a topological space. Then $$ X $$ is compact if and only if there exists a subbase $$ \CB $$ of $$ X $$ such that every open cover by elements of $$ \CB $$ admits a finite subcover.*
 
@@ -56,11 +56,11 @@ Fix a topological space $$ X $$. We say $$ X $$ is *compact* if every open cover
 
 *Proof.* We show this holds for any $$ f \colon X \to Y $$ continuous. Let $$ \{U_{\alpha}\} $$ cover $$ f(K) $$. Then $$ \{f^{-1}(U_{\alpha})\} $$ forms an open cover of $$ K $$ by (the topological definition of) continuity, and hence admits a finite subcover $$ f^{-1}(U_1), \dots, f^{-1}(U_n) $$. We conclude that $$ U_1, \dots, U_n $$ cover $$ f(K) $$. $$ \blacksquare $$ 
 
-*Alternative proof.* Let $$ \{ y_n \} $$ be a sequence in $$ f(K) $$. Then it lifts to a (not necessarily unique) sequence $$ \{x_n\} $$ in $$ K $$, i.e. $$ f(x_n) = y_n $$. By Theorem 1.2, this sequence has a convergent subsequence $$ \{x_{n_i}\} $$, whose image $$ \{ y_{n_i} \} $$ is a convergent subsequence of $$ \{ y_n \} $$ by continuity, i.e. $$ \lim_i f(x_{n_i}) = f(\lim_i x_{n_i}) $$. $$ \blacksquare $$.
+*Alternative proof.* Let $$ \{ y_n \} $$ be a sequence in $$ f(K) $$. Then it lifts to a (not necessarily unique) sequence $$ \{x_n\} $$ in $$ K $$, i.e. $$ f(x_n) = y_n $$. By theorem 1.2, this sequence has a convergent subsequence $$ \{x_{n_i}\} $$, whose image $$ \{ y_{n_i} \} $$ is a convergent subsequence of $$ \{ y_n \} $$ by continuity, i.e. $$ \lim_i f(x_{n_i}) = f(\lim_i x_{n_i}) $$. $$ \blacksquare $$.
 
 **2019 W P2.** &nbsp; *Let $$ X $$ be a compact metric space with open cover $$ \{U_{\alpha}\} $$. Show that for some $$ \varepsilon > 0 $$ every ball of radius $$ \varepsilon $$ is contained in some $$ U_{\alpha} $$.*
 
-*Proof.* Suppose not. Then there exists a sequence $$ \{x_n\} $$ such that the ball of radius $$ 1/n $$ at $$ x_n $$, i.e. $$ B(x_n, 1/n) $$ is not contained in any $$ U_{\alpha} $$. By Theorem 1.2, there exists a convergent subsequence $$ \{x_{n_i}\} $$. Consequently, for $$ N \gg 0 $$ large, we have $$ i > N $$ implies $$ x_{n_i} $$ is contained in some $$ U_{\alpha} $$. We conclude that for $$ i $$ large, we have  $$ B(x_i, 1/n_i) $$ is contained in $$ U_{\alpha} $$ as well, a contradiction. $$ \blacksquare $$
+*Proof.* Suppose not. Then there exists a sequence $$ \{x_n\} $$ such that the ball of radius $$ 1/n $$ at $$ x_n $$, i.e. $$ B(x_n, 1/n) $$ is not contained in any $$ U_{\alpha} $$. By theorem 1.2, there exists a convergent subsequence $$ \{x_{n_i}\} $$. Consequently, for $$ N \gg 0 $$ large, we have $$ i > N $$ implies $$ x_{n_i} $$ is contained in some $$ U_{\alpha} $$. We conclude that for $$ i $$ large, we have  $$ B(x_i, 1/n_i) $$ is contained in $$ U_{\alpha} $$ as well, a contradiction. $$ \blacksquare $$
 
 **2017 F P1.** &nbsp; *Let $$ X $$ be the set of sequences $$ \{ a_n \} $$ with $$ a_n \in \{0, 1\} $$. Equip $$ X $$ with the metric*
 
@@ -96,7 +96,7 @@ $$
 
 *Show this is not necessarily true for $$ \varepsilon = 0 $$.*
 
-*Proof.* By continuity, there exists a $$ \delta > 0 $$ such that $$ \|x-y\| < \delta $$ implies $$ \|f(x) - f(y)\| \leq \varepsilon $$; consequently, we can assume $$ \|x-y\| \geq \delta $$. Then the Heinel-Borel Theorem and 2019 F P5 show that $$ K $$ and $$ f(K) $$ are bounded, i.e. $$ \|f(x) - f(y)\| < C $$ for a fixed $$ C $$. Consequently, 
+*Proof.* By continuity, there exists a $$ \delta > 0 $$ such that $$ \|x-y\| < \delta $$ implies $$ \|f(x) - f(y)\| \leq \varepsilon $$; consequently, we can assume $$ \|x-y\| \geq \delta $$. Then the Heinel-Borel theorem and 2019 F P5 show that $$ K $$ and $$ f(K) $$ are bounded, i.e. $$ \|f(x) - f(y)\| < C $$ for a fixed $$ C $$. Consequently, 
 
 $$
 \|f(x) - f(y) \| \leq C/\delta \|x-y\| + \varepsilon,
@@ -108,9 +108,9 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 
 
-## 2. Sequences and Series
+## 2. Sequences and series
 
-**Monotone Convergence Theorem.** &nbsp; *Let $$ \{a_n\} $$ be a monotonically increasing sequence in $$ \RR $$. Then $$ \{a_n\} $$ has a limit if and only if it is bounded.*
+**Monotone convergence theorem.** &nbsp; *Let $$ \{a_n\} $$ be a monotonically increasing sequence in $$ \RR $$. Then $$ \{a_n\} $$ has a limit if and only if it is bounded.*
 
 **Theorem 2.1.** &nbsp; *In $$ \RR^n $$ every Cauchy sequence convergences, i.e. it is a complete metric space.*
 
@@ -128,7 +128,7 @@ For a counterexample, consider $$ f \colon [0, 1] \to [0, 1] $$ with $$ f(x) = \
 
 **Theorem 2.2.** &nbsp; *Let $$ \{a_n\} $$ be a sequence in $$ \RR^+ $$. Then $$ \prod_n (1+a_n) $$ converges if and only if $$ \sum_n a_n $$ converges. If $$ 0 < a_n < 1 $$, then $$ \prod_n (1-a_n) \neq 0 $$ if and only if $$ \sum_n a_n $$ converges.*
 
-**Banach Fixed Point Theorem.** &nbsp; *Let $$ (X, d) $$ be a complete metric space, and let $$ f \colon X \to X $$ be contractive. Then $$ X $$ has a unique fixed point $$ f(x_*) = x_* $$, which is given by taking n arbitrary $$ x_0 \in X $$, setting $$ x_{n+1} = f(x_n) $$, and evaluating $$ \lim_n f(x_n) = x_* $$.*
+**Banach fixed point theorem.** &nbsp; *Let $$ (X, d) $$ be a complete metric space, and let $$ f \colon X \to X $$ be contractive. Then $$ X $$ has a unique fixed point $$ f(x_*) = x_* $$, which is given by taking n arbitrary $$ x_0 \in X $$, setting $$ x_{n+1} = f(x_n) $$, and evaluating $$ \lim_n f(x_n) = x_* $$.*
 
 #### Problems
 
@@ -228,7 +228,7 @@ which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
 **2022 W P4.** &nbsp; *Let $$ t_0 \in \RR $$ and set $$ t_{n+1} = \sin(\cos(t_n)) $$. Prove this sequence converges with limit independent of $$ t_0 $$.*
 
-*Proof.* Consider $$ f(x) = \sin(\cos(x))) $$ as a function $$ f \colon [0, 2 \pi] \to [0, 2 \pi] $$. Set $$ g(x) = f(f(x)) $$. Computing the derivative, we observe that $$ \|g'(x)\| < 1 $$ for each $$ x \in [0, 2 \pi] $$, so $$ g $$ is a contraction on $$ [0, 2 \pi] $$, and consequently $$ g $$ admits a unique fixed point by the Banach Fixed Point Theorem. We conclude that our desired sequence has a unique limit independent of $$ t_0 $$, because $$ f $$ does not oscillate between 2 distinct points anywhere. $$ \blacksquare $$
+*Proof.* Consider $$ f(x) = \sin(\cos(x))) $$ as a function $$ f \colon [0, 2 \pi] \to [0, 2 \pi] $$. Set $$ g(x) = f(f(x)) $$. Computing the derivative, we observe that $$ \|g'(x)\| < 1 $$ for each $$ x \in [0, 2 \pi] $$, so $$ g $$ is a contraction on $$ [0, 2 \pi] $$, and consequently $$ g $$ admits a unique fixed point by the Banach fixed point theorem. We conclude that our desired sequence has a unique limit independent of $$ t_0 $$, because $$ f $$ does not oscillate between 2 distinct points anywhere. $$ \blacksquare $$
 
 **2021 F P6.** &nbsp; *Let $$ a_0 \in (0, 1) $$ and $$ a_{n+1} = a_n^3 - a_n^2 + 1 $$. Prove that (a) $$ \{a_n\} $$ converges and find its limit; and (b) that $$ b_n = \prod_{i=1}^{n} a_i $$ converges and find its limit.*
 
@@ -319,7 +319,7 @@ $$
 
 Solving this equation shows $$ x_* = 2 $$ is the only positive solution, and thus our limit.  
 
-Alternatively, define $$ f \colon [1.5, \infty) \to [1.5, \infty) $$ by $$ f = \frac{1}{2}(x + \frac{4}{x}) $$. Then $$ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $$ is strictly less than $$ 1 $$ on our domain, so $$ f $$ is a contraction. Applying the Banach Fixed Point Theorem to $$ [1.5, \infty) $$ tells us our sequence has a unique limit. Solving $$ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $$ yields $$ x_* = 2 $$. $$ \blacksquare $$
+Alternatively, define $$ f \colon [1.5, \infty) \to [1.5, \infty) $$ by $$ f = \frac{1}{2}(x + \frac{4}{x}) $$. Then $$ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $$ is strictly less than $$ 1 $$ on our domain, so $$ f $$ is a contraction. Applying the Banach fixed point theorem to $$ [1.5, \infty) $$ tells us our sequence has a unique limit. Solving $$ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $$ yields $$ x_* = 2 $$. $$ \blacksquare $$
 
 **2020 W P1.** &nbsp; *Let $$ \{a_n\} $$ be a sequence in $$ \RR^+ $$ with $$ \lim a_n = 0 $$. Show there exists infinitely many $$ N \in \mathbb{N} $$ such that $$ n \geq N $$ implies $$ a_n \leq a_N $$.*
 
@@ -389,11 +389,11 @@ $$
 which is bounded by the p-series test. Thus, $$ \{a_n\} $$ is bounded. $$ \blacksquare $$
 
 
-## 3. Uniform Continuity
+## 3. Uniform continuity
 
 Let $$ f, g \colon X \to Y $$ be maps between metric spaces. We say $$ f $$ is *uniformly continuous* if for each $$ \varepsilon > 0 $$, there exists a $$ \delta > 0 $$ such that $$ d_X(x, y) < \delta $$ implies $$ d_Y(f(x), f(y)) < \varepsilon $$ for all $$ x, y \in X $$.
 
-**Heine-Cantor Theorem.** &nbsp; *Let $$ f \colon  \to Y $$ be continuous. If $$ X $$ is compact, then $$ f $$ is uniformly continuous.*
+**Heine-Cantor theorem.** &nbsp; *Let $$ f \colon  \to Y $$ be continuous. If $$ X $$ is compact, then $$ f $$ is uniformly continuous.*
 
 #### Problems
 
@@ -442,10 +442,10 @@ $$
 = \varepsilon.
 $$
 
-Thus, $$ f $$ is uniformly continuous on $$ \RR^n \setminus D_r $$. Furthermore, $$ D_{r+1} $$ is compact, so $$ f $$ is uniformly continuous on $$ D_{r+1} $$ by the Heine-Borel Theorem. Since our desired property is local and every point has a ball of radius $$ 1/2 $$ contained in $$ D_{r+1} $$ or $$ \RR^{n} \setminus D_r $$, we get our result. $$ \blacksquare $$
+Thus, $$ f $$ is uniformly continuous on $$ \RR^n \setminus D_r $$. Furthermore, $$ D_{r+1} $$ is compact, so $$ f $$ is uniformly continuous on $$ D_{r+1} $$ by the Heine-Borel theorem. Since our desired property is local and every point has a ball of radius $$ 1/2 $$ contained in $$ D_{r+1} $$ or $$ \RR^{n} \setminus D_r $$, we get our result. $$ \blacksquare $$
 
 
-## 4. Uniform Convergence
+## 4. Uniform convergence
 
 Let $$ X, Y $$ be metric spaces, and let $$ f, g \colon X \to Y $$ be functions. Define the *uniform metric* by 
 
@@ -462,11 +462,11 @@ $$
 \sup_{x \in K, n \in \mathbb{N}} \|f_n(x)\| \leq M.
 $$
 
-**Ascoli-Arzelà Theorem.** &nbsp; *Let $$ K \subset \RR^m $$ be compact, and let $$ f_n \colon K \to \RR^n $$ be a sequence of functions. If $$ \{f_n\} $$ is uniformly bounded and uniformly equicontinuous, then there exists a subsequence which converges uniformly.*
+**Ascoli-Arzelà theorem.** &nbsp; *Let $$ K \subset \RR^m $$ be compact, and let $$ f_n \colon K \to \RR^n $$ be a sequence of functions. If $$ \{f_n\} $$ is uniformly bounded and uniformly equicontinuous, then there exists a subsequence which converges uniformly.*
 
 **Weierstrass M-Test.** &nbsp; *Let $$ f_n \colon X \to \RR^n $$ be a sequence of functions defined on a set $$ X $$. Set $$ M_n = \sup_x \| f_n(x) \| $$. If $$ \sum M_n $$ converges, then $$ \sum f_n(x) $$ converges absolutely and uniformly.*
 
-**Uniform Limit Theorem.** &nbsp; *Write $$ X $$ for a topological space and $$ Y $$ a metric space. If $$ f_n \colon X \to Y $$ are continuous and converge uniformly to $$ f \colon X \to Y $$, then $$ f $$ is continuous. (In other words, the space of continuous functions are closed with respect to $$ \rho $$.)*
+**Uniform limit theorem.** &nbsp; *Write $$ X $$ for a topological space and $$ Y $$ a metric space. If $$ f_n \colon X \to Y $$ are continuous and converge uniformly to $$ f \colon X \to Y $$, then $$ f $$ is continuous. (In other words, the space of continuous functions are closed with respect to $$ \rho $$.)*
 
 **Theorem 4.1.** &nbsp; *Let $$ f_n \colon [a, b] \to \RR $$ be integrable with uniform limit $$ f $$. Then $$ \int_a^b f dx = \lim_n \int_a^b f_n dx $$.*
 
@@ -487,7 +487,7 @@ $$
 f(x) = \lim_n \left( \sum_{k=1}^n f_k(x)^n \right)^{1/n}
 $$
 
-uniformly. Our result then follows from Theorem 4.1. $$ \blacksquare $$
+uniformly. Our result then follows from theorem 4.1. $$ \blacksquare $$
 
 **2023 W P3.** &nbsp; *Let $$ f_n \colon [0, 1] \to \RR $$ be a sequence of function. Suppose that for some $$ f \colon [0, 1] \to \RR $$, we have*
 
@@ -576,7 +576,7 @@ $$
 \sum_{n=1}^{\infty} \frac{1}{n^{1+\delta}} 
 $$ 
 
-converges by the p-test, the Weierstrauss M-test implies $$ F $$ converges uniformly. $$ F $$ is continuous by the Uniform Limit Theorem. $$ F $$ is not continuous at $$ 1 $$ since it approaches infinity as $$ x $$ approaches $$ 1 $$.
+converges by the p-test, the Weierstrauss M-test implies $$ F $$ converges uniformly. $$ F $$ is continuous by the uniform limit theorem. $$ F $$ is not continuous at $$ 1 $$ since it approaches infinity as $$ x $$ approaches $$ 1 $$.
 
 (b) We see that 
 
@@ -601,7 +601,7 @@ F'(1+\delta) & = \int_0^{\infty} e^{-\delta u} du < \infty.
 \end{aligned}
 $$
 
-We conclude that $$ F'(x) $$ converges uniformly, and that it is indeed the derivative of $$ F $$ by Theorem 4.2. $$ \blacksquare $$
+We conclude that $$ F'(x) $$ converges uniformly, and that it is indeed the derivative of $$ F $$ by theorem 4.2. $$ \blacksquare $$
 
 **2022 W P1.** &nbsp; *Define $$ f_n \colon [0, 1] \to \RR $$ by*
 
@@ -657,7 +657,7 @@ $$
 \end{aligned}
 $$
 
-Since both $$ x^{1/2} $$ and $$ y^{2/3} $$ are continuous functions, we see that $$ \{F_n\} $$ is equicontinuous. Hence, by the Ascoli-Arzelà Theorem we can find our desired subsequence. $$ \blacksquare $$
+Since both $$ x^{1/2} $$ and $$ y^{2/3} $$ are continuous functions, we see that $$ \{F_n\} $$ is equicontinuous. Hence, by the Ascoli-Arzelà theorem we can find our desired subsequence. $$ \blacksquare $$
 
 
 **2020 F P9.** &nbsp; *Let $$ f_n \colon [0, 1] \to [0, 1] $$ converge uniformly to $$ f \colon [0, 1] \to [0, 1] $$ (a not necessarily continuous function). Suppose the $$ f_n $$ map compact sets to compact sets. Does $$ f $$ map compact sets to compact sets?*
@@ -749,7 +749,7 @@ F'(x)
 = \sum_{n=1}^{\infty} \frac{x^{n-1}}{(n-1)!} \cos(x^n)
 $$
 
-converges uniformly by the Weierstrass M-Test, and by Theorem 4.2 it is the derivative of $$ F $$. $$ \blacksquare $$
+converges uniformly by the Weierstrass M-Test, and by theorem 4.2 it is the derivative of $$ F $$. $$ \blacksquare $$
 
 
 **2018 F P7.** &nbsp; *Define $$ f_n \colon [0, 2\pi] \to \RR $$ by $$ f_n(x) = e^{\sin(nx)} $$ and $$ F_n(x) = \int_0^x f_n(y) dy $$. Show there exists a subsequence of $$ \{F_n\} $$ that converges uniformly to a continuous function.*
@@ -771,7 +771,7 @@ $$
 \leq e (y-x)
 $$
 
-implies our sequence is uniformly equicontinuous since $$ x $$ is continuous. Thus, we can apply the Ascoli-Arzelà Theorem to a get a uniformly convergent subsequence, and the Uniform Limit Theorem to see that the limit of this subsequence is continuous. $$ \blacksquare $$
+implies our sequence is uniformly equicontinuous since $$ x $$ is continuous. Thus, we can apply the Ascoli-Arzelà theorem to a get a uniformly convergent subsequence, and the uniform limit theorem to see that the limit of this subsequence is continuous. $$ \blacksquare $$
 
 **2017 W P7.** &nbsp; *Let $$ f_n \colon [0, 1] \to \RR $$ converge pointwise to $$ f $$. Assume $$ f_n $$ and $$ f $$ are continuous. (a) Does*
 
@@ -927,7 +927,7 @@ $$
 F(t) = \left< f(\gamma(t)) - f(a), b-a \right>.
 $$
 
-Then $$ F(0) = F(1) = 0 $$, so the Mean Value Theorem tells us $$ F'(t) = 0 $$ for some $$ t \in (0, 1) $$. Hence, by the chain rule,
+Then $$ F(0) = F(1) = 0 $$, so the mean value theorem tells us $$ F'(t) = 0 $$ for some $$ t \in (0, 1) $$. Hence, by the chain rule,
 
 $$
 F'(t) = (b-a)^T Df(\gamma(t)) (b-a) = 0 
@@ -1147,7 +1147,7 @@ implies $$ f(x, y, z) \geq -6 $$. Since $$ f(-\sqrt{6}, \sqrt{6}, 0) = -6 $$ we 
 
 ## 7. Convergence of Integrals
 
-**Fubini-Tonelli Theorem.** &nbsp; *Let $$f \colon [a, b] \times [c, d] \to \RR $$ be continuous. Then*
+**Fubini-Tonelli theorem.** &nbsp; *Let $$f \colon [a, b] \times [c, d] \to \RR $$ be continuous. Then*
 
 $$
 \int_a^b \int_c^d f(x, y) dydx = \int_c^d \int_a^b f(y, x) dx dy.
@@ -1249,7 +1249,7 @@ $$
 = \int_0^{\infty} \left[ \int_0^1 f(x, y) dx \right] dy.
 $$
 
-*Proof.* We apply the Fubini-Tonelli Theorem as follows. For each $$ z \in (0, \infty) $$, we have 
+*Proof.* We apply the Fubini-Tonelli theorem as follows. For each $$ z \in (0, \infty) $$, we have 
 
 $$
 \begin{aligned}
@@ -1317,7 +1317,7 @@ I & = \int_0^{2 \pi} \int_0^1 \frac{f(r \cos \theta, r \sin \theta)}{r^{5/3}} dr
 \end{aligned}
 $$
 
-Since $$ f $$ is continuously differentiable and our domain is compact we see $$ f' $$ is bounded by som $$ M $$, and so $$ g' $$ is bounded by some $$ N $$. Fixing $$ \theta $$, the Mean Value Theorem implies that for each $$ r $$ there exists an $$ r_0 $$ such that 
+Since $$ f $$ is continuously differentiable and our domain is compact we see $$ f' $$ is bounded by som $$ M $$, and so $$ g' $$ is bounded by some $$ N $$. Fixing $$ \theta $$, the mean value theorem implies that for each $$ r $$ there exists an $$ r_0 $$ such that 
 
 $$
 \left\| \frac{g(r, \theta) - g(0, 0)}{r} \right\| 
@@ -1340,7 +1340,7 @@ Thus, our integral converges. $$ \blacksquare $$
 
 ## 8. Polynomials and Stone Weierstrass
 
-**Stone-Weierstrass Theorem.**  &nbsp; *Let $$ f \colon [a, b] \to \RR $$ be continuous. Then there exists a sequence $$ p_n \in \RR[x] $$ that converges uniformly to $$ f $$.*
+**Stone-Weierstrass theorem.**  &nbsp; *Let $$ f \colon [a, b] \to \RR $$ be continuous. Then there exists a sequence $$ p_n \in \RR[x] $$ that converges uniformly to $$ f $$.*
 
 #### Problems
 
@@ -1363,7 +1363,7 @@ Since $$ f_j(x) \neq 0 $$ for each $$ j $$, we have $$ \sum_k \partial_j f_k = 0
 
 **2020 F P8.** &nbsp; *Let $$ f \colon [0, 1] \to \RR $$ be continuous such that $$ \int_0^1 f(x) x^n dx = 0 $$ for $$ n = 3, 4, \dots $$. Prove $$ f(x) = 0 $$.*
 
-*Proof.* The Stone-Weierstrass Theorem implies we can approximate $$ f(x) x^4 $$ by polynomials $$ p_n \in \RR[x] $$. Since this sequence converges uniformly, Theorem 4.1 then implies 
+*Proof.* The Stone-Weierstrass theorem implies we can approximate $$ f(x) x^4 $$ by polynomials $$ p_n \in \RR[x] $$. Since this sequence converges uniformly, theorem 4.1 then implies 
 
 $$
 \lim_{n \to \infty} \int_0^1 [f(x) x^4] p(x) dx 
@@ -1434,7 +1434,7 @@ $$
 
 *for every continuous $$ f \colon [0, 1] \to \RR $$.*
 
-*Proof.* The second statement follows from the Stone-Weierstrass Theorem in a manner similar to 2020 F P8. For the first statement, suppose $$ g(x) \neq 0 $$ and choose $$ f(x) $$ such that $$ g(x) f(x) = M $$. Then
+*Proof.* The second statement follows from the Stone-Weierstrass theorem in a manner similar to 2020 F P8. For the first statement, suppose $$ g(x) \neq 0 $$ and choose $$ f(x) $$ such that $$ g(x) f(x) = M $$. Then
 
 $$
 \lim_n \int_0^1 g_n(x) f(x) dx 
@@ -1445,9 +1445,9 @@ $$
 implies $$ \| f(x) \| \geq 1 $$ and $$ \|g(x)\| \leq M $$. $$ \blacksquare $$
 
 
-## 9. Stoke's Theorem
+## 9. Stoke's theorem
 
-**Stoke's Theorem.** &nbsp; *Let $$ S $$ be a smooth oriented surface in $$ \RR^3 $$ with boundary $$ \partial S $$. If $$ F \colon \RR^3 \to \RR^3 $$ is a vector field with continuous first order partials, then*
+**Stoke's theorem.** &nbsp; *Let $$ S $$ be a smooth oriented surface in $$ \RR^3 $$ with boundary $$ \partial S $$. If $$ F \colon \RR^3 \to \RR^3 $$ is a vector field with continuous first order partials, then*
 
 $$
 \int \int_S (\text{Curl} F \cdot n) dA
@@ -1456,7 +1456,7 @@ $$
 
 *where $$ n $$ is the unit normal.*
 
-**Divergence Theorem.** &nbsp; *Let $$ M $$ be a smooth manifold in $$ \RR^n $$ with boundary $$ \partial M $$. Then*
+**Divergence theorem.** &nbsp; *Let $$ M $$ be a smooth manifold in $$ \RR^n $$ with boundary $$ \partial M $$. Then*
 
 $$
 \int_M \text{Div } F dV 
@@ -1481,7 +1481,7 @@ $$
 H = \{(x, y, z) \in \RR^3 \mid \| (x, y, z) \| \leq 1, z \geq 0\}.
 $$
 
-The Divergence Theorem tells us
+The divergence theorem tells us
 
 $$
 \int_H \text{Div} F dV
@@ -1537,7 +1537,7 @@ $$
 = (\cos(t), \sin(t), 4t \sin(t) \cos(t^3)).
 $$
 
-*(a) Apply Stoke's Theorem on*
+*(a) Apply Stoke's theorem on*
 
 $$
 S = \{(\cos(t), \sin(t), z) \mid t \in [-\pi, \pi], 0 \leq z \leq 4t \sin(t) \cos(t^3)\}
@@ -1545,7 +1545,7 @@ $$
 
 *to express $$ \int_{\gamma} (F \cdot n) dA$$ in terms of $$ \int_{\alpha} (F \cdot n) dA$$. (b) Use (a) to evaluate the first integral.*
 
-*Proof.* (a) Stoke's Theorem tells us 
+*Proof.* (a) Stoke's theorem tells us 
 
 $$
 \int_S (\text{Curl} \cdot n) dS = \int_{\alpha} (F \cdot n) dA + \int_{\gamma} (F \cdot n) dA.
@@ -1591,7 +1591,7 @@ $$
 \sum_{i=1}^4 \int \int_{S_i} F \cdot n d A.
 $$
 
-*Proof.* Let $$ B = [0, 3] \times [0, 3] \times 0 $$ denote the base of our pyramid. The Divergence Theorem tells us 
+*Proof.* Let $$ B = [0, 3] \times [0, 3] \times 0 $$ denote the base of our pyramid. The divergence theorem tells us 
 
 $$
 \sum_{i=1}^4 \int \int_{S_i} F \cdot n d A 
@@ -1631,7 +1631,7 @@ $$
 V = \{(x, y, z) \in \RR^3 \mid x^2 + y^2 + 4z^2 \leq 1, z \geq 0\}.
 $$
 
-The Divergence Theorem tells us 
+The divergence theorem tells us 
 
 $$
 \int \int_E (F \cdot n) dS 
@@ -1650,19 +1650,19 @@ $$
 
 Thus, $$ \int \int_E (F \cdot n) dS = \pi/4 $$. $$ \blacksquare $$
 
-## 10. Inverse and Implicit Function Theorems
+## 10. Inverse and implicit function theorems
 
-**Inverse Function Theorem.** &nbsp; *Let $$ \RR^n \to \RR^n $$ be a continuously differentiable function. Then $$ \det f'(x) \neq 0 $$, i.e. $$ f'(x) $$ invertible as a linear transformation, if and only if $$ f $$ is invertible in a neighborhood of $$ x $$.*
+**Inverse function theorem.** &nbsp; *Let $$ \RR^n \to \RR^n $$ be a continuously differentiable function. Then $$ \det f'(x) \neq 0 $$, i.e. $$ f'(x) $$ invertible as a linear transformation, if and only if $$ f $$ is invertible in a neighborhood of $$ x $$.*
 
-**Implicit Function Theorem.** &nbsp; *Let $$ f \colon D \subseteq \RR^{n+m} \to \RR^n $$ be continuously differentiable with $$ f(a, b) = 0 $$ for some $$ (a, b) \in D $$. Put $$ A = f'(a, b) $$ and assume $$ A_x $$ is invertible. Then there exists open subsets $$ U \subseteq D $$ and $$ W \subseteq \RR^m $$ with $$ (a, b) \in U $$ and $$ b \in W $$, such that there is a unique continuously differentiable $$ g \colon W \to \RR^n $$ with $$ g(b) = a $$, $$ f(g(y), y) = 0 $$, and $$ g'(b) = -(A_x)^{-1} A_y $$.*
+**Implicit function theorem.** &nbsp; *Let $$ f \colon D \subseteq \RR^{n+m} \to \RR^n $$ be continuously differentiable with $$ f(a, b) = 0 $$ for some $$ (a, b) \in D $$. Put $$ A = f'(a, b) $$ and assume $$ A_x $$ is invertible. Then there exists open subsets $$ U \subseteq D $$ and $$ W \subseteq \RR^m $$ with $$ (a, b) \in U $$ and $$ b \in W $$, such that there is a unique continuously differentiable $$ g \colon W \to \RR^n $$ with $$ g(b) = a $$, $$ f(g(y), y) = 0 $$, and $$ g'(b) = -(A_x)^{-1} A_y $$.*
 
 #### Problems
 
 **2023 W P8.** &nbsp; *Define $$ f^3 \colon \RR^3 \to \RR $$ by $$ f(x, y, z) = x^2y + e^x + z $$. (a) Show there exists a continuously differentiable $$ \phi $$ defined in a neighborhood of $$ (1, -1) $$ such that $$ \phi(1, -1) = 0 $$ and $$ f(\phi(y, z), y, z) = 0 $$ for all $$ (y, z) \in U $$. (b) Find $$ \nabla \phi(-1, 1) $$.*
 
-*Proof.* (a) Observe $$ f(0, -1, 1) = 0 $$ and $$ \frac{\partial f}{\partial x}(0, -1, 1) = 1 $$. Hence, we can apply the Implicit Function Theorem to our $$ U $$ and $$ \phi $$.
+*Proof.* (a) Observe $$ f(0, -1, 1) = 0 $$ and $$ \frac{\partial f}{\partial x}(0, -1, 1) = 1 $$. Hence, we can apply the implicit function theorem to our $$ U $$ and $$ \phi $$.
 
-(b) The Implicit Function Theorem tells us 
+(b) The implicit function theorem tells us 
 
 $$
 \nabla \phi(-1, 1)
@@ -1748,7 +1748,7 @@ $$
 
 *has $$ 5 $$ distinct roots. Show that $$ G $$ is open.*
 
-*Proof.* Define $$ f \colon \RR^6 \to \RR $$ by $$ f(A, x) = P_A(x) $$; this is a $$ C^1 $$ function since it is polynomial. Fix an $$ A_0 \in G $$, and let $$ \alpha $$ be root of $$ P_{A_0} $$. Since our roots are distinct we have $$ P_{A_0}'(\alpha) \neq 0 $$. Hence, we can apply the Implicit Function Theorem to find a unique function $$ \phi_{\alpha} \colon U \to \RR $$, where $$ U $$ is a neighborhood of $$ A_0 $$, such that $$ f(x, \phi_{\alpha}(x)) = 0 $$. Since our $$ \phi_{\alpha} $$ are continuously differentiable, there exists a neighborhood of $$ A_0 $$ such that they do not intersect, i.e. $$ P_A $$ has distinct roots. $$ \blacksquare $$
+*Proof.* Define $$ f \colon \RR^6 \to \RR $$ by $$ f(A, x) = P_A(x) $$; this is a $$ C^1 $$ function since it is polynomial. Fix an $$ A_0 \in G $$, and let $$ \alpha $$ be root of $$ P_{A_0} $$. Since our roots are distinct we have $$ P_{A_0}'(\alpha) \neq 0 $$. Hence, we can apply the implicit function theorem to find a unique function $$ \phi_{\alpha} \colon U \to \RR $$, where $$ U $$ is a neighborhood of $$ A_0 $$, such that $$ f(x, \phi_{\alpha}(x)) = 0 $$. Since our $$ \phi_{\alpha} $$ are continuously differentiable, there exists a neighborhood of $$ A_0 $$ such that they do not intersect, i.e. $$ P_A $$ has distinct roots. $$ \blacksquare $$
 
 **2019 F P8.** &nbsp; *Write $$ F(x, y, z) = xe^{2y} + ye^z - ze^x $$ and*
 
@@ -1788,7 +1788,7 @@ $$
 = 6.
 $$ 
 
-Thus, we can apply the Implicit Function theorem to get our curve $$ \phi(x) $$. 
+Thus, we can apply the implicit function theorem to get our curve $$ \phi(x) $$. 
 
 (b) We see 
 
@@ -1803,6 +1803,6 @@ We conclude that $$ (-7/5, -2/5) $$ is tangent to our curve at $$ 0 $$. $$ \blac
 
 **2018 W P8.** &nbsp; *Let $$ f \colon \RR^2 \to \RR^2 $$ be a continuously differentiable map such that $$ f^{-1}(y) $$ is a finite set for all $$ y $$. Show that the determinant $$ \det df $$ of the Jacobi matrix of $$ f $$ cannot vanish on any open subset of $$ \RR^2 $$.*
 
-*Proof.* Suppose $$ \det df $$ vanishes on $$ U $$. Then the Inverse Function Theorem tells us the image $$ f(U) $$ cannot be locally isomorphic to $$ \RR^2 $$, else it would be invertible in a neighborhood, and hence have nonvanishing determinant. Thus, the image of $$ f $$ is locally isomorphic to $$ \RR $$. The kernel of a surjective map from a 2-manifold to a 1-manifold is a 1-manifold, and hence $$ f $$ has infinite kernel.
+*Proof.* Suppose $$ \det df $$ vanishes on $$ U $$. Then the inverse function theorem tells us the image $$ f(U) $$ cannot be locally isomorphic to $$ \RR^2 $$, else it would be invertible in a neighborhood, and hence have nonvanishing determinant. Thus, the image of $$ f $$ is locally isomorphic to $$ \RR $$. The kernel of a surjective map from a 2-manifold to a 1-manifold is a 1-manifold, and hence $$ f $$ has infinite kernel.
 
-Note: It is also a well known fact that there exists no continuous bijections from $$ \RR^2 \to \RR $$ (this requires the Baire Category Theorem), and hence our map has infinite kernel. $$ \blacksquare $$
+Note: It is also a well known fact that there exists no continuous bijections from $$ \RR^2 \to \RR $$ (this requires the Baire category theorem), and hence our map has infinite kernel. $$ \blacksquare $$

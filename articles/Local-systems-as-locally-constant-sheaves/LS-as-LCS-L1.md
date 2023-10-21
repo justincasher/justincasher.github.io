@@ -1,9 +1,9 @@
 ---
 layout: Statement
 indent: true
-permalink: /Local-Systems-as-Locally-Constant-Sheaves-L1
+permalink: /LS-as-LCS-L1
 feedformat: card
-title: Local Systems as Locally Constant Sheaves
+title: Local systems as locally constant sheaves
 ---
 $$ \DeclareMathOperator{\LC}{LC} \DeclareMathOperator{\LS}{LS} \newcommand{\CA}{\mathcal{A}} \newcommand{\CB}{\mathcal{B}} \DeclareMathOperator{\Aut}{Aut}$$
 <br>

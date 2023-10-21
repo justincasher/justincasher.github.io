@@ -27,13 +27,13 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Gr}{Gr} \DeclareMat
 **Abstract.** &nbsp; We introduce the Weil Conjectures, then give an overview of how Lefschetz theory and étale cohomology can be used to prove them. I would like to thank Nathan Lowry and Vladimir Shein for useful feedback.
 
 ## Table of Contents
-1. [Weil's Conjectures](#1-weil-conjectures)
-2. [Lefschetz Theory](#2-lefschetz-theory)
-3. [Étale Cohomology](#3-étale-cohomology)
+1. [Weil's conjectures](#1-weil-conjectures)
+2. [Lefschetz theory](#2-lefschetz-theory)
+3. [Étale cohomology](#3-étale-cohomology)
 4. [References](#4-references)
 
 
-## 1. Weil's Conjectures
+## 1. Weil's conjectures
 
 &emsp; Write
 
@@ -121,7 +121,7 @@ $$
 We conclude that the Weil Conjectures hold for $$ \PP_{\FF_p}^1 $$.
 
 
-## 2. Lefschetz Theory
+## 2. Lefschetz theory
 
 &emsp; Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to check whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious automorphism $$ F(x) = x^p $$ applied $$ n $$ times. This is an old idea: Fermat's Little Theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$ since $$ \FF_p^{\times} $$ has $$ p - 1 $$ elements. The general case follows by considering $$ \FF_q $$ as the splitting field of $$ x^q - x $$. 
 
@@ -173,7 +173,7 @@ $$
 
 
 
-## 3. Étale Cohomology
+## 3. Étale cohomology
 
 &emsp; In order to develop a Lefschetz theory for algebraic varieties we need a suitable notion of cohomology. This was one of the main purposes for writing the EGA and SGA. In the 1950s there was a developing theory of sheaf cohomology, which can be shown to be equal to singular cohomology in the case of manifolds. Thus, like how a manifold is an object which locally looks like $$ \RR^n $$, Grothendieck defined a scheme as an object which locally looks like a commutative ring using sheaves. 
 

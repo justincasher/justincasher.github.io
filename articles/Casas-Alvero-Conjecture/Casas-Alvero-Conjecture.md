@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /Casas-Alvero
 feedformat: card
-title: The Casas-Alvero Conjecture
+title: The Casas-Alvero conjecture
 ---
 <style>
     ol.custom {

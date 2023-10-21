@@ -3,7 +3,7 @@ layout: Seminar-Notes
 indent: true
 permalink: /Casas-Alvero-S
 feedformat: card
-title: The Casas-Alvero Conjecture
+title: The Casas-Alvero conjecture
 ---
 <style>
     ol.custom {

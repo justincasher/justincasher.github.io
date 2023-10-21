@@ -3,7 +3,7 @@ layout: Statement
 indent: true
 permalink: /Gauss-Legendre-L3:1
 feedformat: card
-title: The Gauss-Legendre Algorithm
+title: The Gauss-Legendre algorithm
 ---
 <br>
 		
@@ -22,7 +22,7 @@ $$
 	= a^2 F_S(a, b) - E_S(a, b) \tag{2}
 $$
 
-Explicitely, this expands to
+Explicitly, this expands to
 
 $$
     L(a, b)

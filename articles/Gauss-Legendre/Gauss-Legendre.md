@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /Gauss-Legendre
 feedformat: card
-title: The Gauss-Legendre Algorithm
+title: The Gauss-Legendre algorithm
 ---
 <br>
 
@@ -19,8 +19,8 @@ which is derived from the arithmetic-geometric mean of $$ 1 $$ and $$ \sqrt{2}/2
 
 ## Table of Contents
 1. [History](#1-history)
-2. [Elliptic Integrals](#2-elliptic-integrals)
-3. [Main Results](#3-main-results) <br> 
+2. [Elliptic integrals](#2-elliptic-integrals)
+3. [Main results](#3-main-results) <br> 
 4. [References](#4-references)
 
 ## 1. History
@@ -161,7 +161,7 @@ $$
 	= a^2 F_S(a, b) - E_S(a, b) \tag{2}
 $$
 
-Explicitely, this expands to
+Explicitly, this expands to
 
 $$
     L(a, b)

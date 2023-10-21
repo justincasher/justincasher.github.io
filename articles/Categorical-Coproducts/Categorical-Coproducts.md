@@ -1,9 +1,9 @@
 ---
 layout: Writing
 indent: true
-permalink: /Categorical-Coproducts
+permalink: /Categorical-coproducts
 feedformat: card
-title: Categorical Coproducts and K-Theory
+title: Categorical coproducts and K-theory
 ---
 <style>
     ol.custom {
@@ -27,13 +27,13 @@ $$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\Hom}{Hom} \DeclareM
 **Abstract.** &nbsp; We define products and coproducts for arbitrary categories, then use them to define $$ K $$-theories. In particular, we discuss how the integers result from this construction, and we mention the Serre-Swan Theorem.
 
 ## Table of Contents
-1. [Limits and Colimits](#1-limits-and-colimits)
-2. [Products and Coproducts](#2-products-and-coproducts)
-3. [K-Theory](#3-k-theory)
+1. [Limits and colimits](#1-limits-and-colimits)
+2. [Products and coproducts](#2-products-and-coproducts)
+3. [K-theory](#3-k-theory)
 4. [References](#4-references)
 
 
-## 1. Limits and Colimits
+## 1. Limits and colimits
 
 &emsp; A *category* $$ \cC $$ is a class of objects $$ \Ob(\cC) $$ and a class of morphisms $$ \Hom(A, B) $$ between any two objects equipped with a composition law, so that for any $$ A, B, C \in \Ob(\cC), $$ we have the following: 
 <ol type="a" class="custom" style="list-style-position: outside">
@@ -208,7 +208,7 @@ reads as follows: “Any $$ y $$ which is less than each $$ x_n $$ is less than 
 
 
 
-## 3. K-Theory
+## 3. K-theory
 
 &emsp; Let $$ \cC $$ be a suitably nice category, i.e. abelian. Objects being isomorphic is an equivalence relation. Thus, if $$ A $$ and $$ B $$ are isomorphic, then we say that $$ A $$ and $$ B $$ belong to the same isomorphism class, which we denote $$ [A] = [B] $$. We further write $$ [\Ob(\cC)] $$ for the class of all isomorohism classes in $$ \cC $$.
  

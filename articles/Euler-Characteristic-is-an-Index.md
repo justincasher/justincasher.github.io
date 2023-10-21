@@ -3,19 +3,19 @@ layout: Writing
 indent: true
 permalink: /Euler-Characteristic-is-an-Index
 feedformat: card
-title: Euler Characteristic is the Index of an Operator
+title: Euler characteristic is the index of an operator
 ---
 <br>
 
 **Abstract.** &nbsp; Let $$ M $$ be a closed oriented Riemannian manifold. We show that the (analytic) index of a specific Dirac operator equals the Euler characteristic of $$ M $$. This is the first step in the proof that the Atiyah-Singer Index Theorem implies the Chern-Gauss-Bonnet Theorem.
 
-## Table of Contents
-1. [Atiyah-Singer Index Theorem](#1-atiyah-singer-index-theorem)
-2. [The de Rham Complex](#2-the-de-rham-complex)
-3. [Main Proof](#3-main-proof)
+## Table of contents
+1. [Atiyah-Singer index theorem](#1-atiyah-singer-index-theorem)
+2. [The de Rham complex](#2-the-de-rham-complex)
+3. [Main proof](#3-main-proof)
 4. [References](#4-references)
 
-## 1. Atiyah-Singer Index Theorem
+## 1. Atiyah-Singer index theorem
 
 &emsp; Write $$ M $$ for a closed oriented Riemannian manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
 
@@ -52,9 +52,9 @@ $$
 
 &emsp; The following Theorems are corollaries of the Atiyah-Singer Index Theorem:
 
-- Chern-Gauss-Bonnet Theorem;
-- Hirzebruch–Riemann–Roch Theorem;
-- Hirzebruch Signature Theorem.
+- Chern-Gauss-Bonnet theorem;
+- Hirzebruch–Riemann–Roch theorem;
+- Hirzebruch signature theorem.
 
 We focus on the first, which states that the Euler characteristic of $$ M $$ equals the Euler class of the tangent bundle $$ e(TM) $$ integrated over $$ M $$:
 
@@ -65,7 +65,7 @@ $$
 In particular, we will show that that the Euler characteristic is the index of a Dirac operator. Note that in what follows our vector bundles are not complex, nor do we show that this operator is indeed elliptic. In order to do so we would need to complexify the de Rham complex then compute our operator's symbol.
 
 
-## 2. The de Rham Complex
+## 2. The de Rham complex
 
 &emsp; Write $$ \Omega^k(M) = \Gamma(\bigwedge^k T^{\ast}M) $$ for the (real) vector space of differential $$ k $$-forms of $$ M $$. In what follows, we omit $$ M $$ simply writing $$ \Omega^k $$. We further set $$ \Omega^{\ast} = \bigoplus_k \Omega^k $$ to be the associated graded vector space. It has a decomposition into components with $$ k $$ even or odd:
 
@@ -110,7 +110,7 @@ $$
 
 and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow us to compute the de Rham cohomology groups. 
 
-**Hodge Isomorphism.** &nbsp; *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
+**Hodge isomorphism.** &nbsp; *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
 
 &emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \Delta $$.
 
