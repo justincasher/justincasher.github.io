@@ -204,7 +204,7 @@ $$
 and hence the roots of $$ H_p $$ are the eigenvalues of this action. Our result will then follow from the Riemann hypothesis of the Weil conjectures. 
 
 
-#### The Shimura Isomorphism
+#### The Shimura isomorphism
 
 &emsp; Let $$ S $$ be a complex analytic space. An *elliptic curve* over $$ S $$ is a map $$ f \colon E \to S $$ with a section $$ e \colon S \to E $$, such that the fibers of $$ f $$ are elliptic curves with origin given by $$ e $$. 
 
@@ -287,7 +287,7 @@ Since $$  $$ is a complex space
 
 &emsp; Using this theorem, we can then identify cusp forms with the first reduced cohomology group of the symmetric power of a local system on $$ \overline{X/\Gamma} $$ tensored over $$ \CC $$. We will not explicitely construct this map since we will only be using its existence.
 
-**Theorem (Shimura Isomorphism).** &nbsp; *There exists an isomorphism*
+**Theorem (Shimura isomorphism).** &nbsp; *There exists an isomorphism*
 
 <!--
 $$
@@ -306,7 +306,7 @@ $$
 S_{k+2}(\Gamma) \oplus \overline{S_{k+2}(\Gamma)} \cong \widetilde{H}^1(\overline{X/\Gamma}, \, \Sym^k(R^1 f_* \underline{\ZZ})) \otimes_{\ZZ} \CC.
 $$
 
-#### Full Level $$ n $$ Structures
+#### Full level $$ n $$ structures
 
 &emsp; We would like to emulate [proposition 3.2](https://www.justinasher.me/Ramanujan-conjecture-P3:2){:target="_blank"} in the case of schemes. An *elliptic curve* over a scheme $$ S $$ is a proper smooth morphism $$ f \colon E \to S $$ whose fibers are geometrically connected curves of genus 1, equipped with a section $$ e \colon S \to E $$. In what follows, we will assume that $$ S $$ is of characteristic 0, meaning each $$ s \in S $$ satisfies $$ \char k(s) = 0 $$. 
 
@@ -459,7 +459,7 @@ $$
 $$
 
 
-#### Applying the Riemann Hypothesis
+#### Applying the Riemann hypothesis
 
 &emsp; In order to resolve the problem of $$ M_n $$ not being a smooth projective variety, Deligne uses some machinary which we will not discuss here. This allows us to apply the Riemann hypothesis of the Weil conjectures to get the following:
 
