@@ -1,9 +1,9 @@
 ---
 layout: Writing
 indent: true
-permalink: /Weil-Conjectures-Intro
+permalink: /Weil-conjectures-intro
 feedformat: card
-title: Motivating Schemes with the Weil Conjectures
+title: Motivating schemes with the Weil conjectures
 ---
 <style>
     ol.custom {
