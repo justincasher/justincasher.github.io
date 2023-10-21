@@ -123,13 +123,13 @@ We conclude that the Weil Conjectures hold for $$ \PP_{\FF_p}^1 $$.
 
 ## 2. Lefschetz theory
 
-&emsp; Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to check whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious automorphism $$ F(x) = x^p $$ applied $$ n $$ times. This is an old idea: Fermat's Little Theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$ since $$ \FF_p^{\times} $$ has $$ p - 1 $$ elements. The general case follows by considering $$ \FF_q $$ as the splitting field of $$ x^q - x $$. 
+&emsp; Fix an algebraic closure $$ \overline{\FF}_p $$ of $$ \FF_p $$. In order to check whether an element $$ a \in \overline{\FF}_p $$ belongs to a finite subfield with $$ q = p^n $$ elements, we consider whether it is a fixed point of the Frobenious automorphism $$ F(x) = x^p $$ applied $$ n $$ times. This is an old idea: Fermat's little theorem asserts that $$ a^{p-1} \equiv 1 $$ modulo $$ p $$ since $$ \FF_p^{\times} $$ has $$ p - 1 $$ elements. The general case follows by considering $$ \FF_q $$ as the splitting field of $$ x^q - x $$. 
 
 &emsp; Hence, with our previous setup, we can compute $$ N_d $$ by counting the number of fixed points of $$ F^{q^d}(x) = x^{q^d} $$, where the Frobenious acts on an algebraic closure of our variety in a suitable manner. In particular, we have reduced the Weil Conjectures to a fixed point problem. 
 
 &emsp; It was well known when Weil published his conjectures that algebraic topology can be used to prove the existence of and count fixed points. The following is a simple example:
 
-**Brouwer Fixed Point Theorem.** &nbsp; *Let $$ f \colon D^2 \to D^2 $$ be a continuous map from the disk to itself. Then $$ f $$ has a fixed point.*
+**Brouwer fixed point theorem.** &nbsp; *Let $$ f \colon D^2 \to D^2 $$ be a continuous map from the disk to itself. Then $$ f $$ has a fixed point.*
 
 *Proof.* Suppose $$ f $$ has no fixed points. Let $$ h \colon D^2 \to S^1 $$ be the map which sends $$ x $$ to the point on $$ S^1 $$ which intersects the ray starting at $$ f(x) $$ and passing through $$ x $$. Since $$ f $$ has no fixed points this map is well-defined and continuous. Writing $$ \iota \colon S^1 \to D^2 $$ for the inclusion, we see $$ h \circ \iota = \text{Id}_{S_1} $$. But $$ \pi_1(S^1) = \ZZ $$ and $$ \pi_1(D^1) = 0 $$ implies $$ \pi_1(h \circ \iota) $$ factors through zero, contradicting that its image is $$ \ZZ $$. $$ \blacksquare $$
 
@@ -139,9 +139,9 @@ $$
 L(f) = I(\Delta, \text{graph}(f)) 
 $$ 
 
-the *global Lefschetz number* of $$ f $$. Recall that the oriented intersection is the sum over each intersection $$ x $$ as $$ +1 $$ if $$ f $$ preserves the orientation at $$ x $$ and $$ - 1 $$ elsewise. The global Lefschetz number is related to the singular homology groups by the Lefschetz-Hopf Theorem.
+the *global Lefschetz number* of $$ f $$. Recall that the oriented intersection is the sum over each intersection $$ x $$ as $$ +1 $$ if $$ f $$ preserves the orientation at $$ x $$ and $$ - 1 $$ elsewise. The global Lefschetz number is related to the singular homology groups by the Lefschetz-Hopf theorem.
 
-**Lefschetz-Hopf Theorem.** &nbsp; *We have the equality*
+**Lefschetz-Hopf theorem.** &nbsp; *We have the equality*
 
 $$
 L(f) = \sum_{i=0}^{\infty} (-1)^i \text{Tr}(f_* \mid H_i(M, \QQ)).
