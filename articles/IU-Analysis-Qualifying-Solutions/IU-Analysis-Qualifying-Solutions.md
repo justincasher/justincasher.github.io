@@ -226,7 +226,7 @@ $$
 
 which diverges since $$ \{a_n\} $$ is unbounded. $$ \blacksquare $$
 
-**2022 W P4.** &nbsp; *Let $$ t_0 \in \RR $$ and set $$ t_{n+1} = \sin(\cos(t_n)) $$. Prove this sequence converges with limit independent of $$ t_0 $$.*
+**2022 W P6.** &nbsp; *Let $$ t_0 \in \RR $$ and set $$ t_{n+1} = \sin(\cos(t_n)) $$. Prove this sequence converges with limit independent of $$ t_0 $$.*
 
 *Proof.* Consider $$ f(x) = \sin(\cos(x))) $$ as a function $$ f \colon [0, 2 \pi] \to [0, 2 \pi] $$. Set $$ g(x) = f(f(x)) $$. Computing the derivative, we observe that $$ \|g'(x)\| < 1 $$ for each $$ x \in [0, 2 \pi] $$, so $$ g $$ is a contraction on $$ [0, 2 \pi] $$, and consequently $$ g $$ admits a unique fixed point by the Banach fixed point theorem. We conclude that our desired sequence has a unique limit independent of $$ t_0 $$, because $$ f $$ does not oscillate between 2 distinct points anywhere. $$ \blacksquare $$
 
@@ -1733,7 +1733,7 @@ $$
 \left(\frac{\partial f}{\partial x_2}(1, 1) \right)^2 & \frac{\partial f}{\partial x_1}(1, 1) \\
 \frac{\partial f}{\partial x_2}(1, 1) & \frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1)
 \end{bmatrix} \\
-& = \frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1) \left [ \left( \frac{\partial f}{\partial x_2}(1, 1) - 1 \right)^2 \right] \\
+& = \frac{\partial f}{\partial x_1}(1, 1) \frac{\partial f}{\partial x_2}(1, 1) \left [ \left( \frac{\partial f}{\partial x_2}(1, 1)\right)^2 - 1 \right] \\
 & \neq 0.
 \end{aligned}
 $$
