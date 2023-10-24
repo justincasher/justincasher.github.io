@@ -228,7 +228,13 @@ We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where
 
 &emsp; Let $$ \Gamma $$ be a discrete subgroup of $$ \SL_2(\ZZ) $$ without torsion elements such that $$ X/\Gamma $$ has finite volume (with respect to the Poincaré metric). We can identify $$ X/\Gamma $$ to a smooth projective curve $$ \overline{X/\Gamma} $$ minus a finite number of points.
 
-&emsp; One of the main ideas of Deligne's paper is to use a cohomological description of cusp forms. We define a cusp form of weight $$ k $$ with respect to $$ \Gamma $$ by restricting to $$ \gamma \in \Gamma $$ in the definitions given in section 1, and we denote the resulting space $$ S_k(\Gamma) $$. 
+&emsp; One of the main ideas of Deligne's paper is to use a cohomological description of cusp forms. We define a cusp form of weight $$ k $$ with respect to $$ \Gamma $$ by 
+<ol type="a" class="custom" style="list-style-position: outside">
+  <li>for any \( \gamma \in \Gamma \) we have \( f(\gamma(z)) = (cz+d)^k f(z) \); and</li>
+  
+  <li>for any \( \gamma \in \SL_2(\ZZ) \) we have \( (cz+d)^{-k} f(\gamma(z)) \) remains bounded as \( \im(z) \) approaches infinity.</li>
+</ol>
+We denote the resulting space $$ S_k(\Gamma) $$. 
 
 &emsp; Alternatively, we see for $$ \gamma \in \SL_2(\ZZ) $$, 
 
