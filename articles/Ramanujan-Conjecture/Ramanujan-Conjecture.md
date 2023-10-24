@@ -390,9 +390,9 @@ Here, the notation means we are considering the elements of $$ ^k_n W $$ invaria
 **Lemma 3.5.** &nbsp; *We have $$ _1^k W_{\infty} \cong S_{k+2} \oplus \overline{S_{k+2}} $$.*
 
 
-#### Frobenious and Verschiebung
+#### Eichler–Shimura congruence relation
 
-&emsp; We have a Hecke operator acting on $$ S_{12}(\Gamma) $$. We would like to see what these operators correspond to under the isomorphism given by lemma 3.5. In particular, we can decompose this corresponding operator as a sum of the Frobenious and its adjoint, the Vershiebung. 
+&emsp; We have a Hecke operator acting on $$ S_{12}(\Gamma) $$. We would like to see what these operators correspond to under the isomorphism given by lemma 3.5. In particular, we can decompose this corresponding operator as a sum of the Frobenious and its adjoint, the Vershiebung. This is because they are the only two isogenies in characteristic $$ p $$, and hence our Hecke operator decomposes as their sum.
 
 &emsp; Fix a pair $$ (E, \alpha) $$ as in [proposition 3.4](https://www.justinasher.me/Ramanujan-conjecture-P3:4){:target="_blank"}, and let $$ F \colon E \to E^{(p)} $$ denote the (classical) Frobenious. Then we can define a corresponding pair $$ (E^{(p)}, \alpha^{(p)}) $$ via the diagram over $$ M_n \otimes \FF_p $$
 
