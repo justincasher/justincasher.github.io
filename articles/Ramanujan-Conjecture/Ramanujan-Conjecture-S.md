@@ -232,7 +232,7 @@ We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where
 <ol type="a" class="custom" style="list-style-position: outside">
   <li>for any \( \gamma \in \Gamma \) we have \( f(\gamma(z)) = (cz+d)^k f(z) \); and</li>
   
-  <li>for any \( \gamma \in \SL_2(\ZZ) \) we have \( (cz+d)^{-k} f(\gamma(z)) \) remains bounded as \( \im(z) \) approaches infinity.</li>
+  <li>for any \( \gamma \in \SL_2(\ZZ) \) we have \( (cz+d)^{-k} f(\gamma(z)) \to 0 \) as \( \im(z) \to \infty \).</li>
 </ol>
 We denote the resulting space $$ S_k(\Gamma) $$. 
 
