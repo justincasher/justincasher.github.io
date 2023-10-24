@@ -90,7 +90,7 @@ $$
     \overline{\nu} \colon [\coprod_{x \in \widetilde{X}} L^{\ast}(x)] /\Pi(X) \to X. 
 $$
 
-We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ are sections $$ s \colon U \to \coprod_{x \in U} L(x) $$, such that for any class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$, we get that $$ s(y) = L([\gamma])(s(x)) $$. Our sheaf being locally constant follows from $$ X $$ being locally simply connected ([lemma 2](https://www.justinasher.me/LS-as-LCS-L2)){:target="_blank"}.
+We set $$ F $$ to be its sheaf of sections. Explicitly, elements of $$ F(U) $$ are sections $$ s \colon U \to \coprod_{x \in U} L(x) $$, such that for any class of paths $$ [\gamma] $$ from $$ x $$ to $$ y $$, we get that $$ s(y) = L([\gamma])(s(x)) $$. Our sheaf being locally constant follows from $$ X $$ being locally simply connected ([lemma 2](https://www.justinasher.me/LS-as-LCS-L2){:target="_blank"}).
 
 &emsp; Finally suppose we are given a natural transformation $$ \eta \colon L \to L' $$ between local systems. Then $$ \eta $$ induces a morphism $$ \CB(\eta) \colon \CB(L) \to \CB(L') $$ by pulling back sections, i.e. for each open subset $$ U $$, we map $$ s \in \CB(L)(U) $$ to $$ \eta \circ s $$. This is indeed a morphism of sheaves since $$ \eta $$ is functorial.
 
