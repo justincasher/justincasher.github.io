@@ -17,7 +17,7 @@ This fall I am organizing a graduate seminar at Indiana University on topics in 
 | 9/22/2023 | Vladimir Shein | Motivic zeta functions | [Abstract]({{'/Shein-2023-9-22' | relative_url}}) |
 | 10/6/2023 | Justin Asher | Deligne's proof of the Ramanujan conjecture | [Notes]({{'/Ramanujan-conjecture-S' | relative_url}}) |
 | 10/20/2023 | Yuxuan Liao | Rigid cohomology |  [Abstract]({{'/Liao-2023-10-20' | relative_url}}) | 
-| 10/27/2023 | Nai-Heng Sheu | TBD | |
+| 10/27/2023 | Nai-Heng Sheu | Rational representations of general linear groups in algebraic geometry | [Abstract]({{'/Sheu-2023-10-27' | relative_url}}) |
 | 11/3/2023 | Matthias Strauch | TBD | |
 | 11/10/2023 | Michael Larsen | TBD | |
 | 12/1/2023 | Vladimir Shein | TBD | |
