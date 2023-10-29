@@ -77,9 +77,9 @@ for the Riemann zeta function. It has the following properties:
     <li><i>The \( B_i \) are called the </i>Betti numbers<i> of our zeta function and satisfy the identity \( \chi = \sum_i (-1)^i B_i \).</i></li>
 </ol>
 
-**Remark 1.1.** &nbsp; We are defining the Euler characteristic $$ \chi $$ as the *self-intersection number* of the square $$ I(V^2, V^2) $$. The idea is that the number of fixed points of a function can be defined as $$ I(\Delta, \text{graph}(f)) $$, because $$ (x, x) = (x, f(x)) $$ implies $$ f(x) = x $$. The Euler characteristic is the number of fixed points of the identity map; but this quantity is infinite, so we move our variety slightly off of itself when computing the self-intersection number. 
+**Remark 1.1.** &nbsp; We are defining the Euler characteristic $$ \chi $$ as the *self-intersection number* of the diagonal $$ I(\Delta, \Delta) $$ in $ V \times V $. The idea is that the number of fixed points of a function can be defined as $$ I(\Delta, \text{graph}(f)) $$, because $$ (x, x) = (x, f(x)) $$ implies $$ f(x) = x $$. The Euler characteristic is the number of fixed points of the identity map; but this quantity is infinite, so we move our variety slightly off of itself when computing the self-intersection number. 
 
-**Remark 1.2.** &nbsp; Write $$ M $$ for a smooth compact manifold. Then we can again define $$ \chi(M) = I(\Delta, \Delta) $$, $$ \Delta = M \times M $$. This quantity is related to the *Betti numbers* $$ b_i = \dim_{\QQ} H_i(M, \QQ) $$  by Corollary 2.1.
+**Remark 1.2.** &nbsp; Write $$ M $$ for a smooth compact manifold. Then we can again define $$ \chi(M) = I(\Delta, \Delta) $$. This quantity is related to the *Betti numbers* $$ b_i = \dim_{\QQ} H_i(M, \QQ) $$  by Corollary 2.1.
 
 **Example 1.3.** &nbsp; Let $$ \Gr(\FF_q^n, m) $$ be the Grassmanian, i.e. the number of $$ m $$-dimensional subspaces of $$ \FF_q^n $$. Set $$ k = \FF_p $$ and $$ V = \Gr(\FF_p^n, m) $$. Writing $$ q = p^d $$, by a well known formula,
 
