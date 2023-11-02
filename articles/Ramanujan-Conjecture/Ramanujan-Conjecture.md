@@ -246,7 +246,7 @@ $$
 Hence, the condition 
 
 $$
-f(\gamma(z)) = (cz+d)^k f(z) 
+f(\gamma(z)) = (cz+d)^{2k} f(z) 
 $$
 
 is equivalent to 
