@@ -42,40 +42,40 @@ $$ \newcommand{\colim}{\operatorname{colim}} \DeclareMathOperator{\gcd}{gcd} \De
 
 &emsp; We can assume the following:
 
-1. Dividing by the leading coefficient, we can assume $ F $ is monomial. Hence, 
+    1. Dividing by the leading coefficient, we can assume $ F $ is monomial. Hence, 
 
 $$
 F(X) = \sum a_i X^i = X^n + a_{n-1} X^{n-1} + \cdots + a_1 X + a_0.
 $$
 
-2. The $ i \text{th} $ *Hasse derivative* is given by $ H^i F(X) = F^{(i)}(X)/i! $. Since our field is of characteristic 0, we are going to assume that $ F $ shares a root with each $ H^i F $ for each $ 1 \leq i \leq n $. We can expand this as 
+    2. The $ i \text{th} $ *Hasse derivative* is given by $ H^i F(X) = F^{(i)}(X)/i! $. Since our field is of characteristic 0, we are going to assume that $ F $ shares a root with each $ H^i F $ for each $ 1 \leq i \leq n $. We can expand this as 
 
 $$
 H^i F(X) = {n \choose i} X^{n-i} + \cdots + {i+1 \choose i} a_{i+1} X + a_i.
 $$
 
-3. Because $ H^{n-1} F $ is linear, we observe $ F $ has a zero $ \alpha $ in $ k $. Translating $ \alpha $ to 0 we can further assume $ a_0 = 0 $. Thus, we need to show that $ a_1 = \cdots = a_{n-1} = 0 $, allowing us to state our target theorem as follows:
+    3. Because $ H^{n-1} F $ is linear, we observe $ F $ has a zero $ \alpha $ in $ k $. Translating $ \alpha $ to 0 we can further assume $ a_0 = 0 $. Thus, we need to show that $ a_1 = \cdots = a_{n-1} = 0 $, allowing us to state our target theorem as follows:
 
 **Theorem 1.2.** &nbsp; *Let $ F \in k[X] $ be a monic polynomial of degree $ n = p^k $ satisfying (1), (2), and (3) with $ k $ of characteristic zero. Then $ a_1 \cdots = a_{n-1} = 0 $.*
 
 
 ## 2. Proof
 
-&emsp; In the sequel, write $$ k $$ for a field of characteristic zero. Let $$ F, G \in k[X] $$, $$ F(X) = \sum a_i X^i $$ and $$ G(X) = \sum b_i X^i $$, and $$ \deg F = m $$ and $$ \deg G = n $$. Recall that their resultant is defined as the determinant 
+&emsp; In the sequel, we will write $ k $ for a field of characteristic zero. Let $ F, G \in k[X] $, $ F(X) = \sum a_i X^i $ and $ G(X) = \sum b_i X^i $, and $ \deg F = m $ and $ \deg G = n $. Recall that their resultant is defined as the determinant 
 
 $$
 \Res(F, G) =
 {\begin{vmatrix}a_{m}&0&\cdots &0&b_{n}&0&\cdots &0\\a_{m-1}&a_{m}&\cdots &0&b_{n-1}&b_{n}&\cdots &0\\a_{m-2}&a_{m-1}&\ddots &0&b_{n-2}&b_{n-1}&\ddots &0\\\vdots &\vdots &\ddots &a_{m}&\vdots &\vdots &\ddots &b_{n}\\a_{0}&a_{1}&\cdots &\vdots &b_{0}&b_{1}&\cdots &\vdots \\0&a_{0}&\ddots &\vdots &0&b_{0}&\ddots &\vdots \\\vdots &\vdots &\ddots &a_{1}&\vdots &\vdots &\ddots &b_{1}\\0&0&\cdots &a_{0}&0&0&\cdots &b_{0}\end{vmatrix}}.
 $$
 
-Suppose $$ F $$ (resp. $$ G $$) has roots $$ \alpha_i $$ (resp. $$ \beta_i $$). Then we can rewrite the resultant as the product
+Suppose $ F $ (resp. $ G $) has roots $ \alpha_i $ (resp. $ \beta_i $). Then we can rewrite the resultant as the product
 
 $$
 \Res(F, G)
 = a_n^m b_m^n \prod_{i, j} (\alpha_i - \beta_j).
 $$
 
-In particular, $$ F $$ sharing a root with $$ H^i F $$ is equivalent to $$ \Res(F, H^i F) = 0 $$. 
+In particular, $ F $ sharing a root with $ H^i F $ is equivalent to $ \Res(F, H^i F) = 0 $. 
 
 &emsp; Setting 
 
@@ -83,9 +83,9 @@ $$
 F = X^n + Y_{n-1} X^{n-1} + \cdots + Y_1 X,
 $$
 
-we can consider $$ \Res(F, H^iF) $$ as a polynomial map from $$ \ZZ[X_1, \dots, X_{n-1}] $$ to itself. Our problem then reduces to finding the zeroes of $$ \Res(F, H^iF) $$ in our field $$ k $$. We can rephrase this using a weighted projective scheme.
+we can consider $ \Res(F, H^iF) $ as a polynomial map from $ \ZZ[X_1, \dots, X_{n-1}] $ to itself. Our problem then reduces to finding the zeroes of $ \Res(F, H^iF) $ in our field $$ k $$. We can rephrase this using a weighted projective scheme.
 
-&emsp; Let $$ (w_1, \dots, w_n) $$ be an $$ n $$-tuple of positive integers and $$ R $$ be a commutative ring. Grade $$ k[x_1, \dots, x_n] $$ by setting $$ x_i $$ to be of weight (or degree) $$ w_i $$. We define *weighted projective space* as 
+&emsp; Let $ (w_1, \dots, w_n) $ be an $ n $-tuple of positive integers and $ R $ be a commutative ring. Grade $ k[x_1, \dots, x_n] $ by setting $ x_i $ to be of weight (or degree) $ w_i $. We define *weighted projective space* as 
 
 $$ 
 \PP_R(w_1, \dots, w_n) = \text{Proj}(k[x_1, \dots, x_n])
@@ -166,18 +166,18 @@ v_p \left({n \choose i} \right) & = v_p \left( \frac{n!}{i!(n-i)!} \right) \\
 \end{aligned}
 $$
 
-Since $$ S_1 $$ contains $$ v_p(n) = k $$ and $$ S_2 $$ does not, it is not hard to see $$ S_1 > S_2 $$. $$ \blacksquare $$
+Since $$ S_1 $$ contains $ v_p(n) = k $ and $ S_2 $ does not, it is not hard to see $ S_1 > S_2 $. $ \blacksquare $$
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 
-*Proof (Theorem 1.2).* By Lemmas 2.1 and 2.2, we are reduced to proving the theorem for $$ F(X) \in \FF_p[X] $$ of degree $$ n = p^k $$. Recall 
+*Proof (Theorem 1.2).* By Lemmas 2.1 and 2.2, we are reduced to proving the theorem for $ F(X) \in \FF_p[X] $ of degree $ n = p^k $. Recall 
 
 $$
 H^i F(X)
 = {n \choose i} X^{n-i} + \cdots + {i+1 \choose i} a_{i+1} X + a_i.
 $$
 
-In particular, $$ F $$ shares a root with
+In particular, $ F $ shares a root with
 
 $$
 H^{n-1} F(X) 
@@ -186,21 +186,21 @@ H^{n-1} F(X)
 = a_{n-1},
 $$
 
-but this is only possible if $$ a_{n-1} = 0 $$. Next, we observe $$ F $$ shares a root with
+but this is only possible if $ a_{n-1} = 0 $. Next, we observe $ F $ shares a root with
 
 $$
 H^{n-1} F(X) 
 = {n \choose n-2} X^2 + {n-1 \choose n-2} a_{n-1} X + a_{n-2}.
 $$
 
-By Lemma 2.3 and since $$ a_{n-1} = 0 $$,
+By Lemma 2.3 and since $ a_{n-1} = 0 $,
 
 $$
 H^{n-1} F(X) 
 = a_{n-2},
 $$
 
-which implies $$ a_{n-2} = 0 $$. Proceeding by induction, we conclude $$ a_1 = \cdots = a_{n-1} = 0 $$. $$ \blacksquare $$
+which implies $ a_{n-2} = 0 $. Proceeding by induction, we conclude $ a_1 = \cdots = a_{n-1} = 0 $. $ \blacksquare $
 
 ## 3. References
 
