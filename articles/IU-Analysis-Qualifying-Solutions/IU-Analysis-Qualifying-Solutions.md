@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /IU-analysis-qualifying-solutions
 feedformat: card
-title: IU Analysis Qualifying Solutions
+title: IU analysis qualifying solutions
 ---
 <style>
     ol.custom {
