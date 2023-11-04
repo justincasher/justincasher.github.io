@@ -40,21 +40,19 @@ $$ \newcommand{\colim}{\operatorname{colim}} \DeclareMathOperator{\gcd}{gcd} \De
 
 **Example 1.1.** &nbsp; This is from [\[2\]](#3-references). Consider $ F(X) = x^4 + X^2 + 2x $ in $ \FF_7[X] $. Then $ F'(X) = 4x^3 + 2x + 2 $ shares root $ 4 $ with $ F $, $ F''(X) = 5X^2 + 2 $ shares root $ 6 $, and $ F'''(X) = 3x $ shares root $ 0 $. But $ F(X) $ is not of the desired form.
 
-&emsp; We can assume the following:
-
-    1. Dividing by the leading coefficient, we can assume $ F $ is monomial. Hence, 
+&emsp; We can assume the following: (1) Dividing by the leading coefficient, we can assume $ F $ is monomial. Hence, 
 
 $$
 F(X) = \sum a_i X^i = X^n + a_{n-1} X^{n-1} + \cdots + a_1 X + a_0.
 $$
 
-    2. The $ i \text{th} $ *Hasse derivative* is given by $ H^i F(X) = F^{(i)}(X)/i! $. Since our field is of characteristic 0, we are going to assume that $ F $ shares a root with each $ H^i F $ for each $ 1 \leq i \leq n $. We can expand this as 
+(2) The $ i \text{th} $ *Hasse derivative* is given by $ H^i F(X) = F^{(i)}(X)/i! $. Since our field is of characteristic 0, we are going to assume that $ F $ shares a root with each $ H^i F $ for each $ 1 \leq i \leq n $. We can expand this as 
 
 $$
 H^i F(X) = {n \choose i} X^{n-i} + \cdots + {i+1 \choose i} a_{i+1} X + a_i.
 $$
 
-    3. Because $ H^{n-1} F $ is linear, we observe $ F $ has a zero $ \alpha $ in $ k $. Translating $ \alpha $ to 0 we can further assume $ a_0 = 0 $. Thus, we need to show that $ a_1 = \cdots = a_{n-1} = 0 $, allowing us to state our target theorem as follows:
+(3) Because $ H^{n-1} F $ is linear, we observe $ F $ has a zero $ \alpha $ in $ k $. Translating $ \alpha $ to 0 we can further assume $ a_0 = 0 $. Thus, we need to show that $ a_1 = \cdots = a_{n-1} = 0 $, allowing us to state our target theorem as follows:
 
 **Theorem 1.2.** &nbsp; *Let $ F \in k[X] $ be a monic polynomial of degree $ n = p^k $ satisfying (1), (2), and (3) with $ k $ of characteristic zero. Then $ a_1 \cdots = a_{n-1} = 0 $.*
 
