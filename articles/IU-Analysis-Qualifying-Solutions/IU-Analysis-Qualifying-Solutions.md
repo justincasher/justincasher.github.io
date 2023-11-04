@@ -20,10 +20,6 @@ title: IU Analysis Qualifying Solutions
     }
 }
 </style>
-$$ \newcommand{\fa}{\mathfrak{a}} \newcommand{\fm}{\mathfrak{m}} \newcommand{\fp}{\mathfrak{p}} $$
-$$ \newcommand{\CB}{\mathcal{B}} \newcommand{\cC}{\mathcal{C}} \newcommand{\CO}{\mathcal{O}} \newcommand{\CV}{\mathcal{V}} $ 
-$$ \newcommand{\RR}{\mathbb{R}} $$
-$$ \DeclareMathOperator{\CHom}{\mathcal{H}om}  $$
 <br>
 
 **Abstract.** These are solutions to some of the Indiana University analysis qualifying problems. They are indexed by "\[Year\] \[Semester\] \[Number\]". I also include in each section some theorems which might be useful. I would like to thank Chia-Tz Liang for proof reading these. Please email me if you find any errors or have any solutions you would like to add. I also omitted adding a section on integration.
