@@ -1,4 +1,6 @@
 ---
+Author:
+ChangeDate: 
 layout: Writing
 indent: true
 permalink: /Gauss-Legendre
@@ -34,7 +36,7 @@ $$
 
 evaluated at $ x = 1 $ gives us 
 
-$$\
+$$
 	\frac{\pi}{4} 
 	= 1-\frac{1}{3}+\frac{1}{5}+\frac{1}{7}-\cdots.
 $$ 
