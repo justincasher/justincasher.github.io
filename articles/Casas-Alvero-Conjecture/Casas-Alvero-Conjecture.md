@@ -21,7 +21,7 @@ title: The Casas-Alvero conjecture
 }
 </style>
 $$ \newcommand{\cC}{\mathcal{C}} \newcommand{\CD}{\mathcal{D}} \newcommand{\CI}{\mathcal{I}} \newcommand{\CO}{\mathcal{O}} \newcommand{\FF}{\mathbb{F}} \newcommand{\NN}{\mathbb{N}} \newcommand{\PP}{\mathbb{P}} \newcommand{\QQ}{\mathbb{Q}} \newcommand{\RR}{\mathbb{R}} \newcommand{\ZZ}{\mathbb{Z}} $$
-$$ \newcommand{\colim}{\operatorname{colim}} \DeclareMathOperator{\gcd}{gcd} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\Spec}{Spec} $$
+$$ \DeclareMathOperator{\colim}{colim} \DeclareMathOperator{\gcd}{gcd} \DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ob}{Ob} \DeclareMathOperator{\Res}{Res} \DeclareMathOperator{\Spec}{Spec} $$
 <br>
 
 **Abstract.** &nbsp; The Casas-Alvero Conjecture asserts that if $ F(X) \in k[X] $, $ k $ is of characteristic $ 0 $, and $ F $ shares a root with each derivative $ F^{(i)} $, then $ F(X) = (x - \alpha)^n $ for some $ \alpha \in k $. We show that it is true for polynomials of degree $ n = p^k $ for $ p $ prime following [\[3\]](#3-references). 
@@ -95,25 +95,25 @@ $$
 (x_0, \dots, x_n) \sim (\lambda^{w_1} x_1, \dots, \lambda^{w_n} x_n)
 $$
 
-with $$ \lambda \in R $$. For example, $$ x_1^2 x_3 + x_2 $$ is homogeneous of degree $$ 4 $$ in $$ \PP_{\ZZ}(1, 4, 2) $$.
+with $ \lambda \in R $. For example, $ x_1^2 x_3 + x_2 $ is homogeneous of degree $ 4 $ in $ \PP_{\ZZ}(1, 4, 2) $.
 
-&emsp; Consider the resultant $$ \Res(F, H^i F) $$ as a polynomial in the weighted projective space $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. Then it is homogeneous of degree $$ n(n-i) $$. Hence, the ideal 
+&emsp; Consider the resultant $ \Res(F, H^i F) $ as a polynomial in the weighted projective space $ \PP_{\ZZ}(1, 2, \dots, n-1) $. Then it is homogeneous of degree $ n(n-i) $. Hence, the ideal 
 
 $$
 I_n = \left< \Res(F, H^iF) \mid 1 \leq i \leq n-1 \right>
 $$
 
-is homogeneous in $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$. We define $$ X_n $$ to be the closed subscheme of $$ \PP_{\ZZ}(1, 2, \dots, n-1) $$ given by the sheaf of ideals $$ I_n $$.
+is homogeneous in $ \PP_{\ZZ}(1, 2, \dots, n-1) $. We define $ X_n $ to be the closed subscheme of $ \PP_{\ZZ}(1, 2, \dots, n-1) $ given by the sheaf of ideals $ I_n $.
 
-&emsp; The $$ k $$-valued points $$ X_n(k) $$ correspond to monomials over $$ k $$ of degree $$ n $$ which share a root with each Hasse derivative. Since we want $$ a_1 = \cdots = a_{n-1} = 0 $$ and $$ 0 $$ is not a point in projective space, we have
+&emsp; The $ k $-valued points $ X_n(k) $ correspond to monomials over $ k $ of degree $ n $ which share a root with each Hasse derivative. Since we want $ a_1 = \cdots = a_{n-1} = 0 $ and $ 0 $ is not a point in projective space, we have
 
-**Lemma 2.1.** &nbsp; *The Casas-Alvero Conjecture is true for polynomials of degree $$ n $$ over $$ k $$ if and only if $$ X_n(k) $$ is empty.*
+**Lemma 2.1.** &nbsp; *The Casas-Alvero Conjecture is true for polynomials of degree $ n $ over $ k $ if and only if $ X_n(k) $ is empty.*
 
-&emsp; The following lemma tells us it is enough to prove Theorem 1.2 for polynomials over $$ \FF_p $$ of degree $$ n $$.
+&emsp; The following lemma tells us it is enough to prove Theorem 1.2 for polynomials over $ \FF_p $ of degree $ n $.
 
-**Lemma 2.2.** &nbsp; *If $$ X_n(\FF_p) $$ is empty for some $$ p $$, then $$ X_n(k) $$ is empty.*
+**Lemma 2.2.** &nbsp; *If $ X_n(\FF_p) $ is empty for some $ p $, then $ X_n(k) $ is empty.*
 
-*Proof.* Since $$ k $$ is of characteristic zero, $$ \QQ $$ is a subfield of $$ k $$. Hence if
+*Proof.* Since $ k $ is of characteristic zero, $ \QQ $ is a subfield of $ k $. Hence if
 
 $$
 X_n(\QQ) = \Hom_{\ZZ}(\Spec \QQ, X_n) 
@@ -125,9 +125,9 @@ $$
 X_n(k) = \Hom_{\ZZ}(\Spec k, X_n) 
 $$
 
-is empty as well. Thus, we have reduced ourselves to showing $$ X_n(\QQ) $$ is empty. 
+is empty as well. Thus, we have reduced ourselves to showing $ X_n(\QQ) $ is empty. 
 
-&emsp; Consider the structure morphism $$ \phi_n \colon X_n \to \ZZ $$. Since 
+&emsp; Consider the structure morphism $ \phi_n \colon X_n \to \ZZ $. Since 
 
 $$
 X_n(\FF_p) 
@@ -135,24 +135,24 @@ X_n(\FF_p)
 = \Hom_{\FF_p}(\Spec \FF_p, X_n \times \FF_p),
 $$
 
-we see $$ X_n(\FF_p) $$ being empty is equivalent to $$ X_n \times \FF_p $$ being empty. In particular, the fiber $$ X_n \times \FF_p $$ of $$ \phi_n $$ at $$ p $$ is empty, and therefore the subset 
+we see $ X_n(\FF_p) $ being empty is equivalent to $ X_n \times \FF_p $ being empty. In particular, the fiber $ X_n \times \FF_p $ of $ \phi_n $ at $ p $ is empty, and therefore the subset 
 
 $$ 
 U = \ZZ \setminus \phi_n(X_n)
 $$
 
-is nonempty. Furthermore, $$ X_n $$ being projective implies it is proper, and so $$ \phi_n $$ has closed image. We conclude that $$ U $$ is a nonempty open subset of $$ \ZZ $$, meaning it contains $$ (0) $$. Thus, the fiber $$ X_n \times \QQ $$ is empty, meaning
+is nonempty. Furthermore, $ X_n $ being projective implies it is proper, and so $ \phi_n $ has closed image. We conclude that $ U $ is a nonempty open subset of $ \ZZ $, meaning it contains $ (0) $. Thus, the fiber $ X_n \times \QQ $ is empty, meaning
 
 $$
 X_n(\QQ) 
 = \Hom_{\QQ}(\Spec \QQ, X_n \times \QQ)
 $$
 
-is empty. $$ \blacksquare $$
+is empty. $ \blacksquare $
 
-**Lemma 2.3.** &nbsp; *Let $$ n = p^k $$ for $$ p $$ prime. Then for $$ 1 \leq i \leq n-1 $$ we have $$ {n \choose i } \equiv 0 $$ modulo $$ p $$.*
+**Lemma 2.3.** &nbsp; *Let $ n = p^k $ for $ p $ prime. Then for $ 1 \leq i \leq n-1 $ we have $ {n \choose i } \equiv 0 $ modulo $ p $.*
 
-*Proof.* This is equivalent to showing $$ v_p({n \choose i }) > 0 $$. Indeed,
+*Proof.* This is equivalent to showing $ v_p({n \choose i }) > 0 $. Indeed,
 
 $$
 \begin{aligned}
@@ -164,7 +164,7 @@ v_p \left({n \choose i} \right) & = v_p \left( \frac{n!}{i!(n-i)!} \right) \\
 \end{aligned}
 $$
 
-Since $$ S_1 $$ contains $ v_p(n) = k $ and $ S_2 $ does not, it is not hard to see $ S_1 > S_2 $. $ \blacksquare $$
+Since $ S_1 $ contains $ v_p(n) = k $ and $ S_2 $ does not, it is not hard to see $ S_1 > S_2 $. $ \blacksquare $$
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 
