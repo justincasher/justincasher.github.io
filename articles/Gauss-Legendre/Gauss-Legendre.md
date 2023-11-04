@@ -267,12 +267,14 @@ $$
 
 Finally, we apply [lemma 3.2](https://www.justinasher.me/Gauss-Legendre-L3:2){:target="_blank"} to write our equation in terms of the AM-GM mean
 
-$$				
-	(2S-1) \left( \frac{\pi}{2 M(1, k)} \right)^2 = \frac{\pi}{2} \\
-	\pi = \frac{2M(1, k)^2}{2S-1},
+$$
+\begin{aligned}				
+	\frac{\pi}{2} & = (2S-1) \left( \frac{\pi}{2 M(1, k)} \right)^2  \\
+	\pi & = \frac{2M(1, k)^2}{2S-1}.
+\end{aligned}
 $$
 
-with plugging in $ S $ gives us our result. $ \blacksquare $
+Plugging in $ S $ gives us our result. $ \blacksquare $
 
 
 ## 4. References
