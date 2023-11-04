@@ -7,7 +7,7 @@ title: The Gauss-Legendre algorithm
 ---
 <br>
 
-**Abstract.** &nbsp; We prove the following approximation of $$ \pi $$
+**Abstract.** &nbsp; We prove the following approximation of $ \pi $
 
 $$
     \pi = \frac{2 M (1, \sqrt{2}/2)^2}{1 - \displaystyle{\sum_{n=0}^{\infty} 2^n (a_n^2 - b_n^2)}},
