@@ -5,15 +5,13 @@ feedformat: card
 title: Writing
 ---
 <br/>
-This page contains an alphabetized list of (mostly expository) online mathematics articles I have written. Please send me an email if you find any errors or typos!
+This page contains an alphabetized list of (mostly expository) online mathematics articles I have written. You can either view them as a web article or a poorly typeset PDF. Please send me an email if you find any errors or typos!
 
 1. [Casas-Alvero conjecture]({{'/Casas-Alvero' | relative_url}})
-2. [Categorical coproducts and K-theory]({{'/Categorical-coproducts' | relative_url}})
+2. [Categorical coproducts and K-theory]({{'/Categorical-coproducts' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1uLrZEFCuSj4EzfLExN70w3Dy6j-XPwav))
 3. [Euler Characteristic is the index of an operator]({{'/Euler-characteristic-is-an-index' | relative_url}})
 4. [Gauss-Legendre algorithm]({{'/Gauss-Legendre' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1BuO6os1gzjDF-pzavA_qsFRmK63-EWJa))
 5. [IU analysis qualifying solutions]({{'/IU-analysis-qualifying-solutions' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1p46e1l2GwsVWfULp0LwA9rn9mjPlMo0L))
 6. [Local systems as locally constant sheaves]({{'/LS-as-LCS' | relative_url}})
 7. [Motivating schemes with the Weil conjectures]({{'/Weil-conjectures-intro' | relative_url}})
 8. [Ramanujan conjecture]({{'/Ramanujan-Conjecture' | relative_url}})
-
-
