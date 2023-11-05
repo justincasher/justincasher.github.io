@@ -164,7 +164,7 @@ v_p \left({n \choose i} \right) & = v_p \left( \frac{n!}{i!(n-i)!} \right) \\
 \end{aligned}
 $$
 
-Since $ S_1 $ contains $ v_p(n) = k $ and $ S_2 $ does not, it is not hard to see $ S_1 > S_2 $. $ \blacksquare $$
+Since $ S_1 $ contains $ v_p(n) = k $ and $ S_2 $ does not, it is not hard to see $ S_1 > S_2 $. $ \blacksquare $
 
 &emsp; We now have the tools needed to prove Theorem 1.2.
 

@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /Ramanujan-Conjecture
 feedformat: card
-title: The Ramanujan Conjecture
+title: The Ramanujan conjecture
 ---
 <style>
     ol.custom {
