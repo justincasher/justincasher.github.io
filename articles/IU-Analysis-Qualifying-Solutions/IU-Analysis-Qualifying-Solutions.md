@@ -477,7 +477,7 @@ $$
 = \int_0^1 f(x) dx.
 $$
 
-*Proof.* Recall that for the $ \ell^p $ norm on sequences, we have $ \lim_p \| (a_n) \|_p = \| (a_n) \|_{\infty} $. Hence, 
+*Proof.* Recall that for the $ \ell^p $ norm on sequences, we have $$ \lim_p \| (a_n) \|_p = \| (a_n) \|_{\infty} $$. Hence, 
 
 $$
 f(x) = \lim_n \left( \sum_{k=1}^n f_k(x)^n \right)^{1/n}
