@@ -124,7 +124,7 @@ For a counterexample, consider $ f \colon [0, 1] \to [0, 1] $ with $ f(x) = \sqr
 
 **Theorem 2.2.** &nbsp; *Let $ \{a_n\} $ be a sequence in $ \mathbb{R}^+ $. Then $ \prod_n (1+a_n) $ converges if and only if $ \sum_n a_n $ converges. If $ 0 < a_n < 1 $, then $ \prod_n (1-a_n) \neq 0 $ if and only if $ \sum_n a_n $ converges.*
 
-**Banach fixed point theorem.** &nbsp; *Let $ (X, d) $ be a complete metric space, and let $ f \colon X \to X $ be contractive. Then $ X $ has a unique fixed point $ f(x_*) = x_* $, which is given by taking n arbitrary $ x_0 \in X $, setting $ x_{n+1} = f(x_n) $, and evaluating $ \lim_n f(x_n) = x_* $.*
+**Banach fixed point theorem.** &nbsp; *Let $ (X, d) $ be a complete metric space, and let $ f \colon X \to X $ be contractive. Then $ X $ has a unique fixed point $ f(x_\ast) = x_\ast $, which is given by taking n arbitrary $ x_0 \in X $, setting $ x_{n+1} = f(x_n) $, and evaluating $ \lim_n f(x_n) = x_\ast $.*
 
 #### Problems
 
@@ -278,7 +278,7 @@ $$
 
 We conclude that $ u^{-\ln(u)} e^u > 1 $, our interal diverges, and so does our series. $ \blacksquare $
 
-**2020 F P1.** &nbsp; *Let $ x_0 > 0 $ and $ x_{n+1} = \frac{1}{2} (x_n + \frac{4}{x_n}) $. Show that (a) $ x_{n+1} \geq 2 $ for $ n \geq 0 $, (b) $ x_{n+1} \leq x_n $ if $ n \geq 1 $, (c) $ \lim x_n = x_* $ exists, and (d) find $ x_* $.*
+**2020 F P1.** &nbsp; *Let $ x_0 > 0 $ and $ x_{n+1} = \frac{1}{2} (x_n + \frac{4}{x_n}) $. Show that (a) $ x_{n+1} \geq 2 $ for $ n \geq 0 $, (b) $ x_{n+1} \leq x_n $ if $ n \geq 1 $, (c) $ \lim x_n = x_\ast $ exists, and (d) find $ x_\ast $.*
 
 *Proof.* (a) By the AM-GM inequality (cf. optimization), 
 
@@ -315,7 +315,7 @@ $$
 
 Solving this equation shows $ x_* = 2 $ is the only positive solution, and thus our limit.  
 
-Alternatively, define $ f \colon [1.5, \infty) \to [1.5, \infty) $ by $ f = \frac{1}{2}(x + \frac{4}{x}) $. Then $ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $ is strictly less than $ 1 $ on our domain, so $ f $ is a contraction. Applying the Banach fixed point theorem to $ [1.5, \infty) $ tells us our sequence has a unique limit. Solving $ x_* = \frac{1}{2} \left( x_* + \frac{4}{x_*} \right) $ yields $ x_* = 2 $. $ \blacksquare $
+Alternatively, define $ f \colon [1.5, \infty) \to [1.5, \infty) $ by $ f = \frac{1}{2}(x + \frac{4}{x}) $. Then $ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $ is strictly less than $ 1 $ on our domain, so $ f $ is a contraction. Applying the Banach fixed point theorem to $ [1.5, \infty) $ tells us our sequence has a unique limit. Solving $ x_\ast = \frac{1}{2} \left( x_{*} + \frac{4}{x_\ast} \right) $ yields $ x_\ast = 2 $. $ \blacksquare $
 
 **2020 W P1.** &nbsp; *Let $ \{a_n\} $ be a sequence in $ \mathbb{R}^+ $ with $ \lim a_n = 0 $. Show there exists infinitely many $ N \in \mathbb{N} $ such that $ n \geq N $ implies $ a_n \leq a_N $.*
 
@@ -477,7 +477,7 @@ $$
 = \int_0^1 f(x) dx.
 $$
 
-*Proof.* Recall that for the $ \ell^p $ norm on sequences, we have $ \lim_p \| (a_n) \|_p = \| (a_n) \|_{\infty} $. Hence, 
+*Proof.* Recall that for the $ \ell^p $ norm on sequences, we have $$ \lim_p \| (a_n) \|_p = \| (a_n) \|_{\infty} $$. Hence, 
 
 $$
 f(x) = \lim_n \left( \sum_{k=1}^n f_k(x)^n \right)^{1/n}
