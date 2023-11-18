@@ -7,7 +7,7 @@ title: Euler characteristic is the index of an operator
 ---
 <br>
 
-**Abstract.** &nbsp; Let $$ M $$ be a closed oriented Riemannian manifold. We show that the (analytic) index of a specific Dirac operator equals the Euler characteristic of $$ M $$. This is the first step in the proof that the Atiyah-Singer Index Theorem implies the Chern-Gauss-Bonnet Theorem.
+**Abstract.** &nbsp; Let $ M $ be a closed oriented Riemannian manifold. We show that the (analytic) index of a specific Dirac operator equals the Euler characteristic of $ M $. This is the first step in the proof that the Atiyah-Singer index theorem implies the Chern-Gauss-Bonnet theorem.
 
 ## Table of contents
 1. [Atiyah-Singer index theorem](#1-atiyah-singer-index-theorem)
@@ -17,9 +17,9 @@ title: Euler characteristic is the index of an operator
 
 ## 1. Atiyah-Singer index theorem
 
-&emsp; Write $$ M $$ for a closed oriented Riemannian manifold of dimension $$ n $$. Let $$ E_1, E_2 $$ be complex vector bundles over $$ M $$ of rank $$ r_1, r_2 $$, respectively. A map of sections
+&emsp; Write $ M $ for a closed oriented Riemannian manifold of dimension $ n $. Let $ E_1, E_2 $ be complex vector bundles over $ M $ of rank $ r_1, r_2 $, respectively. A map of sections
 
-$$ 
+$$
     F \colon \Gamma(E_1) \to \Gamma(E_2)
 $$
 
@@ -35,9 +35,9 @@ $$
     \partial_\alpha = \frac{\partial^{\|\alpha\|}}{\partial^{\alpha_1} \cdots \partial^{\alpha_n}}
 $$
 
-is called a *differential operator*. Here, $$ \alpha = (\alpha_1, ..., \alpha_n) $$ is a vector in $$ \mathbb{Z}^n $$ with $$ \|\alpha\| = \sum \alpha_i $$, we let $$ U \subseteq M $$ be any open subset where $$ E_1, E_2 $$ are trivial, and $$ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $$
+is called a *differential operator*. Here, $ \alpha = (\alpha_1, ..., \alpha_n) $ is a vector in $ \mathbb{Z}^n $ with $ \|\alpha\| = \sum \alpha_i $, we let $ U \subseteq M $ be any open subset where $ E_1, E_2 $ are trivial, and $ f^\alpha \in C^{\infty}(U, \text{Hom}(\mathbb{C}^{r_1}, \mathbb{C}^{r_2})) $
 
-&emsp; For a particular type of differential operator, called *elliptic*, the Atiyah-Singer Index Theorem relates the index 
+&emsp; For a particular type of differential operator, called *elliptic*, the Atiyah-Singer index theorem relates the index 
 
 $$
     \text{Ind}(F) = \dim \ker F - \dim \text{coker} F
@@ -50,13 +50,13 @@ $$
     = \int_M \text{Ch}(F) \wedge \text{td}(M). 
 $$
 
-&emsp; The following Theorems are corollaries of the Atiyah-Singer Index Theorem:
+&emsp; The following Theorems are corollaries of the Atiyah-Singer index theorem:
 
 - Chern-Gauss-Bonnet theorem;
 - Hirzebruch–Riemann–Roch theorem;
 - Hirzebruch signature theorem.
 
-We focus on the first, which states that the Euler characteristic of $$ M $$ equals the Euler class of the tangent bundle $$ e(TM) $$ integrated over $$ M $$:
+We focus on the first, which states that the Euler characteristic of $ M $ equals the Euler class of the tangent bundle $ e(TM) $ integrated over $ M $:
 
 $$
     \chi(M) = \int_M e(TM)
@@ -67,31 +67,31 @@ In particular, we will show that that the Euler characteristic is the index of a
 
 ## 2. The de Rham complex
 
-&emsp; Write $$ \Omega^k(M) = \Gamma(\bigwedge^k T^{\ast}M) $$ for the (real) vector space of differential $$ k $$-forms of $$ M $$. In what follows, we omit $$ M $$ simply writing $$ \Omega^k $$. We further set $$ \Omega^{\ast} = \bigoplus_k \Omega^k $$ to be the associated graded vector space. It has a decomposition into components with $$ k $$ even or odd:
+&emsp; Write $ \Omega^k(M) = \Gamma(\bigwedge^k T^{\ast}M) $ for the (real) vector space of differential $ k $-forms of $ M $. In what follows, we omit $ M $ simply writing $ \Omega^k $. We further set $ \Omega^{\ast} = \bigoplus_k \Omega^k $ to be the associated graded vector space. It has a decomposition into components with $ k $ even or odd:
 
 $$
     \Omega^{\ast} = \Omega^{\text{ev}} \oplus \Omega^{\text{od}}.
 $$
 
-&emsp; Recall that there is a natural map $$ d \colon \Omega^k \to \Omega^{k+1} $$ such that $$ d \circ d = 0 $$ called the *differential*. We see that the image of $$ d $$ is a subobject of its kernel, and we define 
+&emsp; Recall that there is a natural map $ d \colon \Omega^k \to \Omega^{k+1} $ such that $ d \circ d = 0 $ called the *differential*. We see that the image of $ d $ is a subobject of its kernel, and we define 
 
 $$
     H_{\text{dR}}^k(M) = \frac{\ker d \colon \Omega^k \to \Omega^{k+1}}{\text{im} d \colon \Omega^{k-1} \to \Omega^k}
 $$
 
-to be the *$$ k $$th de Rham cohomology group of $$ M $$*.
+to be the *$ k $th de Rham cohomology group of $ M $*.
 
-&emsp; We can dually define the *codifferential* $$ \delta \colon \Omega^{k} \to \Omega^{k-1} $$ using the *Hodge star operator* $$ \star \colon \Omega^{k} \to \Omega^{n-k} $$. We will not explicitly define the later, but the idea is that there is a natural isomorphism $$ \bigwedge^k T^{\ast}M \to \bigwedge^{n-k} T^{\ast}M $$ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which is used to define the codifferential on $$ \Omega^k $$ by $$ \delta = (-1)^k \star^{-1} d \star $$. 
+&emsp; We can dually define the *codifferential* $ \delta \colon \Omega^{k} \to \Omega^{k-1} $ using the *Hodge star operator* $ \star \colon \Omega^{k} \to \Omega^{n-k} $. We will not explicitly define the later, but the idea is that there is a natural isomorphism $ \bigwedge^k T^{\ast}M \to \bigwedge^{n-k} T^{\ast}M $ since the vector spaces are of the same dimension. This map pulls back to the Hodge star operator, which is used to define the codifferential on $ \Omega^k $ by $ \delta = (-1)^k \star^{-1} d \star $. 
 
-&emsp; The Hodge star operator yields a natural inner product structure on $$ \Omega^{\ast} $$. For $$ \omega, \eta \in \Omega^k $$, we set 
+&emsp; The Hodge star operator yields a natural inner product structure on $ \Omega^{\ast} $. For $ \omega, \eta \in \Omega^k $, we set 
 
 $$
     \left< \omega, \eta \right> = \int_M \omega \wedge \star \eta,
-$$ 
+$$
 
-and then we define differential forms of unequal degrees to be orthogonal. In particular, given a bounded linear operator $$ T \colon \Omega^{\ast} \to \Omega^{\ast} $$ its *adjoint* is a map $$ T^{\ast} \colon \Omega^{\ast} \to \Omega^{\ast} $$ such that $$ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $$.
+and then we define differential forms of unequal degrees to be orthogonal. In particular, given a bounded linear operator $ T \colon \Omega^{\ast} \to \Omega^{\ast} $ its *adjoint* is a map $ T^{\ast} \colon \Omega^{\ast} \to \Omega^{\ast} $ such that $ \left< T \omega, \eta \right> = \left< \omega, T^{\ast} \eta \right> $.
 
-&emsp; Finally, we define the Euler characteristic of $$ M $$ as the alternating sum 
+&emsp; Finally, we define the Euler characteristic of $ M $ as the alternating sum 
 
 $$
     \chi(M) = \sum_{k=0}^n (-1)^k \dim H_{\text{dR}}^k(M).
@@ -102,21 +102,21 @@ It is a topological invariant of our manifold.
 
 ## 3. Main Proof
 
-&emsp; We call $$ \Delta = (d + \delta)^2 $$ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
+&emsp; We call $ \Delta = (d + \delta)^2 $ the *Laplace operator*. It abstracts the traditional definition of the divergence of the gradient. We set 
 
 $$
     \mathcal{H}^k(M) = \ker \{\Delta \colon \Omega^k \to \Omega^k\}
 $$
 
-and call elements of $$ \mathcal{H}^k(M) $$ *Harmonic $$ k $$-forms*. They allow us to compute the de Rham cohomology groups. 
+and call elements of $ \mathcal{H}^k(M) $ *Harmonic $ k $-forms*. They allow us to compute the de Rham cohomology groups. 
 
-**Hodge isomorphism.** &nbsp; *Let $$ M $$ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $$ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $$.*
+**Hodge isomorphism.** &nbsp; *Let $ M $ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $.*
 
-&emsp; Associated to Laplace operator is the *Dirac operator* $$ D = d + \delta $$. It is a self-adjoint operator, whose name is due to the property $$ D^2 = \Delta $$.
+&emsp; Associated to Laplace operator is the *Dirac operator* $ D = d + \delta $. It is a self-adjoint operator, whose name is due to the property $ D^2 = \Delta $.
 
-**Lemma.** &nbsp; *The kernel of $$ D $$ contained in $$ \Omega^k $$ equals $$ \mathcal{H}^k(M) $$.*
+**Lemma.** &nbsp; *The kernel of $ D $ contained in $ \Omega^k $ equals $ \mathcal{H}^k(M) $.*
 
-*Proof.* Indeed, we see that $$ (d + \delta) \omega = 0 $$ if and only if 
+*Proof.* Indeed, we see that $ (d + \delta) \omega = 0 $ if and only if 
 
 $$
     \left< (d + \delta) \omega, (d + \delta) \omega \right>
@@ -124,9 +124,9 @@ $$
     = 0,
 $$
 
-giving us our result. $$ \blacksquare $$
+giving us our result. $ \blacksquare $
 
-&emsp; Using decomposition of $$ \Omega^{\ast} $$ into even and odd components, we can restrict $$ D $$ to get adjoint operators 
+&emsp; Using decomposition of $ \Omega^{\ast} $ into even and odd components, we can restrict $ D $ to get adjoint operators 
 
 $$
 \begin{aligned}
@@ -153,7 +153,7 @@ $$
 \end{aligned}
 $$
 
-**Theorem.** &nbsp; *We have the equality $$ \chi(M) = \text{Ind}(D^{\text{ev}}) $$.*
+**Theorem.** &nbsp; *We have the equality $ \chi(M) = \text{Ind}(D^{\text{ev}}) $.*
 
 
 ## 4. References
