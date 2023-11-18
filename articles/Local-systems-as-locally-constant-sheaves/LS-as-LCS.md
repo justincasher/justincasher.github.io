@@ -78,7 +78,7 @@ $$
 \end{CD}
 $$
 
-&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. [\[ch. 3, §8\]](#3-references). The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^{\ast} = L \circ \varphi $$, giving us the bundle
+&emsp; Next fix an element $$ L \in \LS(X, R) $$ and define $$ \CA(L) = F $$ as follows. Since $$ X $$ is locally simply connected it has a universal cover $$ \varphi \colon \widetilde{X} \to X $$, cf. [4, \[ch. 3, §8\]](#3-references). The functor $$ L $$ pulls back to $$ \widetilde{X} $$ by $$ L^{\ast} = L \circ \varphi $$, giving us the bundle
 
 $$
     \nu \colon \coprod_{x \in \widetilde{X}} L^{\ast}(x) \to \widetilde{X}.
