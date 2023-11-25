@@ -31,7 +31,7 @@ Thus, we need to define the following:
 
 ## 2. Notations
 
-We define $ \omega $ by setting $ \omega = \iota(t) \in o_{\hat{L}_{\infty}^{\flat}} $. Here, $ \iota \colon T \to o_{\hat{L}_{\infty}^{\flat}} $ is the map 
+We define $ \omega $ by setting $ \omega = \iota(t) \in o_{\hat{L}_{\infty}^{\flat}} $. Here, $ \iota \colon T \to o_{ \hat{L}_{\infty}^{\flat} } $ is the map 
 
 $$ 
 (y_n)_{n \in \mathbb{N}} \to (\dots, y_n \mod \pi o_{L_{\infty}}, \dots)
