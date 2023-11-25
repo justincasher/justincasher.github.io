@@ -97,7 +97,7 @@ $$
 and the Frobenious modulo $ \pi $
 
 $$
-\phi(X) = X^q \quad \text{mod} \ \pi o[[X]].
+\phi(X) = X^q \quad \text{mod} \ \pi o[ [ X ] ].
 $$
 
 **Proposition 1.** &nbsp; *For any Frobenious power series there is a unique commutative formal group law $ F_\phi $ such that $ \phi \in \text{End}_o(F_\phi) $.* 
@@ -111,7 +111,7 @@ $$
 *linear in degree 1*
 
 $$
-[a]_{\phi}(X) = aX \quad \text{mod} \ \pi o[[X]],
+[a]_{\phi}(X) = aX \quad \text{mod} \ \pi o [ [ X ] ],
 $$
 
 *such that $ [\pi]_{\phi} = \phi $.*
@@ -138,4 +138,4 @@ $$
 T_{\pi}(\frak{M}) = \lim_{\longleftarrow} \frak{M}[\pi^n]
 $$
 
-the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $ [ \pi ]_{\phi} $. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_{\pi}(\frak{M}) $.
+the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $ {[ \pi ]}_{\phi} $. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_{\pi}(\frak{M}) $.
