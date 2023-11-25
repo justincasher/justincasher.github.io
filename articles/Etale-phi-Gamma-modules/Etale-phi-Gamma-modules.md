@@ -66,7 +66,7 @@ $$
 
 where $ L \subseteq E \subseteq \overline{L} $ is a finite extension.
 
-&emsp; An element $ F \in o[[X, Y]] $ is called a *commutative formal group law* if it is associtive
+&emsp; An element $ F \in o [ [ X, Y ] ] $ is called a *commutative formal group law* if it is associtive
 
 $$
 F(X, F(Y, Z)) = F(F(X, Y), Z),
