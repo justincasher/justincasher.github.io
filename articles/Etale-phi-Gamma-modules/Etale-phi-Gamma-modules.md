@@ -3,7 +3,7 @@ layout: Writing
 indent: true
 permalink: /Etale-phi-Gamma-modules
 feedformat: card
-title: Étale $ (\phi, \Gamma) $-modules
+title: Étale $ (phi, Gamma) $-modules
 ---
 <br>
 
@@ -14,4 +14,6 @@ title: Étale $ (\phi, \Gamma) $-modules
 
 ## 1. First section
 
-&nbsp; 
+&nbsp; Here is a table of dependencies I need to define:
+
+- 
