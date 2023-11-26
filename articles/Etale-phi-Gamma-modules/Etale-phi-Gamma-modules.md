@@ -5,6 +5,7 @@ permalink: /Etale-phi-Gamma-modules
 feedformat: card
 title: Étale (phi, Gamma)-modules
 ---
+$ \DeclareMathOperator{\ev}{ev} $
 <br>
 
 **Abstract.** &nbsp; We define étale $ (\varphi, \Gamma) $-modules in order to formulate a categorical equivalence with certain Galois representations. The only reference is Schneider's book *Galois Representations and $ (\varphi, \Gamma) $-Modules*, and the idea is to compress his definition into a more readable account.
@@ -182,7 +183,7 @@ $$
 \text{ev}_{\omega_{\phi}}(f) = f(\omega_{\phi}),
 $$
 
-which we extend to a map $ \text{ev}_{\omega_{\phi}} \colon o((X)) \to W(\mathbb{E}_L)_L $. Let 
+which we extend to a map $ \ev_{\omega_{\phi}} \colon o((X)) \to W(\mathbb{E}_L)_L $. Let 
 
 $$
 \mathscr{A}_L = \lim_{\longleftarrow} o((X)) / \pi^m o((X)).
