@@ -177,13 +177,13 @@ $$
 
 We finally define $ \iota_{\phi} = \{ \ \cdot \ \} \circ \tau \circ \iota $.
 
-&emsp; Let $ \text{ev}_{ \omega_\phi } \colon o[ [ X ] ] \to W( o_{ \mathbb{E}_L } )_L $ be the evaluation map 
+&emsp; Let $ \displaystyle \text{ev}_{ \omega_\phi } \colon o[ [ X ] ] \to W( o_{ \mathbb{E}_L } )_L $ be the evaluation map 
 
 $$
 \text{ev}_{\omega_{\phi}}(f) = f(\omega_{\phi}),
 $$
 
-which we extend to a map $ {\text{ev}}_{\omega_{\phi}} \colon o((X)) \to W(\mathbb{E}_L)_L $. Let 
+which we extend to a map $ \displaystyle \text{ev}_{\omega_{\phi}} \colon o((X)) \to W(\mathbb{E}_L)_L $. Let 
 
 $$
 \mathscr{A}_L = \lim_{\longleftarrow} o((X)) / \pi^m o((X)).
