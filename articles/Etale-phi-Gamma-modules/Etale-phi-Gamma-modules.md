@@ -183,7 +183,7 @@ $$
 \text{ev}_{\omega_{\phi}}(f) = f(\omega_{\phi}),
 $$
 
-which we extend to a map $ \operatorname{ev}_{\omega_{\phi}} \colon o((X)) \to W(\mathbb{E}_L)_L $. Let 
+which we extend to a map $ {\text{ev}}_{\omega_{\phi}} \colon o((X)) \to W(\mathbb{E}_L)_L $. Let 
 
 $$
 \mathscr{A}_L = \lim_{\longleftarrow} o((X)) / \pi^m o((X)).
