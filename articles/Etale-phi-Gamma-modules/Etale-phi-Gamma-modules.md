@@ -141,7 +141,7 @@ $$
 
 the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $$ [ \pi ]_\phi $$. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_\pi (\frak{M}) $. 
 
-&emsp; Define the function (but not necessarily a homomorphism) $ \iota \colon T_{\pi}(\frak{M}) \to o_{\hat{L}^{\flat}_{\infty}} $ by 
+&emsp; Define the function (but not necessarily a homomorphism) $$ \iota \colon T_{\pi}(\frak{M}) \to o_{\hat{L}^{\flat}_{\infty}} $$ by 
 
 $$
 \iota((t_n)_{n \in \mathbb{N}}) = (\dots, t_n \ \text{mod} \ \pi, \dots, t_1 \ \text{mod} \ \pi).
