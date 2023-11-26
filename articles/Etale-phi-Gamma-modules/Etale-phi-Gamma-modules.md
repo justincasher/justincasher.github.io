@@ -139,7 +139,7 @@ $$
 T_{\pi}(\frak{M}) = \lim_{\longleftarrow} \frak{M}[\pi^n]
 $$
 
-the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $ {[ \pi ]}_\phi $. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_\pi (\frak{M}) $. 
+the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $$ [ \pi ]_\phi $$. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_\pi (\frak{M}) $. 
 
 &emsp; Define the function (but not necessarily a homomorphism) $ \iota \colon T_{\pi}(\frak{M}) \to o_{\hat{L}^{\flat}_{\infty}} $ by 
 
@@ -157,7 +157,7 @@ $$
 
 Since $ \omega $ is invertible, it extends to an embedding of fields which we also denote $ \text{ev}_{\omega} \colon k((X)) \to \hat{L}_\infty^{\flat} $. We denote the image of $ \text{ev}_{\omega} $ by $ \mathbb{E}_L $. 
 
-&emsp; We define a map $ \iota_\phi \colon T_{\pi} ( \frak{M} ) \to \mathbb{M}_{ \mathbb{E}_L } $ with $ \omega_{\phi} = \iota_{\phi}(t) $ as follows. Recall the 0th Witt polynomial $ \Phi_0 \colon W(o_{\mathbb{E}_L}) \to o_{\mathbb{E}_L}$ is given by 
+&emsp; We define a map $$ \iota_\phi \colon T_{\pi} ( \frak{M} ) \to \mathbb{M}_{ \mathbb{E}_L } $$ with $ \omega_{\phi} = \iota_{\phi}(t) $ as follows. Recall the 0th Witt polynomial $ \Phi_0 \colon W(o_{\mathbb{E}_L}) \to o_{\mathbb{E}_L}$ is given by 
 
 $$
 \Phi_0((b_n)_n) = b_0,
