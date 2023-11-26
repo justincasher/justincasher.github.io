@@ -149,33 +149,33 @@ $$
 
 We denote the image of our generator by $ \omega = \iota(t) $. It satisfies $ | \omega |_{\flat} < 1 $.
 
-&emsp; Let $ \text{ev}_\omega \colon k [ [ X ] ] \to o_{ \hat{L}_\infty^\flat } $ be the evaluation map 
+&emsp; Let $$ \text{ev}_\omega \colon k [ [ X ] ] \to o_{ \hat{L}_\infty^\flat } $$ be the evaluation map 
 
 $$
 \text{ev}_{\omega}(f) = f(\omega).
 $$
 
-Since $ \omega $ is invertible, it extends to an embedding of fields which we also denote $ \text{ev}_{\omega} \colon k((X)) \to \hat{L}_\infty^{\flat} $. We denote the image of $ \text{ev}_{\omega} $ by $ \mathbb{E}_L $. 
+Since $ \omega $ is invertible, it extends to an embedding of fields which we also denote $$ \text{ev}_{\omega} \colon k((X)) \to \hat{L}_\infty^{\flat} $$. We denote the image of $$ \text{ev}_{\omega} $$ by $$ \mathbb{E}_L $$. 
 
-&emsp; We define a map $$ \iota_\phi \colon T_{\pi} ( \frak{M} ) \to \mathbb{M}_{ \mathbb{E}_L } $$ with $ \omega_{\phi} = \iota_{\phi}(t) $ as follows. Recall the 0th Witt polynomial $ \Phi_0 \colon W(o_{\mathbb{E}_L}) \to o_{\mathbb{E}_L}$ is given by 
+&emsp; We define a map $$ \iota_\phi \colon T_{\pi} ( \frak{M} ) \to \mathbb{M}_{ \mathbb{E}_L } $$ with $ \omega_{\phi} = \iota_{\phi}(t) $ as follows. Recall the 0th Witt polynomial $$ \Phi_0 \colon W(o_{\mathbb{E}_L}) \to o_{\mathbb{E}_L} $$ is given by 
 
 $$
 \Phi_0((b_n)_n) = b_0,
 $$
 
-and our Teichmüller representative $ \tau \colon o_{\mathbb{E}_L} \to W(o_{\mathbb{E}_L}) $ by 
+and our Teichmüller representative $$ \tau \colon o_{\mathbb{E}_L} \to W(o_{\mathbb{E}_L}) $$ by 
 
 $$
 \tau(b) = (b, 0, \dots).
 $$
 
-Set $ \mathbb{M}_{\mathbb{E}_L} = \Phi_0^{-1}(\frak{m}_{\mathbb{E}_L}) $, and consider the endomorphism  $ \{ \ \cdot \ \} \colon \mathbb{M}_{\mathbb{E}_L} \to \mathbb{M}_{\mathbb{E}_L} $ 
+Set $$ \mathbb{M}_{\mathbb{E}_L} = \Phi_0^{-1}(\frak{m}_{\mathbb{E}_L}) $$, and consider the endomorphism  $$ \{ \ \cdot \ \} \colon \mathbb{M}_{\mathbb{E}_L} \to \mathbb{M}_{\mathbb{E}_L} $$ 
 
 $$
 \{ \alpha \} = \lim_{i \to \infty} ([\pi]_{\phi} \circ \text{Fr}^{-1})^i(\alpha).
 $$
 
-We finally define $ \iota_{\phi} = \{ \ \cdot \ \} \circ \tau \circ \iota $.
+We finally define $$ \iota_{\phi} = \{ \ \cdot \ \} \circ \tau \circ \iota $$.
 
 &emsp; Let $$ \text{ev}_{ \omega_\phi } \colon o[ [ X ] ] \to W( o_{ \mathbb{E}_L } )_L $$ be the evaluation map 
 
