@@ -138,7 +138,7 @@ $$
 T_{\pi}(\frak{M}) = \lim_{\longleftarrow} \frak{M}[\pi^n]
 $$
 
-the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $ {[ \pi ]}_{\phi} $. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_{\pi}(\frak{M}) $. 
+the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $ {[ \pi ]}_\phi $. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_\pi (\frak{M}) $. 
 
 &emsp; Define the function (but not necessarily a homomorphism) $ \iota \colon T_{\pi}(\frak{M}) \to o_{\hat{L}^{\flat}_{\infty}} $ by 
 
@@ -148,7 +148,7 @@ $$
 
 We denote the image of our generator by $ \omega = \iota(t) $. It satisfies $ | \omega |_{\flat} < 1 $.
 
-&emsp; Let $ \text{ev}_{\omega} \colon k[[X]] \to o_{\hat{L}_{\infty}^{\flat}} $ be the evaluation map 
+&emsp; Let $ \text{ev}_\omega \colon k [ [ X ] ] \to o_{ \hat{L}_\infty^\flat } $ be the evaluation map 
 
 $$
 \text{ev}_{\omega}(f) = f(\omega).
