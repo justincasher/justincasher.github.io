@@ -147,7 +147,7 @@ $$
 \iota((t_n)_{n \in \mathbb{N}}) = (\dots, t_n \ \text{mod} \ \pi, \dots, t_1 \ \text{mod} \ \pi).
 $$
 
-We denote the image of our generator by $ \omega = \iota(t) $. It satisfies $ | \omega |_{\flat} < 1 $.
+We denote the image of our generator by $$ \omega = \iota(t) $$. It satisfies $$ \lvert \omega \rvert_{\flat} < 1 $$.
 
 &emsp; Let $$ \text{ev}_\omega \colon k [ [ X ] ] \to o_{ \hat{L}_\infty^\flat } $$ be the evaluation map 
 
