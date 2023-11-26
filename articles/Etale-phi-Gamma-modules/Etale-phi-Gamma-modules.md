@@ -31,18 +31,6 @@ Thus, we need to define the following:
 
 ## 2. Notations
 
-We define $ \omega $ by setting $ \omega = \iota(t) \in o_{\hat{L}_{\infty}^{\flat}} $. Here, $ \iota \colon T \to o_{ \hat{L}_{\infty}^{\flat} } $ is the map 
-
-$$ 
-(y_n)_{n \in \mathbb{N}} \to (\dots, y_n \mod \pi o_{L_{\infty}}, \dots)
-$$
-
-from the Tate module $ T $, and $ t $ is a generator of $ T $. I feel like the notation can be better here!
-
-We define $ \mathbb{E}_L $ by considering the evaluation map $ k [ [ X ] ] \to o_{\hat{L}^{\flat}_{\infty}} $ via $ f(x) \to f(\omega) $. Since $ \omega $ is invertible, we get a map $ k((X)) \to \hat{L}_{\infty}^{\flat} $.
-
-We define $ \mathbb{M}_{\mathbb{E}_L} = \Phi_0^{-1} ( \frak{m}_{\mathbb{E}_L} ) $, where $ \Phi_0 $ is the 0th Witt polynomial
-
 We define $ \text{Fr} \colon W(o_{\mathbb{C}_p^{\flat}} )_L \to W(o_{\mathbb{C}_p^{\flat}} )_L $ by raising each coordinate to the $ q $ th power.
 
 We define $ \{ \ \} \colon \mathbb{M}_{\mathbb{E}_L} \to \mathbb{M}_{\mathbb{E}_L} $ by $ \{ \alpha \} = \lim_{i \to \infty} ([\pi]_{\phi} \circ \text{Fr}^{-1})^i(\alpha) $. Is this not a form of tilting?
@@ -84,7 +72,7 @@ $$
 F(X, Y) = X + Y \quad \text{mod} \ \left< X, Y \right>^2.
 $$
 
-Any such $ F $ admits a formal inverse $ I \in o [ [ X ] ] $ which is $ -X $ in degree 1 and $ F(X, I(X)) = 0 $. This makes $ \frak{m}_L $ into an abelian group with addition given by $ F $ and inverses by $ \iota_F $.
+Any such $ F $ admits a formal inverse $ I \in o [ [ X ] ] $ which is $ -X $ in degree 1 and $ F(X, I(X)) = 0 $. This makes $ \frak{m}_L $ into an abelian group with addition given by $ F $ and inverses by $ I $.
 
 &emsp; An element $ h \in o [ [ X ] ] $ is an endomorphism of $ F $ if $ h(0) = 0 $ and $ h(F(X, Y)) = F(h(X), h(Y)) $. The set of endomorphisms $ \text{End}_o(F) $ forms a ring with addition defined by $ F(h_1(X), h_2(X)) $ and multiplication by composition $ h_1(h_2(X)) $.
 
@@ -116,13 +104,25 @@ $$
 
 *such that $ [\pi]_{\phi} = \phi $.*
 
-&emsp; Denote by $ \frak{M}[\pi^n] $ the $ \pi^n $-torsion points of $ \frak{M} $, i.e. the set of $ z \in \frak{M} $ such that 
+&emsp; Denote by $ \frak{M}[\pi^n] $ the $ \pi^n $-torsion points of $ \frak{M} $, i.e. the collection of $ z \in \frak{M} $ such that 
 
 $$
 [\pi^n]_{\phi}(z) = \phi^n(z) = 0.
 $$
 
-Set $ L_n = L(\frak{M}[\pi^n]) $ and $ L_{\infty} = \bigcup L_n $. We have (nontrivially) that $ L_n $ is a free $ o / \pi^n o $-module of rank 1. Hence, for any $ \gamma \in \text{Gal}(\overline{L}/L) $ there is a unique $ \chi_{L, n} \in (o/\pi^n o)^{\times} $ such that for $ z \in \frak{M}[\pi^n] $
+Set $ L_n = L(\frak{M}[\pi^n]) $ and 
+
+$$ 
+L_{\infty} = \bigcup_n L_n = \bigcup_n L(\frak{M}[\pi^n])
+$$ 
+
+We denote the resulting Galois group 
+
+$$ 
+\Gamma_L = \text{Gal}(L_{\infty}/L)
+$$
+
+We have (nontrivially) that $ L_n $ is a free $ o / \pi^n o $-module of rank 1. Hence, for any $ \gamma \in \text{Gal}(\overline{L}/L) $ there is a unique $ \chi_{L, n} \in (o/\pi^n o)^{\times} $ such that for $ z \in \frak{M}[\pi^n] $
 
 $$
 \gamma(z) = [\chi_{L, n}(\gamma)]_{\phi}(z).
@@ -138,4 +138,60 @@ $$
 T_{\pi}(\frak{M}) = \lim_{\longleftarrow} \frak{M}[\pi^n]
 $$
 
-the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $ {[ \pi ]}_{\phi} $. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_{\pi}(\frak{M}) $.
+the *Tate module* of $ \frak{M} $, where the projective limit is taken with respect to multiplication by $ {[ \pi ]}_{\phi} $. It is a free $ o $-module of rank 1. Fix a generator $ t $ of $ T_{\pi}(\frak{M}) $. 
+
+&emsp; Define the function (but not necessarily a homomorphism) $ \iota \colon T_{\pi}(\frak{M}) \to o_{\hat{L}^{\flat}_{\infty}} $ by 
+
+$$
+\iota((t_n)_{n \in \mathbb{N}}) = (\dots, t_n \ \text{mod} \ \pi, \dots, t_1 \ \text{mod} \ \pi).
+$$
+
+We denote the image of our generator by $ \omega = \iota(t) $. It satisfies $ | \omega |_{\flat} < 1 $.
+
+&emsp; Let $ \text{ev}_{\omega} \colon k[[X]] \to o_{\hat{L}_{\infty}^{\flat}} $ be the evaluation map 
+
+$$
+\text{ev}_{\omega}(f) = f(\omega).
+$$
+
+Since $ \omega $ is invertible, it extends to an embedding of fields which we also denote $ \text{ev}_{\omega} \colon k((X)) \to \hat{L}_\infty^{\flat} $. We denote the image of $ \text{ev}_{\omega} $ by $ \mathbb{E}_L $. 
+
+&emsp; We define a map $ \iota_{\phi} \colon T_{\pi}(\frak{M}) \to \mathbb{M}_{\mathbb{E}_L} $ with $ \omega_{\phi} = \iota_{\phi}(t) $ as follows. Recall the 0th Witt polynomial $ \Phi_0 \colon W(o_{\mathbb{E}_L}) \to o_{\mathbb{E}_L}$ is given by 
+
+$$
+\Phi_0((b_n)_n) = b_0,
+$$
+
+and our Teichmüller representative $ \tau \colon o_{\mathbb{E}_L} \to W(o_{\mathbb{E}_L}) $ by 
+
+$$
+\tau(b) = (b, 0, \dots).
+$$
+
+Set $ \mathbb{M}_{\mathbb{E}_L} = \Phi_0^{-1}(\frak{m}_{\mathbb{E}_L}) $, and consider the endomorphism  $ \{ \ \cdot \ \} \colon \mathbb{M}_{\mathbb{E}_L} \to \mathbb{M}_{\mathbb{E}_L} $ 
+
+$$
+\{ \alpha \} = \lim_{i \to \infty} ([\pi]_{\phi} \circ \text{Fr}^{-1})^i(\alpha).
+$$
+
+We finally define $ \iota_{\phi} = \{ \ \cdot \ \} \circ \tau \circ \iota $.
+
+&emsp; Let $ \text{ev}_{\omega_{\phi}} \colon o[ [ X ] ] \to W(o_{\mathbb{E}_L})_L $ be the evaluation map 
+
+$$
+\text{ev}_{\omega_{\phi}}(f) = f(\omega_{\phi}),
+$$
+
+which we extend to a map $ \text{ev}_{\omega_{\phi}} \colon o((X)) \to W(\mathbb{E}_L)_L $. Let 
+
+$$
+\mathscr{A}_L = \lim_{\longleftarrow} o((X)) / \pi^m o((X)).
+$$
+
+We have that $ \text{ev}_{\omega_{\phi}} $ induces a map for each $ m $
+
+$$
+o((X))/\pi^m o((X)) \to W(\mathbb{E}_L)_L/\pi^m W(\mathbb{E}_L)_L,
+$$
+
+and hence an injective map $ j \colon \mathscr{A}_L \to W(\mathbb{E}_L)_L $. Let $ \textbf{A}_L $ denote the image of this map.
