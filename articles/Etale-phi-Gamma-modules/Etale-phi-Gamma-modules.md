@@ -156,7 +156,7 @@ $$
 
 Since $ \omega $ is invertible, it extends to an embedding of fields which we also denote $ \text{ev}_{\omega} \colon k((X)) \to \hat{L}_\infty^{\flat} $. We denote the image of $ \text{ev}_{\omega} $ by $ \mathbb{E}_L $. 
 
-&emsp; We define a map $ \iota_{\phi} \colon T_{\pi}(\frak{M}) \to \mathbb{M}_{\mathbb{E}_L} $ with $ \omega_{\phi} = \iota_{\phi}(t) $ as follows. Recall the 0th Witt polynomial $ \Phi_0 \colon W(o_{\mathbb{E}_L}) \to o_{\mathbb{E}_L}$ is given by 
+&emsp; We define a map $ \iota_\phi \colon T_{\pi} ( \frak{M} ) \to \mathbb{M}_{ \mathbb{E}_L } $ with $ \omega_{\phi} = \iota_{\phi}(t) $ as follows. Recall the 0th Witt polynomial $ \Phi_0 \colon W(o_{\mathbb{E}_L}) \to o_{\mathbb{E}_L}$ is given by 
 
 $$
 \Phi_0((b_n)_n) = b_0,
@@ -176,7 +176,7 @@ $$
 
 We finally define $ \iota_{\phi} = \{ \ \cdot \ \} \circ \tau \circ \iota $.
 
-&emsp; Let $ \text{ev}_{\omega_{\phi}} \colon o[ [ X ] ] \to W(o_{\mathbb{E}_L})_L $ be the evaluation map 
+&emsp; Let $ \text{ev}_{ \omega_\phi } \colon o[ [ X ] ] \to W( o_{ \mathbb{E}_L } )_L $ be the evaluation map 
 
 $$
 \text{ev}_{\omega_{\phi}}(f) = f(\omega_{\phi}),
@@ -188,7 +188,7 @@ $$
 \mathscr{A}_L = \lim_{\longleftarrow} o((X)) / \pi^m o((X)).
 $$
 
-We have that $ \text{ev}_{\omega_{\phi}} $ induces a map for each $ m $
+We have that $ \text{ev}_{ \omega_\phi } $ induces a map for each $ m $
 
 $$
 o((X))/\pi^m o((X)) \to W(\mathbb{E}_L)_L/\pi^m W(\mathbb{E}_L)_L,
