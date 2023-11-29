@@ -353,7 +353,7 @@ $$
 
 Thus, our series converges. $ \blacksquare $
 
-**2020 W P5.** &nbsp; *Show*
+**2020 W P4.** &nbsp; *Show*
 
 $$
 a_n = \sqrt{2\sqrt{3\sqrt{\cdots\sqrt{n}}}}
@@ -1611,7 +1611,7 @@ $$
 = -54. 
 $$
 
-We conclude that our desired value is $ 105+54 = 59 $. $ \blacksquare $
+We conclude that our desired value is $ 105+54 = 159 $. $ \blacksquare $
 
 **2020 F P2.** &nbsp; *Find the value of $ \int \int_E F \cdot n dS $, where $ F(x, y, z) = (yz^2, \sin x, x^2) $,*
 
