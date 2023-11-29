@@ -353,7 +353,7 @@ $$
 
 Thus, our series converges. $ \blacksquare $
 
-**2020 W P5.** &nbsp; *Show*
+**2020 W P4.** &nbsp; *Show*
 
 $$
 a_n = \sqrt{2\sqrt{3\sqrt{\cdots\sqrt{n}}}}
