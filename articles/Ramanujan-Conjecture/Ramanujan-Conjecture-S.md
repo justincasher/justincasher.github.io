@@ -66,7 +66,7 @@ We denote this action by $$ \gamma(z) $$.
 Condition (b) is equivalent to $$ f $$ having a $$ q $$-expansion with positive exponents. Additionally, we call $$ f $$ a *cusp form* if 
 
 $$ 
-\lim_{\im(z) \to \infty} f(\gamma(z) = 0.
+\lim_{\im(z) \to \infty} f(z) = 0.
 $$
 
 This is equivalent to $$ f $$ having constant term 0 in its $$ q $$ expansion. We denote the space of modular forms of weight $$ k $$ by $$ M_k $$, and of cusp forms by $$ S_k $$.
