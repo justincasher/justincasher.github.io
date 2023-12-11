@@ -13,5 +13,5 @@ This page contains an alphabetized list of (mostly expository) online mathematic
 4. [Gauss-Legendre algorithm]({{'/Gauss-Legendre' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1VDdH4FY8tSwyywg_1PDt-ox0VliTBWSB))
 5. [IU analysis qualifying solutions]({{'/IU-analysis-qualifying-solutions' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1Buh9J8Xnb-cO_RlrSmmeCK3PEcRF1MnD))
 6. [Local systems as locally constant sheaves]({{'/LS-as-LCS' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=102skr_7M-2En6NVudM9CKhTjxEDUEEFj))
-7. [Motivating schemes with the Weil conjectures]({{'/Weil-conjectures-intro' | relative_url}})
+7. [Motivating schemes with the Weil conjectures]({{'/Weil-conjectures-intro' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1N1QIhSj96l64gFJnQ4D5ahvNrZnBXQ9v))
 8. [Ramanujan conjecture]({{'/Ramanujan-Conjecture' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1jD5Gsk35SkJ8xYPso4tx-ETUx1yBk70z))
