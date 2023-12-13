@@ -92,7 +92,7 @@ $$
 
 It is not hard to see these satisfy our desired properties.
 
-&emsp; We define the $$ k $$th *Hecke operator* $$ T_k(n) $$ by 
+&emsp; We define the $$ n $$th *Hecke operator* $$ T_k(n) $$ by 
 
 $$ 
 T_k(n) F(L)
