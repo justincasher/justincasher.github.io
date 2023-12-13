@@ -1,7 +1,7 @@
 ---
-layout: Seminar-Notes
+layout: Writing
 indent: true
-permalink: /Ramanujan-conjecture-S
+permalink: /Ramanujan-Conjecture
 feedformat: card
 title: The Ramanujan conjecture
 ---
@@ -224,7 +224,7 @@ We can identify $$ X $$ with the upper half plane $$ \CH $$ by considering where
 
 **Proposition 3.2.** &nbsp; *$$ X $$ represents the functor which sends an analytic space $$ S $$ to the isomorphism classes of elliptic curves on $$ S $$, equipped with a permitted isomorphism $$ R^1 f_* \underline{\ZZ} \cong \underline{\ZZ}^2 $$.*
 
-&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homothety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$ modulo $$ \SL_2(\ZZ) $$ (identify $$ X $$ with $$ \CH $$ and consider $$ b/a $$). We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from each isomorphism class of elliptic curves. 
+&emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homothety, i.e. $$ \ZZ[a, b] \sim \ZZ[za, zb] $$ with $$ z \in \CC^{\times} $$, which correspond to elements in $$ X $$ (identify $$ X $$ with $$ \CH $$ and consider $$ b/a $$). We therefore construct a "universal elliptic curve" $$ f \colon E_X \to X $$ whose fibers consist of representatives from each isomorphism class of elliptic curves. 
 
 &emsp; Let $$ \Gamma $$ be a discrete subgroup of $$ \SL_2(\ZZ) $$ without torsion elements such that $$ X/\Gamma $$ has finite volume (with respect to the Poincaré metric). We can identify $$ X/\Gamma $$ to a smooth projective curve $$ \overline{X/\Gamma} $$ minus a finite number of points.
 
