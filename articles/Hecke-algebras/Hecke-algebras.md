@@ -164,7 +164,7 @@ note that again the action depends on the weight $ -k $ of $ F $. We call the su
 **Theorem 1.** &nbsp; $ T_n f(z) = T_n^{\mathcal{L}} F(z, 1) $. 
 
 
-&emsp; Put $ L = \left< z, 1 \right> $. Any index $ n $ sublattice $ L' $ of $ L $ is given by a $ \mathbb{Z} $-linear transformation $ M \colon L \to L' $ with $ \det M = n $. Since $ \text{SL}_2(\mathbb{Z}) $ is the kernel of the determinant map, we have a bijection between isomorphism classes of index $ n $ sublattices and $ M_n^+(\mathbb{Z})/\text{SL}_2(\mathbb{Z}) $. Writing $ \Gamma T_n \Gamma = \coprod_{i=1}^N \Gamma t_i $, it then follows immediately that
+&emsp; Put $ L = \left< z, 1 \right> $. Any index $ n $ sublattice $ L' $ of $ L $ is given by a $ \mathbb{Z} $-linear transformation $ M \colon L \to L' $ with $ \det M = n $. Since $$ \text{SL}_2(\mathbb{Z}) $$ is the kernel of the determinant, we have a bijection between isomorphism classes of index $ n $ sublattices and $ M_n^+(\mathbb{Z})/\text{SL}_2(\mathbb{Z}) $. Writing $ \Gamma T_n \Gamma = \coprod_{i=1}^N \Gamma t_i $, it then follows immediately that
 
 $$
 T_n f(z) = n^{k-1} \sum_{i=1}^N f(t_i(z)) = n^{k-1} \sum_{[L : L'] = n} F(L) = T_n^{\mathcal{L}} F(L).
