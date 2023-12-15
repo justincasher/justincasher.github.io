@@ -81,7 +81,7 @@ $$
 The correspondence is given as follows. For $$ f $$ a modular form of weight $$ k $$, we set
 
 $$ 
-F(a, b) = b^{-k} F(a/b).
+F(a, b) = b^{-k} f(a/b).
 $$ 
 
 Conversely, given such an $$ F $$, we set

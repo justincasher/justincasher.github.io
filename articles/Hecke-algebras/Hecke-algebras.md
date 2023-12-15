@@ -77,7 +77,7 @@ $$
 Indeed, given a modular form $ f $ of weight $ k $, we put
 
 $$ 
-F(a, b) = b^{-k} F(a/b),
+F(a, b) = b^{-k} f(a/b),
 $$ 
 
 and given a homogeneous function $ F $ of weight $ -k $, we put
