@@ -201,6 +201,12 @@ Q.E.D.
 
 
 
+
+## 3. Iwahori-Hecke algebra 
+
+
+
+
 ## 4. References
 
 1. 
