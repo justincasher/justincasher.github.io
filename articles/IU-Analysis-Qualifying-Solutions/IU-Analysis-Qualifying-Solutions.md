@@ -1414,14 +1414,14 @@ $$
 
 *Suppose $ f = (f_1, \dots, f_n) \colon \mathbb{R}^n \to \mathbb{R}^n $ is continuously differentiable function with $ p (f(x)) = 0 $ for all $ x \in \mathbb{R}^n $. Prove $ \det f' = 0 $.*
 
-*Proof.* Suppose not. Then there exists a point $ x = (x_1, \dots, x_n) \in \mathbb{R} $ with $ \det f'(x) \neq 0 $. Since $ \det f' \neq 0 $ and the determinant and derivatives are continuous, we can assume $ f_j(x) \neq 0 $. The identity $ p(f) = 0 $ implies $ d [p(f)] = 0 $, or equivalently $ p'(f) f' = 0 $. Expanding this equation, we see that for each $ 1 \leq j \leq n $ we have
+*Proof.* Suppose not. Then there exists a point $ x = (x_1, \dots, x_n) \in \mathbb{R} $ with $ \det f'(x) \neq 0 $. Since $ \det f'(x) \neq 0 $ and the determinant and derivatives are continuous, we can assume $ f_j(x) \neq 0 $. The identity $ p(f) = 0 $ implies $ d [p(f)] = 0 $, or equivalently $ p'(f) f' = 0 $. Expanding this equation, we see that for each $ 1 \leq j \leq n $ we have
 
 $$
 (2j+1) f_j^{2j}(x_1, \dots, x_n) \left( \sum_{k=1}^{n} \partial_j f_k \right)
 = 0. 
 $$
 
-Since $ f_j(x) \neq 0 $ for each $ j $, we have $ \sum_k \partial_j f_k = 0 $. This implies the rows of $ \det f'(x) $ sum to $ 0 $, and thus are linearly dependent, meaning $ \det f(x) = 0 $. This contradicts the assumption that $ \det f'(x) \neq 0 $. $ \blacksquare $
+Since $ f_j(x) \neq 0 $ for each $ j $, we have $ \sum_k \partial_j f_k = 0 $. This implies the rows of $ f'(x) $ sum to $ 0 $, and thus are linearly dependent, meaning $ \det f(x) = 0 $. This contradicts the assumption that $ \det f'(x) \neq 0 $. $ \blacksquare $
 
 **2020 F P8.** &nbsp; *Let $ f \colon [0, 1] \to \mathbb{R} $ be continuous such that $ \int_0^1 f(x) x^n dx = 0 $ for $ n = 3, 4, \dots $. Prove $ f(x) = 0 $.*
 
