@@ -1421,7 +1421,7 @@ $$
 = 0. 
 $$
 
-Since $ f_j(x) \neq 0 $ for each $ j $, we have $ \sum_k \partial_j f_k = 0 $. This implies the rows of $ \det f' $ sum to $ 0 $, and thus are linearly dependent. This contradicts the assumption that $ \det f' \neq 0 $. $ \blacksquare $
+Since $ f_j(x) \neq 0 $ for each $ j $, we have $ \sum_k \partial_j f_k = 0 $. This implies the rows of $ \det f'(x) $ sum to $ 0 $, and thus are linearly dependent, meaning $ \det f(x) = 0 $. This contradicts the assumption that $ \det f'(x) \neq 0 $. $ \blacksquare $
 
 **2020 F P8.** &nbsp; *Let $ f \colon [0, 1] \to \mathbb{R} $ be continuous such that $ \int_0^1 f(x) x^n dx = 0 $ for $ n = 3, 4, \dots $. Prove $ f(x) = 0 $.*
 
