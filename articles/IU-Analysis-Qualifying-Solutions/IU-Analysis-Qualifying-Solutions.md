@@ -104,29 +104,43 @@ For a counterexample, consider $ f \colon [0, 1] \to [0, 1] $ with $ f(x) = \sqr
 
 
 
+
 ## 2. Sequences and series
+
 
 **Monotone convergence theorem.** &nbsp; *Let $ \{a_n\} $ be a monotonically increasing sequence in $ \mathbb{R} $. Then $ \{a_n\} $ has a limit if and only if it is bounded.*
 
+
 **Theorem 2.1.** &nbsp; *In $ \mathbb{R}^n $ every Cauchy sequence convergences, i.e. it is a complete metric space.*
+
 
 **Ratio Test.** &nbsp; *Let $ \sum a_n $ be a series in $ \mathbb{R} $. Write $ L = \lim_n \|a_{n+1}/a_n\| $. Then $ L < 1 $ implies absolute convergence; $ L > 1 $ implies divergence; and $ L = 1 $ is inconclusive.*
 
+
 **Root Test.** &nbsp; *Let $ \sum a_n $ be a series in $ \mathbb{R} $. Write $ r = \limsup_n \|a_n\|^{1/n} $. Then $ < 1 $ implies absolute convergence; $ r > 1 $ implies divergence; and $ r = 1 $ is inconclusive.*
+
 
 **Integral Test.** &nbsp; *Let $ f \colon \mathbb{R} \to \mathbb{R}^+ $ be nonnegative and monotonically decreasing with $ f(n) = a_n $. Then $ \sum a_n $ converges if and only if $ \int_1^{\infty} f(x) dx < \infty $.*
 
+
 **P-Series Test.** &nbsp; *A series of the form $ \sum_n n^{-p} $ converges if and only if $ p > 1 $.* 
+
 
 **Limit Comparison Test.** &nbsp; *Let $ \{a_n\} $ and $ \{b_n\} $ be sequences in $ \mathbb{R} $. Suppose $ L = \lim a_n / b_n $ exists. Then $ \sum a_n $ converges if and only if $ \sum b_n $ converges.*
 
+
 **Alternating Series Test.** &nbsp; *Suppose $ \{a_n\} $ is a monotonically decreasing sequence in $ \mathbb{R}^+ $ with $ \lim_n a_n = 0 $. Then $ \sum (-1)^n a_n $ converges.*
+
 
 **Theorem 2.2.** &nbsp; *Let $ \{a_n\} $ be a sequence in $ \mathbb{R}^+ $. Then $ \prod_n (1+a_n) $ converges if and only if $ \sum_n a_n $ converges. If $ 0 < a_n < 1 $, then $ \prod_n (1-a_n) \neq 0 $ if and only if $ \sum_n a_n $ converges.*
 
+
 **Banach fixed point theorem.** &nbsp; *Let $ (X, d) $ be a complete metric space, and let $ f \colon X \to X $ be contractive. Then $ X $ has a unique fixed point $ f(x_\ast) = x_\ast $, which is given by taking n arbitrary $ x_0 \in X $, setting $ x_{n+1} = f(x_n) $, and evaluating $ \lim_n f(x_n) = x_\ast $.*
 
+
+
 #### Problems
+
 
 **2023 W P2.** &nbsp; *Consider the series $ \sum_{a, b \geq 0} p^{-a} p^{-b} $ for fixed $ p, q $ prime. Prove it converges and find its sum.*
 
@@ -147,6 +161,7 @@ $$
 
 giving us our limit. $ \blacksquare $
 
+
 **2023 W P5.** &nbsp; *Show*
 
 $$
@@ -156,7 +171,7 @@ $$
 *Proof.* We see 
 
 $$
-\int_1^{\infty} \frac{\sqrt{x}}{n} dx \leq \sum_{k=1}^{n} \frac{\sqrt{k}}{n} \leq \int_0^n \frac{\sqrt{x}}{n} dx.
+\int_1^n \frac{\sqrt{x}}{n} dx \leq \sum_{k=1}^{n} \frac{\sqrt{k}}{n} \leq \int_0^n \frac{\sqrt{x}}{n} dx.
 $$
 
 Integrating yields
@@ -173,6 +188,7 @@ $$
 
 Letting $ n $ approach infinity gives us the desired equality. $ \blacksquare $
 
+
 **2022 F P1.** &nbsp; *Define $ \{x_n\} $ by $ 0 < x_1 < 1 $ and $ x_{n+1} = 1 - \sqrt{1-x_n} $. Prove that (a) $ \{x_n\} $ monotonically decreases to $ 0 $, and that (b) $ \lim_n x_{n+1}/x_n = 1/2 $.*
 
 *Proof.* (a) Set $ y_n = 1-x_n $ so that $ y_{n+1} = \sqrt{y_n} $. Then $ y_1 \neq 0 $ implies $ \lim_n y_n = 1 $ (this is well known). Thus, $ \lim_n x_n = \lim_n 1-y_n = 0 $. To show $ x_n $ is monotonically decreasing, we observe $ y_n $ is monotonically increasing, i.e. $ \sqrt{x} > x $ for $ x \in (0, 1) $. 
@@ -188,6 +204,7 @@ $$
 
 and so the limit is $ 1/2 $. $ \blacksquare $
 
+
 **2022 W P2.** &nbsp; *Let $ \{a_n\} $ be a sequence in $ \mathbb{R} $. If $ \sum_n \| a_n - a_{n+1} \| < \varepsilon $, then the sequence is convergent.*
  
  *Proof.* Fix $ \varepsilon > 0 $. Then there exists an $ N \gg 0 $ such that $ m \geq n \geq N $ implies 
@@ -198,6 +215,7 @@ and so the limit is $ 1/2 $. $ \blacksquare $
  
  We conclude that our sequence is Cauchy, and hence has a limit. $ \blacksquare $
  
+
  **2022 W P7.** &nbsp; *Suppose $ \{a_n\} $ is an unbounded increasing sequence in $ \mathbb{R}^+ $. Show $ \sum_n (a_{n+1}-a_n)/a_n $ diverges.*
  
  *Proof.* Fix $ N \gg 0 $. Since $ \{a_n\} $ is unbounded, there exists an $ M > N $ such that $ a_{M+1} > 2 a_N $. Hence, 
@@ -222,9 +240,11 @@ $$
 
 which diverges since $ \{a_n\} $ is unbounded. $ \blacksquare $
 
+
 **2022 W P6.** &nbsp; *Let $ t_0 \in \mathbb{R} $ and set $ t_{n+1} = \sin(\cos(t_n)) $. Prove this sequence converges with limit independent of $ t_0 $.*
 
 *Proof.* Consider $ f(x) = \sin(\cos(x))) $ as a function $ f \colon [0, 2 \pi] \to [0, 2 \pi] $. Set $ g(x) = f(f(x)) $. Computing the derivative, we observe that $ \|g'(x)\| < 1 $ for each $ x \in [0, 2 \pi] $, so $ g $ is a contraction on $ [0, 2 \pi] $, and consequently $ g $ admits a unique fixed point by the Banach fixed point theorem. We conclude that our desired sequence has a unique limit independent of $ t_0 $, because $ f $ does not oscillate between 2 distinct points anywhere. $ \blacksquare $
+
 
 **2021 F P6.** &nbsp; *Let $ a_0 \in (0, 1) $ and $ a_{n+1} = a_n^3 - a_n^2 + 1 $. Prove that (a) $ \{a_n\} $ converges and find its limit; and (b) that $ b_n = \prod_{i=1}^{n} a_i $ converges and find its limit.*
 
@@ -244,6 +264,7 @@ and the only root of this polynomial on $ (0, 1] $ is $ 1 $. Thus, $ a _* = 1 $.
 
 
 (b) Since $ \{b_n\} $ is a bounded monotonically decreasing sequence, its limit exists. The limit is $ 0 $, but I am not sure how to show this directly. $ \blacksquare $ 
+
 
 **2021 F P8.** &nbsp; *Is the series* 
 
@@ -277,6 +298,7 @@ x & > \ln(x)^2.
 $$
 
 We conclude that $ u^{-\ln(u)} e^u > 1 $, our interal diverges, and so does our series. $ \blacksquare $
+
 
 **2020 F P1.** &nbsp; *Let $ x_0 > 0 $ and $ x_{n+1} = \frac{1}{2} (x_n + \frac{4}{x_n}) $. Show that (a) $ x_{n+1} \geq 2 $ for $ n \geq 0 $, (b) $ x_{n+1} \leq x_n $ if $ n \geq 1 $, (c) $ \lim x_n = x_\ast $ exists, and (d) find $ x_\ast $.*
 
@@ -317,6 +339,7 @@ Solving this equation shows $ x_* = 2 $ is the only positive solution, and thus 
 
 Alternatively, define $ f \colon [1.5, \infty) \to [1.5, \infty) $ by $ f = \frac{1}{2}(x + \frac{4}{x}) $. Then $ f'(x) = \frac{1}{2} (1 - \frac{4}{x^2}) $ is strictly less than $ 1 $ on our domain, so $ f $ is a contraction. Applying the Banach fixed point theorem to $ [1.5, \infty) $ tells us our sequence has a unique limit. Solving $ x_\ast = \frac{1}{2} \left( x_{*} + \frac{4}{x_\ast} \right) $ yields $ x_\ast = 2 $. $ \blacksquare $
 
+
 **2020 W P1.** &nbsp; *Let $ \{a_n\} $ be a sequence in $ \mathbb{R}^+ $ with $ \lim a_n = 0 $. Show there exists infinitely many $ N \in \mathbb{N} $ such that $ n \geq N $ implies $ a_n \leq a_N $.*
 
 *Proof.* Let 
@@ -326,6 +349,7 @@ N = \sup\{n \mid a_n \geq a_0 \},
 $$
 
 which is finite since our sequence converges to 0. Then $ n \geq N $ implies $ a_n \leq a_N $. Now delete the first $ n $ terms and repeat to get infinitely many such $ N $. $ \blacksquare $
+
 
 **2020 w P2.** &nbsp; *Write $ \{a_n\} $ for a sequence in $ \mathbb{R}^+ $ such that $ \lim_n a_n = 0 $ and $ \|a_n - a_{n+1}\| \leq n^{-2} $. Prove $ \sum_n (-1)^{n-1} a_n $ converges.*
 
@@ -352,6 +376,7 @@ $$
 $$
 
 Thus, our series converges. $ \blacksquare $
+
 
 **2020 W P4.** &nbsp; *Show*
 
@@ -385,13 +410,20 @@ $$
 which is bounded by the p-series test. Thus, $ \{a_n\} $ is bounded. $ \blacksquare $
 
 
+
+
 ## 3. Uniform continuity
+
 
 Let $ f, g \colon X \to Y $ be maps between metric spaces. We say $ f $ is *uniformly continuous* if for each $ \varepsilon > 0 $, there exists a $ \delta > 0 $ such that $ d_X(x, y) < \delta $ implies $ d_Y(f(x), f(y)) < \varepsilon $ for all $ x, y \in X $.
 
+
 **Heine-Cantor theorem.** &nbsp; *Let $ f \colon  \to Y $ be continuous. If $ X $ is compact, then $ f $ is uniformly continuous.*
 
+
+
 #### Problems
+
 
 **2020 W P3.** &nbsp; *Let $ X $ be the space of sequences $ x = \{x_n\} $ with $ x_n \in [0, 1] $. Set $ d(x, y) = \sup_n \| x_n - y_n \| $. Suppose $ f \colon X \to \mathbb{R} $ is uniformly continuous. Prove that $ f $ is bounded.*
 
@@ -405,6 +437,7 @@ $$
 
 Thus, $ f $ is a bounded function. $ \blacksquare $
 
+
 **2020 W P7.** &nbsp; *Let $ f \colon \mathbb{R} \to \mathbb{R} $ be continuous and $ f' \colon \mathbb{R} \to \mathbb{R} $ uniformly continous. If $ \displaystyle \lim_{x \to \infty} f(x) = 0 $, does $ \displaystyle \lim_{x \to \infty} f'(x) $ exist?*
 
 *Proof.* We will show the derivative goes to $ 0 $. Suppose not. Then there exists a sequence $ \{x_n\} $ such that $ \| f'(x_n) \| > C $ for some $ C > 0 $ and $ \lim_n x_n = \infty $. Without loss of generality, we suppose $ f'(x_n) > C $. Since $ f' $ is uniformly continuous, there exists a $ \delta > 0 $ so that $ \| x-y \| < \delta $ implies $ \| f'(x) - f'(y) \| < C/2 $. Therefore, 
@@ -417,15 +450,18 @@ $$
 
 which implies $ f(x_n + \delta) \geq f(x_n - \delta) + \delta C $. This contradicts $ f $ having limit $ 0 $. $ \blacksquare $
 
+
 **2019 W P5.** &nbsp; *Give an example of a continuous function $ f \colon (0, 1] \to \mathbb{R} $ that attains neither a maximum nor a minimum. (b) Show that if $ f $ is uniformly continuous, then it must attain a maximum or a minimum.*
 
 *Proof.* (a) Consider $ f(x) = (1-x) \sin(\frac{1}{x}) $. This is a continuous function which obtains no maximum or minimum, because $ \sin(\frac{1}{x}) $ is oscillating, and $ (1-x) $ causes $ f $ to decrease in absolute value away from $ 0 $.
 
 (b) Suppose not. Then there exists sequences $ \{x_n\} $ and $ \{y_n\} $ in $ (0, 1] $ with $ \lim_n x_n = 0 $ (resp. $ \lim y_n = 0 $), $ f(x_n) $ monotonically increasing (resp. $ f(y_n) $ monotonically decreasing), and $ \lim_n f(x_n) = \sup f(x) $ (resp. $ \lim_n f(y_n) = \inf f(x) $). Since $ f $ is uniformly continuous, there exists a $ \delta > 0 $ such that $ \|x-y\| < \delta $.
 
+
 **2018 F P5.** &nbsp; *Let $ B $ be the closed unit ball in $ \mathbb{R}^2 $. Set $ \rho(x, y) = \|x-y\| $ if $ x $ and $ y $ are collinear and $ \rho(x, y) = \|x\| + \|y\| $ elsewise. This is a metric on $ B $. Suppose $ f \colon (B, \rho) \to \mathbb{R} $ is uniformly continuous. Show $ f $ is bounded.*
 
 *Proof.* Using the same proof technique as 2020 W P3, we are reduced to showing $ \rho $ is a bounded function on $ B $. Clearly $ \rho(x, y) \leq 2 $. $ \blacksquare $
+
 
 **2017 W P6.** &nbsp; *Let $ f \colon \mathbb{R}^n \to \mathbb{R} $ be continuous with $ n < \infty $. Suppose $ \displaystyle \lim_{\|x\| \to \infty} f(x) = 0 $. Prove that $ f $ is uniformly continuous.*
 
@@ -441,7 +477,10 @@ $$
 Thus, $ f $ is uniformly continuous on $ \mathbb{R}^n \setminus D_r $. Furthermore, $ D_{r+1} $ is compact, so $ f $ is uniformly continuous on $ D_{r+1} $ by the Heine-Borel theorem. Since our desired property is local and every point has a ball of radius $ 1/2 $ contained in $ D_{r+1} $ or $ \mathbb{R}^{n} \setminus D_r $, we get our result. $ \blacksquare $
 
 
+
+
 ## 4. Uniform convergence
+
 
 Let $ X, Y $ be metric spaces, and let $ f, g \colon X \to Y $ be functions. Define the *uniform metric* by 
 
@@ -458,17 +497,25 @@ $$
 \sup_{x \in K, n \in \mathbb{N}} \|f_n(x)\| \leq M.
 $$
 
+
 **Ascoli-Arzelà theorem.** &nbsp; *Let $ K \subset \mathbb{R}^m $ be compact, and let $ f_n \colon K \to \mathbb{R}^n $ be a sequence of functions. If $ \{f_n\} $ is uniformly bounded and uniformly equicontinuous, then there exists a subsequence which converges uniformly.*
+
 
 **Weierstrass M-Test.** &nbsp; *Let $ f_n \colon X \to \mathbb{R}^n $ be a sequence of functions defined on a set $ X $. Set $ M_n = \sup_x \| f_n(x) \| $. If $ \sum M_n $ converges, then $ \sum f_n(x) $ converges absolutely and uniformly.*
 
+
 **Uniform limit theorem.** &nbsp; *Write $ X $ for a topological space and $ Y $ a metric space. If $ f_n \colon X \to Y $ are continuous and converge uniformly to $ f \colon X \to Y $, then $ f $ is continuous. (In other words, the space of continuous functions are closed with respect to $ \rho $.)*
+
 
 **Theorem 4.1.** &nbsp; *Let $ f_n \colon [a, b] \to \mathbb{R} $ be integrable with uniform limit $ f $. Then $ \int_a^b f dx = \lim_n \int_a^b f_n dx $.*
 
+
 **Theorem 4.2.** &nbsp; *Suppose $ f_n \colon [a, b] \to \mathbb{R} $ are differentiable such that their derivatives $ f_n' $ converge uniformly on $ [a, b] $. If $ f_n(x_0) $ converges for some point $ x_0 \in [a, b] $, then $ f_n $ converge uniformly to some $ f $, and $ f'(x) = \lim_n f_n'(x) $.*
 
+
+
 #### Problems
+
 
 **2023 W P1.** &nbsp; *Let $ f_n \colon [0, 1] \to \mathbb{R}^+ $ be monotonically increasing with uniform limit $ f $. Prove that*
 
@@ -484,6 +531,25 @@ f(x) = \lim_n \left( \sum_{k=1}^n f_k(x)^n \right)^{1/n}
 $$
 
 uniformly. Our result then follows from theorem 4.1. $ \blacksquare $
+
+*Anuvertika's proof.* Set 
+
+$$
+a_n(x) = \left( \sum_{k=1}^n f_k(x) \right)^{1/n}.
+$$
+
+Fix $ x \in [0, 1] $; then
+
+$$
+f_n(x)
+= (f_n(x)^n)^{1/n} 
+\leq a_n
+\leq \left( \sum_{k=1}^n f_n(x) \right)^{1/n}
+= n^{1/n} f_n(x)
+$$
+
+combined with $ n^{1/n} \to 1 $ implies $ a_n(x) \to f(x) $ pointwise. Since $ \{ a_n(x) \} $ is monotonically increasing, we apply 2022 F P2 to show the convergence is uniform. $ \blacksquare $
+
 
 **2023 W P3.** &nbsp; *Let $ f_n \colon [0, 1] \to \mathbb{R} $ be a sequence of function. Suppose that for some $ f \colon [0, 1] \to \mathbb{R} $, we have*
 
