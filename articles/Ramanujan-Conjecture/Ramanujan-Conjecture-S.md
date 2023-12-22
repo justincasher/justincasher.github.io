@@ -433,7 +433,7 @@ $$
 \end{bmatrix}
 $$
 
-in $$ \GL_2(\ZZ_p) \backslash \GL_2(\QQ_p)/\GL_2(\ZZ_p) $$. Likewise define $$ R_p $$ to be the coset of 
+in $$ \GL_2(\ZZ_p) \backslash \GL_2(\QQ_p)/\GL_2(\ZZ_p) $$. This is an alternative way to define the classical Hecke operator, and it better suits our purposes here. Likewise define $$ R_p $$ to be the coset of 
 
 $$
 \begin{bmatrix}
