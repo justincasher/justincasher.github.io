@@ -20,6 +20,7 @@ title: The Ramanujan conjecture
     }
 }
 </style>
+<br>
 **Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see [\[1\]](#5-references).
 
 
@@ -293,7 +294,7 @@ $$
 2 p^{11/2} = \left| \tau(p) \pm \sqrt{\tau(p)^2 - 4 p^{11}} \right|,
 $$
 
-choosing our sign $ \pm $ appropriately shows $ \vert \tau(p) \vert \leq 2 p^{11/2}. $ $ \blacksquare $
+choosing our sign $ \pm $ appropriately shows $ \vert \tau(p) \vert \leq 2 p^{11/2}. $ Q.E.D.
 
 
 &emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \mathbb{Q}_\ell $$ vector space $$ {_1^{10}} W_{\ell} $$. Deligne proves 
