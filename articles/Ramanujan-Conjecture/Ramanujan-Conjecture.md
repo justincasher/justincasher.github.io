@@ -26,7 +26,7 @@ title: The Ramanujan conjecture
 
 
 ## Table of Contents
-1. [Modular forms](#1-modular-forms)
+1. [Modular forms and Hecke operators](#1-modular-forms)
 2. [Ramanujan's conjectures](#2-ramanujans-conjectures)
 3. [Deligne's proof](#3-delignes-proof)
 4. [Deligne's alternative à la Weil II](#4-delignes-alternative-à-la-weil-ii)
