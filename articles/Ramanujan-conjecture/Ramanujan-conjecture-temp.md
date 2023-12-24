@@ -25,7 +25,7 @@ title: The Ramanujan conjecture
 
 
 
-**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see [\[1\]](#4-references).
+**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see [\[1\]](#5-references).
 
 
 
@@ -34,7 +34,8 @@ title: The Ramanujan conjecture
 1. [Modular forms](#1-modular-forms)
 2. [Ramanujan's conjectures](#2-ramanujans-conjectures)
 3. [Deligne's proof](#3-delignes-proof)
-4. [References](#4-references)
+4. [Deligne's alternative à la Weil II](#4-delignes-alternative-à-la-weil-ii)
+5. [References](#5-references)
 
 
 
@@ -42,7 +43,7 @@ title: The Ramanujan conjecture
 ## 1. Modular forms and Hecke operators
 
 
-&emsp; See Lang's book [\[3\]](#4-references) for the details of this section. Let $ k $ be a field, and let $ E $ be a $ k $-variety. The following are equivalent:
+&emsp; See Lang's book, [\[4\]](#5-references), for the details of this section. Let $ k $ be a field, and let $ E $ be a $ k $-variety. The following are equivalent:
 
 1.  $ E $ is an abelian variety of dimension 1 over $ k $;
 
@@ -260,7 +261,7 @@ and since $ S_{12} $ is of dimension 1, $ \Delta(z) $ is an eigenform. The coeff
 
 
 
-## 3. Deligne's proof
+## 3. Deligne's proof à la Weil I
 
 
 
@@ -536,6 +537,7 @@ $$
 $$
 
 
+
 #### Applying the Riemann hypothesis
 
 
@@ -544,7 +546,7 @@ $$
 **Theorem 3.8.** &nbsp; *The eigenvalues of the Frobenious $ F $ acting on $ ^k_n W_{\ell} $ are algebraic integers of absolute value $ p^{(k+1)/2} $.*
 
 
-&emsp; Since $ I_p^* $ induces the identity on $ _1^k W_{\ell} $, we have 
+&emsp; Since $ I_p^* $ induces the identity on $$ {_1^k} W_{\ell} $$, we have 
 
 $$
 1 - T_p X + p^{k+1} X^2 = (1-FX)(1-VX);
@@ -589,9 +591,23 @@ Applying [theorem 3.8](https://www.justinasher.me/Ramanujan-conjecture-T3:8){:ta
 
 
 
-## 4. References
+## 4. Deligne's alternative à la Weil II
+
+
+&emsp; Deligne's second paper on the Weil conjectures, [\[3\]](#5-references), can be applied to bypass the Eichler-Shimura relations. Indeed, [lemma 3.5](https://www.justinasher.me/Ramanujan-conjecture-L3:5){:target="_blank"} (essentially) reduces us to computing the eigenvalues of 
+
+$$
+\widetilde{H}^1(M_n^{\text{an}} \otimes \overline{\mathbb{Q}}, \, \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}}))),
+$$
+
+then dividing by 2. Here, $ R^1 f_{n*} (\underline{\mathbb{Q}_{\ell}}) $ is pointedly pure of weight 1, so $$ \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}})) $$ is pointedly pure of weight $ k $, and hence the cohomology object is pointedly pure of weight $ k + 1 $. In particular for $ k = 10 $, it is pointedly pure of weight 11, and thus $ S_{10} $ has eigenvectors of absolute value $ p^{11/2} $.
+
+
+
+## 5. References
 
 1. Pierre Deligne. "Formes modulaires et représentations $ l $-adiques". *Séminaire Bourbaki*, no. 355 (1968–1969).
 2. Pierre Deligne. "La conjecture de Weil: I". *Publications Mathématiques de l'IHÉS*, Volume 43 (1974), pp. 273-307. [Link](http://www.numdam.org/item/PMIHES_1974__43__273_0/)
-3. Serge Lang, *Introduction to modular forms*, Springer-Verlag, 1976.
-4. Jean-Pierre Serre, *A course in arithmetic*, Springer-Verlag, 1973.
+3. Deligne, Pierre. "La conjecture de Weil: II". *Publications Mathématiques de l'IHÉS*, Volume 52 (1980), pp. 137-252. [Link](http://www.numdam.org/item/PMIHES_1980__52__137_0/)
+4. Serge Lang, *Introduction to modular forms*, Springer-Verlag, 1976.
+5. Jean-Pierre Serre, *A course in arithmetic*, Springer-Verlag, 1973.
