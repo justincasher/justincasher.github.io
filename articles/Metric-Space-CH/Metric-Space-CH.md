@@ -113,7 +113,7 @@ $$
 \rho(\frak{g}(a_n, y), \frak{g}(a_*, y)) \leq d(a_n, a_*),
 $$
 
-and hence $ \frak{g}(a_n, y) $ converges uniformly to $$ \frak{g}(a_*, y) $$. Accordingly $ \frak{g}(x, b_n) $ converges uniformly to $ \frak{g}(x, b_*) $. Since both $ \frak{g}(x, b_*) $ and $ \frak{g}(a_*, y) $ contain $ \frak{g}(a_*, b_*) $, we conclude that gluing them gives us our desired geodesic $ \omega $. Q.E.D.
+and hence $ \frak{g}(a_n, y) $ converges uniformly to $$ \frak{g}(a_*, y) $$. Accordingly $$ \frak{g}(x, b_n) $$ converges uniformly to $$ \frak{g}(x, b_*) $$. Since both $$ \frak{g}(x, b_*) $$ and $$ \frak{g}(a_*, y) $$ contain $$ \frak{g}(a_*, b_*) $$, we conclude that gluing them gives us our desired geodesic $ \omega $. Q.E.D.
 	
 
 &emsp; One nice property of local isometries between complete metric spaces is that they satisfy the unique path lifting property. In our desired case, this will allow us to strengthen the evaluation map from being a local isometry to a covering by applying proposition 4.3.
