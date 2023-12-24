@@ -44,7 +44,7 @@ title: Cartan-Hadamard theorem for metric spaces
 
 **Theorem 2.1** *Any connected, locally path connected, and locally simply connected topological space admits a universal cover.*
 
-*Proof.* Indeed, let $ A $ be such a space. Choose a basepoint $ a \in A $, and set $ E $ to be the homotopy classes of paths starting at $ a $. For each path connected open subset $ U \subseteq A $ and $ [\gamma] \in E $ with $$ [\gamma](1) \in U $$, denote $ U_{[\gamma]} $ to be the collection of curves $ [\omega \circ \gamma] $ with $ \omega \colon [0, 1] \to U $. Then the sets $ U_{[\gamma]} $ form a basis for a topology on $ E $, and the endpoint map $ \pi([\gamma]) = [\gamma](1) $ is a universal cover. See [\[8\]](#5-references) Chapter 3 \S8 for the remainder of the proof. Q.E.D.
+*Proof.* Indeed, let $ A $ be such a space. Choose a basepoint $ a \in A $, and set $ E $ to be the homotopy classes of paths starting at $ a $. For each path connected open subset $ U \subseteq A $ and $ [\gamma] \in E $ with $$ [\gamma](1) \in U $$, denote $ U_{[\gamma]} $ to be the collection of curves $ [\omega \circ \gamma] $ with $ \omega \colon [0, 1] \to U $. Then the sets $ U_{[\gamma]} $ form a basis for a topology on $ E $, and the endpoint map $$ \pi([\gamma]) = [\gamma](1) $$ is a universal cover. See [\[8\]](#5-references), chapter 3, \S8 for the remainder of the proof. Q.E.D.
 
 
 
@@ -113,13 +113,13 @@ $$
 \rho(\frak{g}(a_n, y), \frak{g}(a_*, y)) \leq d(a_n, a_*),
 $$
 
-and hence $ \frak{g}(a_n, y) $ converges uniformly to $ \frak{g}(a_*, y) $. Accordingly $ \frak{g}(x, b_n) $ converges uniformly to $ \frak{g}(x, b_*) $. Since both $ \frak{g}(x, b_*) $ and $ \frak{g}(a_*, y) $ contain $ \frak{g}(a_*, b_*) $, we conclude that gluing them gives us our desired geodesic $ \omega $. Q.E.D.
+and hence $ \frak{g}(a_n, y) $ converges uniformly to $$ \frak{g}(a_*, y) $$. Accordingly $ \frak{g}(x, b_n) $ converges uniformly to $ \frak{g}(x, b_*) $. Since both $ \frak{g}(x, b_*) $ and $ \frak{g}(a_*, y) $ contain $ \frak{g}(a_*, b_*) $, we conclude that gluing them gives us our desired geodesic $ \omega $. Q.E.D.
 	
 
 &emsp; One nice property of local isometries between complete metric spaces is that they satisfy the unique path lifting property. In our desired case, this will allow us to strengthen the evaluation map from being a local isometry to a covering by applying proposition 4.3.
 
 
-**Lemma* 4.2.** &nbsp; *Let $ f \colon Y \to X $ be a local isometry between complete metric spaces. Let $ x \in X $ and $ y \in f^{-1}(x) $. Then for any rectifiable curve $ \gamma $ starting at $ x $, there exists a unique curve $ \omega $ starting at $ y $ so that $ f \circ \omega = \gamma $.*
+**Lemma* 4.2.**l &nbsp; *Let $ f \colon Y \to X $ be a local isometry between complete metric spaces. Let $ x \in X $ and $ y \in f^{-1}(x) $. Then for any rectifiable curve $ \gamma $ starting at $ x $, there exists a unique curve $ \omega $ starting at $ y $ so that $ f \circ \omega = \gamma $.*
 
 
 *Proof.* Choose a neighborhood $ V $ of $ y $ so that $ f \mid_V \colon V \to U $ is an isometry. Then we can lift $ \gamma \mid_U $ to a unique curve $ \omega \mid_V $. Suppose that the endpoint of $ \gamma $ is not contained within $ U $. Then as $ \omega \mid_V $ approaches the boundary $ V $, we use $ Y $ being complete to get a unique point $ y' $ on the boundary of $ V $ which continuously extends $ \omega \mid_V $.  Now we can choose a neighborhood of $ y' $ which is a local isometry to continue uniquely lifting $ \gamma $. Since $ \gamma $ is rectifiable, after finitely many steps this process terminates, yielding our unique lift $ \omega $.
@@ -160,17 +160,10 @@ and hence $ \frak{g}(a_n, y) $ converges uniformly to $ \frak{g}(a_*, y) $. Acco
 # 5. References
 
 1. Stephanie Alexander and Richard Bishop, *The Hadamard-Cartan theorem in locally con- vex metric spaces*, L'Enseignement Mathématique **36** (1990), 309–320.
-
 2. Werner Ballman, Mikhael Gromov, and Viktor Schroeder, *Manifolds of nonpositive curvature*, Birkhäuser Boston, Inc., 1985.
-
 3. Élie Cartan, *Lecçons sur la géométrie des surfaces de Riemann*, Gauthier-Villars, 1928.
-
 4. Manfredo do Carmo, *Riemannian geometry*, Birkhäuser, 1992.
-
 5. Mikhael Gromov, *Hyperbolic manifolds, groups and actions, Riemann surfaces and related topics*, 1978, pp. 183–213.
-
 6. Hadamard Jacques, *Les surfaces à courbures opposées et leurs lignes géodésiques*, Journal de mathématiques pures et appliquées 5e série **4** (1898), 27–74.
-
 7. Shoshichi Kobayashi and Katsumi Nomizu, *Foundations of differential geometry*, Inter- science Publishers, 1969.
-
 8. J.P. May, *A concise course in algebraic topology*, Chicago Lectures in Mathematics, 1999.
