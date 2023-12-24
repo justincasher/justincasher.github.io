@@ -9,5 +9,5 @@ This spring I am organizing a graduate seminar at Indiana University on topics i
 
 ## Past seminars
 
-Fall 2023 AG & NT seminar]({{'/Fall-2023-AG-NT-seminar' | relative_url}})
+[Fall 2023 AG & NT seminar]({{'/Fall-2023-AG-NT-seminar' | relative_url}})
 
