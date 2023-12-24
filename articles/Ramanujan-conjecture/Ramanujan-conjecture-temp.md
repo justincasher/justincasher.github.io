@@ -42,7 +42,7 @@ title: The Ramanujan conjecture
 ## 1. Modular forms and Hecke operators
 
 
-&emsp; See Lang's book [\[3\]](#4-references) for the details of this section. &emsp; Let $ k $ be a field, and let $ E $ be a $ k $-variety. The following are equivalent:
+&emsp; See Lang's book [\[3\]](#4-references) for the details of this section. Let $ k $ be a field, and let $ E $ be a $ k $-variety. The following are equivalent:
 
 1.  $ E $ is an abelian variety of dimension 1 over $ k $;
 
@@ -492,7 +492,7 @@ $$
 which defines the transpose of the Frobenious, the Vershiebung, with respect to an abstracted Peterson inner product.
 
 
-&emsp; Finally, we define the Hecke operator $ T_p $ acting on $ _1^k W_{\infty} $ by the coset of 
+&emsp; Finally, we define the Hecke operator $ T_p $ acting on $$ {_1^k} W_{\infty} $$ by the coset of 
 
 $$
 \begin{bmatrix}
@@ -519,7 +519,7 @@ $$
 \widetilde{H}^1(M_n \otimes \overline{\mathbb{F}}_p, \text{Sym}^k(R^1 f_{n*} \underline{\mathbb{Z}}_{\ell})).
 $$
 
-*Over $ \mathbb{F}_p $, we have $ T_p = F + I_p^* V $ and $ FV = VF = p^{k+1} $.*
+*Over $ \mathbb{F}_p $, we have $$ T_p = F + I_p^* V $$ and $$ FV = VF = p^{k+1} $$.*
 
 
 &emsp; From this, we get 
@@ -564,7 +564,7 @@ $$
 $$
 
 
-&emsp; Since $ T_p $ action on $$ {_n^k} W_{\ell} $$ is induced by its action on $ _n^k W_{\infty} $, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-conjecture-L3:5){:target="_blank"} to get
+&emsp; Since $ T_p $ action on $$ {_n^k} W_{\ell} $$ is induced by its action on $$ {_n^k} W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-conjecture-L3:5){:target="_blank"} to get
 
 $$
 \det(1-T_pX +p^{k+1}X^2; \, {_1^k W_{\ell}}) = \det(1-T_pX+p^{k+1}X^2; \, S_{k+2})^2,
