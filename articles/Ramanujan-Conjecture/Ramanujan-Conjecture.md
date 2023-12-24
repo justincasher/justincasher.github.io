@@ -595,7 +595,7 @@ $$
 \widetilde{H}^1(M_n^{\text{an}} \otimes \overline{\mathbb{Q}}, \, \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}}))),
 $$
 
-then dividing by 2. Here, $ R^1 f_{n*} (\underline{\mathbb{Q}_{\ell}}) $ is pointedly pure of weight 1, so $$ \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}})) $$ is pointedly pure of weight $ k $, and hence the cohomology object is pointedly pure of weight $ k + 1 $. In particular for $ k = 10 $, it is pointedly pure of weight 11, and thus $ S_{10} $ has eigenvectors of absolute value $ p^{11/2} $.
+then dividing by 2. Here, $$ R^1 f_{n*} (\underline{\mathbb{Q}_{\ell}}) $$ is pointedly pure of weight 1, so $$ \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}})) $$ is pointedly pure of weight $ k $, and hence the cohomology object is pointedly pure of weight $ k + 1 $. In particular for $ k = 10 $, it is pointedly pure of weight 11, and thus $ S_{10} $ has eigenvectors of absolute value $ p^{11/2} $.
 
 
 
