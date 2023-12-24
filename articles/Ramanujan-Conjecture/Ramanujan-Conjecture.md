@@ -296,7 +296,7 @@ $$
 choosing our sign $ \pm $ appropriately shows $ \vert \tau(p) \vert \leq 2 p^{11/2}. $ $ \blacksquare $
 
 
-&emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $ \mathbb{Q}_\ell $ vector space $ _1^{10} W_{\ell} $. Deligne proves 
+&emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \mathbb{Q}_\ell $$ vector space $$ {_1^{10}} W_{\ell} $$. Deligne proves 
 
 $$
 H_p(z) = \det(1-FX; \, {_1^{10}} W_{\ell}),
@@ -327,7 +327,7 @@ $$
 We can identify $ X $ with the upper half plane $ \mathcal{H} $ by considering where $ e_1 = (1, 0) $ and $ e_2 = (0, 1) $ are sent, i.e. $ f(e_2)/f(e_1) $.
 
 
-**Proposition 3.2.** &nbsp; *$ X $ represents the functor which sends an analytic space $ S $ to the isomorphism classes of elliptic curves on $ S $, equipped with a permitted isomorphism $ R^1 f_* \underline{\mathbb{Z}} \cong \underline{\mathbb{Z}}^2 $.*
+**Proposition 3.2.** &nbsp; *$ X $ represents the functor which sends an analytic space $ S $ to the isomorphism classes of elliptic curves on $ S $, equipped with a permitted isomorphism $$ R^1 f_* \underline{\mathbb{Z}} \cong \underline{\mathbb{Z}}^2 $$.*
 
 
 &emsp; The set of isomorphism classes of elliptic curves corresponds to complex lattices up to homothety, i.e. $ \mathbb{Z}[a, b] \sim \mathbb{Z}[za, zb] $ with $ z \in \mathbb{C}^{\times} $, which correspond to elements in $ X $ modulo $ \text{SL}_2(\mathbb{Z}) $ (identify $ X $ with $ \mathcal{H} $ and consider $ b/a $). We therefore construct a "universal elliptic curve" $ f \colon E_X \to X $ whose fibers consist of representatives from each isomorphism class of elliptic curves. 
