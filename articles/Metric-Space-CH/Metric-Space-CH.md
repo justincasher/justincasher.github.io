@@ -1,9 +1,9 @@
 ---
 layout: Writing
 indent: true
-permalink: /Metric-Space-CH
+permalink: /Metric-space-CH
 feedformat: card
-title: The Cartan-Hadamard theorem for metric spaces
+title: Cartan-Hadamard theorem for metric spaces
 ---
 <br>
 
@@ -44,7 +44,7 @@ title: The Cartan-Hadamard theorem for metric spaces
 
 **Theorem 2.1** *Any connected, locally path connected, and locally simply connected topological space admits a universal cover.*
 
-*Proof.* Indeed, let $ A $ be such a space. Choose a basepoint $ a \in A $, and set $ E $ to be the homotopy classes of paths starting at $ a $. For each path connected open subset $ U \subseteq A $ and $ [\gamma] \in E $ with $ [\gamma](1) \in U $, denote $ U_{[\gamma]} $ to be the collection of curves $ [\omega \circ \gamma] $ with $ \omega \colon [0, 1] \to U $. Then the sets $ U_{[\gamma]} $ form a basis for a topology on $ E $, and the endpoint map $ \pi([\gamma]) = [\gamma](1) $ is a universal cover. See [\[8\]](#5-references) Chapter 3 \S8 for the remainder of the proof. Q.E.D.
+*Proof.* Indeed, let $ A $ be such a space. Choose a basepoint $ a \in A $, and set $ E $ to be the homotopy classes of paths starting at $ a $. For each path connected open subset $ U \subseteq A $ and $ [\gamma] \in E $ with $$ [\gamma](1) \in U $$, denote $ U_{[\gamma]} $ to be the collection of curves $ [\omega \circ \gamma] $ with $ \omega \colon [0, 1] \to U $. Then the sets $ U_{[\gamma]} $ form a basis for a topology on $ E $, and the endpoint map $ \pi([\gamma]) = [\gamma](1) $ is a universal cover. See [\[8\]](#5-references) Chapter 3 \S8 for the remainder of the proof. Q.E.D.
 
 
 
@@ -93,10 +93,10 @@ If the our metric $ d $ is (locally) a convex function in $ (X, d') $, then we c
 *Proof.* Fix a geodesic $ \gamma $ in $ G_x $. For each $ t \in [0, 1] $, let $ r_t $ be the largest radius so that $ B_d(\gamma(t), r_t) $ is a m-convex space. Set $ r = \inf r_t $, which is strictly positive since each $ r_t $ is and they vary continuously with $ t $. Consider the following statement:
 
 
-> $ \textbf{P(L):} $ Let $ \gamma' \in G_x $ be subsegment of $ \gamma $ with length at most $ L $ and endpoint $ x' = \text{ev}_x(\gamma') $ Then for any $ y \in B_d(x', r/2) $, there exists an $ \omega \in G_x $ contained in $ B_{\rho}(\gamma', r/2) $ such that $ \text{ev}_x(\omega) = y $.
+> $ \textbf{P(L):} $ Let $ \gamma' \in G_x $ be subsegment of $ \gamma $ with length at most $ L $ and endpoint $$ x' = \text{ev}_x(\gamma') $$ Then for any $ y \in B_d(x', r/2) $, there exists an $ \omega \in G_x $ contained in $ B_{\rho}(\gamma', r/2) $ such that $ \text{ev}_x(\omega) = y $.
 
 
-We claim that $ P(L) $ holding for some $ L $ implies it does for every. Therefore, $ P(r) $ being true implies we can apply the statement to $ \gamma' = \gamma $. Thus, by covering $ B_{\rho}(\gamma, r/2) $ in increasingly small balls, we get that $ \text{ev}_x \colon B_{\rho}(\gamma, r/2) \to B_d(\text{ev}_x(\gamma), r/2) $ is indeed an isometry
+We claim that $ P(L) $ holding for some $ L $ implies it does for every. Therefore, $ P(r) $ being true implies we can apply the statement to $ \gamma' = \gamma $. Thus, by covering $ B_{\rho}(\gamma, r/2) $ in increasingly small balls, we get that $$ \text{ev}_x \colon B_{\rho}(\gamma, r/2) \to B_d(\text{ev}_x(\gamma), r/2) $$ is indeed an isometry
 			
 
 &emsp; We proceed by induction. Suppose $ P(L) $ holds, and let $ \gamma' $ be of length at most $ 3L/2 $. Set $ a_0 = \gamma'(1/3) $ and $ b_0 = \gamma'(2/3) $. Then $ \frak{g}(x, b_0) \in G_x $ and $ \frak{g}(a_0, x') \in G_{x'} $ have length at most $ L $, so we can apply $ P(L) $ to see that the midpoint $ a_1 = \text{Mid}(\frak{g}(x, b_0)) $ and $ b_1 = \text{Mid}(\frak{g}(a_0, y)) $ are contained in $ B_d(a_0, r/2) $ and $ B_d(b_0, r/2) $, respectively. Now define inductively $ a_n = \text{Mid}(\frak{g}(x, b_{n-1})) $ and $ b_n = \text{Mid}(\frak{g}(a_{n-1}, y)) $, where $ \frak{g}(x, b_{n-1}) $ and $ \frak{g}(a_{n-1}, y) $ exist by $ P(L) $. Then m-convexity implies 
@@ -119,7 +119,7 @@ and hence $ \frak{g}(a_n, y) $ converges uniformly to $ \frak{g}(a_*, y) $. Acco
 &emsp; One nice property of local isometries between complete metric spaces is that they satisfy the unique path lifting property. In our desired case, this will allow us to strengthen the evaluation map from being a local isometry to a covering by applying proposition 4.3.
 
 
-**Lemma* 4.2.* &nbsp; *Let $ f \colon Y \to X $ be a local isometry between complete metric spaces. Let $ x \in X $ and $ y \in f^{-1}(x) $. Then for any rectifiable curve $ \gamma $ starting at $ x $, there exists a unique curve $ \omega $ starting at $ y $ so that $ f \circ \omega = \gamma $.*
+**Lemma* 4.2.** &nbsp; *Let $ f \colon Y \to X $ be a local isometry between complete metric spaces. Let $ x \in X $ and $ y \in f^{-1}(x) $. Then for any rectifiable curve $ \gamma $ starting at $ x $, there exists a unique curve $ \omega $ starting at $ y $ so that $ f \circ \omega = \gamma $.*
 
 
 *Proof.* Choose a neighborhood $ V $ of $ y $ so that $ f \mid_V \colon V \to U $ is an isometry. Then we can lift $ \gamma \mid_U $ to a unique curve $ \omega \mid_V $. Suppose that the endpoint of $ \gamma $ is not contained within $ U $. Then as $ \omega \mid_V $ approaches the boundary $ V $, we use $ Y $ being complete to get a unique point $ y' $ on the boundary of $ V $ which continuously extends $ \omega \mid_V $.  Now we can choose a neighborhood of $ y' $ which is a local isometry to continue uniquely lifting $ \gamma $. Since $ \gamma $ is rectifiable, after finitely many steps this process terminates, yielding our unique lift $ \omega $.
