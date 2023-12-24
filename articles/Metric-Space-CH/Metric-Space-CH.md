@@ -7,7 +7,7 @@ title: Cartan-Hadamard theorem for metric spaces
 ---
 <br>
 
-**Abstract.** &nbsp; We fill in some details in S. Alexander and R. Bishop's proof of a metric space Cartan-Hadamard theorem. Our goal is to make the proof more motivated and accessible to non-experts.
+**Abstract.** &nbsp; We fill in some details in S. Alexander and R. Bishop's proof of the metric space Cartan-Hadamard theorem. Our goal is to make the proof more motivated and accessible to non-experts.
 
 
 
@@ -16,7 +16,7 @@ title: Cartan-Hadamard theorem for metric spaces
 
 1. [Introduction](#1-introduction)
 2. [Covering spaces](#2-covering-spaces)
-3. [Metric analogues](#3-metric-analogues)
+3. [Metric space analogues](#3-metric-space-analogues)
 4. [Main proof](#4-main-proof)
 5. [References](#5-references)
 
@@ -26,7 +26,7 @@ title: Cartan-Hadamard theorem for metric spaces
 ## 1. Introduction
 
 
-&emsp; Contrary to the name, the Cartan-Hadamard theorem originates in the work of Hans von Mangoldt. He proved in 1881 that two arbitrarily close geodesics on a real analytic surface of nonpositive curvature can intersect at most once. Jacques Hadamard then developed this theory in 1898 by showing that each homotopy class of paths connecting two points contains a unique geodesic. Both of these results can be found on page 50 of [\[6\]](#5-references). Élie Cartan later generalized Hadamard’s theory to a wider class of manifolds in [\[3\]](#5-references), giving us the name Cartan-Hadamard.
+&emsp; Contrary to its name, the Cartan-Hadamard theorem originates in the work of Hans von Mangoldt. He proved in 1881 that two arbitrarily close geodesics on a real analytic surface of nonpositive curvature can intersect at most once. Jacques Hadamard then developed this theory in 1898 by showing that each homotopy class of paths connecting two points contains a unique geodesic. Both of these results can be found on page 50 of [\[6\]](#5-references). Élie Cartan later generalized Hadamard’s theory to a wider class of manifolds in [\[3\]](#5-references), giving us the name Cartan-Hadamard.
 
 
 &emsp; In its more modern form, the Catan-Hadamard theorem is a statement about universal coverings. This is because, for a certain class of topological spaces, a universal cover can be constructed via homotopy classes of paths starting at a point. Hence, in the case of a complete, connected Riemannian manifold of nonpositive curvature, our homotopy classes of paths are given by geodesics starting at a point; in particular, our covering map is simply the exponential map, cf. [\[2\]](#5-references). This theory was later generalized by M. Gromov, [\[5\]](#5-references), then S. Alexander and R. Bishop to complete, connected metric spaces with a locally convex metric (locally m-convex), [\[1\]](#5-references).
@@ -37,19 +37,19 @@ title: Cartan-Hadamard theorem for metric spaces
 ## 2. Covering spaces
 
 
-&emsp; Let $ A, E $ be topological space, and let $ \pi \colon E \to A $ be a surjective continuous map. Suppose for each $ a \in A $ there exists an open neighborhood $ U $ so that $ \pi^{-1}(U) = \prod_{i \in E_a} V_i $, with each $ V_i $ disjoint and homeomorphic to $ U $, where $ E_a = \pi^{-1}(a) $ is the fiber at $ a $. Then $ \pi \colon E \to A $ is said to be a \textit{covering}. If $ E $ is simply connected, then our covering is called \textit{universal}. This name is derived from the following universal property: for any other covering $ \varphi \colon F \to A $, there exists a unique continuous map $ h \colon F \to E $ such that $ \varphi = \pi \circ h $. \todo{Analytic continuation, monodromy} Universal covers are of particular interest when our space is simply connected, as then our cover is a homeomorphism, and hence we can study it instead when considering topologically invariant properties.
+&emsp; Let $ A, E $ be topological space, and let $ \pi \colon E \to A $ be a surjective continuous map. Suppose for each $ a \in A $ there exists an open neighborhood $ U $ so that $ \pi^{-1}(U) = \prod_{i \in E_a} V_i $, with each $ V_i $ disjoint and homeomorphic to $ U $, where $ E_a = \pi^{-1}(a) $ is the fiber at $ a $. Then $ \pi \colon E \to A $ is said to be a *covering*. If $ E $ is simply connected, then our covering is called *universal*. This name is derived from the following universal property: for any other covering $ \varphi \colon F \to A $, there exists a unique continuous map $ h \colon F \to E $ such that $ \varphi = \pi \circ h $. \todo{Analytic continuation, monodromy} Universal covers are of particular interest when our space is simply connected, as then our cover is a homeomorphism, and hence we can study it instead when considering topologically invariant properties.
 		
 
 &emsp; We now construct the universal cover for a suitably nice class of topological spaces.
 
 **Theorem 2.1** *Any connected, locally path connected, and locally simply connected topological space admits a universal cover.*
 
-*Proof.* Indeed, let $ A $ be such a space. Choose a basepoint $ a \in A $, and set $ E $ to be the homotopy classes of paths starting at $ a $. For each path connected open subset $ U \subseteq A $ and $ [\gamma] \in E $ with $$ [\gamma](1) \in U $$, denote $ U_{[\gamma]} $ to be the collection of curves $ [\omega \circ \gamma] $ with $ \omega \colon [0, 1] \to U $. Then the sets $ U_{[\gamma]} $ form a basis for a topology on $ E $, and the endpoint map $$ \pi([\gamma]) = [\gamma](1) $$ is a universal cover. See [\[8\]](#5-references), chapter 3, \S8 for the remainder of the proof. Q.E.D.
+*Proof.* Indeed, let $ A $ be such a space. Choose a basepoint $ a \in A $, and set $ E $ to be the homotopy classes of paths starting at $ a $. For each path connected open subset $ U \subseteq A $ and $ [\gamma] \in E $ with $$ [\gamma](1) \in U $$, denote $ U_{[\gamma]} $ to be the collection of curves $ [\omega \circ \gamma] $ with $ \omega \colon [0, 1] \to U $. Then the sets $ U_{[\gamma]} $ form a basis for a topology on $ E $, and the endpoint map $$ \pi([\gamma]) = [\gamma](1) $$ is a universal cover. See [\[8\]](#5-references), chapter 3, §8 for the remainder of the proof. Q.E.D.
 
 
 
 
-## 3. Metric analogues
+## 3. Metric space analogues
 
 
 &emsp; Let us recall the Riemannian
@@ -116,13 +116,13 @@ $$
 and hence $ \frak{g}(a_n, y) $ converges uniformly to $$ \frak{g}(a_*, y) $$. Accordingly $$ \frak{g}(x, b_n) $$ converges uniformly to $$ \frak{g}(x, b_*) $$. Since both $$ \frak{g}(x, b_*) $$ and $$ \frak{g}(a_*, y) $$ contain $$ \frak{g}(a_*, b_*) $$, we conclude that gluing them gives us our desired geodesic $ \omega $. Q.E.D.
 	
 
-&emsp; One nice property of local isometries between complete metric spaces is that they satisfy the unique path lifting property. In our desired case, this will allow us to strengthen the evaluation map from being a local isometry to a covering by applying proposition 4.3.
+&emsp; One nice property of local isometries between complete metric spaces is that they satisfy the unique path lifting property. In our desired case, this will allow us to strengthen the evaluation map from being a local isometry to a covering by applying [proposition 4.3](https://www.justinasher.me/Metric-space-CH-4:3){:target="_blank"}.
 
 
-**Lemma* 4.2.**l &nbsp; *Let $ f \colon Y \to X $ be a local isometry between complete metric spaces. Let $ x \in X $ and $ y \in f^{-1}(x) $. Then for any rectifiable curve $ \gamma $ starting at $ x $, there exists a unique curve $ \omega $ starting at $ y $ so that $ f \circ \omega = \gamma $.*
+**Lemma 4.2.** &nbsp; *Let $ f \colon Y \to X $ be a local isometry between complete metric spaces. Let $ x \in X $ and $ y \in f^{-1}(x) $. Then for any rectifiable curve $ \gamma $ starting at $ x $, there exists a unique curve $ \omega $ starting at $ y $ so that $ f \circ \omega = \gamma $.*
 
 
-*Proof.* Choose a neighborhood $ V $ of $ y $ so that $ f \mid_V \colon V \to U $ is an isometry. Then we can lift $ \gamma \mid_U $ to a unique curve $ \omega \mid_V $. Suppose that the endpoint of $ \gamma $ is not contained within $ U $. Then as $ \omega \mid_V $ approaches the boundary $ V $, we use $ Y $ being complete to get a unique point $ y' $ on the boundary of $ V $ which continuously extends $ \omega \mid_V $.  Now we can choose a neighborhood of $ y' $ which is a local isometry to continue uniquely lifting $ \gamma $. Since $ \gamma $ is rectifiable, after finitely many steps this process terminates, yielding our unique lift $ \omega $.
+*Proof.* Choose a neighborhood $ V $ of $ y $ so that $ f \mid_V \colon V \to U $ is an isometry. Then we can lift $ \gamma \mid_U $ to a unique curve $ \omega \mid_V $. Suppose that the endpoint of $ \gamma $ is not contained within $ U $. Then as $ \omega \mid_V $ approaches the boundary $ V $, we use $ Y $ being complete to get a unique point $ y' $ on the boundary of $ V $ which continuously extends $ \omega \mid_V $.  Now we can choose a neighborhood of $ y' $ which is a local isometry to continue uniquely lifting $ \gamma $. Since $ \gamma $ is rectifiable, after finitely many steps this process terminates, yielding our unique lift $ \omega $. Q.E.D.
 
 		
 **Proposition 4.3.** &nbsp; *Let $ \pi \colon \widetilde{X} \to X $ be a local isometry between complete, connected length spaces. Suppose $ X $ is a local unique geodesic space in which minimizing geodesics locally vary continuously with their endpoints. Then $ \pi $ is a covering.*
@@ -131,7 +131,7 @@ and hence $ \frak{g}(a_n, y) $ converges uniformly to $$ \frak{g}(a_*, y) $$. Ac
 *Proof.* Note that since arc-length is additive, whether a map preserves arc-length can be determined locally. Thus, $ \pi $ being a local isometry implies that any rectifiable curve $ \widetilde{\gamma} $ in $ \widetilde{X} $ has the same length as its image in $ X $. 
 			
 
-&emsp; Fix a point $ x $ in $ X $. Let $ B(x, \varepsilon) $ be a neighborhood of $ x $ that is a geodesic space in which minimizing geodesics locally vary continuously with their endpoints. Let $ \widetilde{x} \in \pi^{-1}(x) $. We claim that $ \pi \colon B(\widetilde{x}, \varepsilon) \to B(x, \varepsilon) $ is bijective. For surjectivity, let $ a \in B(x, \varepsilon) $, and let $ \gamma_a $ be a rectifiable path from $ x $ to $ a $ contained in $ B(x, \varepsilon) $, which exists since $ X $ is a length space. By lemma 4.3 and the property $ \pi $ preserves the length of paths, we get that $ \gamma_a $ lifts uniquely to a path $ \widetilde{\gamma}_a $ starting at $ \widetilde{x} $ contained in $ B(\widetilde{x}, \varepsilon) $. Then the endpoint of $ \widetilde{\gamma}_a $, which we denote $ \widetilde{a} $, is mapped to $ a $ by $ \pi $. For injectivity, suppose $ \widetilde{b} \in B(x, \varepsilon) $ with $ \pi(\widetilde{b}) = a $ as well. Let $ \widetilde{\gamma}_b $ be a rectifiable path from $ \widetilde{x} $ to $ \widetilde{b} $ contained in $ B(\widetilde{x}, \varepsilon) $, and let $ \gamma_b $ be its image in $ B(x, \varepsilon) $. Then $ \gamma_a(t) $ can be connected to $ \gamma_b(t) $ by a unique minimizing geodesic $ [\gamma_a(t), \gamma_b(t)] $, and these geodesics determine a homotopy $ h $ from $ \gamma_a $ to $ \gamma_b $. By lemma 4.2 this homotopy lifts uniquely, which implies $ a = b $. 
+&emsp; Fix a point $ x $ in $ X $. Let $ B(x, \varepsilon) $ be a neighborhood of $ x $ that is a geodesic space in which minimizing geodesics locally vary continuously with their endpoints. Let $ \widetilde{x} \in \pi^{-1}(x) $. We claim that $ \pi \colon B(\widetilde{x}, \varepsilon) \to B(x, \varepsilon) $ is bijective. For surjectivity, let $ a \in B(x, \varepsilon) $, and let $ \gamma_a $ be a rectifiable path from $ x $ to $ a $ contained in $ B(x, \varepsilon) $, which exists since $ X $ is a length space. By [lemma 4.2](https://www.justinasher.me/Metric-space-CH-4:2){:target="_blank"} and the property $ \pi $ preserves the length of paths, we get that $ \gamma_a $ lifts uniquely to a path $ \widetilde{\gamma}_a $ starting at $ \widetilde{x} $ contained in $ B(\widetilde{x}, \varepsilon) $. Then the endpoint of $ \widetilde{\gamma}_a $, which we denote $ \widetilde{a} $, is mapped to $ a $ by $ \pi $. For injectivity, suppose $ \widetilde{b} \in B(x, \varepsilon) $ with $ \pi(\widetilde{b}) = a $ as well. Let $ \widetilde{\gamma}_b $ be a rectifiable path from $ \widetilde{x} $ to $ \widetilde{b} $ contained in $ B(\widetilde{x}, \varepsilon) $, and let $ \gamma_b $ be its image in $ B(x, \varepsilon) $. Then $ \gamma_a(t) $ can be connected to $ \gamma_b(t) $ by a unique minimizing geodesic $ [\gamma_a(t), \gamma_b(t)] $, and these geodesics determine a homotopy $ h $ from $ \gamma_a $ to $ \gamma_b $. By [lemma 4.2](https://www.justinasher.me/Metric-space-CH-4:2){:target="_blank"} this homotopy lifts uniquely, which implies $ a = b $. 
 			
 
 &emsp; Consequently, $ \pi \colon B(\widetilde{x}, \varepsilon) \to B(x, \varepsilon) $ is an isometry. This is because the rectifiable curves in $ B(x, \varepsilon) $ and $ B(\widetilde{x}, \varepsilon) $ are now seen to be in bijective correspondence. Thus, $ \pi $ being arc-length preserving combined with $ X $ and $ \widetilde{X} $ being length spaces implies $ \pi $ is distance preserving.
@@ -146,13 +146,13 @@ and hence $ \frak{g}(a_n, y) $ converges uniformly to $$ \frak{g}(a_*, y) $$. Ac
 **Theorem 4.4.** (Cartan-Hadamard)	&nbsp; Let $ X $ be a complete, connected locally m-convex space. Fix a point $ x $ in $ X $. Then the evaluation map $ \text{ev}_x \colon G_x \to X $ is a universal cover. In particular, every homotopy class of curves between two points in $ X $ contains a geodesic.
 
 
-*Proof.* Let us verify the hypotheses of proposition 4.3, so that $ \text{ev}_x $ is a covering. We know that $ \text{ev}_x $ is a local isometry by proposition 4.1. Since $ X $ is locally m-convex, for any point $ y \in X $, there exists an m-convex neighborhood $ U $. By definition, $ U $ is a geodesic space. Suppose $ \gamma_1, \gamma_2 $ are minimizing geodesics in $ U $ with the same endpoints. Then by m-convexity, $ d(\gamma_1(t), \gamma_2(t)) $ is at its largest at $ t = 0 $  or $ t=1 $, so that $ \gamma_1 = \gamma_2 $, and thus $ U $ is unique geodesic space. Likewise, m-convexity implies our minimizing geodesics vary continuously with their endpoints. 
+*Proof.* Let us verify the hypotheses of [proposition 4.3](https://www.justinasher.me/Metric-space-CH-4:3){:target="_blank"}, so that $ \text{ev}_x $ is a covering. We know that $ \text{ev}_x $ is a local isometry by [proposition 4.1](https://www.justinasher.me/Metric-space-CH-4:1){:target="_blank"}. Since $ X $ is locally m-convex, for any point $ y \in X $, there exists an m-convex neighborhood $ U $. By definition, $ U $ is a geodesic space. Suppose $ \gamma_1, \gamma_2 $ are minimizing geodesics in $ U $ with the same endpoints. Then by m-convexity, $ d(\gamma_1(t), \gamma_2(t)) $ is at its largest at $ t = 0 $  or $ t=1 $, so that $ \gamma_1 = \gamma_2 $, and thus $ U $ is unique geodesic space. Likewise, m-convexity implies our minimizing geodesics vary continuously with their endpoints. 
 			
 
 &emsp; We are left to show that $ G_x $ and $ X $ are length spaces, and that $ G_x $ is complete. Since we only care about the topology of our spaces when considering covers, we equip them with their respective intrinsic metrics $ \hat{\rho} $ and $ \hat{d} $. Because $ X $ is locally a geodesic space and $ \text{ev}_x $ is a local isometry, this implies that the topologies induced by our intrinsic metrics agree locally with the original topologies, and thus globally. For $ (G_x, \hat{\rho}) $ being complete, we observe that the distance between two elements in the intrinsic metric is always greater than the original. Therefore, a sequence being Cauchy with respect to $ \hat{\rho} $ implies it is for $ \rho $. Since $ X $ is locally m-convex, in small neighborhoods on $ G_x $ we get that $ \rho(\gamma_1, \gamma_2) = d(\text{ev}_x(\gamma_1), \text{ev}_x(\gamma_2)) $, and thus $ X $ being complete implies $ G_x $ is complete, both with $ \rho $ and $ \hat{\rho} $.
 		
         	
-&emsp; We conclude our proof by observing that $ G_x $ is contractible, and thus simply connected, meaning our cover is universal. Comparing this to the proof of theorem 2.1, we see that our construction gives us a unique geodesic in each homotopy class of curves between two points in $ X $. Q.E.D.
+&emsp; We conclude our proof by observing that $ G_x $ is contractible, and thus simply connected, meaning our cover is universal. Comparing this to the proof of [theorem 2.1](https://www.justinasher.me/Metric-space-CH-2:1){:target="_blank"}, we see that our construction gives us a unique geodesic in each homotopy class of curves between two points in $ X $. Q.E.D.
 
 
 
