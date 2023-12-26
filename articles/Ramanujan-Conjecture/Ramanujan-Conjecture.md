@@ -27,7 +27,7 @@ title: The Ramanujan conjecture
 
 
 ## Table of Contents
-1. [Modular forms and Hecke operators](#1-modular-forms)
+1. [Modular forms and Hecke operators](#1-modular-forms-and-hecke-operators)
 2. [Ramanujan's conjectures](#2-ramanujans-conjectures)
 3. [Deligne's proof](#3-delignes-proof)
 4. [Deligne's alternative à la Weil II](#4-delignes-alternative-à-la-weil-ii)
@@ -257,7 +257,7 @@ and since $ S_{12} $ is of dimension 1, $ \Delta(z) $ is an eigenform. The coeff
 
 
 
-## 3. Deligne's proof à la Weil I
+## 3. Deligne's proof
 
 
 
