@@ -536,7 +536,7 @@ $$
 #### Applying Weil II
 
 
-&emsp; In order to resolve the problem of $ M_n $ not being a smooth projective variety, Deligne uses some machinary which we will not discuss here. This allows us to apply the results of [\[3\]](#4-references) to get
+&emsp; Applying the results of [\[3\]](#4-references), we arrive at
 
 **Theorem 3.8.** &nbsp; *The eigenvalues of the Frobenious $ F $ acting on $ ^k_n W_{\ell} $ are algebraic integers of absolute value $ p^{(k+1)/2} $.*
 
