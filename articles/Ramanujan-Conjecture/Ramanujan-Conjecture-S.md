@@ -303,7 +303,7 @@ $$
 H_p(z) = \det(1-FX; \, {_1^{10}} W_{\ell}),
 $$
 
-and hence the roots of $ H_p $ are the eigenvalues of this action. Our result will then follow from the Riemann hypothesis of the Weil conjectures. 
+and hence the roots of $ H_p $ are the eigenvalues of this action. Our result will then follow from Deligne's second paper on the Weil conjectures. 
 
 
 
@@ -534,12 +534,22 @@ $$
 
 
 
-#### Applying the Riemann hypothesis
+#### Applying Weil II
 
 
-&emsp; In order to resolve the problem of $ M_n $ not being a smooth projective variety, Deligne uses some machinary which we will not discuss here. This allows us to apply the Riemann hypothesis of the Weil conjectures to get the following:
+&emsp; In order to resolve the problem of $ M_n $ not being a smooth projective variety, Deligne uses some machinary which we will not discuss here. This allows us to apply the results of [\[3\]](#5-references) to get
 
 **Theorem 3.8.** &nbsp; *The eigenvalues of the Frobenious $ F $ acting on $ ^k_n W_{\ell} $ are algebraic integers of absolute value $ p^{(k+1)/2} $.*
+
+*Proof.* Recall
+
+$$
+{^k_n} W_{\ell}
+= \widetilde{H}^1(M_n^{\text{an}} \otimes \overline{\mathbb{Q}}, \, \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}}))).
+$$
+
+We have $$ R^1 f_{n*} (\underline{\mathbb{Q}_{\ell}}) $$ is pointedly pure of weight 1, so $$ \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}})) $$ is pointedly pure of weight $ k $, and hence the cohomology object is pointedly pure of weight $ k + 1 $. Q.E.D.
+
 
 
 &emsp; Since $ I_p^* $ induces the identity on $$ {_1^k} W_{\ell} $$, we have 
@@ -583,20 +593,6 @@ H_p(X) = \det(1-FX; \, {_1^{10} W_{\ell}}).
 $$
 
 Applying [theorem 3.8](https://www.justinasher.me/Ramanujan-conjecture-T3:8){:target="_blank"} completes Deligne's proof of the Ramanujan conjecture. Q.E.D.
-
-
-
-
-## 4. Deligne's alternative à la Weil II
-
-
-&emsp; Deligne's second paper on the Weil conjectures, [\[3\]](#5-references), can be applied to bypass the Eichler-Shimura relations. Indeed, [lemma 3.5](https://www.justinasher.me/Ramanujan-conjecture-L3:5){:target="_blank"} (essentially) reduces us to computing the eigenvalues of 
-
-$$
-\widetilde{H}^1(M_n^{\text{an}} \otimes \overline{\mathbb{Q}}, \, \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}}))),
-$$
-
-then dividing by 2. Here, $$ R^1 f_{n*} (\underline{\mathbb{Q}_{\ell}}) $$ is pointedly pure of weight 1, so $$ \text{Sym}^k(R^1 f_{n*}(\underline{\mathbb{Q_{\ell}}})) $$ is pointedly pure of weight $ k $, and hence the cohomology object is pointedly pure of weight $ k + 1 $. In particular for $ k = 10 $, it is pointedly pure of weight 11, and thus $ S_{10} $ has eigenvectors of absolute value $ p^{11/2} $.
 
 
 
