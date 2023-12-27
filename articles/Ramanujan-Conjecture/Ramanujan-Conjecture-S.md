@@ -595,7 +595,7 @@ Applying [theorem 3.8](https://www.justinasher.me/Ramanujan-conjecture-T3:8){:ta
 
 
 
-## 5. References
+## 4. References
 
 1. Pierre Deligne. "Formes modulaires et représentations $ l $-adiques". *Séminaire Bourbaki*, no. 355 (1968–1969).
 2. Pierre Deligne. "La conjecture de Weil: I". *Publications Mathématiques de l'IHÉS*, Volume 43 (1974), pp. 273-307. [Link](http://www.numdam.org/item/PMIHES_1974__43__273_0/)
