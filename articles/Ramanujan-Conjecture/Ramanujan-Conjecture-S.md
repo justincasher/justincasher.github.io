@@ -21,7 +21,7 @@ title: The Ramanujan conjecture
 }
 </style>
 <br>
-**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see [\[1\]](#5-references).
+**Abstract.** &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs. For a more comprehensive treatment see [\[1\]](#4-references).
 
 
 
@@ -30,8 +30,7 @@ title: The Ramanujan conjecture
 1. [Modular forms and Hecke operators](#1-modular-forms-and-hecke-operators)
 2. [Ramanujan's conjectures](#2-ramanujans-conjectures)
 3. [Deligne's proof](#3-delignes-proof)
-4. [Deligne's alternative à la Weil II](#4-delignes-alternative-à-la-weil-ii)
-5. [References](#5-references)
+4. [References](#4-references)
 
 
 
@@ -39,7 +38,7 @@ title: The Ramanujan conjecture
 ## 1. Modular forms and Hecke operators
 
 
-&emsp; See Lang's book, [\[4\]](#5-references), for the details of this section. Let $ k $ be a field, and let $ E $ be a $ k $-variety. The following are equivalent:
+&emsp; See Lang's book, [\[4\]](#4-references), for the details of this section. Let $ k $ be a field, and let $ E $ be a $ k $-variety. The following are equivalent:
 
 1.  $ E $ is an abelian variety of dimension 1 over $ k $;
 
@@ -537,7 +536,7 @@ $$
 #### Applying Weil II
 
 
-&emsp; In order to resolve the problem of $ M_n $ not being a smooth projective variety, Deligne uses some machinary which we will not discuss here. This allows us to apply the results of [\[3\]](#5-references) to get
+&emsp; In order to resolve the problem of $ M_n $ not being a smooth projective variety, Deligne uses some machinary which we will not discuss here. This allows us to apply the results of [\[3\]](#4-references) to get
 
 **Theorem 3.8.** &nbsp; *The eigenvalues of the Frobenious $ F $ acting on $ ^k_n W_{\ell} $ are algebraic integers of absolute value $ p^{(k+1)/2} $.*
 
