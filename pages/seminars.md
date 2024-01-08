@@ -9,11 +9,11 @@ This spring I am organizing a graduate seminar at Indiana University on topics i
 
 
 
-## Graduate algebraic geometry and number theory seminar
+### Graduate algebraic geometry and number theory seminar
 
 We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
 
-### Schedule
+#### Schedule
 
 | Date | Speaker | Topic | Details |
 | -------- | ---------- | -------- | ---------- |
@@ -37,13 +37,13 @@ We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
 
 
 
-## Infinity categories reading group
+### Infinity categories reading group
 
 We meet on Thursdays with the time and room yet to be decided.
 
 
 
-## Past seminars
+### Past seminars
 
 [Fall 2023 AG & NT seminar]({{'/Fall-2023-AG-NT-seminar' | relative_url}})
 
