@@ -5,13 +5,12 @@ feedformat: card
 title: Seminars
 ---
 <br/>
-This spring I am organizing a graduate seminar at Indiana University on topics in algebraic geometry and number theory. I am also running a reading group on higher algebra. The schedule has yet to be decided.
-
 
 
 ### Graduate algebraic geometry and number theory seminar
 
 We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
+
 
 #### Schedule
 
@@ -31,9 +30,6 @@ We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
 | 4/9/2023 | | | |
 | 4/16/2023 | | | |
 | 4/23/2023 | | | |
-
-
-
 
 
 
