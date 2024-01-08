@@ -34,7 +34,7 @@ We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
 
 ### Infinity categories reading group
 
-We meet on Thursdays with the time and room yet to be decided.
+We meet on Wednesdays with the time and room yet to be decided.
 
 
 
