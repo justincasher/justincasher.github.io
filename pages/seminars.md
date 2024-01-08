@@ -4,7 +4,6 @@ permalink: /seminars
 feedformat: card
 title: Seminars
 ---
-<br/>
 
 
 ### Graduate algebraic geometry and number theory seminar
@@ -12,7 +11,7 @@ title: Seminars
 We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
 
 
-#### Schedule
+###### Schedule
 
 | Date | Speaker | Topic | Details |
 | -------- | ---------- | -------- | ---------- |
