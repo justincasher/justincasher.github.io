@@ -157,7 +157,7 @@ Hence, as $ r $ goes to infinity, our sum goes to
 
 $$
 \left( \sum_{a=0}^{\infty} p^{-a} \right) \left( \sum_{b=0}^{\infty} q^{-b} \right)
-= \left( \frac{1}{1-p} \right) \left( \frac{1}{1-q} \right)
+= \left( \frac{1}{1-p^{-1}} \right) \left( \frac{1}{1-q^{-1}} \right)
 $$
 
 giving us our limit. $ \blacksquare $
@@ -249,7 +249,7 @@ which diverges since $ \{a_n\} $ is unbounded. $ \blacksquare $
 
 **2021 F P6.** &nbsp; *Let $ a_0 \in (0, 1) $ and $ a_{n+1} = a_n^3 - a_n^2 + 1 $. Prove that (a) $ \{a_n\} $ converges and find its limit; and (b) that $ b_n = \prod_{i=1}^{n} a_i $ converges and find its limit.*
 
-*Proof.* (a) We observe $ a_{n+1} > a_n $ implies $ a_n^3 - a_n^2 - a_n + 1 > 0 $.  Writing this as a polynomial $ f(x) = x^3 - x^2 - x + 1 $, we observe  $ f(x) = (x-1)^2 (x+1) $ and $ f(0) = 1 $. Hence $ f $ is strictly positive on $ (-1, 1) $, and our sequence is monotonically increasing. We further observe $ a_n^3 - a_n^2 +1 < 1 $ implies $ a_n < 1 $, which is true by assumption, so our sequence is bounded above by $ 1 $; thus, our sequence has a limit. To find the limit $ a_* $, we see 
+*Proof.* (a) We observe $ a_{n+1} > a_n $ is equivalent to $ a_n^3 - a_n^2 - a_n + 1 > 0 $.  Writing this as a polynomial $ f(x) = x^3 - x^2 - x + 1 $, we observe  $ f(x) = (x-1)^2 (x+1) $ and $ f(0) = 1 $. Hence $ f $ is strictly positive on $ (-1, 1) $, and our sequence is monotonically increasing. We further observe $ a_n^3 - a_n^2 +1 < 1 $ implies $ a_n < 1 $, which is true by assumption, so our sequence is bounded above by $ 1 $; thus, our sequence has a limit. To find the limit $ a_* $, we see 
 
 $$
 \lim_n a_{n+1} = \lim_n a_n^3 - a_n^2 + 1 
@@ -1661,7 +1661,7 @@ $$
 = \int_E \text{Div} F dV - \int_B (F \cdot n) dA. 
 $$
 
-We see $ \text{Div} F = 0 $ and the volume of any pyramid is $ \frac{1}{3} b h $ where $ b = 9 $ and $ h = 5 $, so 
+We see $ \text{Div} F = 7 $ and the volume of any pyramid is $ \frac{1}{3} b h $ where $ b = 9 $ and $ h = 5 $, so 
 
 $$
 \int_E \text{Div} F dV 
@@ -1740,7 +1740,7 @@ so $ \nabla \phi(-1, 1) = (0, -1)^T $. $ \blacksquare $
 
 $$
 \{(x_1, x_2, x_3) \mid G(x_1, x_2, x_3) = 0 \}
-= \{ (x_1, \phi(x_1), \phi(x_1) \mid x_1 \in I \}
+= \{ (x_1, \phi(x_1), \psi(x_1) \mid x_1 \in I \}
 $$
 
 *in a neighborhood of $ (x_0, y_0, z_0) $?*
