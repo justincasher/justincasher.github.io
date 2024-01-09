@@ -8,7 +8,7 @@ title: Seminars
 
 ### Graduate algebraic geometry and number theory seminar
 
-We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
+We meet from 1:00 PM to 1:55 PM on Tuesdays. The room has yet to be decided.
 
 
 ###### Schedule
@@ -34,7 +34,13 @@ We meet on Tuesdays from 1:00 PM to 1:55 PM. The room has yet to be decided.
 
 ### Infinity categories reading group
 
-We meet on Wednesdays with the time and room yet to be decided.
+We meet from 1:45 PM to 2:45 PM on Thursdays. The room has yet to be decided.
+
+###### Schedule
+
+| Week of | Topic | Resources |
+| -------- | ---------- | ---------- |
+| 1/11/2023 | Introduction to $ \infty $-categories | |
 
 
 
