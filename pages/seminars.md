@@ -32,7 +32,7 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays. The room has yet to be decided.
 
 
 
-### Infinity categories reading group
+### Infinity categories and higher algebra reading group
 
 We meet from 1:45 PM to 2:45 PM on Thursdays. The room has yet to be decided.
 
