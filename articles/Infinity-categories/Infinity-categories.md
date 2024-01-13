@@ -114,6 +114,18 @@ We will not show this here, but $ \text{Sing} $ is a functor from topological sp
 **Proposition 2.** &nbsp; *$ \text{Sing}(A) $ is a Kan complex.*
 
 
+*Proof.* The adjunction $ \vert \cdot \vert \dashv \text{Sing}(\cdot) $ implies the following diagram:
+
+$$
+\xymatrix{
+    \text{Hom}_{Top}(\vert \Delta^n \vert, A) \ar[r]^{\cong} \ar[d]_{\vert \iota \vert^*}
+    & \text{Hom}_{Set_{\Delta}}(\Delta^n, \text{Sing}(A)) \\
+    \text{Hom}_{Top}(\vert \Gamma_i^n \vert, A) \ar[r]^{\cong} \ar[d]^{\iota^*}
+    & \text{Hom}_{Set_{\Delta}}(\Lambda_i^n, \text{Sing}(A))
+}
+$$
+
+
 
 
 ## 2. References
