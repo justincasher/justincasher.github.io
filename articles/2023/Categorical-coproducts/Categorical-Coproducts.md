@@ -197,7 +197,7 @@ We see that in this category for a family of elements $$ \{ x_i \} $$ in $$ X $$
 
 $$ 
 \xymatrix{ 
-    y \ar@{.>}[d]|-{\exists !h} \ar[dr]^{g_m} \\
+    y \ar@{.>}[d]|-{\exists !h} \ar[rd]^{g_m} \\
     \prod x_i \ar[r]_{\pi_n} & x_m.
 } 
 $$

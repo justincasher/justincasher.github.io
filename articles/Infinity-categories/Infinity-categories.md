@@ -21,7 +21,7 @@ title: Infinity categories and higher algebra seminar notes
 }
 </style>
 <br>
-**Abstract.** &nbsp; This is a collection of notes I am creating for a reading group on infinity categories and higher algebra at Indiana University in the spring of 2024.
+**Abstract.** &nbsp; This is a collection of notes I am creating for a reading group on $ \infty $-categories and higher algebra at Indiana University in the spring of 2024.
 
 
 
@@ -61,7 +61,7 @@ $$
 = \{f \in \Delta^n([m]) \mid f([m]) \cup \{ i \} \neq [n] \}
 $$
 
-is called the *$ i $-th horn*; it is referring to as being *inner* if $ 0 < i < n $ and *outer* if $ i = 0, n $.
+is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n $ and *outer* if $ i = 0, n $.
 
 $$
 \xymatrix{ 
