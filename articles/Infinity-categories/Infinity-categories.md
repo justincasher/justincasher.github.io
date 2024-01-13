@@ -54,7 +54,8 @@ $$
 X_n = \text{Hom}_{\text{Set}_{\Delta}}(\Delta^n, X).
 $$
 
-The simplicial subset 
+
+&emsp; The simplicial subset of $ \Delta^n $
 
 $$
 \Lambda_i^n([m])
@@ -65,16 +66,16 @@ is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n
 
 $$
 \xymatrix{ 
-    & \{1\} \ar@{.>}[dr] \\
-    \{0\} \ar[ur] \ar[rr] & & \{2\}
+    \{1\} \ar@{.>}[dr] \\
+    \{0\} \ar[u] \ar[r] & \{2\}
 } 
 \xymatrix{ 
-    & \{1\} \ar[dr] \\
-    \{0\} \ar[ur] \ar@{.>}[rr] & & \{2\}
+    \{1\} \ar[dr] \\
+    \{0\} \ar[u] \ar@{.>}[r] & \{2\}
 }
 \xymatrix{ 
-    & \{1\} \ar[dr] \\
-    \{0\} \ar@{.>}[ur] \ar[rr] & & \{2\}
+    \{1\} \ar[dr] \\
+    \{0\} \ar@{.>}[u] \ar[r] & \{2\}
 }
 $$
 
@@ -87,6 +88,9 @@ $$
     \Delta^n
 } 
 $$
+
+
+**Example.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. 
 
 
 
