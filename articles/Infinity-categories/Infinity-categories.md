@@ -93,22 +93,22 @@ $$
 $$
 
 
-**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \abs \Delta^n \abs $ for the geometric realization of $ \Delta^n $, i.e. the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
+**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e. the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
 
 $$
-\text{Sing}_n(A) = \text{Hom}_{\text{Top}}(|\Delta^n|, A) 
+\text{Sing}_n(A) = \text{Hom}_{\text{Top}}(\vert \Delta^n \vert, A) 
 $$
 
 to be the set of singular $ n $-simplices. Each $ f \colon [m] \to [n] $ determines a morphism $ \text{Sing}_n(A) \to \text{Sing}_m(A) $ by precomposing with the map 
 
 $$
-|\Delta^m| \to |\Delta^n|, 
+\vert \Delta^m \vert \to \vert \Delta^n \vert, 
 \qquad
 (t_0, \dots, t_n) \to 
 \left( \sum_{f(i)= 0} t_i, \dots, \sum_{f(i)= n} t_i \right).
 $$
 
-We will not show this here, but $ \text{Sing} $ is a functor from topological spaces to simplicial sets, whose left adjoint is the geometric realization functor $ | \cdot | $.
+We will not show this here, but $ \text{Sing} $ is a functor from topological spaces to simplicial sets, whose left adjoint is the geometric realization functor $ \vert \cdot \vert $.
 
 
 **Proposition 2.** &nbsp; *$ \text{Sing}(A) $ is a Kan complex.*
