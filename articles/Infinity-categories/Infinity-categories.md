@@ -84,12 +84,12 @@ $$
 Here, when performing the operation "$ \cup \{ i \} $", we add any arrows touching the vertex $ \{ i \} $ to the diagram.
 
 
-&emsp; Let $ X $ be a simplicial set and $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ the inclusion. We say $ X $ is a *Kan complex* if, for any horn $ \Lambda_i^n $ and morphism $ f_0 \colon \Lambda_i^n \to X $, there exists a morphism $ f \colon \Delta^n \to X $ such that $ f \circ \iota = f_0 $: 
+&emsp; Let $ X $ be a simplicial set and $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ the inclusion. We say $ X $ is a *Kan complex* if, for any horn $ \Lambda_i^n $ and morphism $ f_0 \colon \Lambda_i^n \to X $, there exists a morphism $ f \colon \Delta^n \to X $ such that $ f \circ \iota = f_0 $; pictorially, the following diagram must commute:
 
 $$
 \xymatrix{ 
     \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
-    \Delta^n \ar@{.>}[ur]
+    \Delta^n \ar@{.>}[ur]_{f}
 } 
 $$
 
