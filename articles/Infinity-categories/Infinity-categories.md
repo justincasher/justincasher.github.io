@@ -65,8 +65,8 @@ is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n
 
 $$
 \xymatrix{ 
-    & 1 \ar@{.>}[dr] \\
-    0 \ar[ur] \ar[rr] & 2
+    & \{1\} \ar@{.>}[dr] \\
+    \{0\} \ar[ur] \ar[rr] & & \{2\}
 } 
 $$
 
