@@ -66,7 +66,7 @@ is called the *$ i $-th horn*; it is referring to as being *inner* if $ 0 < i < 
 $$
 \xymatrix{ 
     & \{1\} \ar@{.>}[dr] \\
-    \{0\} \ar[ur] \ar[rr] & \{2}
+    \{0\} \ar[ur] \ar[rr] & \{2\}
 } 
 $$
 
