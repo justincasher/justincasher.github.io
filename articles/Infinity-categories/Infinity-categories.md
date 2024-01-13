@@ -80,15 +80,16 @@ $$
     \{0\} \ar@{.>}[u] \ar[r] & \{2\}
 }
 $$
-Here, when performing the operation "$ \cup \{ i \} $", we add anyarrows touching the vertex $ \{ i \} $.
+
+Here, when performing the operation "$ \cup \{ i \} $", we add any arrows touching the vertex $ \{ i \} $ to the diagram.
 
 
 &emsp; Let $ X $ be a simplicial set and $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ the inclusion. We say $ X $ is a *Kan complex* if, for any horn $ \Lambda_i^n $ and morphism $ f_0 \colon \Lambda_i^n \to X $, there exists a morphism $ f \colon \Delta^n \to X $ such that $ f \circ \iota = f_0 $: 
 
 $$
 \xymatrix{ 
-    \Lambda_i^n & X \\
-    \Delta^n
+    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
+    \Delta^n \ar@{.>}[ur]
 } 
 $$
 
@@ -125,7 +126,8 @@ $$
 }
 $$
 
-This reduces the problem of lifting $ f_0 \colon \Lambda_i^n \to \text{Sing}(A) $ to lifting the associated $ \vert f_0 \vert \colon \vert \Lambda_i^n \vert \to A $. Let $ r \colon \Delta^n \to \Lambda_i^n $ be a continuous retract. We conclude that $ \vert f \vert \colon \vert \Delta^n \vert \to A $ given by $ \vert f \vert = \vert f_0 \vert \circ r $ is our desired map.
+This reduces the problem of lifting $ f_0 \colon \Lambda_i^n \to \text{Sing}(A) $ to lifting the associated $ \vert f_0 \vert \colon \vert \Lambda_i^n \vert \to A $. Let $ r \colon \Delta^n \to \Lambda_i^n $ be a continuous retract. We conclude that $ \vert f \vert \colon \vert \Delta^n \vert \to A $ given by $ \vert f \vert = \vert f_0 \vert \circ r $ is our desired map. Q.E.D. 
+
 
 
 
