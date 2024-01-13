@@ -62,22 +62,25 @@ $$
 = \{f \in \Delta^n([m]) \mid f([m]) \cup \{ i \} \neq [n] \}
 $$
 
-is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n $ and *outer* if $ i = 0, n $.
+is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n $ and *outer* if $ i = 0, n $. Lurie visualizes $ \Gamma_0^2 $, $ \Gamma_1^2 $, and $ \Gamma_2^2 $, respectively, as follows:
 
 $$
 \xymatrix{ 
     \{1\} \ar@{.>}[dr] \\
     \{0\} \ar[u] \ar[r] & \{2\}
 } 
+\quad
 \xymatrix{ 
     \{1\} \ar[dr] \\
     \{0\} \ar[u] \ar@{.>}[r] & \{2\}
 }
+\quad
 \xymatrix{ 
     \{1\} \ar[dr] \\
     \{0\} \ar@{.>}[u] \ar[r] & \{2\}
 }
 $$
+Here, when performing the operation "$ \cup \{ i \} $", we add anyarrows touching the vertex $ \{ i \} $.
 
 
 &emsp; Let $ X $ be a simplicial set and $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ the inclusion. We say $ X $ is a *Kan complex* if, for any horn $ \Lambda_i^n $ and morphism $ f_0 \colon \Lambda_i^n \to X $, there exists a morphism $ f \colon \Delta^n \to X $ such that $ f \circ \iota = f_0 $: 
@@ -90,7 +93,7 @@ $$
 $$
 
 
-**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ | \Delta^n | $ for the geometric realization of $ \Delta^n $, i.e. the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
+**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \abs \Delta^n \abs $ for the geometric realization of $ \Delta^n $, i.e. the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
 
 $$
 \text{Sing}_n(A) = \text{Hom}_{\text{Top}}(|\Delta^n|, A) 
