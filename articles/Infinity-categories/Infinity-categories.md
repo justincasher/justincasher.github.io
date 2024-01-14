@@ -21,7 +21,7 @@ title: Infinity categories and higher algebra seminar notes
 }
 </style>
 <br>
-**Abstract.** &nbsp; This is a collection of notes I am creating for a reading group on $ \infty $-categories and higher algebra at Indiana University in the spring of 2024.
+**Abstract.** &nbsp; This is a collection of short notes I am creating for a reading group on $ \infty $-categories and higher algebra at Indiana University in the spring of 2024.
 
 
 
@@ -36,10 +36,10 @@ title: Infinity categories and higher algebra seminar notes
 ## 1. Introduction to infinity-categories
 
 
-&emsp; The *simplex category* has objects sets $ [n] = \{0, 1, \dots, n \} $ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
+&emsp; The *simplex category* has objects sets $$ [n] = \{ 0, 1, \dots, n \} $$ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
 
 
-&emsp; A presheaf of sets, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphisms of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
+&emsp; A presheaf of sets on $ \Delta $, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphisms of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
 
 
 &emsp; The simplicial set 
@@ -156,7 +156,7 @@ $$
 \xymatrix{ 
     \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
     \Delta^n \ar@{.>}[ur]_{f}
-},
+}
 $$
 
 *there exists a* unique *dotted arrow making it commute*.
@@ -198,17 +198,17 @@ $$
 \quad
 \xymatrix{ 
     y \ar[dr]^{h} \\
-    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z.
+    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
 }
 $$
 
-The uniqueness of extension implies the forth face, 
+The uniqueness of extension implies the forth face
 
 $$
 \xymatrix{ 
     x \ar[dr]^{h \circ g} \\
     w \ar[u]^{f} \ar[r]_{h \circ (g \circ f)} & z
-},
+}
 $$
 
 yielding the associativity law $ h \circ (g \circ f) = (h \circ g) \circ f $. Q.E.D.
