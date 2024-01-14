@@ -1,7 +1,7 @@
 ---
 layout: Writing
 indent: true
-permalink: /Infinity-categories
+permalink: /infinity-categories
 feedformat: card
 title: Infinity categories and higher algebra seminar notes
 ---
@@ -81,7 +81,7 @@ $$
 }
 $$
 
-Here, when performing the operation "$ \cup \{ i \} $", we add any arrows touching the vertex $ \{ i \} $ to the diagram.
+Here, when performing the operation "$$ \cup \{ i \} $$", we add any arrows touching the vertex $ \{ i \} $ to the diagram.
 
 
 &emsp; Let $ X $ be a simplicial set and $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ the inclusion. We say $ X $ is a *Kan complex* if, for any horn $ \Lambda_i^n $ and morphism $ f_0 \colon \Lambda_i^n \to X $, there exists a morphism $ f \colon \Delta^n \to X $ such that $ f \circ \iota = f_0 $; pictorially, the following diagram must commute:
@@ -109,7 +109,7 @@ $$
 \left( \sum_{f(i)= 0} t_i, \dots, \sum_{f(i)= n} t_i \right).
 $$
 
-We will not show this here, but $ \text{Sing} $ is a functor from topological spaces to simplicial sets, whose left adjoint is the geometric realization functor $ \vert \cdot \vert $.
+$ \text{Sing} $ is a functor from topological spaces to simplicial sets, whose left adjoint is the geometric realization functor $ \vert \cdot \vert $.
 
 
 **Proposition 2.** &nbsp; *$ \text{Sing}(A) $ is a Kan complex.*
@@ -127,6 +127,79 @@ $$
 $$
 
 This reduces the problem of lifting $ f_0 \colon \Lambda_i^n \to \text{Sing}(A) $ to lifting the associated $ \vert f_0 \vert \colon \vert \Lambda_i^n \vert \to A $. Let $ r \colon \Delta^n \to \Lambda_i^n $ be a continuous retract. We conclude that $ \vert f \vert \colon \vert \Delta^n \vert \to A $ given by $ \vert f \vert = \vert f_0 \vert \circ r $ is our desired map. Q.E.D. 
+
+
+**Example 3.** &nbsp; Let $ \mathcal{C} $ be a small category. Define a simplicial set $ N(\mathcal{C}) $, the *nerve of $ \mathcal{C} $*, by considering functors
+
+$$
+N_n(\mathcal{C}) = \text{Fun}([n], \mathcal{C}).
+$$
+
+Here, we are considering $ [n] $ as the category with objects $ \{0, 1, \dots, n\} $ and arrows $ i \to j $ if $ i \leq j $. In particular, objects of $ N_n(\mathcal{C}) $ are composable sequences of morphisms 
+
+$$
+\xymatrix{
+    C_1 \arrow[r]^{f_1} C_2 \arrow[r]^{f_2} & \cdots \arrow[r]^{f_n} & C_n.
+}
+$$
+
+The following proposition tells us we can consider the nerve as a *weak Kan complex*, meaning it satisfies the Kan lifting condition for all inner horns.
+
+
+**Proposition 4.** &nbsp; *Let $ X $ be a simplicial set. The following are equivalent:*
+
+*(1) There exists a small category and an isomorphism $ X \cong N(\mathcal{C}) $.*
+
+*(2) For each inner horn, $ 0 < i < n $, and diagram*
+
+$$
+\xymatrix{ 
+    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
+    \Delta^n \ar@{.>}[ur]_{f},
+} 
+$$
+
+*there exists a* unique *dotted arrow making it commute*.
+
+*Proof.* This is [INSERT HTT REFERENCE] 1.1.2.2. We only sketch a couple main ideas without giving a complete proof.
+
+$ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restriction $ f_0 \mid \Delta^{\{ k-1, k \}} $. Composing our $ g_k $, 
+
+$$
+\xymatrix{
+    X_1 \arrow[r]^{g_1} X_2 \arrow[r]^{g_2} & \cdots \arrow[r]^{g_n} & X_n,
+}
+$$
+
+determines an $ n $-simplex $ f \colon \Delta^n \to X $. 
+
+
+$ (2) \implies (1) $ &nbsp; We only mention the proof of associativity law of the composition operator. Consider a sequence of morphisms 
+
+$$
+\xymatrix{
+    w \arrow[r]^{f} x \arrow[r]^{g} & y \arrow[r]^{h} & z.
+}
+$$
+
+This give us 3 faces of the 4-sided 3-simplex:
+
+$$
+\xymatrix{ 
+    x \ar@{.>}[dr]^{g} \\
+    w \ar[u]^{f} \ar[r]_{g \circ f} & y
+} 
+\quad
+\xymatrix{ 
+    y \ar[dr]^{h} \\
+    x \ar[u]^{g} \ar@{.>}[r]_{h \circ g} & z
+}
+\quad
+\xymatrix{ 
+    y \ar[dr]^{h} \\
+    w \ar@{.>}[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
+}
+$$
 
 
 
