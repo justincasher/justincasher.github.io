@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: 0_seminar_notes
 indent: true
 permalink: /infinity-categories-S
 feedformat: card
