@@ -139,7 +139,7 @@ Here, we are considering $ [n] $ as the category with objects $ \{0, 1, \dots, n
 
 $$
 \xymatrix{
-    C_1 \arrow[r]^{f_1} C_2 \arrow[r]^{f_2} & \cdots \arrow[r]^{f_n} & C_n.
+    C_1 \ar[r]^{f_1} C_2 \ar[r]^{f_2} & \cdots \ar[r]^{f_n} & C_n.
 }
 $$
 
@@ -161,13 +161,14 @@ $$
 
 *there exists a* unique *dotted arrow making it commute*.
 
+
 *Proof.* This is [INSERT HTT REFERENCE] 1.1.2.2. We only sketch a couple main ideas without giving a complete proof.
 
 $ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restriction $ f_0 \mid \Delta^{\{ k-1, k \}} $. Composing our $ g_k $, 
 
 $$
 \xymatrix{
-    X_1 \arrow[r]^{g_1} X_2 \arrow[r]^{g_2} & \cdots \arrow[r]^{g_n} & X_n,
+    X_1 \ar[r]^{g_1} X_2 \ar[r]^{g_2} & \cdots \ar[r]^{g_n} & X_n,
 }
 $$
 
@@ -178,7 +179,7 @@ $ (2) \implies (1) $ &nbsp; We only mention the proof of associativity law of th
 
 $$
 \xymatrix{
-    w \arrow[r]^{f} x \arrow[r]^{g} & y \arrow[r]^{h} & z.
+    w \ar[r]^{f} & x \ar[r]^{g} & y \ar[r]^{h} & z.
 }
 $$
 
@@ -186,18 +187,18 @@ This give us 3 faces of the 4-sided 3-simplex:
 
 $$
 \xymatrix{ 
-    x \ar@{.>}[dr]^{g} \\
+    x \ar[dr]^{g} \\
     w \ar[u]^{f} \ar[r]_{g \circ f} & y
 } 
 \quad
 \xymatrix{ 
     y \ar[dr]^{h} \\
-    x \ar[u]^{g} \ar@{.>}[r]_{h \circ g} & z
+    x \ar[u]^{g} \ar[r]_{h \circ g} & z
 }
 \quad
 \xymatrix{ 
     y \ar[dr]^{h} \\
-    w \ar@{.>}[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
+    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
 }
 $$
 
