@@ -162,7 +162,7 @@ $$
 *there exists a* unique *dotted arrow making it commute*.
 
 
-*Proof.* This is [INSERT HTT REFERENCE] 1.1.2.2. We only sketch a couple main ideas without giving a complete proof.
+*Proof.* This is 1.1.2.2 of [\[1\]](#2-references). We only sketch a couple main ideas without giving a complete proof.
 
 $ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restriction $ f_0 \mid \Delta^{\{ k-1, k \}} $. Composing our $ g_k $, 
 
@@ -226,13 +226,13 @@ $$
 there there exists a dotted arrow making it commute. Note that the dotted arrow is not required to be unique, contrasting the case of the nerve of a category, and it is not required to exist on outer horns, unlike $ \text{Sing}(A) $. Thus, $ \infty $-categories can be thought of as a generalized framework for small category theory and algebraic topology.
 
 
-&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is, categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of HTT.
+&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is, categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[1\]](#2-references).
 
 
 ## 2. References
 
 1. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
 
-2. ————, *Higher Algebra*, 2017
+2. ————, *Higher Algebra*, 2017.
 
-3. 
+3. ————, *Kerodon*. [Link](https://kerodon.net/)
