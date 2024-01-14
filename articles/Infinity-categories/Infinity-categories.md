@@ -39,7 +39,7 @@ title: Infinity categories and higher algebra seminar notes
 &emsp; The *simplex category* has objects sets $$ [n] = \{ 0, 1, \dots, n \} $$ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
 
 
-&emsp; A presheaf of sets on $ \Delta $, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphisms of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
+&emsp; A presheaf of sets on $ \Delta $, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphism of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
 
 
 &emsp; The simplicial set 
@@ -81,7 +81,7 @@ $$
 }
 $$
 
-Here, when performing the operation "$$ \cup \{ i \} $$", we add any arrows touching the vertex $ \{ i \} $ to the diagram.
+Here, when performing the operation "$$ \cup \{ i \} $$", we add any arrows touching the vertex $$ \{ i \} $$ to the diagram.
 
 
 &emsp; Let $ X $ be a simplicial set and $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ the inclusion. We say $ X $ is a *Kan complex* if, for any horn $ \Lambda_i^n $ and morphism $ f_0 \colon \Lambda_i^n \to X $, there exists a morphism $ f \colon \Delta^n \to X $ such that $ f \circ \iota = f_0 $; pictorially, the following diagram must commute:
@@ -135,7 +135,7 @@ $$
 N_n(\mathcal{C}) = \text{Fun}([n], \mathcal{C}).
 $$
 
-Here, we are considering $ [n] $ as the category with objects $ \{0, 1, \dots, n\} $ and arrows $ i \to j $ if $ i \leq j $. In particular, objects of $ N_n(\mathcal{C}) $ are composable sequences of morphisms 
+Here, we are considering $ [n] $ as the category with objects $ \{0, 1, \dots, n\} $ and arrows $ i \to j $ if $ i \leq j $. Explicitly, objects of $ N_n(\mathcal{C}) $ are composable sequences of morphisms 
 
 $$
 \xymatrix{
@@ -155,14 +155,14 @@ The following proposition tells us we can consider the nerve as a *weak Kan comp
 $$
 \xymatrix{ 
     \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
-    \Delta^n \ar@{.>}[ur]_{f}
+    \Delta^n, \ar@{.>}[ur]_{f}
 }
 $$
 
 *there exists a* unique *dotted arrow making it commute*.
 
 
-*Proof.* This is 1.1.2.2 of [\[1\]](#2-references). We only sketch a couple main ideas without giving a complete proof.
+*Proof.* This is 1.1.2.2 of [\[1\]](#2-references). We only sketch a couple of main ideas without providing a complete proof.
 
 $ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restriction $ f_0 \mid \Delta^{\{ k-1, k \}} $. Composing our $ g_k $, 
 
@@ -198,16 +198,16 @@ $$
 \quad
 \xymatrix{ 
     y \ar[dr]^{h} \\
-    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
+    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z.
 }
 $$
 
-The uniqueness of extension implies the forth face
+The uniqueness of extension implies the fourth face,
 
 $$
 \xymatrix{ 
     x \ar[dr]^{h \circ g} \\
-    w \ar[u]^{f} \ar[r]_{h \circ (g \circ f)} & z
+    w \ar[u]^{f} \ar[r]_{h \circ (g \circ f)} & z,
 }
 $$
 
@@ -219,14 +219,14 @@ yielding the associativity law $ h \circ (g \circ f) = (h \circ g) \circ f $. Q.
 $$
 \xymatrix{ 
     \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
-    \Delta^n \ar@{.>}[ur]_{f}
-},
+    \Delta^n, \ar@{.>}[ur]_{f}
+}
 $$
 
 there there exists a dotted arrow making it commute. Note that the dotted arrow is not required to be unique, contrasting the case of the nerve of a category, and it is not required to exist on outer horns, unlike $ \text{Sing}(A) $. Thus, $ \infty $-categories can be thought of as a generalized framework for small category theory and algebraic topology.
 
 
-&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is, categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[1\]](#2-references).
+&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[1\]](#2-references).
 
 
 ## 2. References
