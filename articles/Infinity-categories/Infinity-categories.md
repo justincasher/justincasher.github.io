@@ -139,7 +139,7 @@ Here, we are considering $ [n] $ as the category with objects $ \{0, 1, \dots, n
 
 $$
 \xymatrix{
-    C_1 \ar[r]^{f_1} C_2 \ar[r]^{f_2} & \cdots \ar[r]^{f_n} & C_n.
+    C_1 \ar[r]^{f_1} & C_2 \ar[r]^{f_2} & \cdots \ar[r]^{f_n} & C_n.
 }
 $$
 
