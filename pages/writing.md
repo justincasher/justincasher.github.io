@@ -7,6 +7,18 @@ title: Writing
 <br/>
 This page contains an alphabetized list of (mostly expository) online mathematics articles I have written. You can either view them as a web article or as a poorly typeset PDF. Please send me an email if you find any errors or typos!
 
+
+
+
+### 2024
+
+1. [Infinity categories and higher algebra seminar notes]({{'/infinity-categories' | relative_url}})
+
+
+
+
+### 2023
+
 1. [Cartan-Hadamard theorem for metric spaces]({{'/Metric-space-CH' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1a7-0YepmhAe_Tf4acNGRu7SzIKACuutu)) 
 2. [Casas-Alvero conjecture]({{'/Casas-Alvero' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1_jPPSZY8D5vgJGiZ61W2VHzkl7R45aMj))
 3. [Categorical coproducts and K-theory]({{'/Categorical-coproducts' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1YXc55tdCfSZitPltA5BS34bY_q0wnbTv))
