@@ -155,7 +155,7 @@ The following proposition tells us we can consider the nerve as a *weak Kan comp
 $$
 \xymatrix{ 
     \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
-    \Delta^n \ar@{.>}[ur]_{f},
+    \Delta^n \ar@{.>}[ur]_{f}
 } 
 $$
 
@@ -168,7 +168,7 @@ $ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restri
 
 $$
 \xymatrix{
-    X_1 \ar[r]^{g_1} X_2 \ar[r]^{g_2} & \cdots \ar[r]^{g_n} & X_n,
+    X_1 \ar[r]^{g_1} & X_2 \ar[r]^{g_2} & \cdots \ar[r]^{g_n} & X_n,
 }
 $$
 
