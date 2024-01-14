@@ -198,20 +198,20 @@ $$
 \quad
 \xymatrix{ 
     y \ar[dr]^{h} \\
-    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z.
+    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
 }
 $$
 
-The uniqueness of extension implies the fourth face,
+By (2), we get a unique fourth face:
 
 $$
 \xymatrix{ 
     x \ar[dr]^{h \circ g} \\
-    w \ar[u]^{f} \ar[r]_{h \circ (g \circ f)} & z,
+    w \ar[u]^{f} \ar[r]_{h \circ (g \circ f)} & z
 }
 $$
 
-yielding the associativity law $ h \circ (g \circ f) = (h \circ g) \circ f $. Q.E.D.
+Thus, the associativity law $ h \circ (g \circ f) = (h \circ g) \circ f $. Q.E.D.
 
 
 &emsp; We define a simplicial set $ X $ to be an *$ \infty $-category* if it is a weak Kan complex; i.e., for each inner horn, $ 0 < i < n $, and diagram 
