@@ -36,10 +36,10 @@ title: Infinity categories and higher algebra seminar notes
 ## 1. Introduction to infinity-categories
 
 
-&emsp; The *simplex category* has objects sets $ [n] = \{0, 1, \dots, n \} $ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e. $ i \leq j $ implies $ f(i) \leq f(j) $. 
+&emsp; The *simplex category* has objects sets $ [n] = \{0, 1, \dots, n \} $ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
 
 
-&emsp; A presheaf of sets, i.e. a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphisms of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
+&emsp; A presheaf of sets, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphisms of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
 
 
 &emsp; The simplicial set 
@@ -94,7 +94,7 @@ $$
 $$
 
 
-**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e. the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
+**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e., the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
 
 $$
 \text{Sing}_n(A) = \text{Hom}_{\text{Top}}(\vert \Delta^n \vert, A) 
@@ -156,7 +156,7 @@ $$
 \xymatrix{ 
     \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
     \Delta^n \ar@{.>}[ur]_{f}
-} 
+},
 $$
 
 *there exists a* unique *dotted arrow making it commute*.
@@ -175,7 +175,7 @@ $$
 determines an $ n $-simplex $ f \colon \Delta^n \to X $. 
 
 
-$ (2) \implies (1) $ &nbsp; We only mention the proof of associativity law of the composition operator. Consider a sequence of morphisms 
+$ (2) \implies (1) $ &nbsp; We mention the proof of associativity law of the composition operator. Consider a sequence of morphisms 
 
 $$
 \xymatrix{
@@ -183,7 +183,7 @@ $$
 }
 $$
 
-This give us 3 faces of the 4-sided 3-simplex:
+We have the following 3 faces of the 4-sided 3-simplex:
 
 $$
 \xymatrix{ 
@@ -198,13 +198,41 @@ $$
 \quad
 \xymatrix{ 
     y \ar[dr]^{h} \\
-    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
+    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z.
 }
 $$
 
+The uniqueness of extension implies the forth face, 
 
+$$
+\xymatrix{ 
+    x \ar[dr]^{h \circ g} \\
+    w \ar[u]^{f} \ar[r]_{h \circ (g \circ f)} & z
+},
+$$
+
+yielding the associativity law $ h \circ (g \circ f) = (h \circ g) \circ f $. Q.E.D.
+
+
+&emsp; We define a simplicial set $ X $ to be an *$ \infty $-category* if it is a weak Kan complex; i.e., for each inner horn, $ 0 < i < n $, and diagram 
+
+$$
+\xymatrix{ 
+    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
+    \Delta^n \ar@{.>}[ur]_{f}
+},
+$$
+
+there there exists a dotted arrow making it commute. Note that the dotted arrow is not required to be unique, contrasting the case of the nerve of a category, and it is not required to exist on outer horns, unlike $ \text{Sing}(A) $. Thus, $ \infty $-categories can be thought of as a generalized framework for small category theory and algebraic topology.
+
+
+&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is, categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of HTT.
 
 
 ## 2. References
 
-1. 
+1. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
+
+2. ————, *Higher Algebra*, 2017
+
+3. 
