@@ -38,7 +38,7 @@ We meet from 1:45 PM to 2:45 PM on Thursdays. The room has yet to be decided.
 
 ###### Schedule
 
-| Week of | Topic | Resources |
+| Week of | Topic | Details |
 | -------- | ---------- | ---------- |
 | 1/11/2023 | Introduction to $ \infty $-categories | [Notes]({{'/infinity-categories#1-introduction-to-infinity-categories' | relative_url}}) |
 

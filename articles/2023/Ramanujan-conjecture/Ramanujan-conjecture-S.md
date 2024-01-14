@@ -1,5 +1,5 @@
 ---
-layout: Seminar-Notes
+layout: 2023_fall_AG_NT_seminar_notes
 indent: true
 permalink: /Ramanujan-conjecture-S
 feedformat: card
