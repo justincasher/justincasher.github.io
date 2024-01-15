@@ -18,7 +18,6 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays. The room has yet to be decided.
 
 | Date | Speaker | Topic | Details |
 | -------- | ---------- | -------- | ---------- |
-| 1/16/2023 | | | |
 | 1/23/2023 | | | |
 | 1/30/2023 | | | |
 | 2/6/2023 | | | |
