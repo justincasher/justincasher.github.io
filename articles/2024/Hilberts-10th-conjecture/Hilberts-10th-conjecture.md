@@ -167,17 +167,17 @@ If Hilbert's 10th problem were true, then there would exist a Turing machine $ T
 | $ \mathcal{O}_K $ | Unknown |
 
 
-&emsp; Here, $ K $ is a number field and $ \mathcal{O}_K $ its ring of integers. We do know the decidability of Hilbert's 10th problem for certain $ \mathcal{O}_K $ but not all. Indeed, theorem 14.1 in loc. cit. tells us it is false when
+&emsp; Here, $ K $ is a number field and $ \mathcal{O}_K $ its ring of integers. We do know the decidability of Hilbert's 10th problem for certain $ \mathcal{O}_K $ but not all. Indeed, theorem 14.1 in loc. cit. tells us it is false when...
 
-- $ K $ is totally real,
+1. $ K $ is totally real.
 
-- $ K $ is a a quadratic extension of a totally real number field or of an imaginary quadratic,
+2. $ K $ is a a quadratic extension of a totally real number field or of an imaginary quadratic.
 
-- $ K $ K has exactly one conjugate pair of nonreal embeddings,
+3. $ K $ K has exactly one conjugate pair of nonreal embeddings.
 
-- there exists an elliptic curve $ E $ over $ \mathbb{Q} $ such that the abelian groups $ E(\mathbb{Q}) $ and $ E(K) $ both have rank 1, or
+4. There exists an elliptic curve $ E $ over $ \mathbb{Q} $ such that the abelian groups $ E(\mathbb{Q}) $ and $ E(K) $ both have rank 1.
 
-- for every Galois prime-degree extension $ L/K $, there exists an elliptic curve $ E $ over $ K $ such that $ E(K) $ and $ E(L) $ have the same positive rank.
+5. For every Galois prime-degree extension $ L/K $, there exists an elliptic curve $ E $ over $ K $ such that $ E(K) $ and $ E(L) $ have the same positive rank.
 
 See Poonen's paper for the remaining details.
 
