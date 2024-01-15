@@ -21,7 +21,7 @@ title: Hilbert's 10th problem
 }
 </style>
 <br>
-**Abstract.** &nbsp; We follow the proof given in B. Poonen's expository article, [CITE], on how Turing machines and the Halting problem are used to show Hilbert's 10th conjecture is false.
+**Abstract.** &nbsp; These are notes from a talk I gave on Hilbert's 10th problem. We follow the proof given in B. Poonen's expository article, [\[CITE\]](), on how Turing machines, and specifically the Halting problem, are used to show Hilbert's 10th conjecture is false.
 
 
 
@@ -36,7 +36,7 @@ title: Hilbert's 10th problem
 
 ## 1. Turing machines
 
-&emsp; A *Turing machine*, introduced by A. Turing, [\[CITE\]](#4-references), is a way to mathematically formalize the idea of an algorithm. We will not give the explicit definition here, as we will only need an informal notion for our purposes. A Turing machine can be thought of as a finite program having infinite memory, i.e., it is free of any physical memory constraints that a real computer has. It execeutes infinitely fast, meaning we are more concerned with whether a Turing machine *halts*, or stops after a finite number of steps, with respect to a given input rather than its run time.
+&emsp; A *Turing machine*, introduced by A. Turing, [\[6\]](#4-references), is a way to mathematically formalize the idea of an algorithm. We will not give the explicit definition here, as we will only need an informal notion for our purposes. A Turing machine can be thought of as a finite program having infinite memory, i.e., it is free of any physical memory constraints that a real computer has. It execeutes infinitely fast, meaning we are more concerned with whether a Turing machine *halts*, or stops after a finite number of steps, with respect to a given input rather than its run time.
 
 
 &emsp; Visually, a Turing machine $ T $ can be viewed as string of code, which is equivalent to a finite piece of tape:
@@ -72,22 +72,22 @@ Thus, $ M $ is initialized to some infinite sequence containing finitely many 1'
 &emsp; The halting problem asks whether there exists a Turing machine $ H $ whose input is a pair $ (T, a) \subseteq \mathbb{Z} \times \mathbb{Z} $ (which we can, of course, identify with an integer), and whose output is whether $ T(a) $ halts. As it turns out, Turing showed that the halting problem is undecidable.
 
 
-**Theorem 1.2** ([\[CITE\]]()). &nbsp; *The decision problem is undecidable.*
+**Theorem 1.2** ([\[6\]]()). &nbsp; *The decision problem is undecidable.*
 
 
 *Proof.* Suppose $ H $ exists. Then there would exist a Turing machine $ G $ such that $ G(a) $ halts if and only $ a(a) $ does not halt. But setting $ a $ to be $ G $, we see that $ G(G) $ halts if and only if $ G(G) $ does not halt, a contradiction. Q.E.D. 
 
 
-**Corollary 1.3.** &nbsp; There exists a listable set $ P $ which is not recursive.
+**Corollary 1.3.** &nbsp; *There exists a listable set $ L \subseteq \mathbb{Z} $ which is not recursive.*
 
 
 *Proof.* Set 
 
 $$
-P = \{2^T 3^a \mid T, a \in \mathbb{Z} \text{ and } T(a) \text{ halts} \}.
+L = \{2^T 3^a \mid T, a \in \mathbb{Z} \text{ and } T(a) \text{ halts} \}.
 $$
 
-Then $ T $ is not recursive by theorem 1.2. It is, however, listable: for each $ N \in \mathbb{N} $ and $ T, a \in \mathbb{Z} $ with $ \vert T \vert, \vert a \vert \leq N $, print $ 2^T 3^a $ if $T(a) $ it halts within $ N $ steps. Q.E.D.
+Then $ L $ is not recursive by theorem 1.2. It is, however, listable: for each $ N \in \mathbb{N} $ and $ T, a \in \mathbb{Z} $ with $ \vert T \vert, \vert a \vert \leq N $, print $ 2^T 3^a $ if $T(a) $ it halts within $ N $ steps. Q.E.D.
 
 
 
@@ -115,20 +115,84 @@ $$
 S = \{ (a_1, \dots, a_n) \mid a \in \mathcal{V}(F) \}.
 $$
 
-The following result about diophantine sets was shown by J. Matijasevǐc, [\[CITE\]](#4-references), using the work of M. Davis, H. Putnam, and J. Robinson, [\[CITE\]](#4-references).
-
-**Theorem 2.1** &nbsp; *Let $ S \subseteq \mathbb{Z}^n $. Then $ S $ is listable (after identifying $ \mathbb{Z}^n $ with $ \mathbb{Z} $) if and only if it is diophantine.*
+The following result about diophantine sets was shown by Y. Matijasevǐc, [\[4\]](#4-references), using the work of M. Davis, H. Putnam, and J. Robinson, [\[2\]](#4-references).
 
 
+**Theorem 2.1.** &nbsp; *Let $ S \subseteq \mathbb{Z}^n $. Then $ S $ is listable (after identifying $ \mathbb{Z}^n $ with $ \mathbb{Z} $) if and only if it is diophantine.*
+
+
+*Proof.* In [\[2\]](#4-references), it is shown that every listable set is *exponential diophantine*, i.e., the zero set of a function created from integers and variables using addition, multiplication, and exponentiation. It is then shown in [\[4\]](#4-references) that the exponential relation $ y = C^x $ is, in fact, diophantine; this is done using sequences of integer solutions of the pell equation
+
+$$
+X_1^2 - n X_2^2 = 0,
+$$
+
+where $ n $ is not square. We will not go into too much detail here, and refer the reader to the article [\[3\]]() for a short-ish, complete proof. Q.E.D.
+
+
+**Corollary 2.2.** &nbsp; *Hilbert's 10th problem is undecidable.*
+
+
+*Proof.* Recall the set $ L $ given in corollary 1.3 is listable but not recursive. Hence, it is diophantine, and there exists a polynomial $ F \in \mathbb{Z}[X_1, Y_1, \dots, Y_m] $ such that 
+
+$$
+L = \{ a \in \mathbb{Z} \mid b \in \mathbb{Z}^m \text{ s.t. } F(a, b) = 0 \}.
+$$
+
+If Hilbert's 10th problem were true, then there would exist a Turing machine $ T $ such that, for each $ a \in \mathbb{Z} $, $ T(a) $ determines if $ F(a, X) $ has a solution $ X $. In particular, $ L $ would be recursive, a contradiction. Q.E.D.
 
 
 
-## 3. Other results and applications
 
+## 3. Hilbert's 10th problem for arbitrary rings
+
+
+&emsp; A natural question is whether Hilbert's 10th problem is decidable for rings other than $ \mathbb{Z} $. In [\[5\]](#4-references), the following chart is given:
+
+| Ring | Hilbert's 10th problem |
+| -------- | ---------- |
+| $ \mathbb{Z} $ | False |
+| $ \mathbb{C} $ | True |
+| $ \mathbb{R} $ | True |
+| $ \mathbb{F}_q $ | True |
+| $ p $-adic fields | True |
+| $ \mathbb{F}_q((t)) $ | Unknown |
+| Number fields | Unknown |
+| $ \mathbb{Q} $ | Unknown |
+| Global funnction field | False |
+| $ \mathbb{F}_q(t) $ | False |
+| $ \mathbb{C}(t) $ | Unknown |
+| $ \mathbb{C}(t, u) $ | False |
+| $ \mathbb{R}(t) $ | False |
+| $ \mathcal{O}_K $ | Unknown |
+
+
+&emsp; Here, $ K $ is a number field and $ \mathcal{O}_K $ its ring of integers. We do know the decidability of Hilbert's 10th problem for certain $ \mathcal{O}_K $ but not all. Indeed, theorem 14.1 in loc. cit. tells us it is false when
+
+1. $ K $ is totally real,
+
+2. $ K $ is a a quadratic extension of a totally real number field or of an imaginary quadratic,
+
+3. $ K $ K has exactly one conjugate pair of nonreal embeddings,
+
+4. there exists an elliptic curve $ E $ over $ \mathbb{Q} $ such that the abelian groups $ E(\mathbb{Q}) $ and $ E(K) $ both have rank 1, or
+
+5. for every Galois prime-degree extension $ L/K $, there exists an elliptic curve $ E $ over $ K $ such that $ E(K) $ and $ E(L) $ have the same positive rank.
+
+See Poonen's paper for the remaining details.
+
+
+&emsp; I do not believe there has been any major changes to the table since its original writing. The recent survey [\[1\]](#4-references) mentions progress towards the rational case, and they explain developing local-global methods. 
 
 
 
 
 ## 4. References
 
-1. 
+1. S. Anscombe, V. Karemaker, Z Kisakürek, V. Mehmeti, M. Pagano, and L. Paladino, *A survey of local-global methods for Hilbert's 10th problem*. (2023), arXiv:math/0703907v1. [Link](https://arxiv.org/abs/2309.14987)
+2. Martin Davis, Hilary Putnam, and Julia Robinson, *The decision problem for exponential diophantine equations*, Ann. of Math. (2) **74** (1961), 425–436.
+3. J.P. Jones and Y.V. Matijasevǐc, *Proof of recursive unsolvability of Hilbert’s tenth problem*, Amer. Math. Monthly **98** (1991), no. 8, 689–709.
+4. Yuri Matijasevǐc, *The diophantineness of enumerable sets*, Dokl. Akad. Nauk SSSR **191** (1970), 279–282.
+5. Bjorn Poonen, *Hilbert's 10th problem over rings of number-theoretic interest*. Arizona Winter School 2003
+6. Alan Turing, *"On Computable Numbers, with an Application to the Entscheidungsproblem*. Proceedings of the London Mathematical Society. Wiley. (1937) **s2-42** (1): 230–265.
+

@@ -232,7 +232,5 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 ## 2. References
 
 1. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
-
 2. ————, *Higher Algebra*, 2017.
-
 3. ————, *Kerodon*. [Link](https://kerodon.net/)
