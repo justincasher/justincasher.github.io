@@ -173,7 +173,7 @@ If Hilbert's 10th problem were true, then there would exist a Turing machine $ T
 
 2. $ K $ is a a quadratic extension of a totally real number field or of an imaginary quadratic.
 
-3. $ K $ K has exactly one conjugate pair of nonreal embeddings.
+3. $ K $ has exactly one conjugate pair of nonreal embeddings.
 
 4. There exists an elliptic curve $ E $ over $ \mathbb{Q} $ such that the abelian groups $ E(\mathbb{Q}) $ and $ E(K) $ both have rank 1.
 
