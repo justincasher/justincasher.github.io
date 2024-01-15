@@ -1,9 +1,9 @@
 ---
 layout: Writing
 indent: true
-permalink: /Hilberts-10th-conjecture
+permalink: /Hilberts-10th-problem
 feedformat: card
-title: Hilbert's 10th conjecture
+title: Hilbert's 10th problem
 ---
 <style>
     ol.custom {
@@ -21,218 +21,114 @@ title: Hilbert's 10th conjecture
 }
 </style>
 <br>
-**Abstract.** &nbsp; We follow the proof given in B. Poonen's expository article, [CITE], about the falsity of Hilbert's 10th conjecture.
+**Abstract.** &nbsp; We follow the proof given in B. Poonen's expository article, [CITE], on how Turing machines and the Halting problem are used to show Hilbert's 10th conjecture is false.
 
 
 
 
 ## Table of Contents
-1. [Introduction to $ \infty $-categories](#1-introduction-to-infinity-categories)
-2. [References](#2-references)
+1. [Turing machines](#1-introduction-to-infinity-categories)
+
+4. [References](#4-references)
 
 
 
 
-## 1. Introduction to infinity-categories
+## 1. Turing machines
+
+&emsp; A *Turing machine*, introduced by A. Turing, [\[CITE\]](#4-references), is a way to mathematically formalize the idea of an algorithm. We will not give the explicit definition here, as we will only need an informal notion for our purposes. A Turing machine can be thought of as a finite program having infinite memory, i.e., it is free of any physical memory constraints that a real computer has. It execeutes infinitely fast, meaning we are more concerned with whether a Turing machine *halts*, or stops after a finite number of steps, with respect to a given input rather than its run time.
 
 
-&emsp; The *simplex category* has objects sets $$ [n] = \{ 0, 1, \dots, n \} $$ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
+&emsp; Visually, a Turing machine $ T $ can be viewed as string of code, which is equivalent to a finite piece of tape:
+
+$$
+1, 0, 0, 1, 1, 1
+$$
+
+Its memory $ M $ is likewise a piece of tape, but this time infinite, although at any point during the computation it can only contain finitely many 1's:
+
+$$
+\dots, 0, 0, 0, 1, 1, 0, 1
+$$
+
+Thus, $ M $ is initialized to some infinite sequence containing finitely many 1's, and then $ T $ acts on $ M $ until it halts; it is also possible that the machine does not halt.
 
 
-&emsp; A presheaf of sets on $ \Delta $, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphism of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
+&emsp; We can identify Turing machines with integers via any bijection between the natural numbers $ \mathbb{N} $ and the integers $ \mathbb{Z} $. Thus, we will write $ T \in \mathbb{Z} $. Likewise its initial input, since it only contains finitely many 1's, can also be identified with an integer $ a \in \mathbb{Z} $. We will denote inputting $ a $ to $ T $ by $ T(a) $. If our Turing machine halts or its memory converges to some infinite sequence, then we will also use $ T(a) $ to denote this value.
 
 
-&emsp; The simplicial set 
+&emsp; Let $ P \subseteq \mathbb{Z} $ be a subset of the possible inputs. We say that a Turing machine $ T $ solve the decision problem $ P $ if, for each $ a \in \mathbb{Z} $, $ T(a) $ halts with output 1 if $ a \in P $ and 0 if $ a \not \in P $. There are uncountably many possible decision problems but only countably many Turing machines, so not every decision problem has a solution; we call such decision problems *unsolvable*.
 
+
+&emsp; To shorten our terminology, we say a decision problem $ P $ is *recursive* if there exists a Turing machine which solves it. We say $ P $ is *listable* if there exists a Turing machine $ T $ which outputs $ P $ if left running forever, i.e., $ T(0) = P $.
+
+
+**Proposition 1.1.** &nbsp; *Recursive implies listable.*
+
+
+*Proof.* Let $ T $ solve $ P $, and let $ Z $ be a Turing machine which prints the integers $ 0, -1, 1, -2, 2, \dots $. Then taking each output of $ Z $ and inputting it to $ T $ lists $ P $. Q.E.D.
+
+
+&emsp; The halting problem asks whether there exists a Turing machine $ H $ whose input is a pair $ (T, a) \subseteq \mathbb{Z} \times \mathbb{Z} $ (which we can, of course, identify with an integer), and whose output is whether $ T(a) $ halts. As it turns out, Turing showed that the halting problem is undecidable.
+
+
+**Theorem 1.2** ([\[CITE\]]()). &nbsp; *The decision problem is undecidable.*
+
+
+*Proof.* Suppose $ H $ exists. Then there would exist a Turing machine $ G $ such that $ G(a) $ halts if and only $ a(a) $ does not halt. But setting $ a $ to be $ G $, we see that $ G(G) $ halts if and only if $ G(G) $ does not halt, a contradiction. Q.E.D. 
+
+
+**Corollary 1.3.** &nbsp; There exists a listable set $ P $ which is not recursive.
+
+
+*Proof.* Set 
+
+$$
+P = \{2^T 3^a \mid T, a \in \mathbb{Z} \text{ and } T(a) \text{ halts} \}.
+$$
+
+Then $ T $ is not recursive by theorem 1.2. It is, however, listable: for each $ N \in \mathbb{N} $ and $ T, a \in \mathbb{Z} $ with $ \vert T \vert, \vert a \vert \leq N $, print $ 2^T 3^a $ if $T(a) $ it halts within $ N $ steps. Q.E.D.
+
+
+
+
+## 2. Hilbert's 10th problem
+
+&emsp; *Hilbert's 10th problem* asks whether there exists an algorithm which determines whether a polynomial with integer coefficients has a solution in the integers. We can rewrite this using Turing machines as follows. Let $ P $ be the decision problem 
+
+$$
+P = \{ F \in \mathbb{Z}[X_1, \dots, X_n] \mid \exists a \in \mathbb{Z}^n \text{ s.t. } F(a) = 0 \};
+$$
+
+we are interested in whether $ P $ is recursive. 
+
+
+&emsp; We say a set $ S \subseteq \mathbb{Z}^n $ is *diophantine* if there exists a polynomial
+
+$$
+F \in \mathbb{Z}[X_1, \dots, X_n, Y_1, \dots, Y_m],
 $$ 
-\Delta^n([m]) = \text{Hom}_{\Delta}([m], [n]) 
-$$
 
-is called the *standard $ n $-simplex*. The Yoneda lemma tells us 
+where $ S $ is the set of points $ a \in \mathbb{Z}^n $ such that there exists a $ b \in \mathbb{Z}^m $ with $ F(a, b) = 0 $. If we let $ \mathcal{V}(F) \subseteq \mathbb{Z}^{n+m} $ denote the zero locus of $ F $, this is the same as saying 
 
 $$
-X_n = \text{Hom}_{\text{Set}_{\Delta}}(\Delta^n, X).
+S = \{ (a_1, \dots, a_n) \mid a \in \mathcal{V}(F) \}.
 $$
 
+The following result about diophantine sets was shown by J. Matijasevǐc, [\[CITE\]](#4-references), using the work of M. Davis, H. Putnam, and J. Robinson, [\[CITE\]](#4-references).
 
-&emsp; The simplicial subset of $ \Delta^n $
-
-$$
-\Lambda_i^n([m])
-= \{f \in \Delta^n([m]) \mid f([m]) \cup \{ i \} \neq [n] \}
-$$
-
-is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n $ and *outer* if $ i = 0, n $. Lurie visualizes $ \Gamma_0^2 $, $ \Gamma_1^2 $, and $ \Gamma_2^2 $, respectively, as follows:
-
-$$
-\xymatrix{ 
-    \{1\} \ar@{.>}[dr] \\
-    \{0\} \ar[u] \ar[r] & \{2\}
-} 
-\quad
-\xymatrix{ 
-    \{1\} \ar[dr] \\
-    \{0\} \ar[u] \ar@{.>}[r] & \{2\}
-}
-\quad
-\xymatrix{ 
-    \{1\} \ar[dr] \\
-    \{0\} \ar@{.>}[u] \ar[r] & \{2\}
-}
-$$
-
-Here, when performing the operation "$$ \cup \{ i \} $$", we add any arrows touching the vertex $$ \{ i \} $$ to the diagram.
+**Theorem 2.1** &nbsp; *Let $ S \subseteq \mathbb{Z}^n $. Then $ S $ is listable (after identifying $ \mathbb{Z}^n $ with $ \mathbb{Z} $) if and only if it is diophantine.*
 
 
-&emsp; Let $ X $ be a simplicial set and $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ the inclusion. We say $ X $ is a *Kan complex* if, for any horn $ \Lambda_i^n $ and morphism $ f_0 \colon \Lambda_i^n \to X $, there exists a morphism $ f \colon \Delta^n \to X $ such that $ f \circ \iota = f_0 $; pictorially, the following diagram must commute:
-
-$$
-\xymatrix{ 
-    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
-    \Delta^n \ar@{.>}[ur]_{f}
-} 
-$$
 
 
-**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e., the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
 
-$$
-\text{Sing}_n(A) = \text{Hom}_{\text{Top}}(\vert \Delta^n \vert, A) 
-$$
-
-to be the set of singular $ n $-simplices. Each $ f \colon [m] \to [n] $ determines a morphism $ \text{Sing}_n(A) \to \text{Sing}_m(A) $ by precomposing with the map 
-
-$$
-\vert \Delta^m \vert \to \vert \Delta^n \vert, 
-\qquad
-(t_0, \dots, t_n) \to 
-\left( \sum_{f(i)= 0} t_i, \dots, \sum_{f(i)= n} t_i \right).
-$$
-
-$ \text{Sing} $ is a functor from topological spaces to simplicial sets, whose left adjoint is the geometric realization functor $ \vert \cdot \vert $.
+## 3. Other results and applications
 
 
-**Proposition 2.** &nbsp; *$ \text{Sing}(A) $ is a Kan complex.*
 
 
-*Proof.* The adjunction $ \vert \cdot \vert \dashv \text{Sing}(\cdot) $ implies the following diagram:
 
-$$
-\xymatrix{
-    \text{Hom}_{Top}(\vert \Delta^n \vert, A) \ar[r]^{\cong} \ar[d]_{\vert \iota \vert^*}
-    & \text{Hom}_{Set_{\Delta}}(\Delta^n, \text{Sing}(A)) \ar[d]^{\iota^*} \\
-    \text{Hom}_{Top}(\vert \Gamma_i^n \vert, A) \ar[r]^{\cong} 
-    & \text{Hom}_{Set_{\Delta}}(\Lambda_i^n, \text{Sing}(A))
-}
-$$
+## 4. References
 
-This reduces the problem of lifting $ f_0 \colon \Lambda_i^n \to \text{Sing}(A) $ to lifting the associated $ \vert f_0 \vert \colon \vert \Lambda_i^n \vert \to A $. Let $ r \colon \Delta^n \to \Lambda_i^n $ be a continuous retract. We conclude that $ \vert f \vert \colon \vert \Delta^n \vert \to A $ given by $ \vert f \vert = \vert f_0 \vert \circ r $ is our desired map. Q.E.D. 
-
-
-**Example 3.** &nbsp; Let $ \mathcal{C} $ be a small category. Define a simplicial set $ N(\mathcal{C}) $, the *nerve of $ \mathcal{C} $*, by considering functors
-
-$$
-N_n(\mathcal{C}) = \text{Fun}([n], \mathcal{C}).
-$$
-
-Here, we are considering $ [n] $ as the category with objects $ \{0, 1, \dots, n\} $ and arrows $ i \to j $ if $ i \leq j $. Explicitly, objects of $ N_n(\mathcal{C}) $ are composable sequences of morphisms 
-
-$$
-\xymatrix{
-    C_1 \ar[r]^{f_1} & C_2 \ar[r]^{f_2} & \cdots \ar[r]^{f_n} & C_n.
-}
-$$
-
-The following proposition tells us we can consider the nerve as a *weak Kan complex*, meaning it satisfies the Kan lifting condition for all inner horns.
-
-
-**Proposition 4.** &nbsp; *Let $ X $ be a simplicial set. The following are equivalent:*
-
-*(1) There exists a small category and an isomorphism $ X \cong N(\mathcal{C}) $.*
-
-*(2) For each inner horn, $ 0 < i < n $, and diagram*
-
-$$
-\xymatrix{ 
-    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
-    \Delta^n, \ar@{.>}[ur]_{f}
-}
-$$
-
-*there exists a* unique *dotted arrow making it commute*.
-
-
-*Proof.* This is 1.1.2.2 of [\[1\]](#2-references). We only sketch a couple of main ideas without providing a complete proof.
-
-$ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restriction $ f_0 \mid \Delta^{\{ k-1, k \}} $. Composing our $ g_k $, 
-
-$$
-\xymatrix{
-    X_1 \ar[r]^{g_1} & X_2 \ar[r]^{g_2} & \cdots \ar[r]^{g_n} & X_n,
-}
-$$
-
-determines an $ n $-simplex $ f \colon \Delta^n \to X $. 
-
-
-$ (2) \implies (1) $ &nbsp; We mention the proof of associativity law of the composition operator. Consider a sequence of morphisms 
-
-$$
-\xymatrix{
-    w \ar[r]^{f} & x \ar[r]^{g} & y \ar[r]^{h} & z.
-}
-$$
-
-We have the following 3 faces of the 4-sided 3-simplex:
-
-$$
-\xymatrix{ 
-    x \ar[dr]^{g} \\
-    w \ar[u]^{f} \ar[r]_{g \circ f} & y
-} 
-\quad
-\xymatrix{ 
-    y \ar[dr]^{h} \\
-    x \ar[u]^{g} \ar[r]_{h \circ g} & z
-}
-\quad
-\xymatrix{ 
-    y \ar[dr]^{h} \\
-    w \ar[u]^{g \circ f} \ar[r]_{h \circ (g \circ f)} & z
-}
-$$
-
-By (2), we get a unique fourth face:
-
-$$
-\xymatrix{ 
-    x \ar[dr]^{h \circ g} \\
-    w \ar[u]^{f} \ar[r]_{h \circ (g \circ f)} & z
-}
-$$
-
-Thus, the associativity law $ h \circ (g \circ f) = (h \circ g) \circ f $. Q.E.D.
-
-
-&emsp; We define a simplicial set $ X $ to be an *$ \infty $-category* if it is a weak Kan complex; i.e., for each inner horn, $ 0 < i < n $, and diagram 
-
-$$
-\xymatrix{ 
-    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & X \\
-    \Delta^n, \ar@{.>}[ur]_{f}
-}
-$$
-
-there there exists a dotted arrow making it commute. Note that the dotted arrow is not required to be unique, contrasting the case of the nerve of a category, and it is not required to exist on outer horns, unlike $ \text{Sing}(A) $. Thus, $ \infty $-categories can be thought of as a generalized framework for small category theory and algebraic topology.
-
-
-&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[1\]](#2-references).
-
-
-## 2. References
-
-1. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
-
-2. ————, *Higher Algebra*, 2017.
-
-3. ————, *Kerodon*. [Link](https://kerodon.net/)
+1. 
