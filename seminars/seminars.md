@@ -11,7 +11,7 @@ title: Seminars
 
 ### Graduate algebraic geometry and number theory seminar
 
-We meet from 1:00 PM to 1:55 PM on Tuesdays. The room has yet to be decided.
+We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. The room has yet to be decided.
 
 
 ###### Schedule
