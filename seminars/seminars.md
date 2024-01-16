@@ -39,7 +39,7 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. The room has yet to b
 
 ### Infinity categories and higher algebra reading group
 
-We meet from 1:45 PM to 2:45 PM on Thursdays. The room has yet to be decided.
+We meet from 3:00 PM to 4:00 PM on Wednesdays. The room has yet to be decided.
 
 ###### Schedule
 
