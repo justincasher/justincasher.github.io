@@ -94,7 +94,7 @@ $$
 $$
 
 
-**Example 1.** &nbsp; Let $ A $ be a topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e., the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
+**Example 1.** &nbsp; Let $ A $ be a compactly generated topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e., the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
 
 $$
 \text{Sing}_n(A) = \text{Hom}_{\text{Top}}(\vert \Delta^n \vert, A) 
