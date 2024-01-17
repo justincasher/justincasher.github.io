@@ -299,7 +299,7 @@ choosing our sign $ \pm $ appropriately shows $ \vert \tau(p) \vert \leq 2 p^{11
 &emsp; In order to calculate the absolute value of these roots, we are going to define a Frobenious action on a $$ \mathbb{Q}_\ell $$ vector space $$ {_1^{10}} W_{\ell} $$. Deligne proves 
 
 $$
-H_p(z) = \det(1-FX; \, {_1^{10}} W_{\ell}),
+H_p(z) = \det(1-Fz; \, {_1^{10}} W_{\ell}),
 $$
 
 and hence the roots of $ H_p $ are the eigenvalues of this action. Our result will then follow from Deligne's second paper on the Weil conjectures. 
