@@ -25,9 +25,9 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. The room has yet to b
 | 2/20/2023 | Michael Larsen | Representations | |
 | 2/27/2023 | | | |
 | 3/5/2023 | | | |
-| 3/19/2023 | Chia-Tz Liang | Poncelet's theorem | |
+| 3/19/2023 | | | |
 | 3/26/2023 | | | |
-| 4/2/2023 | | | |
+| 4/2/2023 | Chia-Tz Liang | Poncelet's theorem | |
 | 4/9/2023 | | | |
 | 4/16/2023 | | | |
 | 4/23/2023 | | | |
