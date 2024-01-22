@@ -5,38 +5,25 @@ permalink: /Hilberts-10th-problem
 feedformat: card
 title: Hilbert's 10th problem
 ---
-<style>
-    ol.custom {
-        margin-top: -10px;
-        margin-bottom: 20px;
-        margin-left: -15px;
-    }
-    
-    li {
-        padding-top: 0px; 
-        padding-bottom: 0px;
-        margin-top: 0px;
-        margin-bottom: 5px;
-    }
-}
-</style>
 <br>
-**Abstract.** &nbsp; These are notes from a talk I gave on Hilbert's 10th problem. We follow the proof given in B. Poonen's expository article, [\[CITE\]](), on how Turing machines, and specifically the Halting problem, are used to show Hilbert's 10th conjecture is false.
+**Abstract.** &nbsp; These are notes from a talk I gave on Hilbert's 10th problem. We follow the proof given in B. Poonen's expository article, [\[6\]](#5-references), on how Turing machines, and specifically the Halting problem, are used to show Hilbert's 10th conjecture is false.
 
 
 
 
 ## Table of Contents
 1. [Turing machines](#1-introduction-to-infinity-categories)
-
-4. [References](#4-references)
+2. [Hilbert's 10th problem](#2-hilberts-10th-problem)
+3. [Hilbert's 10th problem for arbitrary rings](#3-hilberts-10th-problem-for-arbitrary-rings)
+4. [Mazur's conjectures]()
+5. [References](#5-references)
 
 
 
 
 ## 1. Turing machines
 
-&emsp; A *Turing machine*, introduced by A. Turing, [\[6\]](#4-references), is a way to mathematically formalize the idea of an algorithm. We will not give the explicit definition here, as we will only need an informal notion for our purposes. A Turing machine can be thought of as a finite program having infinite memory, i.e., it is free of any physical memory constraints that a real computer has. It execeutes infinitely fast, meaning we are more concerned with whether a Turing machine *halts*, or stops after a finite number of steps, with respect to a given input rather than its run time.
+&emsp; A *Turing machine*, introduced by A. Turing, [\[7\]](#5-references), is a way to mathematically formalize the idea of an algorithm. We will not give the explicit definition here, as we will only need an informal notion for our purposes. A Turing machine can be thought of as a finite program having infinite memory, i.e., it is free of any physical memory constraints that a real computer has. It execeutes infinitely fast, meaning we are more concerned with whether a Turing machine *halts*, or stops after a finite number of steps, with respect to a given input rather than its run time.
 
 
 &emsp; Visually, a Turing machine $ T $ can be viewed as string of code, which is equivalent to a finite piece of tape:
@@ -72,7 +59,7 @@ Thus, $ M $ is initialized to some infinite sequence containing finitely many 1'
 &emsp; The halting problem asks whether there exists a Turing machine $ H $ whose input is a pair $ (T, a) \subseteq \mathbb{Z} \times \mathbb{Z} $ (which we can, of course, identify with an integer), and whose output is whether $ T(a) $ halts. As it turns out, Turing showed that the halting problem is undecidable.
 
 
-**Theorem 1.2** ([\[6\]]()). &nbsp; *The decision problem is undecidable.*
+**Theorem 1.2** ([\[7\]]()). &nbsp; *The decision problem is undecidable.*
 
 
 *Proof.* Suppose $ H $ exists. Then there would exist a Turing machine $ G $ such that $ G(a) $ halts if and only $ a(a) $ does not halt. But setting $ a $ to be $ G $, we see that $ G(G) $ halts if and only if $ G(G) $ does not halt, a contradiction. Q.E.D. 
@@ -115,13 +102,13 @@ $$
 S = \{ (a_1, \dots, a_n) \mid a \in \mathcal{V}(F) \}.
 $$
 
-The following result about diophantine sets was shown by Y. Matijasevǐc, [\[4\]](#4-references), using the work of M. Davis, H. Putnam, and J. Robinson, [\[2\]](#4-references).
+The following result about diophantine sets was shown by Y. Matijasevǐc, [\[4\]](#5-references), using the work of M. Davis, H. Putnam, and J. Robinson, [\[2\]](#5-references).
 
 
 **Theorem 2.1.** &nbsp; *Let $ S \subseteq \mathbb{Z}^n $. Then $ S $ is listable (after identifying $ \mathbb{Z}^n $ with $ \mathbb{Z} $) if and only if it is diophantine.*
 
 
-*Proof.* In [\[2\]](#4-references), it is shown that every listable set is *exponential diophantine*, i.e., the zero set of a function created from integers and variables using addition, multiplication, and exponentiation. It is then shown in [\[4\]](#4-references) that the exponential relation $ y = C^x $ is, in fact, diophantine; this is done using sequences of integer solutions of the pell equation
+*Proof.* In [\[2\]](#5-references), it is shown that every listable set is *exponential diophantine*, i.e., the zero set of a function created from integers and variables using addition, multiplication, and exponentiation. It is then shown in [\[4\]](#5-references) that the exponential relation $ y = C^x $ is, in fact, diophantine; this is done using sequences of integer solutions of the pell equation
 
 $$
 X_1^2 - n X_2^2 = 0,
@@ -147,7 +134,7 @@ If Hilbert's 10th problem were true, then there would exist a Turing machine $ T
 ## 3. Hilbert's 10th problem for arbitrary rings
 
 
-&emsp; A natural question is whether Hilbert's 10th problem is decidable for rings other than $ \mathbb{Z} $. In [\[5\]](#4-references), the following chart is given:
+&emsp; A natural question is whether Hilbert's 10th problem is decidable for rings other than $ \mathbb{Z} $. In [\[6\]](#5-references), the following chart is given:
 
 | Ring | Hilbert's 10th problem |
 | -------- | ---------- |
@@ -182,17 +169,47 @@ If Hilbert's 10th problem were true, then there would exist a Turing machine $ T
 See Poonen's paper for the remaining details.
 
 
-&emsp; I do not believe there has been any major changes to the table since its original writing. The recent survey [\[1\]](#4-references) mentions progress towards the rational case, and they explain developing local-global methods. 
+&emsp; I do not believe there has been any major changes to the table since its original writing. The recent survey [\[1\]](#5-references) mentions progress towards the rational case, and they explain developing local-global methods. 
 
 
 
 
-## 4. References
+## 4. Mazur's conjectures
+
+
+&emsp; In [\[5\]](#5-references), for $ V $ a variety over $ \mathbb{Q} $, B. Mazur made a series of conjectures about the topological closure the $ \mathbb{Q} $-valued points, $ V(\mathbb{Q}) $, in the $ \mathbb{R}$-valued points, $ V(\mathbb{R}) $. Denote $ \overline{V(\mathbb{Q})} $ the topological closure of $ V(\mathbb{Q}) $ in $ V(\mathbb{R}) $. Mazur's first conjecture was that, assuming $ V $ is smooth and $ V(\mathbb{Q}) $ Zariski dense in $ V $, $ \overline{V(\mathbb{Q})} $ is a finite union of connected components of $ V(\mathbb{R}) $; this is equivalent to the topological closure being open, and it was shown to be false. A subsequent conjecture of his is the following:
+
+
+**Mazur's conjecture.** &nbsp; *$\overline{V(\mathbb{Q})} $ has at most a finite number of components.*
+
+
+&emsp; Let us replace "variety" with "algebraic subset" in his conjecture. Write $ X $ for an algebraic subset of $ \mathbb{Q} $. We say $ S \subseteq X(\mathbb{Q}) $ is *diophantine over* $ \mathbb{Q} $ if there exists regular morphism $ f \colon Y \to X $ such that $ S = f(Y(\mathbb{Q})) $.
+
+
+**Theorem 4.1.** &nbsp; *If Mazur's conjecture is true, then the closure of $ S $ in $ X(\mathbb{Q}) $ has at most finitely many components.*
+
+
+*Proof.* Indeed, if Mazur's conjecture were true, then for some $ n \in \mathbb{N} $, $ \overline{Y(\mathbb{Q})} $ would have $ n $ connected components. Since $ f $ is continuous, $ f(\overline{Y(\mathbb{Q})}) $ has at most $ n $ components. Because the closure of a finite union is the union of the closures, $ \overline{f(\overline{Y(\mathbb{Q})})} $ has at most $ n $ connected components, meaning 
+
+$$
+\overline{S} = \overline{f(Y(\mathbb{Q}))} = \overline{f(\overline{Y(\mathbb{Q})})} 
+$$
+
+has at most $ n $ connected components. Q.E.D.
+
+
+**Corollar 4.2.** &nbsp; *If $ \mathbb{Z} $ is diophantine over $ \mathbb{Q} $, then Mazur's conjecture is false.*
+
+
+
+
+## 5. References
 
 1. S. Anscombe, V. Karemaker, Z Kisakürek, V. Mehmeti, M. Pagano, and L. Paladino, *A survey of local-global methods for Hilbert's 10th problem*. (2023), arXiv:math/0703907v1. [Link](https://arxiv.org/abs/2309.14987)
 2. Martin Davis, Hilary Putnam, and Julia Robinson, *The decision problem for exponential diophantine equations*, Ann. of Math. (2) **74** (1961), 425–436.
 3. J.P. Jones and Y.V. Matijasevǐc, *Proof of recursive unsolvability of Hilbert’s tenth problem*, Amer. Math. Monthly **98** (1991), no. 8, 689–709.
 4. Yuri Matijasevǐc, *The diophantineness of enumerable sets*, Dokl. Akad. Nauk SSSR **191** (1970), 279–282.
-5. Bjorn Poonen, *Hilbert's 10th problem over rings of number-theoretic interest*. Arizona Winter School 2003
-6. Alan Turing, *"On Computable Numbers, with an Application to the Entscheidungsproblem*. Proceedings of the London Mathematical Society. Wiley. (1937) **s2-42** (1): 230–265.
+5. Barry Mazur, *The topology of rational points*, Experiment. Math. 1 (1992), no. 1, 35–45. 
+6. Bjorn Poonen, *Hilbert's 10th problem over rings of number-theoretic interest*. Arizona Winter School 2003
+7. Alan Turing, *"On Computable Numbers, with an Application to the Entscheidungsproblem*. Proceedings of the London Mathematical Society. Wiley. (1937) **s2-42** (1): 230–265.
 
