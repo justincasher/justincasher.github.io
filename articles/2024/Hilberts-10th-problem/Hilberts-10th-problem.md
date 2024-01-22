@@ -6,7 +6,7 @@ feedformat: card
 title: Hilbert's 10th problem
 ---
 <br>
-**Abstract.** &nbsp; These are notes from a talk I gave on Hilbert's 10th problem, which asks whether there exists an algorithm which determines whether a polynomial with integer coefficients has a solution in the integers. We follow the proof given in B. Poonen's expository article, [\[6\]](#5-references), on how Turing machines, and specifically the Halting problem, are used to show Hilbert's 10th conjecture is false. We then mention generalizations and applications to Mazur's conjecture.
+**Abstract.** &nbsp; These are notes from a talk I gave on Hilbert's 10th problem, which asks if there exists an algorithm which determines whether a polynomial with integer coefficients has a solution in the integers. We follow the proof given in B. Poonen's expository article, [\[6\]](#5-references), on how Turing machines, and specifically the Halting problem, are used to show Hilbert's 10th conjecture is false. We then mention generalizations and applications to Mazur's conjecture.
 
 
 
@@ -81,7 +81,7 @@ Then $ L $ is not recursive by theorem 1.2. It is, however, listable: for each $
 
 ## 2. Hilbert's 10th problem
 
-&emsp; *Hilbert's 10th problem* asks whether there exists an algorithm which determines whether a polynomial with integer coefficients has a solution in the integers. We can rewrite this using Turing machines as follows. Let $ P $ be the decision problem 
+&emsp; *Hilbert's 10th problem* asks if there exists an algorithm which determines whether a polynomial with integer coefficients has a solution in the integers. We can rewrite this using Turing machines as follows. Let $ P $ be the decision problem 
 
 $$
 P = \{ F \in \mathbb{Z}[X_1, \dots, X_n] \mid \exists a \in \mathbb{Z}^n \text{ s.t. } F(a) = 0 \};
