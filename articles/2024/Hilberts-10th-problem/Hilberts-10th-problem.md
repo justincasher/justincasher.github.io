@@ -6,7 +6,7 @@ feedformat: card
 title: Hilbert's 10th problem
 ---
 <br>
-**Abstract.** &nbsp; These are notes from a talk I gave on Hilbert's 10th problem. We follow the proof given in B. Poonen's expository article, [\[6\]](#5-references), on how Turing machines, and specifically the Halting problem, are used to show Hilbert's 10th conjecture is false. We then mention generalizations and applications to Mazur's conjecture.
+**Abstract.** &nbsp; These are notes from a talk I gave on Hilbert's 10th problem, which asks whether there exists an algorithm which determines whether a polynomial with integer coefficients has a solution in the integers. We follow the proof given in B. Poonen's expository article, [\[6\]](#5-references), on how Turing machines, and specifically the Halting problem, are used to show Hilbert's 10th conjecture is false. We then mention generalizations and applications to Mazur's conjecture.
 
 
 
