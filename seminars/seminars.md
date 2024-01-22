@@ -11,7 +11,7 @@ title: Seminars
 
 ### Graduate algebraic geometry and number theory seminar
 
-We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. The room has yet to be decided.
+We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316.
 
 
 ###### Schedule
@@ -39,27 +39,8 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. The room has yet to b
 
 ### Infinity categories and higher algebra reading group
 
-We meet from 3:00 PM to 4:00 PM on Wednesdays. The room has yet to be decided.
+We meet from 3:00 PM to 4:00 PM on Wednesdays. [Here]({{'/infinity-categories-S#1-introduction-to-infinity-categories' | relative_url}}) are some notes I am writing.
 
-###### Schedule
-
-| Week of | Topic | Details |
-| -------- | ---------- | ---------- |
-| 1/11/2023 | Introduction to $ \infty $-categories | [Notes]({{'/infinity-categories-S#1-introduction-to-infinity-categories' | relative_url}}) |
-| 1/18/2023 | | |
-| 1/25/2023 | | |
-| 2/1/2023 | | |
-| 2/8/2023 | | |
-| 2/15/2023 | | |
-| 2/22/2023 | | |
-| 2/29/2023 | | |
-| 3/7/2023 | | |
-| 3/21/2023 | | |
-| 3/28/2023 | | |
-| 4/4/2023 | | |
-| 4/11/2023 | | |
-| 4/18/2023 | | |
-| 4/25/2023 | | |
 
 
 
