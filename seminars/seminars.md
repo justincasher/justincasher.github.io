@@ -23,7 +23,7 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. Everyone is from Indi
 | 2/6/2023 | | | |
 | 2/13/2023 | | | |
 | 2/20/2023 | Michael Larsen | Representations | |
-| 2/27/2023 | Yuxuan Liao | The Coleman integral | |
+| 2/27/2023 | Yuxuan Liao | Coleman integral | |
 | 3/5/2023 | | | |
 | 3/19/2023 | | | |
 | 3/26/2023 | | | |
