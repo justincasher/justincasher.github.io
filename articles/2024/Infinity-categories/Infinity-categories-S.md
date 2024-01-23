@@ -21,6 +21,7 @@ title: Infinity categories and higher algebra seminar notes
 }
 </style>
 <br>
+
 **Abstract.** &nbsp; This is a collection of short notes I am creating for a reading group on $ \infty $-categories and higher algebra at Indiana University in the spring of 2024.
 
 
