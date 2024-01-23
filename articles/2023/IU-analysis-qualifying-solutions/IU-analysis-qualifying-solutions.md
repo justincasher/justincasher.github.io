@@ -560,7 +560,7 @@ $$
 
 *for every sequence $ \{x_n\} $ in $ [0, 1] $. Show $ \{f_n\} $ converges uniformly to $ f $ or provide a counterexample.*
 
-*Proof.* Suppose not. Then there exists sequences $ a_n \in \mathbb{N} $ and $ x_n \in [0, 1] $ such that 
+*Proof.* Suppose not. Then there exists sequences $ a_n \in \mathbb{N} $, $ a_n $ increasing and $ x_n \in [0, 1] $ such that 
 
 $$
 |f_{a_{2n}}(x_n) - f_{a_{2n+1}}(x_n) | > \varepsilon 
