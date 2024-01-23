@@ -12,7 +12,8 @@ This page contains an alphabetized list of (mostly expository) online mathematic
 
 ### 2024
 
-1. [Infinity categories and higher algebra seminar notes]({{'/infinity-categories' | relative_url}})
+1. [Hilbert's 10th problem]({{'/Hilberts-10th-problem' | relative_url}})
+2. [Infinity categories and higher algebra seminar notes]({{'/infinity-categories' | relative_url}})
 
 
 

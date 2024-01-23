@@ -18,7 +18,7 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. Everyone is from Indi
 
 | Date | Speaker | Topic | Details |
 | -------- | ---------- | -------- | ---------- |
-| 1/23/2023 | Justin Asher | Hilbert's 10th problem | |
+| 1/23/2023 | Justin Asher | Hilbert's 10th problem | [Notes](({{'/Hilberts-10th-problem-S' | relative_url}})) |
 | 1/30/2023 | | | |
 | 2/6/2023 | | | |
 | 2/13/2023 | | | |

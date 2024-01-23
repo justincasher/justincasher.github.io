@@ -1,7 +1,7 @@
 ---
-layout: Writing
+layout: 0_seminar_notes
 indent: true
-permalink: /Hilberts-10th-problem
+permalink: /Hilberts-10th-problem-S
 feedformat: card
 title: Hilbert's 10th problem
 ---
