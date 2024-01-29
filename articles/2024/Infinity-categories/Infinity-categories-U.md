@@ -273,13 +273,6 @@ Let $ i \in \text{Cof} $ and $ p \in \text{Fib} $. If $ i \in W $ or $ p \in W $
 
 $$
 \xymatrix{
-    & A \ar[dr]^{p} & \\
-    X \ar[ur]^{i} \ar[dr]_{j} \ar[rr]^{f} & & Y
-    & B \ar[ur]_{q} &
-}
-$$
-$$
-\xymatrix{
     X \ar[d]_j \ar[r]^{i} \ar[dr]^f & A \ar[d]^p \\
     B \ar[r]_{q} & Y
 }
