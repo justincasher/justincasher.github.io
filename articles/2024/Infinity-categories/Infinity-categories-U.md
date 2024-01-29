@@ -252,7 +252,7 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 $$
 \xymatrix{ 
     Y \ar[r]^{g} \ar[d]^{r} & Y' \ar[d]^{r'} \\
-    X \ar[r]_f \ar@/^/[u]_{i} & X' \ar@/_/[u]_{i'}.
+    X \ar[r]_f \ar@/^/[u]_{i} & X'. \ar@/_/[u]_{i'}
 } 
 $$
 
