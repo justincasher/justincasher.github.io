@@ -1,7 +1,7 @@
 ---
 layout: Writing
 indent: true
-permalink: /infinity-categories
+permalink: /infinity-categories-U
 feedformat: card
 title: Infinity categories and higher algebra seminar notes
 ---
@@ -252,8 +252,9 @@ $$
     X \ar[r]_f \ar[u]/^/_{i} & X' \ar[u]/_/_{i'}
 } 
 $$
+If $ g $ is in $ W $, $ \text{Fib} $, or $ \text{Cof} $, then so is $ f $.
 5. (*Lifting*) 
-6. (*Facotization*) 
+6. (*Factorization*) 
 
 
 
