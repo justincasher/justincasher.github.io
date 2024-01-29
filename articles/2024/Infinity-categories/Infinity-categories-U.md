@@ -284,7 +284,7 @@ where $ i, j \in \text{Cof} $, $ p, q \in \text{Fib} $, and $ i, q \in W $.
 &emsp; We call the elements in $ \text{Fib} \cap W $ trivial (or acyclic) fibrations, and the elements in $ \text{Cof} \cap W $ trivial (or acyclic) cofibrations. The bicompleteness axiom implies $ \mathcal{M} $ contains initial and terminal objects; letting $ D \colon \varnothing \to \mathcal{C} $ be the empty diagram, we get that $ \text{colim} j $ is the initial object, and $ \lim j $ is the terminal object. It need not be pointed, i.e., have a zero object.
 
 
-**Example 1.** &nbsp; Consider the category of topological spaces $ \text{Top} $; we can endow it with a model structure. $ W $ is the set of homotopy equivalences, i.e., continuous functions $ f \colon X \to Y $ such that $ f $ induces isomorphisms $ f_* \colon \pi_n(X) \to f_*(Y) $. $ \text{Fib} $ consists of Serre fibrations, meaning maps $ p \colon X \to Y $ such that every right lifting problem
+**Example 1.** &nbsp; Consider the category of topological spaces $ \text{Top} $; we can endow it with a model structure. $ W $ is the set of homotopy equivalences, i.e., continuous functions $ f \colon X \to Y $ such that $ f $ induces isomorphisms $ f_* \colon \pi_n(X) \to f_*(Y) $. $ \text{Fib} $ are Serre fibrations, i.e., $ f $ for which the right lifting problem
 
 $$
 \xymatrix{
@@ -293,7 +293,10 @@ $$
 }
 $$
 
-admits a solution.
+admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative cell complexes.
+
+
+**Example 2.** &nbsp; Consider the category of simplicial sets $ \text{Set}_{\Delta} $. $ W $ is the set of maps which induce a weak equivalence of the geometric realizations, $ \text{Fib} $ are Kan fibrations, and $ \text{Cof} $ is the collection of monomorphisms.
 
 
 
