@@ -251,7 +251,7 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 
 $$
 \xymatrix{ 
-    Y \ar[r]^{g} \ar[d]^{r} & Y' \ar[d]^{r'} \\
+    Y \ar[r]^{g} \ar[d]^{r} & Y' \ar[d]_{r'} \\
     X \ar[r]_f \ar@/^/[u]^{i} & X'. \ar@/_/[u]_{i'}
 } 
 $$
@@ -273,9 +273,9 @@ Let $ i \in \text{Cof} $ and $ p \in \text{Fib} $. If $ i \in W $ or $ p \in W $
 
 $$
 \xymatrix{
-    & A \ar[dr]^{p} \\
+    & A \ar[dr]^{p} & \\
     X \ar[ur]^{i} \ar[dr]_{j} \ar[rr]^{f} & & Y
-    & B \ar[ur]_q
+    & B \ar[ur]_{q} &
 }
 $$
 
