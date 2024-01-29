@@ -267,7 +267,19 @@ $$
 }
 $$
 
-(*Factorization*) 
+Let $ i \in \text{Cof} $ and $ p \in \text{Fib} $. If $ i \in W $ or $ p \in W $, then there exists an $ h \colon B \to X $ making the diagram commute.
+
+(*Factorization*) Any $ f \colon X \to Y $ can be factored in two ways 
+
+$$
+\xymatrix{
+    & A \ar[dr]^{p} \\
+    X \ar[ur]^{i} \ar[dr]_{j} \ar[rr]^{f} & & Y
+    & B \ar[ur]_q
+}
+$$
+
+where $ i, j \in \text{Cof} $, $ p, q \in \text{Fib} $, and $ i, q \in W $.
 
 
 
