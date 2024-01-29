@@ -242,19 +242,25 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 &emsp; Let $ \mathcal{M} $ be a category. Then we call $ \mathcal{M} $ a *model category* $ \mathcal{M} $ if it has 3 distinguished classes of morphisms called *weak equivalences* $ W $, *fibrations* $ \text{Fib} $, and *cofibrations* $ \text{Cof} $, which satisfy the following axioms:
 
 
-1. (*Composition*) Each class is closed under composition and contains the identity morphism $ \text{Id}_X $ for every $ X $ in $ \mathcal{M} $.
-2. (*Bicomplete*) Finite limits and colimits exist in $ \mathcal{M} $.
-3. (*2-out-of-3*) Let $ f \colon X \to Y $ and $ g \colon Y \to Z $ be morphisms in $ \mathcal{M} $. Then if two of $ f $, $ g $, and $ g \circ f $ are in $ W $, then so is the third.
-4. (*Retractions*) Let $ f \colon X \to X' $ be a retract of $ g \colon Y \to Y' $, i.e., there exists morphisms $ r, i, r', i' $ with $ r \circ i = \text{Id}_X $ and $ r' \circ i' = \text{Id}_{X'} $, which fit into the following commuting diagram:
+(*Composition*) Each class is closed under composition and contains the identity morphism $ \text{Id}_X $ for every $ X $ in $ \mathcal{M} $.
+
+(*Bicomplete*) Finite limits and colimits exist in $ \mathcal{M} $.
+(*2-out-of-3*) Let $ f \colon X \to Y $ and $ g \colon Y \to Z $ be morphisms in $ \mathcal{M} $. Then if two of $ f $, $ g $, and $ g \circ f $ are in $ W $, then so is the third.
+
+(*Retractions*) Let $ f \colon X \to X' $ be a retract of $ g \colon Y \to Y' $, i.e., there exists morphisms $ r, i, r', i' $ with $ r \circ i = \text{Id}_X $ and $ r' \circ i' = \text{Id}_{X'} $, which fit into the following commuting diagram:
+
 $$
 \xymatrix{ 
     Y \ar[r]^g \ar[d]^r & Y' \ar[d]^{r'} \\
     X \ar[r]_f \ar[u]/^/_{i} & X' \ar[u]/_/_{i'}
 } 
 $$
+
 If $ g $ is in $ W $, $ \text{Fib} $, or $ \text{Cof} $, then so is $ f $.
-5. (*Lifting*) 
-6. (*Factorization*) 
+
+(*Lifting*) 
+
+(*Factorization*) 
 
 
 
