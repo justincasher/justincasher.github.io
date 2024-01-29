@@ -252,20 +252,20 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 $$
 \xymatrix{ 
     Y \ar[r]^{g} \ar[d]^{r} & Y' \ar[d]^{r'} \\
-    X \ar[r]_f \ar@/^/[u]_{i} & X'. \ar@/_/[u]_{i'}
-} 
-$$
-
-$$
-\xymatrix{ 
-    Y \ar[r]^{g} \ar[d]^{r} & Y' \ar[d]^{r'} \\
-    X \ar[r]_f \ar[u]_{i} & X'. \ar[u]_{i'}
+    X \ar[r]_f \ar@/^/[u]^{i} & X'. \ar@/_/[u]_{i'}
 } 
 $$
 
 If $ g $ is in $ W $, $ \text{Fib} $, or $ \text{Cof} $, then so is $ f $.
 
 (*Lifting*) Consider the diagram
+
+$$
+\xymatrix{
+    A \ar[r]^{f} \ar[d]_i & X \ar[d]^{p} \\
+    B \ar[r]_{g} \ar@{.>}[ur]^{h} & Y.
+}
+$$
 
 (*Factorization*) 
 
