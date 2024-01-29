@@ -35,7 +35,7 @@ title: Infinity categories and higher algebra seminar notes
 
 
 
-## 1. Introduction to infinity-categories
+## 1. Introduction to infinity categories
 
 
 &emsp; The *simplex category* has objects sets $$ [n] = \{ 0, 1, \dots, n \} $$ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
@@ -253,6 +253,13 @@ $$
 \xymatrix{ 
     Y \ar[r]^{g} \ar[d]^{r} & Y' \ar[d]^{r'} \\
     X \ar[r]_f \ar@/^/[u]_{i} & X' \ar@/_/[u]_{i'}.
+} 
+$$
+
+$$
+\xymatrix{ 
+    Y \ar[r]^{g} \ar[d]^{r} & Y' \ar[d]^{r'} \\
+    X \ar[r]_f \ar[u]_{i} & X'. \ar[u]_{i'}
 } 
 $$
 
