@@ -247,7 +247,7 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 (*Bicomplete*) Finite limits and colimits exist in $ \mathcal{M} $.
 (*2-out-of-3*) Let $ f \colon X \to Y $ and $ g \colon Y \to Z $ be morphisms in $ \mathcal{M} $. Then if two of $ f $, $ g $, and $ g \circ f $ are in $ W $, then so is the third.
 
-(*Retractions*) Let $ f \colon X \to X' $ be a retract of $ g \colon Y \to Y' $, i.e., there exists morphisms $ r, i, r', i' $ with $ r \circ i = \text{Id}_X $ and $ r' \circ i' = \text{Id}_{X'} $, which fit into the following commuting diagram:
+(*Retractions*) Let $ f \colon X \to X' $ be a retract of $ g \colon Y \to Y' $, i.e., there exists morphisms $ r, i, r', i' $ with $$ r \circ i = \text{Id}_X $$ and $$ r' \circ i' = \text{Id}_{X'} $$, which fit into the following commuting diagram:
 
 $$
 \xymatrix{ 
