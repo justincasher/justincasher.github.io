@@ -278,6 +278,12 @@ $$
     & B \ar[ur]_{q} &
 }
 $$
+$$
+\xymatrix{
+    X \ar[d]_j \ar[r]^{i} \ar[dr]^f & A \ar[d]^p \\
+    B \ar[r]_{q} & Y
+}
+$$
 
 where $ i, j \in \text{Cof} $, $ p, q \in \text{Fib} $, and $ i, q \in W $.
 
