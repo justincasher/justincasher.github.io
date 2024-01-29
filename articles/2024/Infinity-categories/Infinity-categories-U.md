@@ -296,7 +296,22 @@ $$
 admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative cell complexes.
 
 
-**Example 2.** &nbsp; Consider the category of simplicial sets $ \text{Set}_{\Delta} $. $ W $ is the set of maps which induce a weak equivalence of the geometric realizations, $ \text{Fib} $ are Kan fibrations, and $ \text{Cof} $ is the collection of monomorphisms.
+**Example 2.** &nbsp; Consider the category of simplicial sets $ \text{Set}_{\Delta} $. $ W $ is the set of maps which induce a weak equivalence on the geometric realizations, $ \text{Fib} $ are Kan fibrations, and $ \text{Cof} $ is the collection of monomorphisms.
+
+
+**Example 3.** &nbsp; Consider the category of chain complexes of $ R $-modules. $ W $ is the set of quasi-isomorphisms, $ \text{Fib} $ are chain maps $ f $ such that each $ f_n \colon X_n \to Y_n $ is surjective, and $ \text{Cof} $ are chain maps $ g $ such that each $ g_n \colon X_n \hookrightarrow Y_n $ is injective with projective cokernel.
+
+
+&emsp; Let $ \mathcal{M} $ be a model category; we call $ \text{Ho}(\mathcal{M}) = W^{-1} \mathcal{M} $ the *homotopy category of* $ \mathcal{M} $, where inversion means each weak equivalence becomes an isomorphism. We say that $ f, g \colon X \to Y $ are *homotopic* if and only if there exists a commutative diagram
+
+$$
+\xymatrix{
+    X \ar[d]_{i} \ar[dr]^{f} \\
+    C(X) \ar[r]^{h} \ar@\_\[p] & Y \\
+    X \ar[ur]_{g} \ar[u]_{j}
+}
+$$
+
 
 
 
