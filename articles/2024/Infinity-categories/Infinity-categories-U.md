@@ -244,8 +244,10 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 
 (*Composition*) Each class is closed under composition and contains the identity morphism $ \text{Id}_X $ for every $ X $ in $ \mathcal{M} $.
 
+
 (*Bicomplete*) Finite limits and colimits exist in $ \mathcal{M} $.
 (*2-out-of-3*) Let $ f \colon X \to Y $ and $ g \colon Y \to Z $ be morphisms in $ \mathcal{M} $. Then if two of $ f $, $ g $, and $ g \circ f $ are in $ W $, then so is the third.
+
 
 (*Retractions*) Let $ f \colon X \to X' $ be a retract of $ g \colon Y \to Y' $, i.e., there exists morphisms $ r, i, r', i' $ with $$ r \circ i = \text{Id}_X $$ and $$ r' \circ i' = \text{Id}_{X'} $$, which fit into the following commuting diagram:
 
@@ -258,6 +260,7 @@ $$
 
 If $ g $ is in $ W $, $ \text{Fib} $, or $ \text{Cof} $, then so is $ f $.
 
+
 (*Lifting*) Consider the diagram
 
 $$
@@ -268,6 +271,7 @@ $$
 $$
 
 Let $ i \in \text{Cof} $ and $ p \in \text{Fib} $. If $ i \in W $ or $ p \in W $, then there exists an $ h \colon B \to X $ making the diagram commute.
+
 
 (*Factorization*) Any $ f \colon X \to Y $ can be factored in two ways 
 
@@ -302,17 +306,17 @@ admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative 
 **Example 3.** &nbsp; Consider the category of chain complexes of $ R $-modules. $ W $ is the set of quasi-isomorphisms, $ \text{Fib} $ are chain maps $ f $ such that each $ f_n \colon X_n \to Y_n $ is surjective, and $ \text{Cof} $ are chain maps $ g $ such that each $ g_n \colon X_n \hookrightarrow Y_n $ is injective with projective cokernel.
 
 
-&emsp; Let $ \mathcal{M} $ be a model category. We call $ \text{Ho}(\mathcal{M}) = W^{-1} \mathcal{M} $ the *homotopy category of* $ \mathcal{M} $, where inversion means each weak equivalence becomes an isomorphism. We say that $ f, g \colon X \to Y $ are *homotopic* if and only if there exists a commutative diagram
+&emsp; Let $ \mathcal{M} $ be a model category. We call $ \text{Ho}(\mathcal{M}) = W^{-1} \mathcal{M} $ the *homotopy category of* $ \mathcal{M} $, where inversion means each weak equivalence becomes an isomorphism. We say that $ f, g \colon X \to Y $ are *homotopic* if there exists a commutative diagram
 
 $$
 \xymatrix{
     X \ar[d]_{i} \ar[dr]^{f} \\
-    C(X) \ar[r]^{h} \ar@\_\[u]_{p} & Y \\
+    C(X) \ar[r]^{h} \ar@/_/[u]_{p} & Y \\
     X \ar[ur]_{g} \ar[u]_{j}
 }
 $$
 
-
+such that $ p $ is a acyclic fibration 
 
 
 
