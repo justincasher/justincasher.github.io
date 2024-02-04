@@ -311,7 +311,7 @@ admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative 
 $$
 \xymatrix{
     X \ar[d]^{i} \ar[dr]^{f} \\
-    C(X) \ar[r]^{h} \ar@/^/[u]_{p}\ar@/_/[d]_{p} & Y \\
+    C(X) \ar[r]^{h} \ar@/^/[u]^{p}\ar@/_/[d]_{p} & Y \\
     X \ar[ur]_{g} \ar[u]_{j}
 }
 $$
@@ -319,12 +319,13 @@ $$
 such that $ p $ is a acyclic fibration with $ p \circ i = p \circ j = \text{Id}_C $, and that 
 
 $$ 
-i \coprod j \colon X \coprod X \to C(X) 
+\textstyle i \coprod j \colon X \coprod X \to C(X) 
 $$ 
 
 is a cofibration.
 
 
+&emsp; We say that $ X $ is *fibrant* (resp. cofibrant) if the unique map from the initial (resp. terminal) object, $ 0 \to X $ (resp. $ X \to 1 $), is a fibration (resp. cofibration). If $ X $ is cofibrant and $ Y $ is fibrant, then homotopy equivalence $ \sim $ is an equivalence relation compatible with composition. Hence, the quotient $ C^{cf}/\sim $, cofibrant objects modulo homotopy, is well defined.
 
 
 ## 3. References
