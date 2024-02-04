@@ -311,12 +311,18 @@ admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative 
 $$
 \xymatrix{
     X \ar[d]_{i} \ar[dr]^{f} \\
-    C(X) \ar[r]^{h} \ar@/_/[u]_{p} & Y \\
+    C(X) \ar[r]^{h} \ar@/^/[u]_{p}\ar@/_/[d]_{p} & Y \\
     X \ar[ur]_{g} \ar[u]_{j}
 }
 $$
 
-such that $ p $ is a acyclic fibration 
+such that $ p $ is a acyclic fibration with $ p \circ i = p \circ j = \text{Id}_C $, and that 
+
+$$ 
+i \coprod j \colon X \coprod X \to C(X) 
+$$ 
+
+is a cofibration.
 
 
 
