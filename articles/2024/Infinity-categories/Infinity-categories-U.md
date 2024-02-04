@@ -310,7 +310,7 @@ admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative 
 
 $$
 \xymatrix{
-    X \ar[d]_{i} \ar[dr]^{f} \\
+    X \ar[d]^{i} \ar[dr]^{f} \\
     C(X) \ar[r]^{h} \ar@/^/[u]_{p}\ar@/_/[d]_{p} & Y \\
     X \ar[ur]_{g} \ar[u]_{j}
 }
