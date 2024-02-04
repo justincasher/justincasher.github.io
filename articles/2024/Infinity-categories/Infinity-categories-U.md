@@ -64,7 +64,7 @@ $$
 = \{f \in \Delta^n([m]) \mid f([m]) \cup \{ i \} \neq [n] \}
 $$
 
-is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n $ and *outer* if $ i = 0, n $. Lurie visualizes $ \Gamma_0^2 $, $ \Gamma_1^2 $, and $ \Gamma_2^2 $, respectively, as follows:
+is called the *$ i $-th horn*; it is referred to as being *inner* if $ 0 < i < n $ and *outer* if $ i = 0, n $. Lurie visualizes $ \Lambda_0^2 $, $ \Lambda_1^2 $, and $ \Lambda_2^2 $, respectively, as follows:
 
 $$
 \xymatrix{ 
@@ -325,7 +325,46 @@ $$
 is a cofibration.
 
 
-&emsp; We say that $ X $ is *fibrant* (resp. cofibrant) if the unique map from the initial (resp. terminal) object, $ 0 \to X $ (resp. $ X \to 1 $), is a fibration (resp. cofibration). If $ X $ is cofibrant and $ Y $ is fibrant, then homotopy equivalence $ \sim $ is an equivalence relation compatible with composition. Hence, the quotient $ C^{cf}/\sim $, cofibrant objects modulo homotopy, is well defined.
+&emsp; We say that $ X $ is *fibrant* (resp. cofibrant) if the unique map from the initial (resp. terminal) object, $ 0 \to X $ (resp. $ X \to 1 $), is a fibration (resp. cofibration). If $ X $ is cofibrant and $ Y $ is fibrant, then homotopy equivalence $ \sim $ is an equivalence relation compatible with composition. Hence, the quotient $ C^{cf}/\sim $, fibrant or cofibrant objects modulo homotopy, is well defined.
+
+
+**Theorem 4** (CITE). &nbsp; *The natural functor $ Q \colon (C^{cf}/\sim) \to \text{Ho}(C) $ is an equivalence of categories.*  
+
+
+**Example 1'.** &nbsp; $ \text{Ho(Top)} $, up to equivalence, has objects CW-complexes and morphisms homotopy classes of continuous maps.
+
+
+**Example 2'.** &nbsp; $ \text{Ho}(\text{Set}_{\Delta}) \cong \text{Ho(Top)} $ via the geometric realization functor. 
+
+
+**Example 3'.** &nbsp; $ \text{Ho}(Ch(R)) \cong D(R) $, where $ D(R) $ is the derived category.
+
+
+**Theorem 4** (CITE) &nbsp; *Let $ C \in \text{Set}_{\Delta} $. Then $ C $ is fibrant if and only if $ C $ is an $ \infty $-category.*
+
+&emsp; We call a category $ T $ *simplicially enriched* if it is enriched over the category of simplicial sets. We denote the category of simplicially enriched categories $ \text{Cat}_{\Delta} $. It has morphisms functors $ F \colon T \to T' $ such that 
+
+$$
+F \colon \text{Hom}_T(x, y) \to \text{Hom}_{T'}(F(x), F(y))
+$$
+
+a map of simplicial sets. The inclusion $ \text{Cat} \hookrightarrow \text{Cat}_{\Delta} $ has a left adjoint $ [\cdot] \colon \text{Cat}_{\Delta} \to \text{Cat} $, where $ \text{Ob}([T]) = \text{Ob}(T) $, and  
+
+$$
+\text{Hom}_{[T]}(x, y) = \pi_0(\text{Map}(x, y)).
+$$
+
+We call $ [T] $ the *homotopy category* of $ T $. A functor $ F $ is called a *Dwyer-Kan* (DK) equivalence if $ [F] $ is essentially surjective, and $ \text{Hom}_T(x, y) \to \text{Hom}_B(F(x), F(y)) $ is a weak equivalence of simplicial sets. $ \text{Cat}_{\Delta} $ has a model structure with $ W $ being DK equivalences, and fibrations being functors $ F \colon T \to T' $ such that $ \text{Hom}(x, y) \to \text{Hom}(F(x), F(y)) $ is a Kan fibration which lifts morphisms at a fixed point.
+
+
+&emsp; We denote the Joyal model structure on $ \text{Set}_{\Delta} $ by $ (\text{Set}_{\Delta})_{\text{Joy}} $. Here, $ W $ is the set of *weak categorical equivalences*, i.e., maps $ A \to B $ such that $ \text{Hom}(A, C) \to \text{Hom}(B, C) $ induces an equivalence of simplicial categories for any $ C $. $ \text{Fib} $ is the collection of *quasi-fibrations*, meaning maps $ F \colon X \to Y $ which have the right lifting property with respect to the inclusion $ \Lambda_i^n \to \Delta^n $. $ \text{Cof} $ are monomorphisms.
+
+
+**Theorem 5.** &nbsp; *$ C $ and $ N $ determine a Quillen equivalence between $ (\text{Set}_{\Delta})_{\text{Joy}} $ and $ (\text{Cat}_{\Delta})_{DK} $.*
+
+
+*Proof.* HTT 2.2.5.1.
+
 
 
 ## 3. References
