@@ -378,10 +378,10 @@ $$
 \text{Hom}_{[T]}(x, y) = \pi_0(\text{Map}(x, y)).
 $$
 
-We call $ [T] $ the *homotopy category* of $ T $. A functor $ F $ is called a *Dwyer-Kan* (DK) equivalence if $ [F] $ is essentially surjective, and $ \text{Hom}_T(x, y) \to \text{Hom}_B(F(x), F(y)) $ is a weak equivalence of simplicial sets. $ \text{Cat}_{\Delta} $ has a model structure with $ W $ being DK equivalences, and fibrations being functors $ F \colon T \to T' $ such that $ \text{Hom}(x, y) \to \text{Hom}(F(x), F(y)) $ is a Kan fibration which lifts morphisms at a fixed point.
+We call $ [T] $ the *homotopy category* of $ T $. A functor $ F $ is called a *Dwyer-Kan* (DK) equivalence if $ [F] $ is essentially surjective, and $$ \text{Hom}_T(x, y) \to \text{Hom}_B(F(x), F(y)) $$ is a weak equivalence of simplicial sets. $$ \text{Cat}_{\Delta} $$ has a model structure with $ W $ being DK equivalences, and fibrations being functors $ F \colon T \to T' $ such that $ \text{Hom}(x, y) \to \text{Hom}(F(x), F(y)) $ is a Kan fibration which lifts morphisms at a fixed point.
 
 
-&emsp; We denote the Joyal model structure on $ \text{Set}_{\Delta} $ by $ (\text{Set}_{\Delta})_{\text{Joy}} $. Here, $ W $ is the set of *weak categorical equivalences*, i.e., maps $ A \to B $ such that $ \text{Hom}(A, C) \to \text{Hom}(B, C) $ induces an equivalence of simplicial categories for any $ C $. $ \text{Fib} $ is the collection of *quasi-fibrations*, meaning maps $ F \colon X \to Y $ which have the right lifting property with respect to the inclusion $ \Lambda_i^n \to \Delta^n $. $ \text{Cof} $ are monomorphisms.
+&emsp; We denote the Joyal model structure on $ \text{Set}_{\Delta} $ by $$ (\text{Set}_{\Delta})_{\text{Joy}} $$. Here, $ W $ is the set of *weak categorical equivalences*, i.e., maps $ A \to B $ such that $ \text{Hom}(A, C) \to \text{Hom}(B, C) $ induces an equivalence of simplicial categories for any $ C $. $ \text{Fib} $ is the collection of *quasi-fibrations*, meaning maps $ F \colon X \to Y $ which have the right lifting property with respect to the inclusion $ \Lambda_i^n \to \Delta^n $. $ \text{Cof} $ are monomorphisms.
 
 
 **Theorem 2.5.** &nbsp; *$ C $ and $ N $ determine a Quillen equivalence between $ (\text{Set}_{\Delta})_{\text{Joy}} $ and $ (\text{Cat}_{\Delta})_{DK} $.*
