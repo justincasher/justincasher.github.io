@@ -32,8 +32,8 @@ title: Infinity categories and higher algebra seminar notes
 ## Table of Contents
 1. [Introduction to $ \infty $-categories](#1-introduction-to-infinity-categories)
 2. [Model categories and $ \infty $-categories](#2-model-categories-and-infinity-categories)
-3. [Fibrations, adjoints, Kan extensions](#3-fibrations-adjoints-kan-extensions)
-4. [Symmetric monoidal $ \infty $-categories, HH](#symmetric-monoidal-infinity-categories-hh)
+3. [Fibrations, adjoints, Kan extensions](#3-fibrations,-adjoints,-kan-extensions)
+4. [Symmetric monoidal $ \infty $-categories, HH](#symmetric-monoidal-infinity-categories,-hh)
 5. [References](#5-references)
 
 
