@@ -461,7 +461,7 @@ is a trivial fibration, then we call $ e $ an *$ F $-fibration*.
 &emsp; We say $ F $ is a *Cartesian fibration* if $ F $ is an inner fibration and, for every edge $ e \colon d_o \to d_1 $ in $ D $ and $ c_1 \in C $ such that $ F(c_1) = d_1 $, there exists an $ F $-cartesian edge $ \widetilde{e} \colon c_0 \to c_1 $ such that $ F(\widetilde{e}) = e $. If $ F^{op} $ is a Cartesian fibration, then we call $ F $ a coCartesian fibration. 
 
 
-&emsp; We denote the category of (co)cartesian fibrations over $ D $ by $ \text{(co)Cart}_{/D} $. The full subcategory of $ \text{(co)Cart}_{/D} $ whose morphisms preserve $ F $-(co)Cartesian arrows is denoted $ (\text{(co)Cart}_{/D})_{\text{strict}} $. Let $ (1\text{-(co)Cart}_{/D})_{\text{strict}} $ denote the corresponding category where we replace $ C $ by the nerve of an ordinary category $ O $. Likewise, let $ 1 $-Cat denote the category of ordinary categories. The following correspondence is refered to as straightening and unstraightening:
+&emsp; We denote the category of (co)cartesian fibrations over $ D $ by $$ \text{(co)Cart}_{/D} $$. The full subcategory of $$ \text{(co)Cart}_{/D} $$ whose morphisms preserve $ F $-(co)Cartesian arrows is denoted $$ (\text{(co)Cart}_{/D})_{\text{strict}} $$. Let $$ (1\text{-(co)Cart}_{/D})_{\text{strict}} $$ denote the corresponding category where we replace $ C $ by the nerve of an ordinary category $ O $. Likewise, let $ 1 $-Cat denote the category of ordinary categories. The following correspondence is refered to as straightening and unstraightening:
 
 
 **Theorem 3.1.** &nbsp; *There exists a canonical equivalence between $ (1 \text{-coCart}_{/D})_{\text{strict}} $ and $ \text{Fun}(C, 1\text{-Cat}) $.*
