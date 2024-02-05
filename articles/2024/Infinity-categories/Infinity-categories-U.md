@@ -372,7 +372,7 @@ $$
 F \colon \text{Hom}_T(x, y) \to \text{Hom}_{T'}(F(x), F(y))
 $$
 
-a map of simplicial sets. The inclusion $ \text{Cat} \hookrightarrow \text{Cat}_{\Delta} $ has a left adjoint $ [\cdot] \colon \text{Cat}_{\Delta} \to \text{Cat} $, where $ \text{Ob}([T]) = \text{Ob}(T) $, and  
+a map of simplicial sets. The inclusion $$ \text{Cat} \hookrightarrow \text{Cat}_{\Delta} $$ has a left adjoint $$ [\cdot] \colon \text{Cat}_{\Delta} \to \text{Cat} $$, where $ \text{Ob}([T]) = \text{Ob}(T) $, and  
 
 $$
 \text{Hom}_{[T]}(x, y) = \pi_0(\text{Map}(x, y)).
