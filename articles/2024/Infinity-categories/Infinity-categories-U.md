@@ -27,10 +27,16 @@ title: Infinity categories and higher algebra seminar notes
 
 
 
+
+
 ## Table of Contents
 1. [Introduction to $ \infty $-categories](#1-introduction-to-infinity-categories)
 2. [Model categories and $ \infty $-categories](#2-model-categories-and-infinity-categories)
-3. [References](#3-references)
+3. [Fibrations, adjoints, Kan extensions](#3-fibrations-adjoints-kan-extensions)
+4. [Symmetric monoidal $ \infty $-categories, HH](#symmetric-monoidal-infinity-categories-hh)
+5. [References](#5-references)
+
+
 
 
 
@@ -96,7 +102,7 @@ $$
 $$
 
 
-**Example 1.** &nbsp; Let $ A $ be a compactly generated topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e., the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
+**Example 1.1.** &nbsp; Let $ A $ be a compactly generated topological space. We define a simplicial set $ \text{Sing}(A) $ as follows. Write $ \vert \Delta^n \vert $ for the geometric realization of $ \Delta^n $, i.e., the topological $ n $-simplex in $ \mathbb{R}^n $. We put 
 
 $$
 \text{Sing}_n(A) = \text{Hom}_{\text{Top}}(\vert \Delta^n \vert, A) 
@@ -114,7 +120,7 @@ $$
 $ \text{Sing} $ is a functor from topological spaces to simplicial sets, whose left adjoint is the geometric realization functor $ \vert \cdot \vert $.
 
 
-**Proposition 2.** &nbsp; *$ \text{Sing}(A) $ is a Kan complex.*
+**Proposition 1.2.** &nbsp; *$ \text{Sing}(A) $ is a Kan complex.*
 
 
 *Proof.* The adjunction $ \vert \cdot \vert \dashv \text{Sing}(\cdot) $ implies the following diagram:
@@ -131,7 +137,7 @@ $$
 This reduces the problem of lifting $ f_0 \colon \Lambda_i^n \to \text{Sing}(A) $ to lifting the associated $ \vert f_0 \vert \colon \vert \Lambda_i^n \vert \to A $. Let $ r \colon \Delta^n \to \Lambda_i^n $ be a continuous retract. We conclude that $ \vert f \vert \colon \vert \Delta^n \vert \to A $ given by $ \vert f \vert = \vert f_0 \vert \circ r $ is our desired map. Q.E.D. 
 
 
-**Example 3.** &nbsp; Let $ \mathcal{C} $ be a small category. Define a simplicial set $ N(\mathcal{C}) $, the *nerve of $ \mathcal{C} $*, by considering functors
+**Example 1.3.** &nbsp; Let $ \mathcal{C} $ be a small category. Define a simplicial set $ N(\mathcal{C}) $, the *nerve of $ \mathcal{C} $*, by considering functors
 
 $$
 N_n(\mathcal{C}) = \text{Fun}([n], \mathcal{C}).
@@ -148,7 +154,7 @@ $$
 The following proposition tells us we can consider the nerve as a *weak Kan complex*, meaning it satisfies the Kan lifting condition for all inner horns.
 
 
-**Proposition 4.** &nbsp; *Let $ X $ be a simplicial set. The following are equivalent:*
+**Proposition 1.4.** &nbsp; *Let $ X $ be a simplicial set. The following are equivalent:*
 
 *(1) There exists a small category and an isomorphism $ X \cong N(\mathcal{C}) $.*
 
@@ -164,7 +170,7 @@ $$
 *there exists a* unique *dotted arrow making it commute*.
 
 
-*Proof.* This is 1.1.2.2 of [\[1\]](#3-references). We only sketch a couple of main ideas without providing a complete proof.
+*Proof.* This is 1.1.2.2 of [\[1\]](#5-references). We only sketch a couple of main ideas without providing a complete proof.
 
 $ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restriction $ f_0 \mid \Delta^{\{ k-1, k \}} $. Composing our $ g_k $, 
 
@@ -228,7 +234,25 @@ $$
 there there exists a dotted arrow making it commute. Note that the dotted arrow is not required to be unique, contrasting the case of the nerve of a category, and it is not required to exist on outer horns, unlike $ \text{Sing}(A) $. Thus, $ \infty $-categories can be thought of as a generalized framework for small category theory and algebraic topology.
 
 
-&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[1\]](#3-references).
+&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[1\]](#5-references). 
+
+&emsp; In particular, a *topological category* $ T $ is a category enriched over compactly generated Hausdorff spaces. A *simplicial category* $ C $ is a category enriched over simplicial sets; we denote this category $ \text{Cat}_{\Delta} $. The *simplicial nerve* $ N \colon \text{Cat}_{\Delta} \to \text{Set}_{\Delta} $ is characterized by 
+
+$$
+\text{Hom}_{\text{Set}_{\Delta}}(\Delta, N(C))
+\cong \text{Hom}_{\text{Cat}_{\Delta}}(\mathfrak{C}[\Delta^n], C)
+$$
+
+for some simplicial category $ \mathfrak{C}[\Delta^n] $ which we will not define here. We set $ N(T) $ to be $ N(\text{Sing}(T)) $. Theorem 1.1.5.13 in [\[1\]](#5-references) asserts that  the conunit
+
+$$
+\vert \text{Hom}_{\mathfrak{C}[N(T)]}(x, y) \vert
+\to \text{Hom}_T(x, y)
+$$
+
+is a weak homotopy equivalence of topological spaces. Since we are interested in objects up to homotopy equivalence, we consider $ \infty $-categories and topological categories to be the same.
+
+
 
 
 
@@ -288,7 +312,7 @@ where $ i, j \in \text{Cof} $, $ p, q \in \text{Fib} $, and $ i, q \in W $.
 &emsp; We call the elements in $ \text{Fib} \cap W $ trivial (or acyclic) fibrations, and the elements in $ \text{Cof} \cap W $ trivial (or acyclic) cofibrations. The bicompleteness axiom implies $ \mathcal{M} $ contains initial and terminal objects; letting $ D \colon \varnothing \to \mathcal{C} $ be the empty diagram, we get that $ \text{colim} j $ is the initial object, and $ \lim j $ is the terminal object. It need not be pointed, i.e., have a zero object.
 
 
-**Example 1.** &nbsp; Consider the category of topological spaces $ \text{Top} $; we can endow it with a model structure. $ W $ is the set of homotopy equivalences, i.e., continuous functions $ f \colon X \to Y $ such that $ f $ induces isomorphisms $ f_* \colon \pi_n(X) \to f_*(Y) $. $ \text{Fib} $ are Serre fibrations, i.e., $ f $ for which the right lifting problem
+**Example 2.1.** &nbsp; Consider the category of topological spaces $ \text{Top} $; we can endow it with a model structure. $ W $ is the set of homotopy equivalences, i.e., continuous functions $ f \colon X \to Y $ such that $ f $ induces isomorphisms $ f_* \colon \pi_n(X) \to f_*(Y) $. $ \text{Fib} $ are Serre fibrations, i.e., $ f $ for which the right lifting problem
 
 $$
 \xymatrix{
@@ -300,10 +324,10 @@ $$
 admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative cell complexes.
 
 
-**Example 2.** &nbsp; Consider the category of simplicial sets $ \text{Set}_{\Delta} $. $ W $ is the set of maps which induce a weak equivalence on the geometric realizations, $ \text{Fib} $ are Kan fibrations, and $ \text{Cof} $ is the collection of monomorphisms.
+**Example 2.2.** &nbsp; Consider the category of simplicial sets $ \text{Set}_{\Delta} $. $ W $ is the set of maps which induce a weak equivalence on the geometric realizations, $ \text{Fib} $ are Kan fibrations, and $ \text{Cof} $ is the collection of monomorphisms.
 
 
-**Example 3.** &nbsp; Consider the category of chain complexes of $ R $-modules. $ W $ is the set of quasi-isomorphisms, $ \text{Fib} $ are chain maps $ f $ such that each $ f_n \colon X_n \to Y_n $ is surjective, and $ \text{Cof} $ are chain maps $ g $ such that each $ g_n \colon X_n \hookrightarrow Y_n $ is injective with projective cokernel.
+**Example 2.3.** &nbsp; Consider the category of chain complexes of $ R $-modules. $ W $ is the set of quasi-isomorphisms, $ \text{Fib} $ are chain maps $ f $ such that each $ f_n \colon X_n \to Y_n $ is surjective, and $ \text{Cof} $ are chain maps $ g $ such that each $ g_n \colon X_n \hookrightarrow Y_n $ is injective with projective cokernel.
 
 
 &emsp; Let $ \mathcal{M} $ be a model category. We call $ \text{Ho}(\mathcal{M}) = W^{-1} \mathcal{M} $ the *homotopy category of* $ \mathcal{M} $, where inversion means each weak equivalence becomes an isomorphism. We say that $ f, g \colon X \to Y $ are *homotopic* if there exists a commutative diagram
@@ -331,16 +355,16 @@ is a cofibration.
 **Theorem 4** (CITE). &nbsp; *The natural functor $ Q \colon (C^{cf}/\sim) \to \text{Ho}(C) $ is an equivalence of categories.*  
 
 
-**Example 1'.** &nbsp; $ \text{Ho(Top)} $, up to equivalence, has objects CW-complexes and morphisms homotopy classes of continuous maps.
+**Example 2.1'.** &nbsp; $ \text{Ho(Top)} $, up to equivalence, has objects CW-complexes and morphisms homotopy classes of continuous maps.
 
 
-**Example 2'.** &nbsp; $ \text{Ho}(\text{Set}_{\Delta}) \cong \text{Ho(Top)} $ via the geometric realization functor. 
+**Example 2.2'.** &nbsp; $ \text{Ho}(\text{Set}_{\Delta}) \cong \text{Ho(Top)} $ via the geometric realization functor. 
 
 
-**Example 3'.** &nbsp; $ \text{Ho}(Ch(R)) \cong D(R) $, where $ D(R) $ is the derived category.
+**Example 2.3'.** &nbsp; $ \text{Ho}(Ch(R)) \cong D(R) $, where $ D(R) $ is the derived category.
 
 
-**Theorem 4** (CITE) &nbsp; *Let $ C \in \text{Set}_{\Delta} $. Then $ C $ is fibrant if and only if $ C $ is an $ \infty $-category.*
+**Theorem 2.4** (CITE) &nbsp; *Let $ C \in \text{Set}_{\Delta} $. Then $ C $ is fibrant if and only if $ C $ is an $ \infty $-category.*
 
 &emsp; We call a category $ T $ *simplicially enriched* if it is enriched over the category of simplicial sets. We denote the category of simplicially enriched categories $ \text{Cat}_{\Delta} $. It has morphisms functors $ F \colon T \to T' $ such that 
 
@@ -360,14 +384,109 @@ We call $ [T] $ the *homotopy category* of $ T $. A functor $ F $ is called a *D
 &emsp; We denote the Joyal model structure on $ \text{Set}_{\Delta} $ by $ (\text{Set}_{\Delta})_{\text{Joy}} $. Here, $ W $ is the set of *weak categorical equivalences*, i.e., maps $ A \to B $ such that $ \text{Hom}(A, C) \to \text{Hom}(B, C) $ induces an equivalence of simplicial categories for any $ C $. $ \text{Fib} $ is the collection of *quasi-fibrations*, meaning maps $ F \colon X \to Y $ which have the right lifting property with respect to the inclusion $ \Lambda_i^n \to \Delta^n $. $ \text{Cof} $ are monomorphisms.
 
 
-**Theorem 5.** &nbsp; *$ C $ and $ N $ determine a Quillen equivalence between $ (\text{Set}_{\Delta})_{\text{Joy}} $ and $ (\text{Cat}_{\Delta})_{DK} $.*
+**Theorem 2.5.** &nbsp; *$ C $ and $ N $ determine a Quillen equivalence between $ (\text{Set}_{\Delta})_{\text{Joy}} $ and $ (\text{Cat}_{\Delta})_{DK} $.*
 
 
 *Proof.* HTT 2.2.5.1.
 
 
 
-## 3. References
+
+
+
+## 3. Fibrations, adjoints, Kan extensions
+
+
+&emsp; Let $ X $ and $ X' $ be simplicial sets. The *(convolution) product* of $ X $ and $ X' $ is given by 
+
+$$
+(X \star X')([n]) = \coprod_{[n] = I \cup I'},
+$$
+
+where the union is taken over all disjoint decompositions $ J = I \cup I' $ such that $ i < i' $ for $ i \in I $, $i' \in I $.
+
+
+&emsp; Let $ C $ be an $ \infty $-category and $ p \colon I \to C $ be a map of simplicial sets. The *slice category* $ C_{/p} $ is characterized by the universal property, for every $ X \in \text{Set}_{\Delta} $,
+
+$$
+\text{Hom}_{\text{Set}_{\Delta}}(X, C_{/p}) 
+= \text{Hom}_p(X \star I, C),
+$$
+
+where the "$ p $" on the R.H.S. means we only consider $ f \colon Y \star I \to C $ such that $ f \vert_{I} = p $. The dual notion to $ C_{/p} $ is $ C_{p/} $.
+
+
+&emsp; An explicit way of defining the slice categories is by considering the diagrams in $ \text{Fun}(-, C) $, taking $ C \cong \text{Fun}(*, C) $,
+
+$$
+C_{/p} = C \times_{\text{Fun}(I, C)} \text{Fun}([1] \times I, C) \times_{\text{Fun}(I, C)} \{ p \} 
+$$
+
+and 
+
+$$
+C_{p/} = \{p\} \times_{\text{Fun}(I, C)} \text{Fun}([1] \times I, C) \times_{\text{Fun}(I, C)} C,
+$$
+
+where the maps $ \text{Fun}([1] \times I, C) \to \text{Fun}(I, C) $ are given by evaluation at $ 1 $ and $ 0 $ in $ [1] $.
+
+
+&emsp; The *limit of $ p $*, $ \lim p $, is defined as a final object in $ C_{/p} $. The *colimit of $ p $*, $ \text{colim} \, p $, is an initial object in $ C_{p/} $. By final (resp. initial), we mean up to homotopy equivalence, i.e., $ A $ is initial if $ \text{Hom}(A, X) $ (resp. $ \text{Hom}(X, A) $) is contractible for every $ X $.
+
+
+&emsp; Let $ D $ be an $ \infty $-category. Write $ \text{Cat}_{/D} $ for the cateogry of morphisms $ F \colon C \to D $. 
+
+
+&emsp; We say $ F $ has the *right lifting property* with respect to $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ if any diagram 
+
+$$
+\xymatrix{ 
+    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & C \ar[d]^{F} \\
+    \Delta^n \ar@{.>}[ur]_{f} & D
+} 
+$$
+
+has a solution. If for inner horns (resp. any horn), $ 0 < i < n $ (resp. $ 0 \leq i \leq n $), the diagram has a solution, we say $ F $ is an *inner* (resp. *Kan*) *fibration*. If $ F $ has the right lifting property for $ \partial \Delta^n \to \Delta^n $ for every $ n $, then we call $ F $ a *trivial Kan fibration*.
+
+
+&emsp; Let $ F $ be an inner fibration, and let $ e \colon o_0 \to o_1 $ be an edge in $ O $. If the map
+
+$$
+C_{/e} \to C_{/o_1} \times_{D_{/F(o_1)}} C_{/F(e)}
+$$
+
+is a trivial fibration, then we call $ e $ an *$ F $-fibration*.
+
+
+&emsp; We say $ F $ is a *Cartesian fibration* if $ F $ is an inner fibration and, for every edge $ e \colon d_o \to d_1 $ in $ D $ and $ c_1 \in C $ such that $ F(c_1) = d_1 $, there exists an $ F $-cartesian edge $ \widetilde{e} \colon c_0 \to c_1 $ such that $ F(\widetilde{e}) = e $. If $ F^{op} $ is a Cartesian fibration, then we call $ F $ a coCartesian fibration. 
+
+
+&emsp; We denote the category of (co)cartesian fibrations over $ D $ by $ \text{(co)Cart}_{/D} $. The full subcategory of $ \text{(co)Cart}_{/D} $ whose morphisms preserve $ F $-(co)Cartesian arrows is denoted $ (\text{(co)Cart}_{/D})_{\text{strict}} $. Let $ (1\text{-(co)Cart}_{/D})_{\text{strict}} $ denote the corresponding category where we replace $ C $ by the nerve of an ordinary category $ O $. Likewise, let $ 1 $-Cat denote the category of ordinary categories. The following correspondence is refered to as straightening and unstraightening:
+
+
+**Theorem 3.1.** &nbsp; *There exists a canonical equivalence between $ (1 \text{-coCart}_{/D})_{\text{strict}} $ and $ \text{Fun}(C, 1\text{-Cat}) $.*
+
+
+*Proof.* See Lurie 3.2. We associate to $ F \colon X \to C $ the fiber functor. 
+
+
+&emsp; Let $ F \colon C \to D $ and $ G \colon D \to C $ be functors of $ \infty $-categories. Then 
+
+
+
+
+
+## 4. Symmetric monoidal infinity categories, HH
+
+
+&emsp; 
+
+
+
+
+
+
+## 5. References
 
 1. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
 2. ————, *Higher Algebra*, 2017.
