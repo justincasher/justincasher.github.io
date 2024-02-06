@@ -33,7 +33,7 @@ title: Infinity categories and higher algebra seminar notes
 1. [Introduction to $ \infty $-categories](#1-introduction-to-infinity-categories)
 2. [Model categories and $ \infty $-categories](#2-model-categories-and-infinity-categories)
 3. [Fibrations, adjoints, Kan extensions](#3-fibrations,-adjoints,-kan-extensions)
-4. [Symmetric monoidal $ \infty $-categories, HH](#symmetric-monoidal-infinity-categories,-hh)
+4. [dg and stable $ \infty $-categories](#symmetric-monoidal-infinity-categories,-hh)
 5. [References](#5-references)
 
 
@@ -497,14 +497,71 @@ is an isomorphism in the homotopy category.
 
 
 
-## 4. Symmetric monoidal infinity categories, HH
 
 
-&emsp; 
+## 4. dg and stable infinity categories
 
 
+&emsp; A *dg-category* $ C $ over $ R $ is a category enriched over $ \text{Ch}(R) $. Set $ R = \mathbb{Z} $. Then, specifically, we require:
 
 
+(i) For every $ X, Y \in C $ we have $ \text{Hom}_C(X, Y)_* $ is a chain complex of abelian groups:
+
+$$
+\cdots \to \text{Hom}_C(X, Y)_1 \to \text{Hom}_C(X, Y)_0 \to \text{Hom}_C(X, Y)_{-1} \to \cdots 
+$$
+
+
+(ii) $ C $ is equipped with an (associative) composition law 
+
+$$
+\text{Hom}_C(Y, Z)_* \otimes_{\mathbb{Z}} \text{Hom}_C(X, Y)_* \to \text{Hom}_C(X, Z),
+$$
+
+such that that for every $ p, q $, there is a map 
+
+$$
+\text{Hom}_C(Y, Z)_p \otimes_{\mathbb{Z}} \text{Hom}_C(X, Y)_q \to \text{Hom}_C(X, Z)_{p+q},
+$$
+
+and these satisfy the Leibniz rule $ d(g \circ f) = dg \circ f + (-1)^p q \circ df $.
+
+
+Note that $ \text{Id}_X $ must be in $ \text{Hom}_C(X, X)_0 $, else composing with it would shift degrees.
+
+
+&emsp; The *dg-nerve* of $ C $, $ N_{dg}(C) $, is a simplicial set constructed as follows. For each natural number $ n $, we set $ N_{dg}(C)_n $ to be the set of ordered pairs $ (\{X_i\}_{0 \leq i \leq n}, \{f_I\}) $, where $ X_i \in \text{Ob}(C) $ and $ I $ ranged over subsets 
+
+$$
+I = \{i_{-}, i_m, i_{m-1}, \dots, i_1, i_+ \} \subseteq [n]
+$$
+
+with $ m \geq 0 $. We require $ f_I \in \text{Hom}(X_{i_-}, X_{i_+})_m $, with
+
+$$
+d f_I = \sum_{i \leq j \leq m} (-1)^j (f_{I \setminus i_j} - f_{i_j < \cdots < i_1 < i_+} \circ f_{i_-, i_m, < \cdots < i_j}).
+$$
+
+If $ \alpha \colon [m] \to [n] $ is nondecreasing, $ \alpha_* \colon N_{dg}(C)_n \to N_{dg}(C)_m $ is given by 
+
+$$
+( \{ X_i \}_{0 \leq i \leq n}, \{ f_I \}) \to ( \{ X_{f(j)} \}_{0 \leq j \leq m}, \{ g_J \} ),
+$$
+
+where 
+
+$$
+g_J
+= 
+\begin{cases}
+f_{\alpha(J)} & \text{if } \alpha \vert_J \text{ is injective}, \\
+\text{Id}_{X_i} & \text{if } J = \{j, j'\} \text{ with } \alpha(j) = \alpha(j') = i, \\
+0 & \text{else}.
+\end{cases}
+$$
+
+
+**Example 4.1.** &nbsp; By definition, $ N_{dg}(C)_1 $ are objects in $ C $. Likewise, $ N_{dg}(C)_1 $ is the set the of morphisms $$ f \in \text{Hom}_C(X, Y)_0 $$ such that $ df = 0 $. Finally, $ N_{dg}(C)_2 $ is the set of triples $$ f \in \text{Hom}_C(X, Y)_0 $$, $$ f \in \text{Hom}_C(Y, Z)_0 $$, and $$ h \in \text{Hom}_C(X, Z)_0 $$ such that $ df = dg = dh = 0 $ and there exist $$ z \in \text{Hom}_C(X, Z)_1 $$ with $ dz = (g \circ f) - h $.
 
 
 ## 5. References
