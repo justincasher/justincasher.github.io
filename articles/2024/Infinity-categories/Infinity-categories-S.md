@@ -23,7 +23,7 @@ title: Infinity categories and higher algebra seminar notes
 <br>
 
 
-**Abstract.** &nbsp; This is a collection of short notes I am creating for a reading group on $ \infty $-categories and higher algebra at Indiana University in the spring of 2024. Some of these notes are from talks given by other participates; I have indicated where.
+**Abstract.** &nbsp; This is a collection of short notes I am creating for a reading group on $ \infty $-categories and higher algebra at Indiana University in the spring of 2024. Some of these notes are from talks given by other participants; I have indicated where.
 
 
 
@@ -325,7 +325,7 @@ $$
 admits a solution. Finally, $ \text{Cof} $ consists of the retracts of relative cell complexes.
 
 
-**Example 2.2.** &nbsp; Consider the category of simplicial sets $ \text{Set}_{\Delta} $. $ W $ is the set of maps which induce a weak equivalence on the geometric realizations, $ \text{Fib} $ are Kan fibrations, and $ \text{Cof} $ is the collection of monomorphisms.
+**Example 2.2.** &nbsp; Consider the category of simplicial sets $ \text{Set}_{\Delta} $. $ W $ is the set of maps that induce a weak equivalence on the geometric realizations, $ \text{Fib} $ are Kan fibrations, and $ \text{Cof} $ is the collection of monomorphisms.
 
 
 **Example 2.3.** &nbsp; Consider the category of chain complexes of $ R $-modules. $ W $ is the set of quasi-isomorphisms, $ \text{Fib} $ are chain maps $ f $ such that each $ f_n \colon X_n \to Y_n $ is surjective, and $ \text{Cof} $ are chain maps $ g $ such that each $ g_n \colon X_n \hookrightarrow Y_n $ is injective with projective cokernel.
@@ -447,7 +447,7 @@ where the maps $ \text{Fun}([1] \times I, C) \to \text{Fun}(I, C) $ are given by
 &emsp; The *limit of $ p $*, $ \lim p $, is defined as a final object in $ C_{/p} $. The *colimit of $ p $*, $ \text{colim} \, p $, is an initial object in $ C_{p/} $. By final (resp. initial), we mean up to homotopy equivalence, i.e., $ A $ is initial if $ \text{Hom}(A, X) $ (resp. $ \text{Hom}(X, A) $) is contractible for every $ X $.
 
 
-&emsp; Let $ D $ be an $ \infty $-category. Write $ \text{Cat}_{/D} $ for the cateogry of morphisms $ F \colon C \to D $. 
+&emsp; Let $ D $ be an $ \infty $-category. Write $ \text{Cat}_{/D} $ for the category of morphisms $ F \colon C \to D $. 
 
 
 &emsp; We say $ F $ has the *right lifting property* with respect to $ \iota \colon \Lambda_i^n \hookrightarrow \Delta^n $ if any diagram 
@@ -477,7 +477,7 @@ is a trivial fibration, then we call $ e $ an *$ F $-fibration*.
 &emsp; We denote the category of (co)cartesian fibrations over $ D $ by $$ \text{(co)Cart}_{/D} $$. The full subcategory of $$ \text{(co)Cart}_{/D} $$ whose morphisms preserve $ F $-(co)Cartesian arrows is denoted $$ (\text{(co)Cart}_{/D})_{\text{strict}} $$. Let $$ (1\text{-(co)Cart}_{/D})_{\text{strict}} $$ denote the corresponding category where we replace $ C $ by the nerve of an ordinary category $ O $. Likewise, let $ 1 $-Cat denote the category of ordinary categories. 
 
 
-&emsp; The following correspondence is refered to as *straightening and unstraightenin*g; we have stated it as in [\[1\]](#5-references).
+&emsp; The following correspondence is referred to as *straightening and unstraightenin*g; we have stated it as in [\[1\]](#5-references).
 
 
 **Theorem 3.1.** &nbsp; *There exists a canonical equivalence between $ (1 \text{-coCart}_{/D})_{\text{strict}} $ and $ \text{Fun}(D, 1\text{-Cat}) $.*
@@ -490,7 +490,7 @@ is a trivial fibration, then we call $ e $ an *$ F $-fibration*.
 &emsp; Now let $$ \Phi \colon D \to 1\text{-Cat} $$ be a functor. We can construct a coCartsesian fibration $ F \colon O \to D $ by letting $ O $ have objects $ (d, x) $ with $ d \in D $ and $ x \in \Phi(d) $, and by setting $ \text{Hom}_{O}((d_0, x_0), (d_1, x_1)) $ be pairs $$ f \in \text{Hom}_D(d_0, d_1) $$ and $$ g \in \text{Hom}_{\Phi(d_1)}(\Phi_f(x_0), x_1) $$.  Q.E.D.
 
 
-&emsp; Let $ F \colon C \to D $ and $ G \colon D \to C $ be functors of $ \infty $-categories. Lurie, 5.2.1 of [\[3\]](#5-references), proves that $ G $ is equivalent to a Cartesian fibration $ p \colon M \to \Delta^1 $, where $ M_{\{0\}} $ (the fiber at $ 0 $) is equivalent to $ C $ and $ M_{\{1\}} $ is equivalent to $ D $. Likewise $ F $ is equivalent to a (different) coCartesian fibration. Hence, we define an *adjunction* between $ C $ and $ D $ to be a map $ p \colon \mathcal{M} \to \Delta^1 $ with $ C \equiv M_{\{0\}} $, $ D \equiv M_{\{1\}} $, $ p $ is a Cartesian fibration, and $ p $ is a coCartesian fibration. If $ F $ and $ G $ are the induced functors, then we write $ F \dashv G $.
+&emsp; Let $ F \colon C \to D $ and $ G \colon D \to C $ be functors of $ \infty $-categories. Lurie, 5.2.1 of [\[3\]](#5-references), proves that $ G $ is equivalent to a Cartesian fibration $ p \colon M \to \Delta^1 $, where $ M_{\{0\}} $ (the fiber at $ 0 $) is equivalent to $ C $ and $ M_{\{1\}} $ is equivalent to $ D $. Likewise, $ F $ is equivalent to a (different) coCartesian fibration. Hence, we define an *adjunction* between $ C $ and $ D $ to be a map $ p \colon \mathcal{M} \to \Delta^1 $ with $ C \equiv M_{\{0\}} $, $ D \equiv M_{\{1\}} $, $ p $ is a Cartesian fibration, and $ p $ is a coCartesian fibration. If $ F $ and $ G $ are the induced functors, then we write $ F \dashv G $.
 
 
 &emsp; Alternatively, a *unit transformation* for a pair of functors $ (F, G) $ (as above) is a map $ u \colon \text{id}_C \to G \circ F $ in $ \text{Fun}(C, C) $ such that, for every $ c \in C $ and $ d \in D $, the composition 
