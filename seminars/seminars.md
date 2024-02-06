@@ -38,7 +38,7 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. Everyone is from Indi
 
 ### Infinity categories and higher algebra reading group
 
-We meet from 3:00 PM to 4:00 PM on Wednesdays in Swain East 009. [Here]({{'/infinity-categories-S#1-introduction-to-infinity-categories' | relative_url}}) are some notes I am writing.
+We meet from 3:00 PM to 4:00 PM on Wednesdays in Swain East 009. [Here]({{'/infinity-categories-S' | relative_url}}) are some notes I am writing.
 
 
 
