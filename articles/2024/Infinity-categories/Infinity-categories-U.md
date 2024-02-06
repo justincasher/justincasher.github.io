@@ -236,7 +236,7 @@ there there exists a dotted arrow making it commute. Note that the dotted arrow 
 
 &emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[3\]](#5-references). 
 
-&emsp; In particular, a *topological category* $ T $ is a category enriched over compactly generated Hausdorff spaces. A *simplicial category* $ C $ is a category enriched over simplicial sets; we denote this category $ \text{Cat}_{\Delta} $. The *simplicial nerve* $ N \colon \text{Cat}_{\Delta} \to \text{Set}_{\Delta} $ is characterized by 
+&emsp; In particular, a *topological category* $ T $ is a category enriched over compactly generated Hausdorff spaces. A *simplicial category* $ C $ is a category enriched over simplicial sets; we denote this category $$ \text{Cat}_{\Delta} $$. The *simplicial nerve* $$ N \colon \text{Cat}_{\Delta} \to \text{Set}_{\Delta} $$ is characterized by 
 
 $$
 \text{Hom}_{\text{Set}_{\Delta}}(\Delta, N(C))
@@ -441,8 +441,8 @@ where the maps $ \text{Fun}([1] \times I, C) \to \text{Fun}(I, C) $ are given by
 
 $$
 \xymatrix{ 
-    \Lambda_i^n \ar[r]^{f_0} \ar[d]_{\iota} & C \ar[d]^{F} \\
-    \Delta^n \ar@{.>}[ur]_{f} & D
+    \Lambda_i^n \ar[r] \ar[d]_{\iota} & C \ar[d]^{F} \\
+    \Delta^n \ar@{.>}[ur]_{f} \ar[r] & D
 } 
 $$
 
