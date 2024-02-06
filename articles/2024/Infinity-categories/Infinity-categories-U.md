@@ -530,7 +530,7 @@ and these satisfy the Leibniz rule $ d(g \circ f) = dg \circ f + (-1)^p q \circ 
 Note that $ \text{Id}_X $ must be in $ \text{Hom}_C(X, X)_0 $, else composing with it would shift degrees.
 
 
-&emsp; The *dg-nerve* of $ C $, $ N_{dg}(C) $, is a simplicial set constructed as follows. For each natural number $ n $, we set $ N_{dg}(C)_n $ to be the set of ordered pairs $ (\{X_i\}_{0 \leq i \leq n}, \{f_I\}) $, where $ X_i \in \text{Ob}(C) $ and $ I $ ranged over subsets 
+&emsp; The *dg-nerve* of $ C $, $ N_{dg}(C) $, is a simplicial set constructed as follows. For each natural number $ n $, we set $$ N_{dg}(C)_n $$ to be the set of ordered pairs $$ (\{X_i\}_{0 \leq i \leq n}, \{f_I\}) $$, where $$ X_i \in \text{Ob}(C) $$ and $ I $ ranged over subsets 
 
 $$
 I = \{i_{-}, i_m, i_{m-1}, \dots, i_1, i_+ \} \subseteq [n]
@@ -542,7 +542,7 @@ $$
 d f_I = \sum_{i \leq j \leq m} (-1)^j (f_{I \setminus i_j} - f_{i_j < \cdots < i_1 < i_+} \circ f_{i_-, i_m, < \cdots < i_j}).
 $$
 
-If $ \alpha \colon [m] \to [n] $ is nondecreasing, $ \alpha_* \colon N_{dg}(C)_n \to N_{dg}(C)_m $ is given by 
+If $ \alpha \colon [m] \to [n] $ is nondecreasing, $$ \alpha_* \colon N_{dg}(C)_n \to N_{dg}(C)_m $$ is given by 
 
 $$
 ( \{ X_i \}_{0 \leq i \leq n}, \{ f_I \}) \to ( \{ X_{f(j)} \}_{0 \leq j \leq m}, \{ g_J \} ),
@@ -561,7 +561,7 @@ f_{\alpha(J)} & \text{if } \alpha \vert_J \text{ is injective}, \\
 $$
 
 
-**Example 4.1.** &nbsp; By definition, $ N_{dg}(C)_1 $ are objects in $ C $. Likewise, $ N_{dg}(C)_1 $ is the set the of morphisms $$ f \in \text{Hom}_C(X, Y)_0 $$ such that $ df = 0 $. Finally, $ N_{dg}(C)_2 $ is the set of triples $$ f \in \text{Hom}_C(X, Y)_0 $$, $$ f \in \text{Hom}_C(Y, Z)_0 $$, and $$ h \in \text{Hom}_C(X, Z)_0 $$ such that $ df = dg = dh = 0 $ and there exist $$ z \in \text{Hom}_C(X, Z)_1 $$ with $ dz = (g \circ f) - h $.
+**Example 4.1.** &nbsp; By definition, $$ N_{dg}(C)_1 $$ are objects in $ C $. Likewise, $$ N_{dg}(C)_1 $$ is the set the of morphisms $$ f \in \text{Hom}_C(X, Y)_0 $$ such that $ df = 0 $. Finally, $ N_{dg}(C)_2 $ is the set of triples $$ f \in \text{Hom}_C(X, Y)_0 $$, $$ f \in \text{Hom}_C(Y, Z)_0 $$, and $$ h \in \text{Hom}_C(X, Z)_0 $$ such that $ df = dg = dh = 0 $ and there exist $$ z \in \text{Hom}_C(X, Z)_1 $$ with $ dz = (g \circ f) - h $.
 
 
 ## 5. References
