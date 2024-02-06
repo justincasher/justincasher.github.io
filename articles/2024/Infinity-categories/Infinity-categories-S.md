@@ -350,7 +350,7 @@ $$
 is a cofibration.
 
 
-&emsp; We say that $ X $ is *fibrant* (resp. cofibrant) if the unique map from the initial (resp. terminal) object, $ 0 \to X $ (resp. $ X \to 1 $), is a fibration (resp. cofibration). If $ X $ is cofibrant and $ Y $ is fibrant, then homotopy equivalence $ \sim $ is an equivalence relation compatible with composition. Hence, the quotient $ C^{cf}/\sim $, fibrant or cofibrant objects modulo homotopy, is well defined.
+&emsp; We say that $ X $ is *fibrant* (resp. cofibrant) if the unique map from the initial (resp. terminal) object, $ \varnothing \to X $ (resp. $ X \to * $), is a fibration (resp. cofibration). If $ X $ is cofibrant and $ Y $ is fibrant, then homotopy equivalence $ \sim $ is an equivalence relation compatible with composition. Hence, the quotient $ C^{cf}/\sim $, fibrant or cofibrant objects modulo homotopy, is well defined.
 
 
 **Theorem 4.** &nbsp; *The natural functor $ Q \colon (C^{cf}/\sim) \to \text{Ho}(C) $ is an equivalence of categories.*  
