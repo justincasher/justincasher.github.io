@@ -22,6 +22,7 @@ title: Infinity categories and higher algebra seminar notes
 </style>
 <br>
 
+
 **Abstract.** &nbsp; This is a collection of short notes I am creating for a reading group on $ \infty $-categories and higher algebra at Indiana University in the spring of 2024. Some of these notes are from talks given by other participates; I have indicated where.
 
 
@@ -32,8 +33,8 @@ title: Infinity categories and higher algebra seminar notes
 ## Table of Contents
 1. [Introduction to $ \infty $-categories](#1-introduction-to-infinity-categories)
 2. [Model categories and $ \infty $-categories](#2-model-categories-and-infinity-categories)
-3. [Fibrations, adjoints, Kan extensions](#3-fibrations,-adjoints,-kan-extensions)
-4. [dg and stable $ \infty $-categories](#symmetric-monoidal-infinity-categories,-hh)
+3. [Fibrations, adjoints, Kan extensions](#3-fibrations-adjoints-kan-extensions)
+4. [dg and stable $ \infty $-categories](#4-dg-and-stable-infinity-categories)
 5. [References](#5-references)
 
 
@@ -366,7 +367,7 @@ is a cofibration.
 
 **Theorem 2.4** (CITE) &nbsp; *Let $ C \in \text{Set}_{\Delta} $. Then $ C $ is fibrant if and only if $ C $ is an $ \infty $-category.*
 
-&emsp; We call a category $ T $ *simplicially enriched* if it is enriched over the category of simplicial sets. We denote the category of simplicially enriched categories $ \text{Cat}_{\Delta} $. It has morphisms functors $ F \colon T \to T' $ such that 
+&emsp; Let $$ T \in \text{Cat}_{\Delta} $$ be a simplicial category, i.e., a category enriched over simplicial sets. It has morphisms functors $ F \colon T \to T' $ such that 
 
 $$
 F \colon \text{Hom}_T(x, y) \to \text{Hom}_{T'}(F(x), F(y))
@@ -378,7 +379,13 @@ $$
 \text{Hom}_{[T]}(x, y) = \pi_0(\text{Map}(x, y)).
 $$
 
-We call $ [T] $ the *homotopy category* of $ T $. A functor $ F $ is called a *Dwyer-Kan* (DK) equivalence if $ [F] $ is essentially surjective, and $$ \text{Hom}_T(x, y) \to \text{Hom}_B(F(x), F(y)) $$ is a weak equivalence of simplicial sets. $$ \text{Cat}_{\Delta} $$ has a model structure with $ W $ being DK equivalences, and fibrations being functors $ F \colon T \to T' $ such that $ \text{Hom}(x, y) \to \text{Hom}(F(x), F(y)) $ is a Kan fibration which lifts morphisms at a fixed point.
+We call $ [T] $ the *homotopy category* of $ T $. A functor $ F $ is called a *Dwyer-Kan* (DK) equivalence if $ [F] $ is essentially surjective, and 
+
+$$ 
+F \colon \text{Hom}_T(x, y) \to \text{Hom}_{T'}(F(x), F(y)) 
+$$ 
+
+is a weak equivalence of simplicial sets. $$ \text{Cat}_{\Delta} $$ has a model structure with $ W $ being DK equivalences, and fibrations being functors $ F \colon T \to T' $ such that $ \text{Hom}(x, y) \to \text{Hom}(F(x), F(y)) $ is a Kan fibration which lifts morphisms at a fixed point.
 
 
 &emsp; We denote the Joyal model structure on $ \text{Set}_{\Delta} $ by $$ (\text{Set}_{\Delta})_{\text{Joy}} $$. Here, $ W $ is the set of *weak categorical equivalences*, i.e., maps $ A \to B $ such that $ \text{Hom}(A, C) \to \text{Hom}(B, C) $ induces an equivalence of simplicial categories for any $ C $. $ \text{Fib} $ is the collection of *quasi-fibrations*, meaning maps $ F \colon X \to Y $ which have the right lifting property with respect to the inclusion $ \Lambda_i^n \to \Delta^n $. $ \text{Cof} $ are monomorphisms.
@@ -569,7 +576,14 @@ g \in \text{Hom}_C(Y, Z)_0,
 \text{ and } h \in \text{Hom}_C(X, Z)_0,
 $$ 
 
-such that $ df = dg = dh = 0 $ and there exist $$ z \in \text{Hom}_C(X, Z)_1 $$ with $ dz = (g \circ f) - h $.
+such that $ df = dg = dh = 0 $ and that there exist $$ z \in \text{Hom}_C(X, Z)_1 $$ with $ dz = (g \circ f) - h $.
+
+
+**Theorem 4.2.** &nbsp; *Let $ C $ be a dg-category. Then $$ N_{dg}(C) $$ is an $ \infty $-category.*
+
+
+
+
 
 
 ## 5. References
