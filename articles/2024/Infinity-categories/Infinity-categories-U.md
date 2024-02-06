@@ -353,7 +353,10 @@ is a cofibration.
 &emsp; We say that $ X $ is *fibrant* (resp. cofibrant) if the unique map from the initial (resp. terminal) object, $ 0 \to X $ (resp. $ X \to 1 $), is a fibration (resp. cofibration). If $ X $ is cofibrant and $ Y $ is fibrant, then homotopy equivalence $ \sim $ is an equivalence relation compatible with composition. Hence, the quotient $ C^{cf}/\sim $, fibrant or cofibrant objects modulo homotopy, is well defined.
 
 
-**Theorem 4** (CITE). &nbsp; *The natural functor $ Q \colon (C^{cf}/\sim) \to \text{Ho}(C) $ is an equivalence of categories.*  
+**Theorem 4.** &nbsp; *The natural functor $ Q \colon (C^{cf}/\sim) \to \text{Ho}(C) $ is an equivalence of categories.*  
+
+
+*Proof.* See theorem 1 in [\[6\]](#5-references). Q.E.D.
 
 
 **Example 2.1'.** &nbsp; $ \text{Ho(Top)} $, up to equivalence, has objects CW-complexes and morphisms homotopy classes of continuous maps.
@@ -385,10 +388,13 @@ $$
 F \colon \text{Hom}_T(x, y) \to \text{Hom}_{T'}(F(x), F(y)) 
 $$ 
 
-is a weak equivalence of simplicial sets. $$ \text{Cat}_{\Delta} $$ has a model structure with $ W $ being DK equivalences, and fibrations being functors $ F \colon T \to T' $ such that $ \text{Hom}(x, y) \to \text{Hom}(F(x), F(y)) $ is a Kan fibration which lifts morphisms at a fixed point.
+is a weak equivalence of simplicial sets. 
 
 
-&emsp; We denote the Joyal model structure on $ \text{Set}_{\Delta} $ by $$ (\text{Set}_{\Delta})_{\text{Joy}} $$. Here, $ W $ is the set of *weak categorical equivalences*, i.e., maps $ A \to B $ such that $ \text{Hom}(A, C) \to \text{Hom}(B, C) $ induces an equivalence of simplicial categories for any $ C $. $ \text{Fib} $ is the collection of *quasi-fibrations*, meaning maps $ F \colon X \to Y $ which have the right lifting property with respect to the inclusion $ \Lambda_i^n \to \Delta^n $. $ \text{Cof} $ are monomorphisms.
+&emsp; $$ \text{Cat}_{\Delta} $$ has a model structure with $ W $ being DK equivalences, and fibrations being functors $ F \colon T \to T' $ such that $ \text{Hom}(x, y) \to \text{Hom}(F(x), F(y)) $ is a Kan fibration which lifts morphisms at a fixed point. We denote $$ \text{Cat}_{\Delta} $$ with this model structure $$ (\text{Cat}_{\Delta})_{DK} $$.
+
+
+&emsp; $ \text{Set}_{\Delta} $ comes equipped with a *Joyal model structure*, denoted $$ (\text{Set}_{\Delta})_{\text{Joy}} $$. We put $ W $ to be the set of *weak categorical equivalences*, i.e., maps $ A \to B $ such that $ \text{Hom}(A, C) \to \text{Hom}(B, C) $ induces an equivalence of simplicial categories for any $ C $. $ \text{Fib} $ is the collection of *quasi-fibrations*, meaning maps $ F \colon X \to Y $ which have the right lifting property with respect to the inclusion $ \Lambda_i^n \to \Delta^n $. Finally, $ \text{Cof} $ are monomorphisms.
 
 
 **Theorem 2.5.** &nbsp; *$ C $ and $ N $ determine a Quillen equivalence between $ (\text{Set}_{\Delta})_{\text{Joy}} $ and $ (\text{Cat}_{\Delta})_{DK} $.*
@@ -593,3 +599,4 @@ such that $ df = dg = dh = 0 $ and that there exist $$ z \in \text{Hom}_C(X, Z)_
 3. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
 4. ————, *Higher Algebra*, 2017.
 5. ————, *Kerodon*. [Link](https://kerodon.net/)
+6. D. Quillen, *Homotopical algbera*, Springer lecture notes in mathematics, 1965.
