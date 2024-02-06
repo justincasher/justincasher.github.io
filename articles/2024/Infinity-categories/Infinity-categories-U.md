@@ -492,7 +492,7 @@ is an isomorphism in the homotopy category.
 *Proof.* See proposition 5.2.2.8 in [\[3\]](#5-references). Q.E.D.
 
 
-&emsp; 
+&emsp; Any functor $ F \colon C \to D $ induces $ F^* \colon \text{Fun}(D, E) \to \text{Fun}(C, E) $ by precomposition. The left (resp. right) adjoint of $ F^* $ is called the *left* (resp. *right*) *Kan extension* along $ F $; it is denoted $$ \text{LKE}_F $$ (resp. $$ \text{RKE}_F $$).
 
 
 
