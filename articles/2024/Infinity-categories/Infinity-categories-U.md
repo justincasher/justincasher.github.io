@@ -561,7 +561,15 @@ f_{\alpha(J)} & \text{if } \alpha \vert_J \text{ is injective}, \\
 $$
 
 
-**Example 4.1.** &nbsp; By definition, $$ N_{dg}(C)_1 $$ are objects in $ C $. Likewise, $$ N_{dg}(C)_1 $$ is the set the of morphisms $$ f \in \text{Hom}_C(X, Y)_0 $$ such that $ df = 0 $. Finally, $ N_{dg}(C)_2 $ is the set of triples $$ f \in \text{Hom}_C(X, Y)_0 $$, $$ f \in \text{Hom}_C(Y, Z)_0 $$, and $$ h \in \text{Hom}_C(X, Z)_0 $$ such that $ df = dg = dh = 0 $ and there exist $$ z \in \text{Hom}_C(X, Z)_1 $$ with $ dz = (g \circ f) - h $.
+**Example 4.1.** &nbsp; By definition, $$ N_{dg}(C)_1 $$ are objects in $ C $. Likewise, $$ N_{dg}(C)_1 $$ is the set the of morphisms $$ f \in \text{Hom}_C(X, Y)_0 $$ such that $ df = 0 $. Finally, $ N_{dg}(C)_2 $ is the set of triples 
+
+$$ 
+f \in \text{Hom}_C(X, Y)_0, 
+g \in \text{Hom}_C(Y, Z)_0, 
+\text{ and } h \in \text{Hom}_C(X, Z)_0,
+$$ 
+
+such that $ df = dg = dh = 0 $ and there exist $$ z \in \text{Hom}_C(X, Z)_1 $$ with $ dz = (g \circ f) - h $.
 
 
 ## 5. References
