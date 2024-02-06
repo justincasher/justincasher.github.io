@@ -521,7 +521,7 @@ is an isomorphism in the homotopy category.
 &emsp; A *dg-category* $ C $ over $ R $ is a category enriched over $ \text{Ch}(R) $. Set $ R = \mathbb{Z} $. Then, specifically, we require:
 
 
-(i) For every $ X, Y \in C $ we have $ \text{Hom}_C(X, Y)_* $ is a chain complex of abelian groups:
+(i) For every $ X, Y \in C $ we have $$ \text{Hom}_C(X, Y)_* $$ is a chain complex of abelian groups:
 
 $$
 \cdots \to \text{Hom}_C(X, Y)_1 \to \text{Hom}_C(X, Y)_0 \to \text{Hom}_C(X, Y)_{-1} \to \cdots 
