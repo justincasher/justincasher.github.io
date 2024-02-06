@@ -400,7 +400,7 @@ is a weak equivalence of simplicial sets.
 **Theorem 2.5.** &nbsp; *$ C $ and $ N $ determine a Quillen equivalence between $ (\text{Set}_{\Delta})_{\text{Joy}} $ and $ (\text{Cat}_{\Delta})_{DK} $.*
 
 
-*Proof.* HTT 2.2.5.1.
+*Proof.* See theorem 2.2.5.1 in [\[3\]](#5-references)
 
 
 
