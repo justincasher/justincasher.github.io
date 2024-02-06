@@ -170,7 +170,7 @@ $$
 *there exists a* unique *dotted arrow making it commute*.
 
 
-*Proof.* This is 1.1.2.2 of [\[1\]](#5-references). We only sketch a couple of main ideas without providing a complete proof.
+*Proof.* This is 1.1.2.2 of [\[3\]](#5-references). We only sketch a couple of main ideas without providing a complete proof.
 
 $ (1) \implies (2) $ &nbsp; Let $ g_k \colon X_{k-1} \to X_k $ denote the restriction $ f_0 \mid \Delta^{\{ k-1, k \}} $. Composing our $ g_k $, 
 
@@ -234,7 +234,7 @@ $$
 there there exists a dotted arrow making it commute. Note that the dotted arrow is not required to be unique, contrasting the case of the nerve of a category, and it is not required to exist on outer horns, unlike $ \text{Sing}(A) $. Thus, $ \infty $-categories can be thought of as a generalized framework for small category theory and algebraic topology.
 
 
-&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[1\]](#5-references). 
+&emsp; Up to a notion of homotopy equivalence, $ \infty $-categories are equivalent to $ (\infty, 1) $-categories. That is categories with $ n $-morphisms for each $ n \in \mathbb{N} $, where the $ n $-morphisms for $ n > 1 $ are invertible. Lurie proves this in 1.1. of [\[3\]](#5-references). 
 
 &emsp; In particular, a *topological category* $ T $ is a category enriched over compactly generated Hausdorff spaces. A *simplicial category* $ C $ is a category enriched over simplicial sets; we denote this category $ \text{Cat}_{\Delta} $. The *simplicial nerve* $ N \colon \text{Cat}_{\Delta} \to \text{Set}_{\Delta} $ is characterized by 
 
@@ -243,7 +243,7 @@ $$
 \cong \text{Hom}_{\text{Cat}_{\Delta}}(\mathfrak{C}[\Delta^n], C)
 $$
 
-for some simplicial category $ \mathfrak{C}[\Delta^n] $ which we will not define here. We set $ N(T) $ to be $ N(\text{Sing}(T)) $. Theorem 1.1.5.13 in [\[1\]](#5-references) asserts that  the conunit
+for some simplicial category $ \mathfrak{C}[\Delta^n] $ which we will not define here. We set $ N(T) $ to be $ N(\text{Sing}(T)) $. Theorem 1.1.5.13 in [\[3\]](#5-references) asserts that  the conunit
 
 $$
 \vert \text{Hom}_{\mathfrak{C}[N(T)]}(x, y) \vert
@@ -461,17 +461,38 @@ is a trivial fibration, then we call $ e $ an *$ F $-fibration*.
 &emsp; We say $ F $ is a *Cartesian fibration* if $ F $ is an inner fibration and, for every edge $ e \colon d_o \to d_1 $ in $ D $ and $ c_1 \in C $ such that $ F(c_1) = d_1 $, there exists an $ F $-cartesian edge $ \widetilde{e} \colon c_0 \to c_1 $ such that $ F(\widetilde{e}) = e $. If $ F^{op} $ is a Cartesian fibration, then we call $ F $ a coCartesian fibration. 
 
 
-&emsp; We denote the category of (co)cartesian fibrations over $ D $ by $$ \text{(co)Cart}_{/D} $$. The full subcategory of $$ \text{(co)Cart}_{/D} $$ whose morphisms preserve $ F $-(co)Cartesian arrows is denoted $$ (\text{(co)Cart}_{/D})_{\text{strict}} $$. Let $$ (1\text{-(co)Cart}_{/D})_{\text{strict}} $$ denote the corresponding category where we replace $ C $ by the nerve of an ordinary category $ O $. Likewise, let $ 1 $-Cat denote the category of ordinary categories. The following correspondence is refered to as straightening and unstraightening:
+&emsp; We denote the category of (co)cartesian fibrations over $ D $ by $$ \text{(co)Cart}_{/D} $$. The full subcategory of $$ \text{(co)Cart}_{/D} $$ whose morphisms preserve $ F $-(co)Cartesian arrows is denoted $$ (\text{(co)Cart}_{/D})_{\text{strict}} $$. Let $$ (1\text{-(co)Cart}_{/D})_{\text{strict}} $$ denote the corresponding category where we replace $ C $ by the nerve of an ordinary category $ O $. Likewise, let $ 1 $-Cat denote the category of ordinary categories. The following correspondence is refered to as *straightening and unstraightenin*g; we have stated it as in [\[1\]](#5-references).
 
 
-**Theorem 3.1.** &nbsp; *There exists a canonical equivalence between $ (1 \text{-coCart}_{/D})_{\text{strict}} $ and $ \text{Fun}(C, 1\text{-Cat}) $.*
+**Theorem 3.1.** &nbsp; *There exists a canonical equivalence between $ (1 \text{-coCart}_{/D})_{\text{strict}} $ and $ \text{Fun}(D, 1\text{-Cat}) $.*
 
 
-*Proof.* See Lurie 3.2. We associate to $ F \colon X \to C $ the fiber functor. 
+*Proof.* See Lurie theorem 3.2.0.1 for a generalization. We will describe the correspondence here without proof.
+
+&emsp; First fix $ F \in (1\text{-coCart}_{/D})_{\text{strict}} $. Then we get a functor of categories from $ D $ by taking for each $ d \in D $ the fiber $ F^{-1}(d) $. 
+
+&emsp; Now let $ \Phi \colon D \to 1\text{-Cat} $ be a functor. We can construct a coCartsesian fibration $ F \colon O \to D $ by letting $ O $ have objects $ (d, x) $ with $ d \in D $ and $ x \in \Phi(d) $, and by setting $ \text{Hom}_{O}((d_0, x_0), (d_1, x_1)) $ be pairs $ f \in \text{Hom}(d_0, d_1) $ and $ g \in \text{Hom}_{\Phi(d_1)}(\Phi_f(x_0), x_1) $.  Q.E.D.
 
 
-&emsp; Let $ F \colon C \to D $ and $ G \colon D \to C $ be functors of $ \infty $-categories. Then 
+&emsp; Let $ F \colon C \to D $ and $ G \colon D \to C $ be functors of $ \infty $-categories. Lurie, 5.2.1 of [\[3\]](#5-references), proves that $ G $ is equivalent to a Cartesian fibration $ p \colon \mathcal{M} \to \Delta^1 $, where $ M_{\{0\}} $ (the fiber at $ 0 $) is equivalent to $ C $ and $ \mathcal{M}_{\{1\}} $ is equivalent to $ D $. Likewise $ F $ is equivalent to a (different) coCartesian fibration. Hence, we define an *adjunction* between $ C $ and $ D $ to be a map $ p \colon \mathcal{M} \to \Delta^1 $ with $ C \equiv M_{\{0\}} $, $ D \equiv M_{\{1\}} $, $ p $ is a Cartesian fibration, and $ p $ is a coCartesian fibration. If $ F $ and $ G $ are the induced functors, then we write $ F \dashv G $.
 
+
+&emsp; Alternatively, a *unit transformation* for a pair of functors $ (F, G) $ (as above) is a map $ u \colon \text{id}_C \to G \circ F $ in $ \text{Fun}(C, C) $ such that, for every $ c \in C $ and $ d \in D $, the composition 
+
+$$
+\text{Hom}_D(F(c), d) \to \text{Hom}_C(G(F(c), G(d))) \to \text{Hom}_C(c, G(d))
+$$
+
+is an isomorphism in the homotopy category.
+
+
+**Theorem 3.2.** &nbsp; *$ F \dashv G $ if and only if there exists a unit transform.*
+
+
+*Proof.* See proposition 5.2.2.8 in [\[3\]](#5-references). Q.E.D.
+
+
+&emsp; 
 
 
 
@@ -488,6 +509,8 @@ is a trivial fibration, then we call $ e $ an *$ F $-fibration*.
 
 ## 5. References
 
-1. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
-2. ————, *Higher Algebra*, 2017.
-3. ————, *Kerodon*. [Link](https://kerodon.net/)
+1. D. Gaitsgory and N. Rozenblyum, *A study in derived algebraic geometry, volume I: Correspondences and duality*, American Mathematical Society, Mathematical Surveys and Monographs, Volume 221, 2017.
+2. A. Krause and T. Nikolaus, *Lectures on topological Hochschild homology and cyclotomic spectra*, lecture notes.
+3. J. Lurie, *Higher Topos Theory*, Annals of Mathematics Studies, vol. 170, Princeton University Press, Princeton, NJ, 2009.
+4. ————, *Higher Algebra*, 2017.
+5. ————, *Kerodon*. [Link](https://kerodon.net/)
