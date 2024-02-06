@@ -469,12 +469,12 @@ is a trivial fibration, then we call $ e $ an *$ F $-fibration*.
 
 *Proof.* See Lurie theorem 3.2.0.1 for a generalization. We will describe the correspondence here without proof.
 
-&emsp; First fix $ F \in (1\text{-coCart}_{/D})_{\text{strict}} $. Then we get a functor of categories from $ D $ by taking for each $ d \in D $ the fiber $ F^{-1}(d) $. 
+&emsp; First fix $$ F \in (1\text{-coCart}_{/D})_{\text{strict}} $$. Then we get a functor of categories from $ D $ by taking for each $ d \in D $ the fiber $ F^{-1}(d) $. 
 
-&emsp; Now let $ \Phi \colon D \to 1\text{-Cat} $ be a functor. We can construct a coCartsesian fibration $ F \colon O \to D $ by letting $ O $ have objects $ (d, x) $ with $ d \in D $ and $ x \in \Phi(d) $, and by setting $ \text{Hom}_{O}((d_0, x_0), (d_1, x_1)) $ be pairs $ f \in \text{Hom}(d_0, d_1) $ and $ g \in \text{Hom}_{\Phi(d_1)}(\Phi_f(x_0), x_1) $.  Q.E.D.
+&emsp; Now let $$ \Phi \colon D \to 1\text{-Cat} $$ be a functor. We can construct a coCartsesian fibration $ F \colon O \to D $ by letting $ O $ have objects $ (d, x) $ with $ d \in D $ and $ x \in \Phi(d) $, and by setting $ \text{Hom}_{O}((d_0, x_0), (d_1, x_1)) $ be pairs $$ f \in \text{Hom}_D(d_0, d_1) $$ and $$ g \in \text{Hom}_{\Phi(d_1)}(\Phi_f(x_0), x_1) $$.  Q.E.D.
 
 
-&emsp; Let $ F \colon C \to D $ and $ G \colon D \to C $ be functors of $ \infty $-categories. Lurie, 5.2.1 of [\[3\]](#5-references), proves that $ G $ is equivalent to a Cartesian fibration $ p \colon \mathcal{M} \to \Delta^1 $, where $ M_{\{0\}} $ (the fiber at $ 0 $) is equivalent to $ C $ and $ \mathcal{M}_{\{1\}} $ is equivalent to $ D $. Likewise $ F $ is equivalent to a (different) coCartesian fibration. Hence, we define an *adjunction* between $ C $ and $ D $ to be a map $ p \colon \mathcal{M} \to \Delta^1 $ with $ C \equiv M_{\{0\}} $, $ D \equiv M_{\{1\}} $, $ p $ is a Cartesian fibration, and $ p $ is a coCartesian fibration. If $ F $ and $ G $ are the induced functors, then we write $ F \dashv G $.
+&emsp; Let $ F \colon C \to D $ and $ G \colon D \to C $ be functors of $ \infty $-categories. Lurie, 5.2.1 of [\[3\]](#5-references), proves that $ G $ is equivalent to a Cartesian fibration $ p \colon M \to \Delta^1 $, where $ M_{\{0\}} $ (the fiber at $ 0 $) is equivalent to $ C $ and $ M_{\{1\}} $ is equivalent to $ D $. Likewise $ F $ is equivalent to a (different) coCartesian fibration. Hence, we define an *adjunction* between $ C $ and $ D $ to be a map $ p \colon \mathcal{M} \to \Delta^1 $ with $ C \equiv M_{\{0\}} $, $ D \equiv M_{\{1\}} $, $ p $ is a Cartesian fibration, and $ p $ is a coCartesian fibration. If $ F $ and $ G $ are the induced functors, then we write $ F \dashv G $.
 
 
 &emsp; Alternatively, a *unit transformation* for a pair of functors $ (F, G) $ (as above) is a map $ u \colon \text{id}_C \to G \circ F $ in $ \text{Fun}(C, C) $ such that, for every $ c \in C $ and $ d \in D $, the composition 
