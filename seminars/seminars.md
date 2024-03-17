@@ -22,8 +22,8 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. Everyone is from Indi
 | 2/6/2023 | Vladimir Shein | D-modules | [Abstract]({{'/Shein-2024-2-6' | relative_url}}) |
 | 2/20/2023 | Michael Larsen | Asymptotics of the decomposition of rank n tensors of a 2-dimensional space | [Abstract]({{'/Larsen-2024-2-20' | relative_url}}) |
 | 2/27/2023 | Yuxuan Liao | An introduction to the Chabauty-Coleman method | [Abstract]({{'/Liao-2024-2-27' | relative_url}}) |
-| 3/5/2023 | Justin Asher | Weight-monodromy conjecture | |
-| 3/19/2023 | Pavel Coupek <br> (Michigan State) | Geometric quadratic Chabauty over number fields | |
+| 3/5/2023 | Justin Asher | Scholze's approach to the weight-monodromy conjecture | [Abstract]({{'/Asher-2024-3-5' | relative_url}}) |
+| 3/19/2023 | Pavel Coupek <br> (Michigan State) | Geometric quadratic Chabauty over number fields | [Abstract]({{'/Coupek-2024-3-19' | relative_url}}) |
 | 3/26/2023 | | | |
 | 4/2/2023 | Chia-Tz Liang | Poncelet's theorem | |
 | 4/9/2023 | | | |
