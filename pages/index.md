@@ -9,4 +9,4 @@ title: Justin Asher
 
 # About
 
-I am a graduate student at Indiana University interested in arithmetic geometry. 
+I am a mathematician working on arithmetic geometry.
