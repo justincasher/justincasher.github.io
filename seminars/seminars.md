@@ -24,11 +24,7 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. Everyone is from Indi
 | 2/27/2023 | Yuxuan Liao | An introduction to the Chabauty-Coleman method | [Abstract]({{'/Liao-2024-2-27' | relative_url}}) |
 | 3/5/2023 | Justin Asher | Scholze's approach to the weight-monodromy conjecture | [Abstract]({{'/Asher-2024-3-5' | relative_url}}) |
 | 3/19/2023 | Pavel Coupek <br> (Michigan State) | Geometric quadratic Chabauty over number fields | [Abstract]({{'/Coupek-2024-3-19' | relative_url}}) |
-| 3/26/2023 | | | |
-| 4/2/2023 | | | |
 | 4/9/2023 | Jack Garzella (UCSD) | Why the perfectoid Tate algebra and $$ A_{\text{inf}} $$ are algebraically the same | |
-| 4/16/2023 | Chia-Tz Liang | TBD | |
-| 4/23/2023 | | | |
 
 
 
