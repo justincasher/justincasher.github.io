@@ -2,7 +2,7 @@
 layout: Post
 permalink: /mathematics
 feedformat: card
-title: Writing
+title: Mathematics
 ---
 <br/>
 This page contains an alphabetized list of (mostly expository) online mathematics articles I have written, along with some seminars that I have organized in the past. You can either view them as a web article or as a poorly typeset PDF. Please send me an email if you find any errors or typos!
