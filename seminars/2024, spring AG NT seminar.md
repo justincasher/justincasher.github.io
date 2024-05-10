@@ -2,7 +2,7 @@
 layout: Mathematics
 permalink: /spring-2024-AG-NT-seminar
 feedformat: card
-title: Seminars
+title: Spring 2024 AG & NT seminar
 ---
 <br>
 This is the schedule from the Indiana University spring 2024 graduate seminar in algebraic geometry and number theory.
