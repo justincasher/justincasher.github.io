@@ -30,4 +30,6 @@ This page contains an alphabetized list of (mostly expository) online mathematic
 8. [Motivating schemes with the Weil conjectures]({{'/Weil-conjectures-intro' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1N1QIhSj96l64gFJnQ4D5ahvNrZnBXQ9v))
 9. [Ramanujan conjecture]({{'/Ramanujan-Conjecture' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1jD5Gsk35SkJ8xYPso4tx-ETUx1yBk70z))
 
-[Fall 2023 AG & NT seminar]({{'/Fall-2023-AG-NT-seminar' | relative_url}})
+[Fall 2023 AG & NT seminar]({{'/fall-2023-AG-NT-seminar' | relative_url}})
+
+[Fall 2024 AG & NT seminar]({{'/spring-2024-AG-NT-seminar' | relative_url}})
