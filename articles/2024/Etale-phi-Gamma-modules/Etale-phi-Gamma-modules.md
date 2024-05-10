@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Mathematics
 indent: true
 permalink: /Etale-phi-Gamma-modules
 feedformat: card

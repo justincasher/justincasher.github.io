@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Mathematics
 indent: true
 permalink: /infinity-categories
 feedformat: card

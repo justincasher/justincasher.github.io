@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Mathematics
 indent: true
 permalink: /weight-monodromy-conjecture
 feedformat: card
