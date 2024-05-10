@@ -13,8 +13,8 @@
           paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
         },
         tex: {
-          packages: {'[+]': ['xypic']},
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            packages: {'[+]': ['xypic']}
         }
         };
     </script>
@@ -66,7 +66,7 @@
 
             {%- if page.feedformat -%}
             <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
-                <h5 class="meta-title"><a href="/Fall-2023-AG-NT-seminar">← Fall 2023 AG & NT seminar</a></h5>
+                <h5 class="meta-title"><a href="/fall-2023-AG-NT-seminar">← Fall 2023 AG & NT seminar</a></h5>
                     <div class="jumbo">{{page.title}}</div>
                     {%- include Content.html -%}
                     {%- include Feed.html -%}

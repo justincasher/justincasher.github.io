@@ -1,5 +1,5 @@
 ---
-layout: 0_seminar_notes
+layout: 2024_spring_AG_NT_seminar_notes
 indent: true
 permalink: /Hilberts-10th-problem-S
 feedformat: card
