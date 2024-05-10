@@ -1,7 +1,5 @@
 ---
-Author:
-ChangeDate: 
-layout: Writing
+layout: Mathematics
 indent: true
 permalink: /Gauss-Legendre
 feedformat: card

@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Mathematics
 indent: true
 permalink: /LS-as-LCS
 feedformat: card

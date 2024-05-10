@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Mathematics
 indent: true
 permalink: /IU-analysis-qualifying-solutions
 feedformat: card

@@ -1,17 +1,11 @@
 ---
-layout: Post
-permalink: /seminars
+layout: Mathematics
+permalink: /spring-2024-AG-NT-seminar
 feedformat: card
 title: Seminars
 ---
-
-
-
 <br>
-
-### Graduate algebraic geometry and number theory seminar
-
-We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. Everyone is from Indiana University unless indicated otherwise.
+This is the schedule from the Indiana University spring 2024 graduate seminar in algebraic geometry and number theory.
 
 
 ###### Schedule
@@ -25,22 +19,3 @@ We meet from 1:00 PM to 1:55 PM on Tuesdays in Rawles 316. Everyone is from Indi
 | 3/5/2023 | Justin Asher | Scholze's approach to the weight-monodromy conjecture | [Abstract]({{'/Asher-2024-3-5' | relative_url}}) |
 | 3/19/2023 | Pavel Coupek <br> (Michigan State) | Geometric quadratic Chabauty over number fields | [Abstract]({{'/Coupek-2024-3-19' | relative_url}}) |
 | 4/9/2023 | Jack Garzella (UCSD) | Why the perfectoid Tate algebra and $$ A_{\text{inf}} $$ are algebraically the same | |
-
-
-
-
-<br>
-
-### Infinity categories and higher algebra reading group
-
-We meet from 3:00 PM to 4:00 PM on Wednesdays in Swain East 009. <!-- [Here]({{'/infinity-categories-S' | relative_url}}) are some notes I am writing. -->
-
-
-
-
-<br> 
-
-### Past seminars
-
-[Fall 2023 AG & NT seminar]({{'/Fall-2023-AG-NT-seminar' | relative_url}})
-

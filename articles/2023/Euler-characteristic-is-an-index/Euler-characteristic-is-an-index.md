@@ -1,5 +1,5 @@
 ---
-layout: Writing
+layout: Mathematics
 indent: true
 permalink: /Euler-characteristic-is-an-index
 feedformat: card

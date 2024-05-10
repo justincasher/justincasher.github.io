@@ -1,6 +1,6 @@
 ---
-layout: 0_seminar
-permalink: /Fall-2023-AG-NT-seminar
+layout: Mathematics
+permalink: /fall-2023-AG-NT-seminar
 feedformat: card
 title: Fall 2023 AG & NT seminar
 ---
