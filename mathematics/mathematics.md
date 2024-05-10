@@ -32,4 +32,4 @@ This page contains an alphabetized list of (mostly expository) online mathematic
 
 [Fall 2023 AG & NT seminar]({{'/fall-2023-AG-NT-seminar' | relative_url}})
 
-[Fall 2024 AG & NT seminar]({{'/spring-2024-AG-NT-seminar' | relative_url}})
+[Spring 2024 AG & NT seminar]({{'/spring-2024-AG-NT-seminar' | relative_url}})
