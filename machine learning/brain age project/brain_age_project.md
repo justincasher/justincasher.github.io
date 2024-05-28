@@ -10,7 +10,7 @@ title: The brain age project (2020)
 <style>
 img[src*="#poster"] {
     width: 100%;
-    bottom:0px;
+    left:0px;
     position: absolute;
 }
 </style>
