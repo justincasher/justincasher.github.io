@@ -17,6 +17,4 @@ img[src*="#poster"] {
 </style>
 </head>
 
-**Paper:** Asher, Justin; Tan Dang, Khoa; and Masters, Maxwell (2020) "A Differential Geometry-based Machine Learning Algorithm for the Brain Age Problem," *The Journal of Purdue Undergraduate Research*: Vol. 10, Article 40. [Link](https://docs.lib.purdue.edu/jpur/vol10/iss1/40/){:target="_blank"} 
-
 ![poster.jpeg](poster.jpeg#poster)
