@@ -12,7 +12,7 @@ img[src*="#poster"] {
     width: 90%;
     left: 5%;
     position: absolute;
-    padding-bottom: 10em;
+    padding-bottom: 3em;
 }
 </style>
 </head>
