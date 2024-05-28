@@ -9,8 +9,8 @@ title: The brain age project (2020)
 <head>
 <style>
 img[src*="#poster"] {
-    width: 90%;
-    left: 5%;
+    width: 95%;
+    left: 2.5%;
     position: absolute;
     padding-bottom: 2em;
 }
