@@ -26,10 +26,10 @@ title: Infinity categories
 **Abstract.** &nbsp; In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.
 
 
-&emsp; The *simplex category* has objects sets $$ [n] = \{ 0, 1, \dots, n \} $$ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
+&emsp; The *simplex category* has objects which are linearly ordered sets $$ [n] = \{ 0 < 1 < \dots < n \}, $$ and it has morphisms which are functions $ f \colon [m] \to [n] $ that respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. We denote the simplex category by the letter $ \Delta $.
 
 
-&emsp; A presheaf of sets on $ \Delta $, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote $ X([n]) $ by $ X_n $. A morphism of simplicial sets is a natural transformation of functors. Write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
+&emsp; A presheaf of sets on $ \Delta $, i.e., a contravariant functor $ X \colon \Delta \to \text{Set} $, is called a *simplicial set*; we denote the image $ X([n]) $ by $ X_n $. A morphism of simplicial sets is a natural transformation of functors. Let us write $ \text{Set}_{\Delta} $ for the category of simplicial sets. 
 
 
 &emsp; The simplicial set 
@@ -45,7 +45,7 @@ X_n = \text{Hom}_{\text{Set}_{\Delta}}(\Delta^n, X).
 $$
 
 
-&emsp; The simplicial subset of $ \Delta^n $
+Likewise, the simplicial subset of $ \Delta^n $
 
 $$
 \Lambda_i^n([m])
