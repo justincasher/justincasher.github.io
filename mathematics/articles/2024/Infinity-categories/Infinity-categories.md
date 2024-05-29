@@ -23,7 +23,7 @@ title: Infinity categories
 <br>
 
 
-**Abstract.** &nbsp; We tackle the question of ``What is an infinity category?" in this note, explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.
+**Abstract.** &nbsp; In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.
 
 
 &emsp; The *simplex category* has objects sets $$ [n] = \{ 0, 1, \dots, n \} $$ equipped with the usual linear ordering, and it has morphisms functions $ f \colon [m] \to [n] $ which respect the ordering, i.e., $ i \leq j $ implies $ f(i) \leq f(j) $. 
