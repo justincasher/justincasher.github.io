@@ -2,7 +2,7 @@
 layout: ML_Project
 permalink: /brain_age_project
 feedformat: card
-title: The brain age project (2020)
+title: The Brain Age Project (2020)
 ---
 <br/>
 
