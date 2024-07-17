@@ -1,20 +1,29 @@
 ---
 layout: ML_Project
-permalink: /brain_age_project
+permalink: /catan_rl
 feedformat: card
-title: The brain age project (2020)
+title: Learning Catan through self-play (2024)
 ---
-<br/>
+<br>
+**Abstract.** &nbsp; We teach a neural network how to play the game of Catan using reinforcement learning by the means of self-play.
 
-<head>
-<style>
-img[src*="#poster"] {
-    width: 95%;
-    left: 2.5%;
-    position: absolute;
-    padding-bottom: 2em;
-}
-</style>
-</head>
 
-![poster.jpeg](poster.jpeg#poster)
+## Table of Contents
+
+1. Introduction
+2. Catan implementation
+3. Network architecture
+4. Training porcedure
+5. Results
+
+
+## 1. Introduction
+
+
+
+
+## 2. Catan implementation
+
+
+
+## 3. 
