@@ -2,7 +2,7 @@
 layout: ML_Project
 permalink: /catan_rl
 feedformat: card
-title: Learning Catan through self-play (2024)
+title: Modeling Catan through self-play (2024)
 ---
 <br>
 **Abstract.** &nbsp; We teach a neural network how to play the game of Catan using reinforcement learning by the means of self-play. In particular, we utilize temporal-difference and Monte-Carlos search tree training methods, along with a residual neural network structure. This model achieves an amature level of play.
