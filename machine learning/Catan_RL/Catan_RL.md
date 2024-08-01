@@ -34,7 +34,7 @@ title: Learning Catan through self-play (2024)
 
 &emsp; I implemented Catan in Python; you can find the code on my GitHub repository distributed amongst 5 files: 
 
-<ul style="list-style-position: outside; padding-left: 20px;">
+<ul style="list-style-position: outside; padding-left: 22.5px;">
 
 <li><b>player.py</b> contains the player class. This manages for each player their resource and development cards, settlements and cities, etc. Notably, it contains an array of the player's predictions, i.e., the outputs from the network made each move, which is utilized when updating the network's weights.</li>
 
@@ -42,7 +42,7 @@ title: Learning Catan through self-play (2024)
 
 <li><b>game.py</b> contains the game class. It handles almost all gameplay. In particular, the game class contains methods which allow our network to interact with the board by generating a tensor containing the board and a player's possible moves, then feeding this tensor to our model in order to choose a move.</li>
 
-<li><b>network.py</b> contains the CatanNetwork class. This is our residual neural network, which is built out of another class called BasicBlock (**UPDATE THIS TO RESIDUAL BLOCKS**).</li>
+<li><b>network.py</b> contains the CatanNetwork class. This is our residual neural network, which is built out of another class called BasicBlock (<b>UPDATE THIS TO RESIDUAL BLOCKS</b>).</li>
 
 <li><b>training.py</b> contains the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.</li>
 
