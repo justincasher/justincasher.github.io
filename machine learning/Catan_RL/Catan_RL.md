@@ -40,13 +40,13 @@ title: Learning Catan through self-play (2024)
 
 <li><b>board.py</b> contains the board class. It is responsible for generating the board positions and development card ordering. It also contains maps corresponding each position to an integer so we can translate board information to the input tensor for out network.</li>
 
-<li>`game.py` contains the game class. It handles almost all gameplay. In particular, the game class contains methods which allow our network to interact with the board by generating a tensor containing the board and a player's possible moves, then feeding this tensor to our model in order to choose a move.</li>
+<li><b>game.py</b> contains the game class. It handles almost all gameplay. In particular, the game class contains methods which allow our network to interact with the board by generating a tensor containing the board and a player's possible moves, then feeding this tensor to our model in order to choose a move.</li>
 
-<li>`network.py` contains the CatanNetwork class. This is our residual neural network, which is built out of another class called BasicBlock (**UPDATE THIS TO RESIDUAL BLOCKS**).</li>
+<li><b>network.py</b> contains the CatanNetwork class. This is our residual neural network, which is built out of another class called BasicBlock (**UPDATE THIS TO RESIDUAL BLOCKS**).</li>
 
-<li>`training.py` contains the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.</li>
+<li><b>training.py</b> contains the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.</li>
 
-<ul>
+</ul>
 
 &emsp; Some further notes about the implementation are the following:
 
