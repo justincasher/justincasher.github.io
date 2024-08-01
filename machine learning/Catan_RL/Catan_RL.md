@@ -40,7 +40,9 @@ title: Learning Catan through self-play (2024)
 - `network.py` contains the CatanNetwork class. This is our residual neural network, which is built out of another class called BasicBlock (**UPDATE THIS TO RESIDUAL BLOCKS**).
 - `training.py` contains the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.
 
-&emsp; 
+&emsp; Some further notes about the implementation are the following:
+
+- I handled 
 
 &emsp; One thing that helped with training was rotating this tensor with respect to each player's statistics, e.g., each player would see their statistics listed first, then the player taking the following turn, and so on. I did not rotate board positions, meaning the board would list the actual player numbers. 
 
