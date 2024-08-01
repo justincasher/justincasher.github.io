@@ -48,7 +48,9 @@ title: Learning Catan through self-play (2024)
 
 </ul>
 
-&emsp; Intuitively, I designed the board on the idea of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. 
+&emsp; I implemented the board based on the notion of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. This simplified calculating where a player could build a road or settlement, the length of their longest road, and so on.
+
+&emsp; Each turn, the game generates an input tensor for the network. This consists the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and only a single valid move. Imputting this tensor to the network is philosophically equivalent to asking it "What is likely finishing position given this board and this move?". If a MCST move was not being chosen that turn, cf. (**INSERT SECTION**), the program then chose the move with the best given move position.
 
 &emsp; One thing that helped with training was rotating this tensor with respect to each player's statistics, e.g., each player would see their statistics listed first, then the player taking the following turn, and so on. I did not rotate board positions, meaning the board would list the actual player numbers. 
 
