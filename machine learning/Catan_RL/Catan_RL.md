@@ -34,7 +34,7 @@ title: Learning Catan through self-play (2024)
 
 &emsp; I implemented Catan in Python; you can find the code on my GitHub repository distributed amongst 5 files: 
 
-<ul>
+<ul style="list-style-position: outside;">
 
 <li>`player.py` contains the player class. This manages for each player their resource and development cards, settlements and cities, etc. Notably, it contains an array of the player's predictions, i.e., the outputs from the network made each move, which is utilized when updating the network's weights.</li>
 
