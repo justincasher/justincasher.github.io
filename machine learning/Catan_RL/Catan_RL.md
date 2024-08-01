@@ -34,7 +34,7 @@ title: Learning Catan through self-play (2024)
 
 &emsp; I implemented Catan in Python; you can find the code on my GitHub repository distributed amongst 5 files: 
 
-<ul style="list-style-position: outside; padding-left: 22.5px;">
+<ul style="list-style-position: outside; padding-left: 25px;">
 
 <li><b>player.py</b> contains the player class. This manages for each player their resource and development cards, settlements and cities, etc. Notably, it contains an array of the player's predictions, i.e., the outputs from the network made each move, which is utilized when updating the network's weights.</li>
 
@@ -48,9 +48,7 @@ title: Learning Catan through self-play (2024)
 
 </ul>
 
-&emsp; Some further notes about the implementation are the following:
-
-- I handled 
+&emsp; Intuitively, I designed the board on the idea of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. 
 
 &emsp; One thing that helped with training was rotating this tensor with respect to each player's statistics, e.g., each player would see their statistics listed first, then the player taking the following turn, and so on. I did not rotate board positions, meaning the board would list the actual player numbers. 
 
