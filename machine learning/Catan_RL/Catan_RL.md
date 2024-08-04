@@ -5,7 +5,7 @@ feedformat: card
 title: Modeling Catan through self-play (2024)
 ---
 <br>
-**Abstract.** &nbsp; We teach a neural network how to play the game of Catan using reinforcement learning by the means of self-play. In particular, we utilize temporal-difference and Monte-Carlos search tree training methods, along with a residual neural network structure. This model achieves an amature level of play.
+**Abstract.** &nbsp; We teach a neural network how to play the board game Catan using reinforcement learning via self-play. In particular, we utilize both temporal-difference and Monte-Carlos search tree training methods, along with a residual neural network structure. This model achieves an intermediate level of play.
 
 
 ## Table of Contents
@@ -24,12 +24,15 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; When playing online with friends, I noticed that the AI bots were atypically poor, even at their most difficult setting. Instead of developing long-term strategies, the bots would pursue simple ones, such as drawing lots of development cards. The purpose of this project is to train a competetive Catan playing neural network; we hope that our network can make moves that a professional Catan player would categorize as "strong" or "intelligent".
 
-&emsp; An important example of training a neural network through self-play is G. Tesauro's TD-Gammon during the 1990s. His networks consisted of less than 5 hidden layers and 100 hideen units—networks orders of magnitude smaller than modern network. When training a model, each turn it would predict the win probability for each possible move, and then choose the move with the highest overall win probability. He then backpropogated the game result using a temporal-difference (TD) method (discussed in §4). This approach showed remarkable success: An initial model achieved a strong intermediate ranking after 200,000 training games, and an enhanced model achieved a level of play only matched by the world's best players after 1,500,000 training games.
+&emsp; An important example of training a neural network through self-play is G. Tesauro's TD-Gammon during the 1990s. His networks consisted of less than 5 hidden layers and 100 hideen units—networks orders of magnitude smaller than modern network. When training a model, each turn it would predict the win probability for each possible move, and then choose the move with the highest overall win probability. He then backpropogated the game result using a temporal-difference (TD) method, meaning that instead of comparing the predictions with the end result, they would be compared successively to eachother in an attempt to minimize their differences. This approach showed remarkable success: An initial model achieved a strong intermediate ranking after 200,000 training games, and an enhanced model achieved a level of play only matched by the world's best players after 1,500,000 training games.
 
-&emsp; Another interesting example of learning through self-play is the work of DeepMind Technologies in the 2010s on Atari video games, chess, and go. They took advantage of greatly increased computer power and new image recognition methods, e.g., modern convolutional neural network architectures. They created a single model that was able to play multiple Atari games, a state of the art chess playing bot, and, for the first time, a super-human go playing program. When training their networks, they utilized a Monte-Carlo tree search (MCTS) algorithm, where they would randomly choose moves that had not been visited many times before.
+&emsp; Another interesting example of learning through self-play is the work of DeepMind Technologies in the 2010s on Atari video games, chess, and go. They took advantage of greatly increased computer power and new image recognition methods, e.g., modern convolutional neural network architectures. This enabled to create a single model that was able to play multiple Atari games, along with a state of the art chess playing bot, and, for the first time, a super-human level go playing program. When training their networks, they utilized a Monte-Carlo tree search (MCTS) algorithm, where they would randomly choose moves that had not been visited many times before.
 
-&emsp; My approach to Catan directly builds on the research discussed above. I trained a residual neural network to predict whether a given player will finish first, second, or third; this is done using a TD-method combined with a simplified MCTS algorithm. I simplified the game by fixing the board and disabling player-to-player trading when training. Under these condition, I achieved a model which won each game in an average of (**UPDATE**) 75 rolls of the dice, whereas a typical game of Catan with human players takes ~60 rolls.
+&emsp; My approach to Catan directly builds on the research discussed above. I trained a residual neural network to predict whether a given player will finish first, second, or third; this is done using a TD-method combined with a simplified MCTS algorithm. I tested this approach in two settings: (1) with the board tiles and numbers fixed and (2) without the board fixed. In both trials, I disabled player-to-player trading, and I hope to train a model which can trade in the future.
 
+&emsp; In case (1), I trained a network which won each game in an average of 74 dice rolls. This is comparable to other analyses of Catan, which suggest the average number of rolls to win being in the range 60–70; for instance, https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics counted an average of 71 rolls in a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amature player, but the network still struggled with late game strategy.
+
+&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 106 dice rolls.
 
 ## 2. Catan implementation
 
@@ -69,6 +72,8 @@ title: Modeling Catan through self-play (2024)
 
 
 ## 5. Results 
+
+
 
 
 ## 6. Future plans
