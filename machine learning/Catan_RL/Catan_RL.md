@@ -5,7 +5,7 @@ feedformat: card
 title: Modeling Catan through self-play (2024)
 ---
 <br>
-**Abstract.** &nbsp; We teach a neural network how to play the board game Catan using reinforcement learning via self-play. In particular, we utilize both temporal-difference and Monte-Carlos search tree training methods, along with a residual neural network structure. This model achieves an intermediate level of play.
+**Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When learning, I utilized both temporal-difference and Monte-Carlos search tree training methods, along with a residual neural network structure. This model achieves an intermediate level of play.
 
 
 ## Table of Contents
@@ -16,6 +16,7 @@ title: Modeling Catan through self-play (2024)
 4. [Training procedure](#4-training-procedure)
 5. [Results](#5-results)
 6. [Future plans](#6-future-plans)
+
 
 
 ## 1. Introduction
@@ -30,7 +31,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; My approach to Catan directly builds on the research discussed above. I trained a residual neural network to predict whether a given player will finish first, second, or third; this is done using a TD-method combined with a simplified MCTS algorithm. I tested this approach in two settings: (1) with the board tiles and numbers fixed and (2) without the board fixed. In both trials, I disabled player-to-player trading, and I hope to train a model which can trade in the future.
 
-&emsp; In case (1), I trained a network which won each game in an average of 74 dice rolls. This is comparable to other analyses of Catan, which suggest the average number of rolls to win being in the range 60–70; for instance, https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics counted an average of 71 rolls in a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amature player, but the network still struggled with late game strategy.
+&emsp; In case (1), I trained a network which won each game in an average of 74 dice rolls. This is comparable to other analyses of Catan, which suggest the average number of rolls to win being in the range 60–70; for instance, https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics counted an average of 71 rolls in a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amature player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate.
 
 &emsp; In case (2), I am currently training the network. At the moment, it wins each game in 106 dice rolls.
 
@@ -46,7 +47,7 @@ title: Modeling Catan through self-play (2024)
 
 <li><b>game.py</b> contains the game class. It handles almost all gameplay. In particular, the game class contains methods which allow our network to interact with the board by generating a tensor containing the board and a player's possible moves, then feeding this tensor to our model in order to choose a move.</li>
 
-<li><b>network.py</b> contains the CatanNetwork class. This is our residual neural network, which is built out of another class called BasicBlock (<b>UPDATE THIS TO RESIDUAL BLOCKS</b>).</li>
+<li><b>network.py</b> contains the CatanNetwork class. This is our residual neural network, which is built out of another class named ResidualBlock, cf. §3.</li>
 
 <li><b>training.py</b> contains the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.</li>
 
@@ -54,16 +55,20 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; I implemented the board based on the notion of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. This simplified calculating where a player could build a road or settlement, the length of their longest road, and so on.
 
-&emsp; Each turn, the game generates an input tensor for the network. This consists the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and only a single valid move. Imputting this tensor to the network is philosophically equivalent to asking it "What is likely finishing position given this board and this move?". If a MCTS move was not chosen that turn, cf. (**INSERT SECTION**), the program then chose the move with the best given move position.
+&emsp; Each turn, the game generates an input tensor for the network. This consists the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and only a single valid move. Imputting this tensor to the network is philosophically equivalent to asking it "What is likely finishing position given this board and this move?". If a MCTS move was not chosen that turn, cf. §4, the program then chose the move with the best given move position.
 
 &emsp; One thing that helped with training was rotating the input tensor with respect to each player's statistics; e.g., each player would see their statistics listed first, then the player taking the following turn, and so on. I found it difficult to train the network effectively without this, even if the network was given the current player number.
 
 
+
 ## 3. Network architecture
 
-&emsp; The CatanNetwork is a 10 layer network consisting of a fully connected input layer, 4 residual blocks (**CITE** He et al.), and a fully connected output layer. Specifically, the input layer linearly maps our 1782 input features to 500 neurons. Each residual block performs a 500 $ \times $ 500 linear transformation and ReLU, another 500 $ \times $ 500 linear transformation and ReLU, adds the input (also known as a skip connection), then performs another ReLU. Finally, our output linearly maps our 500 new features to a single output value, which is supposed to correspond to what position the player is expected to finish. In total, the CatanNetwork has 2,896,001 parameters.
+&emsp; The CatanNetwork is a 10 layer feedforward, residual neural network consisting of a fully connected input layer, 4 residual blocks (**CITE** He et al.), and a fully connected output layer. Specifically, the input layer linearly maps our 1782 input features to 500 neurons. Each residual block performs a 500 $ \times $ 500 linear transformation and ReLU, another 500 $ \times $ 500 linear transformation and ReLU, adds the input (also known as a skip connection), then performs another ReLU. Finally, our output linearly maps our 500 new features to a single output value, which is supposed to correspond to what position the player is expected to finish. In total, the CatanNetwork has 2,896,001 parameters.
 
-&emsp; I tested a variety of architectures before settling on the CatanNetwork. I started with some simple models: single layer networks with 50, 100, or 1100 neurons. I found these models to be too unstable and to suffer from catastrophic forgetting. I also tried other naive configurations, such as 5 fully connected layers with 1000 neurons each. These all seemed to lack the quickness to converge and ability not to forget that the CatanNetwork possesed. I am interested in experimenting with deeper architectures with more parameters.
+&emsp; I tested a variety of architectures before settling on the CatanNetwork. I started with some simple models: single layer networks with 50, 100, or 1100 neurons. I found these models to be too unstable and to suffer from catastrophic forgetting. I also tried other naive configurations, such as 5 fully connected layers with 1000 neurons each. These all seemed to lack the quickness to converge and ability not to forget that the CatanNetwork possesed. 
+
+&emsp; Another variable to adjust was the number of neurons in the hideen layers. I chose 500 to create a sufficiently large network while also prioritizing training time. I discuss in §4 that, by exploiting weight decay, having too large of a network is more of a concern than too small; I hope the CatanNetwork is large enough. Thus, with the chosen number of neurons, the network was able to play a game of Catan approximately every 4 seconds, which translates to 22,500 games per day. I am interested in experimenting with deeper architectures or with more hidden neurons in the future.
+
 
 
 ## 4. Training procedure
