@@ -5,7 +5,7 @@ feedformat: card
 title: Modeling Catan through self-play (2024)
 ---
 <br>
-**Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When learning, I utilized both temporal-difference and Monte-Carlos search tree training methods, along with a residual neural network structure. This model achieves an intermediate level of play.
+**Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlos tree search methods, along with a residual neural network structure. This resulting model achieved an intermediate level of play.
 
 
 
@@ -17,6 +17,7 @@ title: Modeling Catan through self-play (2024)
 4. [Training procedure](#4-training-procedure)
 5. [Results](#5-results)
 6. [Future plans](#6-future-plans)
+7. [References](#7-references)
 
 
 
@@ -77,9 +78,16 @@ title: Modeling Catan through self-play (2024)
 
 ### Temporal-differences
 
-&emsp; Temporal-difference (TD) methods propose that, instead of comparing each prediction by our network to the outcome of the game, we should study the differences between our predictions. This was originally used in checkers player program...Then it later was studied by Sutton and implemented by Tesauro when training his TD-gammon.
+&emsp; Temporal-difference (TD) methods claim that, instead of comparing each prediction by our network to the outcome of the game, we should penalize the differences between our predictions. This incentivizes our model to make predictions that do not change signifantly each turn, forming a "smooth" curve until settling upon the outcome of the game.
 
-&emsp; Intuitively, we would prefer that the predictions made by our model to not change signifantly each turn. Let us consider two examples in the case that we train on model solely on the outcome of the game. Recall that we would like to predict whether the player will finish in first, second, or third place when playing Catan. Suppose network A consistently predicts that the player is going to finish in first place each turn, whereas network B alternates between predicting in first place and third place. If the player finishes in second place, both of these models would be penalized the same compared to the game outcome: each turn they had an error of 1. However, it makes little sense for the model A to keep jumping between places first and third: why not just take their average and choose second? Whereas, for model B, it could be that they luckily gained a place at the end of the game due to the actions of another player, hence the increase from third to second. Thus, the driving idea of TD methods is that the curve formed by the models predictions should be relatively smooth.
+&emsp; For example, suppose that we train on model solely on the outcome of the game. Recall that we would like to predict whether the player will finish in first, second, or third place when playing Catan. Let network A consistently predict that our player is going to finish in third place each turn, whereas network B alternates between predicting first place and third place. If our player finishes in second place, both of these models would be penalized the same compared to the game outcome: each turn they had an error of 1. However, it makes little sense for the model A to keep jumping between places first and third: why not take their average and choose second? Whereas, for model B, it could be that our player luckily gained a place at the end of the game due to the actions of another player, and hence the increase from third to second. 
+
+&emsp; TD methods were classically studied by ... used in checkers player program...Then it later was studied by Sutton and implemented by Tesauro when training his TD-gammon.
+
+
+&emsp; 
+
+&emsp; 
 
 
 ### Monte-Carlos tree search
@@ -88,7 +96,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; One previous implementation of MCTS is by the researchers at Google Deepmind when developing AlphaGo (**CITE**). Their method was based on treating the game of go like a search tree, where they would store the action value (i.e., how strong the move is), visit count, and prior probability for each move (e.g., "leaf"). This allowed the model to visit infrequently made moves with higher probability, followed by a playout in order to collect a sample action value. However, since in Catan the board is randomly chosen, the idea of designing a search tree relative to board position seemed inneffective. The sample space is patently too large. One could try to program a MCTS algorithm which takes into account how often each individual move occurs, regardless of the board position, but I decided upon something simpler. 
 
-&emsp; I implemented a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game went without a random move. I decided upon this probability as it provided a 30% chance that a random setup move would be picked, i.e., one of the initial settlements or roads, along with a good distribution of middle to late game random moves, in practice.
+&emsp; I implemented a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. I decided upon this probability as it provided a 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads, along with a good distribution of middle to late game random moves, in practice.
 
 
 ### AdamW
@@ -97,7 +105,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; AdamW is a modified version of Adam with weight-decay. I. Loshchilov and F. Hutter observed in (**CITE**) that, unlike for SGD, $ L^2 $-regularization and weight-decay are not equivalent for Adam. Hence, they introduced a version of Adam which uses decoupled weight decay. (**ADD DETAILS**)
 
-&emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in (**CITE** check epsilon).
+&emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in (**CITE** check epsilon).
 
 
 ## 5. Results 
@@ -106,3 +114,9 @@ title: Modeling Catan through self-play (2024)
 
 
 ## 6. Future plans
+
+&emsp; 
+
+
+## 7. References
+
