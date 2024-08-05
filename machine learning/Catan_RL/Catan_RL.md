@@ -8,6 +8,7 @@ title: Modeling Catan through self-play (2024)
 **Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When learning, I utilized both temporal-difference and Monte-Carlos search tree training methods, along with a residual neural network structure. This model achieves an intermediate level of play.
 
 
+
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
@@ -53,7 +54,7 @@ title: Modeling Catan through self-play (2024)
 
 </ul>
 
-&emsp; I implemented the board based on the notion of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. This simplified calculating where a player could build a road or settlement, the length of their longest road, and so on.
+&emsp; I programmed the board based on the notion of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. This simplified calculating where a player could build a road or settlement, the length of their longest road, and so on.
 
 &emsp; Each turn, the game generates an input tensor for the network. This consists the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and only a single valid move. Imputting this tensor to the network is philosophically equivalent to asking it "What is likely finishing position given this board and this move?". If a MCTS move was not chosen that turn, cf. §4, the program then chose the move with the best given move position.
 
@@ -73,12 +74,35 @@ title: Modeling Catan through self-play (2024)
 
 ## 4. Training procedure
 
-&emsp; I utilized an AdamW optimizer (**CITE**)...
+
+### Temporal-differences
+
+&emsp; Temporal-difference methods propose that, instead of comparing each prediction by our network to the outcome of the game, we should study the differences between our predictions.
+
+
+### Monte-Carlos tree search
+
+&emsp; Monte-Carlos tree search (MCTS) methods are based on the idea of infrequently having a model choose random moves, testing the accuracy of the model's predictions for otherwise ignored moves. In other words, according to some distribution, the model will randomly choose a move, then play out the rest of the game as normal. This move could be chosen on the first turn or the last. Ideally, this prevents the model from getting stuck in a non-optimal local minimum. 
+
+&emsp; One previous implementation of MCTS is by the researchers at Google Deepmind when developing AlphaGo (**CITE**). Their method was based on treating the game of go like a search tree, where they would store the action value (i.e., how strong the move is), visit count, and prior probability for each move (e.g., "leaf"). This allowed the model to visit infrequently made moves with higher probability, followed by a playout in order to collect a sample action value. However, since in Catan the board is randomly chosen, the idea of designing a search tree relative to board position seemed inneffective. The sample space is patently too large. One could try to program a MCTS algorithm which takes into account how often each individual move occurs, regardless of the board position, but I decided upon something simpler. 
+
+&emsp; I implemented a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game went without a random move. I decided upon this probability as it provided a 30% chance that a random setup move would be picked, i.e., one of the initial settlements or roads, along with a good distribution of middle to late game random moves, in practice.
+
+&emsp; 
+
+
+### AdamW
+
+&emsp; Adam, short for adaptive moment estimation, was introduced by D. Kingma and J. Ba in (**CITE**). Adam uses computationally efficient estimations of the first and second moments in order to compute an adaptive learning rate. This allows it to often converge quicker than, for example, stochastic gradient descent (SGD), which requires the user to manually adjust the step size. (**ADD DETAILS**)
+
+&emsp; AdamW is a modified version of Adam with weight-decay. I. Loshchilov and F. Hutter observed in (**CITE**) that, unlike for SGD, $ L^2 $-regularization and weight-decay are not equivalent for Adam. Hence, they introduced a version of Adam which uses decoupled weight decay. (**ADD DETAILS**)
+
+&emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in (**CITE** check epsilon).
 
 
 ## 5. Results 
 
-
+&emsp; I found my network
 
 
 ## 6. Future plans
