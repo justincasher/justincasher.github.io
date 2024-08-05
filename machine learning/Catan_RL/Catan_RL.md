@@ -77,7 +77,9 @@ title: Modeling Catan through self-play (2024)
 
 ### Temporal-differences
 
-&emsp; Temporal-difference methods propose that, instead of comparing each prediction by our network to the outcome of the game, we should study the differences between our predictions.
+&emsp; Temporal-difference (TD) methods propose that, instead of comparing each prediction by our network to the outcome of the game, we should study the differences between our predictions. This was originally used in checkers player program...Then it later was studied by Sutton and implemented by Tesauro when training his TD-gammon.
+
+&emsp; Intuitively, we would prefer that the predictions made by our model to not change signifantly each turn. Let us consider two examples in the case that we train on model solely on the outcome of the game. Recall that we would like to predict whether the player will finish in first, second, or third place when playing Catan. Suppose network A consistently predicts that the player is going to finish in first place each turn, whereas network B alternates between predicting in first place and third place. If the player finishes in second place, both of these models would be penalized the same compared to the game outcome: each turn they had an error of 1. However, it makes little sense for the model A to keep jumping between places first and third: why not just take their average and choose second? Whereas, for model B, it could be that they luckily gained a place at the end of the game due to the actions of another player, hence the increase from third to second. Thus, the driving idea of TD methods is that the curve formed by the models predictions should be relatively smooth.
 
 
 ### Monte-Carlos tree search
@@ -87,8 +89,6 @@ title: Modeling Catan through self-play (2024)
 &emsp; One previous implementation of MCTS is by the researchers at Google Deepmind when developing AlphaGo (**CITE**). Their method was based on treating the game of go like a search tree, where they would store the action value (i.e., how strong the move is), visit count, and prior probability for each move (e.g., "leaf"). This allowed the model to visit infrequently made moves with higher probability, followed by a playout in order to collect a sample action value. However, since in Catan the board is randomly chosen, the idea of designing a search tree relative to board position seemed inneffective. The sample space is patently too large. One could try to program a MCTS algorithm which takes into account how often each individual move occurs, regardless of the board position, but I decided upon something simpler. 
 
 &emsp; I implemented a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game went without a random move. I decided upon this probability as it provided a 30% chance that a random setup move would be picked, i.e., one of the initial settlements or roads, along with a good distribution of middle to late game random moves, in practice.
-
-&emsp; 
 
 
 ### AdamW
