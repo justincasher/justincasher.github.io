@@ -55,7 +55,9 @@ title: Modeling Catan through self-play (2024)
 
 </ul>
 
-![Call graph](call_graph.png)
+&emsp; Here is the call graph:
+
+<img src="call_graph.png" alt="call_graph" width="100%"/>
 
 &emsp; I programmed the board based on the notion of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. This simplified calculating where a player could build a road or settlement, the length of their longest road, and so on.
 
