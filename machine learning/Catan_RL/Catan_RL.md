@@ -78,16 +78,11 @@ title: Modeling Catan through self-play (2024)
 
 ### Temporal-differences
 
-&emsp; Temporal-difference (TD) methods claim that, instead of comparing each prediction by our network to the outcome of the game, we should penalize the differences between our predictions. This incentivizes our model to make predictions that do not change signifantly each turn, forming a "smooth" curve until settling upon the outcome of the game.
+&emsp; Temporal-difference (TD) methods claim that, instead of comparing each prediction by our network to the outcome of the game, we should penalize the differences between our predictions. This incentivizes our model to make predictions that do not change signifantly each turn, forming a "smooth" curve until settling upon the outcome of the game. Overall, TD methods are easy to implement while sometimes having drastic effects on model training.
 
-&emsp; For example, suppose that we train on model solely on the outcome of the game. Recall that we would like to predict whether the player will finish in first, second, or third place when playing Catan. Let network A consistently predict that our player is going to finish in third place each turn, whereas network B alternates between predicting first place and third place. If our player finishes in second place, both of these models would be penalized the same compared to the game outcome: each turn they had an error of 1. However, it makes little sense for the model A to keep jumping between places first and third: why not take their average and choose second? Whereas, for model B, it could be that our player luckily gained a place at the end of the game due to the actions of another player, and hence the increase from third to second. 
+&emsp; For an example, suppose that we train on model solely on the outcome of the game. Recall that we would like to predict whether the player will finish in first, second, or third place when playing Catan. Let network A consistently predict that our player is going to finish in third place each turn, whereas network B alternates between predicting first place and third place. If our player finishes in second place, both of these models would be penalized the same compared to the game outcome: each turn they had an error of 1. However, it makes little sense for the model A to keep jumping between places first and third: why not take their average and choose second? Whereas, for model B, it could be that our player luckily gained a place at the end of the game due to the actions of another player, and hence the increase from third to second. 
 
 &emsp; TD methods were classically studied by ... used in checkers player program...Then it later was studied by Sutton and implemented by Tesauro when training his TD-gammon.
-
-
-&emsp; 
-
-&emsp; 
 
 
 ### Monte-Carlos tree search
