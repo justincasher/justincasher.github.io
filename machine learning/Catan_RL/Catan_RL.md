@@ -39,7 +39,7 @@ title: Modeling Catan through self-play (2024)
 
 ## 2. Catan implementation
 
-&emsp; I implemented Catan in Python; you can find the code on my GitHub repository distributed amongst 5 files: 
+&emsp; I coded my own version of Catan in Python in order to utilize PyTorch; you can find the code on my GitHub repository distributed amongst 5 files: 
 
 <ul style="list-style-position: outside; padding-left: 25px;">
 
