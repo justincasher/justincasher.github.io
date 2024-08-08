@@ -86,7 +86,7 @@ title: Modeling Catan through self-play (2024)
 ## 4. Training procedure
 
 
-#### Temporal-differences
+##### Temporal-differences
 
 &emsp; Temporal-difference (TD) methods claim that, instead of computing the loss as the difference between the model predictions and the outcome of the game, we should compute the loss as the differences between successive predictions. In other words, we have the computer check to see if it has indeed gained an advantage. This incentivizes our model to predict outcomes that do not change signifantly each turn, forming a "smooth" curve until settling upon the real score of the game. In practice, TD methods are easy to implement while often having drastic effects on model training.
 
