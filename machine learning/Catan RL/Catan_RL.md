@@ -35,7 +35,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; In case (1), I created a network which won each game in an average of 74 dice rolls. Other analyses suggest the average number of rolls to win being in the range 60–70—for instance, https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics counted an average of 71 rolls in a four person game—and hence 74 rolls is tad bit slow. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amature player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate. I think this can be fixed by additional training, but using what I had learned in training (1), I chose to focus my resources on developing model (2).
 
-&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 93 dice rolls.
+&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 92 dice rolls.
 
 
 
@@ -86,7 +86,7 @@ title: Modeling Catan through self-play (2024)
 ## 4. Training procedure
 
 
-### Temporal-differences
+#### Temporal-differences
 
 &emsp; Temporal-difference (TD) methods claim that, instead of computing the loss as the difference between the model predictions and the outcome of the game, we should compute the loss as the differences between successive predictions. In other words, we have the computer check to see if it has indeed gained an advantage. This incentivizes our model to predict outcomes that do not change signifantly each turn, forming a "smooth" curve until settling upon the real score of the game. In practice, TD methods are easy to implement while often having drastic effects on model training.
 
