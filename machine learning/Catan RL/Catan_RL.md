@@ -114,6 +114,10 @@ title: Modeling Catan through self-play (2024)
 &emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in Loschilov and Hutter (**CITE**).
 
 
+### Gradient clipping
+
+I found..
+
 
 ## 5. Results 
 
