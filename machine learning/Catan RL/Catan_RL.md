@@ -95,8 +95,7 @@ title: Modeling Catan through self-play (2024)
 &emsp; TD methods have shown to be successful in a variety of game playing tasks. One of the first implementations was Samuel's checkers program, where he created a program which could play checkers better than himself (**CITE**). TD methods were theoretically developed by Sutton in (**CITE**), where he defined his TD-lambda; furthermore, he showed that, with certain natural constraints, TD-lambda is capable of modeling arbitrary training sets. Likewise, Tesauro named him program TD-gammon in reference to the importance of TD methods when training it (**CITE**). 
 
 
-
-### Monte-Carlos tree search
+##### Monte-Carlos tree search
 
 &emsp; Monte-Carlos tree search (MCTS) methods are based on the idea of infrequently having a model choose random moves, testing the accuracy of the model's predictions for otherwise ignored moves. In other words, according to some distribution, the model will randomly choose a move, then play out the rest of the game as normal. This move could be chosen on the first turn or the last. Ideally, this prevents the model from getting stuck in a non-optimal local minimum. 
 
@@ -105,7 +104,7 @@ title: Modeling Catan through self-play (2024)
 &emsp; I implemented a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. I decided upon this probability as it provided an approximate 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads; it also chose a good distribution of middle to late game random moves, in practice.
 
 
-### AdamW
+##### AdamW
 
 &emsp; Adam, short for adaptive moment estimation, was introduced by D. Kingma and J. Ba in (**CITE**). Unlike, for example, stochastic gradient descent with momentum, Adam uses computationally efficient estimations of the first and second moments in order to compute an adaptive learning rate. This acts as a form of automatic annealing, allowing it to often converge quicker than, for example, SGD, which requires the user to manually adjust the step size. Mathematically, Kingma and Ba proved that Adam has an average $ O(\sqrt(T)) $ online regret bound for convex optimization, meaning it indeed converges if the loss functions are convex. Practically, they showed that Adam converged quicker on image recognition tasks than many other optimizers. Adam has been popular in training large language models, cf. (**CITE** Kaplan, McCandlish, LLaMa)
 
