@@ -31,11 +31,13 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; Another interesting example of learning through self-play is the work of DeepMind Technologies in the 2010s on Atari video games, chess, and go. They took advantage of greatly increased computer power and new image recognition methods, e.g., modern convolutional neural network architectures. This enabled to create a single model that was able to play multiple Atari games, along with a state of the art chess playing bot, and, for the first time, a super-human level go playing program. When training their networks, they utilized a Monte-Carlo tree search (MCTS) algorithm, where they would randomly choose moves that had not been visited many times before.
 
-&emsp; My approach to Catan directly builds on the research discussed above. I trained a residual neural network to predict whether a given player will finish first, second, or third; this is done using a TD-method combined with a simplified MCTS algorithm. I tested this approach in two settings: (1) with the board tiles and numbers fixed and (2) without the board fixed. In both trials, I disabled player-to-player trading, and I hope to train a model which can trade in the future.
+&emsp; My approach to Catan directly builds on the research discussed above. I trained a residual neural network to predict whether a given player will finish first, second, or third; this is done using a TD-method combined with a simplified MCTS algorithm. I tested this approach in two settings: (1) with the board tiles and numbers fixed and (2) without the board fixed. In both trials, I disabled player-to-player trading while limiting the number of players to 3; I hope to train a more general model in the future.
 
-&emsp; In case (1), I trained a network which won each game in an average of 74 dice rolls. This is comparable to other analyses of Catan, which suggest the average number of rolls to win being in the range 60–70; for instance, https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics counted an average of 71 rolls in a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amature player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate.
+&emsp; In case (1), I created a network which won each game in an average of 74 dice rolls. Other analyses suggest the average number of rolls to win being in the range 60–70—for instance, https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics counted an average of 71 rolls in a four person game—and hence 74 rolls is tad bit slow. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amature player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate. I think this can be fixed by additional training, but using what I had learned in training (1), I chose to focus my resources on developing model (2).
 
-&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 106 dice rolls.
+&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 93 dice rolls.
+
+
 
 ## 2. Catan implementation
 
@@ -45,13 +47,13 @@ title: Modeling Catan through self-play (2024)
 
 <li><b>player.py</b> contains the player class. This manages for each player their resource and development cards, settlements and cities, etc. Notably, it contains an array of the player's predictions, i.e., the outputs from the network made each move, which is utilized when updating the network's weights.</li>
 
-<li><b>board.py</b> contains the board class. It is responsible for generating the board positions and development card ordering. It also contains maps corresponding each position to an integer so we can translate board information to the input tensor for out network.</li>
+<li><b>board.py</b> compromises of the board class. It is responsible for generating the board positions and development card ordering. It also contains maps corresponding each position to an integer so we can translate board information to the input tensor for out network.</li>
 
-<li><b>game.py</b> contains the game class. It handles almost all gameplay. In particular, the game class contains methods which allow our network to interact with the board by generating a tensor containing the board and a player's possible moves, then feeding this tensor to our model in order to choose a move.</li>
+<li><b>game.py</b> holds the game class. It handles almost all gameplay. In particular, the game class contains methods which allow our network to interact with the board by generating a tensor containing the board and a player's possible moves, then feeding this tensor to our model in order to choose a move.</li>
 
-<li><b>network.py</b> contains the CatanNetwork class. This is our residual neural network, which is built out of another class named ResidualBlock, cf. §3.</li>
+<li><b>network.py</b> contains the CatanNetwork and ResidualBlock classes. The CatanNetwork is our residual neural network, and it is built out of ResidualBlock objects, cf. §3.</li>
 
-<li><b>training.py</b> contains the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.</li>
+<li><b>training.py</b> is compsoed of the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.</li>
 
 </ul>
 
@@ -61,7 +63,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; I programmed the board based on the notion of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. This simplified calculating where a player could build a road or settlement, the length of their longest road, and so on.
 
-&emsp; Each turn, the game generates an input tensor for the network. This consists the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and only a single valid move. Imputting this tensor to the network is philosophically equivalent to asking it "What is likely finishing position given this board and this move?". If a MCTS move was not chosen that turn, cf. §4, the program then chose the move with the best given move position.
+&emsp; Each turn, the game generates an input tensor for the network. This consists the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and a single 1 in the moves portion indicating this move. Imputting this tensor to the network is philosophically equivalent to asking it "What is likely finishing position given this board and this move?". If a MCTS move was not chosen that turn, cf. §4, the program then chose the move with the best given move position.
 
 &emsp; One thing that helped with training was rotating the input tensor with respect to each player's statistics; e.g., each player would see their statistics listed first, then the player taking the following turn, and so on. I found it difficult to train the network effectively without this, even if the network was given the current player number.
 
@@ -86,11 +88,12 @@ title: Modeling Catan through self-play (2024)
 
 ### Temporal-differences
 
-&emsp; Temporal-difference (TD) methods claim that, instead of comparing each prediction by our network to the outcome of the game, we should penalize the differences between our predictions. This incentivizes our model to make predictions that do not change signifantly each turn, forming a "smooth" curve until settling upon the outcome of the game. Overall, TD methods are easy to implement while often having drastic effects on model training.
+&emsp; Temporal-difference (TD) methods claim that, instead of computing the loss as the difference between the model predictions and the outcome of the game, we should compute the loss as the differences between successive predictions. In other words, we have the computer check to see if it has indeed gained an advantage. This incentivizes our model to predict outcomes that do not change signifantly each turn, forming a "smooth" curve until settling upon the real score of the game. In practice, TD methods are easy to implement while often having drastic effects on model training.
 
-&emsp; For an example, suppose that we train on model solely on the outcome of the game. Recall that we would like to predict whether the player will finish in first, second, or third place when playing Catan. Let network A consistently predict that our player is going to finish in third place each turn, whereas network B alternates between predicting first place and third place. If our player finishes in second place, both of these models would be penalized the same compared to the game outcome: each turn they had an error of 1. However, it makes little sense for the model A to keep jumping between places first and third: why not take their average and choose second? Whereas, for model B, it could be that our player luckily gained a place at the end of the game due to the actions of another player, and hence the increase from third to second. 
+&emsp; For an example, suppose that we compute the loss only using the final game scores. Recall that we would like to predict whether the player will finish in first, second, or third place when playing Catan. Let network A consistently predict that our player is going to finish in third place each turn, whereas network B alternates between predicting first place and third place. If our player finishes in second place, both of these models would be penalized the same compared to the game outcome: each turn they had an error of 1. However, it makes little sense for the model A to keep jumping between places first and third: why not take their average and choose second? Whereas, for model B, it could be that our player luckily gained a place at the end of the game due to the actions of another player, and hence the increase from third to second. 
 
-&emsp; TD methods were classically studied by ... used in checkers player program...Then it later was studied by Sutton and implemented by Tesauro when training his TD-gammon.
+&emsp; TD methods have shown to be successful in a variety of game playing tasks. One of the first implementations was Samuel's checkers program, where he created a program which could play checkers better than himself (**CITE**). TD methods were theoretically developed by Sutton in (**CITE**), where he defined his TD-lambda; furthermore, he showed that, with certain natural constraints, TD-lambda is capable of modeling arbitrary training sets. Likewise, Tesauro named him program TD-gammon in reference to the importance of TD methods when training it (**CITE**). 
+
 
 
 ### Monte-Carlos tree search
@@ -99,16 +102,17 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; One previous implementation of MCTS is by the researchers at Google Deepmind when developing AlphaGo (**CITE**). Their method was based on treating the game of go like a search tree, where they would store the action value (i.e., how strong the move is), visit count, and prior probability for each move (e.g., "leaf"). This allowed the model to visit infrequently made moves with higher probability, followed by a playout in order to collect a sample action value. However, since in Catan the board is randomly chosen, the idea of designing a search tree relative to board position seemed inneffective. The sample space is patently too large. One could try to program a MCTS algorithm which takes into account how often each individual move occurs, regardless of the board position, but I decided upon something simpler. 
 
-&emsp; I implemented a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. I decided upon this probability as it provided a 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads, along with a good distribution of middle to late game random moves, in practice.
+&emsp; I implemented a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. I decided upon this probability as it provided an approximate 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads; it also chose a good distribution of middle to late game random moves, in practice.
 
 
 ### AdamW
 
-&emsp; Adam, short for adaptive moment estimation, was introduced by D. Kingma and J. Ba in (**CITE**). Adam uses computationally efficient estimations of the first and second moments in order to compute an adaptive learning rate. This allows it to often converge quicker than, for example, stochastic gradient descent (SGD), which requires the user to manually adjust the step size. (**ADD DETAILS**)
+&emsp; Adam, short for adaptive moment estimation, was introduced by D. Kingma and J. Ba in (**CITE**). Unlike, for example, stochastic gradient descent with momentum, Adam uses computationally efficient estimations of the first and second moments in order to compute an adaptive learning rate. This acts as a form of automatic annealing, allowing it to often converge quicker than, for example, SGD, which requires the user to manually adjust the step size. Mathematically, Kingma and Ba proved that Adam has an average $ O(\sqrt(T)) $ online regret bound for convex optimization, meaning it indeed converges if the loss functions are convex. Practically, they showed that Adam converged quicker on image recognition tasks than many other optimizers. Adam has been popular in training large language models, cf. (**CITE** Kaplan, McCandlish, LLaMa)
 
-&emsp; AdamW is a modified version of Adam with weight-decay. I. Loshchilov and F. Hutter observed in (**CITE**) that, unlike for SGD, $ L^2 $-regularization and weight-decay are not equivalent for Adam. Hence, they introduced a version of Adam which uses decoupled weight decay. (**ADD DETAILS**)
+&emsp; AdamW is a modified version of Adam which utilizes weight-decay to prevent unbounded network parameter growth. I. Loshchilov and F. Hutter proved in (**CITE**) that, unlike for SGD, $ L^2 $-regularization and weight-decay are not equivalent for Adam. Hence, they introduced a version of Adam which uses decoupled weight decay called AdamW. They showed that it performed better than Adam on image recognition tasks during later stages of training, i.e., after 1000 epochs, while both lagged behind SGD. This is in stark comparison to Kingma and Ba's experiments, which only tested their optimizer over 200 epochs. This is important for my Catan model, as the number of epochs will reach more than 100,000. 
 
-&emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in (**CITE** check epsilon).
+&emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in Loschilov and Hutter (**CITE**).
+
 
 
 ## 5. Results 
@@ -116,9 +120,11 @@ title: Modeling Catan through self-play (2024)
 &emsp; I found my network
 
 
+
 ## 6. Future plans
 
 &emsp; 
+
 
 
 ## 7. References
