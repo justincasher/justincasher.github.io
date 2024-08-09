@@ -133,18 +133,27 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; AdamW is a modified version of Adam which utilizes weight-decay to prevent unbounded network parameter growth. I. Loshchilov and F. Hutter proved in [[5]](#7-references) that, unlike for SGD, $ L^2 $-regularization and weight-decay are not equivalent for Adam. Hence, they introduced a version of Adam which uses decoupled weight decay called AdamW. They showed that it performed better than Adam on image recognition tasks during later stages of training, i.e., after 1000 epochs, while both lagged behind SGD. This is in stark comparison to Kingma and Ba's experiments, which only tested their optimizer over 200 epochs. This is important for my Catan model, as the number of epochs will reach more than 100,000. 
 
-&emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in Loschilov and Hutter in [[5]](#7-references).
+&emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given by Loschilov and Hutter in [[5]](#7-references).
 
 
-#### 4.5 Batch size and learning rate
+##### 4.5 Batch size and learning rate
 
-&emsp; I started training with a batch size of 1 and gradually increased this...
+&emsp; I started training with a batch size of 1, meaning the network would play one game before backpropogating. I then increased this to 2 when trianing stagnated. The idea is that including more games prevents random spikes in the error each game from overtly hurting the network, i.e., the error is being averaged. However, since each game can take 3–5 seconds, on average, I did not want to increase the batch size even more. Instead, I opted with decreasing the learning rate, which has similar effects, cf. (**CITE** Smith and Kindermans). In particular, I initialized the learning rate to be 5e-5 and then decreased by multiples of 2 and 5 until the model stopped improving.
 
 
 
 ## 5. Results 
 
+&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Second, in §5.2, I describe a more general network which does not require the board to be fixed.
+
+
+##### 5.1 A fixed board network
+
 &emsp; I found my network
+
+
+##### 5.2 A general network
+
 
 
 
