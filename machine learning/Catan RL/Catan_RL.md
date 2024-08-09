@@ -136,12 +136,26 @@ title: Modeling Catan using self-play (2024)
 
 ## 6. Future plans
 
-&emsp; 
+&emsp; Mention keeping track of past moves and dice rolls
 
 
 
 ## 7. References
 
-1. Alex Cates, *Board game breakdown: Settlers of Catan, the basics*, 2022. https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics.
+1. Alex Cates, *Board game breakdown: Settlers of Catan, the basics*, 2022. [Link](https://www.alexcates.com/post/board-game-breakdown-settlers-of-catan-the-basics)
 
-2. David Silver, Aja Huang, et al., *Mastering the game of go with deep neural networks and tree search*, Nature **529** (2016), 484–489. https://doi.org/10.1038/nature16961.
+2. David Silver, Aja Huang, et al., *Mastering the game of go with deep neural networks and tree search*, Nature **529** (2016), 484–489. [Link](https://doi.org/10.1038/nature16961)
+
+3. Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun, *Deep residual learning for image recognition*, 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2015), 770–778. [arXiv:1512.03385](arXiv:1512.03385)
+
+4. Diederik Kingma and Jimmy Ba, *Adam: A method for stochastic optimization*, CoRR (2014). [arXiv:1412.6980](arXiv:1412.6980)
+
+5. Ilya Loshchilov and Frank Hutter, *Decoupled weight decay regularization*, International Conference on Learning Representations (2017). [arXiv:1711.05101](arXiv:1711.05101)
+
+6. Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller, *Playing atari with deep reinforcement learning* (2013). [arXiv:1312.5602](arXiv:1312.5602)
+
+7. Arthur Samuel, *Some studies in machine learning using the game of checkers*, IBM Journal **3** (1959), no. 3.
+
+8. Richard Sutton, *Learning to predict by the methods of temporal differences*, Machine learning **3** (1988).
+
+9. Gerald Tesauro, *Temporal difference learning and TD-gammon*, Communications of the ACM **38** (1995), no. 3.
