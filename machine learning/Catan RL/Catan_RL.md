@@ -35,7 +35,7 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; In case (1), I created a network which won each game in an average of 74 dice rolls. Other analyses suggest the average number of rolls to win being in the range 60–70—for instance, in [[1]](#7-references), they counted an average of 71 rolls in a four person game—and hence 74 rolls is tad bit slow. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amateur player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate. I think this can be fixed by additional training, but using what I had learned in training (1), I chose to focus my resources on developing model (2).
 
-&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 91 dice rolls.
+&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 89 dice rolls. I will update this once it is done training.
 
 
 
@@ -75,23 +75,24 @@ title: Modeling Catan using self-play (2024)
 
 ![CatanNetwork](CatanNetwork.png)
 
-&emsp; I tested a variety of architectures before settling on the CatanNetwork. I started with some simple models: single layer networks with 50, 100, or 1100 neurons. I found these models to be too hiunstable and to suffer from catastrophic forgetting. I also tried other naive configurations, such as 5 fully connected layers with 1000 neurons each. These all seemed to lack the quickness to converge and ability not to forget that the CatanNetwork possessed. 
+&emsp; I tested a variety of architectures before settling on the CatanNetwork. I started with some simple models: single layer networks with 50, 100, or 1100 neurons. I found these models to be too hiunstable and to suffer from catastrophic forgetting. I also tried other naive configurations, such as 5 fully connected layers with 1000 neurons each. These all seemed to lack the quickness to converge and ability not to forget that the CatanNetwork possessed.
 
-&emsp; Another variable to adjust was the number of neurons in the hidden layers. I chose 500 to create a sufficiently large network while also prioritizing training time. I discuss in §4 that, by exploiting weight decay, having too large of a network is more of a concern than too small; I hope the CatanNetwork is large enough. Thus, with the chosen number of neurons, the network was able to play a game of Catan approximately every 4 seconds, which translates to 22,500 games per day. 
+&emsp; One important hyperparameter was the number of neurons in the hidden layers. I chose 500 to create a sufficiently large network while also prioritizing training time. I discuss in §4.4 that, by exploiting weight decay, having too large of a network is more of a concern than too small; I hope the CatanNetwork is large enough. Thus, with the chosen number of neurons, the network was able to play a game of Catan approximately every 4 seconds, which translates to 22,500 games per day. 
 
-&emsp; I am interested in experimenting with deeper architectures or with more hidden neurons in the future. Compare this to image recognition...
+&emsp; I am interested in experimenting with deeper architectures or with more hidden neurons in the future. One comparison I made when training my model was to image recognition architectures. If you consider the current board information as an image, then perhaps it is natural to compare the number of parameters. Strong image recognition architectures for the CIFAR-100 data have anywhere from 2,500,000 to 25,000,000 parameters, cf. (**CITE** ShakeShake). Hence, the size of the CatanNetwork seemed reasonable.
 
 
 
 ## 4. Training procedure
 
-&emsp; In this section, I describe the ideas that were utilized in training my bot. First, in §4.1, I explain why I utilized temporal-difference methods and how they are implemented in my code. Subsequently, in §4.2, I detail my simplified Monte-Carlos tree search algorithm. Next, in §4.3, I explain my choice of criterion, a smooth L1 loss, and why gradient clipping was necessary. Finally, in §4.4, I justify using the AdamW optimizer.
+&emsp; In this section, I describe the ideas that were utilized in training my bot. First, in §4.1, I explain why I utilized temporal-difference methods and how they are implemented in my code. Subsequently, in §4.2, I detail my simplified Monte-Carlos tree search algorithm. Next, in §4.3, I explain my choice of criterion, a smooth L1 loss, and why gradient clipping was necessary. In §4.4, I justify using the AdamW optimizer. Finally, in §4.5, I discuss how adjusting the batch size and learning rate affected training.
 
 
+<!---
 ##### 4.1 Q-learning
 
 &emsp; Enter some information here...
-
+--->
 
 ##### 4.1 Temporal-differences
 
@@ -101,6 +102,10 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; TD methods have shown to be successful in a variety of game playing tasks. One of the first implementations was Samuel's checkers program, where he created a program which could play checkers better than himself [[7]](#7-references). TD methods were abstracted by Sutton in [[8]](#7-references), where he defined his TD-lambda; furthermore, he showed that, with certain natural constraints, TD-lambda is capable of modeling arbitrary training sets. Likewise, Tesauro named him program TD-gammon in reference to the importance of TD methods when training it [[9]](#7-references). 
 
+&emsp; I exploited TDs as follows. Each turn, the program records the prediction the current player has made for their chosen move; this yields three prediction vectors. Once the game has concluded, I construct a labels vector by copying and then shifting each predictions vector one spot to the left, forgetting the first prediction made, and inserting the final game score in the final position. Effectively, this compares subsequent predictions to eachother, and the final prediction to the final game score. Finally, I compute the loss, cf. §4.3, and backpropogate it.
+
+&emsp; Another possibile algorithm would have to update the weights of the network each turn; this seemed impractical for two reasons. The first is that it increases training time for what appeared to be little gain: without knowing the final outcome of the game, the network cannot validate its predictions. The second reason is that my network currently compares subsequent predictions made by each player; this could not be done each turn for each player, as it would interfere with computing the loss of other predictions. In other words, the network weights would change between predictions, which will throw an error in PyTorch. To combat this problem, I would have had to have the network return a vector of final place predictions, one for each player. Then we could compare subsequent vectors without needing to wait to return to the same player.
+
 
 ##### 4.2 Monte-Carlos tree search
 
@@ -108,14 +113,18 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; One previous implementation of MCTS is by the researchers at Google Deepmind when developing AlphaGo [[2]](#7-references). Their method was based on treating the game of go like a search tree, where they would store the action value (i.e., how strong the move is), visit count, and prior probability for each move (e.g., "leaf"). This allowed the model to visit infrequently made moves with higher probability, followed by a playout in order to collect a sample action value. However, since in Catan the board is randomly chosen, the idea of designing a search tree relative to board position seemed ineffective. The sample space is patently too large. One could try to program a MCTS algorithm which takes into account how often each individual move occurs, regardless of the board position, but I decided upon something simpler. 
 
-&emsp; I constructed a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. I decided upon this probability as it provided an approximate 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads; it also yields a good distribution of middle to late game random moves, in practice.
+&emsp; I constructed a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. Note that I deleted previous predictions before this move, as they were no longer relevent to the current game; it may be better to keep them and simply forget the turn in which the random move was made. I decided upon this probability as it provided an approximate 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads; it also yields a good distribution of middle to late game random moves, in practice. 
 
-&emsp; One downside to my MCTS algorithm is that it causes random spikes in error when training. This is because when the network enters an explored region of the sample space, its final prediction can be drastically wrong. Furthermore, there are less sample points to average over before computing the error, exacerbating this problem. To combat this issue, I exploited a variety methods that I explain in further detail later: decreasing the learning rate, increasing the number of samples before computing the loss, using a Huber loss, and gradient clipping.
+&emsp; A downside to my MCTS algorithm is that it causes random spikes in error when training. This is because when the network enters an explored region of the sample space, its final prediction can be drastically wrong. Furthermore, there are less sample points to average over before computing the error, exacerbating this problem. To combat this issue, I exploited a variety methods that I explain in further detail later: decreasing the learning rate, increasing the number of samples before computing the loss, using a Huber loss, and gradient clipping.
 
 
 ##### 4.3 Criterion and gradient clipping
 
-&emsp; 
+&emsp; I employed a smooth L1 loss, also known as a Huber loss, when training the CatanNetwork. For each sample point, this loss function is quadratic when the loss is between 0 and 1 while being linear when the loss is greater than 1. The main purpose of employing this loss is to prevent a highly innacurate final prediction from overtly affecting the network, meaning if the player places 1st but the network mistakenly outputs 6th, then the loss will only be 4.5 instead of 12.5.
+
+&emsp; Likewise, I exploited gradient clipping to prevent any drastically wrong predictions from hurting the model. This scales down the gradients to be at most $ L^2 $ norm 0.1, which I chose after examining how different gradient norms affected training. Due to the MCTS algorithm, the network would occasionally experience a very large loss—e.g., 40x the usual loss—and a consequently increased gradient. Without gradient clipping, this would effectively untrain the model, causing all progress to be lost.
+
+&emsp; One seemingly contradictory thing that I experienced when training was that a higher loss often meant the network played better. This is because the largest contributor to the loss, due to the TD method and exagerateed by the MCST algorithm, is the difference between the final prediction and the actual game score. Thus, the fewer number of turns means the more this final prediction matters, causing the loss to go up when the network was playing better. I did not actually see this negatively affect training, however. I could have modified the loss function by normalizing it with respect to game length, and this is something I am considering testing in the future.
 
 
 ##### 4.4 AdamW
@@ -125,6 +134,11 @@ title: Modeling Catan using self-play (2024)
 &emsp; AdamW is a modified version of Adam which utilizes weight-decay to prevent unbounded network parameter growth. I. Loshchilov and F. Hutter proved in [[5]](#7-references) that, unlike for SGD, $ L^2 $-regularization and weight-decay are not equivalent for Adam. Hence, they introduced a version of Adam which uses decoupled weight decay called AdamW. They showed that it performed better than Adam on image recognition tasks during later stages of training, i.e., after 1000 epochs, while both lagged behind SGD. This is in stark comparison to Kingma and Ba's experiments, which only tested their optimizer over 200 epochs. This is important for my Catan model, as the number of epochs will reach more than 100,000. 
 
 &emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given in Loschilov and Hutter in [[5]](#7-references).
+
+
+#### 4.5 Batch size and learning rate
+
+&emsp; I started training with a batch size of 1 and gradually increased this...
 
 
 
