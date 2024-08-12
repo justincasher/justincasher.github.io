@@ -94,7 +94,7 @@ title: Modeling Catan using self-play (2024)
 &emsp; Enter some information here...
 --->
 
-##### 4.1 Temporal-differences
+##### 4.1. Temporal-differences
 
 &emsp; Temporal-difference (TD) methods claim that, instead of computing the loss as the difference between the model predictions and the outcome of the game, we should compute the loss as the differences between successive predictions. In other words, we have the computer check to see if it has indeed gained an advantage. This incentivizes our model to predict outcomes that do not change significantly each turn, forming a "smooth" curve until settling upon the real score of the game. In practice, TD methods are easy to implement while often having drastic effects on model training.
 
@@ -107,7 +107,7 @@ title: Modeling Catan using self-play (2024)
 &emsp; Another possibile algorithm would have to update the weights of the network each turn; this seemed impractical for two reasons. The first is that it increases training time for what appeared to be little gain: without knowing the final outcome of the game, the network cannot validate its predictions. The second reason is that my network currently compares subsequent predictions made by each player; this could not be done each turn for each player, as it would interfere with computing the loss of other predictions. In other words, the network weights would change between predictions, which will throw an error in PyTorch. To combat this problem, I would have had to have the network return a vector of final place predictions, one for each player. Then we could compare subsequent vectors without needing to wait to return to the same player.
 
 
-##### 4.2 Monte-Carlos tree search
+##### 4.2. Monte-Carlos tree search
 
 &emsp; Monte-Carlos tree search (MCTS) methods are based on the idea of infrequently having a model choose random moves, testing the accuracy of the model's predictions for otherwise ignored moves. In other words, according to some distribution, the model will randomly choose a move, then play out the rest of the game as normal. This move could be chosen on the first turn or the last. Ideally, this prevents the model from getting stuck in a non-optimal local minimum. 
 
@@ -118,7 +118,7 @@ title: Modeling Catan using self-play (2024)
 &emsp; A downside to my MCTS algorithm is that it causes random spikes in error when training. This is because when the network enters an explored region of the sample space, its final prediction can be drastically wrong. Furthermore, there are less sample points to average over before computing the error, exacerbating this problem. To combat this issue, I exploited a variety methods that I explain in further detail later: decreasing the learning rate, increasing the number of samples before computing the loss, using a Huber loss, and gradient clipping.
 
 
-##### 4.3 Criterion and gradient clipping
+##### 4.3. Criterion and gradient clipping
 
 &emsp; I employed a smooth L1 loss, also known as a Huber loss, when training the CatanNetwork. For each sample point, this loss function is quadratic when the loss is between 0 and 1 while being linear when the loss is greater than 1. The main purpose of employing this loss is to prevent a highly innacurate final prediction from overtly affecting the network, meaning if the player places 1st but the network mistakenly outputs 6th, then the loss will only be 4.5 instead of 12.5.
 
@@ -127,7 +127,7 @@ title: Modeling Catan using self-play (2024)
 &emsp; One seemingly contradictory thing that I experienced when training was that a higher loss often meant the network played better. This is because the largest contributor to the loss, due to the TD method and exagerateed by the MCST algorithm, is the difference between the final prediction and the actual game score. Thus, the fewer number of turns means the more this final prediction matters, causing the loss to go up when the network was playing better. I did not actually see this negatively affect training, however. I could have modified the loss function by normalizing it with respect to game length, and this is something I am considering testing in the future.
 
 
-##### 4.4 AdamW
+##### 4.4. AdamW
 
 &emsp; Adam, short for adaptive moment estimation, was introduced by D. Kingma and J. Ba in [[5]](#7-references). Unlike, for example, stochastic gradient descent with momentum, Adam uses computationally efficient estimations of the first and second moments in order to compute an adaptive learning rate. This acts as a form of automatic annealing, allowing it to often converge quicker than, for example, SGD, which requires the user to manually adjust the step size. Mathematically, Kingma and Ba proved that Adam has an average $ O(\sqrt{T}) $ online regret bound for convex optimization, meaning it indeed converges if the loss functions are convex. Practically, they showed that Adam converged quicker on image recognition tasks than many other optimizers. Adam has been popular in training large language models, cf. [[4]](#7-references)
 
@@ -136,7 +136,7 @@ title: Modeling Catan using self-play (2024)
 &emsp; For these reasons, I utilized AdamW when training my model. I set the initial learning rate to 5e-5, then I decreased it by a multiple of 5 each time the model stopped learning. The rest of the AdamW learning parameters, $ \beta_1, \beta_2, \epsilon $, etc., I left to be the default values as given by Loschilov and Hutter in [[6]](#7-references).
 
 
-##### 4.5 Batch size and learning rate
+##### 4.5. Batch size and learning rate
 
 &emsp; I started training with a batch size of 1, meaning the network would play one game before backpropogating. I then increased this to 2 when trianing stagnated. The idea is that including more games prevents random spikes in the error each game from overtly hurting the network, i.e., the error is being averaged. However, since each game can take 3–5 seconds, on average, I did not want to increase the batch size even more. Instead, I opted with decreasing the learning rate, which has similar effects, cf. [[10]](#7-references). In particular, I initialized the learning rate to be 5e-5 and then decreased by multiples of 2 and 5 until the model stopped improving.
 
