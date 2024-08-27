@@ -144,7 +144,7 @@ title: Modeling Catan using self-play (2024)
 
 ## 5. Results 
 
-&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Next, in §5.2, I describe training a more general network which does not require the board to be fixed. Note that the average number of turns to win reported during training are slightly higher than my estimation, as MCTS is enabled, adding randomness to the network's gameplay.
+&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Next, in §5.2, I describe training a more general network which does not require the board to be fixed. Note that the average number of turns to win reported during training are slightly higher than my estimation, as MCTS is enabled, adding randomness to the network's gameplay. All training was done on an Intel i9-13900K processor (24 cores), because training on a GPU would have been actually slower due to the lack of parallelism in my code.
 
 
 ##### 5.1 A fixed board network
@@ -176,13 +176,17 @@ title: Modeling Catan using self-play (2024)
 
 ## 6. Conclusions
 
-&emsp; My models act as a proof of concept, demonstrating that Catan can be played at a high level using reinforcement learning. Notably, one should compare my training procedure to that of DeepMind's aforementioned Atari, chess, and go models. Their models are often trained on large GPU (or TPU) clusters, which was not feasible here. For instance, their chess bot, AlphaZero, was trained in 2017 using ~5,000 TPUs in parallel. Hence, I am led to believe that if provided with ample compute, we could achieve similar results here.
+&emsp; My models act as a proof of concept, demonstrating that Catan can be played at a high level using reinforcement learning. One should compare my training procedure to that of DeepMind's aforementioned Atari, chess, and go models. Their models are often trained on large GPU (or TPU) clusters, which was not feasible here. For instance, their chess bot, AlphaZero, was trained in 2017 using ~5,000 TPUs in parallel. As a rough estimate, suppose they trained for 9 hours—the amount of time it took them to beat Stockfish 8—then divide by a factor of 8 to take into account advances in GPU efficiency. This gives us 5625 hours of compute or ~234 days, compared to just training for a week like I did. Thus, I am led to believe that if provided with ample compute, we could achieve similar results here.
 
-&emsp; Likewise, one significant problem I noticed is how slow each MCTS playout was. For example, I wanted to implement a version of my model which could train itself on the current board position while playing a human. However, this was seemingly impossible without further computational power or a better implementation. I pursued the later: I programmed a version of my bot in C++ using LibTorch. This cut the MCTS playout time almost in half, but this is simply not enough. A possible approach here could be using a smaller model which is quickly trained while playing.
+&emsp; Likewise, one significant problem I noticed is how slow each MCTS playout was, especially each forward pass through the network. For example, I wanted to implement a version of my model which could train itself on (or at least study) the current board position while playing a human. However, this was seemingly impossible without (a) further computational power or (b) a faster implementation. I pursued the later: I programmed a version of my bot in C++ using LibTorch. This cut the MCTS playout time almost in half, but this is simply not enough. A interesting approach here could be using a smaller model which is quickly on the CPU trained while playing.
 
-&emsp; One feature that was missing from my model was the ability to keep track of past moves. This is often important when playing strategic games, allowing the bot to, for instance, understand who has what resources when robbing. I omitted this to try to simplify the network, and I believed that simply listing the number of cards each player has as public information would suffice.
+&emsp; One feature that was missing from my model was the ability to keep track of past moves. This is often important when playing strategic games, allowing the bot to, for instance, understand who has what resources when robbing. I omitted this to try to simplify the network, and I believed that simply listing the number of cards each player has as public information would suffice for this study.
 
-&emsp; Mention keeping track of past moves and dice rolls
+&emsp; Some future improvements are the following: 
+
+- Providing the network with past moves and dice rolls. This is often important when playing strategic games, allowing the bot to, for instance, understand who has what resources when robbing. I omitted this to try to simplify the network, and I believed that simply listing the number of cards each player has as public information would suffice for this study
+
+- 
 
 
 
