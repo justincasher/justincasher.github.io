@@ -7,6 +7,12 @@ title: Machine learning projects
 <br/>
 This page contains machine learning projects that I have worked on.
 
+### Modeling Catan using self-play (2024)
+
+**Abstract:** I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlos tree search methods, along with a residual neural network structure. This resulting model achieved an intermediate level of play.
+
+<p class="meta-title"><a href="/brain_age_project">Read web article →</a></p>
+
 
 ### The brain age project (2020)
 
