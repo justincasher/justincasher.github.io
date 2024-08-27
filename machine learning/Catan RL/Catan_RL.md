@@ -144,21 +144,31 @@ title: Modeling Catan using self-play (2024)
 
 ## 5. Results 
 
-&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Next, in §5.2, I describe training a more general network which does not require the board to be fixed. 
+&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Next, in §5.2, I describe training a more general network which does not require the board to be fixed. Note that the average number of turns to win reported during training are slightly higher than my estimation, as MCTS is enabled, adding randomness to the network's gameplay.
 
 
 ##### 5.1 A fixed board network
 
-&emsp; 
+&emsp; My first model was trained by fixing the board, i.e., the resources, roll numbers, and ships were all fixed. I found this network to train well and achieve an intermediate level of play.
+
+&emsp; The error of the model, as discussed in §4.3, is apparently partially inversely correlated with the number of turns taken to win the game. The later drops in error can be attributed to increasing the batch size, which in turn averages out the spikes that can occur due to my MCTS algorithm.
 
 ![fixed error](fixed_error.png)
+
+&emsp; The number of turns the model took to win each game quickly decreased until it flatlined, winning each game in around 85 turns. I then decreased the learning rate, which brought it down to winning in around 77 turns.
 
 ![fixed turns](fixed_turns.png)
 
 
 ##### 5.2 A general network
 
+&emsp; My second model was trained on arbitrary board positions, i.e., the resources, roll numbers, and ships were all shuffled each game. This network struggled to play at a high level, which I simply attribute to not having enough training data and parameters to model the task at hand. I believe a general model could be created with more computational power.
+
+&emsp; The error of the model again grew proportionally to the number of turns taken to win the game. The volatility of the error early on compared to its relative stability later is a consequence of increasing the batch size.
+
 ![general error](general_error.png)
+
+&emsp; This time, the number of turns taken to win decreased until it flatlined at around 112 turns. I decreased the learning rate, bringing it to win in ~104 turns. I then increased the batch size to 2 games, causing it to win in ~91 turns; and finally the batch size was increased to 4 games, causing it to win in ~89 turns.
 
 ![general turns](general_turns.png)
 
