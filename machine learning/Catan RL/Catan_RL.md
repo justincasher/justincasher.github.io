@@ -190,13 +190,12 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; Some future improvements are the following: 
 
-- Providing the network with past moves and dice rolls. This would allow the network, for instance, to understand who has what resources when robbing.
-
-- Increasing the depth or width of the neural network. It could be that the model struggles to learn general positions due to a lack of space to store the necessary data.
-
-- Enabling AMSGrad when training.
-
-- Add human engineered input features.
+ <ul>
+  <li>Provide the network with past moves and dice rolls. This would allow the network, for instance, to understand who has what resources when robbing.</li>
+  <li>Increase the depth or width of the neural network. It could be that the model struggles to learn general positions due to a lack of space to store the necessary data.</li>
+  <li>Enabling AMSGrad when training.</li>
+  <li>Add human engineered input features.</li>
+</ul> 
 
 &emsp; I will be posting some games that I played against it soon!
 
