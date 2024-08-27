@@ -176,7 +176,11 @@ title: Modeling Catan using self-play (2024)
 
 ## 6. Conclusions
 
-&emsp; My models demonstrate that Catan can be played at a high level using reinforcement learning. 
+&emsp; My models act as a proof of concept, demonstrating that Catan can be played at a high level using reinforcement learning. Notably, one should compare my training procedure to that of DeepMind's aforementioned Atari, chess, and go models. Their models are often trained on large GPU (or TPU) clusters, which was not feasible here. For instance, their chess bot, AlphaZero, was trained in 2017 using ~5,000 TPUs in parallel. Hence, I am led to believe that if provided with ample compute, we could achieve similar results here.
+
+&emsp; Likewise, one significant problem I noticed is how slow each MCTS playout was. For example, I wanted to implement a version of my model which could train itself on the current board position while playing a human. However, this was seemingly impossible without further computational power or a better implementation. I pursued the later: I programmed a version of my bot in C++ using LibTorch. This cut the MCTS playout time almost in half, but this is simply not enough. A possible approach here could be using a smaller model which is quickly trained while playing.
+
+&emsp; One feature that was missing from my model was the ability to keep track of past moves. This is often important when playing strategic games, allowing the bot to, for instance, understand who has what resources when robbing. I omitted this to try to simplify the network, and I believed that simply listing the number of cards each player has as public information would suffice.
 
 &emsp; Mention keeping track of past moves and dice rolls
 
