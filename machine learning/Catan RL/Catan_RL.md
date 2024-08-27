@@ -16,7 +16,7 @@ title: Modeling Catan using self-play (2024)
 3. [Network architecture](#3-network-architecture)
 4. [Training procedure](#4-training-procedure)
 5. [Results](#5-results)
-6. [Future plans](#6-future-plans)
+6. [Conclusions](#6-conclusions)
 7. [References](#7-references)
 
 
@@ -29,13 +29,13 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; An important example of training a neural network through self-play is G. Tesauro's TD-Gammon developed during the 1990s [[12]](#7-references). His networks consisted of less than 5 hidden layers and 100 hidden units—networks orders of magnitude smaller than many modern networks. When training a model, each turn it would predict the win probability for each possible move, and then choose the move with the highest overall win probability. He then backpropogated the game result using a temporal-difference (TD) method, meaning that instead of comparing the predictions with the end result, they would be compared successively to each other in an attempt to minimize their differences. This approach showed remarkable success: An initial model achieved a strong intermediate ranking after 200,000 training games, and an enhanced model achieved a level of play only matched by the world's best players after 1,500,000 training games.
 
-&emsp; Another interesting example of learning through self-play is the work of DeepMind Technologies in the 2010s on Atari video games [[7]](#7-references), chess, and go [[2]](#7-references). They took advantage of greatly increased computer power and new image recognition methods, e.g., modern convolutional neural network architectures. This enabled to create a single model that was able to play multiple Atari games, along with a state-of-the-art chess playing bot, and, for the first time, a super-human level go playing program. When training their networks, they utilized various Monte-Carlo tree search (MCTS) algorithms, which would randomly choose moves that had not been visited many times before.
+&emsp; Another interesting example of learning through self-play is the work of DeepMind Technologies in the 2010s on Atari video games [[7]](#7-references), chess, and go [[9]](#7-references). They took advantage of greatly increased computer power and new image recognition methods, e.g., modern convolutional neural network architectures. This enabled to create a single model that was able to play multiple Atari games, along with a state-of-the-art chess playing bot, and, for the first time, a super-human level go playing program. When training their networks, they utilized various Monte-Carlo tree search (MCTS) algorithms, which would randomly choose moves that had not been visited many times before.
 
 &emsp; My approach to Catan directly builds on the research discussed above. I trained a residual neural network to predict whether a given player will finish first, second, or third; this is done using a TD-method combined with a simplified MCTS algorithm. I tested this approach in two settings: (1) with the board tiles and numbers fixed and (2) without the board fixed. In both trials, I disabled player-to-player trading while limiting the number of players to 3; I hope to train a more general model in the future.
 
-&emsp; In case (1), I created a network which won each game in an average of 73 dice rolls. Other analyses suggest the average number of rolls to win being in the range 60–70—for instance, in [[1]](#7-references), they counted an average of 71 rolls in a four person game. Hence, 73 rolls implies my model is a little slow, as a three person game should finish more quickly than a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amateur player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate. I think this can be fixed by additional training, but using what I had learned in training (1), I chose to focus my resources on developing model (2).
+&emsp; In case (1), I created a network which won each game in an average of 73 dice rolls. Other analyses suggest the average number of rolls to win being in the range 60–70—for instance, in [[1]](#7-references), they counted an average of 71 rolls in a four person game. Hence, 73 rolls implies my model is a little slow, as a three person game should finish more quickly than a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amateur player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate. I think this can be fixed by additional training, but, using what I had learned in developing this model, I chose to focus my resources on developing model (2).
 
-&emsp; In case (2), I am currently training the network. At the moment, it wins each game in 86 dice rolls. I will update this once it is done training.
+&emsp; In case (2), the network ended up being a bit slower, winning each game in an average of 86 dice rolls. In turn, this reduced the model from playing at an intermediate level and challenging for wins to a beginner level. I think that two possible ways to improve this model are either creating natural variables for the model to interpret (e.g., how many resources each settlement possition borders), or creating a larger with additional training time. The former seems more likely, as the later would likely require much more computational power than I had available. 
 
 
 
@@ -75,7 +75,7 @@ title: Modeling Catan using self-play (2024)
 
 ![CatanNetwork](CatanNetwork.png)
 
-&emsp; I tested a variety of architectures before settling on the CatanNetwork. I started with some simple models: single layer networks with 50, 100, or 1100 neurons. I found these models to be too hiunstable and to suffer from catastrophic forgetting. I also tried other naive configurations, such as 5 fully connected layers with 1000 neurons each. These all seemed to lack the quickness to converge and ability not to forget that the CatanNetwork possessed.
+&emsp; I tested a variety of architectures before settling on the CatanNetwork. I started with some simple models: single layer networks with 50, 100, or 1100 neurons. I found these models to be too unstable and to suffer from catastrophic forgetting. I also tried other naive configurations, such as 5 fully connected layers with 1000 neurons each. These all seemed to lack the quickness to converge and ability not to forget that the CatanNetwork possessed.
 
 &emsp; One important hyperparameter was the number of neurons in the hidden layers. I chose 500 to create a sufficiently large network while also prioritizing training time. I discuss in §4.4 that, by exploiting weight decay, having too large of a network is more of a concern than too small; I hope the CatanNetwork is large enough. Thus, with the chosen number of neurons, the network was able to play a game of Catan approximately every 4 seconds, which translates to 22,500 games per day. 
 
@@ -102,9 +102,9 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; TD methods have shown to be successful in a variety of game playing tasks. One of the first implementations was Samuel's checkers program, where he created a program which could play checkers better than himself [[8]](#7-references). TD methods were abstracted by Sutton in [[11]](#7-references), where he defined his TD-lambda; furthermore, he showed that, with certain natural constraints, TD-lambda is capable of modeling arbitrary training sets. Likewise, Tesauro named him program TD-gammon in reference to the importance of TD methods when training it [[12]](#7-references). 
 
-&emsp; I exploited TDs as follows. Each turn, the program records the prediction the current player has made for their chosen move; this yields one prediction vector for every player. Once the game has concluded, I construct a labels vector by copying and then shifting each predictions vector one coordinate over, forgetting the first prediction made, and inserting the final game score in the final position. Effectively, this compares subsequent predictions to eachother, and the final prediction to the final game score. Finally, I compute the loss, cf. §4.3, and backpropogate it.
+&emsp; I exploited TDs as follows. Each turn, the program records the prediction the current player has made for their chosen move; this yields one prediction vector for every player. Once the game has concluded, I construct a labels vector by copying and then shifting each predictions vector one coordinate over, forgetting the first prediction made, and inserting the final game score in the final position. Effectively, this compares subsequent predictions to each other, and the final prediction to the final game score. Finally, I compute the loss, cf. §4.3, and backpropogate it.
 
-&emsp; Another possibile algorithm would have to update the weights of the network each turn; this seemed impractical for two reasons. The first is that it increases training time for what appeared to be little gain: without knowing the final outcome of the game, the network cannot validate its predictions. The second reason is that my network currently compares subsequent predictions made by each player; this could not be done each turn for each player, as it would interfere with computing the loss of other predictions. In other words, the network weights would change between predictions, which will throw an error in PyTorch. To combat this problem, I would have had to have the network return a vector of final place predictions, one for each player. Then we could compare subsequent vectors without needing to wait to return to the same player.
+&emsp; Another possible algorithm would have to update the weights of the network each turn; this seemed impractical for two reasons. The first is that it increases training time for what appeared to be little gain: without knowing the final outcome of the game, the network cannot validate its predictions. The second reason is that my network currently compares subsequent predictions made by each player; this could not be done each turn for each player, as it would interfere with computing the loss of other predictions. In other words, the network weights would change between predictions, which will throw an error in PyTorch. To combat this problem, I would have had to have the network return a vector of final place predictions, one for each player. Then we could compare subsequent vectors without needing to wait to return to the same player.
 
 
 ##### 4.2. Monte-Carlos tree search
@@ -113,7 +113,7 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; One previous implementation of MCTS is by the researchers at Google Deepmind when developing AlphaGo [[2]](#7-references). Their method was based on treating the game of go like a search tree, where they would store the action value (i.e., how strong the move is), visit count, and prior probability for each move (e.g., "leaf"). This allowed the model to visit infrequently made moves with higher probability, followed by a playout in order to collect a sample action value. However, since in Catan the board is randomly chosen, the idea of designing a search tree relative to board position seemed ineffective. The sample space is patently too large. One could try to program a MCTS algorithm which takes into account how often each individual move occurs, regardless of the board position, but I decided upon something simpler. 
 
-&emsp; I constructed a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. Note that I deleted previous predictions before this move, as they were no longer relevent to the current game; it may be better to keep them and simply forget the turn in which the random move was made. I decided upon this probability as it provided an approximate 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads; it also yields a good distribution of middle to late game random moves, in practice. 
+&emsp; I constructed a more naive version of MCTS: I gave each move a 1/1000 chance of being chosen randomly, and if a move was in fact selected, then the rest of the game was played out without a random move. Note that I deleted previous predictions before this move, as they were no longer relevant to the current game; it may be better to keep them and simply forget the turn in which the random move was made. I decided upon this probability as it provided an approximate 30% chance that a setup move would be picked, i.e., one of the initial settlements or roads; it also yields a good distribution of middle to late game random moves, in practice. 
 
 &emsp; A downside to my MCTS algorithm is that it causes random spikes in error when training. This is because when the network enters an explored region of the sample space, its final prediction can be drastically wrong. Furthermore, there are less sample points to average over before computing the error, exacerbating this problem. To combat this issue, I exploited a variety methods that I explain in further detail later: decreasing the learning rate, increasing the number of samples before computing the loss, using a Huber loss, and gradient clipping.
 
@@ -124,7 +124,7 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; Likewise, I exploited gradient clipping to prevent any drastically wrong predictions from hurting the model. This scales down the gradients to be at most $ L^2 $ norm 0.1, which I chose after examining how different gradient norms affected training. Due to the MCTS algorithm, the network would occasionally experience a very large loss—e.g., 40x the usual loss—and a consequently increased gradient. Without gradient clipping, this would effectively untrain the model, causing all progress to be lost.
 
-&emsp; One seemingly contradictory thing that I experienced when training was that a higher loss often meant the network played better. This is because the largest contributor to the loss, due to the TD method and exagerateed by the MCST algorithm, is the difference between the final prediction and the actual game score. Thus, the fewer number of turns means the more this final prediction matters, causing the loss to go up when the network was playing better. I did not actually see this negatively affect training, however. I could have modified the loss function by normalizing it with respect to game length, and this is something I am considering testing in the future.
+&emsp; One seemingly contradictory thing that I experienced when training was that a higher loss often meant the network played better. This is because the largest contributor to the loss, due to the TD method and exagerated by the MCST algorithm, is the difference between the final prediction and the actual game score. Thus, the fewer number of turns means the more this final prediction matters, causing the loss to go up when the network was playing better. I did not actually see this negatively affect training, however. I could have modified the loss function by normalizing it with respect to game length, and this is something I am considering testing in the future.
 
 
 ##### 4.4. AdamW
@@ -138,26 +138,29 @@ title: Modeling Catan using self-play (2024)
 
 ##### 4.5. Batch size and learning rate
 
-&emsp; I started training with a batch size of 1, meaning the network would play one game before backpropogating. I then increased this to 2 when trianing stagnated. The idea is that including more games prevents random spikes in the error each game from overtly hurting the network, i.e., the error is being averaged. However, since each game can take 3–5 seconds, on average, I did not want to increase the batch size even more. Instead, I opted with decreasing the learning rate, which has similar effects, cf. [[10]](#7-references). In particular, I initialized the learning rate to be 5e-5 and then decreased by multiples of 2 and 5 until the model stopped improving.
+&emsp; Increasing the batch size and decreasing the learning rate, on the surface, have similar effects when training a model: each slows down learning while decreasing the volatility of the learning steps. This has been particularly shown to be true in the case of image recognition, cf. [[10]](#7-references). I used both techniques. I began training with a batch size of 1 game and a learning rate of 5e-5. When training stagnated, I decreased the learning rate to 1e-5 or doubled the batch size. In particular, I only decreased the learning rate once, while I found doubling the batch size from 1 to 2 and then 2 to 4 to cause improvements in performance each time. This could be because AdamW has an adaptive learning rate, which likely caused further decreases to not yield significant gains.
 
 
 
 ## 5. Results 
 
-&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Second, in §5.2, I describe a more general network which does not require the board to be fixed.
+&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Next, in §5.2, I describe training a more general network which does not require the board to be fixed. 
 
 
 ##### 5.1 A fixed board network
 
-&emsp; I found my network
+&emsp; 
 
 
 ##### 5.2 A general network
 
+![general turns](general_turns.png)
 
 
 
-## 6. Future plans
+## 6. Conclusions
+
+&emsp; My models demonstrate that Catan can be played at a high level using reinforcement learning. 
 
 &emsp; Mention keeping track of past moves and dice rolls
 
@@ -177,7 +180,7 @@ title: Modeling Catan using self-play (2024)
 
 6. Ilya Loshchilov and Frank Hutter, *Decoupled weight decay regularization*, International Conference on Learning Representations (2017). [arXiv:1711.05101](arXiv:1711.05101)
 
-7. Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller, *Playing atari with deep reinforcement learning* (2013). [arXiv:1312.5602](arXiv:1312.5602)
+7. Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller, *Playing Atari with deep reinforcement learning* (2013). [arXiv:1312.5602](arXiv:1312.5602)
 
 8. Arthur Samuel, *Some studies in machine learning using the game of checkers*, IBM Journal **3** (1959), no. 3.
 
