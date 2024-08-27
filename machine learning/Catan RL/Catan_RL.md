@@ -151,8 +151,14 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; 
 
+![fixed error](fixed_error.png)
+
+![fixed turns](fixed_turns.png)
+
 
 ##### 5.2 A general network
+
+![general error](general_error.png)
 
 ![general turns](general_turns.png)
 
