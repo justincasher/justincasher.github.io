@@ -197,7 +197,7 @@ title: Modeling Catan using self-play (2024)
   <li>Add human engineered input features.</li>
 </ul> 
 
-&emsp; I will be posting some games that I played against it soon!
+&emsp; I will be posting some games that I played against it at a later date.
 
 
 ## 7. References
