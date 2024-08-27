@@ -33,9 +33,9 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; My approach to Catan directly builds on the research discussed above. I trained a residual neural network to predict whether a given player will finish first, second, or third; this is done using a TD-method combined with a simplified MCTS algorithm. I tested this approach in two settings: (1) with the board tiles and numbers fixed and (2) without the board fixed. In both trials, I disabled player-to-player trading while limiting the number of players to 3; I hope to train a more general model in the future.
 
-&emsp; In case (1), I created a network which won each game in an average of 73 dice rolls. Other analyses suggest the average number of rolls to win being in the range 60–70—for instance, in [[1]](#7-references), they counted an average of 71 rolls in a four person game. Hence, 73 rolls implies my model is a little slow, as a three person game should finish more quickly than a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amateur player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate. I think this can be fixed by additional training, but, using what I had learned in developing this model, I chose to focus my resources on developing model (2).
+&emsp; In case (1), I created a network which won each game in an average of 73 dice rolls. Other analyses suggest the average number of rolls to win being in the range 60–70—for instance, in [[1]](#7-references), they counted an average of 71 rolls in a four person game. Hence, 73 rolls implies my model is a little slow, as a three person game should finish more quickly than a four person game. The slight increase in number of rolls could be attributed to disabling player-to-player trading. I also found that, by personally playing my model, it was better than an amateur player, but the network still struggled with late game strategy. It seems capable of occasionally winning, albeit not at a high rate. I think this can be fixed by employing MCST rollouts during the end game.
 
-&emsp; In case (2), the network ended up being a bit slower, winning each game in an average of 86 dice rolls. In turn, this reduced the model from playing at an intermediate level and challenging for wins to a beginner level. I think that two possible ways to improve this model are either creating natural variables for the model to interpret (e.g., how many resources each settlement possition borders), or creating a larger with additional training time. The former seems more likely, as the later would likely require much more computational power than I had available. 
+&emsp; In case (2), the network was a bit slower, winning each game in an average of 86 dice rolls. In turn, this reduced the model from playing at an intermediate level and challenging for wins to a beginner level. I think that two possible ways to improve this model are either creating natural variables for the model to interpret (e.g., how many resources each settlement possition borders), or creating a larger with additional training time. The former seems more likely, as the later would likely require much more computational power than I had available. 
 
 
 
@@ -151,13 +151,15 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; My first model was trained by fixing the board, i.e., the resources, roll numbers, and ships were all fixed. I found this network to train well and achieve an intermediate level of play.
 
-&emsp; The error of the model, as discussed in §4.3, is apparently partially inversely correlated with the number of turns taken to win the game. The later drops in error can be attributed to increasing the batch size, which in turn averages out the spikes that can occur due to my MCTS algorithm.
+&emsp; The error of the model, as discussed in §4.3, is partially inversely correlated with the number of turns taken to win the game. The later drops in error can be attributed to increasing the batch size, which in turn averages out the spikes that can occur due to my MCTS algorithm.
 
 ![fixed error](fixed_error.png)
 
-&emsp; The number of turns the model took to win each game quickly decreased until it flatlined, winning each game in around 85 turns. I then decreased the learning rate, which brought it down to winning in around 77 turns.
+&emsp; The number of turns the model took to win each game quickly decreased until it flatlined, winning each game in around 85 turns. I then decreased the learning rate, which brought it down to winning in around 77 turns. I then doubled the batch size to 2 for fine tuning.
 
 ![fixed turns](fixed_turns.png)
+
+&emsp; When I played against this model, I noticed that it excelled at early game strategy. Its initial settlement placements were strong and took me by surprise. During the middle game, I was on my toes—the model kept pace with me and I struggled to outscore it. However, during the end game the model began to seriously struggle. When I built settlements in positions where it wanted to settle, it would build a road to that settlement, thne realize it could settle there. The network likewise had a difficult time capitalizing on new resources: while I was able to take advantage of all of the resources I was receiving, quickly building settlements and cities, it seemingly stagnated. The final scores were 10, 8, and 7. 
 
 
 ##### 5.2 A general network
@@ -172,6 +174,10 @@ title: Modeling Catan using self-play (2024)
 
 ![general turns](general_turns.png)
 
+&emsp; It becomes apparent why this model struggles so much when compared to the fixed board model. The fixed board model already had a difficult time playing against me when I settled in places it had not seem before. Now, the inherit level of randomness the model was seeing likely made any major pattern detection difficult. I was actually hoping for the opposite effect: by playing many contrasting board positions, the model would have the chance to better understand and adapt to my own settlement strategies. Perhaps this is just a case where further training is necessary.
+
+&emsp; This also demonstrates one area where reinforcement learning might struggle. While it is extremely good at fixed board positions, as it can keep treat the game similar to a search tree, randomizing the board very much complicates this search. The question then becomes "How can we make this shuffled board not appear...shuffled?" One idea that I had was to add additional input features, such as the total number of resources boardering each settlement location. This could eliminate the possibility for the sublime moves that my fixed board model was making, or it could simply guide the model to making better decisions.
+
 
 
 ## 6. Conclusions
@@ -184,10 +190,15 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; Some future improvements are the following: 
 
-- Providing the network with past moves and dice rolls. This is often important when playing strategic games, allowing the bot to, for instance, understand who has what resources when robbing. I omitted this to try to simplify the network, and I believed that simply listing the number of cards each player has as public information would suffice for this study
+- Providing the network with past moves and dice rolls. This would allow the network, for instance, to understand who has what resources when robbing.
 
-- 
+- Increasing the depth or width of the neural network. It could be that the model struggles to learn general positions due to a lack of space to store the necessary data.
 
+- Enabling AMSGrad when training.
+
+- Add human engineered input features.
+
+&emsp; I will be posting some games that I played against it soon!
 
 
 ## 7. References
