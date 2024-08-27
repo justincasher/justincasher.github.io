@@ -1,6 +1,6 @@
 ### About 
 
-Hi! I am Justin Asher, and this is the code behind my personal website. I am using GitHub pages since it is both dynamic and can render LaTeX (using a combination of KaTeX and MathJax). I am hoping this allows me to organize things more easily.
+This is the code behind my personal website. I am using GitHub pages since it is both dynamic and can render LaTeX (using a combination of KaTeX and MathJax). I am hoping this allows me to organize things more easily.
 
 ### Jekyll framework
 
