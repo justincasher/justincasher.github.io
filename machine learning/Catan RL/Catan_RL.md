@@ -7,7 +7,7 @@ title: Modeling Catan using self-play (2024)
 <br>
 **Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
 
-[GitHub repository →](https://github.com/justincasher/Catan)
+[GitHub repository](https://github.com/justincasher/Catan){:target="_blank"}
 
 ## Table of Contents
 
