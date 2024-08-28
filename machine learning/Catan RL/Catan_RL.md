@@ -5,7 +5,7 @@ feedformat: card
 title: Modeling Catan using self-play (2024)
 ---
 <br>
-**Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlos tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
+**Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
 
 
 
@@ -85,7 +85,7 @@ title: Modeling Catan using self-play (2024)
 
 ## 4. Training procedure
 
-&emsp; In this section, I describe the ideas that were utilized in training my bot. First, in §4.1, I explain why I utilized temporal-difference methods and how they are implemented in my code. Subsequently, in §4.2, I detail my simplified Monte-Carlos tree search algorithm. Next, in §4.3, I explain my choice of criterion, a smooth L1 loss, and why gradient clipping was necessary. In §4.4, I justify using the AdamW optimizer. Finally, in §4.5, I discuss how adjusting the batch size and learning rate affected training.
+&emsp; In this section, I describe the ideas that were utilized in training my bot. First, in §4.1, I explain why I utilized temporal-difference methods and how they are implemented in my code. Subsequently, in §4.2, I detail my simplified Monte-Carlo tree search algorithm. Next, in §4.3, I explain my choice of criterion, a smooth L1 loss, and why gradient clipping was necessary. In §4.4, I justify using the AdamW optimizer. Finally, in §4.5, I discuss how adjusting the batch size and learning rate affected training.
 
 
 <!---
@@ -107,9 +107,9 @@ title: Modeling Catan using self-play (2024)
 &emsp; Another possible algorithm would have to update the weights of the network each turn; this seemed impractical for two reasons. The first is that it increases training time for what appeared to be little gain: without knowing the final outcome of the game, the network cannot validate its predictions. The second reason is that my network currently compares subsequent predictions made by each player; this could not be done each turn for each player, as it would interfere with computing the loss of other predictions. In other words, the network weights would change between predictions, which will throw an error in PyTorch. To combat this problem, I would have had to have the network return a vector of final place predictions, one for each player. Then we could compare subsequent vectors without needing to wait to return to the same player.
 
 
-##### 4.2. Monte-Carlos tree search
+##### 4.2. Monte-Carlo tree search
 
-&emsp; Monte-Carlos tree search (MCTS) methods are based on the idea of infrequently having a model choose random moves, testing the accuracy of the model's predictions for otherwise ignored moves. In other words, according to some distribution, the model will randomly choose a move, then play out the rest of the game as normal. This move could be chosen on the first turn or the last. Ideally, this prevents the model from getting stuck in a non-optimal local minimum. 
+&emsp; Monte-Carlo tree search (MCTS) methods are based on the idea of infrequently having a model choose random moves, testing the accuracy of the model's predictions for otherwise ignored moves. In other words, according to some distribution, the model will randomly choose a move, then play out the rest of the game as normal. This move could be chosen on the first turn or the last. Ideally, this prevents the model from getting stuck in a non-optimal local minimum. 
 
 &emsp; One previous implementation of MCTS is by the researchers at Google Deepmind when developing AlphaGo [[2]](#7-references). Their method was based on treating the game of go like a search tree, where they would store the action value (i.e., how strong the move is), visit count, and prior probability for each move (e.g., "leaf"). This allowed the model to visit infrequently made moves with higher probability, followed by a playout in order to collect a sample action value. However, since in Catan the board is randomly chosen, the idea of designing a search tree relative to board position seemed ineffective. The sample space is patently too large. One could try to program a MCTS algorithm which takes into account how often each individual move occurs, regardless of the board position, but I decided upon something simpler. 
 

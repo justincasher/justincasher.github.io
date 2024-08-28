@@ -9,7 +9,7 @@ This page contains machine learning projects that I have worked on.
 
 ### Modeling Catan using self-play (2024)
 
-**Abstract:** I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlos tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
+**Abstract:** I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
 
 <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
 
