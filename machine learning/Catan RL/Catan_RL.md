@@ -7,7 +7,7 @@ title: Modeling Catan using self-play (2024)
 <br>
 **Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
 
-
+[GitHub repository →](https://github.com/justincasher/Catan)
 
 ## Table of Contents
 
@@ -151,7 +151,7 @@ title: Modeling Catan using self-play (2024)
 
 &emsp; My first model was trained by fixing the board, i.e., the resources, roll numbers, and ships were all fixed. I found this network to train well and achieve an intermediate level of play.
 
-&emsp; The error of the model, as discussed in §4.3, is partially inversely correlated with the number of turns taken to win the game. The later drops in error can be attributed to increasing the batch size, which in turn averages out the spikes that can occur due to my MCTS algorithm.
+&emsp; The error of the model, as discussed in §4.3, is partially inversely correlated with the number of turns taken to win the game. This was seemingly one of the major drawbacks of using TDs: during the late stages of trianing, the model would struggle to optimize error, as attempts to do so could end up increasing it. The later drops in error can be attributed to increasing the batch size, which in turn averages out the spikes that can occur due to my MCTS algorithm.
 
 ![fixed error](fixed_error.png)
 
@@ -193,7 +193,8 @@ title: Modeling Catan using self-play (2024)
  <ul>
   <li>Provide the network with past moves and dice rolls. This would allow the network, for instance, to understand who has what resources when robbing.</li>
   <li>Increase the depth or width of the neural network. It could be that the model struggles to learn general positions due to a lack of space to store the necessary data.</li>
-  <li>Enabling AMSGrad when training.</li>
+  <li>Fix the problem from TDs that error can become inversely correlated to number of turns to win.</li>
+  <li>Enable AMSGrad when training.</li>
   <li>Add human engineered input features.</li>
 </ul> 
 
