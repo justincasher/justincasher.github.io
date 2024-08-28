@@ -155,7 +155,7 @@ title: Modeling Catan using self-play (2024)
 
 ![fixed error](fixed_error.png)
 
-&emsp; The number of turns the model took to win each game quickly decreased until it flatlined, winning each game in around 85 turns. I then decreased the learning rate, which brought it down to winning in around 77 turns. I then doubled the batch size to 2 for fine tuning.
+&emsp; The number of turns the model took to win each game quickly decreased until it flatlined, winning each game in around 85 turns. I then decreased the learning rate, which brought it down to winning in around 77 turns. I tried doubling the batch size for fine tuning; however, unlike in the general case, this actually hurt training, causing a slight increase in the number of turns needed to win.
 
 ![fixed turns](fixed_turns.png)
 
@@ -182,18 +182,16 @@ title: Modeling Catan using self-play (2024)
 
 ## 6. Conclusions
 
-&emsp; My models act as a proof of concept, demonstrating that Catan can be played at a high level using reinforcement learning. One should compare my training procedure to that of DeepMind's aforementioned Atari, chess, and go models. Their models are often trained on large GPU (or TPU) clusters, which was not feasible here. For instance, their chess bot, AlphaZero, was trained in 2017 using ~5,000 TPUs in parallel. As a rough estimate, suppose they trained for 9 hours—the amount of time it took them to beat Stockfish 8—then divide by a factor of 8 to take into account advances in GPU efficiency. This gives us 5625 hours of compute or ~234 days, compared to just training for a week like I did. Thus, I am led to believe that if provided with ample compute, we could achieve similar results here.
+&emsp; My models act as a proof of concept, demonstrating that Catan can be played at a high level using reinforcement learning. One should compare my training procedure to that of DeepMind's aforementioned Atari, chess, and go models. Their models are often trained on large GPU (or TPU) clusters, which was not feasible here. For instance, their chess bot, AlphaZero, was trained in 2017 using ~5,000 TPUs in parallel. As a rough estimate, suppose they trained for 9 hours—the amount of time it took them to beat Stockfish 8—then divide by a factor of 8 to take into account advances in GPU efficiency. This gives us 5625 hours of compute or ~234 days, compared to just training for a week like I did. It also aids significantly in performing experiments, thus resolving certain issues I had with training my model. Thus, I am led to believe that if provided with ample compute, we could achieve similar results here. 
 
 &emsp; Likewise, one significant problem I noticed is how slow each MCTS playout was, especially each forward pass through the network. For example, I wanted to implement a version of my model which could train itself on (or at least study) the current board position while playing a human. However, this was seemingly impossible without (a) further computational power or (b) a faster implementation. I pursued the later: I programmed a version of my bot in C++ using LibTorch. This cut the MCTS playout time almost in half, but this is simply not enough. A interesting approach here could be using a smaller model which is quickly on the CPU trained while playing.
-
-&emsp; One feature that was missing from my model was the ability to keep track of past moves. This is often important when playing strategic games, allowing the bot to, for instance, understand who has what resources when robbing. I omitted this to try to simplify the network, and I believed that simply listing the number of cards each player has as public information would suffice for this study.
 
 &emsp; Some future improvements are the following: 
 
  <ul>
   <li>Provide the network with past moves and dice rolls. This would allow the network, for instance, to understand who has what resources when robbing.</li>
   <li>Increase the depth or width of the neural network. It could be that the model struggles to learn general positions due to a lack of space to store the necessary data.</li>
-  <li>Fix the problem from TDs that error can become inversely correlated to number of turns to win.</li>
+  <li>Fix the problem from TDs that error can become inversely correlated to number of turns to win. Normalizing by the number of turns did not seem to help, so some other fix will be needed here.</li>
   <li>Enable AMSGrad when training.</li>
   <li>Add human engineered input features.</li>
 </ul> 
