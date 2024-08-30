@@ -37,7 +37,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; In case (2), the network was a bit slower, winning each game in an average of 86 dice rolls. In turn, this reduced the model from playing at an intermediate level and challenging for wins to a beginner level. Two possible ways to improve this model are either creating human engineered features for the model to interpret (e.g., how many resources each settlement position borders), or creating a larger model with additional training time. The former seems simpler because the latter would likely require much more computational power than I had available. 
 
-&emsp; In future work, I plan on implementing an attention mechanism in my network architecture, and I will have it train on a smaller, simpler board configuration. This will allow the network to consider past moves played and resources drawn, in turn giving its predictions greater accuracy. Hopefully this version of Catan will finally be strong enough to consistently challenge a human player for wins.
+&emsp; In future work, I plan on implementing attention mechanisms in my network architecture, and I will have it train on a smaller, simpler board configuration. This will allow the network to consider past moves played and resources drawn, in turn giving its predictions greater accuracy. Hopefully this version of Catan will finally be strong enough to consistently challenge a human player for wins.
 
 
 
@@ -192,7 +192,7 @@ title: Modeling Catan through self-play (2024)
   <li>Add human engineered input features.</li>
 </ul> 
 
-In particular, I plan on implementing an attention mechanism on a simplified board configuration with the above modifications. Hopefully this model will be able to achieve super-human level of play.
+In particular, I plan on implementing attention mechanisms on a simplified board configuration with the above modifications. Hopefully this model will be able to achieve super-human level of play.
 
 &emsp; I will be posting some games that were played against my networls at a later date.
 
