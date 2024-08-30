@@ -193,7 +193,7 @@ title: Modeling Catan through self-play (2024)
 
  <ul>
   <li>Provide the network with past moves and dice rolls.</li>
-  <li>Fix the problem from TDs that error can become inversely correlated to the number of turns to win. Normalizing by the number of turns did not seem to help—it led to volatiliy—so some other fix will be needed here.</li>
+  <li>Fix the problem from TDs that error can become inversely correlated to the number of turns to win.</li>
   <li>Enable AMSGrad when training.</li>
   <li>Add human engineered input features.</li>
 </ul> 
