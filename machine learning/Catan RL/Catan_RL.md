@@ -54,7 +54,7 @@ title: Modeling Catan through self-play (2024)
 
 <li><b>game.py</b> holds the game class. It handles almost all gameplay. In particular, the game class contains methods which allow our network to interact with the board by generating a tensor containing the board and a player's possible moves, then feeding this tensor to our model in order to choose a move.</li>
 
-<li><b>network.py</b> contains the CatanNetwork and ResidualBlock classes. The CatanNetwork is our residual neural network, and it is built out of ResidualBlock objects, cf. §3.</li>
+<li><b>network.py</b> contains the CatanNetwork and ResidualBlock classes. The CatanNetwork is a residual neural network built out of ResidualBlock objects.</li>
 
 <li><b>training.py</b> is composed of the training procedure. In it are the network and the optimizer, and it is responsible for updating the network's parameters.</li>
 
@@ -66,7 +66,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; I programmed the board based on the notion of sets containing different vertices. Each corner of a tile is considered a vertex (or settlement position), each road and trading port is defined by two vertices, and each tile is defined by six vertices. This simplified calculations for where a player could build a road or settlement, the length of their longest road, and so on.
 
-&emsp; Each turn, the game generates an input tensor for the network. This consists of the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and a single 1 in the moves portion indicating this move. Inputting this tensor to the network is philosophically equivalent to asking it "What is the predicted finishing position given this board and this move?". If a MCTS move was not chosen that turn, cf. §4, the program then chose the move with the best given move position.
+&emsp; Each turn, the game generates an input tensor for the network. This consists of the known board information for the current player along with their possible moves. For each move, I then created a temporary tensor containing the board information and a single 1 in the moves portion indicating this move. Inputting this tensor to the network is philosophically equivalent to asking it "What is the predicted finishing position given this board and this move?". If a MCTS move was not chosen that turn, cf. [§4](#4-training-procedure), the program then chose the move with the best given move position.
 
 &emsp; One thing that helped with training was rotating the input tensor with respect to each player's information, e.g., each player would see their statistics listed first, then the player taking the following turn, and so on. I found it difficult to train the network effectively without this, even if the network was given the current player number.
 
@@ -80,7 +80,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; I tested a variety of architectures before settling on the CatanNetwork. I started with some simple models: single layer networks with 50, 100, or 1100 neurons. I found these models to be too unstable and to suffer from catastrophic forgetting. I also tried other naive configurations, such as 5 fully connected layers with 1000 neurons each. These all seemed to lack the quickness to converge and ability not to forget that the CatanNetwork possessed.
 
-&emsp; One important hyperparameter was the number of neurons in the hidden layers. I chose 500 to create a sufficiently large network while also prioritizing training time. I discuss in §4.4 that, by exploiting weight decay, having too large of a network is more of a concern than too small; I hope the CatanNetwork is large enough. Thus, with the chosen number of neurons, the network was able to play a game of Catan approximately every 4 seconds, which translates to 22,500 games per day. 
+&emsp; One important hyperparameter was the number of neurons in the hidden layers. I chose 500 to create a sufficiently large network while also prioritizing training time. I discuss in [§4.4](#44-adamw) that, by exploiting weight decay, having too large of a network is more of a concern than too small; I hope the CatanNetwork is large enough. Thus, with the chosen number of neurons, the network was able to play a game of Catan approximately every 4 seconds, which translates to 22,500 games per day. 
 
 &emsp; I am interested in experimenting with deeper architectures or more hidden neurons in the future. One comparison I made when training my model was to image recognition architectures. If you consider the current board information as an image, where instead of classifying images we are classifying moves, then it is natural to compare the number of parameters. Strong image recognition architectures for the CIFAR-100 data have anywhere from 2,500,000 to 25,000,000 parameters, cf. [[2]](#7-references). Hence, the size of the CatanNetwork seemed reasonable.
 
@@ -88,7 +88,7 @@ title: Modeling Catan through self-play (2024)
 
 ## 4. Training procedure
 
-&emsp; In this section, I describe the ideas that were utilized in training my bot. First, in §4.1, I explain why I utilized temporal-difference methods and how they are implemented in my code. Subsequently, in §4.2, I detail my simplified Monte-Carlo tree search algorithm. Next, in §4.3, I explain my choice of criterion, a smooth L1 loss, and why gradient clipping was necessary. In §4.4, I justify using the AdamW optimizer. Finally, in §4.5, I discuss how adjusting the batch size and learning rate affected training.
+&emsp; In this section, I describe the ideas that were utilized in training my bot. First, in [§4.1](#41-temporal-differences), I explain why I utilized temporal-difference methods and how they are implemented in my code. Subsequently, in [§4.2](#42-monte-carlo-tree-search), I detail my simplified Monte-Carlo tree search algorithm. Next, in [§4.3](#43-criterion-and-gradient-clipping), I explain my choice of criterion, a smooth L1 loss, and why gradient clipping was necessary. In [§4.4](#44-adamw), I justify using the AdamW optimizer. Finally, in [§4.5](#45-batch-size-and-learning-rate), I discuss how adjusting the batch size and learning rate affected training.
 
 
 <!---
@@ -105,7 +105,7 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; TD methods have shown to be successful in a variety of game playing tasks. One of the first implementations was Samuel's checkers program, where he created a program which could play checkers better than himself [[8]](#7-references). TD methods were abstracted by Sutton in [[11]](#7-references), where he defined his TD-lambda; furthermore, he showed that, with certain natural constraints, TD-lambda is capable of modeling arbitrary training sets. Likewise, Tesauro named his program TD-gammon in reference to the importance of TD methods when training it [[12]](#7-references). 
 
-&emsp; I exploited TDs as follows. Each turn, the program records the prediction the current player has made for their chosen move; this yields one prediction vector for every player. Once the game has concluded, for each player, I construct a labels vector by copying and then shifting the predictions vector one coordinate over—forgetting the first prediction made—and inserting the final game score in the final position. Effectively, this compares subsequent predictions to each other, and the final prediction to the final game score. Finally, I compute the loss, cf. §4.3, and backpropagate it.
+&emsp; I exploited TDs as follows. Each turn, the program records the prediction the current player has made for their chosen move; this yields one prediction vector for every player. Once the game has concluded, for each player, I construct a labels vector by copying and then shifting the predictions vector one coordinate over—forgetting the first prediction made—and inserting the final game score in the final position. Effectively, this compares subsequent predictions to each other, and the final prediction to the final game score. Finally, I compute the loss, cf. [§4.3](#43-criterion-and-gradient-clipping), and backpropagate it.
 
 &emsp; Another possible algorithm would be updating the weights of the network each turn; this seemed impractical for two reasons. The first is that it would increase training time for what appeared to be little gain: without knowing the outcome of the game, the network cannot validate its predictions. The second reason is that my network currently compares subsequent predictions made by each player; this could not be done each turn for each player, as it would interfere with computing the loss of other predictions. In other words, the network weights would change between predictions, which will throw an error in PyTorch. To combat this problem, I would have had to have the network return a vector of final place predictions, one for each player. Then we could compare subsequent vectors without needing to wait to return to the same player.
 
@@ -147,14 +147,14 @@ title: Modeling Catan through self-play (2024)
 
 ## 5. Results 
 
-&emsp; This section is split into two parts. First, in §5.1, I detail training a network which only models a fixed board position. Next, in §5.2, I describe training a more general network which does not require the board to be fixed. Note that the average number of turns to win reported during training are slightly higher than my estimation, as MCTS is enabled, adding randomness to the network's gameplay. All training was done on an Intel i9-13900K processor (24 cores), because training on a GPU would have been slower due to the lack of parallelism in my code.
+&emsp; This section is split into two parts. First, in [§5.1](#51-a-fixed-board-network), I detail training a network which only models a fixed board position. Next, in [§5.2](#52-a-general-network), I describe training a more general network which does not require the board to be fixed. Note that the average number of turns to win reported during training are slightly higher than my estimation, as MCTS is enabled, adding randomness to the network's gameplay. All training was done on an Intel i9-13900K processor (24 cores), because training on a GPU would have been slower due to the lack of parallelism in my code.
 
 
 ##### 5.1 A fixed board network
 
 &emsp; My first model was trained by fixing the board, i.e., the resources, roll numbers, and ships were all fixed. I found this network to train well and achieve an intermediate level of play.
 
-&emsp; As discussed in §4.3, the model's error is partially inversely correlated with the number of turns taken to win the game. This was seemingly one of the major drawbacks of using TDs: during the late stages of training, the model would struggle to optimize error, as attempts to do so could end up increasing it. The later drops in error can be attributed to increasing the batch size, which in turn averages out the spikes that can occur due to my MCTS algorithm.
+&emsp; As discussed in [§4.3](#43-criterion-and-gradient-clipping), the model's error is partially inversely correlated with the number of turns taken to win the game. This was seemingly one of the major drawbacks of using TDs: during the late stages of training, the model would struggle to optimize error, as attempts to do so could end up increasing it. The later drops in error can be attributed to increasing the batch size, which in turn averages out the spikes that can occur due to my MCTS algorithm.
 
 ![fixed error](fixed_error.png)
 
