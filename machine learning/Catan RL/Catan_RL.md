@@ -194,7 +194,7 @@ title: Modeling Catan through self-play (2024)
 
 In particular, I plan on implementing an attention mechanism on a simplified board configuration with the above modifications. Hopefully this model will be able to achieve super-human level of play.
 
-&emsp; I will be posting some games that I played against it at a later date.
+&emsp; I will be posting some games that were played against my networls at a later date.
 
 
 ## 7. References
