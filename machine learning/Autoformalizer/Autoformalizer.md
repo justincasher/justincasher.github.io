@@ -26,7 +26,7 @@ title: The need for an autoformalizer (2024)
 
 &emsp; However, there are apparent limitations to our current systems, and it is unclear whether these limitations can be overcome without considerable theoretical advancements. When tasked with solving mathematical problems, even the most advanced reasoning models often struggle to play with definitions in the way that a mathematician would. While they understand what should come next, they do not know why, and while chain-of-thought prompting can help mitigate this, we have yet to see a model which can effectively tackle advanced mathematical problems.
 
-&emsp; There have been a variety of benchmarks developed to test AI; the figure below displays the results of some of the best models on a few common tests. One recent benchmark, FrontierMath [[1]](#4-references), composed of considerably more advanced problems, resulted in the best LLMs only achieving at best around 2\% accuracy; although, it should be noted each LLM was only given a single attempt at each problem. Overall, it appears current LLMs are statistically incapable of efficiently solving technical mathematical problems.
+&emsp; There have been a variety of benchmarks developed to test AI; the figure below displays the results of some of the best models on a few common tests. One recent benchmark, FrontierMath [[1]](#4-references), composed of considerably more advanced problems, resulted in the best LLMs only achieving at best around 2% accuracy; although, it should be noted each LLM was only given a single attempt at each problem. Overall, it appears current LLMs are statistically incapable of efficiently solving technical mathematical problems.
 
 ![LLM mathematics benchmarks](images/LLM_math_results.png)
 
