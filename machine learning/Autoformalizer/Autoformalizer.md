@@ -39,29 +39,29 @@ title: The need for an autoformalizer (2024)
 &emsp; Before we dive into applications, let us briefly discuss what an autoformalizer is and what it could do. In the most basic sense, it is a math checker for any theorem, equation, etc. An autoformalizer would never make mistakes while being able to detect any written error. Albeit, this simplistic perspective disregards the interpretability that is innate to most human writing (at least outside of extremely precise mathematics), and hence would be theoretically impossible to create. Hence, we are interested in a machine which is capable flagging any *possible* mathematical mistake, whether it be due to a lack of clarity in the writing or a genuine error.
 
 
-##### Example 1: Mars climate orbiter mishap
+###### Example 1: Mars climate orbiter mishap
 
 &emsp; In 1999, a \$327.6 million spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds). This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
 
 
-##### Example 2: Knight Capital trading loss
+###### Example 2: Knight Capital trading loss
 
 &emsp; In 2012, the high-frequency trading firm Knight Capital lost \$440 million because of a software error. After updating some but mistakenly not all of their servers, Knight Capital's trading code had a logical error in it which resulted in buying stocks high and selling them low. An autoformalizer would have been able to gaurantee that the computer code matched the intended trading algorithm, flagging this error before trading began.
 
 &emsp; More broadly speaking, financial institutions and corporations must adhere to strict regulatory requirements. These often involve intricate mathematical models for risk assessment, tax calculations, or financial projections. Errors in these computations can result in substantial fines, reputational damage, or even financial collapse. An autoformalizer could flag inconsistencies in a given set of models, ensuring that calculations are both accurate and compliant with regulations.
 
 
-##### Example 3: Civil engineering
+###### Example 3: Civil engineering
 
 &emsp; The failure of infrastructure projects, such as bridges or dams, can often be traced back to calculation errors during the design phase. An autoformalizer could rigorously check all engineering calculations and ensure consistency in models, helping to prevent such disasters. 
 
 
-##### Example 4: Automated paper review
+###### Example 4: Automated paper review
 
 &emsp; Academic, and, in particular, mathematical, manuscripts often take months to properly review. However, an autoformalizer would be able to instantly check that all of the underlying mathematical theory is correct. Then, human reviewers could focus on the impact of the ideas, instead of laboring over small details. This will become increasingly important as AI helps write more papers, or even entire ones by itself, creating a need for a quick way to review this growing volume of information. Furthermore, I believe that this could help decentralize academia, allowing a more democratic process towards evaluating papers, as any mathematical paper could be put online with the reader knowing everything in it is logically sound.
 
 
-##### Example 5: Mathematical superintelligence
+###### Example 5: Mathematical superintelligence
 
 &emsp; As discussed in the introduction, current LLMs are poor at mathematical reasoning. Even if they do improve, I still believe a specialized program would be more efficient and be able to better index information. It seems apparent to me that the best way to train such a program would be on formalized mathematics, but we have only formalized an extremely small portion of the literature. Hence, an autoformalizer could be an important step towards technological acceleration via superintelligence: Many research areas have simply not been explored properly due to the limited capacity of human intelligence.
 
