@@ -53,7 +53,7 @@ title: The need for an autoformalizer (2024)
 
 ###### Example 3: Civil engineering
 
-&emsp; The failure of infrastructure projects, such as bridges or dams, can often be traced back to calculation errors during the design phase. An autoformalizer could rigorously check all engineering calculations and ensure consistency in models, helping to prevent such disasters. 
+&emsp; The failure of infrastructure projects, such as bridges or dams, can often be traced back to calculation errors during the design phase. For example, in 2018, the Morandi Bridge in Genoa, Italy, collapsed due to an underestimation of the stress on its stay cables, a design flaw that led to catastrophic failure killing 43 people. An autoformalizer could rigorously check all engineering calculations and ensure consistency in models, helping to prevent such disasters.
 
 
 ###### Example 4: Automated paper review
