@@ -41,12 +41,12 @@ Before we dive into applications, let us briefly discuss what an autoformalizer 
 
 #### Example 1: Mars climate orbiter mishap
 
-In 1999, a \$327.6 million (\$630 million today) spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds). This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
+In 1999, a \$327.6 million (630 million today) spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds). This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
 
 
 #### Example 2: Knight Capital trading loss
 
-In 2012, the high-frequency trading firm Knight Capital lost \$440 million (\$612 million today) because of a software error. After updating some but mistakenly not all of their servers, Knight Capital's trading code had a logical error in it which resulted in buying stocks high and selling them low. An autoformalizer would have been able to gaurantee that the computer code matched the intended trading algorithm, flagging this error before trading began.
+In 2012, the high-frequency trading firm Knight Capital lost \$440 million (612 million today) because of a software error. After updating some but mistakenly not all of their servers, Knight Capital's trading code had a logical error in it which resulted in buying stocks high and selling them low. An autoformalizer would have been able to gaurantee that the computer code matched the intended trading algorithm, flagging this error before trading began.
 
 More broadly speaking, financial institutions and corporations must adhere to strict regulatory requirements. These often involve intricate mathematical models for risk assessment, tax calculations, or financial projections. Errors in these computations can result in substantial fines, reputational damage, or even financial collapse. An autoformalizer could flag inconsistencies in a given set of models, ensuring that calculations are both accurate and compliant with regulations.
 
