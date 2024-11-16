@@ -7,7 +7,7 @@ title: The Need for an Autoformalizer (2024)
 <br>
 **Abstract.** &nbsp; I argue that the that the creation of an autoformalizer—a machine which can automatically formalize mathematics—would have monumental benefits both in academic research and in industrial applications. I then sketch how one might be created.
 
-[GitHub repository](https://github.com/justincasher/Autoformalizer){:target="_blank"}
+[GitHub repository](https://github.com/justincasher/autoformalizer){:target="_blank"}
 
 ## Table of Contents
 
