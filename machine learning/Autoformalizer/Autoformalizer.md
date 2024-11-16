@@ -41,7 +41,7 @@ Before we dive into applications, let us briefly discuss what an autoformalizer 
 
 #### Example 1: Mars climate orbiter mishap
 
-In 1999, a $\$$327.6 million (~&dollar;630 million today) spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds). This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
+In 1999, a \$327.6 million (~&dollar;630 million today) spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds). This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
 
 
 #### Example 2: Knight Capital trading loss
