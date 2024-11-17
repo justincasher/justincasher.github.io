@@ -5,7 +5,7 @@ feedformat: card
 title: The need for an autoformalizer (2024)
 ---
 <br>
-**Abstract.** &nbsp; I argue that the that the creation of an autoformalizer—a machine which can automatically formalize mathematics—would have monumental benefits both in academic research and in industrial applications. I then discuss how one could be created.
+**Abstract.** &nbsp; I argue that the that the creation of an autoformalizer—a machine which can verify mathematics—would have monumental benefits both in academic research and in industrial applications. I then discuss how one could be created.
 
 [GitHub repository](https://github.com/justincasher/Autoformalizer){:target="_blank"}
 
@@ -74,9 +74,10 @@ title: The need for an autoformalizer (2024)
 &emsp; Finally, I shall briefly mention the story of Alexander Grothendieck and Jean Dieudonné. When writing the Éléments de Géométrie Algébrique (EGA), a foundatinal mathematical text in algebraic geometry, Grothendieck relied upon a distinguished mathematician and former member of the Bourbaki group, Dieudonné, to refine and organize his writing. Grothendieck's radical and creative nature was complimented by the mature writing of Dieudonné, allowing him to efficiently place his constructions into a mathematically rigorous, formalized text. I personally benefitted from this, as I found reading the EGA to be much easier than some of Grothendieck's earlier writing, such as his Tôhoku paper. Perhaps at some point we will all be allowed to be more imaginative like Grothendieck, relying upon AI to test our ideas in a rigorous setting.
 
 
+
 ## 3. Creating an autoformalizer
 
-
+&emsp; An autoformalizer, practically speaking, cannot be created, and therefore would have to create an approximation to be the best of our abilities. For simplicity, let us limit ourselves to the case of a machine that can translate from English to Lean. 
 
 
 
