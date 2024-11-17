@@ -5,7 +5,7 @@ feedformat: card
 title: The need for an autoformalizer (2024)
 ---
 <br>
-**Abstract.** &nbsp; I argue that the that the creation of an autoformalizer—a machine which can automatically formalize mathematics—would have monumental benefits both in academic research and in industrial applications. I then sketch how one might be created.
+**Abstract.** &nbsp; I argue that the that the creation of an autoformalizer—a machine which can automatically formalize mathematics—would have monumental benefits both in academic research and in industrial applications. I then discuss how one could be created.
 
 [GitHub repository](https://github.com/justincasher/Autoformalizer){:target="_blank"}
 
@@ -36,17 +36,19 @@ title: The need for an autoformalizer (2024)
 
 ## 2. Societal impact
 
-&emsp; Before we dive into applications, let us briefly discuss what an autoformalizer is and what it could do. In the most basic sense, it is a math checker for any theorem, equation, etc. An autoformalizer would never make mistakes while being able to detect any written error. Albeit, this simplistic perspective disregards the interpretability that is innate to most human writing (at least outside of extremely precise mathematics), and hence would be theoretically impossible to create. Hence, we are interested in a machine which is capable flagging any *possible* mathematical mistake, whether it be due to a lack of clarity in the writing or a genuine error.
+&emsp; Before we dive into applications, let us briefly discuss what an autoformalizer is and what it could do. In the most basic sense, it is a math checker for any theorem, equation, etc. An autoformalizer would never make mistakes while being able to detect any written error. Albeit, this simplistic perspective disregards the interpretability that is innate to most human writing (at least outside of extremely precise mathematics), and hence would be theoretically impossible to create. Thus, we are interested in a machine which is capable flagging any *possible* mathematical mistake, whether it be due to a lack of clarity in the writing or a genuine error.
+
+&emsp; In what follows, we give a series examples of how this technology could be applied to real world scenarious for the betterment of society. We begin wtih simple, concrete examples, and then we discuss more open-ended possibilities.
 
 
 ###### Example 1: Mars climate orbiter mishap
 
-&emsp; In 1999, a \$327.6 million spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds). This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
+&emsp; In 1999, a \$327.6 million spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds) when inputting thruster maneuvers. This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
 
 
 ###### Example 2: Knight Capital trading loss
 
-&emsp; In 2012, the high-frequency trading firm Knight Capital lost \$440 million because of a software error. After updating some but mistakenly not all of their servers, Knight Capital's trading code had a logical error in it which resulted in buying stocks high and selling them low. An autoformalizer would have been able to gaurantee that the computer code matched the intended trading algorithm, flagging this error before trading began.
+&emsp; In 2012, the high-frequency trading firm Knight Capital lost \$440 million because of a software error. After updating some but mistakenly not all of their servers, Knight Capital's trading code had a logical error in it which resulted in repeatedly buying stocks high and then selling them low. An autoformalizer would have been able to gaurantee that the computer code matched the intended trading algorithm, flagging this error before trading began.
 
 &emsp; More broadly speaking, financial institutions and corporations must adhere to strict regulatory requirements. These often involve intricate mathematical models for risk assessment, tax calculations, or financial projections. Errors in these computations can result in substantial fines, reputational damage, or even financial collapse. An autoformalizer could flag inconsistencies in a given set of models, ensuring that calculations are both accurate and compliant with regulations.
 
@@ -58,13 +60,18 @@ title: The need for an autoformalizer (2024)
 
 ###### Example 4: Automated paper review
 
-&emsp; Academic, and, in particular, mathematical, manuscripts often take months to properly review. However, an autoformalizer would be able to instantly check that all of the underlying mathematical theory is correct. Then, human reviewers could focus on the impact of the ideas, instead of laboring over small details. This will become increasingly important as AI helps write more papers, or even entire ones by itself, creating a need for a quick way to review this growing volume of information. Furthermore, I believe that this could help decentralize academia, allowing a more democratic process towards evaluating papers, as any mathematical paper could be put online with the reader knowing everything in it is logically sound.
+&emsp; Academic, and, in particular, mathematical, manuscripts frequently take months to properly review. However, an autoformalizer would be able to instantly check that all of the underlying mathematical theory is correct. Then, human reviewers could focus on the impact of the ideas, instead of laboring over small details. This will become increasingly important as AI helps write more papers, or even entire ones by itself, creating a need for a quick way to review this growing volume of information. Furthermore, I believe that this could help decentralize academia, creating a democratic process for publishing papers, where any mathematical paper could be put online with the reader knowing everything in it is logically sound.
 
 
 ###### Example 5: Mathematical superintelligence
 
-&emsp; As discussed in the introduction, current LLMs are poor at mathematical reasoning. Even if they do improve, I still believe a specialized program would be more efficient and be able to better index information. It seems apparent to me that the best way to train such a program would be on formalized mathematics, but we have only formalized an extremely small portion of the literature. Hence, an autoformalizer could be an important step towards technological acceleration via superintelligence: Many research areas have simply not been explored properly due to the limited capacity of human intelligence.
+&emsp; An autoformalizer could generate an extensive repository of mathematics in Lean, providing a foundation to train mathematically super-intelligent AI. In particular, a specialized AI trained in this manner would likely outperform a general-purpose system in mathematical reasoning. To illustrate this, let us consider the analogy of chess: Would artificial general intelligence really outperform a dedicated chess engine in the game? The same logic applies here—specialization often trumps general intelligence in specific domains. By leveraging formalized mathematics, we could create an unparalleled tool capable of exploring research areas currently limited by human cognition.
 
+&emsp; An example of such intelligence would be a *mathematics mining machine*. I am quite curious about the possibility of a computer program which could, without interaction to physical reality, produce interesting mathematical results. A lot of what we know and are interested in is driven by physics, allowing us to move between the real and the abstract when creating models. However, I want to figure out how quantify the significance of theorems, and I hope to discuss this in a future essay.
+
+&emsp; A mathematically superintelligent AI could profoundly impact society. While mathematical research appears to have slowed, it is unlikely that the field’s potential has been fully realized. This is important: Mathematics often inspires innovation in other domains, catalyzing technological advances. Furthermore, we currently live in a dark age, where we more preoccupied with *proving* things are true, rather than *understanding* the meaning of existing ideas. Such AI would allow us to instantly know whether or not something is true, why it is true, and allow us to analyze the broader societal importance of mathematical constructs.
+
+&emsp; Finally, I shall briefly mention the story of Alexander Grothendieck and Jean Dieudonné. When writing the Éléments de Géométrie Algébrique (EGA), a foundatinal mathematical text in algebraic geometry, Grothendieck relied upon a distinguished mathematician and former member of the Bourbaki group, Dieudonné, to refine and organize his writing. Grothendieck's radical and creative nature was complimented by the mature writing of Dieudonné, allowing him to efficiently place his constructions into a mathematically rigorous, formalized text. I personally benefitted from this, as I found reading the EGA to be much easier than some of Grothendieck's earlier writing, such as his Tôhoku paper. Perhaps at some point we will all be allowed to be more imaginative like Grothendieck, relying upon AI to test our ideas in a rigorous setting.
 
 
 ## 3. Creating an autoformalizer
