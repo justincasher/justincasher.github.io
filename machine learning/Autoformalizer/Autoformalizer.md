@@ -77,7 +77,22 @@ title: The need for an autoformalizer (2024)
 
 ## 3. Creating an autoformalizer
 
-&emsp; An autoformalizer, practically speaking, cannot be created, and therefore would have to create an approximation to be the best of our abilities. For simplicity, let us limit ourselves to the case of a machine that can translate from English to Lean. 
+&emsp; An autoformalizer, practically speaking, cannot be created, and therefore would have to be approximated. Currently, the best known approximators are neural networks, and hence we will build our autoformalizer as an optimized LLM. In the sequel, let us limit ourselves to the case of approximating machine that can translate from English to Lean. 
+
+&emsp; We break this section down into three pieces. The first is focused on assembling a dataset for our autotranslator, which is done by converting Lean code into written English. Then, in the second, we contemplate how to go back from Lean into English. Finally, we discuss the creation of a formalized tree of mathematics.
+
+
+###### From Lean to English
+
+&emsp; Our first 
+
+
+###### From English to Lean
+
+
+###### A tree of mathematics
+
+
 
 
 
