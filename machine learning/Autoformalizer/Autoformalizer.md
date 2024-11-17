@@ -67,11 +67,11 @@ title: The need for an autoformalizer (2024)
 
 &emsp; An autoformalizer could generate an extensive repository of mathematics in Lean, providing a foundation to train mathematically super-intelligent AI. In particular, a specialized AI trained in this manner would likely outperform a general-purpose system in mathematical reasoning. To illustrate this, let us consider the analogy of chess: Would artificial general intelligence really outperform a dedicated chess engine in the game? The same logic applies here—specialization often trumps general intelligence in specific domains. By leveraging formalized mathematics, we could create an unparalleled tool capable of exploring research areas currently limited by human cognition.
 
-&emsp; An example of such intelligence would be a *mathematics mining machine*. I am quite curious about the possibility of a computer program which could, without interaction to physical reality, produce interesting mathematical results. A lot of what we know and are interested in is driven by physics, allowing us to move between the real and the abstract when creating models. However, I want to figure out how quantify the significance of theorems, and I hope to discuss this in a future essay.
+&emsp; An example of such intelligence would be a *mathematics mining machine*. I am quite curious about the possibility of a computer program which could, without interaction to physical reality, produce interesting mathematical results. A lot of what we know and are interested in is driven by physics, allowing us to move between the real and the abstract when creating models. On the contrary, I want to figure out how quantify the significance of theorems without physical meaning.
 
 &emsp; A mathematically superintelligent AI could profoundly impact society. While mathematical research appears to have slowed, it is unlikely that the field’s potential has been fully realized. This is important: Mathematics often inspires innovation in other domains, catalyzing technological advances. Furthermore, we currently live in a dark age, where we more preoccupied with *proving* things are true, rather than *understanding* the meaning of existing ideas. Such AI would allow us to instantly know whether or not something is true, why it is true, and allow us to analyze the broader societal importance of mathematical constructs.
 
-&emsp; Finally, I shall briefly mention the story of Alexander Grothendieck and Jean Dieudonné. When writing the Éléments de Géométrie Algébrique (EGA), a foundatinal mathematical text in algebraic geometry, Grothendieck relied upon a distinguished mathematician and former member of the Bourbaki group, Dieudonné, to refine and organize his writing. Grothendieck's radical and creative nature was complimented by the mature writing of Dieudonné, allowing him to efficiently place his constructions into a mathematically rigorous, formalized text. I personally benefitted from this, as I found reading the EGA to be much easier than some of Grothendieck's earlier writing, such as his Tôhoku paper. Perhaps at some point we will all be allowed to be more imaginative like Grothendieck, relying upon AI to test our ideas in a rigorous setting.
+&emsp; Finally, let us briefly consider the story of Alexander Grothendieck and Jean Dieudonné. When writing the Éléments de Géométrie Algébrique (EGA), a foundatinal mathematical text in algebraic geometry, Grothendieck relied upon a distinguished mathematician and former member of the Bourbaki group, Dieudonné, to refine and organize his writing. Grothendieck's radical and creative nature was complimented by the mature writing of Dieudonné, allowing him to efficiently place his constructions into a mathematically rigorous, formalized text. I personally benefitted from this, as I found reading the EGA to be much easier than some of Grothendieck's earlier writing, such as his Tôhoku paper. Perhaps at some point we will all be allowed to be more imaginative like Grothendieck, relying upon AI to test our ideas in a rigorous setting.
 
 
 
@@ -79,20 +79,22 @@ title: The need for an autoformalizer (2024)
 
 &emsp; An autoformalizer, practically speaking, cannot be created, and therefore would have to be approximated. Currently, the best known approximators are neural networks, and hence we will build our autoformalizer as an optimized LLM. In the sequel, let us limit ourselves to the case of approximating machine that can translate from English to Lean. 
 
-&emsp; We break this section down into three pieces. The first is focused on assembling a dataset for our autotranslator, which is done by converting Lean code into written English. Then, in the second, we contemplate how to go back from Lean into English. Finally, we discuss the creation of a formalized tree of mathematics.
+&emsp; We break this section down into three pieces. The first is focused on assembling a dataset for our autotranslator, which is done by converting Lean code into written English. Then, we contemplate how to go back from Lean into English to create an autoformalizer. Finally, we discuss the creation of a formalized tree of mathematics.
 
 
 ###### From Lean to English
 
-&emsp; Our first 
+&emsp; We will need a dataset of English-Lean pairs when building our autoformalizer. Current LLMs come with some inherit understanding of Lean, meaning they behave as a poor approximation of an autoformalizer. Hence, assuming our autoformalizer uses a pretrained LLM as its base, this English-Lean dataset will serve multiple purposes: fine-tuning, providing few-shot examples for prediction, and retrieval augmented generation (RAG). 
 
 
-###### From English to Lean
+###### An approximate autoformalizer
+
+&emsp; 
 
 
-###### A tree of mathematics
+###### A formalized tree of mathematics
 
-
+&emsp; 
 
 
 
