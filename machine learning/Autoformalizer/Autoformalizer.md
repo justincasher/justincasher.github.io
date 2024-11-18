@@ -77,14 +77,48 @@ title: The need for an autoformalizer (2024)
 
 ## 3. Creating an autoformalizer
 
-&emsp; An autoformalizer, practically speaking, cannot be created, and therefore would have to be approximated. Currently, the best known approximators are neural networks, and hence we will build our autoformalizer as an optimized LLM. In the sequel, let us limit ourselves to the case of approximating machine that can translate from English to Lean. 
+&emsp; An autoformalizer, practically speaking, cannot be created, and therefore would have to be approximated. Currently, the best known approximators are neural networks, and hence we will build our autoformalizer as an optimized LLM. In the sequel, let us limit ourselves to the case of approximating machine that can translate from English to Lean 4. 
 
-&emsp; We break this section down into three pieces. The first is focused on assembling a dataset for our autotranslator, which is done by converting Lean code into written English. Then, we contemplate how to go back from Lean into English to create an autoformalizer. Finally, we discuss the creation of a formalized tree of mathematics.
+&emsp; We break this section down into three pieces. The first is focused on assembling a foundational dataset for our autotranslator, which is done by converting Lean code into written English. Then, we contemplate how to go back from Lean into English to create an autoformalizer. Finally, we discuss the creation of a formalized tree of mathematics.
 
 
-###### From Lean to English
+###### Foundational dataset
 
-&emsp; We will need a dataset of English-Lean pairs when building our autoformalizer. Current LLMs come with some inherit understanding of Lean, meaning they behave as a poor approximation of an autoformalizer. Hence, assuming our autoformalizer uses a pretrained LLM as its base, this English-Lean dataset will serve multiple purposes: fine-tuning, providing few-shot examples for prediction, and retrieval augmented generation (RAG). 
+&emsp; We will need a dataset of English-Lean pairs when building our autoformalizer. Current LLMs come with some inherit understanding of Lean, meaning they behave as a poor approximation of an autoformalizer. Hence, assuming our autoformalizer uses a pretrained LLM as its base, this English-Lean dataset will serve multiple purposes: fine-tuning,  few-shot examples for prediction, and retrieval augmented generation (RAG). Let us now consider two ways this dataset can be constructed.
+
+&emsp; The classical way to create such a dataset is to write a script which translates mathematics from Lean to English using the underlying logic of Lean. This seems feasible, albeit laborous. Let us consider the following theorem:
+
+```Lean
+theorem exists_infinite_primes (n : ℕ) : ∃ p, n ≤ p ∧ Prime p :=
+  let p := minFac (n ! + 1)
+  have f1 : n ! + 1 ≠ 1 := ne_of_gt <| succ_lt_succ <| factorial_pos _
+  have pp : Prime p := minFac_prime f1
+  have np : n ≤ p :=
+    le_of_not_ge fun h =>
+      have h₁ : p ∣ n ! := dvd_factorial (minFac_pos _) h
+      have h₂ : p ∣ 1 := (Nat.dvd_add_iff_right h₁).2 (minFac_dvd _)
+      pp.not_dvd_one h₂
+  ⟨p, np, pp⟩
+```
+
+I wrote a Python script which uses template matching to take keywords and flip them around into sentence. For instance "Prime p" becomes "p prime". Here is an example output:
+
+```
+theorem exists_infinite_primes Let n be in ℕ. Then there exists p, n ≤ p and p prime
+  let p be a minimum factor of (n ! + 1)
+  we claim n ! + 1 ≠ 1, because any factorial is positive
+  we claim p prime, because any minimum factor is prime
+  we claim n ≤ p. Indeed,
+    assume n > p
+      we claim p ∣ n !, because assume n > p
+      we claim p ∣ 1, because a number only divides the sum if it divides each term 
+      primes do not divide 1 and p ∣ 1
+  finally, we have n ≤ p and p prime
+```
+
+The problem with this approach is *every single* keyword in Lean would need a template to allow the computer to parse it; my code only can parse a few limited statements so far. However, once this is done, we can simply throw the output into an LLM to get a readable proof.
+
+&emsp; A simpler approach is to directly input the Lean code into an LLM, using RAG to help the LLM understand relevant keywords. While LLMs are not good autoformalizers, they are decently capable of translating Lean to English.
 
 
 ###### An approximate autoformalizer
