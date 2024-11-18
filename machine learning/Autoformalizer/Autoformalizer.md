@@ -116,9 +116,9 @@ theorem exists_infinite_primes Let n be in ℕ. Then there exists p, n ≤ p and
   finally, we have n ≤ p and p prime
 ```
 
-The problem with this approach is *every single* keyword in Lean would need a template to allow the computer to parse it; my code only can parse a few limited statements so far. However, once this is done, we can simply throw the output into an LLM to get a readable proof.
+The problem with this approach is *every single* keyword in Lean would need a template to allow the computer to parse it; my code only can parse a few limited statements so far. However, once this is done, we can simply throw the English output into an LLM, which will format it into a readable proof.
 
-&emsp; A simpler approach is to directly input the Lean code into an LLM, using RAG to help the LLM understand relevant keywords. While LLMs are not good autoformalizers, they are decently capable of translating Lean to English.
+&emsp; A simpler approach is to directly input the Lean code into an LLM, using RAG to help the LLM understand relevant keywords. While LLMs are not good yet at going from English to Lean, they are decently capable of translating Lean to English.
 
 
 ###### An approximate autoformalizer
