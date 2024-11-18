@@ -120,7 +120,8 @@ The problem with this approach is *every single* keyword in Lean would need a te
 
 &emsp; A simpler approach is to directly input the Lean code into an LLM, using RAG to help the LLM understand relevant keywords. While LLMs are not good yet at going from English to Lean, they are decently capable of translating Lean to English. If we simply take the above theorem in Lean and ask ChatGPT-4o to translate it, we get the following:
 
-```
+---
+
 **Theorem.** For any natural number $ n $, there exists a prime number $ p $ such that $ n \leq p $.
 
 *Proof.* Consider the number $ n! + 1 $, where $ n! $ is the factorial of $ n $. Let $ p $ denote the smallest prime divisor of $ n! + 1 $, which exists because every integer greater than 1 has a prime factor.
@@ -130,7 +131,8 @@ First, note that $ n! + 1 \neq 1 $ since $ n! \geq 1 $ implies $ n! + 1 > 1 $. T
 Next, we claim that $ n \leq p $. Suppose, for contradiction, that $ p < n $. Since $ p $ divides $ n! + 1 $ and $ n! $ is divisible by all integers less than or equal to $ n $, $ p $ must also divide $ n! $. This implies $ p \mid (n! + 1 - n!) = 1 $, contradicting the fact that no prime number divides 1. Hence, $ n \leq p $.
 
 Thus, $ p $ satisfies $ n \leq p $ and is prime. Therefore, such a $ p $ exists, completing the proof. Q.E.D.
-```
+
+---
 
 We see that, although the proof is wordy, it is logically correct. I am currently writing a script which takes every single statement in Mathlib4 and creates an English counterpart for it.
 
