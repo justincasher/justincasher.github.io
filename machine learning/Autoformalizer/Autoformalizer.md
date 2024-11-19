@@ -134,7 +134,7 @@ Thus, $ p $ satisfies $ n \leq p $ and is prime. Therefore, such a $ p $ exists,
 
 ---
 
-We see that, although the proof is wordy, it is logically correct. I am currently writing a script which takes every single statement in Mathlib4 and creates an English counterpart for it. This script will likely create multiple English counterparts for each statement, in order to diversify the training dataset.
+We see that, although the proof is wordy, it is logically correct. I am currently writing a script which takes every single statement in Mathlib4 and creates an English counterpart for it. (Or multiple counterparts in order to diversify the training dataset.)
 
 
 ###### Approximating an autoformalizer
