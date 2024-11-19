@@ -154,30 +154,31 @@ We see that, although the proof is wordy, it is logically correct. I am currentl
 
 ## 4. References
 
-1. DeepMind. "AI achieves silver-medal standard solving International Mathematical Olympiad problems," 2024. [Link](https://deepmind.com/discover/blog/ai-solves-imo-problems-at-silver-medal-level/)
+1. DeepMind. "AI achieves silver-medal standard solving International Mathematical Olympiad problems," 2024. [Link](https://deepmind.com/discover/blog/ai-solves-imo-problems-at-silver-medal-level/){:target="_blank"}
 
-2. Glazer, Elliot, et al. "FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI," 2024. [Link](https://arxiv.org/pdf/2411.04872)
+2. Glazer, Elliot, et al. "FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI," 2024. [Link](https://arxiv.org/pdf/2411.04872){:target="_blank"}
 
-3. Grothendieck, Alexander. "Sur quelques points d'algèbre homologique." *Tohoku Mathematical Journal*, vol. 9, no. 2, 1957, pp. 119–221. [Link](https://projecteuclid.org/euclid.tmj/1178244839)
+3. Grothendieck, Alexander. "Sur quelques points d'algèbre homologique." *Tohoku Mathematical Journal*, vol. 9, no. 2, 1957, pp. 119–221. [Link](https://projecteuclid.org/euclid.tmj/1178244839){:target="_blank"}
 
-4. Grothendieck, Alexander, and Jean Dieudonné. "Éléments de géométrie algébrique." *Publications Mathématiques de l'IHÉS*, vol. 4, 1960, pp. 5–228. [Link](https://link.springer.com/article/10.1007/BF02684778)
+4. Grothendieck, Alexander, and Jean Dieudonné. "Éléments de géométrie algébrique." *Publications Mathématiques de l'IHÉS*, vol. 4, 1960, pp. 5–228. [Link](https://link.springer.com/article/10.1007/BF02684778){:target="_blank"}
 
-5. Lean Community. "Lean 4 Documentation," 2024. [Link](https://leanprover.github.io/lean4/doc/)
+5. Lean Community. "Lean 4 Documentation," 2024. [Link](https://leanprover.github.io/lean4/doc/){:target="_blank"}
 
-6. Mars Climate Orbiter Mishap Investigation Board. "Mars Climate Orbiter Mishap Investigation Phase I Report," 1999. [Link](https://llis.nasa.gov/llis_lib/pdf/1009464main1_0641-mr.pdf)
+6. Mars Climate Orbiter Mishap Investigation Board. "Mars Climate Orbiter Mishap Investigation Phase I Report," 1999. [Link](https://llis.nasa.gov/llis_lib/pdf/1009464main1_0641-mr.pdf){:target="_blank"}
 
-7. Mars Climate Orbiter Mishap Investigation Board. "Report on Project Management in NASA: Lessons Learned from the Mars Climate Orbiter Failure," 1999. [Link](https://discovery.larc.nasa.gov/PDF_FILES/mars_climate_orbiter_phaseII.pdf)
+7. Mars Climate Orbiter Mishap Investigation Board. "Report on Project Management in NASA: Lessons Learned from the Mars Climate Orbiter Failure," 1999. [Link](https://discovery.larc.nasa.gov/PDF_FILES/mars_climate_orbiter_phaseII.pdf){:target="_blank"}
 
-8. NASA. "Mars Climate Orbiter (1998-073A) Spacecraft Details." NSSDC Master Catalog, 1998. [Link](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-073A)
+8. NASA. "Mars Climate Orbiter (1998-073A) Spacecraft Details." NSSDC Master Catalog, 1998. [Link](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-073A){:target="_blank"}
 
-9. National Transportation Safety Board. "Collapse of the Morandi Bridge in Genoa, Italy," 2018. [Link](https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1901.pdf)
+9. National Transportation Safety Board. "Collapse of the Morandi Bridge in Genoa, Italy," 2018. [Link](https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1901.pdf){:target="_blank"}
 
-10. OpenAI. "Solving (some) formal math olympiad problems," 2022. [Link](https://openai.com/index/formal-math/)
+10. OpenAI. "Solving (some) formal math olympiad problems," 2022. [Link](https://openai.com/index/formal-math/){:target="_blank"}
 
-11. Ribenboim, Paulo. "The Grothendieck I Knew: Telling, Not Hiding, Not Judging." *Notices of the American Mathematical Society*, vol. 66, no. 7, 2019, pp. 1069–1075. [Link](https://www.ams.org/journals/notices/201907/rnoti-p1069.pdf)
+11. Ribenboim, Paulo. "The Grothendieck I Knew: Telling, Not Hiding, Not Judging." *Notices of the American Mathematical Society*, vol. 66, no. 7, 2019, pp. 1069–1075. [Link](https://www.ams.org/journals/notices/201907/rnoti-p1069.pdf){:target="_blank"}
 
-12. Securities and Exchange Commission. "SEC Charges Knight Capital With Violations of Market Access Rule," 2013. [Link](https://www.sec.gov/news/press-release/2013-264)
+12. Securities and Exchange Commission. "SEC Charges Knight Capital With Violations of Market Access Rule," 2013. [Link](https://www.sec.gov/news/press-release/2013-264){:target="_blank"}
 
-13. U.S. Department of Transportation. "Knight Capital Americas LLC: Order Instituting Administrative and Cease-and-Desist Proceedings," 2013. [Link](https://www.sec.gov/litigation/admin/2013/34-70694.pdf)
+13. U.S. Department of Transportation. "Knight Capital Americas LLC: Order Instituting Administrative and Cease-and-Desist Proceedings," 2013. [Link](https://www.sec.gov/litigation/admin/2013/34-70694.pdf){:target="_blank"}
 
-14. Ying, Huaiyuan, et al. "Lean Workbook: A large-scale Lean problem set formalized from natural language math problems," 2024. [Link](https://arxiv.org/abs/2406.03847)
+14. Ying, Huaiyuan, et al. "Lean Workbook: A large-scale Lean problem set formalized from natural language math problems," 2024. [Link](https://arxiv.org/abs/2406.03847){:target="_blank"}
+
