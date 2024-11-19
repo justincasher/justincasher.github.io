@@ -5,7 +5,7 @@ feedformat: card
 title: The need for an autoformalizer (2024)
 ---
 <br>
-**Abstract.** &nbsp; I argue that the that the creation of an autoformalizer—a machine which can verify mathematics—would have monumental benefits both in academic research and in industrial applications. I then discuss how one could be created.
+**Abstract.** &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.
 
 [GitHub repository](https://github.com/justincasher/Autoformalizer){:target="_blank"}
 
@@ -22,56 +22,56 @@ title: The need for an autoformalizer (2024)
 
 ## 1. Introduction
 
-&emsp; In recent years, we have seen a boom in artificial intelligence capabilities, specifically in the field of natural language processing. Through sequence-to-sequence modeling, we now have machines, called *large language models* (LLMs), which are capable of many tasks which require logical reasoning, i.e., intelligence. In particular, unlike a typical search engine, LLMs are capable of synthesizing the data that they are trained on, allowing them to complete complex tasks using a variety of different ideas.
+&emsp; In recent years, we have seen a boom in artificial intelligence capabilities, specifically in the field of natural language processing. Through sequence-to-sequence modeling, we now have machines, called *large language models* (LLMs), which are capable of many tasks that require logical reasoning, i.e., intelligence. In particular, unlike a typical search engine, LLMs are capable of synthesizing the data that they are trained on, allowing them to complete complex tasks using a variety of different ideas.
 
-&emsp; However, there are apparent limitations to our current systems, and it is unclear whether these limitations can be overcome without considerable theoretical advancements. When tasked with solving mathematical problems, even the most advanced reasoning models often struggle to play with definitions in the way that a mathematician would. While they understand what should come next, they do not know why, and while chain-of-thought prompting can help mitigate this, we have yet to see a model which can effectively tackle advanced mathematical problems.
+&emsp; However, there are clear limitations to our current systems, and it is unclear whether these limitations can be overcome without significant theoretical advancements. When tasked with solving mathematical problems, even the most advanced reasoning models often struggle to play with definitions in the way that a mathematician would. While they understand what should come next, they do not know why, and although chain-of-thought prompting can help mitigate this, we have yet to see a model that can effectively tackle advanced mathematical problems.
 
-&emsp; There have been a variety of benchmarks developed to test AI; the figure below displays the results of some of the best models on a few common tests. One recent benchmark, FrontierMath [[1]](#4-references), composed of considerably more advanced problems, resulted in the best LLMs only achieving at best around 2% accuracy; although, it should be noted each LLM was only given a single attempt at each problem. Overall, it appears current LLMs are statistically incapable of efficiently solving technical mathematical problems.
+&emsp; There have been a variety of benchmarks developed to test AI; the figure below displays the results of some of the best models on a few common tests. One recent benchmark, FrontierMath [[1]](#4-references), which consisted of considerably more advanced problems, resulted in the best LLMs achieving only around 2% accuracy at best; however, it should be noted that each LLM was only given a single attempt at each problem. Overall, it appears that current LLMs are statistically incapable of efficiently solving technical mathematical problems.
 
 ![LLM mathematics benchmarks](images/LLM_math_results.png)
 
-&emsp; Thus, in this essay we explore how this difficulty can be overcome by building an *autoformalizer*. This is a computer program capable of interpreting imprecise logic written in English and converting it into precise formal representations in a type-theoretic framework (e.g., Lean), where the resulting code can be run, verified, and formally proven. Furthermore, an autoformalizer would have much broader applications outside of checking synthetically generated theory, as it would be capable of verifying any piece of written math. However, the existence of such a philosophical object seems virtually impossible, as human language is not exact, meaning we would need to create an approximation of it.
+&emsp; Thus, in this essay we explore how this difficulty can be overcome by building an *autoformalizer*. This is a computer program capable of interpreting imprecise logic written in English and converting it into precise formal representations in a type-theoretic framework (e.g., Lean), where the resulting code can be run, verified, and formally proven. Furthermore, an autoformalizer would have much broader applications outside of checking synthetically generated theory, as it would be capable of verifying any piece of written math. However, the existence of such a philosophical object seems virtually impossible, as human language is not exact, which means we would need to create an approximation of it.
 
 
 
 ## 2. Societal impact
 
-&emsp; Before we dive into applications, let us briefly discuss what an autoformalizer is and what it could do. In the most basic sense, it is a math checker for any theorem, equation, etc. An autoformalizer would never make mistakes while being able to detect any written error. Albeit, this simplistic perspective disregards the interpretability that is innate to most human writing (at least outside of extremely precise mathematics), and hence would be theoretically impossible to create. Thus, we are interested in a machine which is capable flagging any *possible* mathematical mistake, whether it be due to a lack of clarity in the writing or a genuine error.
+&emsp; Before we dive into applications, let us briefly discuss what an autoformalizer is as well as what it could do. In the most basic sense, it is a math checker for any theorem, equation, etc. An autoformalizer would never make mistakes and would also be able to detect any written error. However, this simplistic perspective disregards the interpretability that is innate to most human writing (at least outside of extremely precise mathematics), and hence it is theoretically impossible to create. Thus, we are interested in a machine which is capable flagging any *possible* mathematical mistake, whether it be due to a lack of clarity in the writing or a genuine error.
 
-&emsp; In what follows, we give a series examples of how this technology could be applied to real world scenarious for the betterment of society. We begin wtih simple, concrete examples, and then we discuss more open-ended possibilities.
+&emsp; In what follows, we give a series of examples of how this technology could be applied to real-world scenarios for the betterment of society. We begin with simple, concrete examples, and then we discuss more open-ended possibilities.
 
 
 ###### Example 1: Mars climate orbiter mishap
 
-&emsp; In 1999, a \$327.6 million spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds) when inputting thruster maneuvers. This caused the thrusters to under-fire, resulting in the spacecraft coming too close to mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
+&emsp; In 1999, a \$327.6 million spacecraft was lost due to a unit conversion error. The software which controlled the ship's thrusters was built by Lockheed Martin, who assumed the input to be in imperial units (pound-force seconds), while NASA’s Jet Propulsion Laboratory used metric units (newton-seconds) when inputting thruster maneuvers. This caused the thrusters to under-fire, resulting in the spacecraft coming too close to Mars, either disintegrating or skipping off into space. An autoformalizer could have easily caught this unit mismatch.
 
 
 ###### Example 2: Knight Capital trading loss
 
-&emsp; In 2012, the high-frequency trading firm Knight Capital lost \$440 million because of a software error. After updating some but mistakenly not all of their servers, Knight Capital's trading code had a logical error in it which resulted in repeatedly buying stocks high and then selling them low. An autoformalizer would have been able to gaurantee that the computer code matched the intended trading algorithm, flagging this error before trading began.
+&emsp; In 2012, the high-frequency trading firm Knight Capital lost \$440 million because of a software error. After updating some but mistakenly not all of their servers, Knight Capital's trading code had a logical error in it which resulted in repeatedly buying stocks high and then selling them low. An autoformalizer would have been able to guarantee that the computer code matched the intended trading algorithm, flagging this error before trading began.
 
 &emsp; More broadly speaking, financial institutions and corporations must adhere to strict regulatory requirements. These often involve intricate mathematical models for risk assessment, tax calculations, or financial projections. Errors in these computations can result in substantial fines, reputational damage, or even financial collapse. An autoformalizer could flag inconsistencies in a given set of models, ensuring that calculations are both accurate and compliant with regulations.
 
 
 ###### Example 3: Civil engineering
 
-&emsp; The failure of infrastructure projects, such as bridges or dams, can often be traced back to calculation errors during the design phase. For example, in 2018, the Morandi Bridge in Genoa, Italy, collapsed due to an underestimation of the stress on its stay cables, a design flaw that led to catastrophic failure killing 43 people. An autoformalizer could rigorously check all engineering calculations and ensure consistency in models, helping to prevent such disasters.
+&emsp; The failure of infrastructure projects, such as bridges or dams, can often be traced back to calculation errors during the design phase. For example, in 2018, the Morandi Bridge in Genoa, Italy, collapsed due to an underestimation of the stress on its stay cables, a design flaw that led to a catastrophic failure that killed 43 people. An autoformalizer could rigorously check all engineering calculations and ensure consistency in models, helping to prevent such disasters.
 
 
 ###### Example 4: Automated paper review
 
-&emsp; Academic, and, in particular, mathematical, manuscripts frequently take months to properly review. However, an autoformalizer would be able to instantly check that all of the underlying mathematical theory is correct. Then, human reviewers could focus on the impact of the ideas, instead of laboring over small details. This will become increasingly important as AI helps write more papers, or even entire ones by itself, creating a need for a quick way to review this growing volume of information. Furthermore, I believe that this could help decentralize academia, creating a democratic process for publishing papers, where any mathematical paper could be put online with the reader knowing everything in it is logically sound.
+&emsp; Academic, and, in particular, mathematical, manuscripts frequently take months to properly review. However, an autoformalizer would be able to instantly check that all of the underlying mathematical theory is correct. Then, human reviewers could focus on the impact of the ideas instead of being burdened by small details. This will become increasingly important as AI helps write more papers, or even entire ones on its own, creating a need for a quick way to review this growing volume of information. Furthermore, I believe that this could help decentralize academia, creating a democratic process for publishing papers, where any mathematical paper could be put online with the reader knowing everything in it is logically sound.
 
 
 ###### Example 5: Mathematical superintelligence
 
 &emsp; An autoformalizer could generate an extensive repository of mathematics in Lean, providing a foundation to train mathematically super-intelligent AI. In particular, a specialized AI trained in this manner would likely outperform a general-purpose system in mathematical reasoning. To illustrate this, let us consider the analogy of chess: Would artificial general intelligence really outperform a dedicated chess engine in the game? The same logic applies here—specialization often trumps general intelligence in specific domains. By leveraging formalized mathematics, we could create an unparalleled tool capable of exploring research areas currently limited by human cognition.
 
-&emsp; An example of such intelligence would be a *mathematics mining machine*. I am quite curious about the possibility of a computer program which could, without interaction to physical reality, produce interesting mathematical results. A lot of what we know and are interested in is driven by physics, allowing us to move between the real and the abstract when creating models. On the contrary, I want to figure out how quantify the significance of theorems without physical meaning.
+&emsp; An example of such intelligence would be a *mathematics mining machine*. I am quite curious about the possibility of a computer program which could, without interaction to physical reality, produce interesting mathematical results. A lot of what we know and are interested in is driven by physics, allowing us to move between the real and the abstract when creating models. Conversely, I want to figure out how to quantify the significance of theorems without physical meaning.
 
-&emsp; A mathematically superintelligent AI could profoundly impact society. While mathematical research appears to have slowed, it is unlikely that the field’s potential has been fully realized. This is important: Mathematics often inspires innovation in other domains, catalyzing technological advances. Furthermore, we currently live in a dark age, where we more preoccupied with *proving* things are true, rather than *understanding* the meaning of existing ideas. Such AI would allow us to instantly know whether or not something is true, why it is true, and allow us to analyze the broader societal importance of mathematical constructs.
+&emsp; A mathematically superintelligent AI could profoundly impact society. While mathematical research appears to have slowed, it is unlikely that the field’s potential remains fully realized. This is important: Mathematics often inspires innovation in other domains and catalyzes technological advances. Furthermore, we currently live in a dark age, where we more preoccupied with *proving* things are true, rather than *understanding* the meaning of existing ideas. Such AI would allow us to instantly know whether or not something is true, why it is true, and analyze the broader societal importance of mathematical constructs.
 
-&emsp; Finally, let us briefly consider the story of Alexander Grothendieck and Jean Dieudonné. When writing the Éléments de Géométrie Algébrique (EGA), a foundatinal mathematical text in algebraic geometry, Grothendieck relied upon a distinguished mathematician and former member of the Bourbaki group, Dieudonné, to refine and organize his writing. Grothendieck's radical and creative nature was complimented by the mature writing of Dieudonné, allowing him to efficiently place his constructions into a mathematically rigorous, formalized text. I personally benefitted from this, as I found reading the EGA to be much easier than some of Grothendieck's earlier writing, such as his Tôhoku paper. Perhaps at some point we will all be allowed to be more imaginative like Grothendieck, relying upon AI to test our ideas in a rigorous setting.
+&emsp; Finally, let us briefly consider the story of Alexander Grothendieck and Jean Dieudonné. When writing the Éléments de Géométrie Algébrique (EGA), a foundational mathematical text in algebraic geometry, Grothendieck relied upon a distinguished mathematician and former member of the Bourbaki group, Dieudonné, to refine and organize his writing. Grothendieck's radical and creative nature was complimented by the mature writing of Dieudonné, allowing him to efficiently place his constructions into a mathematically rigorous, formalized text. I personally benefitted from this, as I found reading the EGA to be much easier than some of Grothendieck's earlier writing, such as his Tôhoku paper. Perhaps at some point we will all be empowered to be more imaginative like Grothendieck, relying upon AI to test our ideas in a rigorous setting.
 
 
 
@@ -84,9 +84,9 @@ title: The need for an autoformalizer (2024)
 
 ###### Foundational dataset
 
-&emsp; We will need a dataset of English-Lean pairs when building our autoformalizer. Current LLMs come with some inherit understanding of Lean, meaning they behave as a poor approximation of an autoformalizer. Hence, assuming our autoformalizer uses a pretrained LLM as its base, this English-Lean dataset will serve multiple purposes: fine-tuning,  few-shot examples for prediction, and retrieval augmented generation (RAG). Let us now consider two ways this dataset can be constructed.
+&emsp; We will need a dataset of English-Lean pairs when building our autoformalizer. Current LLMs come with some inherent understanding of Lean, meaning they behave as a poor approximation of an autoformalizer. Hence, assuming our autoformalizer uses a pretrained LLM as its base, this English-Lean dataset will serve multiple purposes: fine-tuning, few-shot examples for prediction, and retrieval-augmented generation (RAG). Let us now consider two ways in which this dataset can be constructed.
 
-&emsp; The classical way to create such a dataset is to write a script which translates mathematics from Lean to English using the underlying logic of Lean. This seems feasible, albeit laborous. Let us consider the following theorem:
+&emsp; The classical way to create such a dataset is to write a script which translates mathematics from Lean to English using the underlying logic of Lean. This seems feasible, albeit laborious. Let us consider the following theorem:
 
 ```
 theorem exists_infinite_primes (n : ℕ) : ∃ p, n ≤ p ∧ Prime p :=
@@ -139,13 +139,16 @@ We see that, although the proof is wordy, it is logically correct. I am currentl
 
 ###### Approximating an autoformalizer
 
-&emsp; Our foundational training dataset will allow us to create a model with some syntactic understanding of Lean. However, this will be far from sufficient, and our program will likely need multiple separate components. For instance, I believe that we can train a generational adversarial network (GAN) to focus purely on translating our main statements (theorems, lemmas, etc.) from English to Lean. Then, we can use a guided form of reinforcement learning, akin to how DeepMind solved IMO problems after they were formalized in Lean, to complete the proof. The key here is that, by providing the network with the English proof, the reinforcement learning should go much more smoothly: DeepMind's program was incapable of solving a few problems, and took days to think on others. Throughout this process, we will use RAG to provide the network with relevant Lean statements. Here is a diagram:
+&emsp; Our foundational training dataset will enable us to develop a model with some basic syntactic understanding of Lean. However, this alone will be far from sufficient, and the program will likely require multiple specialized components. For example, a generative adversarial network (GAN) could be trained specifically to translate core statements—such as theorems and lemmas—from English into Lean. Following this, a guided reinforcement learning (RL) approach, similar to the method DeepMind used to solve IMO problems formalized in Lean, could be employed to construct the proof itself. Throughout this process, retrieval-augmented generation (RAG) would be utilized to provide the network with relevant Lean statements to enhance its understanding.
+
+&emsp; By supplying the RL system with the English proof, its effectiveness should increase significantly. Notably, while DeepMind's program struggled with certain problems—taking days to solve some and failing on others—current RL techniques may still hold promise. A guided variant of RL, when coupled with precise English-to-Lean translation, could enable effective formalization of mathematical statements and proofs.
+
+![Autoformalizer diagram](images/autoformalizer_diagram.png)
 
 
 ###### A formalized tree of mathematics
 
-&emsp; 
-
+&emsp; A key goal is to create a self-correcting tree of formalized mathematics that integrates citations across the literature into a unified, searchable framework—essentially a "Google of math and logic." This tree would allow users to query, verify, and apply mathematical concepts with precision, accelerating industrial applications like algorithm optimization, engineering design, and financial modeling. Errors in the tree would trigger automatic reviews of dependent results, with tools tracing the impact of corrections and version control ensuring transparency. This dynamic system would remain accurate and up to date, advancing both research and practical problem-solving across industries.
 
 
 ## 4. References
