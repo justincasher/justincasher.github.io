@@ -160,7 +160,7 @@ We see that, although the proof is wordy, it is logically correct. I am currentl
 
 3. Grothendieck, Alexander. "Sur quelques points d'algèbre homologique." *Tohoku Mathematical Journal*, vol. 9, no. 2, 1957, pp. 119–221. [Link](https://projecteuclid.org/euclid.tmj/1178244839){:target="_blank"}
 
-4. Grothendieck, Alexander, and Jean Dieudonné. "Éléments de géométrie algébrique." *Publications Mathématiques de l'IHÉS*, vol. 4, 1960, pp. 5–228. [Link](https://link.springer.com/article/10.1007/BF02684778){:target="_blank"}
+4. Grothendieck, Alexander, and Jean Dieudonné. "Éléments de géométrie algébrique." *Publications Mathématiques de l'IHÉS*.
 
 5. Lean Community. "Lean 4 Documentation," 2024. [Link](https://leanprover.github.io/lean4/doc/){:target="_blank"}
 
