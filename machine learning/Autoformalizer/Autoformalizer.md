@@ -134,12 +134,12 @@ Thus, $ p $ satisfies $ n \leq p $ and is prime. Therefore, such a $ p $ exists,
 
 ---
 
-We see that, although the proof is wordy, it is logically correct. I am currently writing a script which takes every single statement in Mathlib4 and creates an English counterpart for it.
+We see that, although the proof is wordy, it is logically correct. I am currently writing a script which takes every single statement in Mathlib4 and creates an English counterpart for it. This script will likely create multiple English counterparts to each statement, in order to diversify the training dataset.
 
 
-###### An approximate autoformalizer
+###### Approximating an autoformalizer
 
-&emsp; 
+&emsp; Our foundational training dataset will allow us to create a model with some syntactic understanding of Lean. However, this will be far from sufficient, and our program will likely need multiple separate components. For instance, I believe that we can train a generational adversarial network (GAN) to focus purely on translating our main statements (theorems, lemmas, etc.) from English to Lean. Then, we can use a guided form of reinforcement learning, akin to how DeepMind solved IMO problems after they were formalized in Lean, to complete the proof. The key here is that, by providing the network with the English proof, the reinforcement learning should go much more smoothly: DeepMind's program was incapable of solving a few problems, and took days to think on others. Throughout this process, we will use RAG to provide the network with relevant Lean statements. Here is a diagram:
 
 
 ###### A formalized tree of mathematics
