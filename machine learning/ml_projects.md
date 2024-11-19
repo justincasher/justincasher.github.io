@@ -11,7 +11,7 @@ This page contains machine learning projects that I have worked on.
 
 **Abstract.** &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.
 
-<p class="meta-title"><a href="/https://justinasher.me/the_need_for_an_autoformalizer">Read web article →</a></p>
+<p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
 
 
 ### Modeling Catan using self-play (2024)
