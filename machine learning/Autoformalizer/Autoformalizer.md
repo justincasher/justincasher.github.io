@@ -22,7 +22,7 @@ title: The need for an autoformalizer (2024)
 
 ## 1. Introduction
 
-&emsp; In recent years, we have seen a boom in artificial intelligence capabilities, specifically in the field of natural language processing. Through sequence-to-sequence modeling, we now have machines, called *large language models* (LLMs), which are capable of many tasks that require logical reasoning, i.e., intelligence. In particular, unlike a typical search engine, LLMs are capable of synthesizing the data that they are trained on, allowing them to complete complex tasks using a variety of different ideas.
+&emsp; In recent years, we have seen a boom in artificial intelligence capabilities, specifically in the field of natural language processing. Through sequence-to-sequence modeling, we now have machines, called *large language models* (LLMs), which are capable of many tasks that require logical reasoning, i.e., intelligence. Unlike a typical search engine, LLMs are capable of synthesizing the data that they are trained on, allowing them to complete complex tasks using a variety of different ideas.
 
 &emsp; However, there are clear limitations to our current systems, and it is unclear whether these limitations can be overcome without significant theoretical advancements. When tasked with solving mathematical problems, even the most advanced reasoning models often struggle to play with definitions in the way that a mathematician would. While they understand what should come next, they do not know why. Although chain-of-thought prompting can help mitigate this limitation, we have yet to see a model capable of effectively tackling advanced mathematical problems.
 
@@ -30,7 +30,7 @@ title: The need for an autoformalizer (2024)
 
 ![LLM mathematics benchmarks](images/LLM_math_results.png)
 
-&emsp; Thus, in this essay we explore how this difficulty can be overcome by building an *autoformalizer*. This is a computer program designed to interpret imprecise logic written in English and convert it into precise formal representations within a type-theoretic framework (e.g., Lean). The resulting code can then be executed, verified, and formally proven. Furthermore, an autoformalizer would have much broader applications outside of checking synthetically generated theory, as it would be capable of verifying any piece of written math. However, the existence of such a philosophical object seems virtually impossible, as human language is not exact, which means we would need to create an approximation of it.
+&emsp; Thus, in this essay we explore how this difficulty can be overcome by building an *autoformalizer*. This is a computer program designed to interpret imprecise logic written in English and convert it into precise formal representations within a type-theoretic framework, e.g., Lean. Lean is a proof assistant and programming language that ensures absolute rigor in mathematical reasoning, allowing users to write formal proofs with zero errors, as it verifies every step against strict logical rules. The resulting code can then be executed, verified, and formally proven. Furthermore, an autoformalizer would have much broader applications outside of checking synthetically generated theory, as it would be capable of verifying any piece of written math. However, the existence of such a philosophical object seems virtually impossible, as human language is not exact, which means we would need to create an approximation of it.
 
 
 
