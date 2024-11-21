@@ -2,7 +2,7 @@
 layout: Post
 permalink: /ai
 feedformat: card
-title: Artificial intelligence essays and projects
+title: "AI: Essays and projects"
 ---
 <br/>
 This page contains machine learning projects that I have worked on.
