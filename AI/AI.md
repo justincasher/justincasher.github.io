@@ -2,10 +2,10 @@
 layout: Post
 permalink: /ai
 feedformat: card
-title: "AI: Essays and projects"
+title: "Artificial intelligence"
 ---
 <br/>
-This page contains machine learning projects that I have worked on.
+This page contains AI essays and projects that I have written or worked on.
 
 ### The need for an autoformalizer (2024)
 
