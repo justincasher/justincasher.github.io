@@ -1,8 +1,8 @@
 ---
 layout: Post
-permalink: /ml_projects
+permalink: /ai
 feedformat: card
-title: Machine learning projects
+title: Artificial intelligence essays and projects
 ---
 <br/>
 This page contains machine learning projects that I have worked on.

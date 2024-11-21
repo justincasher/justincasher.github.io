@@ -1,5 +1,5 @@
 ---
-layout: ML_Project
+layout: AI
 permalink: /brain_age_project
 feedformat: card
 title: The brain age project (2020)

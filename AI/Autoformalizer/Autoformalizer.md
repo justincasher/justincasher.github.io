@@ -1,5 +1,5 @@
 ---
-layout: ML_Project
+layout: AI
 permalink: /the_need_for_an_autoformalizer
 feedformat: card
 title: The need for an autoformalizer (2024)
