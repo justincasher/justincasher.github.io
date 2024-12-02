@@ -14,14 +14,14 @@ Here is a timeline of my career.
   position: relative;
   margin: 20px 0;
   padding: 0;
-  list-style: none;
+  list-style: none; /* Remove bullet points */
 }
 
 /* The vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 30%;
+  left: 30%; /* Adjust alignment */
   top: 0;
   width: 2px;
   height: 100%;
@@ -32,13 +32,15 @@ Here is a timeline of my career.
 .timeline-item {
   position: relative;
   margin: 20px 0;
+  list-style: none; /* Remove bullet points from individual items */
 }
 
 /* Date circle */
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 29%;
+  left: 30%; /* Align circle with the line */
+  transform: translateX(-50%); /* Ensure proper centering */
   width: 12px;
   height: 12px;
   background: #fff;
