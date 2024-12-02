@@ -2497,7 +2497,7 @@ a.navbar-item,
   height: 2px;
   margin: 0.5rem 0; }
 
-@media screen and (max-width: 1407px) {
+@media screen and (max-width: 2000px) {
   .navbar {
     padding-left: 15px;
     padding-right: 15px;
