@@ -63,46 +63,59 @@ title: "About Me"
 
     <!-- Timeline Item 1 -->
     <div class="timeline-item" data-aos="fade-left">
-        <h3>2024 - Present</h3>
-        <h4>Current Role</h4>
-        <p><strong>[Company Name]</strong> - [Location]</p>
+        <h3>Nov. 2024 - Present</h3>
+        <h4>Building Mathematics Superintelligence</h4>
+        <p><strong>Independent Project</strong> - Palo Alto, CA</p>
         <ul>
-            <li>Leading strategic initiatives to drive business growth.</li>
-            <li>Mentored a team of 15 developers and delivered key projects on time.</li>
+            <li>Developing an AI capable of solving and verifying mathematical problems with near 100% accuracy.</li>
+            <li>Leveraging techniques like PyTorch, fine-tuning/QLoRA, and vector databases.</li>
         </ul>
     </div>
 
     <!-- Timeline Item 2 -->
     <div class="timeline-item" data-aos="fade-left">
-        <h3>2020 - 2024</h3>
-        <h4>Previous Role</h4>
-        <p><strong>[Company Name]</strong> - [Location]</p>
+        <h3>Sep. 2024 - Nov. 2024</h3>
+        <h4>Deep Learning Research Assistant</h4>
+        <p><strong>Purdue University, Laboratory of Data Science</strong> - Fort Wayne, IN</p>
         <ul>
             <li>Managed cross-functional teams to implement agile workflows.</li>
-            <li>Increased operational efficiency by 25% through process optimization.</li>
+            <li>Optimized processes to enhance research efficiency in machine learning projects.</li>
         </ul>
     </div>
 
     <!-- Timeline Item 3 -->
     <div class="timeline-item" data-aos="fade-left">
-        <h3>2017 - 2020</h3>
-        <h4>Earlier Role</h4>
-        <p><strong>[Company Name]</strong> - [Location]</p>
+        <h3>Aug. 2022 - May 2024</h3>
+        <h4>Associate Instructor</h4>
+        <p><strong>Indiana University</strong> - Bloomington, IN</p>
         <ul>
-            <li>Developed and launched three high-impact applications.</li>
-            <li>Key contributor to the company’s flagship product.</li>
+            <li>Conducted seminars on pure mathematics, focusing on advanced topics and Fields Medal discussions.</li>
+            <li>Taught undergraduate-level mathematics courses, developing new curricula for abstract algebra.</li>
         </ul>
     </div>
 
-    <!-- Timeline Item 4 (Education) -->
+    <!-- Timeline Item 4 -->
     <div class="timeline-item" data-aos="fade-left">
-        <h3>2013 - 2017</h3>
-        <h4>Education</h4>
-        <p><strong>[University Name]</strong> - [Location]</p>
+        <h3>2019 - 2020</h3>
+        <h4>Brain Age Researcher</h4>
+        <p><strong>Indiana University</strong> - Bloomington, IN</p>
         <ul>
-            <li>Bachelor's Degree in Computer Science.</li>
-            <li>Graduated with honors and received the Dean’s Award for Excellence.</li>
+            <li>Collaborated on predicting brain aging through statistical analysis and machine learning.</li>
+            <li>Published findings on differential geometry-based algorithms in peer-reviewed journals.</li>
+        </ul>
+    </div>
+
+    <!-- Timeline Item 5 (Education) -->
+    <div class="timeline-item" data-aos="fade-left">
+        <h3>2020 - 2024</h3>
+        <h4>Education</h4>
+        <p><strong>Indiana University</strong> - Bloomington, IN</p>
+        <ul>
+            <li>Master of Arts in Mathematics (2024), GPA: 3.89/4.00</li>
+            <li>Bachelor of Science in Mathematics (2022), GPA: 3.86/4.00, graduated with honors.</li>
+            <li>Recipient of the Dean’s Award for Excellence.</li>
         </ul>
     </div>
 
 </div>
+
