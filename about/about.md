@@ -73,4 +73,12 @@ AI specialist with expertise in applying LLMs to mathematics, CNNs for image aug
 - **Languages:** Python, C, C++, CUDA, R, SQL, YAML, Java  
 - **Libraries:** PyTorch (Vision & Text), LibTorch, Transformers (Hugging Face), OpenCV, NumPy, ggplot2, ctypes  
 - **Techniques:** Fine-tuning (e.g., LLaMa), LoRA/QLoRA, RAG, vector databases  
-- **Other:** Cloud computing (
+- **Other:** Cloud computing (TensorDock, AWS), Docker, Kubernetes, Git, Linux, data pipelines, Conda  
+
+---
+
+## Publications
+
+1. Asher, J., Tan Dang, K., and Masters, M. "A differential geometry-based machine learning algorithm for the brain age problem." *The Journal of Purdue Undergraduate Research,* vol. 10, article 40, 2020.  
+2. Asher, J. and Selvitella, A. "On image data augmentation via low-dimensional Lie groups." In revision, 2024.
+
