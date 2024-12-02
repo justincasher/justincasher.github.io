@@ -1889,6 +1889,8 @@ a.tag:hover {
   margin-bottom: 1rem; }
 
 .navbar {
+  padding-left: 1rem;  
+  padding-right: 1rem; 
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
@@ -2498,32 +2500,6 @@ a.navbar-item,
   margin: 0.5rem 0; }
 
 @media screen and (max-width: 1023px) {
-  .navbar > .container {
-    display: block;
-    padding-left: 1rem;  /* Adjust the value as needed */
-    padding-right: 1rem; /* Optional: for symmetrical padding */
-  }
-
-  .navbar-brand,
-  .navbar-tabs {
-    align-items: center;
-    display: flex;
-    /* Ensure the items inside have proper spacing */
-    padding-left: 0; /* Reset if necessary */
-    padding-right: 0; /* Reset if necessary */
-  }
-
-  /* Optional: If you have specific navbar items that need padding */
-  .navbar-item {
-    padding-left: 0.75rem; /* Adjust as needed */
-    padding-right: 0.75rem; /* Adjust as needed */
-  }
-
-  /* Ensure the navbar menu is displayed correctly when active */
-  .navbar-menu.is-active {
-    display: block;
-  }
-
   .navbar > .container {
     display: block; }
   .navbar-brand .navbar-item,
