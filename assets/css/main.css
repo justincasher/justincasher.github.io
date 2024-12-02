@@ -2361,13 +2361,6 @@ a.tag:hover {
   .navbar.is-fixed-top {
     top: 0; }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
 html.has-navbar-fixed-top,
 body.has-navbar-fixed-top {
   padding-top: 3.25rem; }
@@ -2505,6 +2498,10 @@ a.navbar-item,
   margin: 0.5rem 0; }
 
 @media screen and (max-width: 1023px) {
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .navbar > .container {
     display: block; }
   .navbar-brand .navbar-item,
