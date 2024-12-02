@@ -7,6 +7,7 @@ title: "Artificial intelligence"
 <br/>
 This page showcases AI projects I have completed or am currently working on.
 
+
 #### The need for an autoformalizer (2024)
 
 **Abstract.** &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.
