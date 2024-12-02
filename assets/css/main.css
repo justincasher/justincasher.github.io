@@ -2471,7 +2471,7 @@ a.navbar-item,
       border-bottom-style: solid;
       border-bottom-width: 3px;
       color: var(--color-text-link);
-      padding-bottom: calc(0.5rem - 3px); }
+      padding-bottom: calc(0.5rem - 2.25px); }
 
 .navbar-content {
   flex-grow: 1;
