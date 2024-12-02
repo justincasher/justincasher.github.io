@@ -8,180 +8,39 @@ title: "About me"
 <br/>
 Here is a timeline of my career.
 
-<!-- Timeline Styles and Script -->
+<div style="margin-top: 50px;">
+    <div class="scroll-text" id="scrollText">
+        This text moves horizontally as you scroll down! This text moves horizontally as you scroll down! This text moves horizontally as you scroll down! This text moves horizontally as you scroll down! 
+    </div>
+</div>
+
 <style>
-/* Basic Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    body {
+        margin: 0;
+        height: 200vh; /* To ensure there is enough scrollable space */
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-/* Body styling for smooth scrolling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* Timeline Container */
-.timeline-container {
-  position: relative;
-  height: 200vh; /* Adjust based on number of timeline items */
-  width: 100%;
-}
-
-/* Central Horizontal Line */
-.timeline-line {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #3498db;
-  z-index: 1;
-}
-
-/* Timeline Track that moves horizontally */
-.timeline-track {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: flex;
-  height: 100%;
-  transform: translateY(-50%);
-  transition: transform 0.1s ease-out;
-}
-
-/* Individual Timeline Items */
-.timeline-item {
-  position: relative;
-  width: 250px;
-  padding: 20px;
-  margin: 0 50px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Branch Lines */
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 20px;
-  height: 2px;
-  background: #3498db;
-}
-
-.timeline-item.above::before {
-  bottom: -2px;
-  left: -20px;
-  transform: rotate(45deg);
-}
-
-.timeline-item.below::before {
-  top: -2px;
-  left: -20px;
-  transform: rotate(-45deg);
-}
-
-/* Year Label */
-.timeline-item .year {
-  font-weight: bold;
-  color: #3498db;
-  margin-bottom: 10px;
-}
-
-/* Title Styling */
-.timeline-item h3 {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-/* Description Styling */
-.timeline-item p {
-  color: #666;
-}
-
-/* Positioning for above and below items */
-.timeline-item.above {
-  align-self: flex-start;
-  /* Optional: Add animations or different styles for above items */
-}
-
-.timeline-item.below {
-  align-self: flex-end;
-  /* Optional: Add animations or different styles for below items */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .timeline-item {
-    width: 200px;
-    margin: 0 30px;
-    padding: 15px;
-  }
-
-  .timeline-container {
-    height: 300vh; /* Adjust for mobile view */
-  }
-}
+    .scroll-text {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        font-size: 2em;
+        font-weight: bold;
+    }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const timelineTrack = document.querySelector('.timeline-track');
-  const timelineContainer = document.querySelector('.timeline-container');
+    const scrollText = document.getElementById('scrollText');
 
-  // Calculate the maximum horizontal translation
-  const maxScroll = timelineContainer.offsetHeight - window.innerHeight;
-  
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const scrollPercentage = scrollTop / maxScroll;
-    const maxTranslate = timelineTrack.scrollWidth - window.innerWidth;
-
-    // Translate the timeline horizontally based on scroll
-    timelineTrack.style.transform = `translateX(-${scrollPercentage * maxTranslate}px) translateY(-50%)`;
-  });
-});
+    window.addEventListener('scroll', () => {
+        // Calculate horizontal position based on scroll position
+        const scrollPosition = window.scrollY;
+        scrollText.style.left = `${scrollPosition}px`;
+    });
 </script>
-
-<!-- Timeline Structure -->
-<div class="timeline-container">
-  <div class="timeline-line"></div>
-  <div class="timeline-track">
-    
-    <!-- Timeline Item 1 -->
-    <div class="timeline-item above" data-year="2015">
-      <div class="year">2015</div>
-      <h3>Started at Company A</h3>
-      <p>Joined Company A as a Junior Developer, working on front-end technologies.</p>
-    </div>
-    
-    <!-- Timeline Item 2 -->
-    <div class="timeline-item below" data-year="2018">
-      <div class="year">2018</div>
-      <h3>Promoted to Developer</h3>
-      <p>Promoted to Developer, leading a small team and managing projects.</p>
-    </div>
-    
-    <!-- Timeline Item 3 -->
-    <div class="timeline-item above" data-year="2020">
-      <div class="year">2020</div>
-      <h3>Joined Company B</h3>
-      <p>Moved to Company B to take on a Senior Developer role with more responsibilities.</p>
-    </div>
-    
-    <!-- Timeline Item 4 -->
-    <div class="timeline-item below" data-year="2023">
-      <div class="year">2023</div>
-      <h3>Lead Engineer</h3>
-      <p>Promoted to Lead Engineer, overseeing multiple projects and mentoring junior developers.</p>
-    </div>
-    
-    <!-- Add more timeline items below as needed -->
-    
-  </div>
-</div>
