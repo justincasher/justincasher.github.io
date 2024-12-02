@@ -59,8 +59,6 @@ title: "About Me"
 }
 </style>
 
-## Career Timeline
-
 <div class="timeline">
 
     <!-- Timeline Item 1 -->
@@ -97,7 +95,7 @@ title: "About Me"
     </div>
 
     <!-- Timeline Item 4 (Education) -->
-    <div class="timeline-item" data-aos="fade-up">
+    <div class="timeline-item" data-aos="fade-right">
         <h3>2013 - 2017</h3>
         <h4>Education</h4>
         <p><strong>[University Name]</strong> - [Location]</p>
