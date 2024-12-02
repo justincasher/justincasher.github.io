@@ -359,15 +359,15 @@ img {
 
 code {
     font-family: Consolas, 'Courier New', Courier, monospace;
-    display: inline-block;
-    overflow: auto !important;
-    word-wrap: break-word !important;
-    padding: 2px 2px 2px 2px;
-    vertical-align: middle;
-    padding: 2px 2px 2px 2px;
-    border: 1px solid var(--secondary-border-color);
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border-light);
     border-radius: 4px;
+    padding: 4px;
+    overflow-x: auto;
+    word-wrap: break-word;
+    font-size: 1rem;
 }
+  
 
 .regular-sans code {
     padding: 20px;
@@ -383,16 +383,30 @@ code {
     border: none;
 }
 
+pre {
+    overflow-x: auto;
+    background-color: var(--color-bg-main);
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 1rem;
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+}
 
 pre code {
-    font-family: Consolas, 'Courier New', Courier, monospace;
-    display: inline-block;
-    overflow: auto !important;
-    word-wrap: break-word !important;
-    padding: 15px 15px 15px 15px;
-    vertical-align: middle;
-    font-size: 1em;
+    display: block;
+    padding: 1rem;
+    background-color: var(--color-bg-sub);
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 14px; 
+}
 
+@media screen and (max-width: 768px) {
+    pre, pre code {
+      font-size: 12px; /* Slightly smaller font for mobile */
+      padding: 0.8rem; /* Adjust padding */
+    }
 }
 
 blockquote:before {
