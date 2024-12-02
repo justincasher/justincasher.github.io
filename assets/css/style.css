@@ -399,7 +399,7 @@ pre code {
     background-color: var(--color-bg-sub);
     border-radius: 5px;
     overflow-x: auto;
-    font-size: var(--text-m);
+    font-size: var(--text-s);
 }
 
 @media screen and (max-width: 768px) {
