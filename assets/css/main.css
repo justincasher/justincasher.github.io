@@ -2450,6 +2450,8 @@ a.navbar-item,
     color: var(--color-text-link); }
 
 .navbar-item {
+  max-height: 3.5rem;
+  min-height: 2.5rem;
   flex-grow: 0;
   flex-shrink: 0; }
   .navbar-item img {
