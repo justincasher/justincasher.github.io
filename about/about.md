@@ -57,9 +57,45 @@ title: "About Me"
     font-size: 14px;
     color: #555;
 }
+
+/* Scroll Down Arrow Styles */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #0078d4;
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+.scroll-down i {
+    font-size: 32px;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+    }
+    40% {
+        transform: translate(-50%, -10px);
+    }
+    60% {
+        transform: translate(-50%, -5px);
+    }
+}
 </style>
 
-<div class="timeline">
+<div style="position: relative; height: 100vh;">
+    <a href="#timeline" class="scroll-down">
+        <i>&#8595;</i> <!-- Down Arrow Unicode -->
+    </a>
+</div>
+
+<div id="timeline" class="timeline">
 
     <!-- Timeline Item 1 -->
     <div class="timeline-item" data-aos="fade-left">
