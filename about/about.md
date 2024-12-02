@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: About
 permalink: /about
 feedformat: card
 title: "About Me"
