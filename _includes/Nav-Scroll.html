@@ -90,7 +90,6 @@
       const scrollPosition = window.scrollY;
       const scrolledPercentage = (scrollPosition / totalHeight) * 100;
       scrollProgress.style.width = scrolledPercentage + '%';
-      ticking = false;
     }
 
     function handleNavbarScroll() {
@@ -106,6 +105,7 @@
         window.requestAnimationFrame(() => {
           updateScrollProgress();
           handleNavbarScroll();
+          ticking = false;
         });
         ticking = true;
       }
@@ -123,6 +123,11 @@
 
 <!-- CSS Styles for Scroll Progress Bar and Navbar -->
 <style>
+  /* Navbar Base Styles */
+  .navbar {
+    transition: box-shadow 0.3s, background-color 0.3s;
+  }
+
   /* Scroll Progress Bar Styles */
   .scroll-progress {
     position: fixed;
@@ -135,11 +140,30 @@
     pointer-events: none; 
   }
 
-  /* Optional: Change navbar style when scrolled */
+  /* Navbar Menu Dropdown Styles when active */
+  .navbar-menu.is-active {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 0; 
+    margin: 0; 
+  }
+
+  /* Ensure navbar-menu spans the full width without container constraints */
+  .navbar-menu.is-active .navbar-start {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Navbar Scrolled State */
   .navbar.scrolled {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
-    background-color: #fff; /* Ensure background remains white or desired color */
-    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: #fff; /* Ensures background remains white or desired color */
   }
 
   /* Optional: Adjustments for Responsive Design */
@@ -147,5 +171,15 @@
     .scroll-progress {
       height: 3px; /* Slightly thinner on smaller screens */
     }
+    .navbar.scrolled {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow on smaller screens */
+    }
+    .navbar-menu.is-active {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ensure shadow on mobile dropdown */
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 </style>
+
