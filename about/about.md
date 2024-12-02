@@ -53,7 +53,7 @@ title: "About me"
     font-family: Arial, sans-serif;
     font-size: 1.2em; /* Increased font size for better visibility */
     font-weight: bold;
-    color: #0078d4;
+    color: #000000;
 }
 
 /* Date Subtitle Styles */
