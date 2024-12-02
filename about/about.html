@@ -26,7 +26,7 @@ Here is a timeline of my career.
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -3px; /* Half of the line's width */
 }
 
 /* Container for each timeline item */
@@ -59,7 +59,7 @@ Here is a timeline of my career.
 .timeline-item.left::before {
   content: " ";
   position: absolute;
-  top: 15px;
+  top: 22px;
   right: -15px;
   border-width: 10px 0 10px 15px;
   border-style: solid;
@@ -70,7 +70,7 @@ Here is a timeline of my career.
 .timeline-item.right::before {
   content: " ";
   position: absolute;
-  top: 15px;
+  top: 22px;
   left: -15px;
   border-width: 10px 15px 10px 0;
   border-style: solid;
@@ -83,7 +83,6 @@ Here is a timeline of my career.
   position: absolute;
   width: 20px;
   height: 20px;
-  right: -10px;
   background-color: #3498db;
   border: 4px solid #fff;
   top: 15px;
@@ -91,7 +90,10 @@ Here is a timeline of my career.
   z-index: 1;
 }
 
-/* Adjust for right timeline items */
+.timeline-item.left::after {
+  right: -10px;
+}
+
 .timeline-item.right::after {
   left: -10px;
 }
@@ -101,6 +103,7 @@ Here is a timeline of my career.
   /* Make the timeline vertical */
   .timeline::after {
     left: 31px;
+    margin-left: -3px; /* Half of the line's width */
   }
 
   /* Full-width timeline items */
@@ -108,25 +111,30 @@ Here is a timeline of my career.
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
+    margin-bottom: 20px;
   }
 
-  /* Ensure all timeline items align to the left */
-  .timeline-item.left, .timeline-item.right {
+  /* Align all timeline items to the left */
+  .timeline-item.left,
+  .timeline-item.right {
     left: 0;
   }
 
   /* Adjust arrows */
-  .timeline-item.left::before, .timeline-item.right::before {
+  .timeline-item.left::before,
+  .timeline-item.right::before {
     left: 60px;
+    right: auto;
     border: solid transparent;
     border-width: 10px 10px 10px 0;
     border-left-color: #f1f1f1;
+    top: 22px;
   }
 
   /* Adjust circles to align with the timeline line */
   .timeline-item::after {
-    left: 31px; /* Aligns all dots to the timeline line */
-    right: auto; /* Resets right position */
+    left: calc(31px - 10px); /* Center the dot over the line */
+    right: auto;
   }
 }
 </style>
@@ -156,7 +164,7 @@ Here is a timeline of my career.
     </div>
   </div>
 
-  <!-- Add more timeline items as needed -->
+  <!-- Timeline Item 4 -->
   <div class="timeline-item right">
     <div class="content">
       <h3>Year 4</h3>
