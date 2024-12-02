@@ -27,77 +27,70 @@ body {
 /* Timeline Container */
 .timeline-container {
   position: relative;
-  height: 100vh;
+  height: 200vh; /* Adjust based on number of timeline items */
   width: 100%;
-  overflow: hidden;
 }
 
-/* Central Vertical Line */
+/* Central Horizontal Line */
 .timeline-line {
   position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
   background: #3498db;
+  z-index: 1;
 }
 
 /* Timeline Track that moves horizontally */
 .timeline-track {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  left: 0;
   display: flex;
   height: 100%;
+  transform: translateY(-50%);
   transition: transform 0.1s ease-out;
 }
 
 /* Individual Timeline Items */
 .timeline-item {
   position: relative;
-  width: 300px;
-  margin: 50px;
+  width: 250px;
+  padding: 20px;
+  margin: 0 50px;
   background: #f9f9f9;
   border-radius: 8px;
-  padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Connecting lines to the central line */
+/* Branch Lines */
 .timeline-item::before {
   content: '';
   position: absolute;
-  top: 20px;
+  top: 50%;
   width: 20px;
-  height: 4px;
+  height: 2px;
   background: #3498db;
 }
 
-.timeline-item.left::before {
-  right: -20px;
+.timeline-item.above::before {
+  bottom: -2px;
+  left: -20px;
+  transform: rotate(45deg);
 }
 
-.timeline-item.right::before {
+.timeline-item.below::before {
+  top: -2px;
   left: -20px;
+  transform: rotate(-45deg);
 }
 
 /* Year Label */
 .timeline-item .year {
-  position: absolute;
-  top: -30px;
   font-weight: bold;
   color: #3498db;
-}
-
-/* Positioning for left and right items */
-.timeline-item.left {
-  align-self: flex-start;
-}
-
-.timeline-item.right {
-  align-self: flex-end;
+  margin-bottom: 10px;
 }
 
 /* Title Styling */
@@ -111,11 +104,27 @@ body {
   color: #666;
 }
 
+/* Positioning for above and below items */
+.timeline-item.above {
+  align-self: flex-start;
+  /* Optional: Add animations or different styles for above items */
+}
+
+.timeline-item.below {
+  align-self: flex-end;
+  /* Optional: Add animations or different styles for below items */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .timeline-item {
-    width: 250px;
-    margin: 30px;
+    width: 200px;
+    margin: 0 30px;
+    padding: 15px;
+  }
+
+  .timeline-container {
+    height: 300vh; /* Adjust for mobile view */
   }
 }
 </style>
@@ -126,15 +135,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const timelineContainer = document.querySelector('.timeline-container');
 
   // Calculate the maximum horizontal translation
-  const maxScroll = timelineContainer.scrollHeight - window.innerHeight;
-
+  const maxScroll = timelineContainer.offsetHeight - window.innerHeight;
+  
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const scrollPercentage = scrollTop / maxScroll;
     const maxTranslate = timelineTrack.scrollWidth - window.innerWidth;
 
     // Translate the timeline horizontally based on scroll
-    timelineTrack.style.transform = `translateX(-${scrollPercentage * maxTranslate}px) translateY(0)`;
+    timelineTrack.style.transform = `translateX(-${scrollPercentage * maxTranslate}px) translateY(-50%)`;
   });
 });
 </script>
@@ -145,28 +154,28 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="timeline-track">
     
     <!-- Timeline Item 1 -->
-    <div class="timeline-item left" data-year="2015">
+    <div class="timeline-item above" data-year="2015">
       <div class="year">2015</div>
       <h3>Started at Company A</h3>
       <p>Joined Company A as a Junior Developer, working on front-end technologies.</p>
     </div>
     
     <!-- Timeline Item 2 -->
-    <div class="timeline-item right" data-year="2018">
+    <div class="timeline-item below" data-year="2018">
       <div class="year">2018</div>
       <h3>Promoted to Developer</h3>
       <p>Promoted to Developer, leading a small team and managing projects.</p>
     </div>
     
     <!-- Timeline Item 3 -->
-    <div class="timeline-item left" data-year="2020">
+    <div class="timeline-item above" data-year="2020">
       <div class="year">2020</div>
       <h3>Joined Company B</h3>
       <p>Moved to Company B to take on a Senior Developer role with more responsibilities.</p>
     </div>
     
     <!-- Timeline Item 4 -->
-    <div class="timeline-item right" data-year="2023">
+    <div class="timeline-item below" data-year="2023">
       <div class="year">2023</div>
       <h3>Lead Engineer</h3>
       <p>Promoted to Lead Engineer, overseeing multiple projects and mentoring junior developers.</p>
