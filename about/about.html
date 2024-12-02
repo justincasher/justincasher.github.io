@@ -8,39 +8,158 @@ title: "About me"
 <br/>
 Here is a timeline of my career.
 
-<div style="margin-top: 50px;">
-    <div class="scroll-text" id="scrollText">
-        This text moves horizontally as you scroll down! This text moves horizontally as you scroll down! This text moves horizontally as you scroll down! This text moves horizontally as you scroll down! 
-    </div>
-</div>
-
 <style>
-    body {
-        margin: 0;
-        height: 200vh; /* To ensure there is enough scrollable space */
-        font-family: Arial, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 10px 0;
+}
 
-    .scroll-text {
-        position: fixed;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        white-space: nowrap;
-        font-size: 2em;
-        font-weight: bold;
-    }
+/* The vertical timeline line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #3498db;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container for each timeline item */
+.timeline-item {
+  padding: 20px 30px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Left timeline items */
+.timeline-item.left {
+  left: 0;
+}
+
+/* Right timeline items */
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Content within each timeline item */
+.timeline-item .content {
+  padding: 20px 30px;
+  background-color: #f1f1f1;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Arrows on the left timeline items */
+.timeline-item.left::before {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-style: solid;
+  border-color: transparent transparent transparent #f1f1f1;
+}
+
+/* Arrows on the right timeline items */
+.timeline-item.right::before {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  border-width: 10px 15px 10px 0;
+  border-style: solid;
+  border-color: transparent #f1f1f1 transparent transparent;
+}
+
+/* Circles on the timeline */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #3498db;
+  border: 4px solid #fff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Adjust for right timeline items */
+.timeline-item.right::after {
+  left: -10px;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  /* Make the timeline vertical */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width timeline items */
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure all arrows are on the left */
+  .timeline-item.left, .timeline-item.right {
+    left: 0;
+  }
+
+  /* Adjust arrows */
+  .timeline-item.left::before, .timeline-item.right::before {
+    left: 60px;
+    border: solid transparent;
+    border-width: 10px 10px 10px 0;
+    border-left-color: #f1f1f1;
+  }
+
+  /* Adjust circles */
+  .timeline-item::after {
+    left: 15px;
+  }
+}
 </style>
 
-<script>
-    const scrollText = document.getElementById('scrollText');
+<div class="timeline">
+  <!-- Timeline Item 1 -->
+  <div class="timeline-item left">
+    <div class="content">
+      <h3>Year 1</h3>
+      <p>Description of the first career event.</p>
+    </div>
+  </div>
 
-    window.addEventListener('scroll', () => {
-        // Calculate horizontal position based on scroll position
-        const scrollPosition = window.scrollY;
-        scrollText.style.left = `${scrollPosition}px`;
-    });
-</script>
+  <!-- Timeline Item 2 -->
+  <div class="timeline-item right">
+    <div class="content">
+      <h3>Year 2</h3>
+      <p>Description of the second career event.</p>
+    </div>
+  </div>
+
+  <!-- Timeline Item 3 -->
+  <div class="timeline-item left">
+    <div class="content">
+      <h3>Year 3</h3>
+      <p>Description of the third career event.</p>
+    </div>
+  </div>
+
+  <!-- Add more timeline items as needed -->
+  <div class="timeline-item right">
+    <div class="content">
+      <h3>Year 4</h3>
+      <p>Description of the fourth career event.</p>
+    </div>
+  </div>
+</div>
