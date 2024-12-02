@@ -7,21 +7,21 @@ title: "Artificial intelligence"
 <br/>
 This page contains AI essays and projects that I have written or worked on.
 
-### The need for an autoformalizer (2024)
+#### The need for an autoformalizer (2024)
 
 **Abstract.** &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.
 
 <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
 
 
-### Modeling Catan through self-play (2024)
+#### Modeling Catan through self-play (2024)
 
 **Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
 
 <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
 
 
-### The brain age project (2020)
+#### The brain age project (2020)
 
 **Paper.** &nbsp; Asher, Justin; Tan Dang, Khoa; and Masters, Maxwell (2020) "A Differential Geometry-based Machine Learning Algorithm for the Brain Age Problem," *The Journal of Purdue Undergraduate Research*: Vol. 10, Article 40. [Link](https://docs.lib.purdue.edu/jpur/vol10/iss1/40/){:target="_blank"} 
 
