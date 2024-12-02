@@ -14,7 +14,7 @@ This page contains AI essays and projects that I have written or worked on.
 <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
 
 
-### Modeling Catan using self-play (2024)
+### Modeling Catan through self-play (2024)
 
 **Abstract.** &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
 
