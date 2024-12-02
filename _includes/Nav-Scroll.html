@@ -1,0 +1,147 @@
+{%- comment -%}
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* File: Nav.html
+* Author Raghuveer S, Hiran Venugopalan
+*
+* This file contains the markup for the context menu thingy you see when you right
+* click on the post titles on the home page.
+*
+{%- endcomment -%}
+
+<!-- Navigation Bar -->
+<nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" style="padding-left: 0;" href="/">
+        <h6>{{ site.heading }}</h6>
+      </a>
+      
+      <!-- External JavaScript Files -->
+      <script src="{{ site.baseurl }}/assets/js/modeswitcher.js"></script>
+      <script src="{{ site.baseurl }}/assets/js/Hamburger.js"></script>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <!-- Navigation Links -->
+        <a href="{{ '/ai' | relative_url }}" class="navbar-item">
+          AI
+        </a>
+        <a href="{{ '/math' | relative_url }}" class="navbar-item">
+          Math
+        </a>
+      </div>
+      <!-- Optional: Navbar End (currently commented out)
+      <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-text">
+              <span class="icon is-small">
+                <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div> <!-- End of Container -->
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+</nav>
+
+<!-- JavaScript for Navbar Scroll Effects and Scroll Progress Bar -->
+<script>
+  // Function to update the scroll progress bar
+  function updateScrollProgress() {
+    const scrollProgress = document.getElementById('scroll-progress');
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const scrolledPercentage = (scrollPosition / totalHeight) * 100;
+    scrollProgress.style.width = scrolledPercentage + '%';
+  }
+
+  // Function to handle navbar style on scroll
+  function handleNavbarScroll() {
+    const navbar = document.querySelector('.navbar.is-fixed-top');
+    if (window.scrollY > 50) { // Adjust the scroll value as needed
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }
+
+  // Combined scroll event listener for efficiency
+  window.addEventListener('scroll', function() {
+    updateScrollProgress();
+    handleNavbarScroll();
+  });
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    updateScrollProgress();
+    handleNavbarScroll();
+  });
+</script>
+
+<!-- CSS Styles for Scroll Progress Bar and Navbar -->
+<style>
+  /* Scroll Progress Bar Styles */
+  .scroll-progress {
+    position: fixed;
+    top: 0; /* Aligns the progress bar at the very top */
+    left: 0;
+    width: 0%;
+    height: 4px; /* Adjust the height as needed */
+    background-color: #007BFF; /* Blue color. You can use any shade you prefer */
+    z-index: 1001; /* Ensures it stays above the navbar */
+    transition: width 0.25s ease-out; /* Smooth transition */
+  }
+
+  /* Ensure the progress bar is below the navbar content if navbar has height */
+  .navbar.scrolled + .scroll-progress {
+    top: 0; /* Adjust if the navbar changes height when scrolled */
+  }
+
+  /* Optional: Change navbar style when scrolled */
+  .navbar.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
+    background-color: #fff; /* Ensure background remains white or desired color */
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  /* Optional: Adjustments for Responsive Design */
+  @media screen and (max-width: 768px) {
+    .scroll-progress {
+      height: 3px; /* Slightly thinner on smaller screens */
+    }
+  }
+</style>
