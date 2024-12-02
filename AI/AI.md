@@ -5,7 +5,7 @@ feedformat: card
 title: "Artificial intelligence"
 ---
 <br/>
-This page contains AI essays and projects that I have written or worked on.
+This page showcases AI projects I have completed or am currently working on.
 
 #### The need for an autoformalizer (2024)
 
