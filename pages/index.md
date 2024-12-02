@@ -9,4 +9,3 @@ title: Justin Asher
 
 # About
 
-I am an applied mathematician working on machine learning.
