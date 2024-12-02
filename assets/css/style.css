@@ -368,7 +368,6 @@ code {
     word-wrap: break-word;
     font-size: 1rem;
 }
-  
 
 .regular-sans code {
     padding: 20px;
@@ -400,7 +399,7 @@ pre code {
     background-color: var(--color-bg-sub);
     border-radius: 5px;
     overflow-x: auto;
-    font-size: 14px; 
+    font-size: var(--text-m);
 }
 
 @media screen and (max-width: 768px) {
