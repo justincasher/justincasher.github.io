@@ -62,7 +62,7 @@ title: "About Me"
 <div class="timeline">
 
     <!-- Timeline Item 1 -->
-    <div class="timeline-item" data-aos="fade-up">
+    <div class="timeline-item" data-aos="fade-left">
         <h3>2024 - Present</h3>
         <h4>Current Role</h4>
         <p><strong>[Company Name]</strong> - [Location]</p>
@@ -73,7 +73,7 @@ title: "About Me"
     </div>
 
     <!-- Timeline Item 2 -->
-    <div class="timeline-item" data-aos="fade-right">
+    <div class="timeline-item" data-aos="fade-left">
         <h3>2020 - 2024</h3>
         <h4>Previous Role</h4>
         <p><strong>[Company Name]</strong> - [Location]</p>
@@ -95,7 +95,7 @@ title: "About Me"
     </div>
 
     <!-- Timeline Item 4 (Education) -->
-    <div class="timeline-item" data-aos="fade-right">
+    <div class="timeline-item" data-aos="fade-left">
         <h3>2013 - 2017</h3>
         <h4>Education</h4>
         <p><strong>[University Name]</strong> - [Location]</p>
