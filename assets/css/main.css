@@ -2499,6 +2499,32 @@ a.navbar-item,
 
 @media screen and (max-width: 1023px) {
   .navbar > .container {
+    display: block;
+    padding-left: 1rem;  /* Adjust the value as needed */
+    padding-right: 1rem; /* Optional: for symmetrical padding */
+  }
+
+  .navbar-brand,
+  .navbar-tabs {
+    align-items: center;
+    display: flex;
+    /* Ensure the items inside have proper spacing */
+    padding-left: 0; /* Reset if necessary */
+    padding-right: 0; /* Reset if necessary */
+  }
+
+  /* Optional: If you have specific navbar items that need padding */
+  .navbar-item {
+    padding-left: 0.75rem; /* Adjust as needed */
+    padding-right: 0.75rem; /* Adjust as needed */
+  }
+
+  /* Ensure the navbar menu is displayed correctly when active */
+  .navbar-menu.is-active {
+    display: block;
+  }
+
+  .navbar > .container {
     display: block; }
   .navbar-brand .navbar-item,
   .navbar-tabs .navbar-item {
