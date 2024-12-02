@@ -115,8 +115,20 @@
 
   /* Navbar Menu Dropdown Styles when active */
   .navbar-menu.is-active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
     background-color: #ffffff; /* Sets the background to white */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a bottom shadow */
+    z-index: 10;
+  }
+
+  /* Remove default margin and padding for full-width */
+  .navbar-menu.is-active .navbar-start {
+    width: 100%;
+    justify-content: center;
   }
 
   /* Navbar Scrolled State */
@@ -135,3 +147,4 @@
     }
   }
 </style>
+
