@@ -113,6 +113,12 @@
     transition: box-shadow 0.3s, background-color 0.3s;
   }
 
+  /* Navbar Menu Dropdown Styles */
+  .navbar-menu {
+    background-color: #ffffff; /* Sets the background to white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+  }
+
   /* Navbar Scrolled State */
   .navbar.scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
@@ -123,6 +129,9 @@
   @media screen and (max-width: 768px) {
     .navbar.scrolled {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow on smaller screens */
+    }
+    .navbar-menu {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ensure shadow on mobile dropdown */
     }
   }
 </style>
