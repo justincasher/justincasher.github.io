@@ -115,9 +115,10 @@
 
   /* Navbar Menu Dropdown Styles when active */
   .navbar-menu.is-active {
-    position: fixed;
+    position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100vw;
     background-color: #ffffff; /* Sets the background to white */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow only at the bottom */
@@ -126,11 +127,10 @@
     margin: 0; /* Remove any default margin */
   }
 
-  /* Remove default margin and padding for full-width */
+  /* Ensure navbar-menu spans the full width without container constraints */
   .navbar-menu.is-active .navbar-start {
     width: 100%;
     justify-content: center;
-    margin-top: 0; /* Ensure no gap above the dropdown */
   }
 
   /* Navbar Scrolled State */
@@ -147,8 +147,8 @@
     .navbar-menu.is-active {
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ensure shadow on mobile dropdown */
       width: 100vw;
-      left: 0;
-      transform: none; /* Remove horizontal translation to eliminate gaps */
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 </style>
