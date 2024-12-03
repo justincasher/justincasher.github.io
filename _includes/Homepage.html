@@ -1,81 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Dynamic Gradient Text</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
 
+    <!-- CSS Styles -->
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Borel', cursive;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
         .gradient-text {
-            background: linear-gradient(to right, #F7AD28, #D62404); 
+            background: linear-gradient(to right, #F7AD28, #D62404);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-size: 200% 100%; /* Enlarged background to allow movement */
+            background-position: center; /* Initial position */
+            transition: background-position 0.1s linear; /* Smooth transition */
         }
+
+        /* Optional: Enhance the appearance */
+        .home-intro {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        /* Add other styles as needed */
     </style>
 </head>
+<body>
+    <div class="home-intro">
+        <section class="section">
+            <div class="columns is-centered">
+                <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
+                    <div style="font-family:'Borel', cursive; font-size:2.5em ">Welcome!</div>
 
-<div class="home-intro">
-    <section class="section">
-        <div class="columns is-centered">
-            <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
-                <div style="font-family:'Borel', cursive; font-size:2.5em ">Welcome!</div>
-
-                <h3>
-                    I am a mathematician working on building 
-                    <span class="gradient-text">mathematical superintelligence</span>
-                </h3>
-                
-                
-                <!-- CONTACT INFO -->
-                <h4>
-                    Email: <a href=mailto:justinchadwickasher@gmail.com>justinchadwickasher@gmail.com</a><br>
-                    GitHub: <a href=https://www.github.com/justincasher>github.com/justincasher</a><br>
-                    LinkedIn: <a href=https://www.linkedin.com/in/justin-asher>linkedin.com/in/justin-asher</a><br>
-                </h4>
-                
-                <!-- RECENT PROJECTS -->
-                <hr>
-
-                <h5>Selected recent works</h5>
-
-                <!-- AUTOFORMALIZER -->
-
-                <h4>The need for an autoformalizer (2024)</h4>
-
-                <p>
-                    <b>Abstract.</b> &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.
-                </p>
-
-                <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
-
-                <!-- MODELING CATAN -->
-
-                <h4>Modeling Catan through self-play (2024)</h4>
+                    <h3>
+                        I am a mathematician working on building 
+                        <span class="gradient-text" id="dynamic-gradient">mathematical superintelligence</span>
+                    </h3>
                     
-                <p>
-                    <b>Abstract.</b> &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
-                </p>
-
-                <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
-
-                <!-- INFINITY CATEGORIES -->
-
-                <h4>Infinity categories (2024)</h4>
+                    <!-- CONTACT INFO -->
+                    <h4>
+                        Email: <a href="mailto:justinchadwickasher@gmail.com">justinchadwickasher@gmail.com</a><br>
+                        GitHub: <a href="https://www.github.com/justincasher">github.com/justincasher</a><br>
+                        LinkedIn: <a href="https://www.linkedin.com/in/justin-asher">linkedin.com/in/justin-asher</a><br>
+                    </h4>
                     
-                <p>
-                    <b>Abstract.</b> &nbsp; In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.
-                </p>
+                    <!-- RECENT PROJECTS -->
+                    <hr>
 
-                <p class="meta-title"><a href="/infinity-categories">Read web article →</a></p>
+                    <h5>Selected recent works</h5>
 
-                <!-- RAMANUJAN CONJECTURE -->
+                    <!-- AUTOFORMALIZER -->
+                    <h4>The need for an autoformalizer (2024)</h4>
+                    <p>
+                        <b>Abstract.</b> &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.
+                    </p>
+                    <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
 
-                <h4>The Ramanujan conjecture (2023)</h4>
-                    
-                <p>
-                    <b>Abstract.</b> &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.
-                </p>
+                    <!-- MODELING CATAN -->
+                    <h4>Modeling Catan through self-play (2024)</h4>
+                    <p>
+                        <b>Abstract.</b> &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
+                    </p>
+                    <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
 
-                <p class="meta-title"><a href="/Ramanujan-Conjecture">Read web article →</a></p>
-            </div> 
-        </div>
-    </section> 
-</div>
+                    <!-- INFINITY CATEGORIES -->
+                    <h4>Infinity categories (2024)</h4>
+                    <p>
+                        <b>Abstract.</b> &nbsp; In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.
+                    </p>
+                    <p class="meta-title"><a href="/infinity-categories">Read web article →</a></p>
+
+                    <!-- RAMANUJAN CONJECTURE -->
+                    <h4>The Ramanujan conjecture (2023)</h4>
+                    <p>
+                        <b>Abstract.</b> &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.
+                    </p>
+                    <p class="meta-title"><a href="/Ramanujan-Conjecture">Read web article →</a></p>
+                </div> 
+            </div>
+        </section> 
+    </div>
+
+    <!-- JavaScript for Dynamic Gradient -->
+    <script>
+        // Function to handle the scroll event
+        function handleScroll() {
+            const gradientText = document.getElementById('dynamic-gradient');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Calculate the shift amount. Adjust the divisor to control the movement speed
+            const shift = scrollTop / 10; // Adjust "10" to make the movement slower or faster
+            
+            // Update the background position. Here, we move it horizontally based on scroll
+            gradientText.style.backgroundPosition = `calc(50% + ${shift}px) center`;
+        }
+
+        // Add the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>
