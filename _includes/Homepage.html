@@ -256,8 +256,12 @@
                     .filter(article => article.score > 0) // Include only articles with a non-zero score
                     .sort((a, b) => b.score - a.score); // Sort by score, highest first
 
-                if (results.length > 0) {
-                    results.forEach(article => {
+                // Define a threshold: only include articles that are close to the highest score
+                const threshold = results.length > 0 ? results[0].score * 0.5 : 0; // At least 50% of the top score
+                const filteredResults = results.filter(article => article.score >= threshold).slice(0, 4); // Limit to top 4 results
+
+                if (filteredResults.length > 0) {
+                    filteredResults.forEach(article => {
                         const item = document.createElement('div');
                         item.className = 'autocomplete-item';
                         item.innerHTML = `<a href="${article.link}">${highlightMatch(article.title, query)}</a>`;
@@ -266,7 +270,7 @@
                 } else {
                     const noResults = document.createElement('div');
                     noResults.className = 'autocomplete-item';
-                    noResults.textContent = 'No results found';
+                    noResults.textContent = 'No relevant results found';
                     dropdown.appendChild(noResults);
                 }
 
