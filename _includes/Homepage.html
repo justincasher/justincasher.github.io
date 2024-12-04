@@ -1,4 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Homepage with Search Bar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
@@ -24,6 +28,12 @@
             border-radius: 5px;
         }
 
+        /* Ensure placeholder is visible */
+        .search-input::placeholder {
+            color: #888; /* Adjust color as needed */
+            opacity: 1; /* Ensure full opacity */
+        }
+
         .autocomplete-dropdown {
             position: absolute;
             width: 100%; /* Full width of the container */
@@ -34,6 +44,7 @@
             z-index: 10;
             max-height: 200px;
             overflow-y: auto;
+            display: none; /* Initially hidden */
         }
 
         .autocomplete-item {
@@ -60,142 +71,153 @@
         }
     </style>
 </head>
+<body>
+    <div class="home-intro">
+        <section class="section">
+            <div class="columns is-centered">
+                <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
+                    <div style="font-family:'Borel', cursive; font-size:2.5em;">Welcome!</div>
 
-<div class="home-intro">
-    <section class="section">
-        <div class="columns is-centered">
-            <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
-                <div style="font-family:'Borel', cursive; font-size:2.5em ">Welcome!</div>
+                    <h3>
+                        I am a mathematician working on building 
+                        <span class="gradient-text">mathematical superintelligence</span>
+                    </h3>
+                    
+                    <!-- CONTACT INFO -->
+                    <h4>
+                        Email: <a href="mailto:justinchadwickasher@gmail.com">justinchadwickasher@gmail.com</a><br>
+                        GitHub: <a href="https://www.github.com/justincasher">github.com/justincasher</a><br>
+                        LinkedIn: <a href="https://www.linkedin.com/in/justin-asher">linkedin.com/in/justin-asher</a><br>
+                    </h4>
+                    
+                    <!-- SEARCH BAR -->
+                    <div class="search-bar">
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            class="search-input" 
+                            placeholder="Search for an article" 
+                            autocomplete="off" 
+                            oninput="performSearch()" 
+                            onclick="openDropdown()"
+                        >
+                        <div id="autocomplete-dropdown" class="autocomplete-dropdown"></div>
+                    </div>                
+                    
+                    <!-- RECENT PROJECTS -->
+                    <hr>
 
-                <h3>
-                    I am a mathematician working on building 
-                    <span class="gradient-text">mathematical superintelligence</span>
-                </h3>
+                    <h5>Selected recent works</h5>
+                    
+                    <!-- Articles -->
+                    <h4>The need for an autoformalizer (2024)</h4>
+                    <p><b>Abstract.</b> &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.</p>
+                    <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
+
+                    <h4>Modeling Catan through self-play (2024)</h4>
+                    <p><b>Abstract.</b> &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.</p>
+                    <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
+
+                    <h4>Infinity categories (2024)</h4>
+                    <p><b>Abstract.</b> &nbsp; In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.</p>
+                    <p class="meta-title"><a href="/infinity-categories">Read web article →</a></p>
+
+                    <h4>The Ramanujan conjecture (2023)</h4>
+                    <p><b>Abstract.</b> &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.</p>
+                    <p class="meta-title"><a href="/Ramanujan-Conjecture">Read web article →</a></p>
+                </div> 
+            </div>
+        </section> 
+    </div>
+
+    <script>
+        // Remove the window.onload function as it's redundant
+        /*
+        window.onload = function () {
+            const searchInput = document.getElementById('search-input');
+            searchInput.value = ''; // Clear the search bar value
+            searchInput.placeholder = 'Search for an article'; // Ensure the placeholder is set
+        };
+        */
+
+        const articles = [
+            { 
+                title: 'The need for an autoformalizer', 
+                link: '/the_need_for_an_autoformalizer',
+                abstract: 'I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.'
+            },
+            { 
+                title: 'Modeling Catan through self-play', 
+                link: '/catan_rl',
+                abstract: 'I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.'
+            },
+            { 
+                title: 'Infinity categories', 
+                link: '/infinity-categories',
+                abstract: 'In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.'
+            },
+            { 
+                title: 'The Ramanujan conjecture', 
+                link: '/Ramanujan-Conjecture',
+                abstract: 'We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.'
+            }
+        ];
+
+        function performSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const dropdown = document.getElementById('autocomplete-dropdown');
+            dropdown.innerHTML = '';
+
+            if (query) {
+                const results = articles.filter(article => 
+                    article.title.toLowerCase().includes(query) || 
+                    article.abstract.toLowerCase().includes(query)
+                );
+
+                if (results.length > 0) {
+                    results.forEach(article => {
+                        const item = document.createElement('div');
+                        item.className = 'autocomplete-item';
+                        item.innerHTML = `<a href="${article.link}">${highlightMatch(article.title, query)}</a>`;
+                        dropdown.appendChild(item);
+                    });
+                } else {
+                    const noResults = document.createElement('div');
+                    noResults.className = 'autocomplete-item';
+                    noResults.textContent = 'No results found';
+                    dropdown.appendChild(noResults);
+                }
                 
-                <!-- CONTACT INFO -->
-                <h4>
-                    Email: <a href=mailto:justinchadwickasher@gmail.com>justinchadwickasher@gmail.com</a><br>
-                    GitHub: <a href=https://www.github.com/justincasher>github.com/justincasher</a><br>
-                    LinkedIn: <a href=https://www.linkedin.com/in/justin-asher>linkedin.com/in/justin-asher</a><br>
-                </h4>
-                
-                <!-- SEARCH BAR -->
-                <div class="search-bar">
-                    <input 
-                        type="text" 
-                        id="search-input" 
-                        class="search-input" 
-                        placeholder="Search for an article" 
-                        autocomplete="off" 
-                        oninput="performSearch()" 
-                        onclick="openDropdown()"
-                    >
-                    <div id="autocomplete-dropdown" class="autocomplete-dropdown"></div>
-                </div>                
-                
-                <!-- RECENT PROJECTS -->
-                <hr>
-
-                <h5>Selected recent works</h5>
-                
-                <!-- Articles -->
-                <h4>The need for an autoformalizer (2024)</h4>
-                <p><b>Abstract.</b> &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.</p>
-                <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
-
-                <h4>Modeling Catan through self-play (2024)</h4>
-                <p><b>Abstract.</b> &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.</p>
-                <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
-
-                <h4>Infinity categories (2024)</h4>
-                <p><b>Abstract.</b> &nbsp; In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.</p>
-                <p class="meta-title"><a href="/infinity-categories">Read web article →</a></p>
-
-                <h4>The Ramanujan conjecture (2023)</h4>
-                <p><b>Abstract.</b> &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.</p>
-                <p class="meta-title"><a href="/Ramanujan-Conjecture">Read web article →</a></p>
-            </div> 
-        </div>
-    </section> 
-</div>
-
-<script>
-    // Function to reset the search bar on page load
-    window.onload = function () {
-        const searchInput = document.getElementById('search-input');
-        searchInput.value = ''; // Clear the search bar value
-        searchInput.placeholder = 'Search for an article'; // Ensure the placeholder is set
-    };
-
-    const articles = [
-        { 
-            title: 'The need for an autoformalizer', 
-            link: '/the_need_for_an_autoformalizer',
-            abstract: 'I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.'
-        },
-        { 
-            title: 'Modeling Catan through self-play', 
-            link: '/catan_rl',
-            abstract: 'I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.'
-        },
-        { 
-            title: 'Infinity categories', 
-            link: '/infinity-categories',
-            abstract: 'In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.'
-        },
-        { 
-            title: 'The Ramanujan conjecture', 
-            link: '/Ramanujan-Conjecture',
-            abstract: 'We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.'
-        }
-    ];
-
-    function performSearch() {
-        const query = document.getElementById('search-input').value.toLowerCase();
-        const dropdown = document.getElementById('autocomplete-dropdown');
-        dropdown.innerHTML = '';
-
-        if (query) {
-            const results = articles.filter(article => 
-                article.title.toLowerCase().includes(query) || 
-                article.abstract.toLowerCase().includes(query)
-            );
-
-            results.forEach(article => {
-                const item = document.createElement('div');
-                item.className = 'autocomplete-item';
-                item.innerHTML = `<a href="${article.link}">${highlightMatch(article.title, query)}</a>`;
-                dropdown.appendChild(item);
-            });
-
-            if (results.length === 0) {
-                const noResults = document.createElement('div');
-                noResults.className = 'autocomplete-item';
-                noResults.textContent = 'No results found';
-                dropdown.appendChild(noResults);
+                dropdown.style.display = 'block'; // Ensure dropdown is visible when there are results
+            } else {
+                dropdown.style.display = 'none'; // Hide dropdown when query is empty
             }
         }
-    }
 
-    function highlightMatch(text, query) {
-        const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<span class="highlight">$1</span>');
-    }
-
-    function openDropdown() {
-        document.getElementById('autocomplete-dropdown').style.display = 'block';
-    }
-
-    function closeDropdown() {
-        document.getElementById('autocomplete-dropdown').style.display = 'none';
-    }
-
-    // Close dropdown when clicking anywhere on the page
-    document.addEventListener('click', function(event) {
-        const dropdown = document.getElementById('autocomplete-dropdown');
-        const searchInput = document.getElementById('search-input');
-        if (!searchInput.contains(event.target) && !dropdown.contains(event.target)) {
-            closeDropdown();
+        function highlightMatch(text, query) {
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
         }
-    });
-</script>
+
+        function openDropdown() {
+            const dropdown = document.getElementById('autocomplete-dropdown');
+            if (dropdown.innerHTML.trim() !== '') {
+                dropdown.style.display = 'block';
+            }
+        }
+
+        function closeDropdown() {
+            document.getElementById('autocomplete-dropdown').style.display = 'none';
+        }
+
+        // Close dropdown when clicking anywhere on the page except the search bar
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('autocomplete-dropdown');
+            const searchInput = document.getElementById('search-input');
+            if (!searchInput.contains(event.target) && !dropdown.contains(event.target)) {
+                closeDropdown();
+            }
+        });
+    </script>
+</body>
+</html>
