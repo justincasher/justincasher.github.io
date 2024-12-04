@@ -119,6 +119,11 @@
 </div>
 
 <script>
+    // Function to clear the search bar on page load
+    window.onload = function () {
+        document.getElementById('search-input').value = ''; // Clear the search bar
+    };
+
     const articles = [
         { 
             title: 'The need for an autoformalizer', 
@@ -191,3 +196,4 @@
         }
     });
 </script>
+
