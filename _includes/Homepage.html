@@ -14,21 +14,24 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .search-bar {
+        .search-container {
             position: relative;
-            margin-top: 20px;
-            margin-bottom: 0; /* Removed bottom margin */
+            width: 100%;
+            border: 1px solid #ccc; /* Shared border for input and dropdown */
+            border-radius: 50px; /* Rounded edges */
+            overflow: hidden; /* Ensures dropdown doesn't exceed rounded container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for container */
+            transition: all 0.3s ease; /* Smooth transition for resizing */
         }
 
         .search-input {
-            width: 100%; /* Full width of the container */
+            width: 100%;
             padding: 10px;
-            text-indent: 10px; /* Add space at the beginning */
             font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 50px; /* Fully rounded corners */
+            border: none; /* Remove individual border */
             outline: none; /* Removes the default blue outline */
-            transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+            border-radius: 50px; /* Matches container's rounded edges */
+            transition: all 0.3s ease;
         }
 
         .search-input::placeholder {
@@ -36,45 +39,39 @@
             opacity: 1; /* Ensure full opacity */
         }
 
-        .search-bar:hover .search-input {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-        }
-
-        /* Additional styles for the autocomplete dropdown */
         .autocomplete-dropdown {
             position: absolute;
-            width: 100%; /* Full width of the container */
+            width: 100%;
             background: white;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-top: 5px;
             z-index: 10;
             max-height: 200px;
             overflow-y: auto;
             display: none; /* Initially hidden */
+            padding: 0; /* Remove padding for clean layout */
         }
 
-        .autocomplete-item {
+        .autocomplete-dropdown .autocomplete-item {
             padding: 10px;
             cursor: pointer;
             border-bottom: 1px solid #f0f0f0;
         }
 
-        .autocomplete-item:hover {
+        .autocomplete-dropdown .autocomplete-item:last-child {
+            border-bottom: none; /* Remove border for the last item */
+        }
+
+        .autocomplete-dropdown .autocomplete-item:hover {
             background-color: #f7f7f7;
         }
 
-        .autocomplete-item a {
-            text-decoration: none;
-            color: #333;
+        /* Styling for when results are visible */
+        .search-container.active {
+            border-radius: 10px; /* Less rounded when expanded */
         }
 
-        .autocomplete-item a:hover {
-            text-decoration: underline;
-        }
-
-        .autocomplete-item .highlight {
-            background-color: yellow;
+        /* Additional general styles */
+        .search-bar:hover .search-input {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
         }
     </style>
 </head>
@@ -98,7 +95,7 @@
                     </h4>
                     
                     <!-- SEARCH BAR -->
-                    <div class="search-bar">
+                    <div class="search-container">
                         <input 
                             type="text" 
                             id="search-input" 
@@ -109,7 +106,7 @@
                             onclick="openDropdown()"
                         >
                         <div id="autocomplete-dropdown" class="autocomplete-dropdown"></div>
-                    </div>                
+                    </div>                    
                     
                     <!-- RECENT PROJECTS -->
                     <hr>
