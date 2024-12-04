@@ -231,7 +231,7 @@
         ];
 
         function performSearch() {
-            const query = document.getElementById('search-input').value.toLowerCase();
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
             const dropdown = document.getElementById('autocomplete-dropdown');
             dropdown.innerHTML = '';
 
@@ -242,12 +242,17 @@
                         const text = `${article.title} ${article.abstract} ${article.keywords?.join(' ') || ''}`.toLowerCase();
                         let score = 0;
 
+                        // Boost for exact match
+                        if (text.includes(query)) {
+                            score += 50; // Significant boost for exact phrase match
+                        }
+
                         // Score based on the presence of each query word
                         queryWords.forEach(word => {
                             if (text.includes(word)) {
                                 score += 10; // Exact word match gives a high score
                             } else if (fuzzyMatch(text, word)) {
-                                score += 5; // Fuzzy match gives a lower score
+                                score += 3; // Fuzzy match gives a lower score
                             }
                         });
 
@@ -256,8 +261,8 @@
                     .filter(article => article.score > 0) // Include only articles with a non-zero score
                     .sort((a, b) => b.score - a.score); // Sort by score, highest first
 
-                // Define a threshold: only include articles that are close to the highest score
-                const threshold = results.length > 0 ? results[0].score * 0.5 : 0; // At least 50% of the top score
+                // Define a stricter threshold for relevance
+                const threshold = results.length > 0 ? results[0].score * 0.7 : 0; // At least 70% of the top score
                 const filteredResults = results.filter(article => article.score >= threshold).slice(0, 4); // Limit to top 4 results
 
                 if (filteredResults.length > 0) {
