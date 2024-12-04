@@ -10,8 +10,8 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Style for the search bar */
         .search-bar {
+            position: relative;
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -24,18 +24,39 @@
             border-radius: 5px;
         }
 
-        .search-button {
-            padding: 10px 15px;
-            font-size: 1em;
-            background-color: #F7AD28;
-            color: white;
-            border: none;
+        .autocomplete-dropdown {
+            position: absolute;
+            width: 80%;
+            background: white;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            cursor: pointer;
+            margin-top: 5px;
+            z-index: 10;
+            max-height: 200px;
+            overflow-y: auto;
         }
 
-        .search-button:hover {
-            background-color: #D62404;
+        .autocomplete-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .autocomplete-item:hover {
+            background-color: #f7f7f7;
+        }
+
+        .autocomplete-item a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .autocomplete-item a:hover {
+            text-decoration: underline;
+        }
+
+        .autocomplete-item .highlight {
+            background-color: yellow;
         }
     </style>
 </head>
@@ -60,8 +81,14 @@
                 
                 <!-- SEARCH BAR -->
                 <div class="search-bar">
-                    <input type="text" id="search-input" class="search-input" placeholder="Search articles...">
-                    <button class="search-button" onclick="performSearch()">Search</button>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Search articles..." 
+                        oninput="performSearch()"
+                    >
+                    <div id="autocomplete-dropdown" class="autocomplete-dropdown"></div>
                 </div>
                 
                 <!-- RECENT PROJECTS -->
@@ -75,7 +102,7 @@
                 <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
 
                 <h4>Modeling Catan through self-play (2024)</h4>
-                <p><b>Abstract.</b> &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.</p>
+                <p><b>Abstract.</b> &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.</p>
                 <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
 
                 <h4>Infinity categories (2024)</h4>
@@ -91,20 +118,58 @@
 </div>
 
 <script>
+    const articles = [
+        { 
+            title: 'The need for an autoformalizer', 
+            link: '/the_need_for_an_autoformalizer',
+            abstract: 'I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.'
+        },
+        { 
+            title: 'Modeling Catan through self-play', 
+            link: '/catan_rl',
+            abstract: 'I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.'
+        },
+        { 
+            title: 'Infinity categories', 
+            link: '/infinity-categories',
+            abstract: 'In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.'
+        },
+        { 
+            title: 'The Ramanujan conjecture', 
+            link: '/Ramanujan-Conjecture',
+            abstract: 'We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.'
+        }
+    ];
+
     function performSearch() {
         const query = document.getElementById('search-input').value.toLowerCase();
-        const articles = [
-            { title: 'The need for an autoformalizer', link: '/the_need_for_an_autoformalizer' },
-            { title: 'Modeling Catan through self-play', link: '/catan_rl' },
-            { title: 'Infinity categories', link: '/infinity-categories' },
-            { title: 'The Ramanujan conjecture', link: '/Ramanujan-Conjecture' }
-        ];
-        const result = articles.filter(article => article.title.toLowerCase().includes(query));
-        
-        if (result.length > 0) {
-            alert('Found articles:\n' + result.map(r => `${r.title} (${r.link})`).join('\n'));
-        } else {
-            alert('No articles found.');
+        const dropdown = document.getElementById('autocomplete-dropdown');
+        dropdown.innerHTML = '';
+
+        if (query) {
+            const results = articles.filter(article => 
+                article.title.toLowerCase().includes(query) || 
+                article.abstract.toLowerCase().includes(query)
+            );
+
+            results.forEach(article => {
+                const item = document.createElement('div');
+                item.className = 'autocomplete-item';
+                item.innerHTML = `<a href="${article.link}">${highlightMatch(article.title, query)}</a>`;
+                dropdown.appendChild(item);
+            });
+
+            if (results.length === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'autocomplete-item';
+                noResults.textContent = 'No results found';
+                dropdown.appendChild(noResults);
+            }
         }
+    }
+
+    function highlightMatch(text, query) {
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<span class="highlight">$1</span>');
     }
 </script>
