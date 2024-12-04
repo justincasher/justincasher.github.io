@@ -23,7 +23,7 @@ title: A course on LLMs
 
 &emsp; Let $ R $ be a ring. A *neural network* $ f \colon R^{d_1} \to R^{d_n} $ is a composition of functions $ f = g_n \circ \cdots \circ g_1$ between free $ R $-modules $ g_j \colon R^{d_j} \to R^{d_{j+1}} $. We call every coordinate in $ R^{d_j} $ a *neuron*, $ R^{d_1} $ the *input layer*, $ R^{d_n} $ the *output layer*, and each $ R^{d_j} $, $ 1 < d_j < n $ a *hidden layer*. Commonly, $ R $ is taken to be the real numbers $ \mathbb{R} $ or the complex numbers $ \mathbb{C} $.
 
-&emsp; Neural 
+&emsp; 
 
 
 
