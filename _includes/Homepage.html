@@ -2,62 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage with Search Bar</title>
+    <title>Homepage with Enhanced Search Bar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
 
     <style>
+        body {
+            font-family: 'Borel', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
         .gradient-text {
             background: linear-gradient(to right, #F7AD28, #D62404); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .home-intro {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .home-intro h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .home-intro h4, .home-intro h5 {
+            margin: 10px 0;
+        }
+
+        .home-intro a {
+            color: #D62404;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .home-intro a:hover {
+            color: #F7AD28;
+            text-decoration: underline;
+        }
+
+        /* Search Bar Styles */
         .search-bar {
             position: relative;
-            margin-top: 20px;
-            margin-bottom: 0; /* Removed bottom margin */
+            margin-top: 30px;
+            width: 100%;
         }
 
         .search-input {
-            width: 100%; /* Full width of the container */
-            padding: 10px;
-            text-indent: 10px; /* Add space at the beginning */
+            width: 100%;
+            padding: 12px 20px;
             font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 50px; /* Fully rounded corners */
-            outline: none; /* Removes the default blue outline */
-            transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
         }
 
-        .search-input::placeholder {
-            color: #888; /* Adjust color as needed */
-            opacity: 1; /* Ensure full opacity */
+        .search-input:focus {
+            border-color: #D62404;
+            box-shadow: 0 0 5px rgba(214, 36, 4, 0.5);
         }
 
-        .search-bar:hover .search-input {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-        }
-
-        /* Additional styles for the autocomplete dropdown */
+        /* Autocomplete Dropdown */
         .autocomplete-dropdown {
             position: absolute;
-            width: 100%; /* Full width of the container */
+            top: 100%;
+            left: 0;
+            width: 100%;
             background: white;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-top: 5px;
-            z-index: 10;
-            max-height: 200px;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            max-height: 300px;
             overflow-y: auto;
-            display: none; /* Initially hidden */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
         }
 
         .autocomplete-item {
-            padding: 10px;
+            padding: 12px 20px;
             cursor: pointer;
             border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s;
+        }
+
+        .autocomplete-item:last-child {
+            border-bottom: none;
         }
 
         .autocomplete-item:hover {
@@ -67,86 +105,115 @@
         .autocomplete-item a {
             text-decoration: none;
             color: #333;
+            display: block;
         }
 
-        .autocomplete-item a:hover {
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .search-input {
+                padding: 10px 15px;
+            }
+
+            .autocomplete-item {
+                padding: 10px 15px;
+            }
+        }
+
+        /* Recent Projects Section */
+        .recent-projects {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .recent-projects h4 {
+            color: #D62404;
+            margin-bottom: 5px;
+        }
+
+        .recent-projects p {
+            margin: 5px 0 15px 0;
+        }
+
+        .meta-title a {
+            color: #F7AD28;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .meta-title a:hover {
             text-decoration: underline;
         }
 
-        .autocomplete-item .highlight {
-            background-color: yellow;
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 40px 0;
         }
     </style>
 </head>
 <body>
     <div class="home-intro">
-        <section class="section">
-            <div class="columns is-centered">
-                <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
-                    <div style="font-family:'Borel', cursive; font-size:2.5em;">Welcome!</div>
+        <div style="font-size:2.5em;">Welcome!</div>
 
-                    <h3>
-                        I am a mathematician working on building 
-                        <span class="gradient-text">mathematical superintelligence</span>
-                    </h3>
-                    
-                    <!-- CONTACT INFO -->
-                    <h4>
-                        Email: <a href="mailto:justinchadwickasher@gmail.com">justinchadwickasher@gmail.com</a><br>
-                        GitHub: <a href="https://www.github.com/justincasher">github.com/justincasher</a><br>
-                        LinkedIn: <a href="https://www.linkedin.com/in/justin-asher">linkedin.com/in/justin-asher</a><br>
-                    </h4>
-                    
-                    <!-- SEARCH BAR -->
-                    <div class="search-bar">
-                        <input 
-                            type="text" 
-                            id="search-input" 
-                            class="search-input" 
-                            placeholder="Search for an article" 
-                            autocomplete="off" 
-                            oninput="performSearch()" 
-                            onclick="openDropdown()"
-                        >
-                        <div id="autocomplete-dropdown" class="autocomplete-dropdown"></div>
-                    </div>                
-                    
-                    <!-- RECENT PROJECTS -->
-                    <hr>
+        <h3>
+            I am a mathematician working on building 
+            <span class="gradient-text">mathematical superintelligence</span>
+        </h3>
+        
+        <!-- CONTACT INFO -->
+        <h4>
+            Email: <a href="mailto:justinchadwickasher@gmail.com">justinchadwickasher@gmail.com</a><br>
+            GitHub: <a href="https://www.github.com/justincasher">github.com/justincasher</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/justin-asher">linkedin.com/in/justin-asher</a><br>
+        </h4>
+        
+        <!-- SEARCH BAR -->
+        <div class="search-bar">
+            <input 
+                type="text" 
+                id="search-input" 
+                class="search-input" 
+                placeholder="Search for an article" 
+                autocomplete="off" 
+                oninput="performSearch()" 
+                onclick="openDropdown()"
+                aria-autocomplete="list"
+                aria-haspopup="true"
+                aria-expanded="false"
+            >
+            <div id="autocomplete-dropdown" class="autocomplete-dropdown" role="listbox"></div>
+        </div>                
+        
+        <!-- RECENT PROJECTS -->
+        <hr>
 
-                    <h5>Selected recent works</h5>
-                    
-                    <!-- Articles -->
-                    <h4>The need for an autoformalizer (2024)</h4>
-                    <p><b>Abstract.</b> &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.</p>
-                    <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read web article →</a></p>
+        <div class="recent-projects">
+            <h5>Selected Recent Works</h5>
+            
+            <!-- Articles -->
+            <h4>The Need for an Autoformalizer (2024)</h4>
+            <p><b>Abstract:</b> I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.</p>
+            <p class="meta-title"><a href="/the_need_for_an_autoformalizer">Read Web Article →</a></p>
 
-                    <h4>Modeling Catan through self-play (2024)</h4>
-                    <p><b>Abstract.</b> &nbsp; I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.</p>
-                    <p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
+            <h4>Modeling Catan Through Self-Play (2024)</h4>
+            <p><b>Abstract:</b> I taught a neural network how to play the board game Catan using reinforcement learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure.</p>
+            <p class="meta-title"><a href="/catan_rl">Read Web Article →</a></p>
 
-                    <h4>Infinity categories (2024)</h4>
-                    <p><b>Abstract.</b> &nbsp; In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.</p>
-                    <p class="meta-title"><a href="/infinity-categories">Read web article →</a></p>
+            <h4>Infinity Categories (2024)</h4>
+            <p><b>Abstract:</b> In this note, we answer the question "What is an infinity category?", explaining the definition in terms of simplicial categories, ordinary category theory, and homotopy theory.</p>
+            <p class="meta-title"><a href="/infinity-categories">Read Web Article →</a></p>
 
-                    <h4>The Ramanujan conjecture (2023)</h4>
-                    <p><b>Abstract.</b> &nbsp; We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.</p>
-                    <p class="meta-title"><a href="/Ramanujan-Conjecture">Read web article →</a></p>
-                </div> 
-            </div>
-        </section> 
+            <h4>The Ramanujan Conjecture (2023)</h4>
+            <p><b>Abstract:</b> We discuss some of the main tools used by Deligne in proving the Ramanujan conjecture. These are notes from a talk, so I do not include most proofs.</p>
+            <p class="meta-title"><a href="/Ramanujan-Conjecture">Read Web Article →</a></p>
+        </div>
     </div>
 
     <script>
-        // Remove the window.onload function as it's redundant
-        /*
-        window.onload = function () {
-            const searchInput = document.getElementById('search-input');
-            searchInput.value = ''; // Clear the search bar value
-            searchInput.placeholder = 'Search for an article'; // Ensure the placeholder is set
-        };
-        */
-
         const articles = [
             /* AI */
             { 
@@ -243,39 +310,37 @@
             dropdown.innerHTML = '';
 
             if (query) {
-                const queryWords = query.split(/\s+/); // Split the query into individual words
+                const queryWords = query.split(/\s+/);
                 const results = articles
                     .map(article => {
                         const text = `${article.title} ${article.abstract} ${article.keywords?.join(' ') || ''}`.toLowerCase();
                         let score = 0;
 
-                        // Boost for exact match
                         if (text.includes(query)) {
-                            score += 50; // Significant boost for exact phrase match
+                            score += 50;
                         }
 
-                        // Score based on the presence of each query word
                         queryWords.forEach(word => {
                             if (text.includes(word)) {
-                                score += 10; // Exact word match gives a high score
+                                score += 10;
                             } else if (fuzzyMatch(text, word)) {
-                                score += 3; // Fuzzy match gives a lower score
+                                score += 3;
                             }
                         });
 
                         return { ...article, score };
                     })
-                    .filter(article => article.score > 0) // Include only articles with a non-zero score
-                    .sort((a, b) => b.score - a.score); // Sort by score, highest first
+                    .filter(article => article.score > 0)
+                    .sort((a, b) => b.score - a.score);
 
-                // Define a stricter threshold for relevance
-                const threshold = results.length > 0 ? results[0].score * 0.7 : 0; // At least 70% of the top score
-                const filteredResults = results.filter(article => article.score >= threshold).slice(0, 4); // Limit to top 4 results
+                const threshold = results.length > 0 ? results[0].score * 0.7 : 0;
+                const filteredResults = results.filter(article => article.score >= threshold).slice(0, 4);
 
                 if (filteredResults.length > 0) {
                     filteredResults.forEach(article => {
                         const item = document.createElement('div');
                         item.className = 'autocomplete-item';
+                        item.setAttribute('role', 'option');
                         item.innerHTML = `<a href="${article.link}">${highlightMatch(article.title, query)}</a>`;
                         dropdown.appendChild(item);
                     });
@@ -286,16 +351,17 @@
                     dropdown.appendChild(noResults);
                 }
 
-                dropdown.style.display = 'block'; // Ensure dropdown is visible when there are results
+                dropdown.style.display = 'block';
+                document.getElementById('search-input').setAttribute('aria-expanded', 'true');
             } else {
-                dropdown.style.display = 'none'; // Hide dropdown when query is empty
+                dropdown.style.display = 'none';
+                document.getElementById('search-input').setAttribute('aria-expanded', 'false');
             }
         }
 
         function fuzzyMatch(text, query) {
-            // Basic fuzzy matching logic using Levenshtein distance
             const distance = levenshteinDistance(text, query);
-            const threshold = Math.ceil(query.length * 0.3); // Allow up to 30% mismatch
+            const threshold = Math.ceil(query.length * 0.3);
             return distance <= threshold;
         }
 
@@ -309,9 +375,9 @@
                 for (let j = 1; j <= b.length; j++) {
                     const cost = a[i - 1] === b[j - 1] ? 0 : 1;
                     matrix[i][j] = Math.min(
-                        matrix[i - 1][j] + 1, // Deletion
-                        matrix[i][j - 1] + 1, // Insertion
-                        matrix[i - 1][j - 1] + cost // Substitution
+                        matrix[i - 1][j] + 1,
+                        matrix[i][j - 1] + 1,
+                        matrix[i - 1][j - 1] + cost
                     );
                 }
             }
@@ -320,22 +386,27 @@
         }
 
         function highlightMatch(text, query) {
-            const regex = new RegExp(`(${query})`, 'gi');
+            const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
             return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
 
         function openDropdown() {
             const dropdown = document.getElementById('autocomplete-dropdown');
             if (dropdown.innerHTML.trim() !== '') {
                 dropdown.style.display = 'block';
+                document.getElementById('search-input').setAttribute('aria-expanded', 'true');
             }
         }
 
         function closeDropdown() {
             document.getElementById('autocomplete-dropdown').style.display = 'none';
+            document.getElementById('search-input').setAttribute('aria-expanded', 'false');
         }
 
-        // Close dropdown when clicking anywhere on the page except the search bar
         document.addEventListener('click', function(event) {
             const dropdown = document.getElementById('autocomplete-dropdown');
             const searchInput = document.getElementById('search-input');
@@ -346,3 +417,4 @@
     </script>
 </body>
 </html>
+
