@@ -236,11 +236,25 @@
             dropdown.innerHTML = '';
 
             if (query) {
-                const results = articles.filter(article => 
-                    article.title.toLowerCase().includes(query) || 
-                    article.abstract.toLowerCase().includes(query) || 
-                    (article.keywords && article.keywords.some(keyword => keyword.toLowerCase().includes(query)))
-                );
+                const queryWords = query.split(/\s+/); // Split the query into individual words
+                const results = articles
+                    .map(article => {
+                        const text = `${article.title} ${article.abstract} ${article.keywords?.join(' ') || ''}`.toLowerCase();
+                        let score = 0;
+
+                        // Score based on the presence of each query word
+                        queryWords.forEach(word => {
+                            if (text.includes(word)) {
+                                score += 10; // Exact word match gives a high score
+                            } else if (fuzzyMatch(text, word)) {
+                                score += 5; // Fuzzy match gives a lower score
+                            }
+                        });
+
+                        return { ...article, score };
+                    })
+                    .filter(article => article.score > 0) // Include only articles with a non-zero score
+                    .sort((a, b) => b.score - a.score); // Sort by score, highest first
 
                 if (results.length > 0) {
                     results.forEach(article => {
@@ -255,11 +269,38 @@
                     noResults.textContent = 'No results found';
                     dropdown.appendChild(noResults);
                 }
-                
+
                 dropdown.style.display = 'block'; // Ensure dropdown is visible when there are results
             } else {
                 dropdown.style.display = 'none'; // Hide dropdown when query is empty
             }
+        }
+
+        function fuzzyMatch(text, query) {
+            // Basic fuzzy matching logic using Levenshtein distance
+            const distance = levenshteinDistance(text, query);
+            const threshold = Math.ceil(query.length * 0.3); // Allow up to 30% mismatch
+            return distance <= threshold;
+        }
+
+        function levenshteinDistance(a, b) {
+            const matrix = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
+
+            for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
+            for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+
+            for (let i = 1; i <= a.length; i++) {
+                for (let j = 1; j <= b.length; j++) {
+                    const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+                    matrix[i][j] = Math.min(
+                        matrix[i - 1][j] + 1, // Deletion
+                        matrix[i][j - 1] + 1, // Insertion
+                        matrix[i - 1][j - 1] + cost // Substitution
+                    );
+                }
+            }
+
+            return matrix[a.length][b.length];
         }
 
         function highlightMatch(text, query) {
