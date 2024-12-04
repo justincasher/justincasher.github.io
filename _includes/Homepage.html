@@ -119,9 +119,11 @@
 </div>
 
 <script>
-    // Function to clear the search bar on page load
+    // Function to reset the search bar on page load
     window.onload = function () {
-        document.getElementById('search-input').value = ''; // Clear the search bar
+        const searchInput = document.getElementById('search-input');
+        searchInput.value = ''; // Clear the search bar value
+        searchInput.placeholder = 'Search for an article'; // Ensure the placeholder is set
     };
 
     const articles = [
@@ -196,4 +198,3 @@
         }
     });
 </script>
-
