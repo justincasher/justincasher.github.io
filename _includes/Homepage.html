@@ -25,15 +25,21 @@
             padding: 10px;
             font-size: 1em;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 50px; /* Fully rounded corners */
+            outline: none; /* Removes the default blue outline */
+            transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
         }
 
-        /* Ensure placeholder is visible */
         .search-input::placeholder {
             color: #888; /* Adjust color as needed */
             opacity: 1; /* Ensure full opacity */
         }
 
+        .search-bar:hover .search-input {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+        }
+
+        /* Additional styles for the autocomplete dropdown */
         .autocomplete-dropdown {
             position: absolute;
             width: 100%; /* Full width of the container */
