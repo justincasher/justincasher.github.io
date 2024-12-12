@@ -108,7 +108,7 @@ $$
     \mathcal{H}^k(M) = \ker \{\Delta \colon \Omega^k \to \Omega^k\}
 $$
 
-and call elements of $ \mathcal{H}^k(M) $ *Harmonic $ k $-forms*. They allow us to compute the de Rham cohomology groups. 
+and call elements of $ \mathcal{H}^k(M) $ *harmonic $ k $-forms*. They allow us to compute the de Rham cohomology groups. 
 
 **Hodge isomorphism.** &nbsp; *Let $ M $ be a closed oriented Riemannian manifold. Then there exists a canonical isomorphism $ \mathcal{H}^k(M) \cong H_{\text{dR}}^k(M) $.*
 
