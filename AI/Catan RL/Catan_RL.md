@@ -19,7 +19,7 @@ title: Modeling Catan through self-play (2024)
 6. [Conclusions](#6-conclusions)
 7. [References](#7-references)
 
-*Note.* &emsp; I would like to point out that this experiment is not true reinforcement learning; it is supervised learning. Instead of computing a reward at each stage, we train a neural network to predict the end goal, and we exploit temporal differences to use this result to update network predictions at earlier states.
+*Note.* &nbsp; I would like to point out that this experiment is not true reinforcement learning; it is supervised learning. Instead of computing a reward at each stage, we train a neural network to predict the end goal, and we exploit temporal differences to use this result to update network predictions at earlier states.
 
 
 ## 1. Introduction
