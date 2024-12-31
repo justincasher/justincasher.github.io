@@ -1,6 +1,6 @@
 ---
 layout: AI
-permalink: /catan_rl
+permalink: /catan_ai
 feedformat: card
 title: Modeling Catan through self-play (2024)
 ---

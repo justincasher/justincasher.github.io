@@ -19,7 +19,7 @@ This page showcases AI projects I have completed or am currently working on.
 
 **Abstract.** &nbsp; I taught a neural network how to play the board game Catan using supervised learning via self-play. When training, I utilized both temporal-difference and Monte-Carlo tree search methods, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
 
-<p class="meta-title"><a href="/catan_rl">Read web article →</a></p>
+<p class="meta-title"><a href="/catan_ai">Read web article →</a></p>
 
 
 #### The brain age project (2020)
