@@ -97,8 +97,6 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; I exploited TDs as follows. Each turn, the program records the prediction the current player has made for their chosen move; this yields one prediction vector for every player. Once the game has concluded, for each player, I construct a labels vector by copying and then shifting the predictions vector one coordinate over—forgetting the first prediction made—and inserting the final game score in the final position. Effectively, this compares subsequent predictions to each other, and the final prediction to the final game score. Finally, I compute the loss, cf. [§4.3](#43-criterion-and-gradient-clipping), and backpropagate it.
 
-&emsp; Another possible algorithm would be updating the weights of the network every time a player made a move; this seemed impractical for two reasons. The first is that it would increase training time for what appeared to be little gain: without knowing the outcome of the game, the network cannot validate its predictions. The second reason is that my network currently compares subsequent predictions made by each player; this could not be done each turn for each player, as it would interfere with computing the loss of other predictions. In other words, the network weights would change between predictions, which will throw an error in PyTorch. To combat this problem, I would have had to have the network output a vector of final place predictions, one for each player. Then we could compare subsequent vectors without needing to wait to return to the same player.
-
 
 ##### 4.2. Monte-Carlo tree search
 
