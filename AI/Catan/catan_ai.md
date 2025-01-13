@@ -20,6 +20,9 @@ title: Modeling Catan through self-play (2024)
 7. [References](#7-references)
 
 
+*Disclaimer.* &nbsp; This was my first real attempt at building something using PyTorch and deep learning, so parts of it are a bit messy. Future work should be much more straightforward and streamlined.
+
+
 ## 1. Introduction
 
 &emsp; Catan is a strategic board game where players attempt to control the resources on the board in order to score points. Throughout the game, players take turns rolling dice, trading resource cards, purchasing development cards, and building roads and settlements, until they reach 10 points. There are many luck-based elements to the game, such as who goes first, the distribution of the dice rolls, and the development card shuffle. Hence, it is often difficult to evaluate a given position, especially when players are pursuing contrasting strategies.
