@@ -5,7 +5,7 @@ feedformat: card
 title: Modeling Catan through self-play (2024)
 ---
 <br>
-**Abstract.** &nbsp; I taught a neural network how to play the board game Catan using supervised learning via self-play. When training, I utilized both temporal-difference and a simplified Monte-Carlo tree search method, along with a residual neural network structure. The resulting model achieved an intermediate level of play.
+**Abstract.** &nbsp; I taught a neural network how to play the board game Catan using supervised learning via self-play. The resulting model achieved an intermediate level of play.
 
 [GitHub repository](https://github.com/justincasher/Catan){:target="_blank"}
 
@@ -18,8 +18,6 @@ title: Modeling Catan through self-play (2024)
 5. [Results](#5-results)
 6. [Conclusions](#6-conclusions)
 7. [References](#7-references)
-
-*Note.* &nbsp; I would like to point out that this experiment is not true reinforcement learning; it is supervised learning. Instead of computing a reward at each stage, we train a neural network to predict the end goal, and we exploit temporal differences to use this result to update network predictions at earlier states.
 
 
 ## 1. Introduction
