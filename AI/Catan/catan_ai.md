@@ -78,9 +78,6 @@ title: Modeling Catan through self-play (2024)
 
 &emsp; One important hyperparameter was the number of neurons in the hidden layers. I chose 500 to create a sufficiently large network while also prioritizing training time. I discuss in [§4.4](#44-adamw) that, by exploiting weight decay, having too large of a network is more of a concern than too small. I hoped the CatanNetwork would be large enough, although now I believe a bigger model is needed. Thus, with the chosen number of neurons, the network was able to play a game of Catan approximately every 4 seconds, which translates to 22,500 games per day. 
 
-&emsp; I am interested in experimenting with deeper architectures or more hidden neurons in the future. One comparison I made when training my model was to image recognition architectures. If you consider the current board information as an image, where instead of classifying images we are classifying moves, then it is natural to compare the number of parameters. Strong image recognition architectures for the CIFAR-100 data have anywhere from 2,500,000 to 25,000,000 parameters, cf. [[2]](#7-references). This was one justification I made for my choice of architecture.
-
-
 
 ## 4. Training procedure
 
