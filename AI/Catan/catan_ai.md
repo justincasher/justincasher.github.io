@@ -20,7 +20,7 @@ title: Modeling Catan through self-play (2024)
 7. [References](#7-references)
 
 
-*Disclaimer.* &nbsp; This was my first real attempt at building something using PyTorch and deep learning, so parts of it are a bit messy. In particular, the decision to use supervised learning with a small batch size is not common in comparison to more mainstream reinforcement learning methods.
+*Disclaimer.* &nbsp; This project was my first substantial effort using PyTorch and deep learning, so certain parts remain less polished. In particular, I leveraged a supervised learning setup with small batch sizes, which contrasts with the predominant reinforcement learning approaches. Nonetheless, it offered a practical starting point for experimenting with automated strategies in Catan.
 
 
 ## 1. Introduction
