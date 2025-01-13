@@ -16,7 +16,7 @@ title: Modeling Catan through self-play (2024)
 3. [Network architecture](#3-network-architecture)
 4. [Training procedure](#4-training-procedure)
 5. [Results](#5-results)
-6. [Conclusions](#6-conclusions)
+6. [Conclusion](#6-conclusion)
 7. [References](#7-references)
 
 
@@ -168,21 +168,11 @@ title: Modeling Catan through self-play (2024)
 
 
 
-## 6. Conclusions
+## 6. Conclusion
 
-&emsp; My models act as a proof of concept, demonstrating that Catan can be played at a high-level using supervised learning. My training procedure should be compared to that of DeepMind's models for Atari, chess, and Go. Their models are often trained on large GPU (or TPU) clusters, which was not feasible here. For instance, their chess bot, AlphaZero, was trained in 2017 using approximately 5,000 TPUs in parallel. As a rough estimate, suppose they trained for 9 hours—the amount of time it took them to beat Stockfish 8—then divide by a factor of 8 to take into account advances in GPU efficiency. This gives us 5625 hours of compute or ~234 days, compared to just training for a week like I did. It also aids significantly in performing experiments, thus resolving certain issues I had with training my model. Thus, I am led to believe that if provided with ample compute, we could achieve similar results here. 
+&emsp; An intriguing possibility for future work is implementing a more rigorous Monte-Carlo tree search (MCTS) algorithm in a highly optimized C++ environment. By minimizing environment runtime overhead—through careful management of board state and move generation—and by parallelizing neural network calls, one could vastly increase the volume of playouts per second. Combined with an attention-based architecture to track relevant resources and positions (e.g., which tiles are most valuable or which roads are unblocked), a well-designed system might achieve super-human play on a modest local machine. The network would be able to systematically explore multiple branches of the game tree, refining its predictions and strategies over time in a manner reminiscent of AlphaZero’s approach to chess, but at a scale that is computationally feasible for single-workstation training.
 
-&emsp; Likewise, one significant problem I noticed is how slow each MCTS playout was, especially each forward pass through the network. For example, I wanted to implement a version of my model which could train itself on (or at least study) the current board position while playing a human. However, this was seemingly impossible without (a) further computational power or (b) a faster implementation. I pursued the latter: I programmed a version of my bot in C++ using LibTorch. This cut the MCTS playout time almost in half, but this is simply not enough. An interesting approach here could be using a smaller model which is quickly on the CPU trained while playing.
-
-&emsp; Some possible future improvements are the following: 
-
- <ul>
-  <li>Provide the network with past moves and dice rolls.</li>
-  <li>Fix the problem from TDs that error can become inversely correlated to the number of turns to win.</li>
-  <li>Utilize attention mechanisms to keep track of cards for trading.</li>
-  <li>Enable AMSGrad when training.</li>
-  <li>Add human engineered input features.</li>
-</ul> 
+&emsp; Of course, we must remember the sheer scale at which DeepMind’s models have been trained. For instance, their chess bot, AlphaZero, reportedly leveraged around 5,000 TPUs in parallel over approximately nine hours. Even accounting for potential advances in GPU efficiency, this represents thousands of hours of total compute—well over half a year’s worth of training on a single high-end workstation—while my model was trained in only about a week. Nonetheless, a carefully engineered C++ implementation could narrow this gap. By eliminating environment overhead, employing data structures that exploit concurrency, and integrating attention mechanisms in the neural network, an MCTS-based bot might be trained orders of magnitude more efficiently, enabling a far deeper exploration of the Catan game space and ultimately matching or surpassing human-level performance.
 
 
 ## 7. References
