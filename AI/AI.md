@@ -5,7 +5,7 @@ feedformat: card
 title: "Artificial intelligence"
 ---
 <br/>
-This page showcases AI projects I have completed or am currently working on.
+This page showcases AI articles and projects I have completed or am currently working on.
 
 
 ### 2024 
