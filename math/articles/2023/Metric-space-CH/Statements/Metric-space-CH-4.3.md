@@ -1,7 +1,7 @@
 ---
 layout: Statement
 indent: true
-permalink: /Metric-space-CH-4:3
+permalink: /metric-space-ch-4:3
 feedformat: card
 title: Cartan-Hadamard theorem for metric spaces
 ---

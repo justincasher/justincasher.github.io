@@ -1,7 +1,7 @@
 ---
 layout: 2024_spring_AG_NT_seminar_notes
 indent: true
-permalink: /Hilberts-10th-problem-S
+permalink: /hilberts-10th-problem-s
 feedformat: card
 title: Hilbert's 10th problem
 ---

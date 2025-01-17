@@ -1,7 +1,7 @@
 ---
 layout: 2023_fall_AG_NT_seminar_notes
 indent: true
-permalink: /Casas-Alvero-S
+permalink: /casas-alvero-s
 feedformat: card
 title: The Casas-Alvero conjecture
 ---

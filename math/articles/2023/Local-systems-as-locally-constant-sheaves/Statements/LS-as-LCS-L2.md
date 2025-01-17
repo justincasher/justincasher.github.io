@@ -1,7 +1,7 @@
 ---
 layout: Statement
 indent: true
-permalink: /LS-as-LCS-L2
+permalink: /ls-as-lcs-l2
 feedformat: card
 title: Local Systems as Locally Constant Sheaves
 ---

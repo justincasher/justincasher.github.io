@@ -1,7 +1,7 @@
 ---
 layout: Statement
 indent: true
-permalink: /Gauss-Legendre-P2:2
+permalink: /gauss-legendre-p2:2
 feedformat: card
 title: The Gauss-Legendre algorithm
 ---

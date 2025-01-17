@@ -1,7 +1,7 @@
 ---
 layout: Writing
 indent: true
-permalink: /infinity-categories-U
+permalink: /infinity-categories-u
 feedformat: card
 title: Infinity categories and higher algebra seminar notes
 ---

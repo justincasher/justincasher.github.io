@@ -1,7 +1,7 @@
 ---
 layout: 2023_fall_AG_NT_seminar_notes
 indent: true
-permalink: /Weil-conjectures-intro-S
+permalink: /weil-conjectures-intro-S
 feedformat: card
 title: Motivating schemes with the Weil conjectures
 ---

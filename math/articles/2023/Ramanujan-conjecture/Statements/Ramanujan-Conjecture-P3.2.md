@@ -1,7 +1,7 @@
 ---
 layout: Statement
 indent: true
-permalink: /Ramanujan-conjecture-P3:2
+permalink: /ramanujan-conjecture-p3:2
 feedformat: card
 title: The Ramanujan conjecture
 ---

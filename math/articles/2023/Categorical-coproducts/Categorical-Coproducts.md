@@ -1,7 +1,7 @@
 ---
 layout: Math
 indent: true
-permalink: /Categorical-coproducts
+permalink: /categorical-coproducts
 feedformat: card
 title: Categorical coproducts and K-theory
 ---

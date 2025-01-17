@@ -1,7 +1,7 @@
 ---
 layout: Math
 indent: true
-permalink: /Weil-conjectures-intro
+permalink: /weil-conjectures-intro
 feedformat: card
 title: Motivating schemes with the Weil conjectures
 ---

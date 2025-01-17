@@ -1,7 +1,7 @@
 ---
 layout: Math
 indent: true
-permalink: /Euler-characteristic-is-an-index
+permalink: /euler-characteristic-is-an-index
 feedformat: card
 title: Euler characteristic is the index of an operator
 ---

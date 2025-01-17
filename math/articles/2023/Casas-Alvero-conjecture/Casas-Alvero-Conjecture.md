@@ -1,7 +1,7 @@
 ---
 layout: Math
 indent: true
-permalink: /Casas-Alvero
+permalink: /casas-alvero
 feedformat: card
 title: The Casas-Alvero conjecture
 ---

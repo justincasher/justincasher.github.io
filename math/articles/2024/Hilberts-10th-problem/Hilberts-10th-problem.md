@@ -1,7 +1,7 @@
 ---
 layout: Math
 indent: true
-permalink: /Hilberts-10th-problem
+permalink: /hilberts-10th-problem
 feedformat: card
 title: Hilbert's 10th problem
 ---

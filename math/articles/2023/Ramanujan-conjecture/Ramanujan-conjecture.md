@@ -1,7 +1,7 @@
 ---
 layout: Math
 indent: true
-permalink: /Ramanujan-Conjecture
+permalink: /ramanujan-conjecture
 feedformat: card
 title: The Ramanujan conjecture
 ---
@@ -263,7 +263,7 @@ and since $ S_{12} $ is of dimension 1, $ \Delta(z) $ is an eigenform. The coeff
 #### Overview
 
 
-&emsp; Let $ D $ denote the Dirichlet series associated to $ \Delta $. By [theorem 1](https://www.justinasher.me/Ramanujan-conjecture-T1){:target="_blank"},
+&emsp; Let $ D $ denote the Dirichlet series associated to $ \Delta $. By [theorem 1](https://www.justinasher.me/ramanujan-conjecture-t1){:target="_blank"},
 
 $$
 D(s)
@@ -384,7 +384,7 @@ $$
 #### Full level $ n $ structures
 
 
-&emsp; We would like to emulate [proposition 3.2](https://www.justinasher.me/Ramanujan-conjecture-P3:2){:target="_blank"} in the case of schemes. An *elliptic curve* over a scheme $ S $ is a proper smooth morphism $ f \colon E \to S $ whose fibers are geometrically connected curves of genus 1, equipped with a section $ e \colon S \to E $. In what follows, we will assume that $ S $ is of characteristic 0, meaning each $ s \in S $ satisfies $ \text{char} k(s) = 0 $. 
+&emsp; We would like to emulate [proposition 3.2](https://www.justinasher.me/ramanujan-conjecture-p3:2){:target="_blank"} in the case of schemes. An *elliptic curve* over a scheme $ S $ is a proper smooth morphism $ f \colon E \to S $ whose fibers are geometrically connected curves of genus 1, equipped with a section $ e \colon S \to E $. In what follows, we will assume that $ S $ is of characteristic 0, meaning each $ s \in S $ satisfies $ \text{char} k(s) = 0 $. 
 
 
 &emsp; Let $ \Gamma(n) $ be the elements $ \gamma \in \text{SL}_2(\mathbb{Z}) $ such that $ \gamma \equiv \text{Id} $ modulo $ n $, i.e.
@@ -456,7 +456,7 @@ Here, the notation means we are considering the elements of $ ^k_n W $ invariant
 &emsp; We have a Hecke operator acting on $ S_{12}(\Gamma) $. We would like to see what these operators correspond to under the isomorphism given by lemma 3.5. In particular, we can decompose this corresponding operator as a sum of the Frobenious and its adjoint, the Vershiebung. This is because they are the only two $ p $-isogenies in characteristic $ p $, and hence our Hecke operator decomposes as their sum.
 
 
-&emsp; Fix a pair $ (E, \alpha) $ as in [proposition 3.4](https://www.justinasher.me/Ramanujan-conjecture-P3:4){:target="_blank"}, and let $ F \colon E \to E^{(p)} $ denote the (classical) Frobenious. Then we can define a corresponding pair $ (E^{(p)}, \alpha^{(p)}) $ via the diagram over $ M_n \otimes \mathbb{F}_p $
+&emsp; Fix a pair $ (E, \alpha) $ as in [proposition 3.4](https://www.justinasher.me/ramanujan-conjecture-p3:4){:target="_blank"}, and let $ F \colon E \to E^{(p)} $ denote the (classical) Frobenious. Then we can define a corresponding pair $ (E^{(p)}, \alpha^{(p)}) $ via the diagram over $ M_n \otimes \mathbb{F}_p $
 
 $$
 \xymatrix{
@@ -571,7 +571,7 @@ $$
 $$
 
 
-&emsp; Since $ T_p $ action on $$ {_n^k} W_{\ell} $$ is induced by its action on $$ {_n^k} W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/Ramanujan-conjecture-L3:5){:target="_blank"} to get
+&emsp; Since $ T_p $ action on $$ {_n^k} W_{\ell} $$ is induced by its action on $$ {_n^k} W_{\infty} $$, we can apply [lemma 3.5](https://www.justinasher.me/ramanujan-conjecture-l3:5){:target="_blank"} to get
 
 $$
 \det(1-T_pX +p^{k+1}X^2; \, {_1^k W_{\ell}}) = \det(1-T_pX+p^{k+1}X^2; \, S_{k+2})^2,
@@ -591,7 +591,7 @@ $$
 H_p(X) = \det(1-FX; \, {_1^{10} W_{\ell}}).
 $$
 
-Applying [theorem 3.8](https://www.justinasher.me/Ramanujan-conjecture-T3:8){:target="_blank"} completes Deligne's proof of the Ramanujan conjecture. Q.E.D.
+Applying [theorem 3.8](https://www.justinasher.me/ramanujan-conjecture-t3:8){:target="_blank"} completes Deligne's proof of the Ramanujan conjecture. Q.E.D.
 
 
 

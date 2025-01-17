@@ -1,7 +1,7 @@
 ---
 layout: Math
 indent: true
-permalink: /Etale-phi-Gamma-modules
+permalink: /etale-phi-gamma-modules
 feedformat: card
 title: Étale (phi, Gamma)-modules
 ---

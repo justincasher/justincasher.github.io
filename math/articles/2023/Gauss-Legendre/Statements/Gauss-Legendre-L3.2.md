@@ -1,7 +1,7 @@
 ---
 layout: Statement
 indent: true
-permalink: /Gauss-Legendre-L3:2
+permalink: /gauss-legendre-l3:2
 feedformat: card
 title: The Gauss-Legendre algorithm
 ---
@@ -34,7 +34,7 @@ $$
     M(1+k, 1-k) = M(1, \sqrt{1-k^2}).
 $$
 
-Hence, applying [proposition 2.1](https://www.justinasher.me/Gauss-Legendre-P2:1){:target="_blank"} for $$ b/a = \sqrt{1-k^2} $$, we get
+Hence, applying [proposition 2.1](https://www.justinasher.me/gauss-legendre-p2:1){:target="_blank"} for $$ b/a = \sqrt{1-k^2} $$, we get
 
 $$
 	a F_S(a, b) = \frac{\pi}{2 M(1, b/a)} \\
