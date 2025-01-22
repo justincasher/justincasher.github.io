@@ -34,3 +34,9 @@ gem 'jekyll-sitemap'
 gem 'kramdown-math-katex'
 
 gem "webrick", "~> 1.7"
+
+# Other “standard” libs removed in Ruby 3.4
+gem 'csv'
+gem 'base64'
+gem 'logger'
+gem 'bigdecimal'
