@@ -8,12 +8,12 @@ title: Autoformalizer, pt. II (2025)
 **Abstract.** &nbsp; This article reports progress on building an autoformalizer, introducing the Vantage Project. Experiments highlighted LLM retrieval capabilities but also reasoning/verification limits, motivating Vantage's approach: using LLMs to suggest content for a Lean 4 knowledge base, verified through iterative checks. This graph-based KB, enabling parallel formalization, aims to create a "vantage point" for automated mathematics.
 
 
-## Table of Contents
+## Table of contents
 
 1. [Introduction](#1-introduction)
-2. [Putnam Experiments](#2-putnam-experiments)
+2. [Putnam experiments](#2-putnam-experiments)
 3. [Introducing Vantage](#3-introducing-vantage)
-4. [System Design and Workflow](#4-system-design-and-workflow)
+4. [System design and workflow](#4-system-design-and-workflow)
 5. [Conclusion](#5-conclusion)
 
 
@@ -34,7 +34,7 @@ We believe that building an extensive, interconnected, and formally verified kno
 &emsp; In this article, I will first briefly review the core ideas from the original piece. I will then discuss some relevant experiments before diving into the specifics of the Vantage Project—its goals, its core architecture, and how it operates. Finally, I will conclude with reflections on the current progress and future directions.
 
 
-## 2. Putnam Experiments
+## 2. Putnam experiments
 
 &emsp; To better understand the capabilities and limitations of current LLMs in mathematical problem-solving, particularly when using more economical models, I conducted experiments focusing on the challenging Putnam competition problems. The approach involved an agentic workflow using Gemini 2.0 Flash, structured around three interacting roles: a "Literature Bot" to identify relevant mathematical concepts and theorems, a "Proof Bot" to attempt solutions based on these ideas, and a "Review Bot" to critique the generated proofs. My central idea was to see if strategic prompting and this division of labor could compensate for the base model's less advanced reasoning abilities.
 
@@ -43,7 +43,16 @@ We believe that building an extensive, interconnected, and formally verified kno
 > $$ \frac{1 - 3x - \sqrt{1 - 14x + 9x^2}}{4} = \sum_{k=0}^{\infty} c_k x^k $$
 > for sufficiently small $x$. For a positive integer $n$, let $A$ be the $n \times n$ matrix with $i, j$-entry $c_{i+j-1}$ for $i, j \in \{1, \dots, n\}$. Find the determinant of $A$.
 
-it successfully identified key concepts like orthogonal polynomials and continued fractions and retrieved pertinent definitions and results autonomously. This highlighted the LLM's strength in accessing and synthesizing its vast internal knowledge base, providing valuable inspiration for the Proof Bot.
+The difficulty of this particular problem is underscored by the official score distribution:
+
+| Score Range | Number of Participants |
+|-------------|------------------------|
+| 0 points    | 429                    |
+| 1–2 points  | 74                     |
+| 9 points    | 1                      |
+| Other       | 0                      |
+
+The Literature Bot successfully identified key concepts like orthogonal polynomials and continued fractions and retrieved pertinent definitions and results autonomously. This highlighted the LLM's strength in accessing and synthesizing its vast internal knowledge base, providing valuable inspiration for the Proof Bot.
 
 &emsp; However, two significant challenges emerged, highlighting the gap between identifying ideas and executing rigorous proofs. First, verifying the precise applicability and correctness of the retrieved concepts within the problem's context remained difficult for the system. This reflects a broader issue: much mathematical knowledge is locked in formats (like old papers or textbooks) that are not easily machine-verified, hindering reliable exploitation by AI. Second, the Proof Bot (using Gemini 2.0 Flash) lacked the fundamental reasoning power to correctly implement a proof strategy and navigate the intricate steps required, *even when some of the core ideas were identified* by the Literature Bot. While this limitation might be seen as a "failure" of the base model, it also serves as a positive indicator: the agentic system, particularly the Literature Bot, demonstrated capabilities (like identifying relevant, non-obvious concepts) that might exceed what the base model could achieve in isolation. I hope to experiment further with more advanced reasoning models in the near future to explore these dynamics.
 
@@ -64,7 +73,7 @@ it successfully identified key concepts like orthogonal polynomials and continue
 &emsp; Technically, the Vantage Project is primarily built using Python, orchestrating interactions between the SQLite database, the Lean 4 toolchain (compiler and Lake), and external LLM APIs (currently Google's Gemini). The following section delves into the specific components and workflow that constitute the system's design.
 
 
-## 4. System Design and Workflow
+## 4. System design and workflow
 
 &emsp; The process of adding a new, verified mathematical item to the Vantage knowledge base involves a multi-stage, LLM-driven workflow, designed to move from informal ideas to formally verified Lean code. This workflow relies heavily on interaction with the existing knowledge base (KB) via a dedicated search mechanism.
 
@@ -82,3 +91,9 @@ it successfully identified key concepts like orthogonal polynomials and continue
 
 
 ## 5. Conclusion
+
+&emsp; The journey towards automated mathematical reasoning and formalization is ongoing, but the landscape is shifting rapidly. As demonstrated by experiments and the advancements in LLMs, the power to retrieve and process vast amounts of mathematical information is growing exponentially. However, the critical need for rigorous verification remains paramount. The Vantage Project represents a pragmatic approach to this challenge, leveraging state-of-the-art LLMs not as standalone provers, but as powerful assistants in the construction of a formally verified knowledge base using Lean 4. By focusing on building this structured, interconnected, and trustworthy foundation—the "vantage point"—we aim to create a resource that enhances both human and machine mathematical capabilities.
+
+&emsp; The system design, centered around an iterative loop of LLM suggestion, natural language formulation, Lean translation, and formal verification, coupled with a graph-based KB and a persistent shared library, provides a scalable framework for this endeavor. While challenges remain, particularly in handling highly complex proofs and nuanced mathematical concepts, the progress so far is encouraging.
+
+&emsp; Looking forward, the integration of such formalization technologies with LLMs holds immense promise. Systems like Vantage can provide the crucial verification layer needed to ensure the correctness of LLM-generated mathematics and code. This synergy, where LLMs generate hypotheses or proofs and formal methods provide the guarantee of soundness, could pave the way for more reliable AI systems capable of contributing meaningfully to scientific discovery, engineering, and mathematical research itself. The continued development of the Vantage knowledge base is a step towards realizing this future, building a robust foundation for the next generation of automated reasoning.
