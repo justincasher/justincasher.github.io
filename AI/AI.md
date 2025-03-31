@@ -7,6 +7,8 @@ title: "Artificial intelligence"
 <br/>
 This page showcases AI articles and projects I have completed or am currently working on.
 
+### 2025 
+1. [Autoformalizer, pt. II]({{'/autoformalizer_pt_ii' | relative_url}})
 
 ### 2024 
 
