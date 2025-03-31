@@ -8,7 +8,7 @@ title: "Artificial intelligence"
 This page showcases AI articles and projects I have completed or am currently working on.
 
 ### 2025 
-1. [Autoformalizer, pt. II]({{'/introducing_vantage' | relative_url}})
+1. [Introducing Vantage: Towards highly-parallelized autoformalization]({{'/introducing_vantage' | relative_url}})
 
 ### 2024 
 
