@@ -7,9 +7,6 @@ title: The need for an autoformalizer (2024)
 <br>
 **Abstract.** &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.
 
-[GitHub repository](https://github.com/justincasher/Autoformalizer){:target="_blank"}
-
-
 
 ## Table of Contents
 
