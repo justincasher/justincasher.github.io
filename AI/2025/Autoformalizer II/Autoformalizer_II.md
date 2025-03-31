@@ -14,7 +14,8 @@ title: Autoformalizer, pt. II (2025)
 2. [Putnam experiments](#2-putnam-experiments)
 3. [Introducing Vantage](#3-introducing-vantage)
 4. [System design and workflow](#4-system-design-and-workflow)
-5. [Conclusion](#5-conclusion)
+5. [Relationship with existing Lean libraries](#5-relationship-with-existing-lean-libraries)
+6. [Conclusion](#6-conclusion)
 
 
 ## 1. Introduction
@@ -90,10 +91,21 @@ The Literature Bot successfully identified key concepts like orthogonal polynomi
 &emsp; Underlying this workflow is a conceptual shift away from viewing mathematics as a collection of independent papers or results. Instead, the Vantage Project treats mathematical knowledge as a highly interconnected *graph*. Each definition, theorem, or lemma is a node, and dependencies form the edges. The KB explicitly stores these dependencies, and the persistent shared library materializes them. This graph perspective is not just organizational; it enables a highly *parallelized workflow*. By understanding the dependency structure, the system can identify numerous "leaf" nodes—statements whose prerequisites are already verified—and assign LLM agents to work on formalizing many of them concurrently. This allows the knowledge base to potentially grow much faster than a purely linear, paper-by-paper approach would permit.
 
 
-## 5. Conclusion
+## 5. Relationship with existing Lean libraries
 
-&emsp; The journey towards automated mathematical reasoning and formalization is ongoing, but the landscape is shifting rapidly. As demonstrated by experiments and the advancements in LLMs, the power to retrieve and process vast amounts of mathematical information is growing exponentially. However, the critical need for rigorous verification remains paramount. The Vantage Project represents a pragmatic approach to this challenge, leveraging state-of-the-art LLMs not as standalone provers, but as powerful assistants in the construction of a formally verified knowledge base using Lean 4. By focusing on building this structured, interconnected, and trustworthy foundation—the "vantage point"—we aim to create a resource that enhances both human and machine mathematical capabilities.
+&emsp; It is important to situate the Vantage Project in the context of existing efforts within the Lean ecosystem, most notably the comprehensive Mathlib library. Mathlib represents a monumental, community-driven achievement in formalizing a vast breadth of undergraduate and graduate-level mathematics, primarily optimized for human understanding and contribution.
 
-&emsp; The system design, centered around an iterative loop of LLM suggestion, natural language formulation, Lean translation, and formal verification, coupled with a graph-based KB and a persistent shared library, provides a scalable framework for this endeavor. While challenges remain, particularly in handling highly complex proofs and nuanced mathematical concepts, the progress so far is encouraging.
+&emsp; The Vantage Project, while potentially utilizing parts of Mathlib as a foundation, explores a complementary but distinct approach. Its focus on automation necessitates certain differences:
+* **Optimization for AI:** A primary goal of Vantage is to build a knowledge base structured for efficient processing and querying by AI agents, including the LLMs involved in the formalization loop itself. This might involve different organizational principles, metadata structures, or levels of granularity compared to a library primarily designed for human navigation. The automated workflow allows fine-grained control over these structural aspects, tailoring the KB for machine consumption.
+* **Focus on AI Utility:** Consequently, the design choices within the Vantage KB prioritize utility for AI-driven tasks—such as automated proof search, verification of LLM outputs, and grounding LLM reasoning—over optimizing for human browsing or direct contribution in the style of Mathlib. This represents a shift towards developing knowledge bases *for* AI systems, recognizing their increasing role in mathematical exploration.
+* **Rapid Domain Expansion:** The emphasis on LLM-assisted formalization aims to accelerate the process of building verified knowledge bases. This could potentially allow for the rapid bootstrapping of formalized libraries in new domains (e.g., physics, specialized engineering fields) where creating a dedicated, Mathlib-scale community project from scratch might be prohibitive.
+* **Accelerated Formalization Potential:** Drawing inspiration from achievements like AlphaZero in chess, where AI systems reached world-class performance through rapid, iterative self-improvement, Vantage embodies an aspiration. By tightly integrating LLM generation with formal verification, the hope is to create a feedback loop that significantly accelerates the pace of formalization, potentially allowing large portions of mathematical knowledge to be rigorously verified and interconnected in a shorter timeframe than traditional methods allow. This iterative, AI-assisted process aims to rapidly expand the "vantage point" from which new mathematics can be explored and proven.
+
+&emsp; Therefore, Vantage is less a replacement for Mathlib and more an exploration of an alternative, automation-centric methodology for building and structuring formalized mathematical knowledge, optimized for interaction with AI systems and potentially enabling faster expansion into new domains.
+
+
+## 6. Conclusion
+
+&emsp; The journey towards automated mathematical reasoning and formalization is ongoing, but the landscape is shifting rapidly. As demonstrated by experiments and the advancements in LLMs, the power to retrieve and process vast amounts of mathematical information is growing steadily. However, the critical need for rigorous verification remains paramount. The Vantage Project represents a pragmatic approach to this challenge, leveraging state-of-the-art LLMs not as standalone provers, but as powerful assistants in the construction of a formally verified knowledge base using Lean 4. By focusing on building this structured, interconnected, and trustworthy foundation—the "vantage point"—we aim to create a resource that enhances both human and machine mathematical capabilities.
 
 &emsp; Looking forward, the integration of such formalization technologies with LLMs holds immense promise. Systems like Vantage can provide the crucial verification layer needed to ensure the correctness of LLM-generated mathematics and code. This synergy, where LLMs generate hypotheses or proofs and formal methods provide the guarantee of soundness, could pave the way for more reliable AI systems capable of contributing meaningfully to scientific discovery, engineering, and mathematical research itself. The continued development of the Vantage knowledge base is a step towards realizing this future, building a robust foundation for the next generation of automated reasoning.
