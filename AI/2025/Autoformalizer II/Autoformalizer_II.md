@@ -1,8 +1,8 @@
 ---
 layout: AI
-permalink: /autoformalizer_pt_ii
+permalink: /introducing_vantage
 feedformat: card
-title: Autoformalizer, pt. II (2025)
+title: "Introducing Vantage: Large-scale autoformalization (2025)"
 ---
 <br>
 **Abstract.** &nbsp; This article reports progress on building an autoformalizer, introducing the Vantage Project. Experiments highlighted LLM retrieval capabilities but also reasoning/verification limits, motivating Vantage's approach: using LLMs to suggest content for a Lean 4 knowledge base, verified through iterative checks. This graph-based KB, enabling parallel formalization, aims to create a "vantage point" for automated mathematics.
