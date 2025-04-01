@@ -21,10 +21,6 @@
         #search-container {
             margin-top: 20px;
             margin-bottom: 20px;
-            /* Adjust max-width and centering if desired */
-            /* max-width: 600px; */
-            /* margin-left: auto; */
-            /* margin-right: auto; */
         }
 
         /* Socials & Layout Styles */
@@ -110,7 +106,7 @@
     {% raw %}
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
-            console.log("DOM Loaded, initializing Standard Algolia Autocomplete (within raw tags)...");
+            console.log("DOM Loaded, initializing Algolia Autocomplete (Manual DOM, raw tags)...");
 
             // --- Algolia Configuration ---
             const ALGOLIA_APP_ID = 'NQX17WPFK8';
@@ -119,13 +115,11 @@
 
             // --- Library Checks ---
             if (typeof algoliasearch === 'undefined' || typeof window['@algolia/autocomplete-js'] === 'undefined') {
-                console.error("Algolia libraries not loaded correctly.");
-                return;
+                console.error("Algolia libraries not loaded correctly."); return;
             }
             const { autocomplete } = window['@algolia/autocomplete-js'];
             if (typeof autocomplete !== 'function') {
-                console.error("Algolia autocomplete function not found.");
-                return;
+                console.error("Algolia autocomplete function not found."); return;
             }
 
             // --- Initialization ---
@@ -134,60 +128,73 @@
                 console.log("Algolia search client initialized.");
 
                 autocomplete({
-                    container: '#search-container', // Target the new simplified container
+                    container: '#search-container',
                     placeholder: 'Search articles...',
 
-                    // Standard getSources implementation
                     getSources({ query }) {
-                        return [
-                            {
-                                sourceId: 'articles',
-                                getItems() {
-                                    return searchClient.initIndex(ALGOLIA_INDEX_NAME)
-                                        .search(query, { hitsPerPage: 5 })
-                                        .then(({ hits }) => hits);
+                        return [ {
+                            sourceId: 'articles',
+                            getItems() {
+                                return searchClient.initIndex(ALGOLIA_INDEX_NAME)
+                                    .search(query, { hitsPerPage: 5 })
+                                    .then(({ hits }) => hits);
+                            },
+                            // --- TEMPLATES (Manual DOM Creation Method) ---
+                            templates: {
+                                item({ item }) {
+                                    // Get pre-rendered HTML string from Algolia result
+                                    const highlightedTitleHTMLString = item._highlightResult?.title?.value;
+
+                                    // Create elements manually
+                                    const linkElement = document.createElement('a');
+                                    linkElement.href = item.link;
+                                    linkElement.className = 'aa-ItemLink';
+
+                                    const itemContent = document.createElement('div');
+                                    itemContent.className = 'aa-ItemContent';
+
+                                    const itemContentBody = document.createElement('div');
+                                    itemContentBody.className = 'aa-ItemContentBody';
+
+                                    const itemContentTitle = document.createElement('div');
+                                    itemContentTitle.className = 'aa-ItemContentTitle';
+                                    // Use innerHTML to parse the string with <em> tags
+                                    itemContentTitle.innerHTML = highlightedTitleHTMLString || item.title || 'Invalid Item';
+
+                                    // Assemble structure
+                                    itemContentBody.appendChild(itemContentTitle);
+                                    itemContent.appendChild(itemContentBody);
+                                    linkElement.appendChild(itemContent);
+
+                                    return linkElement; // Return the manually created element
                                 },
-                                // --- Standard Item Template ---
-                                // Using the library's html literal and components.
-                                // Jekyll should ignore this block due to {% raw %}.
-                                templates: {
-                                    item({ item, components, html }) {
-                                        return html`<a href="${item.link}" class="aa-ItemLink">
-                                            <div class="aa-ItemContent">
-                                                 <div class="aa-ItemContentBody">
-                                                    <div class="aa-ItemContentTitle">
-                                                        ${components.Highlight({ hit: item, attribute: 'title' })}
-                                                    </div>
-                                                    ${/* Optional Snippet */''}
-                                                    ${/* item._snippetResult?.content?.value ? html`<div class="aa-ItemContentDescription">${components.Snippet({ hit: item, attribute: 'content' })}</div>` : '' */''}
-                                                 </div>
-                                            </div>
-                                         </a>`;
-                                    },
-                                    noResults({ html }) {
-                                         // Applying inline style just to be sure it's visible if it appears
-                                         return html`<div class="aa-ItemContent" style="padding: 10px; color: #333;">No results found.</div>`;
-                                    }
-                                }, // End templates
-                                onSelect({ item }) {
-                                    if (item && item.link) {
-                                         window.location.href = item.link;
-                                    }
+                                noResults() {
+                                    const noResultsElement = document.createElement('div');
+                                    noResultsElement.className = 'aa-ItemContent';
+                                    noResultsElement.style.padding = '10px'; // Basic styling
+                                    noResultsElement.innerHTML = 'No results found.';
+                                    return noResultsElement;
                                 }
-                            } // End source
-                        ]; // End sources
+                            }, // End templates
+                            onSelect({ item }) {
+                                if (item && item.link) {
+                                    window.location.href = item.link;
+                                }
+                            }
+                        } ]; // End sources array
                     }, // End getSources
-                     debug: false,
+                    debug: false,
                 }); // End autocomplete
 
-                console.log("Standard Algolia Autocomplete initialization complete.");
+                console.log("Algolia Autocomplete initialization complete (Manual DOM).");
 
             } catch (error) {
-                console.error("Error during Standard Algolia Autocomplete initialization:", error);
+                console.error("Error during Algolia Autocomplete initialization:", error);
             }
         }); // End DOMContentLoaded listener
     </script>
     {% endraw %}
 
+    <script src="/assets/js/modeswitcher.js" defer></script>
     </body>
 </html>
