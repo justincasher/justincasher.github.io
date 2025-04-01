@@ -47,6 +47,23 @@
         @keyframes slide-in-top { 0% { transform: translateY(-50px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
         .intro-flex { display: flex; align-items: center; justify-content: space-between; }
         @media (max-width: 1216px) { .intro-flex { display: block; } .card { display: flex; width: 100%; justify-content: center; align-items: center; } }
+
+        /* Algolia Autocomplete specific styles if needed */
+        /* Ensure highlighted text is styled if default em isn't enough */
+        .aa-ItemContent mark {
+             background-color: yellow; /* Or your preferred highlight style */
+             color: black;
+             font-style: normal; /* Override default em italics if desired */
+             font-weight: bold; /* Example */
+        }
+        /* Or using em if Algolia still uses that */
+         .aa-ItemContent em {
+             background-color: transparent; /* Or yellow; */
+             color: inherit; /* Or black; */
+             font-style: italic; /* Default em style */
+             font-weight: bold; /* Optional: Make matches bolder */
+         }
+
     </style>
 </head>
 <body>
@@ -114,7 +131,7 @@
 
             // --- Algolia Configuration ---
             const ALGOLIA_APP_ID = 'NQX17WPFK8';
-            const ALGOLIA_SEARCH_KEY = '0df7505891b722610540bc587c33576c'; // Ensure Search-Only Key
+            const ALGOLIA_SEARCH_KEY = '0df7505891b722610540bc587c33576c'; // Search-Only Key
             const ALGOLIA_INDEX_NAME = 'articles';
 
             // --- Library Checks ---
@@ -134,38 +151,57 @@
                 console.log("Algolia search client initialized.");
 
                 autocomplete({
-                    container: '#search-container', // Target the new simplified container
+                    container: '#search-container',
                     placeholder: 'Search articles...',
-
-                    // Standard getSources implementation
                     getSources({ query }) {
                         return [
                             {
                                 sourceId: 'articles',
                                 getItems() {
                                     return searchClient.initIndex(ALGOLIA_INDEX_NAME)
-                                        .search(query, { hitsPerPage: 5 })
-                                        .then(({ hits }) => hits);
+                                        .search(query, {
+                                            hitsPerPage: 5,
+                                            // Ensure attributesToSnippet is set in your index settings
+                                            // if you want snippets. Example: attributesToSnippet: ['content:30']
+                                         })
+                                        .then(({ hits }) => {
+                                             console.log("Algolia Hits:", hits); // Debugging hits
+                                             return hits;
+                                        });
                                 },
-                                // --- Standard Item Template ---
-                                // Using the library's html literal and components.
-                                // Jekyll should ignore this block due to {% raw %}.
                                 templates: {
-                                    item({ item, components, html }) {
+                                    // *** MODIFIED ITEM TEMPLATE ***
+                                    item({ item, html }) {
+                                        // Safely access highlighted title from Algolia's response
+                                        // _highlightResult contains strings with HTML tags (e.g., <em>)
+                                        const highlightedTitle = item._highlightResult?.title?.value;
+                                        // Safely access snippet (often from 'content' attribute)
+                                        const highlightedSnippet = item._snippetResult?.content?.value;
+
+                                        // Use the raw title as a fallback if highlighting fails
+                                        const titleHTML = highlightedTitle ? highlightedTitle : (item.title || '');
+                                        // Use snippet if available, otherwise empty string
+                                        const snippetHTML = highlightedSnippet ? highlightedSnippet : '';
+
+                                        // Use html tagged literal for structure, but render highlighted
+                                        // parts using dangerouslySetInnerHTML to prevent escaping of <em> tags.
                                         return html`<a href="${item.link}" class="aa-ItemLink">
                                             <div class="aa-ItemContent">
                                                  <div class="aa-ItemContentBody">
-                                                    <div class="aa-ItemContentTitle">
-                                                        ${components.Highlight({ hit: item, attribute: 'title' })}
-                                                    </div>
-                                                    ${/* Optional Snippet */''}
-                                                    ${/* item._snippetResult?.content?.value ? html`<div class="aa-ItemContentDescription">${components.Snippet({ hit: item, attribute: 'content' })}</div>` : '' */''}
+                                                    <div
+                                                        class="aa-ItemContentTitle"
+                                                        dangerouslySetInnerHTML=${{ __html: titleHTML }}
+                                                    ></div>
+                                                    ${/* Conditionally render snippet if it exists */''}
+                                                    ${snippetHTML ? html`<div
+                                                        class="aa-ItemContentDescription"
+                                                        dangerouslySetInnerHTML=${{ __html: snippetHTML }}
+                                                    ></div>` : ''}
                                                  </div>
                                             </div>
                                          </a>`;
                                     },
                                     noResults({ html }) {
-                                         // Applying inline style just to be sure it's visible if it appears
                                          return html`<div class="aa-ItemContent" style="padding: 10px; color: #333;">No results found.</div>`;
                                     }
                                 }, // End templates
@@ -177,7 +213,7 @@
                             } // End source
                         ]; // End sources
                     }, // End getSources
-                     debug: false,
+                     debug: false, // Set true for verbose logging
                 }); // End autocomplete
 
                 console.log("Standard Algolia Autocomplete initialization complete.");
