@@ -10,27 +10,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic/dist/theme.min.css" />
 
     <style>
-        /* Keep general page styles */
+        /* General page styles */
         .gradient-text {
             background: linear-gradient(to right, #F7AD28, #D62404);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* --- NEW: Minimal Search Container Style --- */
-        /* Basic positioning for the new search container div */
+        /* Minimal Search Container Style */
         #search-container {
             margin-top: 20px;
             margin-bottom: 20px;
-            /* Add max-width if needed */
+            /* Adjust max-width and centering if desired */
             /* max-width: 600px; */
             /* margin-left: auto; */
             /* margin-right: auto; */
         }
-        /* Let the Algolia theme handle the input/dropdown styling for now */
 
-
-        /* --- Socials & Layout Styles (Keep As Is) --- */
+        /* Socials & Layout Styles */
         .card { width: fit-content; height: fit-content; background-color: transparent; border: none !important; box-shadow: none !important; display: flex; align-items: center; justify-content: center; padding: 25px 25px; gap: 20px; display: grid; grid-template-columns: 52px 52px; grid-template-rows: 52px 52px; gap: 20px; align-items: start; justify-content: start; }
         .socialContainer { width: 52px; height: 52px; background-color: rgb(44, 44, 44); display: flex; align-items: center; justify-content: center; overflow: hidden; transition-duration: .3s; border-radius: 25%; }
         .containerOne:hover { background-color: #0072b1; transition-duration: .3s; }
@@ -50,7 +47,6 @@
         @keyframes slide-in-top { 0% { transform: translateY(-50px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
         .intro-flex { display: flex; align-items: center; justify-content: space-between; }
         @media (max-width: 1216px) { .intro-flex { display: block; } .card { display: flex; width: 100%; justify-content: center; align-items: center; } }
-
     </style>
 </head>
 <body>
@@ -111,9 +107,10 @@
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js" defer></script>
 
+    {% raw %}
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
-            console.log("DOM Loaded, initializing Standard Algolia Autocomplete...");
+            console.log("DOM Loaded, initializing Standard Algolia Autocomplete (within raw tags)...");
 
             // --- Algolia Configuration ---
             const ALGOLIA_APP_ID = 'NQX17WPFK8';
@@ -151,12 +148,10 @@
                                         .then(({ hits }) => hits);
                                 },
                                 // --- Standard Item Template ---
-                                // Relying on the library's html literal and components
+                                // Using the library's html literal and components.
+                                // Jekyll should ignore this block due to {% raw %}.
                                 templates: {
                                     item({ item, components, html }) {
-                                        // This is the standard, documented way.
-                                        // It relies on the html literal correctly rendering the VDOM
-                                        // returned by components.Highlight.
                                         return html`<a href="${item.link}" class="aa-ItemLink">
                                             <div class="aa-ItemContent">
                                                  <div class="aa-ItemContentBody">
@@ -170,7 +165,8 @@
                                          </a>`;
                                     },
                                     noResults({ html }) {
-                                         return html`<div class="aa-ItemContent" style="padding: 10px; color: black;">No results found.</div>`;
+                                         // Applying inline style just to be sure it's visible if it appears
+                                         return html`<div class="aa-ItemContent" style="padding: 10px; color: #333;">No results found.</div>`;
                                     }
                                 }, // End templates
                                 onSelect({ item }) {
@@ -181,7 +177,7 @@
                             } // End source
                         ]; // End sources
                     }, // End getSources
-                     debug: false, // Keep debug off unless needed
+                     debug: false,
                 }); // End autocomplete
 
                 console.log("Standard Algolia Autocomplete initialization complete.");
@@ -191,6 +187,7 @@
             }
         }); // End DOMContentLoaded listener
     </script>
+    {% endraw %}
 
     </body>
 </html>
