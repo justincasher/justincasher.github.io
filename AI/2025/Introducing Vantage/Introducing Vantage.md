@@ -5,7 +5,7 @@ feedformat: card
 title: "Introducing Vantage: Towards highly-parallelized autoformalization (2025)"
 ---
 <br>
-**Abstract.** &nbsp; This article reports progress on building an autoformalizer, introducing the Vantage Project. Experiments highlighted LLM retrieval capabilities but also reasoning/verification limits, motivating Vantage's approach: using LLMs to suggest content for a Lean 4 knowledge base, verified through iterative checks. This graph-based KB, enabling parallel formalization, aims to create a "vantage point" for automated mathematics.
+**Abstract.** &nbsp; This article introduces the Vantage Project, which uses AI (LLMs) to help build a large, verified mathematical knowledge base in the formal system Lean 4. While AI is good at finding math information, ensuring proofs are correct is hard. Vantage uses AI suggestions and Lean's checking power to create a trustworthy foundation—a "vantage point"—for automating mathematics.
 
 [Github repository](https://github.com/justincasher/vantage){:target="_blank"}
 
