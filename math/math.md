@@ -28,7 +28,7 @@ This page contains an alphabetized list of (mostly expository) online mathematic
 6. [IU analysis qualifying solutions]({{'/iu-analysis-qualifying-solutions' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1Buh9J8Xnb-cO_RlrSmmeCK3PEcRF1MnD))
 7. [Local systems as locally constant sheaves]({{'/ls-as-lcs' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=102skr_7M-2En6NVudM9CKhTjxEDUEEFj))
 8. [Motivating schemes with the Weil conjectures]({{'/weil-conjectures-intro' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1N1QIhSj96l64gFJnQ4D5ahvNrZnBXQ9v))
-9. [Ramanujan conjecture]({{'/ramanujan-Conjecture' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1jD5Gsk35SkJ8xYPso4tx-ETUx1yBk70z))
+9. [Ramanujan conjecture]({{'/ramanujan-conjecture' | relative_url}}) ([PDF](https://drive.google.com/uc?export=download&id=1jD5Gsk35SkJ8xYPso4tx-ETUx1yBk70z))
 
 
 
