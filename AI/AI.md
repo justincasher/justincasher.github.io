@@ -10,7 +10,7 @@ This page showcases AI articles and projects I have completed or am currently wo
 ### 2025 
 1. [Introducing Vantage: Towards highly-parallelized autoformalization]({{'/introducing_vantage' | relative_url}})
 
-2. [LeanExplore: The backbone of agentic mathematics (2025)]({{'/leanexplore' | relative_url}})
+2. [LeanExplore: The backbone of agentic mathematics]({{'/leanexplore' | relative_url}})
 
 ### 2024 
 
