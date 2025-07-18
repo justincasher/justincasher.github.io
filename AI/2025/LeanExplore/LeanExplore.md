@@ -6,7 +6,7 @@ title: "LeanExplore: The backbone of agentic mathematics (2025)"
 ---
 <br>
 
-&emsp; The future of mathematics will be unthinkably many agents working together in harmony to expand the known corpus of knowledge. We are going to make unimaginable progress in the coming years towards solving old problems and discovering new ideas before they are quickly digested and moved on from. The pace of discovery will soon be too fast for even the best human mathematics to keep up with.
+&emsp; The future of mathematics will be unthinkably many agents working together in harmony to expand the known corpus of knowledge. We are going to make unimaginable progress in the coming years towards solving old problems and discovering new ideas before they are quickly digested and moved on from. The pace of discovery will soon be too fast for even the best human mathematicians to keep up with.
 
 &emsp; In order for us to make this dream a reality, it is key to enable agents to have the right tools. One particular tool is search. Mathematics is largely about breaking a problem into smaller pieces which are more directly related to existing statements in the literature. AI agents need to have access to the latest collective knowledge in order for them to work together properly. 
 
