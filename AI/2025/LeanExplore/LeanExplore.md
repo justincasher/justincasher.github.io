@@ -14,6 +14,6 @@ title: "LeanExplore: The backbone of agentic mathematics (2025)"
 
 &emsp; Albeit, one clear issue arises: When AI agents want to advance the field of mathematics by reasoning over data not strictly contained in their pretraining data, where will they get this information from? [LeanExplore](https://www.leanexplore.com/) solves this issue by providing a searchable index of select Lean packages (cf. also [the preprint](https://arxiv.org/abs/2506.11085)). Agents can search for declarations both by name, code, and informal meaning. This multifaceted approach enables agents to quickly find any relevant mathematics to their thoughts—just like us—much faster than manually going through the GitHub repositories themselves.
 
-&emsp; Furthermore, in the forthcoming update to LeanExplore—thanks, in part, to the wonderful work of Auguste Poiroux and others on the [LeanREPL](https://github.com/leanprover-community/repl) and [LeanInteract](https://github.com/augustepoiroux/LeanInteract)—LeanExplore is going to support live real time updates whenever a commit is made. This means that agents will be able to search both the most recent Lean repositories and prior versions.
+&emsp; Furthermore, in the forthcoming update to LeanExplore, we are going to support live real time updates whenever a commit is made. This means that agents will be able to search both the most recent Lean repositories and prior versions.
 
 &emsp; I am extremely excited to see where this technology takes us.
