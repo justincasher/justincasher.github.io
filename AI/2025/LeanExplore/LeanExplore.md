@@ -2,7 +2,7 @@
 layout: AI
 permalink: /leanexplore
 feedformat: card
-title: "LeanExplore: The backbone of agentic mathematics (2025)"
+title: "LeanExplore: The backbone of agentic mathematics (June 2025)"
 ---
 <br>
 

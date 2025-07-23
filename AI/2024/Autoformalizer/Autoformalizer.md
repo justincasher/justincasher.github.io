@@ -2,7 +2,7 @@
 layout: AI
 permalink: /the_need_for_an_autoformalizer
 feedformat: card
-title: The need for an autoformalizer (2024)
+title: The need for an autoformalizer (November 2024)
 ---
 <br>
 **Abstract.** &nbsp; I argue that the creation of an autoformalizer—a machine that can verify mathematics—would have monumental benefits for both academic research and industrial applications. I then discuss how one could be created.

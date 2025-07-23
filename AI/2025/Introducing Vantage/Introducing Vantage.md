@@ -2,7 +2,7 @@
 layout: AI
 permalink: /introducing_vantage
 feedformat: card
-title: "Introducing Vantage: Towards highly-parallelized autoformalization (2025)"
+title: "Introducing Vantage: Towards highly-parallelized autoformalization (March 2025)"
 ---
 <br>
 **Abstract.** &nbsp; This article introduces the Vantage Project, which uses AI (LLMs) to help build a large, verified mathematical knowledge base in the formal system Lean 4. While AI is good at finding math information, ensuring proofs are correct is hard. Vantage uses AI suggestions and Lean's checking power to create a trustworthy foundation—a "vantage point"—for automating mathematics.
