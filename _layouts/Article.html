@@ -1,0 +1,105 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+        loader: {
+          load: ['[custom]/xypic.js'],
+          paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+        },
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            packages: {'[+]': ['xypic']}
+        }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+
+    <!-- Original -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Justin Asher" property="og:site_name" />
+    <meta
+        content="Math AI Researcher"
+        property="og:description">
+    <meta content="{{ site.url }}/about/" property="article:author">
+    <meta property="og:image" content="../assets/img/fractal_mobile.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    {%- if page.title -%}
+    <meta content="{{ page.title }}" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+    {%- else -%}
+    <meta content="website" property="og:type">
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+    {%- endif -%}
+
+    <title>{{page.title}} - {{site.heading}}</title>
+    <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+    <link rel="canonical" href="{{site.url}}{{page.url}}" />
+    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+    <link href="{{ site.baseurl }}/assets/css/navbar.css" rel="stylesheet" media="all" class="default" />
+    <link href="{{ site.baseurl }}/assets/css/article.css" rel="stylesheet" media="all" class="default" />
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+</head>
+
+<body>
+    <main>
+    {%- include Nav.html -%}
+
+    <!-- Spacer to prevent content from being hidden behind the fixed navbar -->
+    <div style="height: 3.25rem;"></div>
+
+    <div class="container">
+        <h1>{{page.title}}</h1>
+        {%- if page.date -%}
+        <p class="article-date-subtitle">{{ page.date }}</p>
+        {%- endif -%}
+
+        <div class="article-metadata" style="margin-bottom: 3rem;">
+            {%- if page.links -%}
+            <div style="margin: 1.5rem 0 1rem 0; font-size: 0.95rem; line-height: 1.8;">
+                {%- for link in page.links -%}
+                <p style="margin: 0;"><strong>{{ link.type }}:</strong> <a href="{{ link.url }}" target="_blank">{{ link.display }}</a></p>
+                {%- endfor -%}
+            </div>
+            {%- endif -%}
+
+            {%- if page.abstract -%}
+            <div style="border-left: 4px solid var(--accent); padding-left: 1.5rem; margin: 3rem 0 1.5rem 0;">
+                <p style="margin: 0;">{{ page.abstract }}</p>
+            </div>
+            {%- endif -%}
+
+            {%- if page.toc -%}
+            <div style="margin: 3rem 0 0 0;">
+                <h2 style="margin-bottom: 1rem; font-size: 1.3rem;">Contents</h2>
+                <div>
+                    {%- for item in page.toc -%}
+                    <div style="padding: 0.5rem 0;">
+                        <a href="#{{ item.anchor }}" style="text-decoration: none; color: var(--text);">
+                            <span style="color: var(--accent); font-weight: 600; margin-right: 0.5rem;">{{ forloop.index }}.</span>
+                            <span style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px;">{{ item.title }}</span>
+                        </a>
+                    </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+            {%- endif -%}
+        </div>
+
+        <div class="article-body">
+            {{ content }}
+        </div>
+    </div>
+</main>
+{%- include Footer.html -%}
+</body>
+</html>

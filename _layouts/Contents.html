@@ -1,0 +1,74 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+        loader: {
+          load: ['[custom]/xypic.js'],
+          paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+        },
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            packages: {'[+]': ['xypic']}
+        }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+
+    <!-- Original -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Justin Asher" property="og:site_name" />
+    <meta
+        content="Math AI Researcher"
+        property="og:description">
+    <meta content="{{ site.url }}/about/" property="article:author">
+    <meta property="og:image" content="../assets/img/fractal_mobile.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    {%- if page.title -%}
+    <meta content="{{ page.title }}" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+    {%- else -%}
+    <meta content="website" property="og:type">
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+    {%- endif -%}
+
+    <title>{{page.title}} - {{site.heading}}</title>
+    <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+    <link rel="canonical" href="{{site.url}}{{page.url}}" />
+    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+    <link href="{{ site.baseurl }}/assets/css/navbar.css" rel="stylesheet" media="all" class="default" />
+    {%- if page.permalink == '/blog' -%}
+    <link href="{{ site.baseurl }}/assets/css/blog-filter.css" rel="stylesheet" media="all" class="default" />
+    {%- endif -%}
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+</head>
+
+<body>
+    <main>
+    {%- include Nav.html -%}
+
+    <!-- Spacer to prevent content from being hidden behind the fixed navbar -->
+    <div style="height: 3.25rem;"></div>
+
+    <div class="container page-{{ page.permalink | remove: '/' }}">
+        <h1>{{page.title}}</h1>
+        <div class="contents-body">
+            {{ content }}
+        </div>
+    </div>
+</main>
+{%- include Footer.html -%}
+{%- if page.permalink == '/blog' -%}
+<script src="{{ site.baseurl }}/assets/js/blog-filter.js"></script>
+{%- endif -%}
+</body>
+</html>

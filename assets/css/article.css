@@ -1,0 +1,13 @@
+/* Article layout styles */
+
+/* Desktop-only: narrower margins for article content */
+@media (min-width: 769px) {
+  .container h1,
+  .container .article-date-subtitle,
+  .article-metadata,
+  .article-body {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

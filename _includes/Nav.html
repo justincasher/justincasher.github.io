@@ -1,0 +1,75 @@
+<!-- Navigation Bar - Pixel Theme -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/">{{ site.heading }}</a>
+    </div>
+
+    <div class="navbar-burger" id="navbarBurger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="navbar-menu">
+      <a href="{{ '/about' | relative_url }}" class="navbar-item">About</a>
+      <a href="{{ '/blog' | relative_url }}" class="navbar-item">Blog</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Full-screen mobile menu overlay -->
+<div class="mobile-menu-overlay" id="mobileMenu" onclick="toggleMenu()">
+  <div class="mobile-menu-content">
+    <div class="navbar-brand">
+      <a href="/">{{ site.heading }}</a>
+    </div>
+    <a href="{{ '/about' | relative_url }}" class="navbar-item">About</a>
+    <a href="{{ '/blog' | relative_url }}" class="navbar-item">Blog</a>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const navbar = document.querySelector('.navbar');
+  const burger = document.getElementById('navbarBurger');
+  menu.classList.toggle('is-active');
+  navbar.classList.toggle('menu-open');
+  burger.classList.toggle('is-active');
+}
+
+// Close mobile menu on resize to desktop
+window.addEventListener('resize', function() {
+  const menu = document.getElementById('mobileMenu');
+  const navbar = document.querySelector('.navbar');
+  const burger = document.getElementById('navbarBurger');
+  if (window.innerWidth > 768 && menu.classList.contains('is-active')) {
+    menu.classList.remove('is-active');
+    navbar.classList.remove('menu-open');
+    burger.classList.remove('is-active');
+  }
+});
+
+// Hide/show navbar on scroll
+let lastScrollTop = 0;
+let scrollTimeout;
+
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Clear the timeout throughout the scroll
+  clearTimeout(scrollTimeout);
+
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    // Scrolling down & past 100px
+    navbar.classList.add('navbar-hidden');
+  } else {
+    // Scrolling up
+    navbar.classList.remove('navbar-hidden');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
+</script>

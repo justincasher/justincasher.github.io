@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.heading }}</title>
+
+    <!-- CSS -->
+    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/navbar.css" rel="stylesheet">
+
+    <!-- MathJax for Math pages -->
+    {% if page.layout == 'post' or page.layout == 'Math' %}
+    <script>
+        MathJax = {
+            loader: {
+                load: ['[custom]/xypic.js'],
+                paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+            },
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['xypic']}
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+    {% endif %}
+</head>
+<body>
+    {% include Nav.html %}
+
+    <div class="container">
+        {{ content }}
+    </div>
+</body>
+</html>

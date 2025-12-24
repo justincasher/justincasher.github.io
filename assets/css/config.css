@@ -1,0 +1,162 @@
+/* ============================================
+   SITE CONFIGURATION - Design Tokens
+   ============================================
+
+   This file contains all configurable design variables
+   for the website. Edit these values to customize the
+   appearance across the entire site.
+*/
+
+:root {
+  /* ============================================
+     COLOR TEMPLATE
+     ============================================
+
+     Navbar color scheme (left to right):
+     - Yellow (#F2C438) - Background
+     - Green (#6EB563) - Brand/Home
+     - Orange (#F28F16) - First nav item
+     - Dark Orange (#F24B0F) - Second nav item
+     - Red (#D92929) - Last nav item
+     ============================================ */
+
+  /* Color palette */
+  --color-yellow: #F2C438;
+  --color-green: #6EB563;
+  --color-orange: #F28F16;
+  --color-dark-orange: #F24B0F;
+  --color-red: #D92929;
+  --color-blue: #319AF5;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ============================================
+     COLORS
+     ============================================ */
+
+  /* Main colors */
+  --bg: var(--color-white);
+  --text: var(--color-black);
+  --accent: var(--color-orange);
+  --accent-dark: var(--color-red);
+  --border: var(--color-black);
+  --gray: #f5f5f5;
+
+  /* Navbar colors */
+  --navbar-bg: var(--color-yellow);
+  --navbar-brand-bg: var(--color-green);
+  --navbar-about-bg: var(--color-orange);
+  --navbar-blog-bg: var(--color-red);
+  --navbar-text: var(--color-white);
+
+  /* ============================================
+     FONTS
+     ============================================ */
+
+  /* Pixel/Display font - for navbar, headings, special elements */
+  --font-pixel: 'Silkscreen', monospace;
+
+  /* Body text - main content, paragraphs */
+  --font-body: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
+
+  /* Individual heading fonts - customize each level */
+  --font-h1: 'Jersey 10', sans-serif;
+  --font-h2: 'IBM Plex Sans', sans-serif;
+  --font-h3: 'IBM Plex Sans', sans-serif;
+  --font-h4: 'IBM Plex Sans', sans-serif;
+  --font-h5: 'IBM Plex Sans', sans-serif;
+  --font-h6: 'IBM Plex Sans', sans-serif;
+
+  /* Code/monospace - for code blocks, technical content */
+  --font-mono: 'Courier New', Consolas, Monaco, monospace;
+
+  /* UI elements - buttons, labels, small text */
+  --font-ui: -apple-system, system-ui, sans-serif;
+
+  /* ============================================
+     FONT SIZES
+     ============================================ */
+
+  /* Base font size */
+  --font-size-base: 16px;
+
+  /* Heading sizes */
+  --font-size-h1: 4rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-h4: 1.1rem;
+  --font-size-h5: 1.1rem;
+  --font-size-h6: 1.1rem;
+
+  /* Body text size */
+  --font-size-body: 1.1rem;
+
+  /* UI elements */
+  --font-size-small: 0.875rem;
+
+  /* Special elements */
+  --font-size-home-intro: 4.5rem;
+  --font-size-home-intro-mobile: 3.5rem;
+
+  /* ============================================
+     LAYOUT WIDTHS & SPACING
+     ============================================ */
+
+  --content-max-width: 800px;
+  --content-padding: 2rem;
+  --content-padding-mobile: 1rem;
+
+  /* ============================================
+     NAVBAR
+     ============================================ */
+
+  --navbar-height: 70px;
+  --navbar-margin: 1rem;
+  --navbar-hover-brightness: 1.15;
+  --mobile-menu-item-height: 120px;
+
+  /* ============================================
+     HOMEPAGE IMAGE
+     ============================================ */
+
+  --homepage-image-width: 250px;
+  --homepage-image-vertical-offset: 20%;
+
+  /* ============================================
+     BREAKPOINTS
+     ============================================ */
+
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14191e;
+    --text: #ffffff;
+    --border: #ffffff;
+    --gray: #444444;
+  }
+
+  /* Make MathJax CHTML labels white in dark mode (for XyJax diagrams) */
+  mjx-container[jax="CHTML"] {
+    color: #ffffff !important;
+  }
+
+  mjx-container[jax="CHTML"] * {
+    color: #ffffff !important;
+  }
+
+  mjx-math, mjx-mtext, mjx-mi, mjx-mo, mjx-mn {
+    color: #ffffff !important;
+  }
+
+  /* Make XyJax SVG arrows white in dark mode */
+  mjx-container svg {
+    filter: invert(1);
+  }
+}
